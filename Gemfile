@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'rubocop', require: false
+gem 'lazybox'
+gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
   gem 'byebug'
@@ -26,4 +28,3 @@ group :development do
   gem 'spring'
   gem 'thin'
 end
-
