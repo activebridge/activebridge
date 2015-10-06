@@ -1,0 +1,165 @@
+body {
+  height: 1000vh;
+}
+
+.step {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#step1 {
+  background: url("bridge/bridge_front.png") no-repeat 50% 35%/cover;
+  .about {
+    background: indigo;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    color: white;
+    padding: 1%;
+    border: 3px solid;
+  }
+}
+
+#step2 { background: url("bridge/bridge_back.png") no-repeat 50% 30%/cover; }
+
+#step3 { background: url("bridge/cloud_before_second_gate2.png") no-repeat 50% 75%; }
+
+#step4 { background: url("bridge/cloud_before_second_gate1.png") no-repeat 70% 15%; }
+
+#step5 { background: url("bridge/cloud_before_second_gate2.png") no-repeat 40% 70%; }
+
+#hills { background: url("bridge/hills.jpeg") no-repeat 50% 50%/cover; }
+
+.front {
+  background: url("bridge/cloud.png") no-repeat 50% 50% / 100%;
+  position: absolute;
+  padding-top: 10%;
+  padding-right: 30%;
+  padding-left: 30%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 14px;
+  z-index: 1;
+  img { width: 100%; }
+  .scroll-arrows::before, .scroll-arrows::after {
+    content: '^';
+    display: block;
+    font-size: 50px;
+    font-family: monospace;
+    color: indigo;
+  }
+  .scroll-arrows::after {
+    transform: rotate(180deg);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.contacts {
+  font-size: .5em;
+  position: fixed;
+  zoom: 0.1;
+  line-height: 1;
+  opacity: 0;
+  top: -95%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  .info {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    img {
+      width: 25%;
+    }
+  }
+  .cloud {
+    position: relative;
+  }
+  img {
+    position: relative;
+    width: 100%;
+  }
+}
+
+a.popup-link {
+  padding: .5em 1em;
+  background: indigo;
+  color: white;
+  border: 2px solid white;
+  position: absolute;
+  border-radius: 2em;
+}
+
+#about_us {
+  bottom: 37%;
+  left: 38%;
+}
+
+#our_services {
+  bottom: 48%;
+  right: 45%;
+  zoom: .6;
+}
+
+#our_team {
+  position: fixed;
+  bottom: 50%;
+  left: 48%;
+  zoom: .3;
+  z-index: 1;
+}
+
+#delorian {
+  img {
+    position: absolute;
+  }
+  #portfolio {
+    top: 38%;
+    left:40%;
+    opacity: 0;
+    font-size: 1.5em;
+  }
+  #machine {
+    top: 30%;
+    left: 50%;
+    opacity: 0;
+    max-width: 300px;
+  }
+  #lightning {
+    top: 33%;
+    left: 40%;
+    pointer-events: none;
+  }
+  .light {
+    position: absolute;
+    top: 32%;
+    left: 47%;
+    right: 30%;
+    overflow: hidden;
+    height: 150px;
+    #light {
+      position: relative;
+      left: 120%;
+      top: 0%;
+      line-height: 2;
+      #light1{
+        display: block;
+        left: 10%;
+      }
+      #light3{
+        display: block;
+        left: 20%;
+      }
+    }
+  }
+}
