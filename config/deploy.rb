@@ -37,7 +37,7 @@ set :deploy_to, "/home/#{user}/#{application}"
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{ config/secrets.yml config/database.yml }
+set :linked_files, %w{ config/secrets.yml config/database.yml config/cloudinary.yml }
 
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')

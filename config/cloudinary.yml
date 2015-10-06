@@ -1,0 +1,14 @@
+development:
+  cloud_name: active-bridge
+  api_key: '391718869899367'
+  api_secret: GObc2IysRYoiTb19f33F1MMViJw
+  enhance_image_tag: true
+  static_image_support: false
+  secure: true
+production:
+  cloud_name: active-bridge
+  api_key: '391718869899367'
+  api_secret: GObc2IysRYoiTb19f33F1MMViJw
+  enhance_image_tag: true
+  static_image_support: false
+  secure: true

@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'rubocop', require: false
 gem 'lazybox'
 gem 'activeadmin', github: 'activeadmin'
+gem 'carrierwave'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'byebug'
