@@ -12,7 +12,7 @@ body {
 }
 
 #step1 {
-  background: url("bridge/bridge_front.png") no-repeat 50% 35%/cover;
+  background: image-url("bridge/bridge_front.png") no-repeat 50% 35%/cover;
   .about {
     background: indigo;
     position: absolute;
@@ -24,18 +24,18 @@ body {
   }
 }
 
-#step2 { background: url("bridge/bridge_back.png") no-repeat 50% 30%/cover; }
+#step2 { background: image-url("bridge/bridge_back.png") no-repeat 50% 30%/cover; }
 
-#step3 { background: url("bridge/cloud_before_second_gate2.png") no-repeat 50% 75%; }
+#step3 { background: image-url("bridge/cloud_before_second_gate2.png") no-repeat 50% 75%; }
 
-#step4 { background: url("bridge/cloud_before_second_gate1.png") no-repeat 70% 15%; }
+#step4 { background: image-url("bridge/cloud_before_second_gate1.png") no-repeat 70% 15%; }
 
-#step5 { background: url("bridge/cloud_before_second_gate2.png") no-repeat 40% 70%; }
+#step5 { background: image-url("bridge/cloud_before_second_gate2.png") no-repeat 40% 70%; }
 
-#hills { background: url("bridge/hills.jpeg") no-repeat 50% 50%/cover; }
+#hills { background: image-url("bridge/hills.jpeg") no-repeat 50% 50%/cover; }
 
 .front {
-  background: url("bridge/cloud.png") no-repeat 50% 50% / 100%;
+  background: image-url("bridge/cloud.png") no-repeat 50% 50% / 100%;
   position: absolute;
   padding-top: 10%;
   padding-right: 30%;
