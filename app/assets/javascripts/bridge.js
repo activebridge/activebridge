@@ -19,22 +19,34 @@ delorian = document.getElementById('delorian');
 
 window.onscroll = navigate;
 function navigate() {
-  scroll = document.body.scrollTop / (document.body.clientHeight - window.innerHeight) * 3000
-
   k = window.innerHeight / 675
+  scroll = document.body.scrollTop / (document.body.clientHeight - window.innerHeight) * 3000/k
 
   if (scroll < 500/k) {
     step1.style.top = 0 - scroll*2*k + 'px';
-    step2.style.top = 0 - scroll*2*k + 'px';
     step1.style.bottom = 0 - scroll*2*k + 'px';
+
+    step2.style.top = 0 - scroll*2*k + 'px';
     step2.style.bottom = 0 - scroll*2*k + 'px';
+
     hills.style.top = 0 - scroll*k + 'px';
     hills.style.bottom = 0 - scroll*k + 'px';
+  } else if (scroll < 1300/k) {
+    step1.style.top = 500 - scroll*3*k + 'px';
+    step1.style.bottom = 1500 - scroll*5*k + 'px';
+
+    step2.style.top = 500 - scroll*3*k + 'px';
+    step2.style.bottom = 1500 - scroll*5*k + 'px';
+
+    hills.style.top = 0 - scroll*k + 'px';
+    hills.style.bottom = 1000 - scroll*3*k + 'px';
   } else {
     step1.style.top = 500 - scroll*3*k + 'px';
-    step2.style.top = 500 - scroll*3*k + 'px';
     step1.style.bottom = 1500 - scroll*5*k + 'px';
-    step2.style.bottom = 1500 - scroll*5*k + 'px';
+
+    step2.style.top = 4000 - scroll*6*k + 'px';
+    step2.style.bottom = 11100 - scroll*13*k + 'px';
+
     hills.style.top = 0 - scroll*k + 'px';
     hills.style.bottom = 1000 - scroll*3*k + 'px';
   }
@@ -45,61 +57,58 @@ function navigate() {
 
   front.style.opacity = 1 - scroll/100
 
-  if (scroll > 900) {
-    contacts.style.opacity = scroll/2000;
-    contacts.style.zoom = scroll / 500;
-    contacts.style.margin =  '0% ' + 100 - scroll/100 + '%';
-    contacts.style.top = -330 + scroll/6 + '%';
+  if (scroll > 900/k) {
+    contacts.style.opacity = scroll*k/2000;
+    contacts.style.zoom = scroll*k / 500;
+    contacts.style.margin =  '0% ' + 100 - scroll/(k*100) + '%';
+    contacts.style.top = -520 + scroll*k/6 + '%';
     st = Math.random()
     if (st > 0.5) { st = st } else { st = -st}
     lightning.style.transform = "scale(1,"+ st +")";
-    light.style.left = 100 - (scroll - 900)/3 + '%';
-    step1.style.pointerEvents = 'none';
-    step3.style.pointerEvents = 'none';
+    light.style.left = 100 - (scroll - 900/k)/3 + '%';
   } else {
-    step1.style.pointerEvents = 'auto';
-    step3.style.pointerEvents = 'auto';
     contacts.style.opacity = 0;
   }
 
-  if (scroll > 1200) {
+  if (scroll > 1200/k) {
     lightning.style.transform = "scale("+Math.random()*scroll/100 + "," + Math.random()*scroll/200 + ")";
-    machine.style.opacity = scroll/1300
-    portfolio.style.opacity = scroll/1000
+    machine.style.opacity = scroll*k/1300
+    portfolio.style.opacity = scroll*k/1000
     light.style.left = '0%';
   } else {
     machine.style.opacity = 0;
     portfolio.style.opacity = 0;
   }
 
-  if (scroll < 1300 && scroll > 900) {
+  if (scroll < 1300/k && scroll > 900/k) {
     lightning.style.visibility = 'visible';
-  } else if (scroll > 1200 || scroll < 900) {
+  } else if (scroll > 1200/k || scroll < 900/k) {
     lightning.style.visibility = 'hidden';
   }
 
-  if (scroll > 1200) {
-    delorian.style.left = 185 - scroll*scroll/8000 + '%';
-    delorian.style.bottom = 125 - scroll/10 + '%';
-    delorian.style.zoom = scroll/12 + '%';
+  if (scroll > 1200/k) {
+    delorian.style.left = 185/k - scroll*scroll*k/8000 + '%';
+    delorian.style.bottom = 125 - scroll*k/10 + '%';
+    delorian.style.zoom = scroll*k/12 + '%';
   } else {
     delorian.style.left = '0%';
   }
 
-  if (scroll < 600) {
-    about.style.bottom = 37 - scroll/11 + '%';
-    about.style.left = 38 - scroll/28 + '%';
-    about.style.zoom = 1 + scroll/300;
+  if (scroll < 500/k) {
+    about.style.left = 36 - scroll/16 + '%';
+    about.style.zoom = 1 + scroll*k/300;
 
-    services.style.bottom = 48 - scroll/18 + '%';
-    services.style.right = 45 - scroll/60 + '%';
-    services.style.zoom = scroll/300;
+    services.style.right = 44 - scroll/40 + '%';
+    services.style.zoom = scroll*k/300;
+
+    our_team.style.left = 48 - scroll/60 + '%';
+    our_team.style.zoom = scroll*k/500;
   } else {
-    about.style.bottom = 37 - scroll/11 + '%';
+    services.style.right = 74 - scroll/12 + '%';
+    services.style.zoom = scroll*k/300;
 
-    services.style.bottom = 316 - scroll/2 + '%';
-    services.style.right = 74 - scroll/15 + '%';
-    services.style.zoom = scroll/300;
+    our_team.style.left = 48 - scroll/60 + '%';
+    our_team.style.zoom = scroll*k/500;
   }
 
 }

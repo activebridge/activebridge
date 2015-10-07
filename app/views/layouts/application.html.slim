@@ -10,18 +10,17 @@ html
     #step5.step
 
     .contacts.text-center#our_contacts
-      .cloud
-        = image_tag 'bridge/cloud.png'
-        .info
-          = image_tag 'logo.png'
-          br Phone number
-          br +38 097 753 5731
-          br Email
-          br eugene@active-bridge.com
-          br Address
-          br Cherkassy, Ukraine
+      .info
+        = image_tag 'logo.png'
+        br Phone number
+        br +38 097 753 5731
+        br Email
+        br eugene@active-bridge.com
+        br Address
+        br Cherkassy, Ukraine
 
     .step#step2
+      = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
 
     #delorian.step
       = image_tag 'bridge/delorian.png', id: :machine
@@ -32,8 +31,6 @@ html
           = image_tag 'bridge/light.png', id: :light1
           br= image_tag 'bridge/light.png', id: :light2
           = image_tag 'bridge/light.png', id: :light3
-
-    = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
 
     .step#step3
     .step#step1
