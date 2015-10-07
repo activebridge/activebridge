@@ -2,7 +2,7 @@ doctype html
 html
   head
     title Activebridge
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
     #hills.step
@@ -25,7 +25,7 @@ html
 
     #delorian.step
       = image_tag 'bridge/delorian.png', id: :machine
-      = link_to 'Portfolio', nil, class: 'popup-link', id: :portfolio
+      = link_to 'Portfolio', '/portfolio', class: 'popup-link', id: :portfolio, remote: true
       = image_tag 'bridge/lightning.png', id: :lightning
       .light
         #light
@@ -33,12 +33,12 @@ html
           br= image_tag 'bridge/light.png', id: :light2
           = image_tag 'bridge/light.png', id: :light3
 
-    = link_to 'Team', nil, class: 'popup-link', id: :our_team
+    = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
 
     .step#step3
     .step#step1
-      = link_to 'About', team_path, class: 'popup-link', id: :about_us, remote: true
-      = link_to 'Services', nil, class: 'popup-link', id: :our_services
+      = link_to 'About', '/about', class: 'popup-link', id: :about_us, remote: true
+      = link_to 'Services', '/services', class: 'popup-link', id: :our_services, remote: true
 
     .front.text-center#front
       .cloud
