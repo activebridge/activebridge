@@ -1,6 +1,6 @@
 //
 //= require jquery
-//= require lazybox
 //= require jquery_ujs
 //= require turbolinks
+//= require lazybox
 //= require_tree .
