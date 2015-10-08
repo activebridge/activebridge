@@ -27,7 +27,10 @@ body {
 
 #step2 { background: image-url("bridge/bridge_back.png") no-repeat 50%/cover; }
 
-#step3 { background: image-url("bridge/cloud_before_second_gate2.png") no-repeat 50% 75%; }
+#step3 {
+  background: image-url("bridge/cloud_before_second_gate2.png") no-repeat 50%/cover;
+  bottom: 10%;
+}
 
 #step4 { background: image-url("bridge/cloud_before_second_gate1.png") no-repeat 70% 15%; }
 
@@ -125,33 +128,32 @@ a.popup-link {
 }
 
 #delorian {
+  top: 30%;
+  height: 130px;
   img {
     position: absolute;
   }
   #portfolio {
-    top: 38%;
-    left:40%;
+    top: 22%;
+    left:35%;
     opacity: 0;
     font-size: 1.5em;
   }
   #machine {
-    top: 30%;
     left: 50%;
     opacity: 0;
     max-width: 300px;
   }
   #lightning {
-    top: 33%;
     left: 40%;
     pointer-events: none;
   }
   .light {
     position: absolute;
-    top: 32%;
     left: 47%;
     right: 30%;
     overflow: hidden;
-    height: 150px;
+    height: 100%;
     #light {
       position: relative;
       left: 120%;
