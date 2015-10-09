@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 20151009073759) do
     t.string   "name"
     t.string   "position"
     t.string   "avatar"
+    t.string   "careers"
+    t.string   "github"
+    t.string   "linkedin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

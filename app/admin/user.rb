@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :name, :position, :avatar
+  permit_params :name, :position, :avatar, :careers, :linkedin, :github
 
   show do
     p user.name
