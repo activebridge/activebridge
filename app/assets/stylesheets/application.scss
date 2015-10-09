@@ -1,6 +1,11 @@
 @import 'lazybox';
 @import 'bridge';
 
+.translation_missing {
+  color: red;
+  background: black;
+}
+
 #lazybox {
   max-height: 90vh;
   overflow: initial;

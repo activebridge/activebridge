@@ -1,26 +1,9 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  hello:
+    Hello! We are Active Bridge
+    high - skilled Ruby on Rails development team
+    providing modern web methodology for
+    building high - qualified custom web application in short time
   meta:
     desription:
       Active Bridge is a dedicated Ruby on Rails web development team
@@ -29,3 +12,38 @@ en:
     keywords:
       ruby on rails developers ukraine, ruby on rails team ukraine,
       agile Ruby development, web application development, backend web development
+  about:
+    title: About
+    core_values: Core Values
+    experienced_team: Experienced Development Team
+    specialization: RoR Specialization
+    respect: Mutual respect and understanding
+    trustworthy: Trustworthy custom relationship
+    benefits: Benefits
+    workout: Work out new web apps for start ups;
+    deadline: Deadline based development system;
+    hourly: Hourly base of work;
+    dedicated: Dedicated team project management;
+    full: Full cycle project services;
+    turnkey: Turnkey development team
+
+    why_we: Wy We
+    work_experience: More than 6 years successful work experience with foreign customers
+    skills: Strong skills Javascript/ CoffeeScript/ jQuery AngularJS/ Ember.js/ Backbone.js/CSS/ SASS/ LESS/ Compass
+    projects: Host a lot of projects on Engine Yard, Amazon, Heroku
+    staff: More than 30ty top-level web developers
+    rate_project: RoR rate project web development is faster more 30% than other languages.
+  services:
+    title: Services
+    we_do:
+      Active Bridge is a Web development team that always keeps its services up
+      to date with the latest marke trends, providing customers all over the world
+      with best-of-class, easily extensible Internet products
+    web_development:
+      "We implement Agile web development methodolog for easy and alive
+      communications with customer.Our Deep knowleadge in using BBD model and
+      strong knowledge in Rspec and Cucumber gives high-quality full-stack integration testing and unit tests.
+      We use Continuous Integration tools such as: Travis CI, TeamCity, Jenkins CI,
+      so that you have app in time and that it fits best to project's requirements"
+    code_audit: We provide our clients with very careful and valid process of auditing Ruby on Rails programming. Our team keeps your code strong and healthy with regular checkups, making reports with suggestions how to improve current application code
+    support: Active Bridge helps software providers meet the challenge of ongoing software maintenance and support with a range of services designed to substantially lower their maintenance costs and ensure timely response
