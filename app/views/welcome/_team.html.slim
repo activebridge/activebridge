@@ -3,5 +3,5 @@ h1.team-title Team
   - @users.map do |user|
     .user
       p= cl_image_tag(user.avatar, width: 200, height: 200, crop: :thumb, gravity: :face, radius: :max)
-      p= user.name.capitalize
-      p= user.position.capitalize
+      p= user.name
+      p= user.position

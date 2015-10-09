@@ -22,6 +22,11 @@
       display: inline-block;
       width: 30%;
       color: grey;
+      text-transform: uppercase;
+
+      p {
+        margin: 0.2em;
+      }
     }
   }
 }
