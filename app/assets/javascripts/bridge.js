@@ -19,7 +19,7 @@ delorian = document.getElementById('delorian');
 
 window.onscroll = navigate;
 function navigate() {
-  k = window.innerHeight / 675;
+  k = window.innerHeight * 1350 / (window.innerWidth * 675);
   scroll = document.body.scrollTop / (document.body.clientHeight - window.innerHeight) * 3000
 
   if (scroll < 500/k) {
@@ -48,13 +48,13 @@ function navigate() {
     step1.style.top = 500 - scroll*3*k + 'px';
     step1.style.bottom = 1500 - scroll*5*k + 'px';
 
-    step2.style.top = 13600 - scroll*13*k + 'px';
-    step2.style.bottom = 30900 - scroll*23*1.2*k + 'px';
+    step2.style.top = 13500 - scroll*13*k + 'px';
+    step2.style.bottom = 31000 - scroll*23*1.2*k + 'px';
 
     step3.style.bottom = 100 - scroll*k/5 + '%';
 
     hills.style.top = 0 - scroll*k + 'px';
-    hills.style.bottom = 1000 - scroll*3*k + 'px';
+    hills.style.bottom = 5500 - scroll*6.5*k + 'px';
   }
 
   step4.style.backgroundPositionX = 70 - scroll/(6*k) + '%';
@@ -64,9 +64,9 @@ function navigate() {
 
   if (scroll > 900/k) {
     contacts.style.opacity = scroll*k/2000;
-    contacts.style.zoom = scroll*k / 500;
+    contacts.style.zoom = scroll*k / 300;
     contacts.style.margin =  '0% ' + 100 - scroll/(k*100) + '%';
-    contacts.style.top = -350 + scroll*k/6 + '%';
+    contacts.style.top = -360 + scroll*k/6 + '%';
     st = Math.random()
     if (st > 0.5) { st = st } else { st = -st}
     lightning.style.transform = "scale(1,"+ st +")";
@@ -102,7 +102,7 @@ function navigate() {
   }
 
   if (scroll < 500/k) {
-    about.style.left = 36 - scroll/16 + '%';
+    about.style.left = 36 - scroll*k/16 + '%';
     about.style.zoom = 1 + scroll*k/300;
 
     services.style.right = 44 - scroll/40 + '%';
