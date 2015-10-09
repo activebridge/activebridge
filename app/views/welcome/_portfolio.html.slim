@@ -1,1 +1,18 @@
 h1.window-title Portfolio
+.active-content
+  - @projects.map do |portfolio|
+    .portfolio
+      p= portfolio.title
+      p= cl_image_tag(portfolio.logo, width: 200, height: 200)
+      p= portfolio.description
+      p.item-title= 'technology'
+      p= portfolio.technology
+      p.item-title= 'project length'
+      p= portfolio.duration
+      p.item-title= 'team size'
+      p= portfolio.team_size
+      p.item-title= 'client'
+      p= portfolio.client
+      p.item-title= 'industry'
+      p= portfolio.industry
+      p= link_to 'View Project', portfolio.link, target: '_blank'

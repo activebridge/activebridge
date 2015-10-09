@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :portfolio do
-    
+  factory :project do
+
   end
 
 end

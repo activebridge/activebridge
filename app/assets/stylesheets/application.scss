@@ -5,21 +5,26 @@
   max-height: 90vh;
   overflow: initial;
   padding: 0;
-  width: 75vw;
 
   .window-title {
     text-align: center;
     color: grey;
   }
 
-  #team {
+  .item-title {
+    text-transform: uppercase;
+    color: grey;
+  }
+
+  .active-content {
+    width: 75vw;
     overflow-y: auto;
     padding: 5px 25px;
     max-height: 62vh;
     text-align: center;
+    display: inline-block;
 
     .user {
-      display: inline-block;
       width: 30%;
       color: grey;
       text-transform: uppercase;
