@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 20151009073759) do
     t.integer  "team_size"
     t.string   "client"
     t.string   "industry"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "link_to_project"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|
