@@ -9,7 +9,7 @@ class CreatePortfolios < ActiveRecord::Migration
       t.integer :team_size
       t.string  :client
       t.string  :industry
-      t.string  :link_to_project
+      t.string  :link
 
       t.timestamps null: false
     end
