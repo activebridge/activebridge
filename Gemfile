@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug'
