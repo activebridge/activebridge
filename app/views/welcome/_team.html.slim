@@ -1,7 +1,7 @@
 h1.window-title Team
 #team
-  - @users.map do |user|
+  - @members.map do |member|
     .user
-      p= cl_image_tag(user.avatar, width: 200, height: 200, crop: :thumb, gravity: :face, radius: :max)
-      h3= user.name
-      p= user.position
+      p= cl_image_tag(member.avatar, width: 200, height: 200, crop: :thumb, gravity: :face, radius: :max)
+      h3= member.name
+      p= member.position

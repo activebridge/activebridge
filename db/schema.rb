@@ -16,6 +16,19 @@ ActiveRecord::Schema.define(version: 20151009073759) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "members", force: :cascade do |t|
+    t.string   "name"
+    t.string   "position"
+    t.string   "avatar"
+    t.string   "careers"
+    t.string   "github"
+    t.string   "linkedin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "members", ["name"], name: "index_members_on_name", using: :btree
+
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
@@ -29,18 +42,5 @@ ActiveRecord::Schema.define(version: 20151009073759) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "position"
-    t.string   "avatar"
-    t.string   "careers"
-    t.string   "github"
-    t.string   "linkedin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "users", ["name"], name: "index_users_on_name", using: :btree
 
 end

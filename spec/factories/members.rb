@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :user do
-    
+  factory :member do
+
   end
 
 end

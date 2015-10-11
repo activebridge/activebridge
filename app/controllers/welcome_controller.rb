@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @users = User.all
+    @members = Member.all
     @projects = Project.all
   end
 end
