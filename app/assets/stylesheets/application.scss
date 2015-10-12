@@ -8,6 +8,7 @@
 
 #lazybox {
   max-height: 90vh;
+  max-width: 90vw;
   overflow: initial;
   padding: 0;
 
@@ -39,4 +40,35 @@
       }
     }
   }
+
+  .section {
+    padding: 1%;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    .section-title {
+      padding: 5% 0;
+      position: relative;
+      text-transform: uppercase;
+      border-bottom: 1px solid gray;
+
+      &::before {
+        position: absolute;
+        content: '';
+        border: 3px solid indigo;
+        position: absolute;
+        top: 95%;
+        border-radius: 50%;
+        left: 49%;
+      }
+    }
+    ul {
+      font-size: .8em;
+    }
+  }
+
+  .services-container {
+    padding: 20px;
+  }
+
 }

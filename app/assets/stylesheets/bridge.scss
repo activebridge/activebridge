@@ -45,15 +45,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   font-size: 14px;
   z-index: 1;
-  img { width: 100%; }
   .cloud {
     display: inline-block;
     padding-top: 30vh;
     padding-bottom: 30vh;
-    height: 40vh;
     width: 40%;
   }
   .scroll-arrows::before, .scroll-arrows::after {
@@ -73,7 +70,6 @@ body {
 }
 
 .contacts {
-  // background: image-url("bridge/cloud.png") no-repeat 50% 50% / cover;
   font-size: .2em;
   position: fixed;
   zoom: 0.1;
@@ -93,16 +89,21 @@ body {
     display: inline-block;
     line-height: 1;
     vertical-align: middle;
+    padding: 0 35%;
     img {
-      width: 25%;
+      width: 60%;
     }
   }
-  .cloud {
-    width: 100%;
-  }
+  .cloud { width: 100%; }
   .logo {
     position: relative;
     width: 100%;
+  }
+  .contact-section {
+    text-align: left;
+    div {
+      display: inline-block;
+    }
   }
 }
 

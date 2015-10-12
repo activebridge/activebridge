@@ -1,5 +1,12 @@
 h1.window-title= t('services.title')
-div= t('services.we_do')
-div= t('services.web_development')
-div= t('services.code_audit')
-div= t('services.support')
+.services-container
+  h4.text-center= t('services.we_do')
+  .section
+    .section-title.text-center= t('services.web_dev_title')
+    p= t('services.web_development')
+  .section
+    .section-title.text-center= t('services.code_audit_title')
+    p= t('services.code_audit')
+  .section
+    .section-title.text-center= t('services.support_title')
+    p= t('services.support')

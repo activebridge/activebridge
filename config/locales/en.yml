@@ -39,11 +39,14 @@ en:
       Active Bridge is a Web development team that always keeps its services up
       to date with the latest marke trends, providing customers all over the world
       with best-of-class, easily extensible Internet products
+    web_dev_title: Web development
     web_development:
       "We implement Agile web development methodolog for easy and alive
       communications with customer.Our Deep knowleadge in using BBD model and
       strong knowledge in Rspec and Cucumber gives high-quality full-stack integration testing and unit tests.
       We use Continuous Integration tools such as: Travis CI, TeamCity, Jenkins CI,
       so that you have app in time and that it fits best to project's requirements"
+    code_audit_title: Ruby on Rails code audit
     code_audit: We provide our clients with very careful and valid process of auditing Ruby on Rails programming. Our team keeps your code strong and healthy with regular checkups, making reports with suggestions how to improve current application code
+    support_title: Maintenance & Support
     support: Active Bridge helps software providers meet the challenge of ongoing software maintenance and support with a range of services designed to substantially lower their maintenance costs and ensure timely response

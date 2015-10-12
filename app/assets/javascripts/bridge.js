@@ -20,7 +20,7 @@ delorian = document.getElementById('delorian');
 window.onscroll = navigate;
 function navigate() {
   k = window.innerHeight * 1350 / (window.innerWidth * 675);
-  scroll = document.body.scrollTop / (document.body.clientHeight - window.innerHeight) * 3000
+  scroll = document.body.scrollTop / (document.body.clientHeight - window.innerHeight) * 3000 / k
 
   if (scroll < 500/k) {
     step1.style.top = 0 - scroll*2*k + 'px';
@@ -66,7 +66,7 @@ function navigate() {
     contacts.style.opacity = scroll*k/2000;
     contacts.style.zoom = scroll*k / 300;
     contacts.style.margin =  '0% ' + 100 - scroll/(k*100) + '%';
-    contacts.style.top = -360 + scroll*k/6 + '%';
+    contacts.style.top = -360 + scroll*k/7 + '%';
     st = Math.random()
     if (st > 0.5) { st = st } else { st = -st}
     lightning.style.transform = "scale(1,"+ st +")";
