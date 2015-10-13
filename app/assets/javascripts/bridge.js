@@ -20,7 +20,8 @@ delorian = document.getElementById('delorian');
 window.onscroll = navigate;
 function navigate() {
   k = window.innerHeight * 1350 / (window.innerWidth * 675);
-  scroll = document.body.scrollTop / (document.body.clientHeight - window.innerHeight) * 3000 / k
+  scroll = window.scrollY / (document.body.clientHeight - window.innerHeight) * 3000 / k;
+  console.log(scroll);
 
   if (scroll < 500/k) {
     step1.style.top = 0 - scroll*2*k + 'px';
@@ -40,7 +41,7 @@ function navigate() {
     step2.style.top = 500 - scroll*3*k + 'px';
     step2.style.bottom = 1500 - scroll*5*k + 'px';
 
-    step3.style.bottom = 100 - scroll*k/5 + '%';
+    step3.style.bottom = 165 - scroll*k/3 + '%';
 
     hills.style.top = 0 - scroll*k + 'px';
     hills.style.bottom = 1000 - scroll*3*k + 'px';
@@ -57,20 +58,20 @@ function navigate() {
     hills.style.bottom = 5500 - scroll*6.5*k + 'px';
   }
 
-  step4.style.backgroundPositionX = 70 - scroll/(6*k) + '%';
-  step5.style.backgroundPositionX = 40 + scroll/(6*k) + '%';
+  step4.style.left = 0 - scroll/(6*k) + '%';
+  step5.style.right = 0 - scroll/(6*k) + '%';
 
   front.style.opacity = 1 - scroll/100
 
   if (scroll > 900/k) {
     contacts.style.opacity = scroll*k/2000;
-    contacts.style.zoom = scroll*k / 300;
+    contacts.style.transform = 'scale(' + scroll*k/2000 + ')';
     contacts.style.margin =  '0% ' + 100 - scroll/(k*100) + '%';
-    contacts.style.top = -360 + scroll*k/7 + '%';
+    contacts.style.top = -360 + scroll*k/6.5 + '%';
     st = Math.random()
     if (st > 0.5) { st = st } else { st = -st}
     lightning.style.transform = "scale(1,"+ st +")";
-    light.style.left = 100 - (scroll - 900/k)/3 + '%';
+    light.style.left = 100 - (scroll - 900/k)*k/3 + '%';
   } else {
     contacts.style.opacity = 0;
   }
@@ -96,26 +97,27 @@ function navigate() {
   if (scroll > 1200/k) {
     delorian.style.left = 185/k - scroll*scroll*k/8000 + '%';
     delorian.style.top = -50 + scroll*k/15 + '%';
-    delorian.style.zoom = scroll*k/12 + '%';
+    delorian.style.transform = 'scale(' + scroll*k/1200 + ')';
   } else {
     delorian.style.left = '0%';
   }
 
   if (scroll < 500/k) {
     about.style.left = 36 - scroll*k/16 + '%';
-    about.style.zoom = 1 + scroll*k/300;
+    scl = 1 + scroll*k/300;
+    about.style.transform = 'scale(' + scl + ')';
 
     services.style.right = 44 - scroll/40 + '%';
-    services.style.zoom = scroll*k/300;
+    services.style.transform = 'scale(' + scroll*k/300 + ')';
 
     our_team.style.left = 48 - scroll/60 + '%';
-    our_team.style.zoom = scroll*k/500;
+    our_team.style.transform = 'scale(' + scroll*k/500 + ')';
   } else {
     services.style.right = 74 - scroll/12 + '%';
-    services.style.zoom = scroll*k/300;
+    services.style.transform = 'scale(' + scroll*k/300 + ')';
 
     our_team.style.left = 48 - scroll/60 + '%';
-    our_team.style.zoom = scroll*k/500;
+    our_team.style.transform = 'scale(' + scroll*k/500 + ')';
   }
 
 }

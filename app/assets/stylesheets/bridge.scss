@@ -32,9 +32,9 @@ body {
   bottom: 10%;
 }
 
-#step4 { background: image-url("bridge/cloud_before_second_gate1.png") no-repeat 70% 15%; }
+#step4 { background: image-url("bridge/cloud_before_second_gate1.png") repeat 70% 15%/cover; }
 
-#step5 { background: image-url("bridge/cloud_before_second_gate2.png") no-repeat 40% 70%; }
+#step5 { background: image-url("bridge/cloud_before_second_gate2.png") repeat 40% 70%/cover; }
 
 #hills { background: image-url("bridge/hills.jpeg") no-repeat 50% 50%/cover; }
 
@@ -70,15 +70,13 @@ body {
 }
 
 .contacts {
-  font-size: .2em;
   position: fixed;
-  zoom: 0.1;
+  transform: scale(0.1);
   line-height: 1;
   opacity: 0;
   top: -95%;
   left: 0;
   right: 0;
-  height: 20vh;
   line-height: 20vh;
   z-index: 1;
   .info {
@@ -125,14 +123,14 @@ a.popup-link {
 #our_services {
   bottom: 48%;
   right: 45%;
-  zoom: .06;
+  transform: scale(0.06);
 }
 
 #our_team {
   position: absolute;
   bottom: 52%;
   left: 47%;
-  zoom: .3;
+  transform: scale(0.3);
   z-index: 1;
 }
 

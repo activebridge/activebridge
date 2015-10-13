@@ -42,7 +42,7 @@
   }
 
   .section {
-    padding: 1%;
+    padding: 1.5%;
     display: inline-block;
     width: 30%;
     vertical-align: top;
@@ -63,12 +63,17 @@
       }
     }
     ul {
-      font-size: .8em;
+      font-size: .9em;
+      padding-left: 20px;
     }
   }
 
   .services-container {
-    padding: 20px;
+    padding: 0 20px;
+    .service-description {
+      font-size: .9em;
+      padding: 5%;
+    }
   }
 
 }
