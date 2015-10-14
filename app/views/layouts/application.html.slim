@@ -12,11 +12,12 @@ html
     #step5.step
 
     .contacts#our_contacts
-      = image_tag 'bridge/cloud.png', class: :cloud
-      .info.text-center#info
-        = image_tag 'logo.png', class: :logo
-        .text-left
-          .contact-section
+      .cloud
+        = image_tag 'bridge/cloud.png'
+      .info#info
+        .contacts-container
+          = image_tag 'logo.png', class: :logo
+          .contact-section.text-left
             i.icon.icon-phone
             div
               small Phone number

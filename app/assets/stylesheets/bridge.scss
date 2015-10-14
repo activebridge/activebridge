@@ -68,21 +68,21 @@ body {
 .contacts {
   position: fixed;
   transform: scale(0.1);
-  line-height: 1;
+  line-height: 200vh;
   opacity: 0;
-  top: -95%;
+  top: -50vh;
   left: 0;
   right: 0;
   z-index: 1;
   .info {
     position: absolute;
-    top: 30%;
     left: 0;
     right: 0;
     display: inline-block;
-    line-height: 1;
+    line-height: 200vh;
     vertical-align: middle;
-    padding: 0 35%;
+    padding: 0 35vw;
+    height: 50vh;
     img {
       width: 60%;
     }
@@ -91,7 +91,16 @@ body {
     font-size: 2em;
     padding-right: 20px;
   }
-  .cloud { width: 100%; }
+  .cloud {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 200vh;
+    img {
+      width: 100%;
+      line-height: 1;
+      vertical-align: middle;
+    }
+  }
   .logo {
     position: relative;
     width: 100%;
@@ -102,6 +111,11 @@ body {
   }
   div {
     display: inline-block;
+  }
+  .contacts-container {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 

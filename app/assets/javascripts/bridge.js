@@ -64,10 +64,8 @@ function navigate() {
   front.style.opacity = 1 - scroll/100
 
   if (scroll > 900/k) {
-    contacts.style.opacity = scroll*k/2000;
-    contacts.style.transform = 'scale(' + scroll*k/2000 + ')';
-    contacts.style.margin =  '0% ' + 100 - scroll/(k*100) + '%';
-    contacts.style.top = -360 + scroll*k/6.5 + '%';
+    contacts.style.opacity = scroll*k/1000 - 1.5;
+    contacts.style.transform = 'scale(' + (scroll*k*2 - 2000)/4000 + ')';
     st = Math.random()
     if (st > 0.5) { st = st } else { st = -st}
     lightning.style.transform = "scale(1,"+ st +")";
