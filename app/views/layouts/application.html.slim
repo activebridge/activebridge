@@ -11,21 +11,26 @@ html
     #step4.step
     #step5.step
 
-    .contacts.text-center#our_contacts
+    .contacts#our_contacts
       = image_tag 'bridge/cloud.png', class: :cloud
-      .info#info
+      .info.text-center#info
         = image_tag 'logo.png', class: :logo
-        .contact-section
-          .icon
-          div
-            ' Phone number
-            br +38 097 753 5731
-        .contact-section
-          ' Email
-          br eugene@active-bridge.com
-        .contact-section
-          ' Address
-          br Cherkassy, Ukraine
+        .text-left
+          .contact-section
+            i.icon.icon-phone
+            div
+              small Phone number
+              br +38 097 753 5731
+          .contact-section
+            i.icon.icon-mail
+            div
+              small Email
+              br eugene@active-bridge.com
+          .contact-section
+            i.icon.icon-location
+            div
+              small Address
+              br Cherkassy, Ukraine
 
     .step#step2
       = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true

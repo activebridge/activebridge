@@ -15,7 +15,7 @@ body {
 #step1 {
   background: image-url("bridge/bridge_front.png") no-repeat 50%/cover;
   .about {
-    background: indigo;
+    background: $violet;
     position: absolute;
     top: 60%;
     left: 35%;
@@ -32,9 +32,9 @@ body {
   bottom: 10%;
 }
 
-#step4 { background: image-url("bridge/cloud_before_second_gate1.png") repeat 70% 15%/cover; }
+#step4 { background: image-url("bridge/cloud_before_second_gate1.png") repeat 70% 15%; }
 
-#step5 { background: image-url("bridge/cloud_before_second_gate2.png") repeat 40% 70%/cover; }
+#step5 { background: image-url("bridge/cloud_before_second_gate2.png") repeat 40% 70%; }
 
 #hills { background: image-url("bridge/hills.jpeg") no-repeat 50% 50%/cover; }
 
@@ -54,19 +54,15 @@ body {
     width: 40%;
   }
   .scroll-arrows::before, .scroll-arrows::after {
-    content: '^';
+    content: '\e805';
     display: block;
     font-size: 50px;
-    font-family: monospace;
-    color: indigo;
+    font-family: 'icomoon';
+    color: $red;
   }
   .scroll-arrows::after {
     transform: rotate(180deg);
   }
-}
-
-.text-center {
-  text-align: center;
 }
 
 .contacts {
@@ -77,7 +73,6 @@ body {
   top: -95%;
   left: 0;
   right: 0;
-  line-height: 20vh;
   z-index: 1;
   .info {
     position: absolute;
@@ -92,6 +87,10 @@ body {
       width: 60%;
     }
   }
+  .icon {
+    font-size: 2em;
+    padding-right: 20px;
+  }
   .cloud { width: 100%; }
   .logo {
     position: relative;
@@ -99,15 +98,16 @@ body {
   }
   .contact-section {
     text-align: left;
-    div {
-      display: inline-block;
-    }
+    padding: 10px 0;
+  }
+  div {
+    display: inline-block;
   }
 }
 
 a.popup-link {
   padding: .5em 1em;
-  background: indigo;
+  background: $violet;
   color: white;
   border: 2px solid white;
   position: absolute;

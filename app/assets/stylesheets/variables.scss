@@ -1,0 +1,16 @@
+$violet: #842B98;
+$red: #FF052F;
+
+
+$font: 'corbertregular';
+
+
+
+@mixin font($name, $url, $weight, $style) {
+  font-family: $name;
+  src: font-url('#{$url}.woff') format('woff');
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@font-face { @include font('corbertregular', 'Corbert-Regular-webfont', normal, normal) }

@@ -58,8 +58,8 @@ function navigate() {
     hills.style.bottom = 5500 - scroll*6.5*k + 'px';
   }
 
-  step4.style.left = 0 - scroll/(6*k) + '%';
-  step5.style.right = 0 - scroll/(6*k) + '%';
+  step4.style.left = 0 - scroll*k/4 + '%';
+  step5.style.right = 0 - scroll*k/4 + '%';
 
   front.style.opacity = 1 - scroll/100
 
