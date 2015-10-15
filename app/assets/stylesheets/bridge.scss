@@ -47,11 +47,12 @@ body {
   right: 0;
   font-size: 14px;
   z-index: 1;
+  line-height: 100vh;
   .cloud {
     display: inline-block;
-    padding-top: 30vh;
-    padding-bottom: 30vh;
     width: 40%;
+    line-height: 1;
+    vertical-align: middle;
   }
   .scroll-arrows::before, .scroll-arrows::after {
     content: '\e805';
@@ -71,6 +72,7 @@ body {
   line-height: 200vh;
   opacity: 0;
   top: -50vh;
+  bottom: -50vh;
   left: 0;
   right: 0;
   z-index: 1;
@@ -82,7 +84,6 @@ body {
     line-height: 200vh;
     vertical-align: middle;
     padding: 0 35vw;
-    height: 50vh;
     img {
       width: 60%;
     }
@@ -92,6 +93,7 @@ body {
     padding-right: 20px;
   }
   .cloud {
+    position: absolute;
     vertical-align: middle;
     display: inline-block;
     line-height: 200vh;
@@ -101,21 +103,24 @@ body {
       vertical-align: middle;
     }
   }
-  .logo {
-    position: relative;
-    width: 100%;
-  }
-  .contact-section {
-    text-align: left;
-    padding: 10px 0;
-  }
-  div {
-    display: inline-block;
-  }
   .contacts-container {
+    div {
+      display: inline-block;
+    }
     line-height: 1;
     display: inline-block;
     vertical-align: middle;
+    width: 100%;
+    .logo {
+      position: relative;
+      width: 60%;
+      padding: 0 20%;
+    }
+    .contact-section {
+      text-align: left;
+      padding: 10px 0;
+      display: block;
+    }
   }
 }
 

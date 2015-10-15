@@ -14,6 +14,7 @@ en:
       agile Ruby development, web application development, backend web development
   about:
     title: About
+    description: "We never stop improving our services, including ror development methodologies, engineering practices and management techniques to enhance our team’s capabilities and increase customer satisfaction"
     core_values: Core Values
     experienced_team: Experienced Development Team
     specialization: RoR Specialization
@@ -30,9 +31,8 @@ en:
     why_we: Why We
     work_experience: More than 6 years successful work experience with foreign customers
     skills: Strong skills Javascript/ CoffeeScript/ jQuery AngularJS/ Ember.js/ Backbone.js/CSS/ SASS/ LESS/ Compass
-    projects: Host a lot of projects on Engine Yard, Amazon, Heroku
     staff: More than 30ty top-level web developers
-    rate_project: RoR rate project web development is faster more 30% than other languages.
+    rate_project: RoR rate project web development is more than 30% faster than other languages.
   services:
     title: Services
     we_do:

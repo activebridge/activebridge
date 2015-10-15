@@ -5,6 +5,7 @@
 
 html {
   font-family: $font;
+  letter-spacing: .05em;
 }
 
 a {
@@ -23,7 +24,7 @@ a {
 #lazybox {
   max-height: 90vh;
   max-width: 90vw;
-  overflow: initial;
+  overflow: hidden;
   padding: 0;
 
   .window-title {
@@ -56,18 +57,19 @@ a {
   }
 
   .section {
-    padding: 1%;
+    line-height: 1.2;
+    padding: 0 1%;
     display: inline-block;
     width: 30%;
     vertical-align: top;
     .section-title {
       .icon {
-        padding: 5%;
-        font-size: 2em;
+        padding-bottom: 5%;
+        font-size: 3em;
         color: $violet;
         display: block;
       }
-      padding: 5% 0;
+      padding-bottom: 5%;
       position: relative;
       text-transform: uppercase;
       border-bottom: 1px solid $violet;
@@ -84,10 +86,13 @@ a {
     }
     ul {
       font-size: .9em;
-      padding-left: 20px;
+      padding: 0 5% 0 10%;
     }
   }
-
+  .about-container {
+    overflow-y: auto;
+    max-height: 70vh;
+  }
   .services-container {
     padding: 0 20px;
     .service-description {

@@ -2,7 +2,7 @@ $violet: #842B98;
 $red: #FF052F;
 
 
-$font: 'corbertregular';
+$font: 'ralewayregular';
 
 
 
@@ -13,4 +13,4 @@ $font: 'corbertregular';
   font-style: $style;
 }
 
-@font-face { @include font('corbertregular', 'Corbert-Regular-webfont', normal, normal) }
+@font-face { @include font('ralewayregular', 'raleway-regular-webfont', normal, normal) }
