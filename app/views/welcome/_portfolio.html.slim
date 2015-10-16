@@ -1,18 +1,29 @@
 h1.window-title Portfolio
-.active-content
-  - @projects.map do |portfolio|
-    .portfolio
-      p= portfolio.title
-      p= cl_image_tag(portfolio.logo, width: 200, height: 200)
-      p= portfolio.description
-      p.item-title= 'technology'
-      p= portfolio.technology
-      p.item-title= 'project length'
-      p= portfolio.duration
-      p.item-title= 'team size'
-      p= portfolio.team_size
-      p.item-title= 'client'
-      p= portfolio.client
-      p.item-title= 'industry'
-      p= portfolio.industry
-      p= link_to 'View Project', portfolio.link, target: '_blank'
+.active-content.projects
+  .arrows
+    i.icon.icon-chevrone-up#left
+    i.icon.icon-chevrone-up#right
+  .wrapper data-step=1 data-tf=0
+    - @projects.map do |project|
+      .project-wrapper
+        h2= project.title
+        .project id="project_#{project.id}"
+          = cl_image_tag(project.logo)
+          .project-description= project.description
+          .project-info
+            .info-section
+              .item-title= 'technology'
+              = project.technology
+            .info-section
+              .item-title= 'project length'
+              = project.duration
+            .info-section
+              .item-title= 'team size'
+              = project.team_size
+            .info-section
+              .item-title= 'client'
+              = project.client
+            .info-section
+              .item-title= 'industry'
+              = project.industry
+          .view-project= link_to 'View Project', project.link, target: '_blank'

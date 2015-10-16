@@ -54,6 +54,9 @@ a {
         margin: 0.2em;
       }
     }
+    &.projects {
+      overflow: hidden;
+    }
   }
 
   .section {
@@ -101,4 +104,73 @@ a {
     }
   }
 
+  .projects {
+    .wrapper{
+      white-space: nowrap;
+      transition: transform .3s;
+    }
+    .project-wrapper {
+      overflow: hidden;
+      max-height: 100%;
+      vertical-align: top;
+      white-space: normal;
+      padding: 0 10%;
+      display: inline-block;
+      .project {
+        overflow-y: auto;
+        max-height: 50vh;
+      }
+      img {
+        max-height: 120px;
+        padding-top: 1%;
+      }
+      .project-description {
+        padding: 3% 0;
+        font-size: .8em;
+      }
+      .project-info {
+        width: 100%;
+        display: flex;
+        .info-section {
+          display: inline-block;
+          width: 20%;
+        }
+      }
+      .view-project {
+        padding: 30px;
+        a {
+          width: 150px;
+          padding: 10px 15px;
+          border: 1px solid $violet;
+          border-radius: 30px;
+        }
+      }
+    }
+    .arrows {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid gray;
+      top: 120px;
+      z-index: 999;
+      .icon-chevrone-up {
+        position: absolute;
+        border: 1px solid;
+        border-radius: 50%;
+        background: white;
+        padding: 5px;
+        cursor: pointer;
+        top: -12px;
+        &#left {
+          transform: rotate(-90deg);
+          left: 3%;
+        }
+        &#right {
+          transform: rotate(90deg);
+          right: 3%;
+        }
+      }
+    }
+  }
 }
