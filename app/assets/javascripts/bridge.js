@@ -49,8 +49,8 @@ function navigate() {
     step1.style.top = 500 - scroll*3*k + 'px';
     step1.style.bottom = 1500 - scroll*5*k + 'px';
 
-    step2.style.top = 13500 - scroll*13*k + 'px';
-    step2.style.bottom = 31000 - scroll*23*1.2*k + 'px';
+    step2.style.top = 13400 - scroll*13*k + 'px';
+    step2.style.bottom = 30700 - scroll*23*1.2*k + 'px';
 
     step3.style.bottom = 100 - scroll*k/5 + '%';
 
