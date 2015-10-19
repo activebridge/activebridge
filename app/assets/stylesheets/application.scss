@@ -51,8 +51,8 @@ a {
     &.members {
       width: 60vw;
       .member {
-        padding: 1% 2%;
-        color: grey;
+        padding: 1%;
+        color: black;
         display: inline-block;
         margin-bottom: 20px;
         text-align: center;
@@ -93,21 +93,11 @@ a {
             position: absolute;
             transform: rotateY(180deg);
             top: 0;
-            .details {
-              color: #000;
-              padding: 25px;
-              h2 { margin: 0; }
-              .icon {
-                color: gray;
-                transition: .3s;
-                padding: 5px;
-                font-size: 2em;
-                &:hover {
-                  color: $violet;
-                }
-              }
-            }
           }
+        }
+        .details {
+          padding-top: 15px;
+          h2 { margin: 0; }
         }
       }
     }

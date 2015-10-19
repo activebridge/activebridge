@@ -1,4 +1,5 @@
 class Member < ActiveRecord::Base
   mount_uploader :avatar, ImageUploader
-  validates :name, :position, :avatar, :github, :linkedin, :careers, presence: true
+  mount_uploader :cartoon, ImageUploader
+  validates :name, :position, :cartoon, :avatar, :github, :linkedin, :careers, presence: true
 end
