@@ -105,13 +105,13 @@ function navigate() {
     scl = 1 + scroll*k/300;
     about.style.transform = 'scale(' + scl + ')';
 
-    services.style.right = 44 - scroll/40 + '%';
+    services.style.right = 42 - scroll/55 + '%';
     services.style.transform = 'scale(' + scroll*k/300 + ')';
 
     our_team.style.left = 48 - scroll/60 + '%';
     our_team.style.transform = 'scale(' + scroll*k/500 + ')';
   } else {
-    services.style.right = 74 - scroll/12 + '%';
+    services.style.right = 50 - scroll/28 + '%';
     services.style.transform = 'scale(' + scroll*k/300 + ')';
 
     our_team.style.left = 48 - scroll/60 + '%';
