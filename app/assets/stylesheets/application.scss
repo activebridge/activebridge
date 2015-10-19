@@ -40,22 +40,73 @@ a {
   .active-content {
     width: 75vw;
     overflow-y: auto;
-    padding: 5px 25px;
+    padding: 5px 0;
     max-height: 62vh;
     text-align: center;
-    display: inline-block;
 
-    .user {
-      width: 30%;
-      color: grey;
-      text-transform: uppercase;
-
-      p, h3 {
-        margin: 0.2em;
-      }
-    }
     &.projects {
       overflow: hidden;
+    }
+
+    .member {
+      padding: 1%;
+      color: grey;
+      display: inline-block;
+      margin-bottom: 20px;
+      text-align: center;
+      perspective: 1000;
+
+      p, h3 {
+        margin: 0;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+
+      &:hover {
+        .member-info {
+          transform: rotateY(180deg);
+          border-color: $violet;
+        }
+      }
+    }
+
+    .member-info {
+      border: 10px solid white;
+      box-shadow: 0 0 10px black;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      transform-style: preserve-3d;
+      position: relative;
+      transition: .5s;
+      .member-info-front, .member-info-back {
+        background: white;
+        backface-visibility: hidden;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+      }
+      .member-info-back {
+        position: absolute;
+        transform: rotateY(180deg);
+        top: 0;
+        .details {
+          padding-top: 25px;
+          h2 { margin: 0; }
+          .icon {
+            color: black;
+            transition: .3s;
+            padding: 5px;
+            font-size: 2em;
+            &:hover {
+              color: $violet;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -85,7 +136,6 @@ a {
         border-radius: 50%;
         left: 49%;
       }
-
     }
     ul {
       font-size: .9em;
@@ -105,7 +155,7 @@ a {
   }
 
   .projects {
-    .wrapper{
+    .wrapper {
       white-space: nowrap;
       transition: transform .3s;
     }

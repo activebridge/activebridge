@@ -1,7 +1,19 @@
 h1.window-title Team
-#team
+.active-content
   - @members.map do |member|
-    .user
-      p= cl_image_tag(member.avatar, width: 200, height: 200, crop: :thumb, gravity: :face, radius: :max)
-      h3= member.name
-      p= member.position
+    .member id="member_#{member.id}"
+      .member-info
+        .member-info-front
+          p= cl_image_tag(member.avatar, width: 200, height: 200, crop: :thumb, radius: :max, gravity: :face)
+        .member-info-back
+          .details
+            h2= member.name
+            h3= member.position
+            br
+            .member-links
+              a href= member.careers target='_blank' rel='nofollow'
+                i.icon.icon-stack-overflow
+              a href= member.github target='_blank' rel='nofollow'
+                i.icon.icon-github
+              a href= member.linkedin target='_blank' rel='nofollow'
+                i.icon.icon-linkedin
