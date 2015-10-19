@@ -1,7 +1,6 @@
 @import 'variables';
 @import 'lazybox';
 @import 'bridge';
-@import 'font-awesome';
 @import 'icomoon';
 
 html {
@@ -55,70 +54,59 @@ a {
       display: inline-block;
       margin-bottom: 20px;
       text-align: center;
+      perspective: 1000;
 
       p, h3 {
-        margin: 0.2em 0;
+        margin: 0;
       }
 
       img {
         border-radius: 50%;
       }
-    }
 
-    .ch-info {
-      border: 10px solid indigo;
-      border-radius: 50%;
-      height: 200px;
-      width: 200px;
-
-      -webkit-transition: all 0.4s ease-in-out;
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      -ms-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out;
-
-      -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
-      -o-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-    }
-
-    .ch-info > div {
-      background: indigo;
-      display: block;
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -o-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-
-    .ch-info .ch-info-back {
-      -webkit-transform: rotate3d(0,1,0,180deg);
-      -moz-transform: rotate3d(0,1,0,180deg);
-      -o-transform: rotate3d(0,1,0,180deg);
-      -ms-transform: rotate3d(0,1,0,180deg);
-      transform: rotate3d(0,1,0,180deg);
-    }
-
-    .ch-info-back {
-      h3 {
-        color: #fff;
+      &:hover {
+        .member-info {
+          transform: rotateY(180deg);
+          border-color: $violet;
+        }
       }
     }
 
-    .member:hover .ch-info {
-      -webkit-transform: rotate3d(0,1,0,-180deg);
-      -moz-transform: rotate3d(0,1,0,-180deg);
-      -o-transform: rotate3d(0,1,0,-180deg);
-      -ms-transform: rotate3d(0,1,0,-180deg);
-      transform: rotate3d(0,1,0,-180deg);
+    .member-info {
+      border: 10px solid white;
+      box-shadow: 0 0 10px black;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      transform-style: preserve-3d;
+      position: relative;
+      transition: .5s;
+      .member-info-front, .member-info-back {
+        background: white;
+        backface-visibility: hidden;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+      }
+      .member-info-back {
+        position: absolute;
+        transform: rotateY(180deg);
+        top: 0;
+        .details {
+          padding-top: 25px;
+          h2 { margin: 0; }
+          .icon {
+            color: black;
+            transition: .3s;
+            padding: 5px;
+            font-size: 2em;
+            &:hover {
+              color: $violet;
+            }
+          }
+        }
+      }
     }
   }
 

@@ -1,18 +1,19 @@
 h1.window-title Team
 .active-content
   - @members.map do |member|
-    .member
-      .ch-info
-        .ch-info-front
-          p= cl_image_tag(member.avatar, width: 200, height: 200, crop: :thumb, radius: :max)
-        .ch-info-back
-          h3= member.name
-          p
-            a href= member.careers target='_blank' rel='nofollow'
-              i.fa.fa-stack-overflow
-          p
-            a href= member.github target='_blank' rel='nofollow'
-              i.fa.fa-github-alt
-          p
-            a href= member.linkedin target='_blank' rel='nofollow'
-              o.fa.fa-linkedin-square
+    .member id="member_#{member.id}"
+      .member-info
+        .member-info-front
+          p= cl_image_tag(member.avatar, width: 200, height: 200, crop: :thumb, radius: :max, gravity: :face)
+        .member-info-back
+          .details
+            h2= member.name
+            h3= member.position
+            br
+            .member-links
+              a href= member.careers target='_blank' rel='nofollow'
+                i.icon.icon-stack-overflow
+              a href= member.github target='_blank' rel='nofollow'
+                i.icon.icon-github
+              a href= member.linkedin target='_blank' rel='nofollow'
+                i.icon.icon-linkedin
