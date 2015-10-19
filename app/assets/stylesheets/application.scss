@@ -48,61 +48,64 @@ a {
       overflow: hidden;
     }
 
-    .member {
-      padding: 1%;
-      color: grey;
-      display: inline-block;
-      margin-bottom: 20px;
-      text-align: center;
-      perspective: 1000;
+    &.members {
+      width: 60vw;
+      .member {
+        padding: 1% 2%;
+        color: grey;
+        display: inline-block;
+        margin-bottom: 20px;
+        text-align: center;
+        perspective: 1000;
 
-      p, h3 {
-        margin: 0;
-      }
-
-      img {
-        border-radius: 50%;
-      }
-
-      &:hover {
-        .member-info {
-          transform: rotateY(180deg);
-          border-color: $violet;
+        p, h3 {
+          margin: 0;
         }
-      }
-    }
 
-    .member-info {
-      border: 10px solid white;
-      box-shadow: 0 0 10px black;
-      border-radius: 50%;
-      height: 200px;
-      width: 200px;
-      transform-style: preserve-3d;
-      position: relative;
-      transition: .5s;
-      .member-info-front, .member-info-back {
-        background: white;
-        backface-visibility: hidden;
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-        overflow: hidden;
-      }
-      .member-info-back {
-        position: absolute;
-        transform: rotateY(180deg);
-        top: 0;
-        .details {
-          padding: 25px;
-          h2 { margin: 0; }
-          .icon {
-            color: black;
-            transition: .3s;
-            padding: 5px;
-            font-size: 2em;
-            &:hover {
-              color: $violet;
+        img {
+          border-radius: 50%;
+        }
+
+        &:hover {
+          .member-info {
+            transform: rotateY(180deg);
+            border-color: $violet;
+          }
+        }
+        .member-info {
+          border: 10px solid white;
+          box-shadow: 0 0 10px black;
+          border-radius: 50%;
+          height: 200px;
+          width: 200px;
+          transform-style: preserve-3d;
+          position: relative;
+          transition: .5s;
+          .member-info-front, .member-info-back {
+            background: white;
+            backface-visibility: hidden;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+          }
+          .member-info-back {
+            position: absolute;
+            transform: rotateY(180deg);
+            top: 0;
+            .details {
+              color: #000;
+              padding: 25px;
+              h2 { margin: 0; }
+              .icon {
+                color: gray;
+                transition: .3s;
+                padding: 5px;
+                font-size: 2em;
+                &:hover {
+                  color: $violet;
+                }
+              }
             }
           }
         }
