@@ -1,11 +1,5 @@
-// Fly through the bridge
+// // Fly through the bridge
 
-var step1 = document.getElementById('step1'),
-step2 = document.getElementById('step2'),
-step3 = document.getElementById('step3'),
-step4 = document.getElementById('step4'),
-step5 = document.getElementById('step5'),
-hills = document.getElementById('hills'),
 front = document.getElementById('front'),
 machine = document.getElementById('machine'),
 lightning = document.getElementById('lightning'),
@@ -17,90 +11,118 @@ team = document.getElementById('our_team'),
 portfolio = document.getElementById('portfolio'),
 delorian = document.getElementById('delorian');
 
+var timeOut;
+window.onresize = function() {
+  if(timeOut)
+    clearTimeout(timeOut);
+  timeOut = setTimeout(draw, 10);
+}
+
+window.onload = draw;
 window.onscroll = navigate;
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext('2d'),
+
+bridgeFront = new Image;
+bridgeFront.src = 'assets/bridge/bridge_front.png';
+
+bridgeBack = new Image;
+bridgeBack.src = 'assets/bridge/bridge_back.png';
+
+cloudBeforeSecondGate2 = new Image;
+cloudBeforeSecondGate2.src = 'assets/bridge/cloud_before_second_gate2.png';
+
+cloudBeforeSecondGate1 = new Image;
+cloudBeforeSecondGate1.src = 'assets/bridge/cloud_before_second_gate1.png';
+
+hills = new Image;
+hills.src = 'assets/bridge/hills.jpeg';
+
 function navigate() {
-  k = window.innerHeight * 1350 / (window.innerWidth * 675);
-  scroll = window.scrollY / (document.body.clientHeight - window.innerHeight) * 3000 / k;
-  console.log(scroll);
+  draw()
+}
 
-  front.style.opacity = 1 - scroll/100
+function draw(scroll) {
+  scroll = window.scrollY / (document.body.clientHeight - window.innerHeight) * 3000;
+  canvas.setAttribute('width', window.innerWidth);
+  canvas.setAttribute('height', window.innerHeight);
 
-  if (scroll < 500/k) {
-    step1.style.top = 0 - scroll*2*k + 'px';
-    step1.style.bottom = 0 - scroll*2*k + 'px';
+  front.style.opacity = 1 - scroll/100;
 
-    step2.style.top = 0 - scroll*2*k + 'px';
-    step2.style.bottom = 0 - scroll*2*k + 'px';
+  if (scroll < 500) {
 
-    step3.style.bottom = 10 - scroll*k/50 + '%';
+    drawImageProp(ctx, hills, 0, (-scroll*3.9)/4, canvas.width, canvas.height + (scroll*3.9)/2);
+    drawImageProp(ctx, cloudBeforeSecondGate1, -scroll*2 - 250, -80, canvas.width + 250 + scroll*2, canvas.height + 550);
+    drawImageProp(ctx, cloudBeforeSecondGate2, scroll/2 - 100, -400, canvas.width + 330 + scroll, canvas.height + 550);
+    drawImageProp(ctx, bridgeBack, 0, (-scroll*3.9)/2, canvas.width, canvas.height + scroll*3.9);
+    drawImageProp(ctx, cloudBeforeSecondGate2, 0, scroll*0.07 - 35, canvas.width, canvas.height);
+    drawImageProp(ctx, bridgeFront, 0, (-scroll*3.9)/2, canvas.width, canvas.height + scroll*3.9);
 
-    hills.style.top = 0 - scroll*k + 'px';
-    hills.style.bottom = 0 - scroll*k + 'px';
-
-    about.style.left = 36 - scroll*k/16 + '%';
-    scl = 1 + scroll*k/300;
+    about.style.left = 36 - scroll*1/16 + '%';
+    about.style.bottom = 36 - scroll*1/16 + '%';
+    scl = 1 + scroll*1/300;
     about.style.transform = 'scale(' + scl + ')';
 
     services.style.right = 42 - scroll/55 + '%';
-    services.style.transform = 'scale(' + scroll*k/300 + ')';
+    services.style.transform = 'scale(' + scroll*1/300 + ')';
 
     our_team.style.left = 48 - scroll/60 + '%';
-    our_team.style.transform = 'scale(' + scroll*k/500 + ')';
-  } else if (scroll < 1300/k) {
-    step1.style.top = 500 - scroll*3*k + 'px';
-    step1.style.bottom = 1500 - scroll*5*k + 'px';
+    our_team.style.transform = 'scale(' + scroll*1/500 + ')';
 
-    step2.style.top = 500 - scroll*3*k + 'px';
-    step2.style.bottom = 1500 - scroll*5*k + 'px';
+  } else if (scroll < 1300) {
 
-    step3.style.bottom = 165 - scroll*k/3 + '%';
+    drawImageProp(ctx, hills, 0, -500, canvas.width, scroll + 1183);
+    drawImageProp(ctx, cloudBeforeSecondGate1, -scroll*2 - 250, -80, canvas.width + 250 + scroll*2, canvas.height + 550);
+    drawImageProp(ctx, cloudBeforeSecondGate2, scroll/2 - 100, -400, canvas.width + 330 + scroll, canvas.height + 550);
+    drawImageProp(ctx, bridgeBack, 0, -scroll*2.05, canvas.width, scroll*5.5);
+    drawImageProp(ctx, cloudBeforeSecondGate2, 0, scroll - 487, canvas.width, canvas.height);
+    drawImageProp(ctx, bridgeFront, 0, -scroll*2.05, canvas.width, scroll*5.5);
 
-    hills.style.top = 0 - scroll*k + 'px';
-    hills.style.bottom = 1000 - scroll*3*k + 'px';
+    about.style.left = 36 - scroll*1/16 + '%';
+    about.style.bottom = 36 - scroll*1/16 + '%';
 
-    services.style.right = 50 - scroll/28 + '%';
-    services.style.transform = 'scale(' + scroll*k/300 + ')';
+    services.style.right = 42 - scroll/55 + '%';
+    services.style.bottom = -(scroll*2.1 - 1965)/20 + '%';
+    services.style.transform = 'scale(' + scroll*1/300 + ')';
 
     our_team.style.left = 48 - scroll/60 + '%';
-    our_team.style.transform = 'scale(' + scroll*k/500 + ')';
+    our_team.style.bottom = -(scroll*1.9 - 2000)/20 + '%';
+    our_team.style.transform = 'scale(' + scroll*1/500 + ')';
+
   } else {
-    step1.style.top = 500 - scroll*3*k + 'px';
-    step1.style.bottom = 1500 - scroll*5*k + 'px';
 
-    step2.style.top = 13400 - scroll*13*k + 'px';
-    step2.style.bottom = 30700 - scroll*23*1.2*k + 'px';
+    drawImageProp(ctx, hills, 0, -600, canvas.width, scroll*2.3);
+    drawImageProp(ctx, cloudBeforeSecondGate1, -scroll*2 - 250, -80, canvas.width + 250 + scroll*2, canvas.height + 550);
+    drawImageProp(ctx, cloudBeforeSecondGate2, scroll/2 - 100, -400, canvas.width + 330 + scroll, canvas.height + 550);
+    drawImageProp(ctx, bridgeBack, 0, -(scroll*43 - 46820)/3.476, canvas.width, scroll*40 - 45000);
 
-    step3.style.bottom = 100 - scroll*k/5 + '%';
-
-    hills.style.top = 0 - scroll*k + 'px';
-    hills.style.bottom = 5500 - scroll*6.5*k + 'px';
   }
 
-  step4.style.left = 0 - scroll*k/4 + '%';
-  step5.style.right = 0 - scroll*k/4 + '%';
-
-  if (scroll > 900/k) {
-    contacts.style.opacity = scroll*k/1000 - 1.5;
-    contacts.style.transform = 'scale(' + (scroll*k*2 - 2000)/4000 + ')';
+  if (scroll > 900) {
+    contacts.style.opacity = scroll/1000 - 1.5;
+    contacts.style.transform = 'scale(' + (scroll*2 - 2000)/4000 + ')';
     st = Math.random()
     if (st > 0.5) { st = st } else { st = -st}
-    lightning.style.transform = "scale(1,"+ st +")";
-    light.style.left = 100 - (scroll - 900/k)*k/3 + '%';
+      lightning.style.transform = "scale(1,"+ st +")";
+      light.style.left = 100 - (scroll - 900)*3 + '%';
   } else {
     contacts.style.opacity = 0;
   }
 
-  if (scroll > 1200/k) {
+  if (scroll > 1200) {
     portfolio.style.visibility = 'visible';
     lightning.style.transform = "scale("+Math.random()*scroll/100 + "," + Math.random()*scroll/200 + ")";
-    machine.style.opacity = scroll*k/1300
-    portfolio.style.opacity = scroll*k/1000
+    machine.style.opacity = scroll*1/1300
+    portfolio.style.opacity = scroll*1/1000
     light.style.left = '0%';
 
-    delorian.style.left = 185/k - scroll*scroll*k/8000 + '%';
-    delorian.style.top = -50 + scroll*k/15 + '%';
-    delorian.style.transform = 'scale(' + scroll*k/1200 + ')';
+    delorian.style.left = 185 - scroll*scroll*1/8000 + '%';
+    delorian.style.top = -50 + scroll*1/15 + '%';
+    delorian.style.transform = 'scale(' + scroll*1/1200 + ')';
+
   } else {
+
     machine.style.opacity = 0;
     portfolio.style.opacity = 0;
     portfolio.style.visibility = 'hidden';
@@ -108,10 +130,10 @@ function navigate() {
     delorian.style.left = '0%';
   }
 
-  if (scroll < 1300/k && scroll > 900/k) {
+  if (scroll < 1300 && scroll > 900) {
     lightning.style.visibility = 'visible';
-  } else if (scroll > 1200/k || scroll < 900/k) {
+  } else if (scroll > 1200 || scroll < 900) {
     lightning.style.visibility = 'hidden';
   }
-
 }
+
