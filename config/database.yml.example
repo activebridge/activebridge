@@ -1,11 +1,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: activebridge_development
   pool: 5
   host: localhost
   username: postgres
-  password: password
+  password: postgres
   port: 5432
 
 development:
