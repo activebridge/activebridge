@@ -25,19 +25,19 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d'),
 
 bridgeFront = new Image;
-bridgeFront.src = 'assets/bridge/bridge_front.png';
+bridgeFront.src = "https://res.cloudinary.com/active-bridge/image/upload/bridge_front_ncgkbi.png";
 
 bridgeBack = new Image;
-bridgeBack.src = 'assets/bridge/bridge_back.png';
+bridgeBack.src = 'https://res.cloudinary.com/active-bridge/image/upload/bridge_back_uaxnrh.png';
 
 cloudBeforeSecondGate2 = new Image;
-cloudBeforeSecondGate2.src = 'assets/bridge/cloud_before_second_gate2.png';
+cloudBeforeSecondGate2.src = 'https://res.cloudinary.com/active-bridge/image/upload/cloud_before_second_gate2_fbma0m.png';
 
 cloudBeforeSecondGate1 = new Image;
-cloudBeforeSecondGate1.src = 'assets/bridge/cloud_before_second_gate1.png';
+cloudBeforeSecondGate1.src = 'https://res.cloudinary.com/active-bridge/image/upload/cloud_before_second_gate1_byxhde.png';
 
 hills = new Image;
-hills.src = 'assets/bridge/hills.jpeg';
+hills.src = 'https://res.cloudinary.com/active-bridge/image/upload/hills_jhicrj.jpg';
 
 function navigate() {
   draw()
