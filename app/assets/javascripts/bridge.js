@@ -18,30 +18,33 @@ window.onresize = function() {
   timeOut = setTimeout(draw, 10);
 }
 
+var counter = 5, i = 0;
 window.onload = draw;
 window.onscroll = navigate;
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d'),
-
 bridgeFront = new Image;
+bridgeFront.onload = loadImg;
 bridgeFront.src = "https://res.cloudinary.com/active-bridge/image/upload/bridge_front_ncgkbi.png";
 
 bridgeBack = new Image;
+bridgeBack.onload = loadImg;
 bridgeBack.src = 'https://res.cloudinary.com/active-bridge/image/upload/bridge_back_uaxnrh.png';
 
 cloudBeforeSecondGate2 = new Image;
+cloudBeforeSecondGate2.onload = loadImg;
 cloudBeforeSecondGate2.src = 'https://res.cloudinary.com/active-bridge/image/upload/cloud_before_second_gate2_fbma0m.png';
 
 cloudBeforeSecondGate1 = new Image;
+cloudBeforeSecondGate1.onload = loadImg;
 cloudBeforeSecondGate1.src = 'https://res.cloudinary.com/active-bridge/image/upload/cloud_before_second_gate1_byxhde.png';
 
 hills = new Image;
+hills.onload = loadImg;
 hills.src = 'https://res.cloudinary.com/active-bridge/image/upload/hills_jhicrj.jpg';
 
-function navigate() {
-  draw()
-}
+function navigate() { draw() }
 
 function draw(scroll) {
   scroll = window.scrollY / (document.body.clientHeight - window.innerHeight) * 3000;
@@ -137,3 +140,12 @@ function draw(scroll) {
   }
 }
 
+function loadImg() {
+  i += 1;
+  if (i >= counter) {
+    canvas.style.opacity = 1;
+    document.body.style.overflowY = 'auto';
+    $('.popup-link, .scroll-arrows, img').show()
+    $('.loader').hide();
+  }
+}

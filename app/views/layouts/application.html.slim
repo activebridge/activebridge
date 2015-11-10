@@ -6,6 +6,17 @@ html
     meta name = "keywords" content=t('meta.keywords')
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    scss:
+      body {
+        overflow: hidden;
+      }
+      canvas {
+        opacity: 0;
+        transition: opacity .5s;
+      }
+      img, .popup-link, .scroll-arrows {
+        display: none;
+      }
   body
 
     canvas#canvas
@@ -15,7 +26,7 @@ html
         = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/cloud_jxe9sv.png'
       .info#info
         .contacts-container
-          = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/logo_u0qchh.png', class: :logo
+          = render 'layouts/logo.svg'
           .contact-section
             i.icon.icon-phone
             div
@@ -51,9 +62,10 @@ html
 
     .front.text-center#front
       .cloud
-        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/logo_u0qchh.png'
+        = render 'layouts/logo.svg'
         div
           = t('hello')
+        .loader
         br
         br
         .scroll-arrows SCROLL TO EXPLORE
