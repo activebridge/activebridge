@@ -1,9 +1,8 @@
 en:
   hello:
-    Hello! We are Active Bridge
-    high-skilled Ruby on Rails development team
-    providing modern web methodology for
-    building high-qualified custom web application in short time
+    Hello! We are Active Bridge -  ruby on rails web development team.
+    Our company provides modern web methods for building high qualified
+    custom web applications in short time
   meta:
     desription:
       Active Bridge is a dedicated Ruby on Rails web development team
@@ -14,39 +13,54 @@ en:
       agile Ruby development, web application development, backend web development
   about:
     title: About
-    description: "We never stop improving our services, including ror development methodologies, engineering practices and management techniques to enhance our team’s capabilities and increase customer satisfaction"
+    description: Active Bridge has great experience across a variety of industries.
+                 We have a deal with social networking, online education, medicine projects, marketing/advertising development.
+                 Our team follows the SCRUM methodology and Agile practice. We contribute to the Rails framework itself.
+                 Also, we speak at Ruby developer events and share our experience with the RoR community
+
     core_values: Core Values
     experienced_team: Experienced Development Team
     specialization: RoR Specialization
     respect: Mutual respect and understanding
     trustworthy: Trustworthy custom relationship
+
     benefits: Benefits
-    workout: Work out new web apps for start ups;
-    deadline: Deadline based development system;
-    hourly: Hourly base of work;
-    dedicated: Dedicated team project management;
-    full: Full cycle project services;
-    turnkey: Turnkey development team
+    cost_efficient: Cost - efficient Development.
+             Favorable costs due to engaging expert Ruby on Rails developers
+             from at cost-effective out staffing rates
+    master_degree: ROR developers with Master's Degree.
+              Most of our Active Bridge's members have university degrees in
+              mathematics, physics, or computer science
+    strong_skills: Strong Skills':'
+                   Ruby on Rails - 99%
+                   Javascript / CoffeeScript / jQuery
+                   AngularJS / Ember.js / Backbone.js - 88%
+                   HTML / Haml / Slim - 95%
+                   CSS / SASS / LESS / Compass - 90%
+                   MySQL / PostgreSQL / MongoDB / Redis - 75%
 
     why_we: Why We
+    skills: Our team is Mid- and Senior-level Ruby on Rails developers with excellent communication skills
     work_experience: More than 6 years successful work experience with foreign customers
-    skills: Strong skills Javascript/ CoffeeScript/ jQuery AngularJS/ Ember.js/ Backbone.js/CSS/ SASS/ LESS/ Compass
-    staff: More than 30ty top-level web developers
-    rate_project: RoR rate project web development is more than 30% faster than other languages.
+    rate_project: RoR rate project web development is more than 30% faster than other languages
+
   services:
     title: Services
     we_do:
-      Active Bridge is a Web development team that always keeps its services up
-      to date with the latest marke trends, providing customers all over the world
-      with best-of-class, easily extensible Internet products
+      We are web development team, that always keeps its services up to date with the latest market trends.
+      Active Bridge provides customers all over the world with best-of-class, easily extensible Internet products
     web_dev_title: Web development
     web_development:
-      "We implement Agile web development methodolog for easy and alive
-      communications with customer.Our Deep knowleadge in using BBD model and
-      strong knowledge in Rspec and Cucumber gives high-quality full-stack integration testing and unit tests.
-      We use Continuous Integration tools such as: Travis CI, TeamCity, Jenkins CI,
-      so that you have app in time and that it fits best to project's requirements"
+      Active Bridge can help you create web applications that meet both
+      your business needs and requirements. We start from the analysis stage and
+      take responsibility for the whole web development cycle.
+      Our team can cooperate with your development team to complete a project
     code_audit_title: Ruby on Rails code audit
-    code_audit: We provide our clients with very careful and valid process of auditing Ruby on Rails programming. Our team keeps your code strong and healthy with regular checkups, making reports with suggestions how to improve current application code
+    code_audit: We provide our customers with the careful and valid process of auditing Ruby on Rails code.
+                Our team keeps your programming process strong with regular checkups.
+                We make reports with suggestions to improve current application state
     support_title: Maintenance & Support
-    support: Active Bridge helps software providers meet the challenge of ongoing software maintenance and support with a range of services designed to substantially lower their maintenance costs and ensure timely response
+    support: Existing applications need sustained attention.
+             It is necessary to make some updates and enhancements to the features.
+             We maintenance and support with a range of web development services to substantially lower
+             your maintenance costs and ensure a timely response
