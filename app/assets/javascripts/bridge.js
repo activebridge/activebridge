@@ -18,7 +18,6 @@ window.onresize = function() {
   timeOut = setTimeout(draw, 10);
 }
 
-var counter = 5, i = 0;
 window.onload = draw;
 window.onscroll = navigate;
 
@@ -139,6 +138,8 @@ function draw(scroll) {
     lightning.style.visibility = 'hidden';
   }
 }
+
+var counter = 5, i = 0;
 
 function loadImg() {
   i += 1;
