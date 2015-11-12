@@ -99,9 +99,12 @@ function draw(scroll) {
     drawImageProp(ctx, cloudBeforeSecondGate2, scroll/2 - 100, -400, canvas.width + 330 + scroll, canvas.height + 550);
     drawImageProp(ctx, bridgeBack, 0, -(scroll*43 - 46820)/3.476, canvas.width, scroll*40 - 45000);
 
-  }
+ }
+
+  light.style.opacity = 0;
 
   if (scroll > 900) {
+    light.style.opacity = 1;
     contacts.style.opacity = scroll/1000 - 1.5;
     contacts.style.transform = 'scale(' + (scroll*2 - 2000)/4000 + ')';
     st = Math.random()
@@ -117,6 +120,7 @@ function draw(scroll) {
     lightning.style.transform = "scale("+Math.random()*scroll/100 + "," + Math.random()*scroll/200 + ")";
     machine.style.opacity = scroll*1/1300
     portfolio.style.opacity = scroll*1/1000
+    light.style.opacity = 1;
     light.style.left = '0%';
 
     delorian.style.left = 185 - scroll*scroll*1/8000 + '%';
