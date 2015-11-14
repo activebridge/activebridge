@@ -1,28 +1,28 @@
-h1.window-title= t('about.title')
-.about-container
+h1= t('about.title')
+.content
   h4.text-center= t('about.description')
   .section
-    .section-title.text-center
+    .section-title
       i.icon.icon-why-we
       = t('about.why_we')
-    ul
+    ul.section-description
       li= t('about.skills')
       li= t('about.work_experience')
       li= t('about.rate_project')
   .section
-    .section-title.text-center
+    .section-title
       i.icon.icon-ruby
       = t('about.core_values')
-    ul
+    ul.section-description
       li= t('about.experienced_team')
       li= t('about.specialization')
       li= t('about.respect')
       li= t('about.trustworthy')
   .section
-    .section-title.text-center
+    .section-title
       i.icon.icon-benefits
       = t('about.benefits')
-    ul
+    ul.section-description
       li= t('about.cost_efficient')
       li= t('about.master_degree')
       li= t('about.strong_skills')

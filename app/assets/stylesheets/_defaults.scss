@@ -1,0 +1,215 @@
+html {
+  font-family: $font;
+  letter-spacing: .05em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.translation_missing {
+  color: red;
+  background: black;
+}
+
+#lazybox {
+  max-height: 90vh;
+  max-width: 90vw;
+  overflow: hidden;
+
+  h1 {
+    text-align: center;
+    color: grey;
+  }
+
+  .item-title {
+    text-transform: uppercase;
+    color: grey;
+  }
+
+  .active-content {
+    width: 75vw;
+    overflow-y: auto;
+    padding: 5px 0;
+    max-height: 62vh;
+    text-align: center;
+
+    &.projects {
+      overflow: hidden;
+    }
+
+    &.members {
+      width: 60vw;
+      .member {
+        padding: 1%;
+        color: black;
+        display: inline-block;
+        margin-bottom: 20px;
+        text-align: center;
+        perspective: 1000;
+
+        p, h3 {
+          margin: 0;
+        }
+
+        img {
+          border-radius: 50%;
+        }
+
+        &:hover {
+          .member-info {
+            transform: rotateY(180deg);
+            border-color: $violet;
+          }
+        }
+        .member-info {
+          border: 10px solid white;
+          box-shadow: 0 0 10px black;
+          border-radius: 50%;
+          height: 200px;
+          width: 200px;
+          transform-style: preserve-3d;
+          position: relative;
+          transition: .5s;
+          .member-info-front, .member-info-back {
+            background: white;
+            backface-visibility: hidden;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+          }
+          .member-info-back {
+            position: absolute;
+            transform: rotateY(180deg);
+            top: 0;
+          }
+        }
+        .details {
+          padding-top: 15px;
+          h2 { margin: 0; }
+        }
+      }
+    }
+  }
+
+  .projects {
+    .wrapper {
+      white-space: nowrap;
+      transition: transform .3s;
+    }
+    .project-wrapper {
+      overflow: hidden;
+      max-height: 100%;
+      width: 80%;
+      vertical-align: top;
+      white-space: normal;
+      padding: 0 10%;
+      display: inline-block;
+      .project {
+        overflow-y: auto;
+        max-height: 50vh;
+      }
+      img {
+        max-height: 120px;
+        padding-top: 1%;
+      }
+      .project-description {
+        padding: 3% 0;
+        font-size: .8em;
+      }
+      .project-info {
+        width: 100%;
+        display: flex;
+        .info-section {
+          display: inline-block;
+          width: 20%;
+        }
+      }
+      .view-project {
+        padding: 30px;
+        a {
+          width: 150px;
+          padding: 10px 15px;
+          border: 1px solid $violet;
+          border-radius: 30px;
+        }
+      }
+    }
+    .arrows {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid gray;
+      top: 120px;
+      z-index: 999;
+      .icon-chevrone-up {
+        position: absolute;
+        border: 1px solid;
+        border-radius: 50%;
+        background: white;
+        padding: 5px;
+        cursor: pointer;
+        top: -12px;
+        &#left {
+          transform: rotate(-90deg);
+          left: 3%;
+        }
+        &#right {
+          transform: rotate(90deg);
+          right: 3%;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  line-height: 1.2;
+  padding: 0 1%;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  .section-title {
+    .icon {
+      padding-bottom: 5%;
+      font-size: 3em;
+      color: $violet;
+      display: block;
+    }
+    text-align: center;
+    padding-bottom: 5%;
+    text-transform: uppercase;
+  }
+
+  .section-description {
+    font-size: .9em;
+    padding: 5%;
+    position: relative;
+    border-top: 1px solid $violet;
+    &::before {
+      position: absolute;
+      content: '';
+      border: 3px solid $violet;
+      position: absolute;
+      top: -3px;
+      border-radius: 50%;
+      left: 49%;
+    }
+  }
+
+  ul {
+    font-size: .9em;
+    padding: 0 5% 0 10%;
+  }
+}
+.content {
+  overflow-y: auto;
+  max-height: 70vh;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}

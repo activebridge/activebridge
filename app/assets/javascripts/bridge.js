@@ -23,6 +23,7 @@ window.onscroll = navigate;
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d'),
+
 bridgeFront = new Image;
 bridgeFront.onload = loadImg;
 bridgeFront.src = "https://res.cloudinary.com/active-bridge/image/upload/bridge_front_ncgkbi.png";
@@ -150,7 +151,7 @@ function loadImg() {
   if (i >= counter) {
     canvas.style.opacity = 1;
     document.body.style.overflowY = 'auto';
-    $('.popup-link, .scroll-arrows, img').show()
+    $('.popup-link, .scroll-arrows, .hide-image').show()
     $('.loader').hide();
   }
 }

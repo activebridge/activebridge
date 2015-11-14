@@ -3,7 +3,7 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
-  version :standard do
+  version :mid do
     process :resize_to_fill => [245, 245]
   end
 

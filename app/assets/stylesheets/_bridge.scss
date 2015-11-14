@@ -31,7 +31,24 @@ canvas {
   }
 }
 
+@media (max-width: 640px) {
+  #lazybox {
+    max-width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .section {
+    width: 100%;
+  }
+
+  .content {
+    max-height: 88vh;
+  }
+}
+
 .front {
+  text-align: center;
   background: image-url("bridge/cloud.png") no-repeat 50% 50% / cover;
   pointer-events: none;
   position: absolute;
