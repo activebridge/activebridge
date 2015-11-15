@@ -33,11 +33,20 @@ canvas {
 
 @media (max-width: 640px) {
   #lazybox {
-    max-width: 100%;
+    max-width: 100vw;
     max-height: 100vh;
-    height: 100vh;
-  }
+    width: 100%;
+    height: 100%;
 
+    .active-content.members {
+      width: 100vw;
+      max-height: 100vh;
+    }
+
+    .active-content.projects {
+      width: 100vw;
+    }
+ }
   .section {
     width: 100%;
   }
