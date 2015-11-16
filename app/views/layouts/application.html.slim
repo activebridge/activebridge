@@ -1,74 +1,75 @@
-doctype html
-html
-  head
-    title Active Bridge - ruby on rails web development team
-    meta name = "description" content=t('meta.desription')
-    meta name = "keywords" content=t('meta.keywords')
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    = csrf_meta_tags
-    scss:
-      body {
-        overflow: hidden;
-      }
-      canvas {
-        opacity: 0;
-        transition: opacity .5s;
-      }
-      .hide-image, .popup-link, .scroll-arrows {
-        display: none;
-      }
-  body
+= cache params[:page] do
+  doctype html
+  html
+    head
+      title Active Bridge - ruby on rails web development team
+      meta name = "description" content=t('meta.desription')
+      meta name = "keywords" content=t('meta.keywords')
+      = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+      = csrf_meta_tags
+      scss:
+        body {
+          overflow: hidden;
+        }
+        canvas {
+          opacity: 0;
+          transition: opacity .5s;
+        }
+        .hide-image, .popup-link, .scroll-arrows {
+          display: none;
+        }
+    body
 
-    canvas#canvas
+      canvas#canvas
 
-    .contacts#our_contacts
-      .cloud
-        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/cloud_jxe9sv.png'
-      .info#info
-        .contacts-container
+      .contacts#our_contacts
+        .cloud
+          = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/cloud_jxe9sv.png'
+        .info#info
+          .contacts-container
+            = render 'layouts/logo.svg'
+            .contact-section
+              i.icon.icon-phone
+              div
+                small Phone number
+                br +38 097 753 5731
+            .contact-section
+              i.icon.icon-mail
+              div
+                small Email
+                br eugene@active-bridge.com
+            .contact-section
+              i.icon.icon-location
+              div
+                small Address
+                br Cherkassy, Ukraine
+
+      .step#step2
+        = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
+
+      .step.hide-image#delorian
+        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/delorian_wmckjt.png', id: :machine
+        = link_to 'Portfolio', '/portfolio', class: 'popup-link', id: :portfolio, remote: true
+        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/lightning_xcwb3x.png', id: :lightning
+        .light
+          #light
+            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq4kz5.png', id: :light1
+            br = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq4kz5.png', id: :light2
+            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq4kz5.png', id: :light3
+
+      .step#step1
+        = link_to 'About', '/about', class: 'popup-link', id: :about_us, remote: true
+        = link_to 'Services', '/services', class: 'popup-link', id: :our_services, remote: true
+
+      .front#front
+        .cloud
           = render 'layouts/logo.svg'
-          .contact-section
-            i.icon.icon-phone
-            div
-              small Phone number
-              br +38 097 753 5731
-          .contact-section
-            i.icon.icon-mail
-            div
-              small Email
-              br eugene@active-bridge.com
-          .contact-section
-            i.icon.icon-location
-            div
-              small Address
-              br Cherkassy, Ukraine
+          div
+            = t('hello')
+          .loader
+          br
+          br
+          .scroll-arrows SCROLL TO EXPLORE
 
-    .step#step2
-      = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
-
-    .step.hide-image#delorian
-      = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/delorian_wmckjt.png', id: :machine
-      = link_to 'Portfolio', '/portfolio', class: 'popup-link', id: :portfolio, remote: true
-      = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/lightning_xcwb3x.png', id: :lightning
-      .light
-        #light
-          = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq4kz5.png', id: :light1
-          br = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq4kz5.png', id: :light2
-          = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq4kz5.png', id: :light3
-
-    .step#step1
-      = link_to 'About', '/about', class: 'popup-link', id: :about_us, remote: true
-      = link_to 'Services', '/services', class: 'popup-link', id: :our_services, remote: true
-
-    .front#front
-      .cloud
-        = render 'layouts/logo.svg'
-        div
-          = t('hello')
-        .loader
-        br
-        br
-        .scroll-arrows SCROLL TO EXPLORE
-
-= render_lazybox
-= javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = render_lazybox
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
