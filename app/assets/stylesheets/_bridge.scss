@@ -49,28 +49,23 @@ canvas {
       height: 118vh;
     }
 
-    .projects.project-wrapper {
+    .projects .project-wrapper {
       padding: 0;
       width: 100%;
     }
 
-    .projects.project-wrapper.project {
+    .projects .project-wrapper .project {
       width: 100%;
       max-height: 77vh;
       padding: 0 15px;
       box-sizing: border-box;
     }
 
-    .projects.project-wrapper.project-info {
-      flex-flow: row;
-      flex-wrap: wrap;
-    }
-
-    .projects.project-wrapper.project-info.info-section {
+    .projects .project-wrapper .project-info .info-section {
       width: 50%;
     }
 
-    .projects.project-wrapper img {
+    .projects .project-wrapper img {
       max-height: 80px;
     }
   }
@@ -85,12 +80,7 @@ canvas {
 }
 
 @media (max-width: 1024px) {
-  .projects.project-wrapper.project-info {
-    flex-flow: row;
-    flex-wrap: wrap;
-  }
-
-  .projects.project-wrapper.project-info.info-section {
+  .projects .project-wrapper .project-info .info-section {
     width: 50%;
   }
 }

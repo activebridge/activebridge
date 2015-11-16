@@ -121,6 +121,8 @@ a {
       .project-info {
         width: 100%;
         display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
         .info-section {
           display: inline-block;
           width: 20%;
