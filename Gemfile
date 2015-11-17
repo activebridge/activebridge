@@ -30,4 +30,5 @@ group :development do
   gem 'spring'
   gem 'thin'
   gem 'quiet_assets'
+  gem "capistrano-db-tasks", require: false
 end
