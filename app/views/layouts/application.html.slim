@@ -5,6 +5,7 @@
       title Active Bridge - ruby on rails web development team
       meta name = "description" content=t('meta.desription')
       meta name = "keywords" content=t('meta.keywords')
+      meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
       = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
       = csrf_meta_tags
       scss:
@@ -31,31 +32,31 @@
             .contact-section
               i.icon.icon-phone
               div
-                small Phone number
+                .small-text Phone number
                 br +38 097 753 5731
             .contact-section
               i.icon.icon-mail
               div
-                small Email
+                .small-text Email
                 br eugene@active-bridge.com
             .contact-section
               i.icon.icon-location
               div
-                small Address
+                .small-text Address
                 br Cherkassy, Ukraine
 
       .step#step2
         = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
 
       .step.hide-image#delorian
-        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/delorian_wmckjt.png', style: 'width: 379px;', id: :machine
+        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/c_scale,w_300/v1447074740/delorian_wmckjt.png', width: '300px', height: '131px', id: :machine
         = link_to 'Portfolio', '/portfolio', class: 'popup-link', id: :portfolio, remote: true
-        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/lightning_xcwb3x.png', style: 'width: 149px;', id: :lightning
+        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/lightning_xcwb3x.png', width: '149px', height: '107px', id: :lightning
         .light
           #light
-            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', style: 'width: 267px;', id: :light1
-            br = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', style: 'width: 267px;', id: :light2
-            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', style: 'width: 267px;', id: :light3
+            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', width: '267px', height: '52px', id: :light1
+            br = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', width: '267px', height: '52px', id: :light2
+            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', width: '267px', height: '52px', id: :light3
 
       .step#step1
         = link_to 'About', '/about', class: 'popup-link', id: :about_us, remote: true
