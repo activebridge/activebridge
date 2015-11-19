@@ -47,11 +47,15 @@ hills.src = 'https://res.cloudinary.com/active-bridge/image/upload/hills_jhicrj.
 function navigate() { draw() }
 
 function draw(scroll) {
-  scroll = window.scrollY / (document.body.clientHeight - window.innerHeight) * 3000;
+  scroll = (window.scrollY || window.pageYOffset) / (document.body.clientHeight - window.innerHeight) * 3000;
   canvas.setAttribute('width', window.innerWidth);
   canvas.setAttribute('height', window.innerHeight);
 
   front.style.opacity = 1 - scroll/100;
+  about.style.opacity = 0;
+  services.style.opacity = 0;
+  light.style.opacity = 0;
+  our_team.style.opacity = 0;
 
   if (scroll < 500) {
 
@@ -62,14 +66,17 @@ function draw(scroll) {
     drawImageProp(ctx, cloudBeforeSecondGate2, 0, scroll*0.07 - 35, canvas.width, canvas.height);
     drawImageProp(ctx, bridgeFront, 0, (-scroll*3.9)/2, canvas.width, canvas.height + scroll*3.9);
 
+    about.style.opacity = 1;
     about.style.left = 36 - scroll*1/16 + '%';
     about.style.bottom = 36 - scroll*1/16 + '%';
     scl = 1 + scroll*1/300;
     about.style.transform = 'scale(' + scl + ')';
 
+    services.style.opacity = 1;
     services.style.right = 42 - scroll/55 + '%';
     services.style.transform = 'scale(' + scroll*1/300 + ')';
 
+    our_team.style.opacity = 1;
     our_team.style.left = 48 - scroll/60 + '%';
     our_team.style.transform = 'scale(' + scroll*1/500 + ')';
 
@@ -82,13 +89,16 @@ function draw(scroll) {
     drawImageProp(ctx, cloudBeforeSecondGate2, 0, scroll - 487, canvas.width, canvas.height);
     drawImageProp(ctx, bridgeFront, 0, -scroll*2.05, canvas.width, scroll*5.5);
 
+    about.style.opacity = 1;
     about.style.left = 36 - scroll*1/16 + '%';
     about.style.bottom = 36 - scroll*1/16 + '%';
 
+    services.style.opacity = 1;
     services.style.right = 42 - scroll/55 + '%';
     services.style.bottom = -(scroll*2.1 - 1965)/20 + '%';
     services.style.transform = 'scale(' + scroll*1/300 + ')';
 
+    our_team.style.opacity = 1;
     our_team.style.left = 48 - scroll/60 + '%';
     our_team.style.bottom = -(scroll*1.9 - 2000)/20 + '%';
     our_team.style.transform = 'scale(' + scroll*1/500 + ')';
@@ -102,7 +112,6 @@ function draw(scroll) {
 
  }
 
-  light.style.opacity = 0;
 
   if (scroll > 900) {
     light.style.opacity = 1;
