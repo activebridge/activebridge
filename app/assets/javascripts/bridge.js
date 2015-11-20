@@ -46,7 +46,7 @@ hills.src = 'https://res.cloudinary.com/active-bridge/image/upload/hills_jhicrj.
 
 function navigate() { draw() }
 
-function draw(scroll) {
+function draw() {
   scroll = (window.scrollY || window.pageYOffset) / (document.body.clientHeight - window.innerHeight) * 3000;
   canvas.setAttribute('width', window.innerWidth);
   canvas.setAttribute('height', window.innerHeight);
@@ -111,7 +111,6 @@ function draw(scroll) {
     drawImageProp(ctx, bridgeBack, 0, -(scroll*43 - 46820)/3.476, canvas.width, scroll*40 - 45000);
 
  }
-
 
   if (scroll > 900) {
     light.style.opacity = 1;

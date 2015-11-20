@@ -87,9 +87,10 @@ canvas {
 
 .front {
   text-align: center;
-  background: url("https://res.cloudinary.com/active-bridge/image/upload/cloud_jxe9sv.png") no-repeat 50% 50% / cover;
+  background: url("https://res.cloudinary.com/active-bridge/image/upload/v1448008261/cloud.png") no-repeat 50% 50% / cover;
   pointer-events: none;
-  position: absolute;
+  position: relative;
+  height: 830px;
   top: 0;
   left: 0;
   right: 0;
@@ -146,6 +147,7 @@ canvas {
     display: inline-block;
     line-height: 200vh;
     img {
+      padding-left: 200px;
       width: 100%;
       line-height: 1;
       vertical-align: middle;
