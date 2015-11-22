@@ -12,10 +12,17 @@ a {
   background: black;
 }
 
+#lazy_close {
+  font-size: 2em;
+  font-weight: normal;
+  font-family: 'icomoon';
+}
+
 #lazybox {
   max-height: 90vh;
   max-width: 90vw;
   overflow: hidden;
+  height: 100%;
 
   h1 {
     text-align: center;
@@ -25,6 +32,10 @@ a {
   .item-title {
     text-transform: uppercase;
     color: grey;
+  }
+
+  .item-description {
+    font-weight: bold;
   }
 
   .active-content {
@@ -101,14 +112,14 @@ a {
     .project-wrapper {
       overflow: hidden;
       max-height: 100%;
-      width: 80%;
+      width: 99.5%;
       vertical-align: top;
       white-space: normal;
-      padding: 0 10%;
       display: inline-block;
       .project {
         overflow-y: auto;
         max-height: 50vh;
+        padding: 0 5%;
       }
       img {
         max-height: 120px;
@@ -123,12 +134,15 @@ a {
         display: flex;
         flex-flow: row;
         flex-wrap: wrap;
+        text-align: left;
+        font-size: smaller;
         .info-section {
           display: inline-block;
           width: 20%;
         }
       }
       .view-project {
+        font-family: 'icomoon';
         padding: 30px;
         a {
           width: 150px;
@@ -143,24 +157,26 @@ a {
       left: 0;
       right: 0;
       height: 1px;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid #e2e2e2;
       top: 120px;
       z-index: 999;
+      margin: 0px 25px;
       .icon-chevrone-up {
         position: absolute;
-        border: 1px solid;
+        border: 1px solid #e2e2e2;
         border-radius: 50%;
         background: white;
         padding: 5px;
         cursor: pointer;
         top: -12px;
+        color: grey;
         &#left {
           transform: rotate(-90deg);
-          left: 3%;
+          left: 0%;
         }
         &#right {
           transform: rotate(90deg);
-          right: 3%;
+          right: 0%;
         }
       }
     }
@@ -202,10 +218,18 @@ a {
   }
 
   ul {
+    list-style-type: none;
     font-size: .9em;
     padding: 0 5% 0 10%;
   }
+
+  ul > li:before {
+      content: "–";
+      position: absolute;
+      margin-left: -1.1em;
+  }
 }
+
 .content {
   overflow-y: auto;
   max-height: 70vh;

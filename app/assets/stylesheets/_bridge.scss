@@ -61,6 +61,10 @@ canvas {
       box-sizing: border-box;
     }
 
+    .projects .project-wrapper .project-info {
+      text-align: center;
+    }
+
     .projects .project-wrapper .project-info .info-section {
       width: 50%;
     }
@@ -83,6 +87,10 @@ canvas {
   #lazybox .projects .project-wrapper .project-info .info-section {
     width: 50%;
   }
+
+  #lazybox .projects .project-wrapper .project-info {
+    text-align: center;
+  }
 }
 
 .front {
@@ -90,7 +98,7 @@ canvas {
   background: url("https://res.cloudinary.com/active-bridge/image/upload/v1448008261/cloud.png") no-repeat 50% 50% / cover;
   pointer-events: none;
   position: relative;
-  height: 830px;
+  height: 840px;
   top: 0;
   left: 0;
   right: 0;

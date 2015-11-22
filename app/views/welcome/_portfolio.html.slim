@@ -13,17 +13,25 @@ h1= 'Portfolio'
           .project-info
             .info-section
               .item-title= 'technology'
-              = project.technology
+              .item-description
+                = project.technology
             .info-section
               .item-title= 'project length'
-              = project.duration
+              .item-description
+                = project.duration
             .info-section
               .item-title= 'team size'
-              = project.team_size
+              .item-description
+                = project.team_size
             .info-section
               .item-title= 'client'
-              = project.client
+              .item-description
+                = project.client
             .info-section
               .item-title= 'industry'
-              = project.industry
-          .view-project= link_to 'View Project', project.link, target: '_blank'
+              .item-description
+                = project.industry
+          .view-project
+            = link_to project.link, target: '_blank' do
+              | View Project
+              i.icon.icon-arrow-right

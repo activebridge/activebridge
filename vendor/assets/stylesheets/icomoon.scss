@@ -23,6 +23,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-right:before {
+	content: "\e095";
+  margin-left: 5px;
+  margin-right: -5px;
+}
+.icon-cross:before {
+	content: "\e117";
+}
 .icon-ruby:before {
 	content: "\e801";
 }
