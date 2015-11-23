@@ -3,10 +3,8 @@ h1.window-title Team
   - @members.map do |member|
     .member id="member_#{member.id}"
       .member-info
-        .member-info-front
-          p= image_tag(member.avatar.url(:mid))
-        .member-info-back
-          p= cl_image_tag(member.cartoon, width: 200, height: 200, crop: :thumb, radius: :max)
+        .member-info-front= image_tag(member.avatar.url(:circle))
+        .member-info-back= image_tag(member.cartoon.url(:circle))
       .details
-        h3= member.name
+        h4= member.name
         p= member.position

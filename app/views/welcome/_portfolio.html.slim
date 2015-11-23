@@ -31,7 +31,6 @@ h1= 'Portfolio'
               .item-title= 'industry'
               .item-description
                 = project.industry
-          .view-project
-            = link_to project.link, target: '_blank' do
-              | View Project
-              i.icon.icon-arrow-right
+          .text-center= link_to project.link, target: '_blank', class: 'view-project' do
+            | View Project
+            i.icon.icon-arrow-right

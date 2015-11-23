@@ -19,15 +19,23 @@ a {
 }
 
 #lazybox {
-  max-height: 90vh;
-  max-width: 90vw;
+  max-height: 96vh;
+  max-width: 70%;
   overflow: hidden;
-  height: 100%;
 
   h1 {
     text-align: center;
-    color: grey;
+    color: black;
+    font-weight: normal;
   }
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+    color: black;
+    font-weight: normal;
+  }
+
 
   .item-title {
     text-transform: uppercase;
@@ -39,32 +47,32 @@ a {
   }
 
   .active-content {
-    width: 75vw;
     overflow-y: auto;
-    padding: 5px 0;
-    max-height: 62vh;
+    padding: 5px 20px;
+    max-height: 84vh;
+    box-sizing: border-box;
     text-align: center;
 
     &.projects {
       overflow: hidden;
+      padding: 0;
     }
 
     &.members {
-      width: 60vw;
       .member {
-        padding: 1%;
+        padding: 0 3%;
         color: black;
         display: inline-block;
         margin-bottom: 20px;
         text-align: center;
         perspective: 1000;
+        width: 32%;
+        box-sizing: border-box;
+        img { width: 100%; }
 
-        p, h3 {
+        p, h4 {
           margin: 0;
-        }
-
-        img {
-          border-radius: 50%;
+          font-size: 0.8em;
         }
 
         &:hover {
@@ -74,20 +82,12 @@ a {
           }
         }
         .member-info {
-          border: 10px solid white;
-          box-shadow: 0 0 10px black;
-          border-radius: 50%;
-          height: 200px;
-          width: 200px;
           transform-style: preserve-3d;
           position: relative;
           transition: .5s;
           .member-info-front, .member-info-back {
             background: white;
             backface-visibility: hidden;
-            border-radius: 50%;
-            height: 200px;
-            width: 200px;
             overflow: hidden;
           }
           .member-info-back {
@@ -108,20 +108,24 @@ a {
     .wrapper {
       white-space: nowrap;
       transition: transform .3s;
+      font-size: 0;
     }
     .project-wrapper {
+      width: 100%;
+      font-size: 16px;
       overflow: hidden;
       max-height: 100%;
-      width: 99.5%;
       vertical-align: top;
       white-space: normal;
       display: inline-block;
       .project {
         overflow-y: auto;
-        max-height: 50vh;
+        max-height: 62vh;
         padding: 0 5%;
       }
       img {
+        max-width: 100%;
+        height: auto;
         max-height: 120px;
         padding-top: 1%;
       }
@@ -135,21 +139,20 @@ a {
         flex-flow: row;
         flex-wrap: wrap;
         text-align: left;
-        font-size: smaller;
+        font-size: small;
         .info-section {
           display: inline-block;
           width: 20%;
         }
       }
-      .view-project {
-        font-family: 'icomoon';
-        padding: 30px;
-        a {
-          width: 150px;
-          padding: 10px 15px;
-          border: 1px solid $violet;
-          border-radius: 30px;
-        }
+      a.view-project {
+        padding: 10px 15px;
+        border: 1px solid $violet;
+        border-radius: 30px;
+        min-width: 150px;
+        display: inline-block;
+        margin: 20px 0;
+        color: $violet;
       }
     }
     .arrows {
@@ -158,9 +161,18 @@ a {
       right: 0;
       height: 1px;
       border-bottom: 1px solid #e2e2e2;
-      top: 120px;
+      top: 100px;
       z-index: 999;
       margin: 0px 25px;
+      &::before {
+        position: absolute;
+        content: '';
+        border: 3px solid $violet;
+        position: absolute;
+        top: -1px;
+        border-radius: 50%;
+        left: 49%;
+      }
       .icon-chevrone-up {
         position: absolute;
         border: 1px solid #e2e2e2;
@@ -202,10 +214,12 @@ a {
   }
 
   .section-description {
-    font-size: .9em;
+    font-size: .8em;
     padding: 5%;
+    margin: 0;
     position: relative;
-    border-top: 1px solid $violet;
+    border-top: 1px solid #e2e2e2;
+    text-align: left;
     &::before {
       position: absolute;
       content: '';
@@ -228,12 +242,6 @@ a {
       position: absolute;
       margin-left: -1.1em;
   }
-}
-
-.content {
-  overflow-y: auto;
-  max-height: 70vh;
-  padding: 0 20px;
 }
 
 .text-center {
