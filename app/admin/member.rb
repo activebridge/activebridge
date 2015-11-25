@@ -1,5 +1,6 @@
 ActiveAdmin.register Member do
   permit_params :name, :position, :avatar, :careers, :linkedin, :github, :cartoon
+  menu priority: 2
 
   index do
     selectable_column

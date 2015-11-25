@@ -214,12 +214,6 @@ ActiveAdmin.setup do |config|
   #
   # If you wanted to add a static menu item to the default menu provided:
   #
-  #   config.namespace :admin do |admin|
-  #     admin.build_menu :default do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
-  #     end
-  #   end
-
   # == Download Links
   #
   # You can disable download links on resource listing pages,
@@ -259,4 +253,10 @@ ActiveAdmin.setup do |config|
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
+
+  config.namespace :admin do |admin|
+    admin.build_menu :default do |menu|
+      menu.add label: "Clear Cache", url: "/expire_cache", priority: 4
+    end
+  end
 end

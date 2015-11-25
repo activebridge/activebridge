@@ -1,3 +1,4 @@
-- if params[:page]
-  = content_for :lazybox do
-    = render params[:page]
+= cache [:v1, params[:page]]
+  - if params[:page]
+    = content_for :lazybox do
+      = render params[:page]

@@ -1,5 +1,6 @@
 ActiveAdmin.register Project do
   permit_params :title, :description, :logo, :technology, :duration, :team_size, :client, :industry, :link
+  menu priority: 3
 
   index do
     selectable_column
