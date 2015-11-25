@@ -1,76 +1,165 @@
-= cache params[:page] do
-  doctype html
-  html
-    head
-      title Active Bridge - ruby on rails web development team
-      meta name = "description" content=t('meta.desription')
-      meta name = "keywords" content=t('meta.keywords')
-      meta name = "viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-      = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-      = csrf_meta_tags
-      scss:
-        body {
-          overflow: hidden;
-        }
-        canvas {
-          opacity: 0;
-          transition: opacity .5s;
-        }
-        .hide-image, .popup-link, .scroll-arrows {
-          display: none;
-        }
-    body
+// // Fly through the bridge
 
-      canvas#canvas
+front = document.getElementById('front'),
+machine = document.getElementById('machine'),
+lightning = document.getElementById('lightning'),
+light = document.getElementById('light'),
+contacts = document.getElementById('our_contacts'),
+about = document.getElementById('about_us'),
+services = document.getElementById('our_services'),
+team = document.getElementById('our_team'),
+portfolio = document.getElementById('portfolio'),
+delorian = document.getElementById('delorian');
 
-      .contacts#our_contacts
-        .cloud
-          = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/v1448008261/cloud.png'
-        .info#info
-          .contacts-container
-            = render 'layouts/logo.svg'
-            .contact-section
-              i.icon.icon-phone
-              div
-                small Phone number
-                br +38 097 753 5731
-            .contact-section
-              i.icon.icon-mail
-              div
-                small Email
-                br eugene@active-bridge.com
-            .contact-section
-              i.icon.icon-location
-              div
-                small Address
-                br Cherkassy, Ukraine
+var timeOut;
+window.onresize = function() {
+  if(timeOut)
+    clearTimeout(timeOut);
+  timeOut = setTimeout(draw, 10);
+}
 
-      .step#step2
-        = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
+window.onload = draw;
+window.onscroll = navigate;
 
-      .step.hide-image#delorian
-        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/c_scale,w_300/v1447074740/delorian_wmckjt.png', width: '300px', height: '131px', id: :machine
-        = link_to 'Portfolio', '/portfolio', class: 'popup-link', id: :portfolio, remote: true
-        = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/lightning_xcwb3x.png', width: '149px', height: '107px', id: :lightning
-        .light
-          #light
-            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', width: '267px', height: '52px', id: :light1
-            br = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', width: '267px', height: '52px', id: :light2
-            = image_tag 'https://res.cloudinary.com/active-bridge/image/upload/light_hq.png', width: '267px', height: '52px', id: :light3
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext('2d'),
 
-      .step#step1
-        = link_to 'About', '/about', class: 'popup-link', id: :about_us, remote: true
-        = link_to 'Services', '/services', class: 'popup-link', id: :our_services, remote: true
+bridgeFront = new Image;
+bridgeFront.onload = loadImg;
+bridgeFront.src = "https://res.cloudinary.com/active-bridge/image/upload/bridge_front_ncgkbi.png";
 
-      .front#front
-        .cloud
-          = render 'layouts/logo.svg'
-          div
-            = t('hello')
-          .loader
-          br
-          br
-          .scroll-arrows SCROLL TO EXPLORE
+bridgeBack = new Image;
+bridgeBack.onload = loadImg;
+bridgeBack.src = 'https://res.cloudinary.com/active-bridge/image/upload/bridge_back_uaxnrh.png';
 
-  = render_lazybox
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+cloudBeforeSecondGate2 = new Image;
+cloudBeforeSecondGate2.onload = loadImg;
+cloudBeforeSecondGate2.src = 'https://res.cloudinary.com/active-bridge/image/upload/cloud_before_second_gate2_fbma0m.png';
+
+cloudBeforeSecondGate1 = new Image;
+cloudBeforeSecondGate1.onload = loadImg;
+cloudBeforeSecondGate1.src = 'https://res.cloudinary.com/active-bridge/image/upload/cloud_before_second_gate1_byxhde.png';
+
+hills = new Image;
+hills.onload = loadImg;
+hills.src = 'https://res.cloudinary.com/active-bridge/image/upload/hills_jhicrj.jpg';
+
+function navigate() { draw() }
+
+function draw() {
+  scroll = (window.scrollY || window.pageYOffset) / (document.body.clientHeight - window.innerHeight) * 3000;
+  canvas.setAttribute('width', window.innerWidth);
+  canvas.setAttribute('height', window.innerHeight);
+
+  front.style.opacity = 1 - scroll/100;
+  about.style.opacity = 0;
+  services.style.opacity = 0;
+  light.style.opacity = 0;
+  our_team.style.opacity = 0;
+
+  if (scroll < 500) {
+
+    drawImageProp(ctx, hills, 0, (-scroll*3.9)/4, canvas.width, canvas.height + (scroll*3.9)/2);
+    drawImageProp(ctx, cloudBeforeSecondGate1, -scroll*2 - 250, -80, canvas.width + 250 + scroll*2, canvas.height + 550);
+    drawImageProp(ctx, cloudBeforeSecondGate2, scroll/2 - 100, -400, canvas.width + 330 + scroll, canvas.height + 550);
+    drawImageProp(ctx, bridgeBack, 0, (-scroll*3.9)/2, canvas.width, canvas.height + scroll*3.9);
+    drawImageProp(ctx, cloudBeforeSecondGate2, 0, scroll*0.07 - 35, canvas.width, canvas.height);
+    drawImageProp(ctx, bridgeFront, 0, (-scroll*3.9)/2, canvas.width, canvas.height + scroll*3.9);
+
+    about.style.opacity = 1;
+    about.style.left = 36 - scroll*1/16 + '%';
+    about.style.bottom = 36 - scroll*1/16 + '%';
+    scl = 1 + scroll*1/300;
+    about.style.transform = 'scale(' + scl + ')';
+
+    services.style.opacity = 1;
+    services.style.right = 42 - scroll/55 + '%';
+    services.style.transform = 'scale(' + scroll*1/300 + ')';
+
+    our_team.style.opacity = 1;
+    our_team.style.left = 48 - scroll/60 + '%';
+    our_team.style.transform = 'scale(' + scroll*1/500 + ')';
+
+  } else if (scroll < 1300) {
+
+    drawImageProp(ctx, hills, 0, -500, canvas.width, scroll + 1183);
+    drawImageProp(ctx, cloudBeforeSecondGate1, -scroll*2 - 250, -80, canvas.width + 250 + scroll*2, canvas.height + 550);
+    drawImageProp(ctx, cloudBeforeSecondGate2, scroll/2 - 100, -400, canvas.width + 330 + scroll, canvas.height + 550);
+    drawImageProp(ctx, bridgeBack, 0, -scroll*2.05, canvas.width, scroll*5.5);
+    drawImageProp(ctx, cloudBeforeSecondGate2, 0, scroll - 487, canvas.width, canvas.height);
+    drawImageProp(ctx, bridgeFront, 0, -scroll*2.05, canvas.width, scroll*5.5);
+
+    about.style.opacity = 1;
+    about.style.left = 36 - scroll*1/16 + '%';
+    about.style.bottom = 36 - scroll*1/16 + '%';
+
+    services.style.opacity = 1;
+    services.style.right = 42 - scroll/55 + '%';
+    services.style.bottom = -(scroll*2.1 - 1965)/20 + '%';
+    services.style.transform = 'scale(' + scroll*1/300 + ')';
+
+    our_team.style.opacity = 1;
+    our_team.style.left = 48 - scroll/60 + '%';
+    our_team.style.bottom = -(scroll*1.9 - 2000)/20 + '%';
+    our_team.style.transform = 'scale(' + scroll*1/500 + ')';
+
+  } else {
+
+    drawImageProp(ctx, hills, 0, -600, canvas.width, scroll*2.3);
+    drawImageProp(ctx, cloudBeforeSecondGate1, -scroll*2 - 250, -80, canvas.width + 250 + scroll*2, canvas.height + 550);
+    drawImageProp(ctx, cloudBeforeSecondGate2, scroll/2 - 100, -400, canvas.width + 330 + scroll, canvas.height + 550);
+    drawImageProp(ctx, bridgeBack, 0, -(scroll*43 - 46820)/3.476, canvas.width, scroll*40 - 45000);
+
+ }
+
+  if (scroll > 900) {
+    light.style.opacity = 1;
+    contacts.style.opacity = scroll/1000 - 1.5;
+    contacts.style.transform = 'scale(' + (scroll*2 - 2000)/4000 + ')';
+    st = Math.random()
+    if (st > 0.5) { st = st } else { st = -st}
+      lightning.style.transform = "scale(1,"+ st +")";
+      light.style.left = 100 - (scroll - 900)*3 + '%';
+  } else {
+    contacts.style.opacity = 0;
+  }
+
+  if (scroll > 1200) {
+    portfolio.style.visibility = 'visible';
+    lightning.style.transform = "scale("+Math.random()*scroll/100 + "," + Math.random()*scroll/200 + ")";
+    machine.style.opacity = scroll*1/1300
+    portfolio.style.opacity = scroll*1/1000
+    light.style.opacity = 1;
+    light.style.left = '0%';
+
+    delorian.style.left = 185 - scroll*scroll*1/8000 + '%';
+    delorian.style.top = -50 + scroll*1/15 + '%';
+    delorian.style.transform = 'scale(' + scroll*1/1200 + ')';
+
+  } else {
+
+    machine.style.opacity = 0;
+    portfolio.style.opacity = 0;
+    portfolio.style.visibility = 'hidden';
+
+    delorian.style.left = '0%';
+  }
+
+  if (scroll < 1300 && scroll > 900) {
+    lightning.style.visibility = 'visible';
+  } else if (scroll > 1200 || scroll < 900) {
+    lightning.style.visibility = 'hidden';
+  }
+}
+
+var counter = 5, i = 0;
+
+function loadImg() {
+  i += 1;
+  if (i >= counter) {
+    canvas.style.opacity = 1;
+    document.body.style.overflowY = 'auto';
+    $('.popup-link, .scroll-arrows, .hide-image').show()
+    $('.loader').hide();
+  }
+}
