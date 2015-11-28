@@ -159,7 +159,8 @@ function loadImg() {
   if (i >= counter) {
     canvas.style.opacity = 1;
     document.body.style.overflowY = 'auto';
-    $('.popup-link, .scroll-arrows, .hide-image').show()
+    $('.popup-link, .scroll-arrows, .hide-image').show();
+    $('html').niceScroll({horizrailenabled: false});
     $('.loader').hide();
   }
 }
