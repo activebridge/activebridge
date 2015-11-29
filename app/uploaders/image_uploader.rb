@@ -5,7 +5,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :circle do
     process convert: :png
-    cloudinary_transformation :width => 300, :height => 300, radius: 150, :crop => :fill, :gravity => :face
+    cloudinary_transformation width: 300, height: 300, radius: 150, crop: :fill, gravity: :face
   end
 
   def extension_white_list
