@@ -164,3 +164,7 @@ function loadImg() {
     $('.loader').hide();
   }
 }
+
+$(document).on('click', '.scroll-arrows', function(){
+  $("body").animate({ scrollTop: 400 }, 'slow');
+})

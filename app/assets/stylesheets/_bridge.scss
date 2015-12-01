@@ -22,7 +22,6 @@
 .front {
   text-align: center;
   background: url("https://res.cloudinary.com/active-bridge/image/upload/v1448008261/cloud.png") no-repeat 50% 50% / cover;
-  pointer-events: none;
   position: relative;
   height: 840px;
   top: 0;
@@ -36,6 +35,10 @@
     width: 40%;
     line-height: 1;
     vertical-align: middle;
+  }
+  .scroll-arrows {
+    cursor: pointer;
+    margin: 0 34%;
   }
   .scroll-arrows::before, .scroll-arrows::after {
     content: '\e805';
@@ -191,6 +194,10 @@ a.popup-link {
     .projects .project-wrapper .project-info {
       text-align: center;
     }
+  }
+
+  .front .scroll-arrows {
+    margin: 0px 19%;
   }
 }
 
