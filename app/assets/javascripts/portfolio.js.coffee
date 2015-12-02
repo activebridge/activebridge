@@ -3,6 +3,16 @@ $(document).on 'click', '.arrows #right, .arrows #left', (e) ->
   scrollTo(wrapper, @.id)
   e.preventDefault()
 
+$(document).keydown (e) ->
+  switch e.which
+    when 37
+      scrollTo($('.arrows #left').parent().siblings('.wrapper'), 'left')
+    when 39
+      scrollTo($('.arrows #right').parent().siblings('.wrapper'), 'right')
+    else
+      return
+  e.preventDefault()
+
 scrollTo = (wrapper, direction) ->
   tf= wrapper.data('tf')
   step = wrapper.data('step')
