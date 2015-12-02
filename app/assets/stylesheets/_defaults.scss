@@ -54,7 +54,6 @@ a {
     font-weight: normal;
   }
 
-
   .item-title {
     text-transform: uppercase;
     color: grey;
@@ -86,34 +85,27 @@ a {
         perspective: 1000;
         width: 32%;
         box-sizing: border-box;
-        img { width: 100%; }
+        .member-image {
+          background-size: 100%;
+          background-position: center center;
+        }
+
+        &:hover img{
+          opacity: 0;
+        }
+
+        img {
+          width: 100%;
+          background: white;
+          transition: opacity .5s;
+          display: block;
+        }
 
         p, h4 {
           margin: 0;
           font-size: 0.8em;
         }
 
-        &:hover {
-          .member-info {
-            transform: rotateY(180deg);
-            border-color: $violet;
-          }
-        }
-        .member-info {
-          transform-style: preserve-3d;
-          position: relative;
-          transition: .5s;
-          .member-info-front, .member-info-back {
-            background: white;
-            backface-visibility: hidden;
-            overflow: hidden;
-          }
-          .member-info-back {
-            position: absolute;
-            transform: rotateY(180deg);
-            top: 0;
-          }
-        }
         .details {
           padding-top: 15px;
           h2 { margin: 0; }
@@ -230,7 +222,6 @@ a {
     padding-bottom: 5%;
     text-transform: uppercase;
   }
-
   .section-description {
     font-size: .8em;
     padding: 5%;

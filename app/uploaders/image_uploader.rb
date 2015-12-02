@@ -3,9 +3,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
-  version :circle do
+  version :mask do
     process convert: :png
-    cloudinary_transformation width: 300, height: 300, radius: 150, crop: :fill, gravity: :face
+    cloudinary_transformation transformation: 'mask'
   end
 
   def extension_white_list

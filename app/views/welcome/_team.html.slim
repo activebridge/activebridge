@@ -2,9 +2,8 @@ h1.window-title Team
 .active-content.members
   - @members.map do |member|
     .member id="member_#{member.id}"
-      .member-info
-        .member-info-front= image_tag(member.avatar.url(:circle))
-        .member-info-back= image_tag(member.cartoon.url(:circle))
+      .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")
+        = image_tag(member.avatar.url(:mask))
       .details
         h4= member.name
         p= member.position
