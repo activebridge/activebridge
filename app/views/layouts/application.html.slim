@@ -35,17 +35,17 @@
               i.icon.icon-phone
               div
                 small Phone number
-                br +38 097 753 5731
+                div item-prop='telephone' +38 097 753 5731
             .contact-section
               i.icon.icon-mail
               div
                 small Email
-                br eugene@active-bridge.com
+                div item-prop='email' 'eugene@active-bridge.com
             .contact-section
-              i.icon.icon-location
+              a.icon.icon-location target='_blank' href="https://www.google.com/maps/place/Marshala+Krasovs'koho+St,+8,+Cherkasy,+Cherkas'ka+oblast,+Ukraine/@44.6228353,29.6920978,5z/data=!4m2!3m1!1s0x40d14b8febf9aa21:0xe43a326d1c2451c2"
               div
                 small Address
-                br Cherkassy, Ukraine
+                div item-prop='addressLocality' Cherkassy, Ukraine
 
       .step#step2
         = link_to 'Team', '/team', class: 'popup-link', id: :our_team, remote: true
