@@ -1,6 +1,6 @@
-.loader:before,
-.loader:after,
-.loader {
+.loader-popup:before,
+.loader-popup:after,
+.loader-popup {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -9,10 +9,12 @@
   -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
 }
-.loader {
+.loader-popup {
   font-size: 10px;
   margin: 80px auto;
-  position: relative;
+  position: fixed;
+  left: 50%;
+  bottom: 50%;
   text-indent: -9999em;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -20,16 +22,16 @@
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-.loader:before {
+.loader-popup:before {
   left: -3.5em;
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-.loader:after {
+.loader-popup:after {
   left: 3.5em;
 }
-.loader:before,
-.loader:after {
+.loader-popup:before,
+.loader-popup:after {
   content: '';
   position: absolute;
   top: 0;
@@ -54,3 +56,5 @@
     box-shadow: 0 2.5em 0 0 #C74038;
   }
 }
+
+
