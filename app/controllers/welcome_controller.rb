@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @members = Member.all
-    @projects = Project.all
+    @members = Member.order(priority: :asc)
+    @projects = Project.order(priority: :asc)
   end
 
   def expire_cache
