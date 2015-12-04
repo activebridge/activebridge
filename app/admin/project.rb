@@ -1,6 +1,7 @@
 ActiveAdmin.register Project do
-  permit_params :title, :description, :logo, :technology, :duration, :team_size, :client, :industry, :link
+  permit_params :title, :description, :logo, :technology, :duration, :team_size, :client, :industry, :link, :priority
   menu priority: 3
+  config.sort_order = 'priority_asc'
 
   index do
     selectable_column
@@ -12,6 +13,7 @@ ActiveAdmin.register Project do
     column 'Link' do |project|
       link_to project.link, project.link
     end
+    column :priority
     actions
   end
 end
