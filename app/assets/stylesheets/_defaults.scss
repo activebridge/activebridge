@@ -34,6 +34,11 @@ a {
   top: 5px;
 }
 
+#lazy_close:after {
+  z-index: 1;
+  position: relative;
+}
+
 #lazybox {
   max-height: 96vh;
   max-width: 70%;
