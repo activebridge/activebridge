@@ -143,4 +143,4 @@ counter = 5
 i = 0
 
 $(document).on 'click', '.scroll-arrows', ->
-  $('body').animate { scrollTop: 400 }, 'slow'
+  $('body, html').animate { scrollTop: 400 }, 'slow'
