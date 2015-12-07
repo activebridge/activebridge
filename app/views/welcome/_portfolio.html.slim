@@ -18,7 +18,7 @@ h1= 'Portfolio'
             .info-section
               .item-title= 'project length'
               .item-description
-                = project.duration
+                = display_duration_in_words(project.duration)
             .info-section
               .item-title= 'team size'
               .item-description
