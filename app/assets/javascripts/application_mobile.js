@@ -1,9 +1,8 @@
 //= require jquery
 //= require jquery.nicescroll.min
-//= require lazybox
-//= require active_admin
-//= require bridge
+//= require mobile
 //= require cover_in_canvas
 //= require google_analytics
+//= require lazybox
 //= require portfolio
 //= require webfontloader

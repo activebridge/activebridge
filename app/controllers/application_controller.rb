@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
       username == Rails.application.secrets[:admin_username] && password == Rails.application.secrets[:admin_password]
     end
   end
+
+  def set_layout
+    if request.user_agent =~ /Android|iPad|iPhone|Mobile/
+      "mobile"
+    else
+      "application"
+    end
+  end
 end

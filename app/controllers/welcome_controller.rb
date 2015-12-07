@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+layout :set_layout
+
   def index
     @members = Member.order(priority: :asc)
     @projects = Project.order(priority: :asc)
