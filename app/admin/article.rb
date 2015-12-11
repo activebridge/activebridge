@@ -1,17 +1,20 @@
 ActiveAdmin.register Article do
+  permit_params :body, :review_status
+  menu priority: 4
+  index do
+    selectable_column
+    column :title
+    column :body
+    column :review_status
+    actions
+  end
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if resource.something?
-#   permitted
-# end
-
-
+  form do |f|
+    f.inputs "Article Editing" do
+      f.input :title
+      f.input :body
+      f.input :review_status, as: :select, collection:  Article.review_statuses.keys, include_blank: false
+    end
+    f.actions
+  end
 end

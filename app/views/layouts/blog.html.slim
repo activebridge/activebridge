@@ -1,0 +1,20 @@
+  doctype html
+  html
+    head
+      title Active Bridge - ruby on rails web development team
+      meta name = "description" content=t('meta.desription')
+      meta name = "keywords" content=t('meta.keywords')
+      meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+      = csrf_meta_tags
+
+    body
+
+      h2 Blog
+      table
+        thead
+          tr
+            th Title
+            th Body
+            th
+        = render partial: 'articles/articles', collection: @done_articles, as: :done_article

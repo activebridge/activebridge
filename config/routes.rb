@@ -4,5 +4,6 @@ Rails.application.routes.draw do
                constraints: { page: /(team|about|services|portfolio)/ }
   get '/expire_cache', to: 'welcome#expire_cache'
   resource :team, only: :show
+  resources :articles
   root to: 'welcome#index'
 end
