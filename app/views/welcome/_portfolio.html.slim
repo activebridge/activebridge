@@ -1,3 +1,4 @@
+<div class='main' itemscope="" itemtype="http://schema.org/Product"</div>
 h1= 'Portfolio'
 .active-content.projects
   .arrows
@@ -6,10 +7,11 @@ h1= 'Portfolio'
   .wrapper data-step=1 data-tf=0
     - @projects.map do |project|
       .project-wrapper
-        h2= project.title
+        h2 itemprop='name'= project.title
         .project id="project_#{project.id}"
           = cl_image_tag(project.logo)
-          .project-description= project.description
+          div itemprop='model' class= 'project-description'
+            = project.description
           .project-info
             .info-section
               .item-title= 'technology'
@@ -28,7 +30,8 @@ h1= 'Portfolio'
               .item-description
                 = project.client
             .info-section
-              .item-title= 'industry'
+              div itemprop='category' class='item-title'
+                = 'industry'
               .item-description
                 = project.industry
           .text-center= link_to project.link, target: '_blank', class: 'view-project' do

@@ -1,3 +1,4 @@
+.main itemscope="" itemtype="http://schema.org/Thing" /
 h1= t('about.title')
 .active-content.about
   h4.text-center= t('about.description')
@@ -6,23 +7,23 @@ h1= t('about.title')
       i.icon.icon-why-we
       = t('about.why_we')
     ul.section-description
-      li= t('about.skills')
-      li= t('about.work_experience')
-      li= t('about.rate_project')
+      li itemprop='description'= t('about.skills')
+      li itemprop='description'= t('about.work_experience')
+      li itemprop='description'= t('about.rate_project')
   .section
     .section-title
       i.icon.icon-ruby
       = t('about.core_values')
     ul.section-description
-      li= t('about.experienced_team')
-      li= t('about.specialization')
-      li= t('about.respect')
-      li= t('about.trustworthy')
+      li itemprop='description'= t('about.experienced_team')
+      li itemprop='description'= t('about.specialization')
+      li itemprop='description'= t('about.respect')
+      li itemprop='description'= t('about.trustworthy')
   .section
     .section-title
       i.icon.icon-benefits
       = t('about.benefits')
     ul.section-description
-      li= t('about.cost_efficient')
-      li= t('about.master_degree')
+      li itemprop='description'= t('about.cost_efficient')
+      li itemprop='description'= t('about.master_degree')
       /* li= t('about.strong_skills') */

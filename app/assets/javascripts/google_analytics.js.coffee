@@ -6,3 +6,9 @@ ga 'send', 'pageview', '/about'
 ga 'send', 'pageview', '/services'
 ga 'send', 'pageview', '/team'
 ga 'send', 'pageview', '/portfolio'
+
+ga 'send', 'social', 'Facebook', 'share', 'https://active-bridge.com'
+ga 'send', 'social', 'Github', 'share', 'https://active-bridge.com'
+ga 'send', 'social', 'Twitter', 'share', 'https://active-bridge.com'
+ga 'send', 'social', 'LinkedIn', 'share', 'https://active-bridge.com'
+

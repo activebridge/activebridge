@@ -1,3 +1,4 @@
+.main itemscope="" itemtype="http://schema.org/Thing" /
 h1.window-title= t('services.title')
 .active-content.services
   h4.text-center= t('services.we_do')
@@ -5,17 +6,17 @@ h1.window-title= t('services.title')
     .section-title
       i.icon.icon-code
       = t('services.web_dev_title')
-    .section-description.text-center
+    div itemprop='description' class= 'section-description text-center'
       = t('services.web_development')
   .section
     .section-title
       i.icon.icon-rails
       = t('services.code_audit_title')
-    .section-description.text-center
+    div itemprop='description' class= 'section-description text-center'
       = t('services.code_audit')
   .section
     .section-title
       i.icon.icon-support
       = t('services.support_title')
-    .section-description.text-center
+    div itemprop='description' class= 'section-description text-center'
       = t('services.support')
