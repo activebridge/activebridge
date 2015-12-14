@@ -1,5 +1,5 @@
 ActiveAdmin.register Article do
-  permit_params :body, :review_status
+  permit_params :body, :review_status, :title
   menu priority: 4
   index do
     selectable_column
