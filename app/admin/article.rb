@@ -1,4 +1,14 @@
 ActiveAdmin.register Article do
+  controller do
+    def find_resource
+      begin
+        scoped_collection.where(slug: params[:id]).last!
+      rescue ActiveRecord::RecordNotFound
+        scoped_collection.find(params[:id])
+      end
+    end
+  end
+
   permit_params :body, :review_status, :title
   menu priority: 4
   index do

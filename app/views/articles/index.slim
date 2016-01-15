@@ -1,0 +1,21 @@
+.container
+  .header Header place
+  .row
+    .pull-left = link_to 'Create Article', new_article_path, 'data-no-turbolink' => true
+  .row
+    .posts-container.col-sm-12.col-md-9
+      .posts.border-left-bottom.border-right
+        .row
+          .category.col-lg-12
+            .border-bottom
+              ul.featured-topics.clearfix
+                = render partial: 'categories/category', collection: categories, as: :category
+        = render 'list_articles'
+        = will_paginate articles, page_links: false
+        
+    .sidebar.col-md-3.hidden-xs.hidden-sm
+      .popular-posts
+        .row
+          .col-md-12
+            h4 Popular Posts
+            = render partial: 'popular_article', collection: popular_articles, as: :popular_article

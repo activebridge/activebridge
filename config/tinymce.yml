@@ -1,0 +1,5 @@
+default:
+  plugins:
+    - image
+    - link
+    - table

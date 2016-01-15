@@ -4,6 +4,5 @@
 //= require active_admin
 //= require bridge
 //= require cover_in_canvas
-//= require google_analytics
 //= require portfolio
 //= require webfontloader

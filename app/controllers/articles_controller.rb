@@ -1,21 +1,26 @@
 class ArticlesController < ApplicationController
   layout 'blog'
 
-  expose(:articles)
-  expose(:article)
+  expose(:articles) { |default| default.order(created_at: :desc).by_category(params[:category]).paginate(:page => params[:page], :per_page => 5) }
+  expose(:article, attributes: :article_params, finder: :find_by_slug)
+  expose(:categories)
+  expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
+
+  def show
+    article.increment! :viewed
+  end
 
   def create
-    article.save
-    respond_to(article)
+    if article.save
+      redirect_to article
+    else
+      render :new
+    end
   end
 
-  def update
-    article.save
-    respond_to(article)
-  end
+  private
 
-  def destroy
-    article.destroy
-    respond_to {}
+  def article_params
+    params.require(:article).permit!
   end
 end

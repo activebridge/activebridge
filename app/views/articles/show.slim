@@ -1,0 +1,13 @@
+.header
+.posts
+  .container
+    .row
+      .col-lg-2.visible-lg
+      .post-container.with-offset.col-lg-8
+        .row
+          .post-body.col-lg-12
+            = article.body.html_safe
+  section.popular-posts-section.border-top
+    h4 Popular posts
+    .row
+      = render partial: 'popular_article_show', collection: popular_articles, as: :popular_article

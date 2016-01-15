@@ -16,6 +16,12 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'pry'
 gem 'decent_exposure'
+gem 'active_link_to'
+gem 'friendly_id', '~> 5.1.0'
+gem 'tinymce-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'simple_form'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   gem 'byebug'
