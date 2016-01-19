@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   def authorized_to_create
     member? || moderator?
   end
+
+  def full_name
+    [first_name, last_name].join(' ').strip
+  end
 end

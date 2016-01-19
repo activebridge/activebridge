@@ -15,13 +15,11 @@ html
     | Signed in as
     | &nbsp
     strong 
-      = current_user.first_name
-      | &nbsp
-      = current_user.last_name
+      = current_user.full_name
     | &nbsp
     = link_to 'Log out', signout_path
   - else
-    p = link_to 'Sign in with Google', 'auth/google_oauth2' 
+    tp = link_to 'Sign in with Google', '/auth/google_oauth2' 
 
   p  
   - if current_user

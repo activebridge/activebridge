@@ -1,0 +1,8 @@
+.row
+  .post.col-lg-12
+    = image_tag pending_article.picture_url, width: 100, height: 100, class: 'img-resonsive'
+    .pull-right
+      - if current_user.try(:member?)
+      = link_to 'edit', edit_article_path(pending_article)
+    h3.bold = link_to pending_article.title, article_path(pending_article)
+    .preview-body == pending_article.body

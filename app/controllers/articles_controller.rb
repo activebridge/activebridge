@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_filter :moderator_only, only: [:edit, :update, :destroy]
   before_filter :member_and_moderator_only, only: [:new, :create]
 
-  expose(:articles) { |default| default.order(created_at: :desc).by_category(params[:category]).paginate(:page => params[:page], :per_page => 5) }
+  expose(:articles) { |default| default.by_category(params[:category]).order(created_at: :desc).paginate(page: params[:page], per_page: 5) }
   expose(:article, attributes: :article_params, finder: :find_by_slug)
   expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
   expose(:categories)

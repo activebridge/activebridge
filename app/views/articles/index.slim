@@ -1,6 +1,7 @@
 .container
   .header Header place
   .row
+    .col-md-12
     - if current_user.try(:authorized_to_create) 
       .pull-left = link_to 'Create Article', new_article_path, 'data-no-turbolink' => true 
   .row
@@ -11,8 +12,25 @@
             .border-bottom
               ul.featured-topics.clearfix
                 = render partial: 'categories/category', collection: categories, as: :category
-        = render 'list_articles'
-        = will_paginate articles, page_links: false
+        .pull-right  
+          - if current_user.try(:moderator?)
+            = link_to 'Done articles', articles_path(done: true)
+            = link_to 'Pending articles', articles_path(pending: true)
+            
+        - if current_user.try(:moderator?)              
+          - if (params[:done].to_s == true.to_s)
+            = render partial: 'done_article', collection: articles.done, as: :done_article
+            = will_paginate articles, page_links: false
+          - elsif (params[:pending].to_s == true.to_s)
+            = render partial: 'pending_article', collection: articles.pending, as: :pending_article
+            = will_paginate articles, page_links: false
+          - else
+            = render partial: 'done_article', collection: articles.done, as: :done_article 
+            = will_paginate articles, page_links: false
+        
+        - unless current_user.try(:moderator?)
+          = render partial: 'done_article', collection: articles.done, as: :done_article
+          = will_paginate articles, page_links: false
         
     .sidebar.col-md-3.hidden-xs.hidden-sm
       .popular-posts
