@@ -1,0 +1,8 @@
+= simple_form_for article, method: :put do |f|
+  = f.input :title
+  = f.input :body, input_html: {class: 'tinymce', rows: 15}
+  = f.hidden_field(:picture_cache)
+  = f.file_field(:picture)
+  = f.association :category, as: :select
+  = f.button :submit
+= tinymce

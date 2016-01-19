@@ -1,7 +1,8 @@
 .container
   .header Header place
   .row
-    .pull-left = link_to 'Create Article', new_article_path, 'data-no-turbolink' => true
+    - if current_user.try(:authorized_to_create) 
+      .pull-left = link_to 'Create Article', new_article_path, 'data-no-turbolink' => true 
   .row
     .posts-container.col-sm-12.col-md-9
       .posts.border-left-bottom.border-right

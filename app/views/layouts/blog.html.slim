@@ -1,23 +1,30 @@
-  doctype html
-  html
-    head
-      title Active Bridge - ruby on rails web development team
-      meta name = "description" content=t('meta.desription')
-      meta name = "keywords" content=t('meta.keywords')
-      meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-      = javascript_include_tag 'application_blog', 'data-turbolinks' => true
-      = stylesheet_link_tag 'blog'
-      = csrf_meta_tags
+doctype html
+html
+  head
+    title Active Bridge - ruby on rails web development team
+    meta name = "description" content=t('meta.desription')
+    meta name = "keywords" content=t('meta.keywords')
+    meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    = javascript_include_tag 'application_blog', 'data-turbolinks' => true
+    = stylesheet_link_tag 'blog'
+    = csrf_meta_tags
 
-    body
+  body
 
-    - if current_user
-      | Signed in as
-      strong 
-        = current_user.first_name
-        = current_user.last_name
-      = link_to 'Log out', signout_path
-    - else
-      p = link_to 'Sign in with Google', 'auth/google_oauth2'
-    
-    = yield
+  - if current_user
+    | Signed in as
+    | &nbsp
+    strong 
+      = current_user.first_name
+      | &nbsp
+      = current_user.last_name
+    | &nbsp
+    = link_to 'Log out', signout_path
+  - else
+    p = link_to 'Sign in with Google', 'auth/google_oauth2' 
+
+  p  
+  - if current_user
+    = "You are #{current_user.role}"
+  
+  = yield
