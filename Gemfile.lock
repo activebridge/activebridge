@@ -75,6 +75,7 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (8.2.1)
+    cancancan (1.13.1)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -164,7 +165,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
-    minitest (5.8.3)
+    minitest (5.8.4)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -343,6 +344,7 @@ DEPENDENCIES
   activeadmin!
   bootstrap-sass (~> 3.3.6)
   byebug
+  cancancan (~> 1.10)
   capistrano-db-tasks
   capistrano-passenger (~> 0.0.5)
   capistrano-rails (~> 1.1.3)

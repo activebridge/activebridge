@@ -2,7 +2,7 @@
   .header Header place
   .row
     .col-md-12
-    - if current_user.try(:authorized_to_create) 
+    - if can? :create, article
       .pull-left = link_to 'Create Article', new_article_path, 'data-no-turbolink' => true 
   .row
     .posts-container.col-sm-12.col-md-9
@@ -11,11 +11,13 @@
           .category.col-lg-12
             .border-bottom
               ul.featured-topics.clearfix
+                li.pull-left = active_link_to 'All Posts', articles_path, active: :exact
                 = render partial: 'categories/category', collection: categories, as: :category
-                
+                  
+        = render partial: 'member_scope'
         = render partial: 'moderator_scope'
-            
-        - unless current_user.try(:moderator?)
+
+        - unless current_user.try(:member_or_moderator)
           = render partial: 'done_article', collection: articles.done, as: :done_article
           = will_paginate articles, page_links: false
         

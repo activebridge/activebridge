@@ -1,6 +1,8 @@
 .row
-  .post.col-lg-12
-    = image_tag done_article.picture_url, width: 100, height: 100, class: 'img-resonsive'
-    .pull-right
-    h3.bold = link_to done_article.title, article_path(done_article, type: params[:type])
-    .preview-body == done_article.body
+    .post.col-lg-12
+      = image_tag done_article.picture_url, width: 100, height: 100, class: 'img-resonsive'
+      p = image_tag done_article.user.image, width: 70, height: 70
+      p = done_article.user.full_name
+      p = done_article.created_at.strftime('%B %d, %Y')
+      h3.bold = link_to done_article.title, article_path(done_article)
+      .preview-body == done_article.body

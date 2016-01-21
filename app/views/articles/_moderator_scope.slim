@@ -1,14 +1,9 @@
 .pull-right  
   - if current_user.try(:moderator?)
-    = active_link_to 'Done articles', articles_path(done: true), active: :exact
-    | &nbsp
     = active_link_to 'Pending articles', articles_path(pending: true), active: :exact
   
 - if current_user.try(:moderator?)              
-  - if (params[:done].to_s == true.to_s)
-    = render partial: 'done_article', collection: articles.done, as: :done_article
-    = will_paginate articles, page_links: false
-  - elsif (params[:pending].to_s == true.to_s)
+  - if (params[:pending].to_s == true.to_s)
     = render partial: 'pending_article', collection: articles.pending, as: :pending_article
     = will_paginate articles, page_links: false
   - else

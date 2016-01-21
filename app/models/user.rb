@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     member! if email.split('@')[1] == 'active-bridge.com'
   end
 
-  def authorized_to_create
+  def member_or_moderator
     member? || moderator?
   end
 

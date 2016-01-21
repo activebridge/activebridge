@@ -23,6 +23,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.0.6'
 gem 'omniauth-google-oauth2'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
   gem 'byebug'

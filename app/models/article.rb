@@ -4,7 +4,7 @@ class Article < ActiveRecord::Base
 
   enum review_status: [:pending, :done]
 
-  validates :title, :body, :category, presence: true
+  validates :title, :body, :category, :picture, presence: true
 
   scope :by_category, -> (slug) { joins(:category).where('categories.slug = ?', slug) if slug }
 
@@ -13,4 +13,3 @@ class Article < ActiveRecord::Base
 
   mount_uploader :picture, ImageUploader
 end
- 

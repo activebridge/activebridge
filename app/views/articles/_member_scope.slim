@@ -1,0 +1,11 @@
+.pull-right  
+  - if current_user.try(:member?)
+    = active_link_to 'My pending articles', articles_path(pending: true), active: :exact
+
+- if current_user.try(:member?)       
+  - if (params[:pending].to_s == true.to_s)
+    = render partial: 'my_pending_article', collection: current_user.articles.pending, as: :my_pending_article
+    = will_paginate articles, page_links: false
+  - else
+    = render partial: 'done_article', collection: articles.done, as: :done_article 
+    = will_paginate articles, page_links: false
