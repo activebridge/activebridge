@@ -10,13 +10,15 @@ ActiveAdmin.register Article do
     end
   end
 
-  permit_params :body, :review_status, :title, :category_id
+  permit_params :body, :review_status, :title, :category_id, :picture
   menu priority: 4
   index do
     selectable_column
+    column :category
     column :title
     column :body
-    column :category
+    column :picture
+    column :user
     column :review_status
     actions
   end
@@ -26,6 +28,7 @@ ActiveAdmin.register Article do
       f.input :title
       f.input :body
       f.input :category_id
+      f.input :picture
       f.input :review_status, as: :select, collection:  Article.review_statuses.keys, include_blank: false
     end
     f.actions

@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
   belongs_to :category
+  belongs_to :user
 
   enum review_status: [:pending, :done]
 
@@ -12,3 +13,4 @@ class Article < ActiveRecord::Base
 
   mount_uploader :picture, ImageUploader
 end
+ 

@@ -4,5 +4,6 @@
   = f.hidden_field(:picture_cache)
   = f.file_field(:picture)
   = f.association :category, as: :select
+  = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
   = f.button :submit
 = tinymce 
