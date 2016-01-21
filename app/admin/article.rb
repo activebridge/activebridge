@@ -1,4 +1,5 @@
 ActiveAdmin.register Article do
+  menu priority: 4
   controller do
     def find_resource
       begin

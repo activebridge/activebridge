@@ -256,7 +256,7 @@ ActiveAdmin.setup do |config|
 
   config.namespace :admin do |admin|
     admin.build_menu :default do |menu|
-      menu.add label: "Clear Cache", url: "/expire_cache", priority: 4
+      menu.add label: "Clear Cache", url: "/expire_cache"
     end
   end
 

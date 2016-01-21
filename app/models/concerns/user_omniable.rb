@@ -8,6 +8,7 @@ module UserOmniable
         user.last_name = auth["info"]["last_name"]
         user.image = auth["info"]["image"]
         user.send(auth["provider"], auth)
+        user.check_member
       end
     end
   end
