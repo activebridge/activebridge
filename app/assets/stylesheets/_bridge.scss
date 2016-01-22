@@ -50,6 +50,12 @@
   .scroll-arrows::after {
     transform: rotate(180deg);
   }
+  .social-icons {
+    padding-top: 35px;
+    a { padding: 10px 15px;
+        font-size: 25px;
+        color: $violet }
+  }
 }
 
 .contacts {
@@ -108,6 +114,12 @@
       padding: 10px 0;
       display: block;
     }
+    .social-icon  {
+    padding-top: 35px;
+    a { padding: 10px 15px;
+        font-size: 25px;
+        color: $violet }
+  }
   }
 }
 
