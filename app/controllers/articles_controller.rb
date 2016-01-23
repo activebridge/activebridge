@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   expose(:categories)
 
   def show
-    article.increment! :viewed
+    article.increment_viewed
   end
 
   def create

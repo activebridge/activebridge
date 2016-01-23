@@ -12,4 +12,8 @@ class Article < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   mount_uploader :picture, ImageUploader
+
+  def increment_viewed
+    increment! :viewed unless pending?
+  end
 end

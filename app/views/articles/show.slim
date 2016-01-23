@@ -7,3 +7,7 @@
         .row
           .post-body.col-lg-12
             == article.body
+            
+    - unless article.pending?        
+      = render 'disqus'
+    
