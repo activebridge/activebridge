@@ -1,0 +1,19 @@
+.post.row
+  .col-md-3
+    = image_tag article.picture_url, width: '150px', class: 'img-resonsive'
+  .col-md-9
+    .pull-right
+      - if current_user.try(:member_or_moderator)
+        - if article.pending?
+          = link_to 'Edit', edit_article_path(article)
+          | &nbsp
+          = link_to 'Delete', article, method: :delete
+    .post-body
+      h1 = link_to article.title, article_path(article)
+      .preview-body == article.body
+    
+    .author-avatar
+      p = image_tag article.user.image, width: 70, height: 70
+    .meta
+      p = article.user.full_name
+      p = article.created_at.strftime('%B %d, %Y')

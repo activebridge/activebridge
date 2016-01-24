@@ -1,29 +1,29 @@
 .container
-  .header Header place
-  .row
-    .col-md-12
-    - if can? :create, article
-      .pull-left = link_to 'Create Article', new_article_path, 'data-no-turbolink' => true 
-  .row
-    .posts-container.col-sm-12.col-md-9
-      .posts.border-left-bottom.border-right
-        .row
-          .category.col-lg-12
-            .border-bottom
-              ul.featured-topics.clearfix
-                li.pull-left = active_link_to 'All Posts', articles_path, active: :exact
-                = render partial: 'categories/category', collection: categories, as: :category
-                  
-        = render partial: 'member_scope'
-        = render partial: 'moderator_scope'
-
-        - unless current_user.try(:member_or_moderator)
-          = render partial: 'done_article', collection: articles.done, as: :done_article
-          = will_paginate articles, page_links: false
-        
-    .sidebar.col-md-3.hidden-xs.hidden-sm
-      .popular-posts
-        .row
-          .col-md-12
-            h4 Popular Posts
-            = render partial: 'popular_article', collection: popular_articles, as: :popular_article
+  header.header
+  main.content
+    .row
+      .col-md-8.categories
+        ul
+          li.pull-left = active_link_to 'All Posts', articles_path, active: :exact
+          = render partial: 'categories/category', collection: categories, as: :category
+      .col-md-4.social-buttons
+      
+    .row
+      .col-md-12
+        - if can? :create, article
+          = link_to 'Create Post', new_article_path, 'data-no-turbolink' => true 
+      
+    .row
+      .col-md-9.mainbar
+          = render partial: 'separate_tab'
+      
+      - unless current_user.try(:member_or_moderator)
+        = render partial: 'article', collection: articles.done, as: :article
+        = will_paginate articles, page_links: false
+          
+      .col-md-3.sidebar
+        .popular-posts
+          h4 Popular Posts
+          = render partial: 'popular_article', collection: popular_articles, as: :popular_article
+    
+  footer.footer

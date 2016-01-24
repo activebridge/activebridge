@@ -20,7 +20,7 @@ html
     = link_to 'Log out', signout_path
   - else
     tp = link_to 'Sign in with Google', '/auth/google_oauth2' 
-
+  
   p  
   - if current_user
     = "You are #{current_user.role}"

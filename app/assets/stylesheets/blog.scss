@@ -2,30 +2,8 @@
 @import 'bootstrap';
 
 $font-size: 16px;
-$line-height: 1.4;
-$lines-to-show: 3;
-
-body {
-  font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: #686868;
-  overflow-y: auto;
-}
-
-a {
-    font-weight: 700;
-    color: #333;
-
-    &:hover{
-      color: #ff8400;
-    }
-}
-
-a:hover {
-  text-decoration: none;
-}
+$line-height: 1.75;
+$lines-to-show: 4;
 
 .preview-body {
   display: block;
@@ -40,90 +18,81 @@ a:hover {
   text-overflow: ellipsis;
 }
 
-.posts-container .post {
-  h3 {
-    margin: 0 33px 6px 40px;
-    font-size: 23px;
-  }
-
-  h3.bold { font-weight: 700; }
-
-  p.light {
-    margin: 0 33px 63px 41px;
-    font-size: 17px;
-    line-height: 28px;
-  }
+body {
+  font-weight: 300;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  overflow-y: auto;
 }
 
-.category {
-  margin: 39px 0 0 0;
-  padding-bottom: 15px;
+a {
+  color: #00a2c5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 15px auto;
+}
+
+.categories {
+  font-weight: bold;
+  font-size: 16px;
 
   ul {
+    padding-left: 0;
     list-style: none;
   }
 
   li {
     margin: 0 35px 0 0;
   }
-
-  ul.featured-topics a{
-    font-weight: bold;
-    font-size: 16px;
-    color: #686868;
-
-    &:hover {
-      color: #ff8400;
-    }
-  }
 }
 
-.posts {
-  .post-container {
-    .post-body {
-      font-size: 19px;
-      line-height: 35px;
-    }
-  }
+.content {
+  padding: 0 35px;
 }
 
-.posts {
-  .with-offset {
-    margin-right: 36px;
-    margin-left: 36px;
-  }
+.header {
+  height: 350px;
+  border-style: solid;
 }
 
-.popular-posts-section {
-  padding: 45px 25px;
-  background: #f0f0f0;
-  border-bottom: 1px solid #e3e3e3;
+.footer {
+  height: 200px;
+  border-style: solid;
 }
-
-.border-full {
-    border: 1px solid #e3e3e3
-}
-
-.border-left-bottom {
-    border-left: 1px solid #e3e3e3;
-    border-bottom: 1px solid #e3e3e3
-}
-
-.border-right {
-    border-right: 1px solid #e3e3e3
-}
-
-.border-bottom {
-    border-bottom: 1px solid #e3e3e3;
-}
-
-.header { height: 250px; }
 
 .active { color: #ff8400!important; }
 
-@media (min-width: 992px) {
-  .popular-posts-section {
-    padding-left: 80px;
-    padding-right: 80px;
+.popular-posts {
+  img {
+    height: 100px;
+  }
+}
+
+.post {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    margin: 0 0 15px;
+    font-size: 24px;
+  }
+
+  .post-body {
+    padding-left: 20px;
+    float: left;
+  }
+}
+
+@media (min-width: 1001px) {
+  .post {
+    margin-bottom: 75px;
   }
 }
