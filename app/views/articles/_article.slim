@@ -9,11 +9,12 @@
           | &nbsp
           = link_to 'Delete', article, method: :delete
     .post-body
-      h1 = link_to article.title, article_path(article)
-      .preview-body == article.body
+      h1.title = link_to article.title, article_path(article)
+      .preview-body == article.body[0..300]
     
-    .author-avatar
-      p = image_tag article.user.image, width: 70, height: 70
-    .meta
-      p = article.user.full_name
-      p = article.created_at.strftime('%B %d, %Y')
+      .details.row
+        .author-avatar.col-md-2
+          p = image_tag article.user.image, width: 70, height: 70
+        .meta.col-md-10
+          p = article.user.full_name
+          p = article.created_at.strftime('%B %d, %Y')

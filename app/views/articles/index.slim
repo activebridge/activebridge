@@ -1,5 +1,6 @@
 .container
   header.header
+  .back
   main.content
     .row
       .col-md-8.categories
@@ -7,6 +8,12 @@
           li.pull-left = active_link_to 'All Posts', articles_path, active: :exact
           = render partial: 'categories/category', collection: categories, as: :category
       .col-md-4.social-buttons
+        = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-twitter', target: '_blank'
+        = link_to '', 'https://facebook.com/ActiveBridgeTeam', class: 'icon icon-facebook', target: '_blank'
+        = link_to '', 'https://plus.google.com/+ActiveBridgeTeam', class: 'icon icon-google', target: '_blank'
+        = link_to '', 'https://youtube.com/channel/UCw5hPDX1sKgDZczIvcaIepw', class: 'icon icon-youtube', target: '_blank'
+        = link_to '', 'https://ru.pinterest.com/activebridg0459/', class: 'icon icon-pinterest', target: '_blank'
+        = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-github', target: '_blank'
       
     .row
       .col-md-12
@@ -15,11 +22,11 @@
       
     .row
       .col-md-9.mainbar
-          = render partial: 'separate_tab'
+        = render partial: 'separate_tab'
       
-      - unless current_user.try(:member_or_moderator)
-        = render partial: 'article', collection: articles.done, as: :article
-        = will_paginate articles, page_links: false
+        - unless current_user.try(:member_or_moderator)
+          = render partial: 'article', collection: articles.done, as: :article
+          = will_paginate articles, page_links: false
           
       .col-md-3.sidebar
         .popular-posts
@@ -27,3 +34,27 @@
           = render partial: 'popular_article', collection: popular_articles, as: :popular_article
     
   footer.footer
+    .row
+      .col-md-4
+        .about
+          h3 Active Bridge
+          p Active Bridge is a Ruby on Rails development team, which brings your ideas to life
+      .col-md-2
+        .about
+          h4 Company
+          ul.footer-page-list
+            li = link_to 'About', '/about'
+            li = link_to 'Services', '/services'
+            li = link_to 'Team', '/team'
+            li = link_to 'Portfolio', '/portfolio'
+      .col-md-6
+        .about
+          h4 Follow us
+          .social-buttons
+            = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-twitter', target: '_blank'
+            = link_to '', 'https://facebook.com/ActiveBridgeTeam', class: 'icon icon-facebook', target: '_blank'
+            = link_to '', 'https://plus.google.com/+ActiveBridgeTeam', class: 'icon icon-google', target: '_blank'
+            = link_to '', 'https://youtube.com/channel/UCw5hPDX1sKgDZczIvcaIepw', class: 'icon icon-youtube', target: '_blank'
+            = link_to '', 'https://ru.pinterest.com/activebridg0459/', class: 'icon icon-pinterest', target: '_blank'
+            = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-github', target: '_blank'
+          
