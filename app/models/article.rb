@@ -6,6 +6,8 @@ class Article < ActiveRecord::Base
 
   validates :title, :body, :category, :picture, presence: true
 
+  validates :body, length: {minimum: 300}
+
   scope :by_category, -> (slug) { joins(:category).where('categories.slug = ?', slug) if slug }
 
   extend FriendlyId
