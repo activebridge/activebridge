@@ -10,7 +10,7 @@
           = link_to 'Delete', article, method: :delete
     .post-body
       h1.title = link_to article.title, article_path(article)
-      .preview-body == truncate(strip_tags(article.body), length: 300)
+      .preview-body = clean_truncate(article.body)
     
       .details.row
         .author-avatar.col-md-2
