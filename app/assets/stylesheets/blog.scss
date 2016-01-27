@@ -107,7 +107,7 @@ a {
   height: 350px;
 }
 
-.back-to-index {
+.back-to-site {
   display: block;
   position: absolute;
   background: image-url("back-to-site.png");
@@ -198,12 +198,4 @@ a {
   img {
     border-radius: 50%;
   }
-}
-
-.back-to-site {
-  background: image-url("back-to-site.png");
-}
-
-.sticker {
-  background: image-url("sticker.png");
 }
