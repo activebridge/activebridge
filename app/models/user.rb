@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include UserOmniable
-  has_many :accounts
+  has_many :accounts, dependent: :destroy
   has_many :articles
 
   enum role: [:user, :member, :moderator]

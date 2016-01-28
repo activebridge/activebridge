@@ -19,7 +19,7 @@ html
     | &nbsp
     = link_to 'Log out', signout_path
   - else
-    tp = link_to 'Sign in with Google', '/auth/google_oauth2' 
+    tp = link_to 'Sign in with Google', google_articles_path
   
   p  
   - if current_user

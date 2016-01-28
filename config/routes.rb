@@ -3,14 +3,17 @@ Rails.application.routes.draw do
   get ':page', to: 'welcome#index',
                constraints: { page: /(team|about|services|portfolio)/ }
   get 'expire_cache', to: 'welcome#expire_cache'
-  get 'blog/category/:category', to: 'articles#index', as: 'category'
-  get 'blog/page/:page', to: 'articles#index', as: 'page'
-
-  get 'auth/:provider/callback', to: 'sessions#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'
+  get 'auth/:provider/callback', to: 'sessions#create'
 
   resource :team, only: :show
-  resources :articles, path: 'blog'
+  resources :articles, constraints: { subdomain: 'blog' }, path: '/' do
+    collection do
+      get 'category/:category', to: :index, as: 'category'
+      get 'page/:page', to: :index, as: 'page'
+      get '/auth/google_oauth2', as: 'google'
+    end
+  end
 
   root to: 'welcome#index'
 end
