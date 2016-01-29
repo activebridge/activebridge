@@ -11,18 +11,19 @@ html
     
   body
 
-  - if current_user
-    | Signed in as
-    | &nbsp
+  - if current_user 
     strong 
       = current_user.full_name
-    | &nbsp
-    = link_to 'Log out', signout_path
   - else
-    tp = link_to 'Sign in with Google', google_articles_path
+    .row
+      .col-md-12
+        .pull-right.sign-in
+          = link_to 'Sign in with Google', google_articles_path, class: 'btn btn-social btn-google'
   
   p  
   - if current_user
     = "You are #{current_user.role}"
+    | &nbsp
+    = link_to 'Log out', signout_path
   
   = yield
