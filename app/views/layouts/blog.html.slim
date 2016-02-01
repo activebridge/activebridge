@@ -8,22 +8,22 @@ html
     = javascript_include_tag 'application_blog', 'data-turbolinks' => true
     = stylesheet_link_tag 'blog'
     = csrf_meta_tags
-    
+
   body
 
-  - if current_user 
-    strong 
+  - if current_user
+    strong
       = current_user.full_name
   - else
     .row
       .col-md-12
         .pull-right.sign-in
           = link_to 'Sign in with Google', google_articles_path, class: 'btn btn-social btn-google'
-  
-  p  
+
+  p
   - if current_user
     = "You are #{current_user.role}"
     | &nbsp
     = link_to 'Log out', signout_path
-  
+
   = yield
