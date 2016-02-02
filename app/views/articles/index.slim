@@ -1,6 +1,8 @@
 .container
   header.header
     = link_to '', 'https://active-bridge.com', class: 'back-to-site'
+    - unless current_user
+      = link_to 'Sign in', google_articles_path, class: 'sign-in'
     
   main.content
     .row
@@ -15,11 +17,18 @@
         = link_to '', 'https://youtube.com/channel/UCw5hPDX1sKgDZczIvcaIepw', class: 'icon icon-youtube', target: '_blank'
         = link_to '', 'https://ru.pinterest.com/activebridg0459/', class: 'icon icon-pinterest', target: '_blank'
         = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-github', target: '_blank'
-      
-    .row
-      .col-md-12
-        - if can? :create, article
-          = link_to 'Create Post', new_article_path, 'data-no-turbolink' => true 
+    
+    - if current_user    
+      .row
+        .col-md-12
+          strong = current_user.full_name
+          br = "#{current_user.role.capitalize}"
+          = link_to 'Log out', signout_path
+    
+    - if can? :create, article  
+      .row
+        .col-md-12
+          br = link_to 'Create Post', new_article_path, 'data-no-turbolink' => true 
       
     .row
       .col-md-9.mainbar
