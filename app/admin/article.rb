@@ -16,7 +16,9 @@ ActiveAdmin.register Article do
     selectable_column
     column :category
     column :title
-    column :body
+    column :body do |article|
+      truncate(strip_tags(article.body), length: 100)
+    end
     column :picture
     column :user
     column :review_status
