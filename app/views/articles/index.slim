@@ -8,7 +8,7 @@
     .row
       .col-md-8.categories
         ul
-          li.pull-left = active_link_to 'All Posts', articles_path, active: :exact
+          li.pull-left = active_link_to 'All Posts', index_articles_path(:done), active: :exact
           = render partial: 'categories/category', collection: categories, as: :category
       .col-md-4.social-buttons
         = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-twitter', target: '_blank'
@@ -35,8 +35,8 @@
         = render partial: 'separate_tab'
       
         - unless current_user.try(:member_or_moderator)
-          = render partial: 'article', collection: articles.done, as: :article
-          = will_paginate articles, page_links: false
+          = render partial: 'article', collection: articles_by_type, as: :article
+          = will_paginate articles_by_type, page_links: false
           
       .col-md-3.sidebar
         .popular-posts

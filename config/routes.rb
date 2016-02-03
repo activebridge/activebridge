@@ -12,6 +12,9 @@ Rails.application.routes.draw do
       get 'category/:category', to: :index, as: 'category'
       get 'page/:page', to: :index, as: 'page'
       get '/auth/google_oauth2', as: 'google'
+      scope ':type', constraints: { type: /(pending|done)/ } do
+        get '/', action: :index, as: :index
+      end
     end
   end
 
