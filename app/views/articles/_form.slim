@@ -1,11 +1,11 @@
-= simple_form_for article, remote: true do |f| 
+= simple_form_for article, remote: true do |f|
   = f.input :title
   = f.input :body, input_html: {class: 'tinymce', rows: 15}
   = f.hidden_field(:picture_cache)
   = f.file_field(:picture)
   = f.association :category, as: :select
   = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
-  - if article.persisted? && current_user.moderator? 
+  - if article.persisted? && current_user.moderator?
     = f.input :review_status, as: :select, collection:  Article.review_statuses.keys
   = f.button :submit
-= tinymce 
+= tinymce

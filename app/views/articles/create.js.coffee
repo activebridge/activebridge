@@ -1,1 +1,1 @@
-Turbolinks.visit '<%= articles_path(:pending) %>'
+Turbolinks.visit '<%= index_articles_path(:pending) %>'

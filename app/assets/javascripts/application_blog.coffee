@@ -1,18 +1,10 @@
 #= require jquery
-#= require bootstrap-sprockets
 #= require jquery_ujs
 #= require turbolinks
-#= require tinymce
+#= require tinymce-jquery
+#= require bootstrap-sprockets
 #= require ga_blog
+#= require jquery.remotipart
 
-tiniMCE = ->
-  tinyMCE.editors = []
-  tinyMCE.init
-    plugins: [
-      'media advlist autolink lists link image'
-      'charmap print preview anchor searchreplace visualblocks uploadimage'
-      'code fullscreen autoresize insertdatetime media table contextmenu paste'
-    ]
-    toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright | bullist | numlist | link | media | code | uploadimage'
-    selector: 'textarea.tinymce'
-    menubar: false
+Turbolinks.enableProgressBar()
+Turbolinks.enableTransitionCache()
