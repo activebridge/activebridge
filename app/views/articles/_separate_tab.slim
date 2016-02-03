@@ -1,15 +1,6 @@
-- if current_user.try(:member?)
-  .row
-    .col-md-12
-      .pull-right = active_link_to 'My pending posts', index_articles_path(:pending), active: :exact
-      
-  = render partial: 'article', collection: articles_by_type, as: :article
-  = will_paginate articles_by_type, page_links: false
-    
-- if current_user.try(:moderator?)   
-  .row
-    .col-md-12
-      .pull-right = active_link_to 'Pending posts', index_articles_path(:pending), active: :exact
-                  
-  = render partial: 'article', collection: articles_by_type, as: :article
-  = will_paginate articles_by_type, page_links: false
+.row
+  .col-md-12
+    .pull-right
+      = pending_link
+= render partial: 'article', collection: articles_by_type, as: :article
+= will_paginate articles_by_type, page_links: false
