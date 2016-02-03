@@ -12,4 +12,9 @@ html
 
   body
     = flash_messages
-    = yield
+    .container
+      = render 'shared/blog/header'
+      main.content
+        = render 'shared/blog/main_bar'
+        = yield
+      = render 'shared/blog/footer'

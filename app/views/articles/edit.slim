@@ -1,10 +1,7 @@
-= simple_form_for article, method: :put do |f|
-  = f.input :title
-  = f.input :body, input_html: {class: 'tinymce', rows: 15}
-  = f.hidden_field(:picture_cache)
-  = f.file_field(:picture)
-  = f.association :category, as: :select
-  - if current_user.moderator? 
-    = f.input :review_status, as: :select, collection:  Article.review_statuses.keys
-  = f.button :submit
-= tinymce
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title Edit article
+      .panel-body
+        = render 'form'
