@@ -5,9 +5,11 @@ html
     meta name = "description" content=t('meta.desription')
     meta name = "keywords" content=t('meta.keywords')
     meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    script async=true src='//www.google-analytics.com/analytics.js'; // jQuery shortcut
     = javascript_include_tag 'application_blog', 'data-turbolinks' => true
     = stylesheet_link_tag 'blog'
     = csrf_meta_tags
 
   body
-  = yield
+    = yield
+
