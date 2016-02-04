@@ -3,7 +3,7 @@
   meta name='og:type' content='website'
   meta name='og:title' content=article.title
   meta name='og:image' content=article.picture_url
-  meta name='og:description' content=article.body
+  meta name='og:description' content=strip_tags(article.body)
   meta name='og:updated_time' content='1454583404'
 
 .show-post
