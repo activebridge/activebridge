@@ -1,4 +1,1 @@
-Category.create(name: 'Ror Development')
-Category.create(name: 'Project management')
-Category.create(name: 'Search engine')
-Category.create(name: 'Team life')
+['Ror Development', 'Project management', 'Search engine', 'Team life'].each{|name| Category.create(name: name)}

@@ -1,0 +1,25 @@
+= simple_form_for article, remote: true do |f|
+  = f.input :title
+  = f.input :body
+  = f.hidden_field(:picture_cache)
+  = f.file_field(:picture)
+  = f.association :category, as: :select
+  = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
+  - if article.persisted? && current_user.moderator?
+    = f.input :review_status, as: :select, collection:  Article.review_statuses.keys
+  = f.button :submit
+
+coffee:
+  tiniMCE = ->
+    tinyMCE.editors = []
+    tinyMCE.init
+     plugins: [
+       'media advlist autolink lists link image'
+       'charmap print preview anchor searchreplace visualblocks'
+       'code fullscreen autoresize insertdatetime media table contextmenu paste'
+     ]
+     toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright | bullist | numlist | link | media | code'
+     selector: 'textarea'
+     menubar: false
+
+   tiniMCE()

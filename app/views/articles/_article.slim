@@ -11,7 +11,7 @@
     .post-body
       h1.title = link_to article.title, article_path(article)
       .preview-body = clean_truncate(article.body)
-    
+
       .details.row
         .author-avatar.col-md-2
           p = image_tag article.user.image, width: 70, height: 70

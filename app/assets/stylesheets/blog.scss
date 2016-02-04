@@ -76,7 +76,6 @@ body {
 .content {
   padding: 0 35px;
   background-color: #FFFFFF;
-  min-height: 1585px;
 
   .social-buttons {
     padding-top: 15px;
@@ -87,6 +86,10 @@ body {
       color: grey;
     }
   }
+}
+
+.mainbar {
+  min-height: 1585px;
 }
 
 .show-post {
@@ -211,4 +214,8 @@ body {
 
 .alert {
   margin: 0;
+}
+
+.panel {
+  margin: 1% 0;
 }

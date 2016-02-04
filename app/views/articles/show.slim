@@ -6,21 +6,16 @@
   meta name='og:description' content=article.body
   meta name='og:updated_time' content='1454583404'
 
-.container
-  header.header
-    = link_to '', 'https://active-bridge.com', class: 'back-to-site'
-
-  main.show-post
-    .row
-      .col-md-3
-        = image_tag article.user.image, class: 'img-resonsive'
-        .author-details
-          = article.user.full_name
-          p = article.created_at.strftime('%B %d, %Y')
-      .col-md-9
-        .post-body
-          h1.title = article.title
-          .main-body == article.body
-    - unless article.pending?
-      = render 'disqus'
-  = render partial: 'footer'
+.show-post
+  .row
+    .col-md-3
+      = image_tag article.user.image, class: 'img-resonsive'
+      .author-details
+        = article.user.full_name
+        p = article.created_at.strftime('%B %d, %Y')
+    .col-md-9
+      .post-body
+        h1.title = article.title
+        .main-body == article.body
+  - unless article.pending?
+    = render 'disqus'

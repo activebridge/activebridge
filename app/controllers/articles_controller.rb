@@ -12,25 +12,16 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    if article.save
-      redirect_to article
-    else
-      render :new
-    end
-  end
-
-  def update
-    if article.save
-      redirect_to article
-    else
-      render :edit
-    end
+    return if article.update(article_params)
+    render :new
   end
 
   def destroy
     article.destroy
-    redirect_to articles_path(pending: true)
+    redirect_to articles_path(:pending)
   end
+
+  alias update create
 
   private
 
