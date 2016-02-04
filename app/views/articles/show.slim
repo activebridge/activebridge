@@ -1,7 +1,15 @@
+= content_for :head do
+  meta name='og:url' content='test'
+  meta name='og:type' content='website'
+  meta name='og:title' content=article.title
+  meta name='og:image' content=article.picture_url
+  meta name='og:description' content=article.body
+  meta name='og:updated_time' content='1454583404'
+
 .container
   header.header
     = link_to '', 'https://active-bridge.com', class: 'back-to-site'
-    
+
   main.show-post
     .row
       .col-md-3
@@ -13,7 +21,6 @@
         .post-body
           h1.title = article.title
           .main-body == article.body
-    - unless article.pending?        
+    - unless article.pending?
       = render 'disqus'
-        
   = render partial: 'footer'
