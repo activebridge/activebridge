@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   load_and_authorize_resource find_by: :slug
 
   expose(:articles_by_type) { Article.by_type((params[:type] || 'done'), current_user).by_category(params[:category]).order(created_at: :desc).paginate(page: params[:page], per_page: 5) }
-  expose(:article, finder: :find_by_slug)
+  expose(:article, attributes: :article_params, finder: :find_by_slug)
   expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
   expose(:categories)
 
