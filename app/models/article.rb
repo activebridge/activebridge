@@ -24,4 +24,8 @@ class Article < ActiveRecord::Base
   def increment_viewed
     increment! :viewed unless pending?
   end
+
+  def member_or_moderator
+    member? || moderator?
+  end
 end

@@ -2,5 +2,7 @@
   .col-md-12
     .pull-right
       = pending_link
-= render partial: 'article', collection: articles_by_type, as: :article
-= will_paginate articles_by_type, page_links: false
+
+- unless try(:member_or_moderator)
+  = render partial: 'article', collection: articles_by_type, as: :article
+  = will_paginate articles_by_type, page_links: false
