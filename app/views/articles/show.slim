@@ -9,5 +9,5 @@
       .post-body
         h1.title = article.title
         .main-body == article.body
-  - unless article.pending?        
+  - unless article.pending?
     = render 'disqus'
