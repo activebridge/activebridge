@@ -4,10 +4,10 @@
   = f.input :body
   = f.hidden_field(:picture_cache)
   = f.file_field(:picture)
-  = f.association :category, as: :select
+  = f.association :category, as: :select, include_blank: false
   = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
   - if article.persisted? && current_user.moderator?
-    = f.input :review_status, as: :select, collection:  Article.review_statuses.keys
+    = f.input :review_status, as: :select, collection:  Article.review_statuses.keys, include_blank: false
   = f.button :submit
 
 coffee:
