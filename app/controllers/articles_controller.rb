@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     article.destroy
-    redirect_to articles_path(:pending)
+    redirect_to index_articles_path(:pending)
   end
 
   alias update create
