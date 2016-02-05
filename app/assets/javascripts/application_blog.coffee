@@ -2,6 +2,7 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require tinymce-jquery
+#= require tinimce
 #= require bootstrap-sprockets
 #= require ga_blog
 #= require jquery.remotipart
