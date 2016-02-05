@@ -4,6 +4,7 @@
   = f.input :body
   = f.hidden_field(:picture_cache)
   = f.file_field(:picture)
+  = f.full_error :picture
   = f.association :category, as: :select, include_blank: false
   = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
   - if article.persisted? && current_user.moderator?
