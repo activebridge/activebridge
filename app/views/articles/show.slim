@@ -9,15 +9,16 @@
 .show-post
   .row
     .col-md-11.post-content
-      .col-md-3.user-image
-        = image_tag article.user.image, class: 'img-resonsive'
-        .author-details
-          = article.user.full_name
-          p = article.created_at.strftime('%B %d, %Y')
-      .col-md-9
-        .post-body
-          h1.title = article.title
-          .main-body == article.body
+      .row
+        .col-md-3.user-image
+          = image_tag article.user.image, class: 'img-resonsive'
+          .author-details
+            = article.user.full_name
+            p = article.created_at.strftime('%B %d, %Y')
+        .col-md-9
+          .post-body
+            h1.title = article.title
+            .main-body == article.body
     .col-md-1.back-to-blog
       = link_to articles_path do
         = image_tag 'back-to-blog.png'
