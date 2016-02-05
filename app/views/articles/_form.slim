@@ -2,8 +2,9 @@
   = f.error_notification
   = f.input :title
   = f.input :body
-  = f.hidden_field(:picture_cache)
-  = f.file_field(:picture)
+  .form-group
+    = f.hidden_field(:picture_cache)
+    = f.file_field(:picture)
   = f.full_error :picture
   = f.association :category, as: :select, include_blank: false
   = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
@@ -18,9 +19,9 @@ coffee:
      selector: 'textarea'
      theme: 'modern'
      plugins: [
-      'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-      'searchreplace wordcount visualblocks visualchars code fullscreen',
-      'insertdatetime media nonbreaking save table contextmenu directionality',
+      'advlist autolink lists link image charmap print preview hr anchor pagebreak'
+      'searchreplace wordcount visualblocks visualchars code fullscreen'
+      'insertdatetime media nonbreaking save table contextmenu directionality'
       'emoticons template paste textcolor colorpicker textpattern imagetools'
      ]
      toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
