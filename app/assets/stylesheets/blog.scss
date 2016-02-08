@@ -10,8 +10,8 @@ $lines-to-show: 4;
 body {
   font-weight: 300;
   font-family: "Open Sans", Helvetica, sans-serif;
-  overflow-y: auto;
   background-color: #E9E9E9;
+  overflow-x: hidden;
 }
 
 .preview-body {
@@ -240,4 +240,12 @@ body {
 
 .help-block {
   color: #a94442;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding:0;
+    margin:0;
+    width: 100%;
+  }
 }
