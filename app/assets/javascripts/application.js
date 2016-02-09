@@ -6,3 +6,4 @@
 //= require cover_in_canvas
 //= require portfolio
 //= require webfontloader
+//= require google_tag_manager
