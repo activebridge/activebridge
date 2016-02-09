@@ -1,9 +1,9 @@
 .row
-  .col-md-8.categories
+  .col-xs-8.categories
     ul
       li.pull-left = active_link_to 'All Posts', index_articles_path(:done), active: :exact
       = render partial: 'categories/category', collection: categories, as: :category
-  .col-md-4.social-buttons
+  .col-xs-4.social-buttons
     = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-twitter', target: '_blank'
     = link_to '', 'https://facebook.com/ActiveBridgeTeam', class: 'icon icon-facebook', target: '_blank'
     = link_to '', 'https://plus.google.com/+ActiveBridgeTeam', class: 'icon icon-google', target: '_blank'
@@ -13,12 +13,12 @@
 
 - if current_user
   .row
-    .col-md-12
+    .col-xs-12
       strong = current_user.full_name
       br = "#{current_user.role.capitalize}"
       = link_to 'Log out', signout_path
 
 - if can?(:create, article) && !current_page?(action: :new)
   .row
-    .col-md-12
+    .col-xs-12
       br = link_to 'Create Post', new_article_path, 'data-no-turbolink' => true

@@ -1,7 +1,7 @@
 .post.row
-  .col-md-3
+  .col-xs-3
     = image_tag article.picture_url, width: '150px', class: 'img-resonsive'
-  .col-md-9
+  .col-xs-9
     .pull-right
       - if current_user.try(:member_or_moderator)
         - if article.pending?
@@ -13,8 +13,8 @@
       .preview-body = clean_truncate(article.body)
 
       .details.row
-        .author-avatar.col-md-2
+        .author-avatar.col-xs-2
           p = image_tag article.user.image, width: 70, height: 70
-        .meta.col-md-10
+        .meta.col-xs-10
           p = article.user.full_name
           p = article.created_at.strftime('%B %d, %Y')
