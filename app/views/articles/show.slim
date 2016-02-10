@@ -10,16 +10,21 @@
   .row
     .col-xs-11.post-content
       .row
-        .col-xs-3.user-image
-          = image_tag article.user.image, class: 'img-resonsive'
+        .col-md-3.hidden-sm.hidden-xs.user-image
+          = image_tag article.user.image, width: '112px'
           .author-details
             = article.user.full_name
             p = article.created_at.strftime('%B %d, %Y')
-        .col-xs-9
-          .post-body
+        .col-md-9.col-sm-12
+          .post-body-show
             h1.title = article.title
             .main-body == article.body
-    .col-xs-1.back-to-blog
+          .mobile-author-details.hidden-md
+            strong
+              = article.user.full_name
+              | &nbsp &nbsp
+              = article.created_at.strftime('%B %d, %Y')
+    .col-md-1.hidden-xs.back-to-blog
       = link_to articles_path do
         = image_tag 'back-to-blog.png'
       = link_to articles_path do

@@ -1,10 +1,10 @@
-.row
-  .mainbar.col-xs-9
+.mainbar.row
+  .col-md-9.col-xs-12
     = render partial: 'separate_tab'
     = render partial: 'article', collection: articles_by_type, as: :article
     = will_paginate articles_by_type, page_links: false
 
-  .sidebar.col-xs-3.hidden-sm.hidden-xs
+  .sidebar.col-md-3.hidden-sm.hidden-xs
     .popular-posts
       h4 Popular Posts
       = render partial: 'popular_article', collection: popular_articles, as: :popular_article

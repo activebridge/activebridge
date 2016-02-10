@@ -1,4 +1,9 @@
-header.header
-  = link_to '', 'https://active-bridge.com', class: 'back-to-site'
-  - unless current_user
-    = link_to 'Sign in', google_articles_path, class: 'sign-in'
+.row
+  .col-sm-12
+    .mobile-header.hidden-sm.hidden-md.hidden-lg
+      = link_to 'Sign in', google_articles_path, class: 'sign-in-mobile'
+      = link_to 'Back to site', 'https://active-bridge.com', class: 'back-mobile'
+    header.header.hidden-xs
+      = link_to '', 'https://active-bridge.com', class: 'back-to-site'
+      - unless current_user
+        = link_to 'Sign in', google_articles_path, class: 'sign-in'
