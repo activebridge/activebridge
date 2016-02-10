@@ -267,7 +267,10 @@ body {
   height: 69px;
   background-color: #2c2c2f;
   padding: 12px 20px;
-  color: white;
+
+  a {
+    color: white!important;
+  }
 
   .sign-in-mobile {
     float: left;
@@ -296,10 +299,7 @@ body {
       margin-right: 14px;
       border: solid white;
       border-width: 0px 0px 1px 1px;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
       transform: rotate(45deg);
-      -webkit-transition: all 0.2s;
       transition: all 0.2s;
     }
   }

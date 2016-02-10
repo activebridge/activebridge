@@ -6,7 +6,6 @@
       - if current_user.try(:member_or_moderator)
           - if article.pending?
             = link_to 'Edit', edit_article_path(article)
-            | &nbsp
             = link_to 'Delete', article, method: :delete, style: 'float: right'
   .post-body
     .post-content

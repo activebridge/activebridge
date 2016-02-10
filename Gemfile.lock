@@ -348,6 +348,7 @@ PLATFORMS
 DEPENDENCIES
   active_link_to
   activeadmin!
+  autoprefixer-rails
   bootstrap-sass (~> 3.3.6)
   byebug
   cancancan (~> 1.10)
