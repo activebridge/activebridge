@@ -30,6 +30,7 @@ gem 'autoprefixer-rails'
 group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
+  gem 'database_cleaner'
   gem 'byebug'
   gem 'capistrano-rails',       '~> 1.1.3'
   gem 'capistrano-passenger',   '~> 0.0.5'
