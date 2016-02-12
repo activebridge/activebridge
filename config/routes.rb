@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resource :team, only: :show
   resources :articles, constraints: { subdomain: 'blog' }, path: '/' do
     collection do
-      get 'category/:category', to: :index, as: 'category'
-      get 'page/:page', to: :index, as: 'page'
+      get 'category/:category', action: :index, as: 'category'
+      get 'page/:page', action: :index, as: 'page'
       get '/auth/google_oauth2', as: 'google'
       scope ':type', constraints: { type: /(pending|done)/ } do
         get '/', action: :index, as: :index
