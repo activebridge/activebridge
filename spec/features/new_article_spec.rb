@@ -17,6 +17,7 @@ feature 'Member creates new article', js: true do
     click_button 'Create Article'
     expect(current_path).to eq('/pending')
     expect(page).to have_content('Random title')
+    expect(page).to have_content('My pending posts')
     expect(page).to have_link('Edit')
     expect(page).to have_link('Delete')
   end
@@ -39,6 +40,7 @@ feature 'Moderator creates new article', js: true do
     click_button 'Create Article'
     expect(current_path).to eq('/pending')
     expect(page).to have_content('Random title')
+    expect(page).to have_content('Pending posts')
     expect(page).to have_link('Edit')
     expect(page).to have_link('Delete')
   end
