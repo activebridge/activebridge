@@ -5,3 +5,4 @@
 //= require lazybox
 //= require portfolio
 //= require webfontloader
+//= require facebook_pixel
