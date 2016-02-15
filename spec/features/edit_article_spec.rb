@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Member can edit his article', js: true do
+feature 'Member edits an article', js: true do
 
   before do
     member = create(:user, role: 1)
@@ -21,7 +21,7 @@ feature 'Member can edit his article', js: true do
   end
 end
 
-feature 'Moderator can edit his article', js: true do
+feature 'Moderator edits an article', js: true do
 
   before do
     moderator = create(:user, role: 2)
@@ -39,5 +39,20 @@ feature 'Moderator can edit his article', js: true do
     click_button 'Update Article'
     expect(page).to have_content('New title')
     expect(page).to have_content('Ladies others the six desire age. Bred am soon park past read by lain')
+  end
+end
+
+feature 'Member can\'t edit done article', js: true do
+
+  before do
+    member = create(:user, role: 1)
+    category = create(:category)
+    article = create(:article, review_status: 1)
+    login member
+  end
+
+  scenario do
+    visit '/random-title/edit'
+    expect(page).to have_content('You are not authorized to access this page.')
   end
 end
