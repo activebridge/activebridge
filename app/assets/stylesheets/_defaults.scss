@@ -38,12 +38,19 @@ a {
   z-index: 1;
   position: relative;
 }
+.portfolio
+{
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+z-index: 10;
+}
 
 #lazybox {
   max-height: 96vh;
   max-width: 70%;
   overflow: hidden;
-  border-radius: 15px;
   opacity: 0.975;
 
   h1 {
@@ -134,6 +141,24 @@ a {
       vertical-align: top;
       white-space: normal;
       display: inline-block;
+      background-size: cover;
+      position: relative;
+      padding-top: 110px;
+      min-height: 65vh;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(white, 0.5);
+        z-index: 9;
+      }
+      > * {
+        position: relative;
+        z-index: 10;
+      }
       .project {
         overflow-y: auto;
         max-height: 62vh;
@@ -147,6 +172,9 @@ a {
       .project-description {
         padding: 3% 0;
         font-size: .9em;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        margin: 10px 0;
       }
       .project-info {
         width: 100%;
@@ -155,6 +183,10 @@ a {
         flex-wrap: wrap;
         text-align: left;
         font-size: small;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 12px;
+        box-sizing: border-box;
         .info-section {
           display: inline-block;
           width: 20%;
@@ -162,12 +194,13 @@ a {
       }
       a.view-project {
         padding: 10px 15px;
-        border: 1px solid $violet;
+        border: 1px solid #842B98;
         border-radius: 30px;
         min-width: 150px;
         display: inline-block;
         margin: 20px 0;
-        color: $violet;
+        color: white;
+        background: #842B98;
       }
     }
     .arrows {
@@ -175,16 +208,16 @@ a {
       left: 0;
       right: 0;
       height: 1px;
-      border-bottom: 1px solid #e2e2e2;
+      border-bottom: 1px solid #842B98;
       top: 100px;
       z-index: 999;
       margin: 0px 25px;
       &::before {
         position: absolute;
         content: '';
-        border: 3px solid $violet;
+        border: 7px solid #842B98;
         position: absolute;
-        top: -1px;
+        top: -5px;
         border-radius: 50%;
         left: 49%;
       }
@@ -192,11 +225,13 @@ a {
         position: absolute;
         border: 1px solid #842B98;
         border-radius: 50%;
-        background: white;
-        padding: 5px;
+        background: #842B98;
+        padding: 10px;
         cursor: pointer;
-        top: -12px;
-        color: #842B98;
+        top: -26px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
         &#left {
           transform: rotate(-90deg);
           left: 0%;

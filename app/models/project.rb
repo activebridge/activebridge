@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   mount_uploader :logo, ImageUploader
-  validates :title, :description, :logo, :technology, :duration, :team_size, :client, :industry, :link, :priority, presence: true
+  mount_uploader :image, ImageUploader
+  validates :description, :logo, :technology, :duration, :team_size, :client, :industry, :link, :priority, :image, presence: true
   validates :priority, uniqueness: true
 end

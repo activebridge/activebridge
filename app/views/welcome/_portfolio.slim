@@ -1,15 +1,15 @@
 <div class='main' itemscope="" itemtype="http://schema.org/Product"</div>
-h1= 'Portfolio'
+h1.portfolio= 'Portfolio'
+
 .active-content.projects
   .arrows
     i.icon.icon-chevrone-up#left
     i.icon.icon-chevrone-up#right
   .wrapper data-step=1 data-tf=0
     - @projects.map do |project|
-      .project-wrapper
-        h2 itemprop='name'= project.title
+      .project-wrapper style="background-image: url(#{project.image.url})"
         .project id="project_#{project.id}"
-          = cl_image_tag(project.logo)
+          = image_tag(project.logo.url(:logo))
           div itemprop='model' class= 'project-description'
             = project.description
           .project-info
