@@ -20,5 +20,4 @@
   return
 )(window, document, 'script', '//connect.facebook.net/en_US/fbevents.js')
 fbq 'init', '552167954950145'
-fbq 'track', 'PageView'
 fbq 'track', 'Lead'
