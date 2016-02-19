@@ -1,7 +1,7 @@
 = simple_form_for article, remote: true do |f|
   = f.error_notification
   = f.input :title
-  = f.input :body
+  = f.input :body, input_html: { id: 'simplemde' }
   .form-group
     = f.hidden_field(:picture_cache)
     = f.file_field(:picture)
