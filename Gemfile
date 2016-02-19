@@ -25,6 +25,7 @@ gem 'omniauth-google-oauth2'
 gem 'cancancan', '~> 1.10'
 gem 'remotipart'
 gem 'autoprefixer-rails'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'capybara'

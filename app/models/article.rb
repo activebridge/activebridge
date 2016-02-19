@@ -6,7 +6,7 @@ class Article < ActiveRecord::Base
 
   validates :title, :body, :category, :picture, presence: true
 
-  validates :body, length: {minimum: 300}
+  validates :body, length: {minimum: 100}
 
   scope :by_category, -> (slug) { joins(:category).where('categories.slug = ?', slug) if slug }
   scope :by_type, lambda { |type, user| send("for_#{user.try(:role) || 'user'}", type, user) }

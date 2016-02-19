@@ -1,2 +1,2 @@
 $('#new_article, .edit_article').replaceWith '<%= j render "form" %>'
-tiniMCE()
+simplemde = new SimpleMDE({ element: document.getElementById('simplemde') })

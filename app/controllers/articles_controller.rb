@@ -6,14 +6,18 @@ class ArticlesController < ApplicationController
   expose(:article, attributes: :article_params, finder: :find_by_slug)
   expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
   expose(:categories)
+  expose(:markdown) { Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) }
 
   def show
     article.increment_viewed
   end
 
   def create
-    return if article.update(article_params)
-    render :new
+    if article.update(article_params)
+      render :create
+    else
+      render :new
+    end
   end
 
   def destroy

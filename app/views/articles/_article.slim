@@ -10,7 +10,7 @@
   .post-body
     .post-content
       h1.title = link_to article.title, article_path(article)
-      .preview-body = clean_truncate(article.body)
+      .preview-body = clean_truncate(markdown.render(article.body))
     .details
       .author-avatar
         = image_tag article.user.image, height: '60', width: '60'
