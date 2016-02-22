@@ -7,4 +7,3 @@
 #= require portfolio
 #= require webfontloader
 #= require google_tag_manager
-#= require facebook_pixel
