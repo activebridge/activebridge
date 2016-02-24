@@ -7,8 +7,6 @@ class ArticlesController < ApplicationController
   expose(:categories)
   expose(:markdown) { Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) }
 
-  expose(:current_user) { User.last }
-
   def show
     article.increment_viewed
   end
