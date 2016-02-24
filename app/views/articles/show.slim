@@ -18,7 +18,7 @@
         .col-md-9.col-sm-12
           .post-body-show
             h1.title = article.title
-            .main-body == markdown.render(article.body)
+            .main-body == md(article.body)
           .mobile-author-details.hidden-md.hidden-lg
             strong
               = article.user.full_name
