@@ -1,0 +1,53 @@
+@import 'variables';
+@import 'lazybox';
+@import 'icons';
+@import 'defaults';
+@import 'base';
+@import 'bridge';
+
+body {
+  height: 100%;
+}
+
+main:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: image-url('bg.jpeg') no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+}
+
+.pages {
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.page {
+  background: rgba(white, 0.7);
+  width: 100%;
+  white-space: normal;
+  height: 100vh;
+  overflow-y: auto;
+  font-size: 16px;
+  display: inline-block;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  h1 {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    background: rgba(rebeccapurple, 0.9)
+  }
+  &#home {
+    background: transparent;
+  }
+}
+
+.active-content.members .member img {
+  border-radius: 50%;
+}

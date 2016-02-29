@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-layout :set_layout
+  before_action :set_variant
 
   def index
     @members = Member.order(priority: :asc)

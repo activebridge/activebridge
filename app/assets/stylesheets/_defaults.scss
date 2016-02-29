@@ -18,6 +18,13 @@ a {
   text-decoration: none;
 }
 
+
+h1.title {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
 .text-center {
   text-align: center;
 }
@@ -38,13 +45,13 @@ a {
   z-index: 1;
   position: relative;
 }
-.portfolio
-{
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-z-index: 10;
+
+.portfolio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 
 #lazybox {
@@ -52,243 +59,182 @@ z-index: 10;
   max-width: 70%;
   overflow: hidden;
   opacity: 0.975;
+}
 
-  h1 {
-    text-align: center;
-    color: black;
-    font-weight: normal;
+.item-title {
+  text-transform: uppercase;
+  color: grey;
+}
+
+.item-description {
+  font-weight: bold;
+}
+
+.active-content {
+  overflow-y: auto;
+  padding: 5px 20px;
+  max-height: 84vh;
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 2.5%;
+
+  &.projects {
+    overflow: hidden;
+    padding: 0;
   }
 
-  h2 {
-    margin-top: 0;
-    text-align: center;
-    color: black;
-    font-weight: normal;
-  }
-
-  .item-title {
-    text-transform: uppercase;
-    color: grey;
-  }
-
-  .item-description {
-    font-weight: bold;
-  }
-
-  .active-content {
-    overflow-y: auto;
-    padding: 5px 20px;
-    max-height: 84vh;
-    box-sizing: border-box;
-    text-align: center;
-    padding-bottom: 2.5%;
-
-    &.projects {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    &.members {
-      .member {
-        padding: 0 3%;
-        color: black;
-        display: inline-block;
-        margin-bottom: 20px;
-        text-align: center;
-        perspective: 1000;
-        width: 32%;
-        box-sizing: border-box;
-        .member-image {
-          background-size: 100%;
-          background-position: center center;
-        }
-
-        &:hover img{
-          opacity: 0;
-        }
-
-        img {
-          width: 100%;
-          background: white;
-          transition: opacity .5s;
-          display: block;
-        }
-
-        p, h4 {
-          margin: 0;
-          font-size: 0.8em;
-        }
-
-        .details {
-          padding-top: 15px;
-          h2 { margin: 0; }
-        }
-      }
-    }
-  }
-
-  .projects {
-    .wrapper {
-      white-space: nowrap;
-      transition: transform .3s;
-      font-size: 0;
-    }
-    .project-wrapper {
-      width: 100%;
-      font-size: 16px;
-      overflow: hidden;
-      max-height: 100%;
-      vertical-align: top;
-      white-space: normal;
+  &.members {
+    .member {
+      padding: 0 3%;
+      color: black;
       display: inline-block;
-      background-size: cover;
-      position: relative;
-      padding-top: 110px;
-      min-height: 65vh;
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(white, 0.5);
-        z-index: 9;
+      margin-bottom: 20px;
+      text-align: center;
+      perspective: 1000;
+      width: 32%;
+      box-sizing: border-box;
+      .member-image {
+        background-size: 100%;
+        background-position: center center;
       }
-      > * {
-        position: relative;
-        z-index: 10;
+
+      &:hover img{
+        opacity: 0;
       }
-      .project {
-        overflow-y: auto;
-        max-height: 62vh;
-        padding: 0 5%;
-      }
+
       img {
-        width: 150px;
-        height: auto;
-        padding-top: 1%;
-      }
-      .project-description {
-        padding: 3% 0;
-        font-size: .9em;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 10px;
-        margin: 10px 0;
-      }
-      .project-info {
         width: 100%;
-        display: flex;
-        flex-flow: row;
-        flex-wrap: wrap;
-        text-align: left;
-        font-size: small;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 10px;
-        padding: 12px;
-        box-sizing: border-box;
-        .info-section {
-          display: inline-block;
-          width: 20%;
-        }
+        background: white;
+        transition: opacity .5s;
+        display: block;
       }
-      a.view-project {
-        padding: 10px 15px;
-        border: 1px solid #842B98;
-        border-radius: 30px;
-        min-width: 150px;
-        display: inline-block;
-        margin: 20px 0;
-        color: white;
-        background: #842B98;
+
+      p, h4 {
+        margin: 0;
+        font-size: 0.8em;
       }
-    }
-    .arrows {
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 1px;
-      border-bottom: 1px solid #842B98;
-      top: 100px;
-      z-index: 999;
-      margin: 0px 25px;
-      &::before {
-        position: absolute;
-        content: '';
-        border: 7px solid #842B98;
-        position: absolute;
-        top: -5px;
-        border-radius: 50%;
-        left: 49%;
-      }
-      .icon-chevrone-up {
-        position: absolute;
-        border: 1px solid #842B98;
-        border-radius: 50%;
-        background: #842B98;
-        padding: 10px;
-        cursor: pointer;
-        top: -26px;
-        color: white;
-        font-weight: bold;
-        font-size: 2em;
-        &#left {
-          transform: rotate(-90deg);
-          left: 0%;
-        }
-        &#right {
-          transform: rotate(90deg);
-          right: 0%;
-        }
+
+      .details {
+        padding-top: 15px;
+        h2 { margin: 0; }
       }
     }
   }
 }
 
-.section {
-  line-height: 1.2;
-  padding: 0 1%;
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
-  .section-title {
-    .icon {
-      padding-bottom: 5%;
-      font-size: 3em;
-      color: $violet;
-      display: block;
-    }
-    text-align: center;
-    padding-bottom: 5%;
-    text-transform: uppercase;
+.projects {
+  .wrapper {
+    white-space: nowrap;
+    transition: transform .3s;
+    font-size: 0;
   }
-  .section-description {
-    font-size: .8em;
-    padding: 5%;
-    margin: 0;
+  .project-wrapper {
+    width: 100%;
+    font-size: 16px;
+    overflow: hidden;
+    max-height: 100%;
+    vertical-align: top;
+    white-space: normal;
+    display: inline-block;
+    background-size: cover;
     position: relative;
-    border-top: 1px solid #e2e2e2;
-    text-align: left;
+    padding-top: 110px;
+    min-height: 65vh;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(white, 0.5);
+      z-index: 9;
+    }
+    > * {
+      position: relative;
+      z-index: 10;
+    }
+    .project {
+      overflow-y: auto;
+      max-height: 62vh;
+      padding: 0 5%;
+    }
+    img {
+      width: 150px;
+      height: auto;
+      padding-top: 1%;
+    }
+    .project-description {
+      padding: 3% 0;
+      font-size: .9em;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .project-info {
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      text-align: left;
+      font-size: small;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      padding: 12px;
+      box-sizing: border-box;
+      .info-section {
+        display: inline-block;
+        width: 20%;
+      }
+    }
+    a.view-project {
+      padding: 10px 15px;
+      border: 1px solid #842B98;
+      border-radius: 30px;
+      min-width: 150px;
+      display: inline-block;
+      margin: 20px 0;
+      color: white;
+      background: #842B98;
+    }
+  }
+  .arrows {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #842B98;
+    top: 100px;
+    z-index: 999;
+    margin: 0px 25px;
     &::before {
       position: absolute;
       content: '';
-      border: 3px solid $violet;
+      border: 7px solid #842B98;
       position: absolute;
-      top: -3px;
+      top: -5px;
       border-radius: 50%;
       left: 49%;
     }
-  }
-
-  ul {
-    list-style-type: none;
-    font-size: .9em;
-    padding: 0 5% 0 10%;
-  }
-
-  ul > li:before {
-    content: "–";
-    position: absolute;
-    margin-left: -1.1em;
+    .icon-chevrone-up {
+      position: absolute;
+      border: 1px solid #842B98;
+      border-radius: 50%;
+      background: #842B98;
+      padding: 10px;
+      cursor: pointer;
+      top: -26px;
+      color: white;
+      font-weight: bold;
+      font-size: 2em;
+      &#left {
+        transform: rotate(-90deg);
+        left: 0%;
+      }
+      &#right {
+        transform: rotate(90deg);
+        right: 0%;
+      }
+    }
   }
 }
