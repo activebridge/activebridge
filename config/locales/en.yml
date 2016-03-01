@@ -43,7 +43,16 @@ en:
     skills: Our team is Mid- and Senior-level Ruby on Rails developers with excellent communication skills
     work_experience: More than 6 years successful work experience with foreign customers
     rate_project: RoR rate project web development is more than 30% faster than other languages
-
+  team:
+    title: Team
+  portfolio:
+    title: Portfolio
+    project_info:
+      technology: technology
+      project_length: project length
+      team_size: team size
+      client: client
+      industry: industry
   services:
     title: Services
     we_do:

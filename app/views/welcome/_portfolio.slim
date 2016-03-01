@@ -1,6 +1,5 @@
-<div class='main' itemscope="" itemtype="http://schema.org/Product"</div>
-h1.title.portfolio= 'Portfolio'
-
+.main itemscope="" itemtype="http://schema.org/Product" /
+h1.title.portfolio= t('portfolio.title')
 .active-content.projects
   .arrows
     i.icon.icon-chevrone-up#left
@@ -13,27 +12,10 @@ h1.title.portfolio= 'Portfolio'
           div itemprop='model' class= 'project-description'
             = project.description
           .project-info
-            .info-section
-              .item-title= 'technology'
-              .item-description
-                = project.technology
-            .info-section
-              .item-title= 'project length'
-              .item-description
-                = display_duration_in_words(project.duration)
-            .info-section
-              .item-title= 'team size'
-              .item-description
-                = project.team_size
-            .info-section
-              .item-title= 'client'
-              .item-description
-                = project.client
-            .info-section
-              div itemprop='category' class='item-title'
-                = 'industry'
-              .item-description
-                = project.industry
+            - t('portfolio.project_info').each do |key, value|
+              .info-section
+                .item-title= value
+                .item-description= project.send(key)
           .text-center= link_to project.link, target: '_blank', class: 'view-project' do
             | View Project
             i.icon.icon-arrow-right
