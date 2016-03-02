@@ -26,6 +26,7 @@ gem 'browser'
 gem 'ufujs-rails'
 gem 'carrierwave-base64'
 gem 'customize-rails'
+gem 'actionpack-action_caching'
 
 group :development, :test do
   gem 'pry'

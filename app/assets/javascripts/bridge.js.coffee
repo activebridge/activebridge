@@ -144,3 +144,7 @@ i = 0
 
 $(document).on 'click', '.scroll-arrows', ->
   $('body, html').animate { scrollTop: 400 }, 'slow'
+
+$(document).on 'click', '.popup-link', (e) ->
+  $.getScript this.href
+  e.preventDefault()

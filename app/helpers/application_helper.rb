@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def inline_svg(path)
-    raw Rails.application.assets.find_asset(path + '.svg').to_s
+  def svg(path)
+    raw Rails.application.assets.find_asset(path.to_s + '.svg').to_s
   end
 
   def display_duration_in_words(number)

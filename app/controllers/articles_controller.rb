@@ -7,7 +7,6 @@ class ArticlesController < ApplicationController
   expose(:article, attributes: :article_params, finder: :find_by_slug)
   expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
   expose(:categories)
-  expose(:current_user) { User.last }
 
   def show
     article.increment_viewed

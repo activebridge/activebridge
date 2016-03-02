@@ -1,14 +1,17 @@
-= cache params[:page] do
-  doctype html
-  html
-    head
-      title Active Bridge - ruby on rails web development team
-      meta name = "description" content=t('meta.desription')
-      meta name = "keywords" content=t('meta.keywords')
-      meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-      = stylesheet_link_tag 'mobile', media: 'all', 'data-turbolinks-track' => true
-      = csrf_meta_tags
-    body
-      main= yield
-      = render_lazybox
-      = javascript_include_tag 'mobile', 'data-turbolinks-track' => true
+doctype html
+html
+  head
+    title Active Bridge - ruby on rails web development team
+    meta name = "description" content=t('meta.desription')
+    meta name = "keywords" content=t('meta.keywords')
+    meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    = stylesheet_link_tag 'mobile', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    main= yield
+    nav
+      a href='#about' About
+      a href='#services' Services
+      a href='#team' Team
+      a href='#portfolio' Portfolio
+    = javascript_include_tag 'mobile', 'data-turbolinks-track' => true
