@@ -2,9 +2,8 @@
 #= require jquery_ujs
 #= require simplemde.min
 #= require turbolinks
-#= require bootstrap-sprockets
+#= require jquery_ufujs
 #= require google_tag_manager
-#= require jquery.remotipart
 
 Turbolinks.enableProgressBar()
 Turbolinks.enableTransitionCache()

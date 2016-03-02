@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def svg(path)
+    raw Rails.application.assets.find_asset(path.to_s + '.svg').to_s
+  end
+
   def display_duration_in_words(number)
     if number.to_i < 12
       "#{number} months"

@@ -1,15 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  expose(:current_user) { session[:user_id] ? User.find(session[:user_id]) : nil }
-
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to articles_path, alert: exception.message
-  end
+  expose(:current_user) { User.find(session[:user_id]) if session[:user_id] }
 
   protected
 
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
+  end
+
+  def require_user
+    redirect_to articles_path unless current_user
   end
 
   def authenticate
@@ -18,11 +18,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def set_layout
-    if request.user_agent =~ /Android|iPad|iPhone|Mobile/
-      "mobile"
-    else
-      "application"
-    end
+  def set_variant
+    request.variant = :mobile if mobile?
+  end
+
+  def mobile?
+    browser.mobile? || browser.tablet?
   end
 end

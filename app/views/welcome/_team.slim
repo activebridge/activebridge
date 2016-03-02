@@ -1,10 +1,10 @@
-.main itemscope="" itemtype="http://schema.org/Person" /
-h1.window-title Team
-.active-content.members
-  - @members.map do |member|
-    .member id="member_#{member.id}"
-      .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")
-        = image_tag(member.avatar.url(:mask))
-      .details
-        h4 itemprop='name'= member.name
-        p itemprop='jobTitle'= member.position
+.main itemscope="" itemtype="http://schema.org/Person"
+  h1.title Team
+  .active-content.members
+    - @members.map do |member|
+      .member id="member_#{member.id}"
+        .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")
+          = image_tag(member.avatar.url(:mask))
+        .details
+          h4 itemprop='name'= member.name
+          p itemprop='jobTitle'= member.position

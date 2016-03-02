@@ -1,0 +1,47 @@
+.section {
+  line-height: 1.2;
+  padding: 0 1%;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  .section-title {
+    .icon {
+      padding-bottom: 5%;
+      font-size: 3em;
+      color: $violet;
+      display: block;
+    }
+    text-align: center;
+    padding-bottom: 5%;
+    text-transform: uppercase;
+  }
+  .section-description {
+    font-size: .8em;
+    padding: 5%;
+    margin: 0;
+    position: relative;
+    border-top: 1px solid #e2e2e2;
+    text-align: left;
+    &::before {
+      position: absolute;
+      content: '';
+      border: 3px solid $violet;
+      position: absolute;
+      top: -3px;
+      border-radius: 50%;
+      left: 49%;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: .9em;
+    padding: 0 5% 0 10%;
+  }
+
+  ul > li:before {
+    content: "–";
+    position: absolute;
+    margin-left: -1.1em;
+  }
+}

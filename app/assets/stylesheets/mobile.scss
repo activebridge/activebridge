@@ -1,0 +1,103 @@
+@import 'variables';
+@import 'icons';
+@import 'defaults';
+@import 'base';
+@import 'bridge';
+
+html {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  max-height: 100vh;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #123;
+  font-size: 0;
+  a {
+    display: inline-block;
+    width: 25%;
+    padding: 4% 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+h1.title {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+main:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: image-url('bg.jpeg') no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+}
+
+#pages {
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+
+  &.active {
+    transition: transform .3s;
+  }
+
+  &[data-page='portfolio'] {
+    transform: translate(-400%);
+  }
+
+  &[data-page='team'] {
+    transform: translate(-300%);
+  }
+
+  &[data-page='services'] {
+    transform: translate(-200%);
+  }
+
+  &[data-page='about'] {
+    transform: translate(-100%);
+  }
+}
+
+.page {
+  background: rgba(white, 0.5);
+  width: 100%;
+  white-space: normal;
+  height: 100vh;
+  overflow-y: auto;
+  font-size: 16px;
+  display: inline-block;
+  position: relative;
+  h1 {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    background: rgba(rebeccapurple, 0.9)
+  }
+  &#home {
+    background: transparent;
+  }
+}
+
+
+.active-content.members .member img {
+  border-radius: 50%;
+}

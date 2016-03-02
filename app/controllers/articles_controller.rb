@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
   layout 'blog'
 
+  before_action :require_user, except: [:index, :show]
+
   expose(:articles_by_type) { Article.by_type((params[:type] || 'done'), current_user).by_category(params[:category]).order(created_at: :desc).paginate(page: params[:page], per_page: 5) }
   expose(:article, attributes: :article_params, finder: :find_by_slug)
   expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
   expose(:categories)
-  expose(:markdown) { Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) }
 
   def show
     article.increment_viewed
@@ -21,7 +22,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     article.destroy
-    redirect_to index_articles_path(:pending)
+    redirect_via_turbolinks_to index_articles_path(:pending)
   end
 
   alias update create

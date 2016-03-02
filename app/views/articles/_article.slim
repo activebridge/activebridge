@@ -1,19 +1,16 @@
-.post.row
-  .thumbnail
-    = link_to article_path(article)
-      = image_tag article.picture_url, width: '150px', height: '150px'
-    .span.edit-post
+.post
+  = link_to article_path(article), class: :thumbnail
+    = image_tag article.picture_url, width: '150px', height: '150px'
+    /* .span.edit-post */
       - if current_user.try(:member_or_moderator)
           - if article.pending?
-            = link_to 'Edit', edit_article_path(article)
-            = link_to 'Delete', article, method: :delete, style: 'float: right'
-  .post-body
-    .post-content
-      h1.title = link_to article.title, article_path(article)
-      .preview-body = clean_truncate(article.body)
-    .details
-      .author-avatar
-        = image_tag article.user.image, height: '60', width: '60'
-      .meta
-        p = article.user.full_name
-        p = article.created_at.strftime('%B %d, %Y')
+            => link_to 'Edit', edit_article_path(article)
+            = link_to 'Delete', article, method: :delete, remote: true
+  span.post-body
+    h1.title = link_to article.title, article_path(article)
+    .preview-body = clean_truncate(article.body)
+    .author-avatar
+      = image_tag article.user.image, height: '60', width: '60'
+    .meta
+      p = article.user.full_name
+      p = article.created_at.strftime('%B %d, %Y')

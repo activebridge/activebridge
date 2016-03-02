@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
-layout :set_layout
+  before_action :set_variant
+  caches_action :index, cache_path: proc { request.variant&.first&.to_s || "#{params[:page] || :index}/#{request.format}" }
 
   def index
     @members = Member.order(priority: :asc)

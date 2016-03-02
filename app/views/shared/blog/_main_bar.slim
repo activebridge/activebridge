@@ -1,25 +1,18 @@
-.row
-  .categories.col-md-8
-    ul
-      li.pull-left = active_link_to 'All Posts', index_articles_path(:done), active: :exact
-      = render partial: 'categories/category', collection: categories, as: :category
-  .social-buttons.col-md-4.hidden-sm.hidden-xs
-    .row
-      .col-xs-2 = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-twitter', target: '_blank'
-      .col-xs-2 = link_to '', 'https://facebook.com/ActiveBridgeTeam', class: 'icon icon-facebook', target: '_blank'
-      .col-xs-2 = link_to '', 'https://plus.google.com/+ActiveBridgeTeam', class: 'icon icon-google', target: '_blank'
-      .col-xs-2 = link_to '', 'https://youtube.com/channel/UCw5hPDX1sKgDZczIvcaIepw', class: 'icon icon-youtube', target: '_blank'
-      .col-xs-2 = link_to '', 'https://ru.pinterest.com/activebridg0459/', class: 'icon icon-pinterest', target: '_blank'
-      .col-xs-2 = link_to '', 'https://twitter.com/activebridge', class: 'icon icon-github', target: '_blank'
+.categories
+  => link_to_unless_current 'All Posts', index_articles_path(:done) do
+    span All Posts
+  - categories.each do |c|
+    => link_to_unless_current c.name, category_articles_path(c.slug) do
+      span= c.name
 
 - if current_user
-  .logged-in.row
-    .col-xs-12
-      strong = current_user.full_name
-      br = "#{current_user.role.capitalize}"
-      = link_to 'Log out', signout_path
+  div
+    strong=> current_user.full_name
+    span=> current_user.role.capitalize
+    => link_to 'Log out', signout_path, method: :delete, remote: true
 
-- if can?(:create, article) && !current_page?(action: :new)
-  .row
-    .create-post.col-xs-12
-      br = link_to 'Create Post', new_article_path, 'data-no-turbolink' => true
+  div
+    - if !current_page?(action: :new)
+      => link_to 'Create Post', new_article_path
+    = link_to_unless_current 'Pending posts', index_articles_path(:pending)
+  br
