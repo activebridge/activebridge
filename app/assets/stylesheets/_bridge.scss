@@ -92,6 +92,10 @@
       text-align: left;
       padding: 10px 0;
       display: block;
+      a {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 }
