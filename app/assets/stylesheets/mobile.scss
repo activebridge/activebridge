@@ -24,7 +24,7 @@ nav {
   a {
     display: inline-block;
     width: 25%;
-    padding: 4% 0;
+    padding: 10px 0;
     font-size: 1rem;
     box-sizing: border-box;
     text-align: center;
@@ -51,7 +51,7 @@ main:before {
   position: relative;
   white-space: nowrap;
   font-size: 0;
-  transition: transform .05s;
+  transition: transform .1s;
 
   &.active {
     transition: transform .3s;
@@ -91,10 +91,37 @@ main:before {
   }
   &#home {
     background: transparent;
+    text-align: center;
+    .logo svg {
+      height: 100px;
+    }
+    p {
+      padding: 0 10%;
+    }
   }
 }
 
 
 .content.members .member img {
   border-radius: 50%;
+}
+
+@media screen and (orientation:landscape) {
+  nav {
+    left: auto;
+    top: 0;
+
+    a {
+      width: 54px;
+      padding: 20px;
+      line-height: 0.8;
+      height: 25vh;
+      display: block;
+      word-wrap: break-word;
+    }
+  }
+
+  main {
+    padding-right: 54px;
+  }
 }
