@@ -8,9 +8,6 @@
   .section-title {
     .icon {
       padding-bottom: 5%;
-      font-size: 3em;
-      color: $violet;
-      display: block;
     }
     text-align: center;
     padding-bottom: 5%;
@@ -48,7 +45,7 @@
   }
 }
 
-.icon svg {
+svg.icon {
   max-width: 48px;
   height: 48px;
   display: inline-block;
@@ -57,7 +54,7 @@
   }
 }
 
-.icon.xl svg {
+svg.xl {
   height: 32px;
 }
 

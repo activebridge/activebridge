@@ -4,19 +4,19 @@ div itemscope="" itemtype="http://schema.org/Thing"
     h4.text-center= t('services.we_do')
     .section
       .section-title
-        i.icon= svg(:code)
-        = t('services.web_dev_title')
+        = svg(:code)
+        div= t('services.web_dev_title')
       div itemprop='description' class= 'section-description text-center'
         = t('services.web_development')
     .section
       .section-title
-        i.icon= svg(:rails)
-        = t('services.code_audit_title')
+        = svg(:rails)
+        div= t('services.code_audit_title')
       div itemprop='description' class= 'section-description text-center'
         = t('services.code_audit')
     .section
       .section-title
-        i.icon= svg(:support)
+        div= svg(:support)
         = t('services.support_title')
       div itemprop='description' class= 'section-description text-center'
         = t('services.support')

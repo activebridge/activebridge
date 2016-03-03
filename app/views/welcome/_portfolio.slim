@@ -2,8 +2,8 @@ div itemscope="" itemtype="http://schema.org/Product" /
 h1.title.portfolio= t('portfolio.title')
 .content.projects
   .arrows
-    i.icon.xl#left= svg('chevron-left')
-    i.icon.xl#right= svg('chevron-right')
+    i.arrow#left= svg('chevron-left', :xl)
+    i.arrow#right= svg('chevron-right', :xl)
   .wrapper data-step=1 data-tf=0
     - @projects.map do |project|
       .project-wrapper style="background-image: url(#{project.image.url})"

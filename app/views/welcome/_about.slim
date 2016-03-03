@@ -4,16 +4,16 @@ div itemscope="" itemtype="http://schema.org/Thing"
     h4.text-center= t('about.description')
     .section
       .section-title
-        i.icon= svg('free')
-        = t('about.why_we')
+        = svg(:free)
+        div= t('about.why_we')
       ul.section-description
         li itemprop='description'= t('about.skills')
         li itemprop='description'= t('about.work_experience')
         li itemprop='description'= t('about.rate_project')
     .section
       .section-title
-        i.icon= svg('diamond')
-        = t('about.core_values')
+        = svg(:diamond)
+        div= t('about.core_values')
       ul.section-description
         li itemprop='description'= t('about.experienced_team')
         li itemprop='description'= t('about.specialization')
@@ -21,8 +21,8 @@ div itemscope="" itemtype="http://schema.org/Thing"
         li itemprop='description'= t('about.trustworthy')
     .section
       .section-title
-        i.icon= svg('trophy')
-        = t('about.benefits')
+        = svg(:trophy)
+        div= t('about.benefits')
       ul.section-description
         li itemprop='description'= t('about.cost_efficient')
         li itemprop='description'= t('about.master_degree')

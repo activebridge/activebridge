@@ -27,6 +27,7 @@ gem 'ufujs-rails'
 gem 'carrierwave-base64'
 gem 'customize-rails'
 gem 'actionpack-action_caching'
+gem 'inline_svg'
 
 group :development, :test do
   gem 'pry'

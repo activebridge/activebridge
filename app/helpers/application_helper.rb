@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def svg(path)
-    raw Rails.application.assets.find_asset("icons/#{path}.svg").to_s
+  def svg(path, klass = nil)
+    self.inline_svg("icons/#{path}.svg", class: "icon #{klass}")
   end
 
   def bootstrap_class_for flash_type
