@@ -1,7 +1,5 @@
 #= require swipe
 
-
-
 [].forEach.call document.querySelectorAll('nav a'), (a) ->
   a.addEventListener('click', (e) => navigate(e))
 

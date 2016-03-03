@@ -12,9 +12,6 @@ body {
   height: 100%;
   overflow: hidden;
   max-height: 100vh;
-  scroll-snap-points-x: repeat(100%);
-  scroll-snap-type: mandatory;
-  scroll-behavior: smooth;
 }
 
 nav {
@@ -54,6 +51,7 @@ main:before {
   position: relative;
   white-space: nowrap;
   font-size: 0;
+  transition: transform .05s;
 
   &.active {
     transition: transform .3s;
@@ -97,6 +95,6 @@ main:before {
 }
 
 
-.active-content.members .member img {
+.content.members .member img {
   border-radius: 50%;
 }

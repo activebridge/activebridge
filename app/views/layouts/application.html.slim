@@ -1,24 +1,19 @@
+= content_for :head do
+  scss:
+    body {
+      overflow: hidden;
+    }
+    canvas {
+      opacity: 0;
+      transition: opacity .5s;
+    }
+    .hide-image, .popup-link, .scroll-arrows, .loader-popup {
+      display: none;
+    }
+
 doctype 5
 html
-  head
-    title Active Bridge - ruby on rails web development team
-    meta name = "description" content=t('meta.desription')
-    meta name = "keywords" content=t('meta.keywords')
-    meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    meta content = "1AeEQ7FZFB4K7URidlmD2UP6z9pzq5HMUACZOhVRbpA" name="google-site-verification"
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    = csrf_meta_tags
-    scss:
-      body {
-        overflow: hidden;
-      }
-      canvas {
-        opacity: 0;
-        transition: opacity .5s;
-      }
-      .hide-image, .popup-link, .scroll-arrows, .loader-popup {
-        display: none;
-      }
+  = render 'layouts/head', type: :application
   body
     img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=552167954950145&ev=PageView&noscript=1"
     <div class='main' itemscope itemtype='http://schema.org/Organization'>
