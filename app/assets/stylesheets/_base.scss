@@ -4,6 +4,7 @@
   display: inline-block;
   width: 30%;
   vertical-align: top;
+
   .section-title {
     .icon {
       padding-bottom: 5%;
@@ -15,6 +16,7 @@
     padding-bottom: 5%;
     text-transform: uppercase;
   }
+
   .section-description {
     font-size: .8em;
     padding: 5%;
@@ -43,5 +45,28 @@
     content: "–";
     position: absolute;
     margin-left: -1.1em;
+  }
+}
+
+.icon svg {
+  max-width: 48px;
+  height: 48px;
+  display: inline-block;
+  path {
+    fill: $violet;
+  }
+}
+
+.icon.xl svg {
+  height: 32px;
+}
+
+.social-icons {
+  padding-top: 35px;
+  a {
+    padding: 5px;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }

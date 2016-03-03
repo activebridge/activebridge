@@ -1,9 +1,9 @@
-.main itemscope="" itemtype="http://schema.org/Product" /
+div itemscope="" itemtype="http://schema.org/Product" /
 h1.title.portfolio= t('portfolio.title')
-.active-content.projects
+.content.projects
   .arrows
-    i.icon.icon-chevrone-up#left
-    i.icon.icon-chevrone-up#right
+    i.icon.xl#left= svg('chevron-left')
+    i.icon.xl#right= svg('chevron-right')
   .wrapper data-step=1 data-tf=0
     - @projects.map do |project|
       .project-wrapper style="background-image: url(#{project.image.url})"

@@ -13,9 +13,11 @@ html
 
   body
     = flash_messages
-    .container
-      = render 'shared/blog/header'
-      .content
-        = render 'shared/blog/main_bar'
-        = yield
-      = render 'shared/blog/footer'
+    header.header
+      = link_to '', root_url, class: 'back-to-site'
+      = link_to 'Sign in',  '/auth/google_oauth2', class: 'sign-in' unless current_user
+      = render 'social_icons'
+    .content
+      = render 'shared/blog/main_bar'
+      = yield
+    = render 'shared/blog/footer'

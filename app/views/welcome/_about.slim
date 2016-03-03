@@ -1,10 +1,10 @@
-.main itemscope="" itemtype="http://schema.org/Thing"
+div itemscope="" itemtype="http://schema.org/Thing"
   h1.title= t('about.title')
-  .active-content.about
+  .content.about
     h4.text-center= t('about.description')
     .section
       .section-title
-        i.icon.icon-why-we
+        i.icon= svg('free')
         = t('about.why_we')
       ul.section-description
         li itemprop='description'= t('about.skills')
@@ -12,7 +12,7 @@
         li itemprop='description'= t('about.rate_project')
     .section
       .section-title
-        i.icon.icon-ruby
+        i.icon= svg('diamond')
         = t('about.core_values')
       ul.section-description
         li itemprop='description'= t('about.experienced_team')
@@ -21,9 +21,8 @@
         li itemprop='description'= t('about.trustworthy')
     .section
       .section-title
-        i.icon.icon-benefits
+        i.icon= svg('trophy')
         = t('about.benefits')
       ul.section-description
         li itemprop='description'= t('about.cost_efficient')
         li itemprop='description'= t('about.master_degree')
-        /* li= t('about.strong_skills') */

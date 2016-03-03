@@ -1,11 +1,9 @@
-html {
-  font-family: $font;
-  letter-spacing: .05em;
-}
-
 body {
   height: 1000vh;
   margin: 0;
+  font-family: $font;
+  letter-spacing: .05em;
+  color: $black;
 }
 
 canvas {
@@ -21,7 +19,7 @@ a {
 
 h1.title {
   text-align: center;
-  color: black;
+  color: $black;
   font-weight: normal;
 }
 
@@ -31,20 +29,15 @@ h1.title {
 
 .translation_missing {
   color: red;
-  background: black;
+  background: $black;
 }
 
 #lazy_close {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: normal;
-  font-family: 'icomoon';
-  top: 5px;
+  top: 0;
+  right: 0;
   z-index: 11;
-}
-
-#lazy_close:after {
-  z-index: 1;
-  position: relative;
 }
 
 .portfolio {
@@ -71,7 +64,7 @@ h1.title {
   font-weight: bold;
 }
 
-.active-content {
+.content {
   overflow-y: auto;
   padding: 5px 20px;
   max-height: 84vh;
@@ -87,11 +80,8 @@ h1.title {
   &.members {
     .member {
       padding: 0 3%;
-      color: black;
       display: inline-block;
       margin-bottom: 20px;
-      text-align: center;
-      perspective: 1000;
       width: 32%;
       box-sizing: border-box;
       vertical-align: top;
@@ -218,23 +208,20 @@ h1.title {
       border-radius: 50%;
       left: 49%;
     }
-    .icon-chevrone-up {
+    .icon {
       position: absolute;
-      border: 1px solid #842B98;
       border-radius: 50%;
-      background: #842B98;
       padding: 10px;
+      background: $violet;
       cursor: pointer;
       top: -26px;
-      color: white;
-      font-weight: bold;
-      font-size: 2em;
+      svg path {
+        fill: white;
+      }
       &#left {
-        transform: rotate(-90deg);
         left: 0%;
       }
       &#right {
-        transform: rotate(90deg);
         right: 0%;
       }
     }

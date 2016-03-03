@@ -56,14 +56,7 @@ html
                   | &nbsp
                   span itemprop='addressRegion' Ukraine
                 </div>
-            .social-icon
-              a.icon.icon-twitter href='https://twitter.com/activebridge' target='_blank'
-              a.icon.icon-facebook href='https://facebook.com/ActiveBridgeTeam' target='_blank'
-              a.icon.icon-google href='https://plus.google.com/+ActiveBridgeTeam' target='_blank'
-              a.icon.icon-youtube href='https://youtube.com/channel/UCw5hPDX1sKgDZczIvcaIepw' target='_blank'
-              a.icon.icon-pinterest href='https://ru.pinterest.com/activebridg0459/' target='_blank'
-              a.icon.icon-github href='https://github.com/activebridge' target='_blank'
-              a.icon.icon-blogger href='http://blog.active-bridge.com' target='_blank'
+            = render 'social_icons'
 
       .step#step2
         = link_to 'Team', '/team', class: 'popup-link', id: :our_team
@@ -89,17 +82,12 @@ html
           .loader
           br
           br
-          .scroll-arrows SCROLL TO EXPLORE
-          .social-icons
-            a.icon.icon-twitter href='https://twitter.com/activebridge' target='_blank'
-            a.icon.icon-facebook href='https://facebook.com/ActiveBridgeTeam' target='_blank'
-            a.icon.icon-google href='https://plus.google.com/+ActiveBridgeTeam' target='_blank'
-            a.icon.icon-youtube href='https://youtube.com/channel/UCw5hPDX1sKgDZczIvcaIepw' target='_blank'
-            a.icon.icon-pinterest href='https://ru.pinterest.com/activebridg0459/' target='_blank'
-            a.icon.icon-github href='https://github.com/activebridge' target='_blank'
-            a.icon.icon-blogger href='http://blog.active-bridge.com' target='_blank'
+          .scroll-arrows
+            i.icon= svg('chevron-up')
+            div SCROLL TO EXPLORE
+            i.icon= svg('chevron-down')
+          = render 'social_icons'
 
 
   = render_lazybox
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  script async=true src='//www.google-analytics.com/analytics.js'; // jQuery shortcut

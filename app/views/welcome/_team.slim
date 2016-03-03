@@ -1,6 +1,6 @@
-.main itemscope="" itemtype="http://schema.org/Person"
-  h1.title= t('services.title')
-  .active-content.members
+div itemscope="" itemtype="http://schema.org/Person"
+  h1.title= t('team.title')
+  .content.members
     - @members.map do |member|
       .member id="member_#{member.id}"
         .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")

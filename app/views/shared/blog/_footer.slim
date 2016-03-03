@@ -11,6 +11,4 @@ footer.footer
       li= link_to 'Portfolio', page_url(:portfolio)
   .footer-right
     h4 Follow us
-    .social-buttons
-      - I18n.t('social').each_pair do |name, link|
-        => link_to '', link, class: "icon icon-#{name}", target: '_blank'
+    = render 'social_icons'

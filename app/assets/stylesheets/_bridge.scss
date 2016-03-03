@@ -19,6 +19,7 @@
     border: 3px solid;
   }
 }
+
 .front {
   text-align: center;
   background: url("https://res.cloudinary.com/active-bridge/image/upload/v1448008261/cloud.png") no-repeat 50% 50% / cover;
@@ -39,22 +40,9 @@
   .scroll-arrows {
     cursor: pointer;
     margin: 0 34%;
-  }
-  .scroll-arrows::before, .scroll-arrows::after {
-    content: '\e805';
-    display: block;
-    font-size: 50px;
-    font-family: 'icomoon';
-    color: $red;
-  }
-  .scroll-arrows::after {
-    transform: rotate(180deg);
-  }
-  .social-icons {
-    padding-top: 35px;
-    a { padding: 10px 15px;
-        font-size: 25px;
-        color: $violet }
+    svg path {
+      fill: $red;
+    }
   }
 }
 
@@ -72,14 +60,8 @@
     position: absolute;
     left: 0;
     right: 0;
-    display: inline-block;
-    line-height: 200vh;
     vertical-align: middle;
     padding: 0 36vw;
-  }
-  .icon {
-    font-size: 2em;
-    padding-right: 20px;
   }
   .cloud {
     position: absolute;
@@ -111,12 +93,6 @@
       padding: 10px 0;
       display: block;
     }
-    .social-icon  {
-    padding-top: 35px;
-    a { padding: 10px 15px;
-        font-size: 25px;
-        color: $violet }
-  }
   }
 }
 

@@ -1,6 +1,6 @@
-@import 'icons';
 @import 'simplemde.min';
 @import 'variables';
+@import 'base';
 @import 'customize/variables';
 @import 'customize/input';
 @import 'customize/select';
@@ -115,21 +115,20 @@ body {
   background-color: #FFFFFF;
 }
 
-.social-buttons {
+.social-icons {
   a {
-    font-size: 25px;
     padding: 0 1%;
   }
 }
 
-.header .social-buttons {
+.header .social-icons {
   position: absolute;
   right: 0;
   bottom: 5px;
   width: 100%;
   text-align: right;
-  a {
-    color: #A273F7;
+  svg path {
+    fill: #A273F7;
   }
 }
 
@@ -238,6 +237,13 @@ body {
     width: 35%;
     display: inline-block;
     vertical-align: top;
+  }
+
+  .social-icons {
+    padding-top: 0;
+    svg path {
+      fill: white;
+    }
   }
 }
 
