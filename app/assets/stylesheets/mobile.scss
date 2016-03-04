@@ -51,7 +51,6 @@ main:before {
   position: relative;
   white-space: nowrap;
   font-size: 0;
-  transition: transform .1s;
 
   &.active {
     transition: transform .3s;

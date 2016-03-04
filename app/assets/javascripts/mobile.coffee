@@ -7,4 +7,5 @@ navigate = (e) ->
   e.preventDefault()
   @page = @pages.indexOf(e.target.href.split('#')[1])
   @swipeEndX = @page * 100
+  @slider.className = 'active'
   slide(@swipeEndX)

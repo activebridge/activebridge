@@ -1,30 +1,33 @@
-var start = end = swipe = page = 0,
+var startX = startY = endX = endY = swipeX = swipeY = page = 0,
   pages = ['home', 'about', 'services', 'team', 'portfolio'],
   slider = document.getElementById('pages'),
+  horizontal,
   swipeEndX = 100 * page;
 
 slider.addEventListener('touchstart', function(event) {
-    swipe = 0;
-    start = event.changedTouches[0].pageX;
+    swipeX = 0;
+    startX = event.changedTouches[0].pageX;
+    startY = event.changedTouches[0].pageY;
 }, false);
 
 slider.addEventListener('touchmove', function(event) {
-  swipe = (Math.abs(event.changedTouches[0].pageX - start) / window.outerWidth * 100) + 10
-  if (swipe > 15) {
-    if (start > event.changedTouches[0].pageX) {
-      touch = Math.abs(swipeEndX) + swipe
+  swipeX = (Math.abs(event.changedTouches[0].pageX - startX) / window.outerWidth * 100)
+  swipeY = (Math.abs(event.changedTouches[0].pageY - startY) / window.outerHeight * 100)
+  horizontal = horizontal || swipeX > swipeY
+  if (horizontal) {
+    if (startX > event.changedTouches[0].pageX) {
+      touch = Math.abs(swipeEndX) + swipeX
     } else {
-      touch = Math.abs(swipeEndX) - swipe
+      touch = Math.abs(swipeEndX) - swipeX
     }
     slide(touch);
   }
 }, false);
 
 slider.addEventListener('touchend', function(event) {
-  end = event.changedTouches[0].pageX;
-  if (swipe > 25) {
+  if (swipeX > 25 && swipeY < 10) {
     this.className = 'active'
-    if (start > end) {
+    if (startX > event.changedTouches[0].pageX) {
       page += 1;
     } else {
       page -= 1;
@@ -32,9 +35,10 @@ slider.addEventListener('touchend', function(event) {
   }
   if (page > 3) page = 0;
   if (page < 0) page = 0;
-  swipe = 100 * page;
-  swipeEndX = swipe
-  slide(swipe);
+  swipeX = 100 * page;
+  swipeEndX = swipeX
+  horizontal = null;
+  slide(swipeX);
 }, false);
 
 function slide(val) {
