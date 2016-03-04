@@ -25,8 +25,8 @@ slider.addEventListener('touchmove', function(event) {
 }, false);
 
 slider.addEventListener('touchend', function(event) {
+  this.className = 'active'
   if (swipeX > 25 && swipeY < 10) {
-    this.className = 'active'
     if (startX > event.changedTouches[0].pageX) {
       page += 1;
     } else {
