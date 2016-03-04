@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'defaults';
 @import 'base';
+@import 'members';
 @import 'bridge';
 
 html {
@@ -101,8 +102,8 @@ main:before {
 }
 
 
-.content.members .member img {
-  border-radius: 50%;
+.members .member {
+  width: 33%;
 }
 
 @media screen and (orientation:landscape) {

@@ -198,12 +198,12 @@ a.popup-link {
     height: 100%;
     border-radius: 0px;
 
-    .active-content {
+    .content {
       max-height: 88vh;
     }
 
-    .active-content.members .member {
-      width: 49%;
+    .content.members .member {
+      width: 33%;
     }
 
     .projects .project-wrapper .project {

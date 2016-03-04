@@ -18,6 +18,8 @@ a {
 
 
 h1.title {
+  margin: 0;
+  padding: 10px 0;
   text-align: center;
   color: $black;
   font-weight: normal;
@@ -75,42 +77,6 @@ h1.title {
   &.projects {
     overflow: hidden;
     padding: 0;
-  }
-
-  &.members {
-    .member {
-      padding: 0 3%;
-      display: inline-block;
-      margin-bottom: 20px;
-      width: 32%;
-      box-sizing: border-box;
-      vertical-align: top;
-      .member-image {
-        background-size: 100%;
-        background-position: center center;
-      }
-
-      &:hover img{
-        opacity: 0;
-      }
-
-      img {
-        width: 100%;
-        background: white;
-        transition: opacity .5s;
-        display: block;
-      }
-
-      p, h4 {
-        margin: 0;
-        font-size: 0.8em;
-      }
-
-      .details {
-        padding-top: 15px;
-        h2 { margin: 0; }
-      }
-    }
   }
 }
 

@@ -1,0 +1,37 @@
+.members {
+  font-size: 0;
+  .member {
+    font-size: 1rem;
+    padding: 0 3%;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 20%;
+    box-sizing: border-box;
+    vertical-align: top;
+    .member-image {
+      background-size: 100%;
+      background-position: center center;
+    }
+
+    &:hover img{
+      opacity: 0;
+    }
+
+    img {
+      width: 100%;
+      background: white;
+      transition: opacity .5s;
+      border-radius: 50%;
+    }
+
+    p, h4 {
+      margin: 0;
+      font-size: 0.8em;
+    }
+
+    .details {
+      padding-top: 15px;
+      h2 { margin: 0; }
+    }
+  }
+}
