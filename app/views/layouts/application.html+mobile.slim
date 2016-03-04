@@ -4,8 +4,12 @@ html
   body
     main= yield
     nav
-      a href='#home' Home
-      a href='#about' About
-      a href='#services' Services
-      a href='#team' Team
+      a href='home'
+        = svg(:home, :xl)
+      a href='about'
+        = svg(:info, :xl)
+      a href='services'
+        = svg(:cogs, :xl)
+      a href='team'
+        = svg(:group, :xl)
     = javascript_include_tag 'mobile', 'data-turbolinks-track' => true
