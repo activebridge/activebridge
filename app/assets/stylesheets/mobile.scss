@@ -54,7 +54,7 @@ main:before {
   font-size: 0;
 
   &.active {
-    transition: transform .3s;
+    transition: transform .2s;
   }
 
   &[data-page='portfolio'] {

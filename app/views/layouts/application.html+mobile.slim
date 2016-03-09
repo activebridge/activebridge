@@ -1,3 +1,6 @@
+= content_for :head do
+  link rel='manifest' href='/manifest.json'
+  link rel="icon" sizes="192x192" href="/icon-2x.png">
 doctype html
 html
   = render 'layouts/head', type: :mobile
