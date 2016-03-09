@@ -50,8 +50,11 @@ main:before {
 
 #pages {
   position: relative;
+  top: -20px;
   white-space: nowrap;
   font-size: 0;
+  backface-visibility: hidden;
+  perspective: 1000;
 
   &.active {
     transition: transform .2s;

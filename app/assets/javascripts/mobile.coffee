@@ -9,5 +9,4 @@ navigate = (e) ->
   @swipeEndX = @page * 100
   @slider.className = 'active'
   slide(@swipeEndX)
-  if 'vibrate' in navigator
-    navigator.vibrate(100)
+  navigator.vibrate(70)
