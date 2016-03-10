@@ -9,7 +9,8 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    redirect_to articles_path unless current_user
+    return if current_user
+    raise ActionController::RoutingError.new('Not Found'), 'Not Found'
   end
 
   def authenticate

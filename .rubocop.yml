@@ -1,3 +1,12 @@
 AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'log/**/*'
 Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
   Enabled: false
