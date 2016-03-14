@@ -11,3 +11,5 @@ navigate = (e) ->
   @slider.className = 'active'
   slide(@swipeEndX)
   navigator.vibrate(70)
+
+navigator.serviceWorker.register('/sw.js') if (navigator.serviceWorker)
