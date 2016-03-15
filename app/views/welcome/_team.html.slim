@@ -4,7 +4,7 @@ div itemscope="" itemtype="http://schema.org/Person"
     - @members.map do |member|
       .member id="member_#{member.id}"
         .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")
-          = image_tag(member.avatar.url(:mask))
+          = image_tag(member.avatar.url)
         .details
           h4 itemprop='name'= member.name
           p itemprop='jobTitle'= member.position
