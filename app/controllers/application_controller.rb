@@ -24,6 +24,6 @@ class ApplicationController < ActionController::Base
   end
 
   def mobile?
-    browser.mobile? || browser.tablet?
+    browser.device.mobile? || browser.device.tablet?
   end
 end
