@@ -18,7 +18,6 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'decent_exposure'
 gem 'friendly_id', '~> 5.1.0'
-gem 'bootstrap-sass', '~> 3.3.6'
 gem 'will_paginate', '~> 3.0.6'
 gem 'omniauth-google-oauth2'
 gem 'autoprefixer-rails'
@@ -50,5 +49,5 @@ group :development do
   gem 'spring'
   gem 'thin'
   gem 'quiet_assets'
-  gem "capistrano-db-tasks", require: false
+  gem 'capistrano-db-tasks', require: false
 end
