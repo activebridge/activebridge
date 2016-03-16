@@ -108,6 +108,9 @@ main:before {
 
 .members .member {
   width: 33%;
+  &:hover img {
+    opacity: 1;
+  }
 }
 
 @media screen and (orientation:landscape) {
@@ -128,5 +131,9 @@ main:before {
 
   main {
     padding-right: 54px;
+  }
+
+  .members .member {
+    width: 25%;
   }
 }
