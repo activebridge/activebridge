@@ -50,4 +50,5 @@ group :development do
   gem 'thin'
   gem 'quiet_assets'
   gem 'capistrano-db-tasks', require: false
+  gem 'sitemap_generator'
 end
