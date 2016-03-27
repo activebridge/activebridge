@@ -1,6 +1,6 @@
 doctype 5
 html
-  = render 'layouts/head', type: :mobile
+  = render 'layouts/head', type: :mobile, media: :none, onload: "if(media!='all')media='all'"
   body
     main= yield
     nav
