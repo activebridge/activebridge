@@ -94,18 +94,7 @@ main:before {
     background: rgba(rebeccapurple, 0.9);
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   }
-  &#home {
-    background: transparent;
-    text-align: center;
-    .logo svg {
-      height: 100px;
-    }
-    p {
-      padding: 0 10%;
-    }
-  }
 }
-
 
 .members .member {
   width: 33%;
