@@ -15,27 +15,6 @@ body {
   max-height: 100vh;
 }
 
-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #123;
-  font-size: 0;
-  a {
-    display: inline-block;
-    width: 25%;
-    padding: 10px 0;
-    font-size: 1rem;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  svg.icon path {
-    fill: white;
-  }
-}
-
 main:before {
   content: '';
   position: fixed;

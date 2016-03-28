@@ -3,12 +3,18 @@
     body {
       overflow: hidden;
     }
+
     canvas {
       opacity: 0;
       transition: opacity .5s;
     }
+
     .hide-image, .popup-link, .scroll-arrows, .loader-popup {
       display: none;
+    }
+
+    #lazy_overlay {
+      visibility: hidden;
     }
 
 doctype 5
@@ -52,7 +58,7 @@ html
                   span itemprop='addressLocality' Cherkassy,
                   | &nbsp
                   span itemprop='addressRegion' Ukraine
-            = render 'social_icons'
+            = render 'social_icons', klass: :xl
 
       .step#step2
         = link_to 'Team', '/team', class: 'popup-link', id: :our_team
@@ -82,7 +88,7 @@ html
             i.icon= svg('chevron-up')
             div SCROLL TO EXPLORE
             i.icon= svg('chevron-down')
-          = render 'social_icons'
+          = render 'social_icons', klass: :xl
 
 
   = render_lazybox

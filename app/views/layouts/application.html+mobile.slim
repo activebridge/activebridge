@@ -1,3 +1,46 @@
+= content_for :head do
+  scss:
+    body {
+      overflow: hidden;
+      background: rgb(103, 138, 179);
+    }
+    .page {
+      height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .social-icons {
+      padding-top: 35px;
+      a {
+        display: inline-block;
+        padding: 10px;
+      }
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #123;
+      font-size: 0;
+      a {
+        display: inline-block;
+        width: 25%;
+        padding: 10px 0;
+        font-size: 1rem;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      svg.icon path {
+        fill: white;
+      }
+    }
+
 doctype 5
 html
   = render 'layouts/head', type: :mobile, media: :none, onload: "if(media!='all')media='all'"
