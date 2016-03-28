@@ -29,6 +29,7 @@ gem 'carrierwave-base64'
 gem 'customize-rails'
 gem 'actionpack-action_caching'
 gem 'inline_svg'
+gem 'sitemap_generator'
 
 group :development, :test do
   gem 'pry'
@@ -50,5 +51,4 @@ group :development do
   gem 'thin'
   gem 'quiet_assets'
   gem 'capistrano-db-tasks', require: false
-  gem 'sitemap_generator'
 end
