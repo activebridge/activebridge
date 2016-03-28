@@ -92,7 +92,6 @@ loadImg = ->
     canvas.style.opacity = 1
     document.body.style.overflowY = 'auto'
     $('.popup-link, .scroll-arrows, .hide-image').show()
-    $('html').niceScroll horizrailenabled: false
     $('.loader').hide()
 
 front = document.getElementById('front')
