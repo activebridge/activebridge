@@ -43,7 +43,7 @@
 
 doctype 5
 html
-  = render 'layouts/head', type: :mobile, media: :none, onload: "if(media!='all')media='all'"
+  = render 'layouts/head', type: :mobile, media: :none
   body
     main= yield
     nav
@@ -55,4 +55,5 @@ html
         = svg(:cogs, :xl)
       a href='team'
         = svg(:group, :xl)
-    = javascript_include_tag 'mobile', 'data-turbolinks-track' => true
+    = stylesheet_link_tag :mobile, media: :all, async: true
+    = javascript_include_tag :mobile, async: true
