@@ -30,6 +30,7 @@ gem 'customize-rails'
 gem 'actionpack-action_caching'
 gem 'inline_svg'
 gem 'sitemap_generator'
+gem 'whenever', require: false
 
 group :development, :test do
   gem 'pry'
