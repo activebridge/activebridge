@@ -28,7 +28,7 @@ ActiveAdmin.register Article do
   form do |f|
     f.inputs "Article Editing" do
       f.input :title
-      f.input :body
+      f.input :body, input_html: { class: 'tinymce' }
       f.input :user
       f.input :category
       f.input :picture

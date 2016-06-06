@@ -1,0 +1,7 @@
+toolbar:
+  - styleselect | bold italic | undo redo | media | link | table | alignleft aligncenter alignright alignjustify
+plugins:
+  - image
+  - link
+  - table
+  - media

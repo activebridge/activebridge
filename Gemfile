@@ -31,6 +31,8 @@ gem 'actionpack-action_caching'
 gem 'inline_svg'
 gem 'sitemap_generator'
 gem 'whenever', require: false
+gem 'tinymce-rails'
+gem 'tinymce-rails-imageupload', github: 'PerfectlyNormal/tinymce-rails-imageupload'
 
 group :development, :test do
   gem 'pry'
