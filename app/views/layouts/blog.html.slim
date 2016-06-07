@@ -5,7 +5,7 @@ html
     = flash_messages
     header.header
       = link_to '', root_url, class: 'back-to-site'
-      = link_to 'Sign in',  '/auth/google_oauth2', class: 'sign-in' unless current_user
+      = link_to 'Sign in', '/auth/google_oauth2', class: 'sign-in' unless current_user
       = render 'social_icons', klass: :xl
     .content
       = render 'shared/blog/main_bar'

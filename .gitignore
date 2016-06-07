@@ -12,3 +12,4 @@
 /tmp
 /public/uploads/tmp
 /public/assets
+/coverage/*
