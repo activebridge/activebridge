@@ -18,6 +18,5 @@ Rails.application.routes.draw do
     end
   end
 
-  post '/tinymce_assets' => 'articles#upload_image'
   root to: 'welcome#index'
 end

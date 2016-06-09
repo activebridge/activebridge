@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/PerfectlyNormal/tinymce-rails-imageupload.git
-  revision: 0d225532e6b94d61f36799d3b8a1f28f2f8456c5
-  specs:
-    tinymce-rails-imageupload (4.0.16.beta)
-      railties (>= 3.2, < 5)
-      tinymce-rails (~> 4.0)
-
-GIT
   remote: git://github.com/activeadmin/activeadmin.git
   revision: cc85abc99a221b84ae67625843b7e4cb7b850b1e
   specs:
@@ -350,8 +342,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
-    tinymce-rails (4.3.3)
-      railties (>= 3.1.1)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -421,8 +411,6 @@ DEPENDENCIES
   slim-rails
   spring
   thin
-  tinymce-rails
-  tinymce-rails-imageupload!
   turbolinks
   ufujs-rails
   uglifier (>= 1.3.0)

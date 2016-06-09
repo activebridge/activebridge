@@ -1,4 +1,3 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
-
-.mce-tinymce { margin-left: 20% !important; }
+@import 'simplemde.min';

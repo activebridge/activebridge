@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   layout 'blog'
 
-  before_action :require_user, except: [:index, :show, :upload_image]
+  before_action :require_user, except: [:index, :show]
 
   expose(:articles_by_type) { Article.by_type((params[:type] || 'done'), current_user).by_category(params[:category]).order(created_at: :desc).paginate(page: params[:page], per_page: 5) }
   expose(:article, attributes: :article_params, finder: :find_by_slug)
@@ -26,13 +26,6 @@ class ArticlesController < ApplicationController
   end
 
   alias update create
-
-  def upload_image
-    upload = Cloudinary::Uploader.upload(params['file'])
-    render json: {
-      image: { url: upload['url'] }
-    }, content_type: 'text/html'
-  end
 
   private
 
