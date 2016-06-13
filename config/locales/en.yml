@@ -73,6 +73,47 @@ en:
              It is necessary to make some updates and enhancements to the features.
              We maintenance and support with a range of web development services to substantially lower
              your maintenance costs and ensure a timely response
+  testimonials:
+    title: Testimonials
+    all:
+      - company: Def Method
+        logo: https://www.defmethod.com/wordpress/wp-content/themes/defmethod/images/DefMethodLogo.png
+        author: Joseph Leo
+        image: https://media.licdn.com/media/p/2/005/053/099/297c2cc.jpg
+        description:
+          Active Bridge drives our remote engineering team at Def Method.
+          Collaborating with their engineers has kept us delivering running,
+          tested features in an Agile fashion across multiple countries and time zones.
+          Their commitment to quality and efficiency is outstanding.
+      - company: Modean Apps
+        logo: https://avatars3.githubusercontent.com/u/8191701?v=3&s=200
+        author: Benjamin Sigidi
+        image: https://media.licdn.com/media/AAEAAQAAAAAAAAhuAAAAJDAxODRmOWEzLTZkNzUtNGVkYS05NDZiLTg2MjgzOGZjMTFkNQ.jpg
+        description:
+          Awesome team. Full stack development. Happy to work with these guys any day.
+      - company: Preeline
+        logo: https://d1qb2nb5cznatu.cloudfront.net/startups/i/297009-8af321cc567f3918450b0fcc98ddf8f6-medium_jpg.jpg?buster=1424202571
+        author: Julia Macalaster
+        image: https://media.licdn.com/media/p/4/005/081/397/117ba71.jpg
+        description:
+          We worked with Active Bridge as a young startup to build out our first MVP and subsequent updated products.
+          Not only did their teams execute on the assigned tasks ahead of schedule, but they also contributed to our thinking around UX,
+          asking probing questions and suggesting added features that we had not thought about.
+          Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
+          We feel so incredibly lucky to be working with them
+      - company: Freestak
+        logo: http://new.freestak.com/wp-content/uploads/2015/11/TEN_FreestakLogo.png
+        author: Julie Freeman Kummer
+        image: https://media.licdn.com/media/p/2/000/012/005/0fcec38.jpg
+        description:
+          We’ve been working with Active Bridge since August 2015.
+          In the first six months, our application (marketplace in the sports industry)
+          was built and launched with a team of 3 developers and a technical lead.
+          The whole team were very responsive, organised and have great communication skills.
+          Best of all, they were very proactive in suggesting improvements or pointing out potential issues in our plans –
+          which we really appreciate as we don’t have an in-house technical team.
+          After the active development phase, we’ve retained Active Bridge for the ongoing development and maintenance
+          of our platform and I couldn’t recommend them enough.
   social:
     twitter: 'https://twitter.com/activebridge'
     facebook: 'https://facebook.com/ActiveBridgeTeam'

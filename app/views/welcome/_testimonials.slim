@@ -1,0 +1,15 @@
+div
+h1.title.portfolio= t('testimonials.title')
+.content.projects
+  .arrows
+    i.arrow#left= svg('chevron-left', :xl)
+    i.arrow#right= svg('chevron-right', :xl)
+  .wrapper data-step=1 data-tf=0
+    - I18n.t('testimonials.all').map do |testimonial|
+      .project-wrapper
+        .project
+          = image_tag(testimonial[:logo])
+          h2
+            => image_tag(testimonial[:image], class: :author)
+            = testimonial[:author]
+          div= testimonial[:description]
