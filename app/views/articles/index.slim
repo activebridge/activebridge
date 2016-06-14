@@ -1,6 +1,6 @@
 main
-  = render partial: 'article', collection: articles_by_type, as: :article
-  = will_paginate articles_by_type, page_links: false
+  = render partial: 'article', collection: articles_by_category, as: :article
+  = will_paginate articles_by_category, page_links: false
 
 .sidebar
   .popular-posts

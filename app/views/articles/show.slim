@@ -8,9 +8,9 @@
 
 .article
   .user-image
-    = image_tag article.user.image
+    = image_tag article.member.avatar.url
     .author-details
-      = article.user.full_name
+      = article.member.name
       p = article.created_at.strftime('%B %d, %Y')
   article.post-body-show
     h1.title = article.title

@@ -4,15 +4,3 @@
   - categories.each do |c|
     => link_to_unless_current c.name, category_articles_path(c.slug) do
       span= c.name
-
-- if current_user
-  div
-    strong=> current_user.full_name
-    span=> current_user.role.capitalize
-    => link_to 'Log out', signout_path, method: :delete, remote: true
-
-  div
-    - if !current_page?(action: :new)
-      => link_to 'Create Post', new_article_path
-    = link_to_unless_current 'Pending posts', index_articles_path(:pending)
-  br
