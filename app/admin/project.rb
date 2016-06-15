@@ -1,5 +1,5 @@
 ActiveAdmin.register Project do
-  permit_params :description, :logo, :technology, :duration, :team_size, :client, :industry, :link, :priority, :image
+  permit_params :description, :logo, :logo_cache, :technology, :duration, :team_size, :client, :industry, :link, :priority, :image, :image_cache
   menu priority: 3
   config.sort_order = 'priority_asc'
 
@@ -15,5 +15,23 @@ ActiveAdmin.register Project do
     end
     column :priority
     actions
+  end
+
+  form do |f|
+    f.inputs 'Project Editing' do
+      f.input :description
+      f.input :logo, as: :file, hint: image_tag(f.object.logo.url(:logo))
+      f.input :logo_cache, as: :hidden
+      f.input :technology
+      f.input :duration
+      f.input :team_size
+      f.input :client
+      f.input :industry
+      f.input :link
+      f.input :priority
+      f.input :image, as: :file, hint: image_tag(f.object.image.url(:logo))
+      f.input :image_cache, as: :hidden
+    end
+    f.actions
   end
 end

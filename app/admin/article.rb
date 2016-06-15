@@ -10,7 +10,7 @@ ActiveAdmin.register Article do
     end
   end
 
-  permit_params :body, :review_status, :title, :category_id, :picture, :category, :user_id, :user
+  permit_params :body, :review_status, :title, :category_id, :picture, :picture_cache, :category, :user_id, :user
   menu priority: 4
   index do
     selectable_column
@@ -31,7 +31,8 @@ ActiveAdmin.register Article do
       f.input :body, input_html: { id: 'simplemde' }
       f.input :user
       f.input :category
-      f.input :picture
+      f.input :picture, as: :file, hint: image_tag(f.object.picture.url(:logo))
+      f.input :picture_cache, as: :hidden
       f.input :review_status, as: :select, collection:  Article.review_statuses.keys, include_blank: false
     end
     f.actions
