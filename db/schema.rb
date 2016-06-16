@@ -11,21 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217092725) do
+ActiveRecord::Schema.define(version: 20160614143751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "accounts", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "token"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-  end
-
-  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id", using: :btree
 
   create_table "articles", force: :cascade do |t|
     t.text     "body"
@@ -37,12 +26,11 @@ ActiveRecord::Schema.define(version: 20160217092725) do
     t.integer  "viewed",        default: 0
     t.string   "slug"
     t.string   "picture"
-    t.integer  "user_id"
+    t.integer  "member_id"
   end
 
   add_index "articles", ["category_id"], name: "index_articles_on_category_id", using: :btree
   add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
-  add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -96,16 +84,5 @@ ActiveRecord::Schema.define(version: 20160217092725) do
     t.string   "image"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "image"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "role",       default: 0
-  end
-
-  add_foreign_key "accounts", "users"
-  add_foreign_key "articles", "users"
+  add_foreign_key "articles", "members"
 end

@@ -10,7 +10,7 @@ ActiveAdmin.register Article do
     end
   end
 
-  permit_params :body, :review_status, :title, :category_id, :picture, :picture_cache, :category, :user_id, :user
+  permit_params :body, :review_status, :title, :category_id, :picture, :picture_cache, :category, :member_id, :member
   menu priority: 4
   index do
     selectable_column
@@ -20,16 +20,16 @@ ActiveAdmin.register Article do
       truncate(strip_tags(article.body), length: 100)
     end
     column :picture
-    column :user
+    column :member
     column :review_status
     actions
   end
 
   form do |f|
-    f.inputs "Article Editing" do
+    f.inputs 'Article Editing' do
       f.input :title
       f.input :body, input_html: { id: 'simplemde' }
-      f.input :user
+      f.input :member
       f.input :category
       f.input :picture, as: :file, hint: image_tag(f.object.picture.url(:logo))
       f.input :picture_cache, as: :hidden
