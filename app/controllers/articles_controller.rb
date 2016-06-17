@@ -1,10 +1,9 @@
 class ArticlesController < ApplicationController
   layout 'blog'
 
-  expose(:articles_by_category) { Article.by_category(params[:category]).order(created_at: :desc).paginate(page: params[:page], per_page: 5) }
+  expose(:articles_by_category) { Article.by_category(Article.categories[params[:category]]).order(created_at: :desc).paginate(page: params[:page], per_page: 5) }
   expose(:article, attributes: :article_params, finder: :find_by_slug)
   expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
-  expose(:categories)
 
   def show
     article.increment_viewed
@@ -28,7 +27,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :category_id,
-                                    :picture, :body, :member_id)
+    params.require(:article).permit(:title, :category, :picture, :body, :member_id)
   end
 end

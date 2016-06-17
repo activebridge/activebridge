@@ -1,13 +1,12 @@
 class Article < ActiveRecord::Base
-  belongs_to :category
   belongs_to :member
 
   enum review_status: [:pending, :done]
+  enum category: ['ror-development', 'project-management', 'search-engine', 'team-life']
+  validates :title, :body, :category, :picture, presence: true
+  validates :body, length: { minimum: 100 }
 
-  validates :title, :body, :category_id, :picture, presence: true
-  validates :body, length: {minimum: 100}
-
-  scope :by_category, -> (slug) { joins(:category).where('categories.slug = ?', slug) if slug }
+  scope :by_category, -> (slug) { where('category = ?', slug) if slug }
 
   extend FriendlyId
   friendly_id :title, use: :slugged
