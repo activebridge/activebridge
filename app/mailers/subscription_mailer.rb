@@ -11,4 +11,9 @@ class SubscriptionMailer < ActionMailer::Base
     @email = email
     mail(to: @email, subject: 'Hello')
   end
+
+  def goodbye(email)
+    @email = email
+    mail(to: @email, subject: 'Goodbye')
+  end
 end
