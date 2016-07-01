@@ -4,3 +4,6 @@
   - I18n.t('category').each do |e|
     => link_to_unless_current e.first, category_articles_path(e.last) do
       span= e.first
+  = form_for subscriber do |f|
+    = f.text_field :email, placeholder: 'Subscribe by Email'
+    = f.submit 'Go!'

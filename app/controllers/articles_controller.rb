@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   expose(:articles_by_category) { Article.done.by_category(Article.categories[params[:category]]).order(created_at: :desc).paginate(page: params[:page], per_page: 5) }
   expose(:article, attributes: :article_params, finder: :find_by_slug)
   expose(:popular_articles) { Article.done.order(viewed: :desc).first(3) }
+  expose(:subscriber) { Subscriber.new }
 
   def show
     article.increment_viewed

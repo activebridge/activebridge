@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subscribers
   ActiveAdmin.routes(self)
   get ':page', to: 'welcome#index',
                constraints: { page: /(team|about|services|portfolio|testimonials)/ },

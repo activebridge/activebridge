@@ -30,6 +30,7 @@ gem 'actionpack-action_caching'
 gem 'inline_svg'
 gem 'sitemap_generator'
 gem 'whenever', require: false
+gem 'mailgun_rails'
 
 group :development, :test do
   gem 'pry'
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rack_session_access'
   gem 'simplecov', require: false
+  gem 'letter_opener'
 end
 
 group :development do
