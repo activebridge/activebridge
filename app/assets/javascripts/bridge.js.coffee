@@ -12,6 +12,7 @@ draw = ->
   services.style.opacity = 0
   light.style.opacity = 0
   our_team.style.opacity = 0
+  blog_link.style.opacity = 0
   if scroll < 500
     drawImageProp ctx, hills, 0, -scroll * 3.9 / 4, canvas.width, canvas.height + scroll * 3.9 / 2
     drawImageProp ctx, cloudBeforeSecondGate1, -scroll * 2 - 250, -80, canvas.width + 250 + scroll * 2, canvas.height + 550
@@ -30,6 +31,9 @@ draw = ->
     our_team.style.opacity = 1
     our_team.style.left = 48 - (scroll / 60) + '%'
     our_team.style.transform = 'scale(' + scroll * 1 / 500 + ')'
+    blog_link.style.opacity = 1
+    blog_link.style.right = 49 - (scroll / 60) + '%'
+    blog_link.style.transform = 'scale(' + scroll * 1 / 500 + ')'
   else if scroll < 1300
     drawImageProp ctx, hills, 0, -500, canvas.width, scroll + 1183
     drawImageProp ctx, cloudBeforeSecondGate1, -scroll * 2 - 250, -80, canvas.width + 250 + scroll * 2, canvas.height + 550
@@ -48,6 +52,10 @@ draw = ->
     our_team.style.left = 48 - (scroll / 60) + '%'
     our_team.style.bottom = -(scroll * 1.9 - 2000) / 20 + '%'
     our_team.style.transform = 'scale(' + scroll * 1 / 500 + ')'
+    blog_link.style.opacity = 1
+    blog_link.style.right = 48 - (scroll / 55) + '%'
+    blog_link.style.bottom = -(scroll * 1.9 - 2120) / 20 + '%'
+    blog_link.style.transform = 'scale(' + scroll * 1 / 500 + ')'
   else
     drawImageProp ctx, hills, 0, -600, canvas.width, scroll * 2.3
     drawImageProp ctx, cloudBeforeSecondGate1, -scroll * 2 - 250, -80, canvas.width + 250 + scroll * 2, canvas.height + 550
@@ -104,6 +112,7 @@ services = document.getElementById('our_services')
 team = document.getElementById('our_team')
 portfolio = document.getElementById('portfolio')
 delorian = document.getElementById('delorian')
+blog_link = document.getElementById('blog_link')
 
 timeOut = 0
 

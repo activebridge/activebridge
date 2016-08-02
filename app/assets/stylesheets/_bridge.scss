@@ -115,6 +115,13 @@ a.popup-link {
   left: 38%;
 }
 
+#blog_link {
+  @extend .popup-link;
+  bottom: 55%;
+  right: 40%;
+  transform: scale(0.3);
+}
+
 #our_services {
   bottom: 48%;
   right: 45%;
