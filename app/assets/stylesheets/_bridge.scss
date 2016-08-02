@@ -24,7 +24,6 @@
   text-align: center;
   background: url("https://res.cloudinary.com/active-bridge/image/upload/cloud.png") no-repeat 50% 50% / cover;
   position: relative;
-  height: 840px;
   top: 0;
   left: 0;
   right: 0;
@@ -43,6 +42,21 @@
     svg path {
       fill: $red;
     }
+  }
+  .contacts-container {
+    margin: 0 24%;
+    .contact-section {
+      text-align: left;
+      padding: 10px 0;
+      display: block;
+      a, div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .social-icons {
+    padding-top: 0;
   }
 }
 
@@ -98,6 +112,11 @@
       }
     }
   }
+}
+
+.email-icon {
+  width: 32px;
+  padding: 0 8px;
 }
 
 a.popup-link {
