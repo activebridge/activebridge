@@ -35,30 +35,7 @@ html
         .info#info
           .contacts-container
             = render 'layouts/logo.svg'
-            .contact-section
-              a href='tel: +380977535731'
-                = svg(:phone)
-              div
-                small Phone number
-                br
-                div itemprop='telephone' +38 097 753 5731
-            .contact-section
-              = mail_to 'eugene@active-bridge.com' do
-                = svg(:mail)
-              div
-                small Email
-                br
-                div itemprop='email' contact@active-bridge.com
-            .contact-section
-              a target='_blank' href="https://www.google.com/maps/place/Marshala+Krasovs'koho+St,+8,+Cherkasy,+Cherkas'ka+oblast,+Ukraine/@44.6228353,29.6920978,5z/data=!4m2!3m1!1s0x40d14b8febf9aa21:0xe43a326d1c2451c2"
-                = svg(:location)
-              div
-                small Address
-                br
-                div itemscope='' itemtype='http://schema.org/PostalAddress'
-                  span itemprop='addressLocality' Cherkassy,
-                  | &nbsp
-                  span itemprop='addressRegion' Ukraine
+            = render 'shared/contact_info'
             = render 'social_icons', klass: :xl
 
       .step#step2
@@ -83,12 +60,12 @@ html
           = render 'layouts/logo.svg'
           div itemprop='description'= t('hello')
           .loader
-          br
-          br
           .scroll-arrows
             i.icon= svg('chevron-up')
             div SCROLL TO EXPLORE
             i.icon= svg('chevron-down')
+          .contacts-container
+            = render 'shared/contact_info'
           = render 'social_icons', klass: :xl
 
 
