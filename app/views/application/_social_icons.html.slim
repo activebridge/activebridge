@@ -1,4 +1,4 @@
 .social-icons
   - I18n.t('social').each_pair do |name, link|
-    = link_to link, target: '_blank' do
+    = link_to link, target: '_blank', title: name do
       = svg(name, local_assigns[:klass])
