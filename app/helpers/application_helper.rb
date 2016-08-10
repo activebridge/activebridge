@@ -32,7 +32,8 @@ module ApplicationHelper
     autolink: true,
     strikethrough: true,
     lax_html_blocks: true,
-    superscript: true
+    superscript: true,
+    tables: true
     }
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
