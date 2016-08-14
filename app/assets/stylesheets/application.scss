@@ -6,3 +6,70 @@
 @import 'loader';
 @import 'members';
 @import 'testimonials';
+
+body {
+  background: #744A71;
+}
+
+svg#main {
+  width: 100%;
+  height: 100vh;
+  transform-origin: 80% 70%;
+  transition: transform 1s;
+}
+
+#about {
+  transform: translate(-200%, 200%);
+  transform-origin: 50% 50%;
+  transition: transform .5s;
+}
+
+#title {
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+#team {
+  transform: translate(200%, -200%);
+  transition: transform .5s;
+  transition-delay: .5s;
+}
+
+#services {
+  transform: translate(-200%, -200%);
+  transition: transform .3s linear;
+  transform-origin: 70% 20%;
+}
+
+#portfolio {
+  transform: translate(-200%, 200%);
+  transition: transform .3s;
+  // transition-delay: .5s;
+  transform-origin: 100% 80%;
+}
+
+.awesome {
+  #title {
+    opacity: 1;
+  }
+
+  #team, #services, #portfolio, #about { transform: translate(0%, 0%) }
+}
+
+// #lazybox {
+//   background: transparent;
+//   border: none;
+//   box-shadow: none;
+// }
+
+// #lazy_overlay {
+//   background: #b6a;
+// }
+
+.portfolio #portfolio {
+  transform: scale(30);
+}
+
+#services:hover {
+  transform: rotate(-5deg);
+}
