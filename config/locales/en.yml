@@ -13,36 +13,26 @@ en:
       agile Ruby development, web application development, backend web development
   about:
     title: About
-    description: Active Bridge has great experience across a variety of industries.
-                 We have a deal with social networking, online education, medicine projects, marketing/advertising development.
-                 Our team follows the SCRUM methodology and Agile practice. We contribute to the Rails framework itself.
-                 Also, we speak at Ruby developer events and share our experience with the RoR community
-
+    description: At Active Bridge, we all come to work every day with a great enthusiasm,
+      because we're inspired by our mission. To resolve all doubts of web development process
+      and show how simple and clear it is.
+      Every day new web projects, ideas, brands appear. And in many ways, their future depends on the chosen
+      programming technology. Our goal, at Active Bridge, connects your ideas with global community as soon as possible.
+      To provide this we implement the most faster and effective way - Ruby on Rails framework.
+      We want to popularize the way we do and show it's comprehensive facilities
     core_values: Core Values
-    experienced_team: Experienced Development Team
-    specialization: RoR Specialization
-    respect: Mutual respect and understanding
-    trustworthy: Trustworthy custom relationship
+    experienced_team: Foremost, we're the team, united by mutual ideas and interests.
+      Our passion is Ruby, fundamental value - friendship relationship.
+      Active Bridge success pillars based on  customized approach,
+      contribution to the Rails framework and sharing our experience
 
     benefits: Benefits
-    cost_efficient: Cost - efficient Development.
-             Favorable costs due to engaging expert Ruby on Rails developers
-             from at cost-effective out staffing rates
-    master_degree: ROR developers with Master's Degree.
-              Most of our Active Bridge's members have university degrees in
-              mathematics, physics, or computer science
-    strong_skills: Strong Skills':'
-                   Ruby on Rails - 99%
-                   Javascript / CoffeeScript / jQuery
-                   AngularJS / Ember.js / Backbone.js - 88%
-                   HTML / Haml / Slim - 95%
-                   CSS / SASS / LESS / Compass - 90%
-                   MySQL / PostgreSQL / MongoDB / Redis - 75%
+    cost_efficient: We know the whole importance of your project and provide great
+      service to create a superior finished product.
+      All our Senior and Middle developers have Master's degree
+      and more than 6 years development experience in a variety
+      of industries.
 
-    why_we: Why We
-    skills: Our team is Mid- and Senior-level Ruby on Rails developers with excellent communication skills
-    work_experience: More than 6 years successful work experience with foreign customers
-    rate_project: RoR rate project web development is more than 30% faster than other languages
   team:
     title: Team
   portfolio:
@@ -55,25 +45,48 @@ en:
       industry: industry
   services:
     title: Services
-    we_do:
-      We are web development team, that always keeps its services up to date with the latest market trends.
-      Active Bridge provides customers all over the world with best-of-class, easily extensible Internet products
-    web_dev_title: Web development
-    web_development:
-      Active Bridge can help you create web applications that meet both
-      your business needs and requirements. We start from the analysis stage and
-      take responsibility for the whole web development cycle.
-      Our team can cooperate with your development team to complete a project
-    code_audit_title: Ruby on Rails code audit
-    code_audit: We provide our customers with the careful and valid process of auditing Ruby on Rails code.
-                Our team keeps your programming process strong with regular checkups.
-                We make reports with suggestions to improve current application state
-    support_title: Maintenance & Support
-    support: Existing applications need sustained attention.
-             It is necessary to make some updates and enhancements to the features.
-             We maintenance and support with a range of web development services to substantially lower
-             your maintenance costs and ensure a timely response
-  testimonials:
+    we_do: We can help you on evry stage of web development process
+
+    agile_programming: Agile Programming
+    custom_web_development: As Ruby on Rails developers we know a variety of
+      programming languages and technologies. Our team has
+      fundamental knowledge in
+      Strong Skills':'
+                   Ruby on Rails - 99%
+                   Javascript / CoffeeScript / jQuery
+                   AngularJS / Ember.js / Backbone.js - 88%
+                   HTML / Haml / Slim - 95%
+                   CSS / SASS / LESS / Compass - 90%
+                   MySQL / PostgreSQL / MongoDB / Redis - 75%
+    scrum: Thanks to using Scrum methodology, we can deliver large and complex products.
+      Through effective planning and good communication within our team,
+      we can complete the projects with fast delivery times
+    free_review: We implement this engineering practice in terms of agile development methodology.
+      Main goal code review is to identify differences in code writing style according to Ruby style guide.
+      To provide this convention we use rubocob gem and make the description of problem-solving in a short time.
+
+    maintenance_and_support: Maintenance and Support
+    code_audit: The existing application needs sustained attention.
+      It is necessary to make some updates and enhancements to the features.
+      We offer web development management, maintenance, and support services
+      to achieve your business needs. Our team keeps this process strong with
+      regular checkups and web analytical tools
+
+    outstaffing: Outstaffing
+    team: The development process is an ongoing process for all time product existing.
+          That's what the main idea of development industry':'
+          Dedicated Team is necessary to develop and maintain web product.
+          The main features of dedicated team realization':'
+          short product releases, halving functional step-by-step;
+          there is no psychological problem as hiding troubles from customers when product realization is;
+          the customer has ability quickly responds and makes decisions relating to functional improvement.
+          Ordering-company no needs to create a development and product testing division.
+          Save your financial and material resources':'
+          time and financial costs for the set of a team;
+          providing workplaces;
+          training for the officers;
+          utility costs.
+    testimonials:
     title: Testimonials
     all:
       - company: Def Method
