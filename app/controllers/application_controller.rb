@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  # protect_from_forgery with: :exception
 
   protected
 
@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_variant
-    request.variant = :mobile if mobile?
+    # request.variant = :mobile if mobile?
   end
 
   def mobile?

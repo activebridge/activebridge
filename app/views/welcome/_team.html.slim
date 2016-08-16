@@ -2,7 +2,7 @@ div itemscope="" itemtype="http://schema.org/Person"
   h1.title= t('team.title')
   .content.members
     - @members.map do |member|
-      .member id="member_#{member.id}"
+      .member id="member_#{member.id}" style="transform: translate(#{rand(20..60)}%, #{rand(10..20)}%) rotate(#{rand(360)}deg); z-index: #{rand(100)}"
         .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")
           = image_tag(member.avatar.url)
         .details
