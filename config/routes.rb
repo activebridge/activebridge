@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get ':page', to: 'welcome#index',
-               constraints: { page: /(team|about|services|portfolio|testimonials)/ },
+               constraints: { page: /(team|about|services|portfolio|testimonials|contact)/ },
                as: :page
   get 'expire_cache', to: 'welcome#expire_cache'
 

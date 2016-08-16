@@ -2,12 +2,14 @@
 @import 'lazybox';
 @import 'base';
 @import 'defaults';
-@import 'bridge';
-@import 'loader';
 @import 'members';
 @import 'testimonials';
 
+$x: 500%;
+$y: 500%;
+
 body {
+  overflow: hidden;
   background: #744A71;
 }
 
@@ -15,61 +17,141 @@ svg#main {
   width: 100%;
   height: 100vh;
   transform-origin: 80% 70%;
-  transition: transform 1s;
+  transition: opacity 1s .5s;
+  opacity: 0;
 }
 
 #about {
-  transform: translate(-200%, 200%);
+  transform: translate(-$x, $y);
   transform-origin: 50% 50%;
+}
+
+#testimonials {
+  transform: translate(0%, $y);
   transition: transform .5s;
 }
 
 #title {
   opacity: 0;
-  transition: opacity 1s 1s;
+  transition: opacity .3s;
 }
 
 #team {
-  transform: translate(200%, -200%);
+  transform: translate(50%, -50%) scale(0);
   transition: transform .5s;
-  transition-delay: .5s;
+  transition-delay: .3s;
+  transform-origin: 50%;
 }
 
 #services {
-  transform: translate(-200%, -200%);
-  transition: transform .3s linear;
-  transform-origin: 70% 20%;
+  transform: scale(0);
+  transition: transform .3s;
+  transform-origin: 50%;
+  transition-delay: .3s;
 }
 
 #portfolio {
-  transform: translate(-200%, 200%);
-  transition: transform .3s;
-  // transition-delay: .5s;
+  transform: translate(-$x, $y);
+  transition: transform 1s;
   transform-origin: 100% 80%;
+  transition-delay: .2s;
 }
 
-.awesome {
+#contact {
+  transform: translate(0%, -$y);
+  transition: transform .3s;
+  transform-origin: 50% 60%;
+}
+
+#ab:checked ~ #main {
+  opacity: 1;
+  transition: opacity 1s;
+
   #title {
     opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 1s;
   }
 
-  #team, #services, #portfolio, #about { transform: translate(0%, 0%) }
+  #team {
+    transform: translate(0%, 0%) scale(1);
+    transition-delay: .5s;
+  }
+
+  #services {
+    transform: scale(1);
+  }
+
+  #portfolio {
+    transform: translate(0%, 0%);
+    transition-delay: 0s;
+  }
+
+  #about {
+    transition: transform .5s;
+    transform: translate(0%, 0%);
+  }
+
+  #testimonials {
+    transform: translate(0%, 0%);
+    transition-delay: .5s;
+  }
+
+  #contact {
+    transform: translate(0%, 0%);
+    &:hover {
+      transform: translate(0%, 0%) scale(1.1);
+    }
+  }
+
 }
 
-// #lazybox {
-//   background: transparent;
-//   border: none;
-//   box-shadow: none;
-// }
+#lazybox {
+  background: #b6a;
+  border: none;
+  box-shadow: none;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+}
 
-// #lazy_overlay {
-//   background: #b6a;
-// }
+#lazy_overlay {
+  background: transparent;
+}
 
 .portfolio #portfolio {
   transform: scale(30);
 }
 
-#services:hover {
-  transform: rotate(-5deg);
+
+.ab, #ab {
+  position: absolute;
+  transition: transform 1s;
+  top: 15%;
+  right: 25%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.ab {
+  max-width: 80%;
+}
+
+#ab:checked + .ab {
+  transform: translateX(-700%) rotate(-440deg);
+
+  #services:hover {
+    transform: rotate(-5deg);
+  }
+}
+
+.contact {
+  #lazybox {
+    background: #d8d8d8;
+    transition-delay: .2s;
+  }
+
+  #contact {
+    transform: scale(50) !important;
+  }
 }

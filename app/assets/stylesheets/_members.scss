@@ -1,28 +1,45 @@
 .members {
   font-size: 0;
+  overflow-x: hidden;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-left: 2%;
   .member {
+    margin-left: -3%;
+    margin-top: -3%;
+    background: white;
+    top: 0;
+    left: 0;
+    position: relative;
+    border: 10px solid #333;
     font-size: 1rem;
-    padding: 0 3%;
     display: inline-block;
     margin-bottom: 20px;
     width: 20%;
     max-width: 200px;
     box-sizing: border-box;
     vertical-align: top;
+    transition: transform .5s;
     .member-image {
       background-size: 100%;
       background-position: center center;
     }
 
     &:hover img {
-      opacity: 0;
+      opacity: 1;
+    }
+
+    &:hover {
+      transform: scale(1.5) rotate(0deg) !important;
+      z-index: 10000 !important;
     }
 
     img {
       width: 100%;
       background: white;
       transition: opacity .5s;
-      border-radius: 50%;
+      display: block;
+      opacity: 0;
     }
 
     p, h4 {
@@ -32,6 +49,8 @@
 
     .details {
       padding-top: 15px;
+      background: #333;
+      color: white;
       h2 { margin: 0; }
     }
   }
