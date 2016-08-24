@@ -1,7 +1,8 @@
-form
-  label Name
-  input type='text' placeholder='Name'
-  label Email
-  input type='email' placeholder='Email'
-  label Body
-  textarea placeholder='Body'
+.content
+  = form_tag root_path do
+    = label_tag :name
+    = text_field_tag :name, nil, required: true, placeholder: :Name
+    label Email
+    input type='email' placeholder='Email' required=true
+    label Body
+    textarea placeholder='Body'

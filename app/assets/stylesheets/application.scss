@@ -4,6 +4,7 @@
 @import 'defaults';
 @import 'members';
 @import 'testimonials';
+@import 'contact';
 
 $x: 500%;
 $y: 500%;
@@ -61,6 +62,7 @@ svg#main {
   transform: translate(0%, -$y);
   transition: transform .3s;
   transform-origin: 50% 60%;
+  transition-delay: .3s;
 }
 
 #ab:checked ~ #main {
