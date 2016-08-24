@@ -15,7 +15,7 @@ openPage = (event) ->
   xhr = new XMLHttpRequest()
   xhr.open( "GET", href, false)
   xhr.setRequestHeader('X-CSRF-Token', csrf)
-  xhr.setRequestHeader('Content-type', 'applicatio/javascript')
+  xhr.setRequestHeader('Accept', 'text/javascript')
   xhr.onload = ->
     if (xhr.readyState == 4 && xhr.status == 200)
       document.body.className = href
