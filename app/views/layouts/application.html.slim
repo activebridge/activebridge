@@ -9,8 +9,9 @@ html
   = render 'layouts/head', type: :application, media: :all
   body
     input#ab type='checkbox' onchange="setCookie(this)" checked=cookies[:flag].eql?('true')
-    label.ab for='ab'
-      = image_tag('ActiveBridge.svg')
+    .ab-wrapper
+      label.ab for='ab'
+        = image_tag('ActiveBridge.svg')
     = render 'layouts/main.svg'
     img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=552167954950145&ev=PageView&noscript=1"
   = render_lazybox

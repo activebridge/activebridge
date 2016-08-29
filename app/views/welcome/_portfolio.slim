@@ -1,21 +1,32 @@
-div itemscope="" itemtype="http://schema.org/Product" /
-h1.title.portfolio= t('portfolio.title')
-.content.projects
-  .arrows
-    i.arrow#left= svg('chevron-left', :xl)
-    i.arrow#right= svg('chevron-right', :xl)
-  .wrapper data-step=1 data-tf=0
-    - @projects.map do |project|
-      .project-wrapper style="background-image: url(#{project.image.url})"
-        .project id="project_#{project.id}"
-          = image_tag(project.logo.url(:logo))
-          div itemprop='model' class= 'project-description'
-            = project.description
-          .project-info
-            - t('portfolio.project_info').each do |key, value|
-              .info-section
-                .item-title= value
-                .item-description= project.send(key)
-          .text-center= link_to project.link, target: '_blank', class: 'view-project' do
-            | View Project
-            i.icon.icon-arrow-right
+input id='hide-all' type='radio' name='active-section' hidden='hidden'
+label.project-open for='hide-all'
+  div itemscope="" itemtype="http://schema.org/Product" /
+  h1.title.portfolio= t('portfolio.title')
+  .content.projects
+    .content-wrapper data-step=1 data-tf=0
+      - @projects.each_with_index do |project, i|
+
+        input id="project-#{project.id}" type='radio' name='active-section' hidden='hidden' data-background="url(#{project.image.url})"
+        .background-wrapper style="background-image: url(#{project.image.url})"
+        section.project-wrapper.about tabindex="#{i}" class="for-#{i}"
+          label.project-open for="project-#{project.id}"
+            .content.project
+              = image_tag(project.logo.url(:logo))
+              .project-description
+                = project.description
+              .project-info
+                - t('portfolio.project_info').each do |key, value|
+                  .info-section
+                    .item-title= value
+                    .item-description= project.send(key)
+              .project-link.text-center= link_to project.link, target: '_blank', class: 'view-project' do
+                | View Project
+                i.icon.icon-arrow-right
+
+          .arrows
+            - if i > 0
+              label for="project-#{@projects[i-1]&.id}"
+                i.arrow#left= svg('chevron-left', :xl)
+            - if i+1 < @projects.size
+              label for="project-#{@projects[i+1]&.id}"
+                i.arrow#right= svg('chevron-right', :xl)
