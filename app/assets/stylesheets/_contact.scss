@@ -1,14 +1,16 @@
-input, textarea {
-  width: 60%;
-  font-size: 2rem;
-  padding: 3% 2%;
-}
+.contact {
+  input, textarea {
+    width: 60%;
+    font-size: 2rem;
+    padding: 3% 2%;
+  }
 
-label {
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 18%;
-  text-align: left;
-  display: inline-block;
-  font-size: 2rem;
+  label {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 18%;
+    text-align: left;
+    display: inline-block;
+    font-size: 2rem;
+  }
 }

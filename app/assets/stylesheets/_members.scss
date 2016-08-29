@@ -1,45 +1,148 @@
+@keyframes spin {
+  100% {transform:rotateY(360deg);}
+}
+
 .members {
   font-size: 0;
-  overflow-x: hidden;
-  padding-top: 5%;
+  overflow-y: visible;
+  padding-top: 0;
   padding-right: 5%;
   padding-left: 2%;
+  height: 100vh;
+  perspective: 800px;
+  perspective-origin: 50% 225px;
+  transition: 2s;
+  .arrow {
+    position: absolute;
+    top: -3rem;
+    width: 15%;
+    height: 100vh;
+    &.left {
+      &.x1 {
+        left: 30%;
+        &:hover ~ .rotate-shape {
+          animation-play-state: paused;
+          & > .rotate-left {
+            animation-play-state: running;
+          }
+        }
+      }
+      &.x2 {
+        left: 15%;
+        &:hover ~ .rotate-shape {
+          animation-play-state: paused;
+          & > .rotate-left, & > .rotate-left > div > .rotate-left {
+            animation-play-state: running;
+          }
+        }
+      }
+      &.x3 {
+        left: 0%;
+        &:hover ~ .rotate-shape {
+          animation-play-state: paused;
+          .rotate-left {
+            animation-play-state: running;
+          }
+        }
+      }
+    }
+    &.right {
+      &.x1 {
+        right: 30%;
+        &:hover ~ .rotate-shape {
+          animation-play-state: running;
+        }
+      }
+      &.x2 {
+        right: 15%;
+        &:hover ~ .rotate-shape {
+          animation-play-state: running;
+          & > div > .rotate-right {
+            animation-play-state: running;
+          }
+        }
+      }
+      &.x3 {
+        right: 0%;
+        &:hover {
+          & ~ .rotate-shape {
+            animation-play-state: running;
+            .rotate-right {
+              animation-play-state: running;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+  .rotate-shape {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    animation: spin 50s infinite linear;
+    animation-play-state: paused;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .rotate-left, .rotate-right {
+      animation: spin 50s infinite linear;
+      animation-play-state: paused;
+      animation-duration: 25s;
+      animation-direction: reverse;
+    }
+    .rotate-right {
+      animation-direction: normal;
+    }
+  }
+  .logo {
+    z-index: 9999;
+    display: inline-flex;
+    align-self: center;
+    animation: spin 15s infinite linear reverse;
+    img {
+      width: 80vmin;
+      height: 80vmin;
+      border-radius: 50%;
+    }
+  }
   .member {
-    margin-left: -3%;
-    margin-top: -3%;
-    background: white;
-    top: 0;
-    left: 0;
-    position: relative;
-    border: 10px solid #333;
-    font-size: 1rem;
-    display: inline-block;
-    margin-bottom: 20px;
-    width: 20%;
-    max-width: 200px;
+    backface-visibility: hidden;
+    position: absolute;
     box-sizing: border-box;
+    text-align: center;
+    transition: transform 2s, opacity 1s;
+    top: -100px;
+    left: -100px;
+    font-size: .5rem;
     vertical-align: top;
-    transition: transform .5s;
+    z-index: 10020;
+    min-width: 200px;
     .member-image {
       background-size: 100%;
       background-position: center center;
-    }
-
-    &:hover img {
-      opacity: 1;
+      img {
+        transition: opacity .5s;
+        border-radius: 50%;
+      }
     }
 
     &:hover {
-      transform: scale(1.5) rotate(0deg) !important;
-      z-index: 10000 !important;
+      .member-image img {
+        opacity: 0;
+      }
     }
 
     img {
       width: 100%;
-      background: white;
-      transition: opacity .5s;
       display: block;
-      opacity: 0;
     }
 
     p, h4 {
@@ -48,8 +151,7 @@
     }
 
     .details {
-      padding-top: 15px;
-      background: #333;
+      font-size: 16px;
       color: white;
       h2 { margin: 0; }
     }
