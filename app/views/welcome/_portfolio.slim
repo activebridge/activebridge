@@ -6,7 +6,7 @@ label.project-open for='hide-all'
     .content-wrapper data-step=1 data-tf=0
       - @projects.each_with_index do |project, i|
 
-        input id="project-#{project.id}" type='radio' name='active-section' hidden='hidden' data-background="url(#{project.image.url})"
+        input id="project-#{project.id}" type='radio' name='active-section' hidden='hidden' data-previous="project-#{@projects[i-1]&.id}" data-next="project-#{@projects[i+1 == @projects.size ? 0 : i+1]&.id}"
         .background-wrapper style="background-image: url(#{project.image.url})"
         section.project-wrapper.about tabindex="#{i}" class="for-#{i}"
           label.project-open for="project-#{project.id}"
@@ -24,9 +24,7 @@ label.project-open for='hide-all'
                 i.icon.icon-arrow-right
 
           .arrows
-            - if i > 0
-              label for="project-#{@projects[i-1]&.id}"
-                i.arrow#left= svg('chevron-left', :xl)
-            - if i+1 < @projects.size
-              label for="project-#{@projects[i+1]&.id}"
-                i.arrow#right= svg('chevron-right', :xl)
+            label for="project-#{@projects[i-1]&.id}"
+              i.arrow#left= svg('chevron-left', :xl)
+            label for="project-#{@projects[i+1 == @projects.size ? 0 : i+1]&.id}"
+              i.arrow#right= svg('chevron-right', :xl)
