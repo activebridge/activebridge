@@ -1,25 +1,25 @@
 div itemscope="" itemtype="http://schema.org/Thing"
-  h1.title= t('services.title')
+  .title= t('services.title')
   .content.services
-    h4.text-center= t('services.we_do')
+    .text-center= t('services.we_do')
     .section
       .section-title
         = svg(:code)
-        div= t('services.agile_programming')
+        h2== t('services.agile_programming')
       div itemprop='description' class= 'section-description text-center'
-        li itemprop='description'= t('services.custom_web_development')
-        li itemprop='description'= t('services.scrum')
-        li itemprop='description'= t('services.free_review')
+        li itemprop='description'== t('services.custom_web_development')
+        li itemprop='description'== t('services.scrum')
+        li itemprop='description'== t('services.free_review')
 
     .section
       .section-title
         = svg(:rails)
-        div= t('services.maintenance_and_support')
+        == t('services.maintenance_and_support')
       div itemprop='description' class= 'section-description text-center'
-        = t('services.code_audit')
+        == t('services.code_audit')
     .section
       .section-title
         div= svg(:support)
-        = t('services.outstaffing')
+        == t('services.outstaffing')
       div itemprop='description' class= 'section-description text-center'
-        = t('services.team')
+        == t('services.team')
