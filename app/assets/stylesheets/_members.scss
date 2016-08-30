@@ -12,101 +12,24 @@
   perspective: 800px;
   perspective-origin: 50% 225px;
   transition: 2s;
-  .arrow {
-    position: absolute;
-    top: -3rem;
-    width: 15%;
-    height: 100vh;
-    &.left {
-      &.x1 {
-        left: 30%;
-        &:hover ~ .rotate-shape {
-          animation-play-state: paused;
-          & > .rotate-left {
-            animation-play-state: running;
-          }
-        }
-      }
-      &.x2 {
-        left: 15%;
-        &:hover ~ .rotate-shape {
-          animation-play-state: paused;
-          & > .rotate-left, & > .rotate-left > div > .rotate-left {
-            animation-play-state: running;
-          }
-        }
-      }
-      &.x3 {
-        left: 0%;
-        &:hover ~ .rotate-shape {
-          animation-play-state: paused;
-          .rotate-left {
-            animation-play-state: running;
-          }
-        }
-      }
-    }
-    &.right {
-      &.x1 {
-        right: 30%;
-        &:hover ~ .rotate-shape {
-          animation-play-state: running;
-        }
-      }
-      &.x2 {
-        right: 15%;
-        &:hover ~ .rotate-shape {
-          animation-play-state: running;
-          & > div > .rotate-right {
-            animation-play-state: running;
-          }
-        }
-      }
-      &.x3 {
-        right: 0%;
-        &:hover {
-          & ~ .rotate-shape {
-            animation-play-state: running;
-            .rotate-right {
-              animation-play-state: running;
-            }
-          }
-        }
-      }
-    }
-    &:hover {
-      svg path {
-        fill: #fff;
-      }
-    }
-  }
-  .rotate-shape {
+  #rotate-shape {
     position: absolute;
     top: 40%;
     left: 50%;
     height: 1px;
     width: 1px;
-    animation: spin 50s infinite linear;
-    animation-play-state: paused;
+    transition: .5s ease-out;
     transform-style: preserve-3d;
     display: flex;
     align-items: center;
     justify-content: center;
-    .rotate-left, .rotate-right {
-      animation: spin 50s infinite linear;
-      animation-play-state: paused;
-      animation-duration: 25s;
-      animation-direction: reverse;
-    }
-    .rotate-right {
-      animation-direction: normal;
-    }
   }
   .logo {
     z-index: 9999;
     display: inline-flex;
     align-self: center;
-    animation: spin 15s infinite linear reverse;
+    box-shadow: 0 2px 25px rgba(0,0,0,0.5);
+    border-radius: 50%;
     img {
       width: 80vmin;
       height: 80vmin;
