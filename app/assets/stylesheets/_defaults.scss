@@ -16,7 +16,8 @@ a {
 }
 
 
-h1.title {
+.title {
+  font-size: 2rem;
   margin: 0;
   padding: 10px 0;
   text-align: center;
@@ -77,6 +78,12 @@ h1.title {
     overflow: hidden;
     padding: 0;
   }
+
+}
+
+.content h4, .section h4 {
+  display: inline;
+  font-weight: normal;
 }
 
 .projectss {

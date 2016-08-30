@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
-
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave'
 gem 'cloudinary'
