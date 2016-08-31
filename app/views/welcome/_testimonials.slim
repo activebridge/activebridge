@@ -1,15 +1,19 @@
 div
 h1.title.portfolio= t('testimonials.title')
-.content.projectss
-  .arrows
-    i.arrow#left= svg('chevron-left', :xl)
-    i.arrow#right= svg('chevron-right', :xl)
-  .wrapper data-step=1 data-tf=0
-    - I18n.t('testimonials.all').map do |testimonial|
-      .project-wrapper
-        .project
+.content.testimonials
+  .wrapper
+    - I18n.t('testimonials.all').each_with_index do |testimonial, index|
+      input type='radio' name='active-testimonial' id="#{testimonial[:author].delete("\s")}" hidden=true checked=true
+      .testimonial
+        .testimonial-logo
           = image_tag(testimonial[:logo])
-          h2
-            => image_tag(testimonial[:image], class: :author)
-            = testimonial[:author]
-          div= testimonial[:description]
+        .testimonial-body
+          .testimonial-wrapper
+            h2
+              q= testimonial[:description]
+            hr
+            h3
+              = testimonial[:author]
+          = image_tag(testimonial[:image], class: :author)
+      label for="#{testimonial[:author].delete("\s")}"
+        = image_tag(testimonial[:logo])
