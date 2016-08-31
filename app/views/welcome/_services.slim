@@ -5,7 +5,7 @@ div itemscope="" itemtype="http://schema.org/Thing"
     .section
       .section-title
         = svg(:code)
-        h2== t('services.agile_programming')
+        == t('services.agile_programming')
       div itemprop='description' class= 'section-description text-center'
         li itemprop='description'== t('services.custom_web_development')
         li itemprop='description'== t('services.scrum')
@@ -19,7 +19,7 @@ div itemscope="" itemtype="http://schema.org/Thing"
         == t('services.code_audit')
     .section
       .section-title
-        div= svg(:support)
+        = svg(:support)
         == t('services.outstaffing')
       div itemprop='description' class= 'section-description text-center'
         == t('services.team')
