@@ -1,15 +1,19 @@
 div itemscope="" itemtype="http://schema.org/Thing"
-  .title= t('about.title')
-  .content.about.text-center== t('about.description')
-  .section
-    .section-title
-      = svg(:free)
-      div= t('about.core_values')
-    ul.section-description
-      li itemprop='description'== t('about.experienced_team')
-  .section
-    .section-title
-      = svg(:trophy)
-      div= t('about.benefits')
-    ul.section-description
-      li itemprop='description'== t('about.cost_efficient')
+  h1.title
+    = t('about.title')
+    br= t('about.subtitle')
+  .content.about
+    .text-center== t('about.description')
+    .sections
+      .section
+        .section-title
+          = svg(:free)
+          div= t('about.core_values')
+        ul.section-description
+          li itemprop='description'== t('about.experienced_team')
+      .section
+        .section-title
+          = svg(:trophy)
+          div= t('about.benefits')
+        ul.section-description
+          li itemprop='description'== t('about.cost_efficient')
