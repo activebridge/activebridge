@@ -1,25 +1,39 @@
 div itemscope="" itemtype="http://schema.org/Thing"
-  .title= t('services.title')
   .content.services
-    .text-center= t('services.we_do')
-    .section
-      .section-title
-        = svg(:code)
-        == t('services.agile_programming')
-      div itemprop='description' class= 'section-description text-center'
-        li itemprop='description'== t('services.custom_web_development')
-        li itemprop='description'== t('services.scrum')
-        li itemprop='description'== t('services.free_review')
+    .title= t('services.title')
+    /* .text-center= t('services.we_do') */
+    .skills
+      - I18n.t('services.skills').each_with_index do |skill, index|
+        #cont data-pct=skill[:level] style="left: #{index.odd? ? 50 + 12*((index+1)/2) : 50 - 12*((index+1)/2)}%; transform: scale(#{1 - (index+1)/2*0.15}); z-index: #{100 - index};"
+          .skill-tooltip= skill[:skill_name]
+          svg#svg height="200" version="1.1" viewport=("0 0 100 100") width="200" xmlns="http://www.w3.org/2000/svg"
+            circle cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565" stroke-dashoffset="0"
+            circle#bar cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565" style="stroke-dashoffset: #{3.03*(100-skill[:level])}%"
+          .skill-icon= svg(skill[:icon])
 
-    .section
-      .section-title
-        = svg(:rails)
-        == t('services.maintenance_and_support')
-      div itemprop='description' class= 'section-description text-center'
-        == t('services.code_audit')
-    .section
-      .section-title
-        = svg(:support)
-        == t('services.outstaffing')
-      div itemprop='description' class= 'section-description text-center'
-        == t('services.team')
+    .section-tabs
+      input#agile_programming type='radio' hidden=true name='active-tab' checked=true
+      .section-tab.text-left
+        .section-tab-title
+          label for='agile_programming'
+            == t('services.agile_programming')
+        div itemprop='description' class= 'section-tab-description text-center'
+          li itemprop='description'
+            == t('services.custom_web_development')
+          li itemprop='description'== t('services.scrum')
+          li itemprop='description'== t('services.free_review')
+
+      input#maintenance type='radio' hidden=true name='active-tab'
+      .section-tab.text-center
+        .section-tab-title
+          label for='maintenance'
+            == t('services.maintenance_and_support')
+        div itemprop='description' class= 'section-tab-description text-center'
+          == t('services.code_audit')
+      input#outstaffing type='radio' hidden=true name='active-tab'
+      .section-tab.text-right
+        .section-tab-title
+          label for='outstaffing'
+            == t('services.outstaffing')
+        div itemprop='description' class= 'section-tab-description text-center'
+          == t('services.team')

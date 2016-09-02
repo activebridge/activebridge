@@ -1,0 +1,91 @@
+.skills {
+  white-space: nowrap;
+  width: 100%;
+  min-height: 18.5vw;
+  overflow: visible;
+  position: relative;
+  margin: 1.5vh auto;
+  margin-left: -7.25vw;
+  #cont {
+    width: 14.5vw;
+    height: 14.5vw;
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background-image: linear-gradient(to right, rgba(gray, 1), rgba(black, 1), rgba(gray, 1));
+    #svg {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 4px 4px -4px rgba($white, 0.4),0px -3px 3px -3px rgba($white, 0.25),inset 0px 0px 20px 20px rgba(black, 0.5);
+      border-radius: 50%;
+      circle {
+        cx: 7.25vw;
+        cy: 7.25vw;
+        r: 7vw;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 303%;
+        transition: stroke-dashoffset 1s linear;
+        stroke: rgba(gray, .9);
+        stroke-width: 1em;
+      }
+      #bar {
+        stroke: rgba($violet, .9);
+      }
+    }
+    .skill-icon {
+      font-size: 1em;
+      fill: $white;
+      filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 50%;
+      svg {
+        height: 5vw;
+        path {
+          fill: rgba(white, .8);
+        }
+      }
+    }
+    .skill-tooltip {
+      padding: 5px;
+      border-radius: 5px;
+      background: $violet;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      position: absolute;
+      bottom: 105%;
+      opacity: 0;
+      z-index: 11111 !important;
+      transition: .3s;
+      transform: translateX(-50%);
+      margin-left: 100px;
+      color: rgba($white, 0.8);
+    }
+    &:hover {
+      transform: scale(1.1) !important;
+      .skill-tooltip {
+        opacity: 1;
+      }
+    }
+    transition: .3s;
+    &:after {
+      padding: 0;
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      box-shadow: inset 0 0 1em black;
+      content: attr(data-pct)"%";
+      border-radius: 100%;
+      line-height: 14vw;
+      font-size: 2vmax;
+      color: transparent;
+      text-shadow: 1px 4px 6px black, 0 0 0 #fff, 1px 4px 6px black;
+    }
+  }
+}

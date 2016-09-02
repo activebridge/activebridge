@@ -12,7 +12,8 @@ en:
       ruby on rails developers ukraine, ruby on rails team ukraine,
       agile Ruby development, web application development, backend web development
   about:
-    title: About because we love the way we do
+    title: About
+    subtitle: because we love the way we do
     description: At Active Bridge - <h4>ruby on rails agency</h4>, we all come to work every day with a great enthusiasm,
       because we're inspired by our mission. To resolve all doubts of <h4>web development process</h4> and show
       how simple and clear it is.
@@ -51,13 +52,23 @@ en:
       As Ruby on Rails developers we know a variety of
       programming languages and technologies. Our team has
       fundamental knowledge in
-      Strong Skills':'
-                   Ruby on Rails - 99%
-                   Javascript / CoffeeScript / jQuery
-                   AngularJS / Ember.js / Backbone.js - 88%
-                   HTML / Haml / Slim - 95%
-                   CSS / SASS / LESS / Compass - 90%
-                   MySQL / PostgreSQL / MongoDB / Redis - 75%
+      Strong Skills.
+    skills:
+      - skill_name: Ruby on Rails
+        level: 99
+        icon: rails
+      - skill_name: Javascript / CoffeeScript / jQuery / AngularJS / Ember.js / Backbone.js
+        level: 88
+        icon: js
+      - skill_name: HTML / Haml / Slim
+        level: 95
+        icon: code
+      - skill_name: CSS / SASS / LESS / Compass
+        level: 90
+        icon: css3
+      - skill_name: MySQL / PostgreSQL / MongoDB / Redis
+        level: 75
+        icon: database
     scrum: <h3>Scrum process</h3>
       Thanks to using <h4>Scrum methodology</h4>, we can deliver large and complex products.
       Through effective planning and good communication within our <h4>agile development rails</h4> team,
