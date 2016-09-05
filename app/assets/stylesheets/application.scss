@@ -21,49 +21,53 @@ svg#main {
   height: 100vh;
   transform-origin: 80% 70%;
   transition: opacity 1s .5s;
-  opacity: 0;
+}
+
+.object {
+  visibility: hidden;
 }
 
 #about {
   transform: translate(-$x, $y);
   transform-origin: 50% 50%;
-  transition: transform .5s;
+  transition: transform .5s, visibility .3s;
   transition-delay: .3s;
 }
 
 #testimonials {
   transform: translate(0%, $y);
-  transition: transform .5s;
+  transition: transform .5s, visibility .5s;
 }
 
 #title {
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity .1s;
 }
 
 #team {
   transform: translate(50%, -50%) scale(0);
-  transition: transform .5s;
+  transition: transform .5s, visibility .5s;
   transform-origin: 50%;
 }
 
 #services {
   transform: scale(0);
-  transition: transform .3s;
+  transition: transform .3s, visibility .3s;
   transform-origin: 50%;
   transition-delay: .3s;
 }
 
 #portfolio {
   transform: translate(-$x, $y);
-  transition: transform 1s;
+  transition: transform 1s, visibility 1s;
   transform-origin: 100% 80%;
   transition-delay: .2s;
 }
 
 #contact {
   transform: translate(0%, -$y);
-  transition: transform .3s;
+  visibility: hidden;
+  transition: transform .3s, visibility .3s;
   transform-origin: 50% 60%;
   transition-delay: .3s;
 }
@@ -71,6 +75,10 @@ svg#main {
 #ab:checked ~ #main {
   opacity: 1;
   transition: opacity 1s;
+
+  .object {
+    visibility: visible;
+  }
 
   #title {
     opacity: 1;
@@ -93,7 +101,7 @@ svg#main {
   }
 
   #about {
-    transition: transform .5s;
+    transition: transform .5s, visibility .1s;
     transform: translate(0%, 0%);
   }
 
@@ -104,7 +112,10 @@ svg#main {
 
   #contact {
     transform: translate(0%, 0%);
+    visibility: visible;
     &:hover {
+      transform-origin: 50%;
+      transition-delay: 0s;
       transform: translate(0%, 0%) scale(1.1);
     }
   }
