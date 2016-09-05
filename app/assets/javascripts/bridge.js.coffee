@@ -7,7 +7,7 @@ csrf = document.head.querySelector('meta[name=csrf-token]').content
 
 closeWindow = ->
   document.querySelector('#lazy_overlay').className = ''
-  document.body.className = ''
+  setTimeout((-> document.body.className = ''), 300)
   history.pushState({}, null, "/")
 
 openPage = (event) ->
