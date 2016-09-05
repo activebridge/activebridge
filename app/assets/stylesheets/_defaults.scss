@@ -267,6 +267,12 @@ a {
       right: 0;
       bottom: 0;
       position: absolute;
+      &:first-child {
+        position: relative;
+      }
+
+      h3, h2 { margin: 0; }
+
       .section-tab-title {
         background: $violet;
         position: relative;
@@ -278,6 +284,9 @@ a {
         display: inline-block;
         color: $white;
         transition: .2s;
+        font-size: 1.5rem;
+        padding: 10px 2%;
+        box-sizing: border-box;
         &:hover {
           background: rgba($white, 0.5);
           color: #333;
@@ -293,12 +302,10 @@ a {
           right: 0;
           top: 0;
           bottom: 0;
-          h3 { margin: 0; }
         }
       }
       .section-tab-description {
         opacity: 0;
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -309,6 +316,11 @@ a {
         font-size: .8em;
         line-height: 1em;
         text-align: justify;
+        font-size: 1.2rem;
+
+        h3 {
+          margin: 0;
+        }
       }
     }
     input:checked + .section-tab {

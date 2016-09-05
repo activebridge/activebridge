@@ -1,7 +1,7 @@
 div itemscope="" itemtype="http://schema.org/Thing"
   .content.services
     .title= t('services.title')
-    /* .text-center= t('services.we_do') */
+    .text-center= t('services.we_do')
     .skills
       - I18n.t('services.skills').each_with_index do |skill, index|
         #cont data-pct=skill[:level] style="left: #{index.odd? ? 50 + 12*((index+1)/2) : 50 - 12*((index+1)/2)}%; transform: scale(#{1 - (index+1)/2*0.15}); z-index: #{100 - index};"
@@ -14,26 +14,26 @@ div itemscope="" itemtype="http://schema.org/Thing"
     .section-tabs
       input#agile_programming type='radio' hidden=true name='active-tab' checked=true
       .section-tab.text-left
-        .section-tab-title
-          label for='agile_programming'
-            == t('services.agile_programming')
-        div itemprop='description' class= 'section-tab-description text-center'
-          li itemprop='description'
-            == t('services.custom_web_development')
-          li itemprop='description'== t('services.scrum')
-          li itemprop='description'== t('services.free_review')
+        h2.section-tab-title
+          label for='agile_programming'= t('services.agile_programming')
+        dl.section-tab-description.text-center itemprop='description'
+          dt itemprop='description': h3= t('services.custom_web_development.title')
+          dd itemprop='description'== t('services.custom_web_development.desc')
+          dt itemprop='description': h3= t('services.scrum.title')
+          dd itemprop='description'== t('services.scrum.desc')
+          dt itemprop='description': h3= t('services.free_review.title')
+          dd itemprop='description'== t('services.free_review.desc')
 
       input#maintenance type='radio' hidden=true name='active-tab'
       .section-tab.text-center
-        .section-tab-title
+        h3.section-tab-title
           label for='maintenance'
-            == t('services.maintenance_and_support')
+            = t('services.maintenance_and_support')
         div itemprop='description' class= 'section-tab-description text-center'
           == t('services.code_audit')
       input#outstaffing type='radio' hidden=true name='active-tab'
       .section-tab.text-right
-        .section-tab-title
-          label for='outstaffing'
-            == t('services.outstaffing')
+        h3.section-tab-title
+          label for='outstaffing'= t('services.outstaffing')
         div itemprop='description' class= 'section-tab-description text-center'
           == t('services.team')
