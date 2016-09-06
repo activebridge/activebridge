@@ -86,7 +86,7 @@ en:
           providing workplaces;
           training for the officers;
           utility costs.
-    testimonials:
+  testimonials:
     title: Testimonials
     all:
       - company: Def Method
