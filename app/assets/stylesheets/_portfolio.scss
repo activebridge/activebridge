@@ -14,31 +14,29 @@
     width: auto;
     height: 100%;
     white-space: nowrap;
-    left: 0;
     transition: .5s;
     z-index: 101;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 15%;
+    position: relative;
     .project-wrapper {
       outline: none;
       white-space: normal;
       background-color: rgba(0,0,0,.9);
       box-shadow: -5px 0 15px 0 $violet;
       z-index: 100;
-      position: relative;
+      position: absolute;
       min-width: 25%;
       width: 25%;
       height: 70%;
-      margin-left: -15%;
       display: inline-block;
       transform: perspective(500px) rotateY(50deg);
       overflow: hidden;
       color: $white;
       transition: .5s;
       border-right: 1px solid $white;
-      margin-right: 0;
+      top: 15%;
       &:nth-child-last {
         border: none;
       }
@@ -46,8 +44,8 @@
         background-color: rgba(211,211,211,1);
         color: $black;
         transform: perspective(500px) rotateY(50deg) translateX(-20%);
-        & + input + .project-wrapper {
-          background-color: rgba(0,0,0,0.7);
+        & + input + .background-wrapper + .project-wrapper {
+          background-color: rgba(0,0,0,0.5);
         }
       }
       .project {
@@ -158,23 +156,19 @@
       opacity: 1;
     }
     input:checked + .background-wrapper + .project-wrapper {
-      min-width: 100%;
+      min-width: 90vw;
       background: rgba(233,233,233,0.9);
       color: $black;
       transform: perspective(500px) rotateY(0deg);
       z-index: 110;
       height: 80%;
-      margin-right: -75%;
       display: flex;
       align-items: center;
       box-shadow: none;
       justify-content: center;
-
-      @for $i from 1 through 10 {
-        &.for-#{$i} {
-          transform: translateX(-10% * $i);
-        }
-      }
+      left: 5vw !important;
+      margin-left: 0 !important;
+      position: fixed;
 
       .project {
         overflow-y: visible;
