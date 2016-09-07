@@ -1,4 +1,16 @@
-.contact {
+.contact.content {
+  margin: 5%;
+  padding: 1%;
+  background-image: linear-gradient(135deg,$white 5%, $blue 5%, $blue 10%, $white 10%, $white 15%, $red 15%, $red 20%, $white 20%,
+                                           $white 25%, $blue 25%, $blue 30%, $white 30%, $white 35%, $red 35%, $red 40%, $white 40%,
+                                           $white 45%, $blue 45%, $blue 50%, $white 50%, $white 55%, $red 55%, $red 60%, $white 60%,
+                                           $white 65%, $blue 65%, $blue 70%, $white 70%, $white 75%, $red 75%, $red 80%, $white 80%,
+                                           $white 85%, $blue 85%, $blue 90%, $white 90%, $white 95%, $red 95%, $red 100%, $white 100%);
+  form {
+    background: $white;
+    border: 5px dashed rgba(gray, .5);
+    padding: 20px;
+  }
   input, textarea {
     width: 60%;
     font-size: 2rem;
