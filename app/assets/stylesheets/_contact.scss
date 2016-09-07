@@ -1,28 +1,133 @@
-.contact.content {
-  margin: 5%;
-  padding: 1%;
-  background-image: linear-gradient(135deg,$white 5%, $blue 5%, $blue 10%, $white 10%, $white 15%, $red 15%, $red 20%, $white 20%,
-                                           $white 25%, $blue 25%, $blue 30%, $white 30%, $white 35%, $red 35%, $red 40%, $white 40%,
-                                           $white 45%, $blue 45%, $blue 50%, $white 50%, $white 55%, $red 55%, $red 60%, $white 60%,
-                                           $white 65%, $blue 65%, $blue 70%, $white 70%, $white 75%, $red 75%, $red 80%, $white 80%,
-                                           $white 85%, $blue 85%, $blue 90%, $white 90%, $white 95%, $red 95%, $red 100%, $white 100%);
-  form {
-    background: $white;
-    border: 5px dashed rgba(gray, .5);
-    padding: 20px;
-  }
-  input, textarea {
-    width: 60%;
-    font-size: 2rem;
-    padding: 3% 2%;
+.contact-us {
+  position: relative;
+  height: 100vh;
+  padding: 0;
+
+  form, .envelope {
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 150px;
+    &:before {
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      position: absolute;
+      background-image: linear-gradient(135deg,$white 5%, $blue 5%, $blue 10%, $white 10%, $white 15%, $red 15%, $red 20%, $white 20%,
+      $white 25%, $blue 25%, $blue 30%, $white 30%, $white 35%, $red 35%, $red 40%, $white 40%,
+      $white 45%, $blue 45%, $blue 50%, $white 50%, $white 55%, $red 55%, $red 60%, $white 60%,
+      $white 65%, $blue 65%, $blue 70%, $white 70%, $white 75%, $red 75%, $red 80%, $white 80%,
+      $white 85%, $blue 85%, $blue 90%, $white 90%, $white 95%, $red 95%, $red 100%, $white 100%);
+      box-shadow: 0px 0px 10px 3px rgba(black, .5);
+    }
+    border-radius: 5px;
+    &:after {
+      background: white;
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+    }
+    .envelope {
+      margin-top: 0;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      transform: rotate(2deg);
+      z-index: -1;
+    }
+    .data {
+      position: relative;
+      z-index: 1;
+    }
+
+    .mark {
+      max-width: 200px;
+      position: absolute;
+      top: 50px;
+      height: auto;
+      right: 50px;
+    }
+
+    fieldset {
+      width: 50%;
+      padding: 5% 20% 5% 5%;
+      border: none;
+      position: relative;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 10px 0;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid $gray;
+      color: $gray;
+      resize: none;
+      transition: border-color .3s;
+      font-weight: bold;
+      &:focus {
+        outline: none;
+        border-color: $blue;
+      }
+    }
+    button {
+      background: none;
+      border: none;
+      color: $blue;
+      font-size: 1.2rem;
+      transition: box-shadow .3s;
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $blue;
+      }
+    }
   }
 
-  label {
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 18%;
+  .info {
     text-align: left;
-    display: inline-block;
-    font-size: 2rem;
+    position: relative;
+    width: 100%;
+    padding-left: 70%;
+    padding-bottom: 5%;
+    &-label {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: $blue;
+      padding-bottom: 10px;
+    }
+  }
+
+  address {
+    line-height: 2;
+    font-weight: bold;
+    font-style: normal;
+    color: $gray;
+    a {
+      color: $gray;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contact-us form {
+    fieldset, .info {
+      padding: 5%;
+      width: 100%;
+    }
+  }
+  .mark {
+    display: none;
   }
 }
