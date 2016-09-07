@@ -11,6 +11,10 @@
 $x: 500%;
 $y: 500%;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   overflow: hidden;
   background: #744A71;
@@ -159,9 +163,6 @@ svg#main {
     position: relative;
     opacity: .9;
     max-width: 80%;
-    img {
-      border-radius: 50%;
-    }
   }
 }
 
@@ -188,8 +189,36 @@ svg#main {
 }
 
 .contact {
+  #lazy_overlay {
+    opacity: 1;
+  }
   #lazybox {
-    background: #d8d8d8;
+    background: $gray;
     transition-delay: .2s;
   }
+
+  .contact-title {
+    top: 3%;
+    transform: rotate(2deg);
+    transition: transform .3s, top .3s;
+  }
+}
+
+.contact-title {
+  right: 10%;
+}
+
+.page-title {
+  position: fixed;
+  top: -10%;
+  padding: 1% 5%;
+  background: $white;
+  color: $gray;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 5px 7px 0px rgba(black, .3);
+  transition: transform .3s, top .3s;
+  transform: rotate(-110deg);
+  transform-origin: 0;
+  z-index: 10000;
 }

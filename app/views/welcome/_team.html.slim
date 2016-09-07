@@ -5,7 +5,7 @@ div itemscope="" itemtype="http://schema.org/Person"
       = image_tag('ActiveBridge.svg')
     #rotate-shape.main style="transform: rotateY(0deg)"
       - @members.each_with_index do |member, index|
-        .member id="member_#{member.id}" style="transform: rotateY(#{360/@members.size*index}deg) translateZ(480px) scale(.5)"
+        .member id="member_#{member.id}" style="transform: rotateY(#{360/@members.size*index}deg) translateZ(500px) scale(.5)"
           .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")
             = image_tag(member.avatar.url(:mask))
           .details

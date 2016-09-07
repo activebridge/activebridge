@@ -1,8 +1,24 @@
-.content.contact
+.content.contact-us
+
   = form_tag root_path do
-    = label_tag :name
-    = text_field_tag :name, nil, required: true, placeholder: :Name
-    label Email
-    input type='email' placeholder='Email' required=true
-    label Body
-    textarea placeholder='Body'
+    .envelope
+    .data
+      = inline_svg 'ActiveBridge', class: :mark
+      fieldset
+        input type='text' placeholder='You name' required=true
+        input type='email' placeholder='You e-mail' required=true
+        textarea placeholder='Text message' rows=4 required=true minlength=20
+        .text-right
+          button.button SEND
+      .info
+        .info-label Contact Info:
+        address.vcard
+          a.url.fn.n href='https://active-bridge.com'
+          .org Active Bridge, LLC
+          a.email href='mailto:contact@active-bridge.com' contact@active-bridge.com
+          .adr
+            span.locality Cherkassy
+            ' ,
+            span.postal-code> 18000
+            span.country-name Ukraine
+            .tel +380636086045
