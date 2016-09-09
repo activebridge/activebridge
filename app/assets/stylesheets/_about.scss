@@ -1,0 +1,29 @@
+.about {
+  white-space: nowrap;
+  div {
+    white-space: normal;
+  }
+  .sections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .section {
+      padding-top: 2%;
+      transform: translateZ(-150px) rotateY(30deg);
+      transform-style: preserve-3d;
+      transition: .3s;
+
+      width: 50%;
+      display: inline-block;
+      font-size: 1.2em;
+      background: rgba($white, .5);
+
+      &:nth-last-child(1) {
+        transform: translateZ(-150px) rotateY(-30deg);
+      }
+      &:hover {
+        transform: translateZ(0px) rotateY(0deg);
+      }
+    }
+  }
+}

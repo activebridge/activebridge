@@ -1,32 +1,29 @@
 .skills {
   white-space: nowrap;
   width: 100%;
-  min-height: 18.5vw;
+  min-height: 230px;
   overflow: visible;
   position: relative;
   margin: 1.5vh auto;
-  margin-left: -7.25vw;
+  perspective: 500px;
+  display: flex;
+  justify-content: center;
   #cont {
-    width: 14.5vw;
-    height: 14.5vw;
+    position: relative;
     box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.5);
     border-radius: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     padding: 15px;
     background-image: linear-gradient(to right, rgba(gray, 1), rgba(black, 1), rgba(gray, 1));
+    align-self: center;
+    transform: translateZ(calc(50vw - 45em)) !important;
+    min-height: 230px;
+    min-width: 230px;
     #svg {
       width: 100%;
       height: 100%;
       box-shadow: 0px 4px 4px -4px rgba($white, 0.4),0px -3px 3px -3px rgba($white, 0.25),inset 0px 0px 20px 20px rgba(black, 0.5);
       border-radius: 50%;
       circle {
-        cx: 7.25vw;
-        cy: 7.25vw;
-        r: 7vw;
-        stroke-dashoffset: 0;
-        stroke-dasharray: 303%;
         transition: stroke-dashoffset 1s linear;
         stroke: rgba(gray, .9);
         stroke-width: 1em;
@@ -44,7 +41,7 @@
       width: 100%;
       top: 50%;
       svg {
-        height: 5vw;
+        height: 4em;
         path {
           fill: rgba(white, .8);
         }
@@ -65,7 +62,8 @@
       color: rgba($white, 0.8);
     }
     &:hover {
-      transform: scale(1.1) !important;
+      transform: translateZ(calc(50vw - 43em)) scale(1.1) !important;
+      z-index: 101;
       .skill-tooltip {
         opacity: 1;
       }
@@ -82,9 +80,9 @@
       box-shadow: inset 0 0 1em black;
       content: attr(data-pct)"%";
       border-radius: 100%;
-      line-height: 14vw;
-      font-size: 2vmax;
-      color: transparent;
+      line-height: 200px;
+      font-size: 2em;
+      color: rgba(white, .5);
       text-shadow: 1px 4px 6px black, 0 0 0 #fff, 1px 4px 6px black;
     }
   }
