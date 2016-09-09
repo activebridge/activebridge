@@ -5,9 +5,10 @@
 
   form, .envelope {
     max-width: 80%;
+    height: 70vh;
     margin: 0 auto;
     position: relative;
-    margin-top: 150px;
+    margin-top: 110px;
     &:before {
       content: '';
       top: 0;
@@ -49,21 +50,23 @@
     }
 
     .mark {
-      max-width: 200px;
+      max-width: 30vh;
+      max-height: 30vh;
       position: absolute;
-      top: 50px;
+      top: 30px;
       height: auto;
-      right: 50px;
+      right: 30px;
     }
 
     fieldset {
       width: 50%;
-      padding: 5% 20% 5% 5%;
+      max-height: 35vh;
+      padding: 5% 5% 5% 5%;
       border: none;
       position: relative;
     }
     input, textarea {
-      margin: 10px 0;
+      margin-bottom: 10px;
       padding: 10px 0;
       width: 100%;
       box-sizing: border-box;
@@ -95,17 +98,25 @@
     }
   }
 
-  .info {
-    text-align: left;
+  .info-wrapper {
     position: relative;
     width: 100%;
-    padding-left: 70%;
-    padding-bottom: 5%;
-    &-label {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: $blue;
-      padding-bottom: 10px;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 50%;
+    max-height: 35vh;
+    .info {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      text-align: left;
+      padding-bottom: 5%;
+      &-label {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $blue;
+        padding-bottom: 10px;
+      }
     }
   }
 
@@ -122,7 +133,7 @@
 
 @media screen and (max-width: 640px) {
   .contact-us form {
-    fieldset, .info {
+    fieldset, .info-wrapper {
       padding: 5%;
       width: 100%;
     }
