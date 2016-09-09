@@ -33,9 +33,20 @@ svg#main {
 
 #about {
   transform: translate(-$x, $y);
-  transform-origin: 50% 50%;
   transition: transform .5s, visibility .3s;
   transition-delay: .3s;
+  transform-origin: 50% 60%;
+  #testimonials_tooltip {
+    -webkit-transform-origin: 50% 60%;
+    visibility: hidden;
+    transform: translateX(30%) translateY(30%) scale(0);
+    transition: .2s;
+    box-shadow: 0px 0px 10px 3px rgba(black, .5);
+  }
+  &:hover #testimonials_tooltip {
+    visibility: visible;
+    transform: translateX(0) translateY(0) scale(1);
+  }
 }
 
 #testimonials {
@@ -74,6 +85,12 @@ svg#main {
   transition: transform .3s, visibility .3s;
   transform-origin: 50% 60%;
   transition-delay: .3s;
+}
+
+#twitter {
+  transform-origin: 50%;
+  transform: translateX(-$x) rotate(-360deg);
+  transition: .5s ease-out;
 }
 
 #ab:checked ~ #main {
@@ -118,10 +135,14 @@ svg#main {
     transform: translate(0%, 0%);
     visibility: visible;
     &:hover {
-      transform-origin: 50%;
       transition-delay: 0s;
-      transform: translate(0%, 0%) scale(1.1);
+      transform: translate(-5%, 5%) scale(1.1);
     }
+  }
+
+  #twitter {
+    transform: translateX(0) rotate(0deg);
+    transition-delay: .5s;
   }
 
 }
