@@ -1,3 +1,13 @@
+%placehoder {
+  font-family: 'Railway', arial;
+}
+
+::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, input:-moz-placeholder {
+  @extend %placehoder;
+}
+
+
+
 .contact-us {
   position: relative;
   height: 100vh;
@@ -16,11 +26,11 @@
       right: 0;
       left: 0;
       position: absolute;
-      background-image: linear-gradient(135deg,$white 5%, $blue 5%, $blue 10%, $white 10%, $white 15%, $red 15%, $red 20%, $white 20%,
-      $white 25%, $blue 25%, $blue 30%, $white 30%, $white 35%, $red 35%, $red 40%, $white 40%,
-      $white 45%, $blue 45%, $blue 50%, $white 50%, $white 55%, $red 55%, $red 60%, $white 60%,
-      $white 65%, $blue 65%, $blue 70%, $white 70%, $white 75%, $red 75%, $red 80%, $white 80%,
-      $white 85%, $blue 85%, $blue 90%, $white 90%, $white 95%, $red 95%, $red 100%, $white 100%);
+      background-image: linear-gradient(135deg,$white 5%, $light-violet 5%, $light-violet 10%, $white 10%, $white 15%, $light-grey 15%, $light-grey 20%, $white 20%,
+      $white 25%, $light-violet 25%, $light-violet 30%, $white 30%, $white 35%, $light-grey 35%, $light-grey 40%, $white 40%,
+      $white 45%, $light-violet 45%, $light-violet 50%, $white 50%, $white 55%, $light-grey 55%, $light-grey 60%, $white 60%,
+      $white 65%, $light-violet 65%, $light-violet 70%, $white 70%, $white 75%, $light-grey 75%, $light-grey 80%, $white 80%,
+      $white 85%, $light-violet 85%, $light-violet 90%, $white 90%, $white 95%, $light-grey 95%, $light-grey 100%, $white 100%);
       box-shadow: 0px 0px 10px 3px rgba(black, .5);
     }
     border-radius: 5px;
@@ -42,6 +52,7 @@
       right: 0;
       left: 0;
       transform: rotate(2deg);
+      -webkit-backface-visibility: hidden;
       z-index: -1;
     }
     .data {
@@ -75,25 +86,24 @@
       color: $gray;
       resize: none;
       transition: border-color .3s;
-      font-weight: bold;
+      font-size: 1.2rem;
       &:focus {
         outline: none;
-        border-color: $blue;
+        border-color: $light-violet;
       }
     }
     button {
       background: none;
       border: none;
-      color: $blue;
+      color: $dark-violet;
       font-size: 1.2rem;
       transition: box-shadow .3s;
-      font-weight: bold;
       &:hover {
         cursor: pointer;
       }
       &:focus {
         outline: none;
-        border-bottom: 1px solid $blue;
+        border-bottom: 1px solid $light-violet;
       }
     }
   }
@@ -112,9 +122,8 @@
       text-align: left;
       padding-bottom: 5%;
       &-label {
-        font-weight: bold;
         font-size: 1.5rem;
-        color: $blue;
+        color: $dark-violet;
         padding-bottom: 10px;
       }
     }
@@ -122,7 +131,6 @@
 
   address {
     line-height: 2;
-    font-weight: bold;
     font-style: normal;
     color: $gray;
     a {
