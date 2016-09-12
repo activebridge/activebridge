@@ -1,3 +1,6 @@
+$lazy-start:      translateY(-500%);
+$lazy-end:        translateY(0%);
+
 @import 'variables';
 @import 'lazybox';
 @import 'base';
@@ -150,7 +153,7 @@ svg#main {
 }
 
 #lazybox {
-  background: #b6a;
+  background: transparent;
   border: none;
   box-shadow: none;
   max-width: 100%;
@@ -162,7 +165,7 @@ svg#main {
 }
 
 #lazy_overlay {
-  background: transparent;
+  background: $dark-violet;
 }
 
 .portfolio #portfolio {
@@ -215,14 +218,11 @@ svg#main {
   #lazy_overlay {
     opacity: 1;
   }
-  #lazybox {
-    background: $gray;
-    transition-delay: .2s;
-  }
 
   .contact-title {
     top: 3%;
-    transform: rotate(2deg);
+    transform: rotate(1deg);
+    -webkit-backface-visibility: hidden;
     transition: transform .3s, top .3s;
   }
 }
@@ -231,23 +231,18 @@ svg#main {
   right: 10%;
 }
 
-.about {
-  #lazybox {
-    background: $dark-violet;
-  }
-}
-
 .page-title {
   position: fixed;
   top: -10%;
   padding: 1% 5%;
   background: $white;
-  color: $gray;
+  color: $dark-violet;
   font-size: 2rem;
   font-weight: bold;
   box-shadow: 7px 7px 7px rgba(black, .3);
   transition: transform .3s, top .3s;
   transform: rotate(-110deg);
+  -webkit-backface-visibility: hidden;
   transform-origin: 0;
   z-index: 10000;
 }

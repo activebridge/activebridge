@@ -10,7 +10,9 @@
   color: $dark-violet;
   font-weight: bold;
   font-size: 1.2rem;
-  transform: rotate(-3deg);
+  transform: rotate(-3deg) translateX(-200%);
+  -webkit-backface-visibility: hidden;
+  transition: transform .3s;
   &:before {
     content: '';
     position: absolute;
@@ -27,4 +29,8 @@
     // font-weight: normal;
     display: inline;
   }
+}
+
+.about .about-content {
+  transform: rotate(-3deg) translateX(0%);
 }

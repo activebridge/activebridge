@@ -7,7 +7,7 @@ csrf = document.head.querySelector('meta[name=csrf-token]').content
 
 closeWindow = ->
   document.querySelector('#lazy_overlay').className = ''
-  setTimeout((-> document.body.className = ''), 300)
+  document.body.className = ''
   history.pushState({}, null, "/")
 
 openPage = (event) ->
@@ -43,6 +43,7 @@ browseTeam = (keyCode) ->
   switch event.keyCode
     when 37 then direction = -1
     when 39 then direction = 1
+    when 27 then document.getElementById('lazy_close').click()
     else return
   rotateTeam(direction)
 
@@ -63,6 +64,8 @@ browseData = (event) ->
     browseProjects(event.keyCode, activeProject)
   else if spinShape = document.querySelector('.members')
     browseTeam(event.keyCode)
+  else
+    document.getElementById('lazy_close').click()
 
 document.querySelector('#lazy_close').addEventListener('click', closeWindow, false)
 document.querySelector('#portfolio').addEventListener('click', openPage, false)
