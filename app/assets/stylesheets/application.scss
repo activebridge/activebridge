@@ -3,7 +3,6 @@ $lazy-end:        translateY(0%);
 
 @import 'variables';
 @import 'lazybox';
-@import 'base';
 @import 'defaults';
 @import 'members';
 @import 'testimonials';
@@ -241,6 +240,7 @@ svg#main {
   font-weight: bold;
   box-shadow: 7px 7px 7px rgba(black, .3);
   transition: transform .3s, top .3s;
+  transition-delay: .3s;
   transform: rotate(-110deg);
   -webkit-backface-visibility: hidden;
   transform-origin: 0;

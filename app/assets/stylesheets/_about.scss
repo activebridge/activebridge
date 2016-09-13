@@ -1,36 +1,91 @@
-.about-content {
-  position: fixed;
-  z-index: 100000;
-  background: #eff0f1;
-  background: linear-gradient(0deg, #eff0f1, #dfcace);
-  padding: 30px 40px;
-  max-width: 800px;
-  top: 20%;
-  left: 2%;
+.about {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
   color: $dark-violet;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transform: rotate(-3deg) translateX(-200%);
-  -webkit-backface-visibility: hidden;
-  transition: transform .3s;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background: $white;
-    z-index: -1;
+  position: relative;
+
+  &-desc {
+    position: relative;
+    background: #eff0f1;
+    background: linear-gradient(0deg, #eff0f1, #dfcace);
+    padding: 30px 40px;
+    width: 70%;
+    font-size: 1.2rem;
+    transform: rotate(-5deg);
+    -webkit-backface-visibility: hidden;
+    transition: transform .3s;
+    position: relative;
+    z-index: 10;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background: $white;
+      z-index: -1;
+    }
   }
 
   h3, h4 {
-    font-size: 1.2rem;
-    // font-weight: normal;
+    font-size: inherit;
+    font-weight: normal;
     display: inline;
   }
-}
 
-.about .about-content {
-  transform: rotate(-3deg) translateX(0%);
+  &-title {
+    font-size: 2rem;
+    color: $white;
+    display: inline-block;
+    font-weight: bold;
+    text-shadow: 1px 3px rgba($black, .9);
+    transform: rotate(-7deg);
+    -webkit-backface-visibility: hidden;
+  }
+
+  &-desc:hover, &-items:hover {
+    z-index: 100;
+  }
+
+  &-items {
+    padding: 20px;
+    background: $white;
+    border: 20px solid $white;
+    box-shadow: inset 0 0 0px 5px #fafafa;
+    border-radius: 5px;
+    width: 37%;
+    font-size: .9rem;
+    top: 45%;
+    position: absolute;
+    right: 0;
+    transform: rotate(5deg);
+    -webkit-backface-visibility: hidden;
+
+    dt {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50%;
+      top: -50px;
+      left: 25%;
+      background: #eff0f1;
+      border-radius: 2px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      height: 60px;
+    }
+
+    &:after {
+      top: -75px;
+      width: 36%;
+      left: 32%;
+    }
+  }
 }

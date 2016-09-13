@@ -1,4 +1,3 @@
 |
   history.pushState({}, null, "#{params[:page]}");
   document.getElementById('lazy_body').innerHTML = "#{ j(render partial: params[:page]) }"
-  document.getElementById('lazy_overlay').className = 'active'

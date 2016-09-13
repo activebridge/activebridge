@@ -1,21 +1,3 @@
-body {
-  height: 1000vh;
-  margin: 0;
-  letter-spacing: .05em;
-  color: $black;
-}
-
-canvas {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-}
-
-a {
-  text-decoration: none;
-}
-
-
 .title {
   font-size: 2rem;
   margin: 0;
@@ -61,8 +43,8 @@ a {
 #lazybox {
   max-height: 100vh;
   max-width: 100%;
-  overflow: hidden;
-  opacity: 0.975;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .item-title {
