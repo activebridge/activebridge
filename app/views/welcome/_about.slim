@@ -1,18 +1,8 @@
-div itemscope="" itemtype="http://schema.org/Thing"
-  h1.title
-    = t('about.title')
-    p= t('about.subtitle')
-  / .content.about== t('about.description')
-    / .sections
-      .section
-        .section-title
-          = svg(:free)
-          div= t('about.core_values')
-        ul.section-description
-          li itemprop='description'== t('about.experienced_team')
-      .section
-        .section-title
-          = svg(:trophy)
-          div= t('about.benefits')
-        ul.section-description
-          li itemprop='description'== t('about.cost_efficient')
+div.about itemscope="" itemtype="http://schema.org/Thing"
+  h1.about-title= t('about.title')
+  .about-desc== t('about.description')
+  dl.about-items
+    dt= t('about.core_values')
+    dd itemprop='description'== t('about.experienced_team')
+    dt= t('about.benefits')
+    dd itemprop='description'== t('about.cost_efficient')

@@ -7,15 +7,13 @@
 doctype 5
 html
   = render 'layouts/head', type: :application, media: :all
-  body class=params[:page]
-    input#ab type='checkbox' onchange="setCookie(this)" checked=cookies[:flag].eql?('true')
+  body onload='animate()' class="#{params[:page]}-page"
+    input#ab type='checkbox'
     .ab-wrapper
       label.ab for='ab'
         = inline_svg :ActiveBridge
     = render 'layouts/main.svg'
     img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=552167954950145&ev=PageView&noscript=1"
-  .page-title.contact-title CONTACT US
-  .about-content== t('about.description')
   .about-sections
     = t('about.description')
   = render_lazybox
