@@ -1,3 +1,12 @@
+window.submit = (form) ->
+  xhr = new XMLHttpRequest()
+  xhr.open('POST', form.action, false)
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+  body = "payload={'text': '#{ document.getElementById('text').value }',
+  'username': '#{ document.getElementById('name').value } #{ document.getElementById('email').value }', 'icon_emoji': ':email:'}"
+  xhr.send(body)
+  return false
+
 window.animate = -> document.getElementById('ab').checked = true
 
 csrf = document.head.querySelector('meta[name=csrf-token]').content
@@ -9,6 +18,8 @@ closeWindow = ->
 
 openPage = (event) ->
   document.getElementById('lazy_overlay').className = 'active'
+  document.getElementById('lazy_body').innerHTML = ''
+  document.getElementById('lazybox').className = 'hidden'
   href = this.href.baseVal
   xhr = new XMLHttpRequest()
   xhr.open( 'GET', href, true)
