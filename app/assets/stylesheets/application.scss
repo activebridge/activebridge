@@ -91,12 +91,6 @@ svg#main {
   transition-delay: .3s;
 }
 
-#twitter {
-  transform-origin: 50%;
-  transform: translateX(-$x) rotate(-360deg);
-  transition: .5s ease-out;
-}
-
 #ab:checked ~ #main {
   opacity: 1;
   transition: opacity 1s;
@@ -143,12 +137,6 @@ svg#main {
       transform: translate(-5%, 5%) scale(1.1);
     }
   }
-
-  #twitter {
-    transform: translateX(0) rotate(0deg);
-    transition-delay: .5s;
-  }
-
 }
 
 #lazybox {
@@ -249,4 +237,97 @@ svg#main {
   -webkit-backface-visibility: hidden;
   transform-origin: 0;
   z-index: 10000;
+}
+
+.social-icons {
+  top: 5vmin;
+  left: 0;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 1s;
+  a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    height: 6vmin;
+    width: 6vmin;
+    max-height: 6vmin;
+    max-width: 6vmin;
+    background: rgba($white, 0.6);
+    border-radius: 50%;
+    margin: 1vmin 3vmin 4vmin 1vmin;
+    @for $i from 0 through 10 {
+      &.position-#{$i} {
+        transform: translateX(0%) translateY(-1000% + $i * 100%) rotate(-1800deg);
+        transition: transform 1s linear 1.2s + (0.2s * $i);
+      }
+    }
+    svg {
+      position: absolute;
+      position: absolute;
+      top: -1vmin;
+      left: -1vmin;
+      height: 8vmin;
+      width: 8vmin;
+      max-height: 8vmin;
+      max-width: 8vmin;
+      border-radius: 50%;
+      transition: box-shadow .2s;
+      &:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      }
+    }
+  }
+  &.left {
+    transition-delay: 1.5s;
+    a {
+      &:nth-child(1) {
+        transform: translateX(-50%) translateY(-1000%) rotate(-1800deg);
+      }
+    }
+  }
+  &.top {
+    top: 0;
+    left: 12vmin;
+    transition-delay: 1s;
+    a {
+      display: inline-block;
+
+      @for $i from 0 through 10 {
+        &.position-#{$i} {
+          transform: translateX(-1000% + $i * 100%) translateY(-1000% + $i * 100%) rotate(-1800deg);
+          transition: transform 1s linear 1.2s - (0.2s * $i);
+        }
+      }
+    }
+  }
+}
+
+#ab:checked ~ .social-icons {
+  transform: translateY(0%);
+  transition-delay: 0s;
+  a {
+    // transition-delay: 0s;
+    transform: translateX(0%) translateY(0%) rotate(360deg);
+    @for $i from 0 through 10 {
+      &.position-#{$i} {
+          transition: transform 2s linear 1s - (0.2s * $i);
+      }
+    }
+  }
+  &.top {
+    a {
+      transform: translateX(0%) translateY(0%) rotate(360deg);
+      @for $i from 0 through 10 {
+        &.position-#{$i} {
+          transition: transform 2s linear 1s + (0.25s * $i);
+        }
+      }
+    }
+  }
+  &.left {
+    a:nth-child(1) {
+      transform: translateX(50%) translateY(0%) rotate(360deg);
+    }
+  }
 }

@@ -13,6 +13,15 @@ html
       label.ab for='ab'
         = inline_svg :ActiveBridge
     = render 'layouts/main.svg'
+    .social-icons.left
+      - %w[blog facebook github linkedin google].each_with_index do |icon, i|
+        = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do
+          = svg("social/#{icon}")
+    .social-icons.top
+      - %w[linkedin pinterest twitter youtube].each_with_index do |icon, i|
+        = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do
+          = svg("social/#{icon}")
+
     img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=552167954950145&ev=PageView&noscript=1"
   = render_lazybox
   = javascript_include_tag 'application'
