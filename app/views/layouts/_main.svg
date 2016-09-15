@@ -269,18 +269,6 @@
                         <ellipse id="Oval-1" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="74.9519723" cy="24.9606297" rx="14.9519723" ry="10.265197"></ellipse>
                     </g>
                 </a>
-                <a xlink:href='//twitter.com/activebridge' id='twitter' class='object' target='_blank'>
-                    <g id="twitter-ball" transform="translate(163.000000, 979.000000)">
-                        <mask id="mask-51" sketch:name="Mask" fill="white">
-                            <use xlink:href="#path-50"></use>
-                        </mask>
-                        <use id="Mask" fill="url(#radialGradient-49)" sketch:type="MSShapeGroup" xlink:href="#path-50"></use>
-                        <g id="Path-15">
-                            <use fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-51)" xlink:href="#path-53"></use>
-                            <use fill="url(#linearGradient-52)" xlink:href="#path-53"></use>
-                        </g>
-                    </g>
-                </a>
             </g>
         </g>
     </g>
