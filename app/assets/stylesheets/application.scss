@@ -243,8 +243,8 @@ svg#main {
   top: 5vmin;
   left: 0;
   position: absolute;
-  transform: translateY(-100%);
-  transition: 1s;
+  transform: translateY(-110%);
+  transition: .5s;
   a {
     text-decoration: none;
     position: relative;
@@ -258,8 +258,8 @@ svg#main {
     margin: 1vmin 3vmin 4vmin 1vmin;
     @for $i from 0 through 10 {
       &.position-#{$i} {
-        transform: translateX(0%) translateY(-1000% + $i * 100%) rotate(-1800deg);
-        transition: transform 1s linear 1.2s + (0.2s * $i);
+        transform: translateX(0%) translateY(-1000% + $i * 100%) rotate(-900deg);
+        transition: transform .5s ease .7s + (0.2s * $i);
       }
     }
     svg {
@@ -279,24 +279,24 @@ svg#main {
     }
   }
   &.left {
-    transition-delay: 1.5s;
+    transition-delay: 1s;
     a {
       &:nth-child(1) {
-        transform: translateX(-50%) translateY(-1000%) rotate(-1800deg);
+        transform: translateX(-50%) translateY(-1000%) rotate(-900deg);
       }
     }
   }
   &.top {
     top: 0;
     left: 12vmin;
-    transition-delay: 1s;
+    transition-delay: .5s;
     a {
       display: inline-block;
 
       @for $i from 0 through 10 {
         &.position-#{$i} {
-          transform: translateX(-1000% + $i * 100%) translateY(-1000% + $i * 100%) rotate(-1800deg);
-          transition: transform 1s linear 1.2s - (0.2s * $i);
+          transform: translateX(-1000% + $i * 100%) translateY(-1000% + $i * 100%) rotate(-900deg);
+          transition: transform .5s ease .7s - (0.2s * $i);
         }
       }
     }
@@ -305,13 +305,12 @@ svg#main {
 
 #ab:checked ~ .social-icons {
   transform: translateY(0%);
-  transition-delay: 0s;
+  transition-delay: .7s;
   a {
-    // transition-delay: 0s;
     transform: translateX(0%) translateY(0%) rotate(360deg);
     @for $i from 0 through 10 {
       &.position-#{$i} {
-          transition: transform 2s linear 1s - (0.2s * $i);
+          transition: transform 1.5s ease 1.5s - (0.2s * $i);
       }
     }
   }
@@ -320,7 +319,7 @@ svg#main {
       transform: translateX(0%) translateY(0%) rotate(360deg);
       @for $i from 0 through 10 {
         &.position-#{$i} {
-          transition: transform 2s linear 1s + (0.25s * $i);
+          transition: transform 1.5s ease 1.5s + (0.25s * $i);
         }
       }
     }
