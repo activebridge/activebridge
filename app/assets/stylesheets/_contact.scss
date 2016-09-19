@@ -17,7 +17,9 @@
 .contact-us {
   position: relative;
   height: 100vh;
+  overflow: hidden;
   padding: 0;
+  padding-top: 3%;
 
   form, .envelope {
     max-width: 80%;
@@ -25,7 +27,9 @@
     margin: 0 auto;
     position: relative;
     margin-top: 110px;
+    border-radius: 5px;
     &:before {
+      border-radius: 5px;
       content: '';
       top: 0;
       bottom: 0;
@@ -37,9 +41,8 @@
       $white 45%, $light-violet 45%, $light-violet 50%, $white 50%, $white 55%, $light-grey 55%, $light-grey 60%, $white 60%,
       $white 65%, $light-violet 65%, $light-violet 70%, $white 70%, $white 75%, $light-grey 75%, $light-grey 80%, $white 80%,
       $white 85%, $light-violet 85%, $light-violet 90%, $white 90%, $white 95%, $light-grey 95%, $light-grey 100%, $white 100%);
-      box-shadow: 0px 0px 10px 3px rgba(black, .5);
+      box-shadow: 0px 0px 4px 1px rgba(56, 56, 56, 0.33);
     }
-    border-radius: 5px;
     &:after {
       background: white;
       content: '';
@@ -66,13 +69,23 @@
       z-index: 1;
     }
 
-    .mark {
-      max-width: 30vh;
-      max-height: 30vh;
+    .mark-main {
+      max-width: 20vh;
       position: absolute;
-      top: 30px;
+      top: 80px;
       height: auto;
-      right: 30px;
+      right: 110px;
+      z-index: 10;
+    }
+
+    .mark-background {
+      max-width: 20vh;
+      position: absolute;
+      top: 50px;
+      height: auto;
+      right: 50px;
+      opacity: 0.1;
+      filter: grayscale(100%);
     }
 
     fieldset {
@@ -83,6 +96,7 @@
       position: relative;
     }
     input, textarea {
+      font-family: Arial;
       margin-bottom: 10px;
       padding: 10px 0;
       width: 100%;
@@ -100,6 +114,7 @@
     }
     button {
       background: none;
+      text-transform: uppercase;
       border: none;
       font-weight: bold;
       color: rgb(159, 75, 132);
@@ -122,7 +137,7 @@
     position: relative;
     width: 100%;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 50%;
     max-height: 35vh;
     font-weight: bold;
@@ -141,7 +156,7 @@
   }
 
   address {
-    line-height: 2;
+    line-height: 2.5;
     font-style: normal;
     color: rgba(106,106,106,0.4);
     a {
@@ -157,7 +172,7 @@
       width: 100%;
     }
   }
-  .mark {
+  .mark-main, .mark-background {
     display: none;
   }
 }
