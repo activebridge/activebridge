@@ -6,7 +6,13 @@
   @extend %placehoder;
 }
 
-
+.contact-background-svg {
+  position: absolute;
+  top: 12vh;
+  right: 6%;
+  width: 100vw;
+  height: 88vh;
+}
 
 .contact-us {
   position: relative;
