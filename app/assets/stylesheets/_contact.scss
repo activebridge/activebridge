@@ -88,8 +88,8 @@
       width: 100%;
       box-sizing: border-box;
       border: none;
-      border-bottom: 1px solid $gray;
-      color: $gray;
+      border-bottom: 1px solid rgba(106,106,106,0.4);
+      color: rgba(106,106,106,0.4);
       resize: none;
       transition: border-color .3s;
       font-size: 1.2rem;
@@ -101,7 +101,8 @@
     button {
       background: none;
       border: none;
-      color: $dark-violet;
+      font-weight: bold;
+      color: rgb(159, 75, 132);
       font-size: 1.2rem;
       transition: box-shadow .3s;
       &:hover {
@@ -124,6 +125,7 @@
     padding-top: 30px;
     padding-left: 50%;
     max-height: 35vh;
+    font-weight: bold;
     .info {
       position: relative;
       display: inline-block;
@@ -132,7 +134,7 @@
       padding-bottom: 5%;
       &-label {
         font-size: 1.5rem;
-        color: $dark-violet;
+        color: rgb(159, 75, 132);
         padding-bottom: 10px;
       }
     }
@@ -141,9 +143,9 @@
   address {
     line-height: 2;
     font-style: normal;
-    color: $gray;
+    color: rgba(106,106,106,0.4);
     a {
-      color: $gray;
+      color: rgba(106,106,106,0.4);
     }
   }
 }
