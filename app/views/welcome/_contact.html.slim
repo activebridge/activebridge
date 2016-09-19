@@ -1,26 +1,26 @@
 = inline_svg 'contact/contact-bg-pattern.svg', class: 'contact-background-svg'
-.page-title.contact-title CONTACT US
+.page-title.contact-title = t('contact.title')
 .content.contact-us
   = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
     #contact_form.envelope
     .data
       = inline_svg 'ActiveBridge', class: :mark
       fieldset
-        input#name name='name' type='text' placeholder='You name'
-        input#email name='email' type='email' placeholder='You e-mail' required=true
-        textarea#text name='text' placeholder='Text message' rows=4
+        input#name type='text' placeholder="#{ t('contact.name_placeholder') }"
+        input#email type='email' placeholder="#{ t('contact.email_placeholder') }" required=true
+        textarea#text placeholder="#{ t('contact.message_placeholder') }" rows=7 required=true minlength=10
         .text-right
-          button#submit.button type='submit' SEND
+          button.button = t('contact.send_button')
       .info-wrapper
         .info
-          .info-label Contact Info:
+          .info-label = t('contact.info')
           address.vcard
             a.url.fn.n href='https://active-bridge.com'
-            .org Active Bridge, LLC
-            a.email href='mailto:contact@active-bridge.com' contact@active-bridge.com
+            .org = t('contact.organization')
+            a.email href='mailto:contact@active-bridge.com' = t('contact.email')
             .adr
-              span.locality Cherkassy
+              span.locality = t('contact.location')
               ' ,
-              span.postal-code> 18000
-              span.country-name Ukraine
-              .tel +380636086045
+              span.postal-code => t('contact.postal_code')
+              span.country-name = t('contact.country')
+              .tel = t('contact.phone_number')
