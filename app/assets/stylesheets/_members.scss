@@ -5,10 +5,11 @@
 .members {
   font-size: 0;
   overflow-y: visible;
-  padding-top: 0;
-  padding-right: 5%;
-  padding-left: 2%;
-  height: 100vh;
+  padding: 0 5% 0 2%;
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  width: 100%;
   perspective: 800px;
   perspective-origin: 50% 225px;
   transition: 2s;
@@ -42,15 +43,15 @@
     box-sizing: border-box;
     text-align: center;
     transition: transform 2s, opacity 1s;
-    top: -100px;
-    left: -100px;
+    top: -200px;
     font-size: .5rem;
     vertical-align: top;
     z-index: 10020;
-    min-width: 200px;
+    min-width: 100px;
     .member-image {
       background-size: 100%;
       background-position: center center;
+      // padding: 0 5px;
       img {
         transition: opacity .5s;
         border-radius: 50%;
