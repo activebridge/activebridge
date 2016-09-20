@@ -82,7 +82,9 @@ ajax = (method, href, async = true) ->
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
   return xhr
 
-document.querySelectorAll("input[type='radio']").forEach (input) ->
+controls = document.querySelectorAll("input[type='radio']")
+return unless controls[0]
+controls.forEach (input) ->
   input.addEventListener 'keydown', (e) ->
     @.focus()
     e.preventDefault() if (e.which == 9)
