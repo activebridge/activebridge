@@ -1,15 +1,15 @@
 .page-title.contact-title CONTACT US
 .content.contact-us
-  = form_tag Rails.application.secrets.contact_url, onsubmit: 'event.preventDefault(); window.submit(this)' do
-    .envelope
+  = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
+    #contact_form.envelope
     .data
       = inline_svg 'ActiveBridge', class: :mark
       fieldset
-        input#name type='text' placeholder='You name'
-        input#email type='email' placeholder='You e-mail' required=true
-        textarea#text placeholder='Text message' rows=4 required=true minlength=10
+        input#name name='name' type='text' placeholder='You name'
+        input#email name='email' type='email' placeholder='You e-mail' required=true
+        textarea#text name='text' placeholder='Text message' rows=4
         .text-right
-          button.button SEND
+          button#submit.button type='submit' SEND
       .info-wrapper
         .info
           .info-label Contact Info:

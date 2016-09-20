@@ -1,15 +1,19 @@
 window.submit = (form) ->
-  xhr = new XMLHttpRequest()
-  xhr.open('POST', form.action, false)
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-  body = "payload={'text': '#{ document.getElementById('text').value }',
-  'username': '#{ document.getElementById('name').value } #{ document.getElementById('email').value }', 'icon_emoji': ':email:'}"
-  xhr.send(body)
+  document.getElementById('submit').disabled = true
+  xhr = ajax('POST', form.action)
+  xhr.onreadystatechange = ->
+    return if xhr.readyState != 4
+    if xhr.status == 200
+      form = document.getElementById('contact_form').parentNode
+      form.reset()
+    else
+      document.getElementById('submit').disabled = false
+
+  data = new FormData(document.querySelector('form'))
+  xhr.send(data)
   return false
 
 window.animate = -> document.getElementById('ab').checked = true
-
-csrf = document.head.querySelector('meta[name=csrf-token]').content
 
 closeWindow = ->
   document.querySelector('#lazy_overlay').className = ''
@@ -21,10 +25,7 @@ openPage = (event) ->
   document.getElementById('lazy_body').innerHTML = ''
   document.getElementById('lazybox').className = 'hidden'
   href = this.href.baseVal
-  xhr = new XMLHttpRequest()
-  xhr.open( 'GET', href, true)
-  xhr.setRequestHeader('X-CSRF-Token', csrf)
-  xhr.setRequestHeader('Accept', 'text/javascript')
+  xhr = ajax('GET', href)
   xhr.onload = ->
     if (xhr.readyState == 4 && xhr.status == 200)
       document.body.className = href
@@ -56,22 +57,8 @@ browseTeam = (keyCode) ->
     else return
   rotateTeam(direction)
 
-browseProjects = (keyCode, activeProject) ->
-  switch keyCode
-    when 37 then direction = 'previous'
-    when 39 then direction = 'next'
-    when 27 then direction = 'close'
-    else return
-  if direction == 'close'
-    activeProject.checked = false
-  else
-    switchId = activeProject.dataset[direction]
-    document.getElementById(switchId).checked = true
-
 browseData = (event) ->
-  if activeProject = document.querySelector(".projects input:checked[name='active-section']")
-    browseProjects(event.keyCode, activeProject)
-  else if spinShape = document.querySelector('.members')
+  if spinShape = document.querySelector('.members')
     browseTeam(event.keyCode)
   else if event.keyCode == 27
     document.getElementById('lazy_close').click()
@@ -85,3 +72,17 @@ document.querySelector('#services').addEventListener('click', openPage, false)
 document.querySelector('#team').addEventListener('click', openPage, false)
 document.addEventListener('keydown', browseData, false)
 initTeamScroll()
+
+csrf = document.head.querySelector('meta[name=csrf-token]').content
+ajax = (method, href, async = true) ->
+  xhr = new XMLHttpRequest()
+  xhr.open(method, href, async)
+  xhr.setRequestHeader('X-CSRF-Token', csrf)
+  xhr.setRequestHeader('Accept', 'text/javascript')
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+  return xhr
+
+document.querySelectorAll("input[type='radio']").forEach (input) ->
+  input.addEventListener 'keydown', (e) ->
+    @.focus()
+    e.preventDefault() if (e.which == 9)
