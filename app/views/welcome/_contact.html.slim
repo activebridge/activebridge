@@ -5,7 +5,8 @@
     #contact_form.envelope
     .data
       = inline_svg 'ActiveBridge', class: 'mark-main'
-      = inline_svg 'ActiveBridge', class: 'mark-background'
+      svg.mark-background viewBox='0 0 359 359'
+        use xlink:href='#active_bridge_mark'
       fieldset
         input#name type='text' placeholder="#{ t('contact.name_placeholder') }"
         input#email type='email' placeholder="#{ t('contact.email_placeholder') }" required=true
