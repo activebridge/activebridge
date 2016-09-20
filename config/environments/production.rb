@@ -21,7 +21,7 @@ Rails.application.configure do
     authentication: :plain,
     address: 'smtp.mailgun.org',
     port: 587,
-    domain: 'sandbox71daee135dc14062a006271de52a0294.mailgun.org',
+    domain: 'active-bridge.com',
     user_name: ENV[:mailgun_login],
     password: ENV[:mailgun_password]
   }
