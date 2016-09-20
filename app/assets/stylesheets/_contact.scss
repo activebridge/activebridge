@@ -105,6 +105,9 @@
         outline: none;
         border-bottom: 1px solid $light-violet;
       }
+      &:disabled {
+        color: rgba($dark-violet, .1);
+      }
     }
   }
 

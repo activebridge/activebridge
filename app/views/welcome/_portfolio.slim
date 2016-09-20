@@ -4,9 +4,11 @@ label.project-open for='hide-all'
   h1.title.portfolio= t('portfolio.title')
   .content.projects
     .content-wrapper data-step=1 data-tf=0
+      input#reset name='active-section' tabindex='-1' type='radio' autofocus=true
+      label for='reset'
       - @projects.each_with_index do |project, i|
 
-        input id="project-#{project.id}" type='radio' name='active-section' hidden='hidden' data-previous="project-#{@projects[i-1]&.id}" data-next="project-#{@projects[i+1 == @projects.size ? 0 : i+1]&.id}"
+        input id="project-#{project.id}" type='radio' name='active-section'
         .background-wrapper style="background-image: url(#{project.image.url})"
         section.project-wrapper.about style="left: #{100/@projects.size*(i+1)}%; margin-left: -#{100/@projects.size}%;"
           label.project-open for="project-#{project.id}"
