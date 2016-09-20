@@ -1,5 +1,5 @@
 = inline_svg 'contact/contact-bg-pattern.svg', class: 'contact-background-svg'
-.page-title.contact-title = t('contact.title')
+.page-title.contact-title = t('.title')
 .content.contact-us
   = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
     #contact_form.envelope
@@ -7,21 +7,21 @@
       = inline_svg 'ActiveBridge', class: 'mark-main'
       = inline_svg 'contact/mark-background', class: 'mark-background'
       fieldset
-        input#name type='text' placeholder="#{ t('contact.name_placeholder') }"
-        input#email type='email' placeholder="#{ t('contact.email_placeholder') }" required=true
-        textarea#text placeholder="#{ t('contact.message_placeholder') }" rows=7 required=true minlength=10
+        input#name type='text' placeholder="#{ t('.name_placeholder') }"
+        input#email type='email' placeholder="#{ t('.email_placeholder') }" required=true
+        textarea#text placeholder="#{ t('.message_placeholder') }" rows=7 required=true minlength=10
         .text-right
-          button.button = t('contact.send_button')
+          button.button = t('.send')
       .info-wrapper
         .info
-          .info-label = t('contact.info')
+          .info-label = t('.info')
           address.vcard
             a.url.fn.n href='https://active-bridge.com'
-            .org = t('contact.organization')
-            a.email href='mailto:contact@active-bridge.com' = t('contact.email')
+            .org = t('.organization')
+            a.email href='mailto:contact@active-bridge.com' = t('.email')
             .adr
-              span.locality = t('contact.location')
+              span.locality = t('.location')
               ' ,
-              span.postal-code => t('contact.postal_code')
-              span.country-name = t('contact.country')
-              .tel = t('contact.phone_number')
+              span.postal-code => t('.postal_code')
+              span.country-name = t('.country')
+              .tel = t('.phone_number')
