@@ -33,7 +33,20 @@ en:
       have Master's degree, good English speaking skills and more than 6 years development practice
       in a variety of industries. Our web development company have many years’ experience of
       cooperation with other <h4>web development companies in USA</h4>, Canada, and Europe.
-
+  welcome:
+    contact:
+      title: Contact us
+      name_placeholder: Your name
+      email_placeholder: Your email
+      message_placeholder: Text message
+      send: Send
+      info: 'Contact info:'
+      organization: Active Bridge, LLC
+      email: contact@active-bridge.com
+      location: Cherkasy
+      country: Ukraine
+      postal_code: 18000
+      phone_number: '+380636086045'
   team:
     title: Team
   portfolio:
