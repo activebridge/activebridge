@@ -9,31 +9,30 @@ en:
        based on ruby on rails technology.
        Huge work experience with companies from USA, Canada, Europ.
     keywords:
-  about:
-    title: ABOUT US
-    subtitle: because we love the way we do
-    description: <h3>Ruby on Rails web development agency</h3> At Active  we all come to work every day
-      with a great enthusiasm, because we're inspired by our mission.
-      To resolve all doubts of <h4>web development process</h4> and show how simple and clear it is.
-      Every day new <h4>website projects</h4>, ideas, brands appear.
-      And in many ways, their future depends on the chosen <h4>programming language technology</h4>.
-      Our goal, at Active Bridge, connects your ideas with global community as soon as possible.
-      To provide this we implement the most faster and effective way - <h4>Ruby on Rails
-      framework</h4>. We want to popularize the way we do and show it's comprehensive facilities.
-    core_values: Our Team Core values
-    experienced_team: Foremost, we're the team of <h4>web app developers</h4>,
-      united by mutual ideas and interests.
-      Our passion is Ruby, fundamental value - friendship relationship.
-      <h4>Our web development agency</h4> success pillars based on
-      customized approach, contribution to the <h4>Rails framework</h4>
-      and sharing our experience.
-    benefits: Our main benefits
-    cost_efficient: We know the whole importance of your <h4>web project idea</h4> and provide great service
-      to create a superior finished product. All our <h4>Senior and Middle ruby on rails developers</h4>
-      have Master's degree, good English speaking skills and more than 6 years development practice
-      in a variety of industries. Our web development company have many years’ experience of
-      cooperation with other <h4>web development companies in USA</h4>, Canada, and Europe.
   welcome:
+    about:
+      subtitle: because we love the way we do
+      description: <h3>Ruby on Rails web development agency</h3> At Active  we all come to work every day
+        with a great enthusiasm, because we're inspired by our mission.
+        To resolve all doubts of <h4>web development process</h4> and show how simple and clear it is.
+        Every day new <h4>website projects</h4>, ideas, brands appear.
+        And in many ways, their future depends on the chosen <h4>programming language technology</h4>.
+        Our goal, at Active Bridge, connects your ideas with global community as soon as possible.
+        To provide this we implement the most faster and effective way - <h4>Ruby on Rails
+        framework</h4>. We want to popularize the way we do and show it's comprehensive facilities.
+      core_values: Our Team Core values
+      experienced_team: Foremost, we're the team of <h4>web app developers</h4>,
+        united by mutual ideas and interests.
+        Our passion is Ruby, fundamental value - friendship relationship.
+        <h4>Our web development agency</h4> success pillars based on
+        customized approach, contribution to the <h4>Rails framework</h4>
+        and sharing our experience.
+      benefits: Our main benefits
+      cost_efficient: We know the whole importance of your <h4>web project idea</h4> and provide great service
+        to create a superior finished product. All our <h4>Senior and Middle ruby on rails developers</h4>
+        have Master's degree, good English speaking skills and more than 6 years development practice
+        in a variety of industries. Our web development company have many years’ experience of
+        cooperation with other <h4>web development companies in USA</h4>, Canada, and Europe.
     contact:
       title: Contact us
       name_placeholder: Your name
