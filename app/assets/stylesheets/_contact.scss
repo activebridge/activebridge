@@ -135,10 +135,10 @@
 
   .info-wrapper {
     position: relative;
-    width: 100%;
+    float: right;
+    margin-right: 20%;
     text-align: center;
     padding-top: 15px;
-    padding-left: 50%;
     max-height: 35vh;
     font-weight: bold;
     .info {
@@ -170,6 +170,10 @@
     fieldset, .info-wrapper {
       padding: 5%;
       width: 100%;
+    }
+
+    .info-wrapper {
+      float: none;
     }
   }
   .mark-main, .mark-background {
