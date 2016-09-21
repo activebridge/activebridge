@@ -2,8 +2,17 @@
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+  height: 100%;
   color: $dark-violet;
   position: relative;
+
+  &-background-svg {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+  }
 
   &-desc {
     position: relative;
@@ -11,6 +20,7 @@
     background: linear-gradient(0deg, #eff0f1, #dfcace);
     padding: 30px 40px;
     width: 70%;
+    height: 35%;
     font-size: 1.2rem;
     transform: rotate(-5deg);
     -webkit-backface-visibility: hidden;
@@ -27,6 +37,37 @@
       background: $white;
       z-index: -1;
     }
+
+    &-mark {
+      position: absolute;
+      top: 68%;
+      right: 60%;
+      z-index: 100;
+    }
+
+    &-square-mark {
+      width: 190px;
+      height: 190px;
+      right: 50%;
+      top: 84%;
+      background-color: $light-grey;
+      position: absolute;
+      z-index: 99;
+      transform: rotate(27deg);
+      border: 15px solid $white;
+      box-shadow: 10px 5px 10px 2px rgba(43, 43, 43, 0.28);
+
+      &:after {
+        right: 0;
+        background-color: rgb(234, 234, 234);
+        content: '';
+        position: absolute;
+        width: 160px;
+        height: 27px;
+        display: inline-block;
+        top: 75%;
+      }
+    }
   }
 
   h3, h4 {
@@ -41,7 +82,7 @@
     display: inline-block;
     font-weight: bold;
     text-shadow: 1px 3px rgba($black, .9);
-    transform: rotate(-7deg);
+    transform: rotate(-5deg);
     -webkit-backface-visibility: hidden;
   }
 
@@ -55,9 +96,10 @@
     border: 20px solid $white;
     box-shadow: inset 0 0 0px 5px #fafafa;
     border-radius: 5px;
-    width: 37%;
-    font-size: .9rem;
-    top: 45%;
+    width: 35%;
+    height: 54%;
+    font-size: 1rem;
+    top: 34%;
     position: absolute;
     right: 0;
     transform: rotate(5deg);
@@ -76,6 +118,7 @@
       top: -50px;
       left: 25%;
       background: #eff0f1;
+      background: linear-gradient(to bottom, $white, $light-grey);
       border-radius: 2px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
@@ -83,9 +126,23 @@
     }
 
     &:after {
+      z-index: -1;;
+      background: linear-gradient(to bottom, $white, $white, $light-grey);
       top: -75px;
       width: 36%;
       left: 32%;
+    }
+
+    &-circle {
+      border-radius: 50%;
+      width: 185px;
+      height: 185px;
+      background-color: $light-grey;
+      border: 13px solid $white;
+      position: absolute;
+      top: 38%;
+      right: 90%;
+      box-shadow: 3px 4px rgba(158, 155, 155, 0.14);
     }
   }
 }
