@@ -22,11 +22,13 @@
   padding-top: 3%;
 
   form, .envelope {
-    max-width: 80%;
     height: 70vh;
+    width: 80%;
+    max-height: 740px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
-    margin-top: 110px;
+    margin-top: 12vh;
     border-radius: 5px;
     &:before {
       border-radius: 5px;
@@ -94,6 +96,11 @@
       padding: 5% 5% 5% 5%;
       border: none;
       position: relative;
+      z-index: 2;
+      ::-webkit-input-placeholder {color: $gray; opacity: .3}
+      ::-moz-placeholder          {color: $gray; opacity: .3}
+      :-moz-placeholder           {color: $gray; opacity: .3}
+      :-ms-input-placeholder      {color: $gray; opacity: .3}
     }
     input, textarea {
       font-family: Arial;
@@ -103,13 +110,13 @@
       box-sizing: border-box;
       border: none;
       border-bottom: 1px solid rgba(106,106,106,0.4);
-      color: rgba(106,106,106,0.4);
+      color: $dark-violet;
       resize: none;
       transition: border-color .3s;
       font-size: 1.2rem;
       &:focus {
         outline: none;
-        border-color: $light-violet;
+        border-color: $dark-violet;
       }
     }
     button {
@@ -120,8 +127,10 @@
       color: rgb(159, 75, 132);
       font-size: 1.2rem;
       transition: box-shadow .3s;
+      cursor: pointer;
+      transition: opacity .3s;
       &:hover {
-        cursor: pointer;
+        opacity: .7;
       }
       &:focus {
         outline: none;
@@ -136,11 +145,12 @@
   .info-wrapper {
     position: relative;
     float: right;
-    margin-right: 20%;
+    margin-right: 6vw;
     text-align: center;
     padding-top: 15px;
     max-height: 35vh;
     font-weight: bold;
+    z-index: 1;
     .info {
       position: relative;
       display: inline-block;
@@ -161,6 +171,10 @@
     color: rgba(106,106,106,0.4);
     a {
       color: rgba(106,106,106,0.4);
+      transition: color .3s;
+      &:hover {
+        color: $dark-violet;
+      }
     }
   }
 }
@@ -168,12 +182,24 @@
 @media screen and (max-width: 640px) {
   .contact-us form {
     fieldset, .info-wrapper {
-      padding: 5%;
+      padding: 8%;
       width: 100%;
     }
-
+    fieldset {
+      input, textarea {
+        font-size: 1rem;
+      }
+    }
     .info-wrapper {
       float: none;
+      margin-top: 55px;
+      .info-label {
+        display: none;
+      }
+      address {
+        text-align: center;
+        line-height: 2;
+      }
     }
   }
   .mark-main, .mark-background {
