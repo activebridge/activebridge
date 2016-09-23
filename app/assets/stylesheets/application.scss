@@ -116,7 +116,11 @@ svg#main {
 
   #portfolio {
     transform: translate(0%, 0%);
+    transition: transform .5s;
     transition-delay: 0s;
+    &:hover {
+      transform: translate(-4%, 3%);
+    }
   }
 
   #about {
@@ -205,39 +209,36 @@ svg#main {
   }
 }
 
-.contact {
-  #lazy_overlay {
-    opacity: 1;
-  }
-
-  .contact-title {
-    top: 3%;
-    transform: rotate(1deg);
-    -webkit-backface-visibility: hidden;
-    transition: transform .3s, top .3s;
-  }
+.contact #lazy_overlay {
+  opacity: 1;
 }
 
-.contact-title {
-  text-transform: uppercase;
-  right: 10%;
-}
-
-.page-title {
+.page-title, .contact-title {
   position: fixed;
-  top: -10%;
   padding: 1% 5%;
   background: $white;
   color: $dark-violet;
   font-size: 2rem;
   font-weight: bold;
+  z-index: 1000;
+}
+
+.page-title {
+  top: -10%;
   box-shadow: 7px 7px 7px rgba(black, .3);
+  transform: rotate(-110deg);
   transition: transform .3s, top .3s;
   transition-delay: .3s;
-  transform: rotate(-110deg);
   -webkit-backface-visibility: hidden;
   transform-origin: 0;
-  z-index: 10000;
+
+}
+
+.contact-title {
+  top: 6%;
+  right: 10%;
+  box-shadow: 7px 7px 0 rgba(black, 0.1);
+  text-transform: uppercase;
 }
 
 .social-icons {

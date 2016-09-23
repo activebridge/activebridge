@@ -1,5 +1,5 @@
 = inline_svg 'contact/contact-bg-pattern.svg', class: 'contact-background-svg'
-.page-title.contact-title = t('.title')
+.contact-title = t('.title')
 .content.contact-us
   = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
     #contact_form.envelope
