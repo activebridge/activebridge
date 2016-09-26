@@ -1,4 +1,4 @@
-@import 'variables';
+$bg: #433B43;
 
 html {
   -ms-touch-action: manipulation;
@@ -10,7 +10,6 @@ body {
   overflow: hidden;
   max-height: 100vh;
   margin: 0;
-  background: $dark-violet;
 }
 
 #pages {
