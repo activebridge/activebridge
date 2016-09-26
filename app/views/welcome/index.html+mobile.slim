@@ -1,8 +1,8 @@
 #pages
   .page#home
-    span.logo= render 'layouts/logo.svg'
+    = inline_svg 'ActiveBridge.svg', class: :logo
     p= t('hello')
     = render 'social_icons'
   .page#about= render('about')
   .page#services= render 'services'
-  .page#team= render 'team'
+  .page#contact= render 'contact'

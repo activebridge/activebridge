@@ -136,6 +136,7 @@ en:
           Awesome team. Full stack development. Happy to work with these guys any day.
       - company: Preeline
         logo: https://d1qb2nb5cznatu.cloudfront.net/startups/i/297009-8af321cc567f3918450b0fcc98ddf8f6-medium_jpg.jpg?buster=1424202571
+        banner: https://preeline.com/assets/preeline-horizontal-070b759047259186fb90765b1e54f068ed25c7429b615de052cb690e58cec34b.svg
         author: Julia Macalaster
         image: https://media.licdn.com/media/p/4/005/081/397/117ba71.jpg
         description:
@@ -145,7 +146,8 @@ en:
           Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
           We feel so incredibly lucky to be working with them
       - company: Freestak
-        logo: http://new.freestak.com/wp-content/uploads/2015/11/TEN_FreestakLogo.png
+        logo: https://res.cloudinary.com/active-bridge/image/upload/v1474614652/freestak.png
+        banner: https://res.cloudinary.com/active-bridge/image/upload/v1474614834/freestak_logo.png
         author: Julie Freeman Kummer
         image: https://media.licdn.com/media/p/2/000/012/005/0fcec38.jpg
         description:
