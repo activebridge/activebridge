@@ -13,6 +13,7 @@ body {
 }
 
 #pages {
+  z-index: 100;
   position: relative;
   white-space: nowrap;
   font-size: 0;
@@ -42,7 +43,6 @@ body {
 }
 
 .page {
-  background: rgba(white, 0.5);
   vertical-align: top;
   width: 100%;
   white-space: normal;
@@ -50,14 +50,6 @@ body {
   overflow-y: auto;
   display: inline-block;
   position: relative;
-  h1 {
-    margin: 0;
-    padding: 10px 0;
-    text-align: center;
-    color: white;
-    background: rgba(rebeccapurple, 0.9);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-  }
 }
 
 @media screen and (orientation:landscape) {
@@ -81,10 +73,63 @@ body {
   }
 }
 
-.services {
+.page {
   h3, h4 {
     font-size: inherit;
     font-weight: normal;
     display: inline;
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 40px 0;
+  & > * {
+    background: white;
+    display: inline-block;
+    padding: 20px 40px;
+    color: #B868A0;
+  }
+}
+
+.about-desc {
+  padding: 0 10%;
+  text-align: justify;
+}
+
+dd {
+  margin: 0;
+  display: flex;
+  svg {
+    padding: 0 3%;
+    width: 45%;
+  }
+  span {
+    padding: 0 3%;
+    width: 55%;
+  }
+  .right {
+    text-align: right;
+  }
+}
+
+mark {
+  background: transparent;
+  color: #B868A0;
+}
+
+input, textarea {
+  border: 2px dashed gray;
+  box-sizing: border-box;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  background: transparent;
+  color: #B868A0;
+  border-radius: 5px;
+  display: block;
+  &:focus {
+    outline: none;
+    border-color: #B868A0;
   }
 }
