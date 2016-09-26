@@ -5,35 +5,51 @@
 .members {
   font-size: 0;
   overflow-y: visible;
-  padding: 0 5% 0 2%;
+  padding: 0;
   transform: translateY(-50%);
   top: 50%;
   position: absolute;
   width: 100%;
-  perspective: 800px;
-  perspective-origin: 50% 225px;
+  height: 100%;
+  perspective: 900px;
   transition: 2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   #rotate-shape {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
-    height: 1px;
-    width: 1px;
+    height: 100vmin;
+    width: 0vmin;
     transition: .5s ease-out;
     transform-style: preserve-3d;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    .ring {
+      position: fixed;
+      top: -30vmin;
+      left: -50vmin;
+      right: 50vmin;
+      bottom: 0;
+      height: 100vmin;
+      width: 100vmin;
+      background: linear-gradient(to left, transparent, black, black, transparent);
+      opacity: .05;
+      border-radius: 50%;
+      border: 1px solid rgba(black, .7);
+    }
   }
   .logo {
-    z-index: 9999;
+    position: relative;
     display: inline-flex;
     align-self: center;
     box-shadow: 0 2px 25px rgba(0,0,0,0.5);
     border-radius: 50%;
     img {
-      width: 80vmin;
-      height: 80vmin;
+      transition: 1s;
+      width: 100vmin;
+      height: 100vmin;
       border-radius: 50%;
     }
   }
@@ -43,24 +59,28 @@
     box-sizing: border-box;
     text-align: center;
     transition: transform 2s, opacity 1s;
-    top: -200px;
+    left: -18vmin;
     font-size: .5rem;
     vertical-align: top;
     z-index: 10020;
-    min-width: 100px;
+    width: 36vmin;
     .member-image {
       background-size: 100%;
       background-position: center center;
-      // padding: 0 5px;
       img {
         transition: opacity .5s;
-        border-radius: 50%;
       }
     }
 
     &:hover {
       .member-image img {
         opacity: 0;
+      }
+    }
+
+    &.placeholder:hover {
+      .member-image img {
+        opacity: 1;
       }
     }
 
@@ -75,6 +95,7 @@
     }
 
     .details {
+      position: absolute;
       font-size: 16px;
       color: white;
       h2 { margin: 0; }
