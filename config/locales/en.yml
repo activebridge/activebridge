@@ -47,6 +47,8 @@ en:
       country: Ukraine
       postal_code: 18000
       phone_number: '+380636086045'
+    testimonials:
+      title: Testimonials
   team:
     title: Team
   portfolio:
