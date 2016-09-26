@@ -2,7 +2,8 @@
   scss:
     body {
       overflow: hidden;
-      background: #744a71;
+      background: #433B43;
+      color: white;
     }
 
     .page {
@@ -15,10 +16,17 @@
     }
 
     .social-icons {
+      width: 80%;
+      margin: 0 auto;
       padding-top: 35px;
+      text-align: center;
       a {
         display: inline-block;
         padding: 10px;
+        width: 16%;
+        svg path {
+          fill: white;
+        }
       }
     }
 
@@ -27,7 +35,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: #123;
+      background: white;
       font-size: 0;
       a {
         display: inline-block;
@@ -37,15 +45,10 @@
         box-sizing: border-box;
         text-align: center;
       }
-
-      svg.icon path {
-        fill: white;
-      }
     }
 
     .logo {
-      width: 100%;
-      max-height: 40vh;
+      width: 80%;
       margin-top: 10px;
     }
 
@@ -55,13 +58,8 @@ html
   body
     main= yield
     nav
-      a href='home'
-        = svg(:home, :xl)
-      a href='about'
-        = svg(:info, :xl)
-      a href='services'
-        = svg(:cogs, :xl)
-      a href='team'
-        = svg(:group, :xl)
-    = stylesheet_link_tag :mobile, media: :all, async: true
+      a href='home'= svg('mobile/menu-services', :xl)
+      a href='about'= svg('mobile/menu-about', :xl)
+      a href='services'= svg('mobile/menu-services', :xl)
+      a href='team'= svg('mobile/menu-contacts', :xl)
     = javascript_include_tag :mobile, async: true

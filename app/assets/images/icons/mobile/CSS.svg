@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="116px" height="240px" viewBox="0 0 116 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>CSS</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M47.191964,5.76280994 C56.1226288,-0.733610603 70.5996918,-0.735360372 79.5327619,5.76280994 L109.355265,27.4565505 C118.28593,33.952971 122.761251,47.7377263 119.349121,58.2519867 L107.957939,93.3531962 C104.546728,103.864625 92.8355656,112.385823 81.7811641,112.385823 L44.9435618,112.385823 C33.8977388,112.385823 22.1789164,103.867457 18.7667872,93.3531962 L7.37560453,58.2519867 C3.96439414,47.7405575 8.43639054,33.9547208 17.3694607,27.4565505 L47.191964,5.76280994 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="AB-mobile" sketch:type="MSArtboardGroup" transform="translate(-2557.000000, -569.000000)">
+            <g id="screen-3" sketch:type="MSLayerGroup" transform="translate(2046.000000, 143.000000)">
+                <g id="Group" transform="translate(-698.000000, 100.000000)">
+                    <g id="service-list" transform="translate(779.000000, 326.000000)">
+                        <g id="CSS" transform="translate(424.728380, 0.000000)">
+                            <text id="CSS-SASS-LESS-Compas" opacity="0.7" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.7320341" font-weight="420" sketch:alignment="middle" fill="#FFFFFF">
+                                <tspan x="43.8638246" y="164.463415">CSS</tspan>
+                                <tspan x="38.0132765" y="188.035781">SASS</tspan>
+                                <tspan x="39.1084044" y="211.608147">LESS</tspan>
+                                <tspan x="20.4616322" y="235.180513">Compass</tspan>
+                            </text>
+                            <mask id="mask-2" sketch:name="Mask" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#4F484F" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                            <g id="Group" mask="url(#mask-2)" fill="#B96BA2" sketch:type="MSShapeGroup">
+                                <g transform="translate(40.225335, 35.227994)" id="Shape">
+                                    <path d="M23.7004746,19.5158993 L36.4593093,19.5158993 L37.3404521,9.65868473 L23.7004746,9.65868473 L23.7004746,0.0323128035 L23.7338767,0.0323128035 L47.878175,0.0323128035 L47.6469494,2.61501056 L45.2772111,29.1414957 L23.7004746,29.1414957 L23.7004746,19.5158993 Z"></path>
+                                    <path d="M24.344711,44.5151522 L24.3025052,44.5270433 L13.5641107,41.6320746 L12.8774252,33.9550695 L7.65970263,33.9550695 L3.19883599,33.9550695 L4.54942111,49.0689309 L24.3001749,54.5429783 L24.344711,54.5305702 L24.344711,44.5151522 Z"></path>
+                                    <path d="M35.639792,28.7340959 L34.4787446,41.625612 L23.7248141,44.5234242 L23.7248141,54.5383253 L43.4913627,49.0689309 L43.6363642,47.4429507 L45.3137204,28.7340959 L35.639792,28.7340959 Z"></path>
+                                    <path d="M24.3203715,0.0323128035 L24.3203715,6.01095696 L24.3203715,9.63490251 L24.3203715,9.65868473 L1.06110004,9.65868473 L1.06110004,9.65868473 L1.03028723,9.65868473 L0.836865625,7.4950194 L0.397459385,2.61501056 L0.167010621,0.0323128035 L24.3203715,0.0323128035 Z"></path>
+                                    <path d="M24.2869694,19.5169333 L24.2869694,25.495836 L24.2869694,29.1192645 L24.2869694,29.1430468 L13.7153265,29.1430468 L13.7153265,29.1430468 L13.6845137,29.1430468 L13.491351,26.9796399 L13.0516859,22.0996311 L12.8212371,19.5169333 L24.2869694,19.5169333 Z"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
