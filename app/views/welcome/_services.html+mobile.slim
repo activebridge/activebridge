@@ -1,0 +1,29 @@
+.content.services
+  .text-center= t('services.we_do')
+  dd.skills
+    - I18n.t('services.skills').each_with_index do |skill, index|
+        dt= svg(skill[:icon])
+        dd= skill[:skill_name]
+  .section-tab.text-left
+    h2.section-tab-title= t('services.agile_programming')
+    dl.section-tab-description.text-center itemprop='description'
+      dt itemprop='description': h3= t('services.custom_web_development.title')
+      dd itemprop='description'== t('services.custom_web_development.desc')
+      dt itemprop='description': h3= t('services.scrum.title')
+      dd itemprop='description'== t('services.scrum.desc')
+      dt itemprop='description': h3= t('services.free_review.title')
+      dd itemprop='description'== t('services.free_review.desc')
+
+    input#maintenance type='radio' hidden=true name='active-tab'
+    .section-tab.text-center
+      h3.section-tab-title
+        label for='maintenance'
+          = t('services.maintenance_and_support')
+      div itemprop='description' class= 'section-tab-description text-center'
+        == t('services.code_audit')
+    input#outstaffing type='radio' hidden=true name='active-tab'
+    .section-tab.text-right
+      h3.section-tab-title
+        label for='outstaffing'= t('services.outstaffing')
+      div itemprop='description' class= 'section-tab-description text-center'
+        == t('services.team')

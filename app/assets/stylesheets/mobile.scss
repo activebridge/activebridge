@@ -1,8 +1,4 @@
 @import 'variables';
-@import 'defaults';
-@import 'base';
-@import 'members';
-@import 'bridge';
 
 html {
   -ms-touch-action: manipulation;
@@ -13,18 +9,8 @@ body {
   height: 100%;
   overflow: hidden;
   max-height: 100vh;
-}
-
-main:before {
-  content: '';
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: image-url('bg.jpeg') no-repeat;
-  background-size: cover;
-  filter: blur(3px);
+  margin: 0;
+  background: $dark-violet;
 }
 
 #pages {
@@ -63,7 +49,6 @@ main:before {
   white-space: normal;
   height: 100vh;
   overflow-y: auto;
-  font-size: 16px;
   display: inline-block;
   position: relative;
   h1 {
@@ -73,13 +58,6 @@ main:before {
     color: white;
     background: rgba(rebeccapurple, 0.9);
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-  }
-}
-
-.members .member {
-  width: 33%;
-  &:hover img {
-    opacity: 1;
   }
 }
 
@@ -102,8 +80,12 @@ main:before {
   main {
     padding-right: 54px;
   }
+}
 
-  .members .member {
-    width: 25%;
+.services {
+  h3, h4 {
+    font-size: inherit;
+    font-weight: normal;
+    display: inline;
   }
 }

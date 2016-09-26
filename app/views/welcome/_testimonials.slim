@@ -1,19 +1,15 @@
-div
-h1.title= t('testimonials.title')
+.page-title.contact-title= t('.title')
 .content.testimonials
   .wrapper
-    - I18n.t('testimonials.all').each_with_index do |testimonial, index|
-      input type='radio' name='active-testimonial' id="#{testimonial[:author].delete("\s")}" hidden=true checked=true
-      .testimonial
-        .testimonial-logo
-          = image_tag(testimonial[:logo])
+    - I18n.t('testimonials.all').each do |testimonial|
+      input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=true autofocus=true
+      .testimonial class="testimonial #{testimonial[:company].underscore}"
+        .testimonial-logo= image_tag(testimonial[:banner] || testimonial[:logo])
         .testimonial-body
           .testimonial-wrapper
-            h2
-              q= testimonial[:description]
+            h2: q= testimonial[:description]
             hr
-            h3
-              = testimonial[:author]
+            h3= testimonial[:author]
           = image_tag(testimonial[:image], class: :author)
-      label for="#{testimonial[:author].delete("\s")}"
+      label for="testimonial_#{testimonial[:company].underscore}"
         = image_tag(testimonial[:logo])
