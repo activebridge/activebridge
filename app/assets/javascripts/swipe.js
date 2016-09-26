@@ -1,6 +1,7 @@
 var startX = startY = endX = endY = swipeX = swipeY = page = 0,
   pages = ['home', 'about', 'services', 'team', 'portfolio'],
   slider = document.getElementById('pages'),
+  bg = document.getElementById('bg'),
   horizontal,
   swipeEndX = 100 * page;
 
@@ -43,6 +44,7 @@ slider.addEventListener('touchend', function(event) {
 
 function slide(val) {
   slider.style.transform = 'translate(-' + (val).toFixed() + '%)';
+  bg.style.transform = 'translate(' + (val/8).toFixed() + '%)';
 }
 
 slider.addEventListener('transitionend', function(){ this.className = '' }, false);

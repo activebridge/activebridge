@@ -1,8 +1,14 @@
+= inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
 #pages
   .page#home
-    = inline_svg 'icons/mobile/main-logo.svg', class: :logo
+    = inline_svg 'mobile/icons/main-logo.svg', class: :logo
+    h1
+      | Active
+      mark
+        | ::
+      | Bridge
     p= t('hello')
     = render 'social_icons'
-  .page#about= render('about')
+  .page#about= render 'about'
   .page#services= render 'services'
   .page#contact= render 'contact'

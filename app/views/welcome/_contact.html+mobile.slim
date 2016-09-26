@@ -1,21 +1,18 @@
-.content.contact-us
-  = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
-    fieldset
-      input#name type='text' placeholder="#{ t('.name_placeholder') }"
-      input#email type='email' placeholder="#{ t('.email_placeholder') }" required=true
-      textarea#text placeholder="#{ t('.message_placeholder') }" rows=7 required=true minlength=10
-      .text-right
-        button.button = t('.send')
-    .info-wrapper
-      .info
-        .info-label = t('.info')
-        address.vcard
-          a.url.fn.n href='https://active-bridge.com'
-          .org = t('.organization')
-          a.email href='mailto:contact@active-bridge.com' = t('.email')
-          .adr
-            span.locality = t('.location')
-            ' ,
-            span.postal-code => t('.postal_code')
-            span.country-name = t('.country')
-            .tel = t('.phone_number')
+.title: span=t('.title')
+= form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
+  input#name type='text' placeholder="#{ t('.name_placeholder') }"
+  input#email type='email' placeholder="#{ t('.email_placeholder') }" required=true
+  textarea#text placeholder="#{ t('.message_placeholder') }" rows=7 required=true minlength=10
+  .text-right
+    button.button = t('.send')
+  .info-wrapper
+    .info
+      address.vcard
+        a.url.fn.n href='https://active-bridge.com'
+        a.email href='mailto:contact@active-bridge.com' = t('.email')
+        .adr
+          .tel = t('.phone_number')
+          span.locality = t('.location')
+          ' ,
+          span.postal-code => t('.postal_code')
+          span.country-name = t('.country')

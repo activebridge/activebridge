@@ -37,6 +37,7 @@
       right: 0;
       background: white;
       font-size: 0;
+      z-index: 1000;
       a {
         display: inline-block;
         width: 25%;
@@ -49,7 +50,21 @@
 
     .logo {
       width: 80%;
-      margin-top: 10px;
+      margin-top: 40px;
+    }
+
+    .bg {
+      position: absolute;
+      bottom: 0;
+      left: -85%;
+      max-height: 100vh;
+      padding-bottom: 50px;
+      width: 200%;
+      transition: transform .1s;
+
+      g {
+        stroke: #504850 !important;
+      }
     }
 
 doctype 5
@@ -58,8 +73,9 @@ html
   body
     main= yield
     nav
-      a href='home'= svg('mobile/menu-services', :xl)
-      a href='about'= svg('mobile/menu-about', :xl)
-      a href='services'= svg('mobile/menu-services', :xl)
-      a href='team'= svg('mobile/menu-contacts', :xl)
+      a href='home'= inline_svg('mobile/icons/menu-services', class: :xl)
+      a href='about'= inline_svg('mobile/icons/menu-about', class: :xl)
+      a href='services'= inline_svg('mobile/icons/menu-services', class: :xl)
+      a href='team'= inline_svg('mobile/icons/menu-contacts', class: :xl)
+    = stylesheet_link_tag :mobile, media: :all, async: true
     = javascript_include_tag :mobile, async: true
