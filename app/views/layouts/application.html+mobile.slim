@@ -67,13 +67,18 @@
       }
     }
 
+    mark, .mark {
+      background: transparent;
+      color: #B868A0;
+    }
+
 doctype 5
 html
   = render 'layouts/head', type: :mobile, media: :none
   body
     main= yield
     nav
-      a href='home'= inline_svg('mobile/icons/menu-services', class: :xl)
+      a href='home'= inline_svg('mobile/icons/menu-home', class: :xl)
       a href='about'= inline_svg('mobile/icons/menu-about', class: :xl)
       a href='services'= inline_svg('mobile/icons/menu-services', class: :xl)
       a href='team'= inline_svg('mobile/icons/menu-contacts', class: :xl)

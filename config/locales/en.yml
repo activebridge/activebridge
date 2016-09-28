@@ -70,19 +70,24 @@ en:
         fundamental knowledge in
         Strong Skills.
     skills:
-      - skill_name: Ruby on Rails
+      - id: ror
+        name: Ruby on Rails
         level: 99
         icon: rails
-      - skill_name: Javascript / ReactJS / jQuery / AngularJS / Backbone.js
+      - id: js
+        skill_name: Javascript / ReactJS / jQuery / AngularJS / Backbone.js
         level: 88
         icon: js
-      - skill_name: HTML / Haml / Slim
+      - id: html
+        name: HTML / Haml / Slim
         level: 95
         icon: code
-      - skill_name: CSS / SASS / LESS / Compass
+      - id: css
+        skill_name: CSS / SASS / LESS / Compass
         level: 97
         icon: css3
-      - skill_name: MySQL / PostgreSQL / MongoDB / Redis
+      - id: sql
+        skill_name: MySQL / PostgreSQL / MongoDB / Redis
         level: 85
         icon: database
     scrum:

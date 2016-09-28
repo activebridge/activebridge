@@ -1,4 +1,3 @@
-#= require google_tag_manager
 #= require swipe
 
 [].forEach.call document.querySelectorAll('nav a'), (a) ->
@@ -12,4 +11,4 @@ navigate = (e) ->
   slide(@swipeEndX)
   navigator.vibrate(70)
 
-navigator.serviceWorker.register('/sw.js') if (navigator.serviceWorker)
+# navigator.serviceWorker.register('/sw.js') if (navigator.serviceWorker)
