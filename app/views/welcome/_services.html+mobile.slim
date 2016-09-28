@@ -1,29 +1,18 @@
 .title: span=t('services.title')
-p= t('services.we_do')
-dd.skills
+p.text-center= t('services.we_do')
+ul.skills
   - I18n.t('services.skills').each_with_index do |skill, index|
-      dt= inline_svg("mobile/icons/#{skill[:icon]}.svg", class: :icon)
-      dd= skill[:skill_name]
-.section-tab.text-left
-  h2.section-tab-title= t('services.agile_programming')
-  dl.section-tab-description.text-center itemprop='description'
-    dt: h3= t('services.custom_web_development.title')
-    dd itemprop='description'== t('services.custom_web_development.desc')
-    dt: h3= t('services.scrum.title')
-    dd itemprop='description'== t('services.scrum.desc')
-    dt: h3= t('services.free_review.title')
-    dd itemprop='description'== t('services.free_review.desc')
+    li= inline_svg("mobile/icons/#{skill[:id]}.svg")
+.title: h2= t('services.agile_programming')
+dl.text-left.section itemprop='description'
+  dt: h3.mark= t('services.custom_web_development.title')
+  dd itemprop='description'== t('services.custom_web_development.desc')
+  dt: h3.mark= t('services.scrum.title')
+  dd itemprop='description'== t('services.scrum.desc')
+  dt: h3.mark= t('services.free_review.title')
+  dd itemprop='description'== t('services.free_review.desc')
 
-  input#maintenance type='radio' hidden=true name='active-tab'
-  .section-tab.text-center
-    h3.section-tab-title
-      label for='maintenance'
-        = t('services.maintenance_and_support')
-    div itemprop='description' class= 'section-tab-description text-center'
-      == t('services.code_audit')
-  input#outstaffing type='radio' hidden=true name='active-tab'
-  .section-tab.text-right
-    h3.section-tab-title
-      label for='outstaffing'= t('services.outstaffing')
-    div itemprop='description' class= 'section-tab-description text-center'
-      == t('services.team')
+.title: h3= t('services.maintenance_and_support')
+.section itemprop='description' == t('services.code_audit')
+.title: h3= t('services.outstaffing')
+.section itemprop='description' == t('services.team')
