@@ -11,4 +11,6 @@ navigate = (e) ->
   slide(@swipeEndX)
   navigator.vibrate(70)
 
+document.body.addEventListener 'gesturestart', (e) -> e.preventDefault()
+
 # navigator.serviceWorker.register('/sw.js') if (navigator.serviceWorker)
