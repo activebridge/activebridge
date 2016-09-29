@@ -110,12 +110,6 @@ section {
   }
 }
 
-h3, h4 {
-  font-size: inherit;
-  font-weight: normal;
-  display: inline;
-}
-
 div, p {
   padding: 0 10%;
 }
@@ -128,10 +122,12 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   display: inline-block;
   font-size: inherit;
+  font-weight: normal;
 }
 
 h1 {
   font-size: 2rem;
+  text-shadow: 1px 0 0 currentColor;
 }
 
 h6, button, label {

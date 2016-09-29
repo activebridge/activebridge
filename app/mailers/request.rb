@@ -1,6 +1,6 @@
 class Request < ApplicationMailer
   def notify(attrs)
-    mail_to(
+    mail(
       from: "#{attrs[:name]} <#{attrs[:email]}>",
       to: 'contact@active-bridge.com',
       subject: "Contact Us: #{attrs[:name]}",
@@ -9,10 +9,11 @@ class Request < ApplicationMailer
   end
 
   def confirm(attrs)
-    mail_to(
-      from: 'contact@active-bridge.com',
-      from: "#{attrs[:name]} <#{attrs[:email]}>",
-      subject: "Contact Us: #{attrs[:name]}",
-      body: attrs[:message],
+    @name = attrs[:name]
+    mail(
+      from: attrs[:email],
+      to: 'contact@active-bridge.com',
+      subject: "Active Bridge",
+    )
   end
 end
