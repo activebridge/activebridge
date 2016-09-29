@@ -7,9 +7,9 @@
       = inline_svg 'ActiveBridge', class: 'mark-main'
       = inline_svg 'contact/mark-background', class: 'mark-background'
       fieldset
-        input#name type='text' placeholder="#{ t('.name_placeholder') }"
-        input#email type='email' placeholder="#{ t('.email_placeholder') }" required=true
-        textarea#text placeholder="#{ t('.message_placeholder') }" rows=7 required=true minlength=10
+        input#name name='contact[name]' type='text' placeholder="#{ t('.name_placeholder') }"
+        input#email name='contact[email]' type='email' placeholder="#{ t('.email_placeholder') }" required=true
+        textarea#text name='contact[message]' placeholder="#{ t('.message_placeholder') }" rows=7 required=true minlength=10
         .text-right
           button#submit.button = t('.send')
       .info-wrapper

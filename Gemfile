@@ -30,16 +30,17 @@ gem 'sitemap_generator'
 gem 'whenever', require: false
 
 group :development, :test do
-  gem 'pry'
-  gem 'capybara'
-  gem 'poltergeist'
-  gem 'database_cleaner'
-  gem 'capistrano-rails',       '~> 1.1.3'
   gem 'capistrano-passenger',   '~> 0.2.0'
+  gem 'capistrano-rails',       '~> 1.1.3'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'letter_opener'
+  gem 'poltergeist'
+  gem 'pry'
+  gem 'rack_session_access'
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'rack_session_access'
   gem 'simplecov', require: false
 end
 
