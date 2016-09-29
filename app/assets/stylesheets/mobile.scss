@@ -3,6 +3,13 @@ $bg: #433B43;
 html {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+  font-size: 16px;
+}
+
+nav svg {
+  path, polygon, rect {
+    stroke: #B96BA2;
+  }
 }
 
 body {
@@ -20,6 +27,10 @@ body {
   will-change: transform;
   backface-visibility: hidden;
   perspective: 1000;
+
+  > * {
+    font-size: 1rem;
+  }
 
   &.active {
     transition: transform .2s;
@@ -42,7 +53,7 @@ body {
   }
 }
 
-.page {
+section {
   vertical-align: top;
   width: 100%;
   white-space: normal;
@@ -81,25 +92,47 @@ h3, h4 {
   display: inline;
 }
 
-.title {
+div, p {
+  padding: 0 10%;
+}
+
+div {
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  display: inline-block;
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h6, button, label {
   text-align: center;
-  padding: 5% 0;
-  & > * {
-    background: white;
-    display: inline-block;
-    padding: 5% 10%;
-    color: #B868A0;
-    box-shadow: 0 0 20px 0 rgba(black, .4);
-    text-shadow: 1px 0 0 currentColor;
-    font-size: 1rem;
-    border: none;
-    display: inline-block;
-  }
+  padding: 5% 10%;
+  background: white;
+  display: inline-block;
+  margin: 5% 0;
+  color: #B868A0;
+  box-shadow: 0 0 20px 0 rgba(black, .4);
+  text-shadow: 1px 0 0 currentColor;
+  font-size: 1rem;
+  border: none;
+  display: inline-block;
+  font-weight: normal;
+}
+
+h6 {
+  font-size: 1.5rem;
 }
 
 dd {
   margin: 0;
   display: flex;
+  align-items: center;
   svg {
     padding: 0 3%;
     width: 45%;
@@ -112,6 +145,9 @@ dd {
     text-align: right;
   }
   margin-bottom: 20px;
+  &:nth-child(4) span {
+    text-align: left;
+  }
 }
 
 input, textarea {
@@ -119,6 +155,7 @@ input, textarea {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
+  text-align: left;
   margin: 10px 0;
   background: transparent;
   color: #B868A0;
@@ -133,6 +170,7 @@ input, textarea {
 
 form {
   padding: 0 5%;
+  text-align: right;
 }
 
 address {
@@ -145,7 +183,6 @@ address {
 
 button {
   text-transform: uppercase;
-  font-size: .7rem !important;
 }
 
 body {

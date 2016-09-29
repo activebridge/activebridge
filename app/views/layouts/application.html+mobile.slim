@@ -4,6 +4,16 @@
       overflow: hidden;
       background: #433B43;
       color: white;
+      text-align: center;
+    }
+
+    section {
+      padding-bottom: 60px;
+    }
+
+    main {
+      position: relative;
+      z-index: 100;
     }
 
     .page {
@@ -76,7 +86,8 @@ doctype 5
 html
   = render 'layouts/head', type: :mobile, media: :none
   body
-    main= yield
+    = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
+    main#pages= yield
     nav
       a href='home'= inline_svg('mobile/icons/menu-home', class: :xl)
       a href='about'= inline_svg('mobile/icons/menu-about', class: :xl)

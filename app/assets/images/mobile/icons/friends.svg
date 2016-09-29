@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="298px" height="289px" viewBox="0 0 298 289" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <defs>
-        <path d="M119.072781,9.74339712 C135.601128,-2.26514952 162.409275,-2.25759159 178.927219,9.74339712 L276.948163,80.9597818 C293.47651,92.9683285 301.753494,118.466727 295.444201,137.884734 L258.003532,253.115266 C251.690266,272.545502 229.997577,288.296821 209.580275,288.296821 L88.4197248,288.296821 C67.989565,288.296821 46.3057609,272.533273 39.9964678,253.115266 L2.55579864,137.884734 C-3.75746794,118.454498 4.53389309,92.9607705 21.051837,80.9597818 L119.072781,9.74339712 Z" id="path-1"></path>
+        <path d="M119.072781,9.74339712 C135.601128,-2.26514952 162.409275,-2.25759159 178.927219,9.74339712 L276.948163,80.9597818 C293.47651,92.9683285 301.753494,118.466727 295.444201,137.884734 L258.003532,253.115266 C251.690266,272.545502 229.997577,288.296821 209.580275,288.296821 L88.4197248,288.296821 C67.989565,288.296821 46.3057609,272.533273 39.9964678,253.115266 L2.55579864,137.884734 C-3.75746794,118.454498 4.53389309,92.9607705 21.051837,80.9597818 L119.072781,9.74339712 Z" id="path-1234"></path>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="AB-mobile" sketch:type="MSArtboardGroup" transform="translate(-1202.000000, -1885.000000)">
             <g id="screen-2" sketch:type="MSLayerGroup" transform="translate(1156.000000, 1644.000000)">
                 <g id="Group" transform="translate(-636.000000, 70.000000)">
                     <g id="friends" transform="translate(682.000000, 171.000000)">
-                        <mask id="mask-2" sketch:name="Mask" fill="white">
-                            <use xlink:href="#path-1"></use>
+                        <mask id="friends-mask" sketch:name="Mask" fill="white">
+                            <use xlink:href="#path-1234"></use>
                         </mask>
-                        <use id="Mask" fill="#4F484F" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
-                        <g id="Group-3" mask="url(#mask-2)">
+                        <use id="Mask" fill="#4F484F" sketch:type="MSShapeGroup" xlink:href="#path-1234"></use>
+                        <g id="Group-3" mask="url(#friends-mask)">
                             <g transform="translate(144.236473, 185.984230) rotate(-13.000000) translate(-144.236473, -185.984230) translate(-1.763527, 37.484230)">
                                 <g id="girl" transform="translate(218.326501, 201.599705) rotate(13.000000) translate(-218.326501, -201.599705) translate(163.182633, 117.242717)">
                                     <g id="Layer_1" sketch:type="MSShapeGroup">

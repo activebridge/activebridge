@@ -1,9 +1,9 @@
-.title: span=t('services.title')
+h6=t('services.title')
 p.text-center= t('services.we_do')
 ul.skills
   - I18n.t('services.skills').each_with_index do |skill, index|
     li= inline_svg("mobile/icons/#{skill[:id]}.svg")
-.title: h2= t('services.agile_programming')
+label: h2= t('services.agile_programming')
 dl.text-left.section itemprop='description'
   dt: h3.mark= t('services.custom_web_development.title')
   dd itemprop='description'== t('services.custom_web_development.desc')
@@ -12,7 +12,7 @@ dl.text-left.section itemprop='description'
   dt: h3.mark= t('services.free_review.title')
   dd itemprop='description'== t('services.free_review.desc')
 
-.title: h3= t('services.maintenance_and_support')
+label: h3= t('services.maintenance_and_support')
 .section itemprop='description' == t('services.code_audit')
-.title: h3= t('services.outstaffing')
+label: h3= t('services.outstaffing')
 .section itemprop='description' == t('services.team')
