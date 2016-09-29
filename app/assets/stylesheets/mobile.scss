@@ -15,7 +15,7 @@ nav svg {
 body {
   height: 100%;
   overflow: hidden;
-  max-height: 100vh;
+  max-height: 100vmax;
   margin: 0;
 }
 
@@ -66,6 +66,15 @@ section {
 }
 
 @media screen and (orientation:landscape) {
+  h6, button, label {
+    padding: 3% 5% !important;
+    margin: 2% !important;
+  }
+
+  .bg {
+    padding-bottom: 0;
+  }
+
   nav {
     left: auto;
     top: 0;
@@ -81,8 +90,23 @@ section {
     }
   }
 
-  main {
-    padding-right: 54px;
+  section {
+    padding-right: 60px;
+    padding-bottom: 0;
+  }
+
+  .logo {
+    max-height: 30vh;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    width: 90%;
+    padding: 10px;
+    a {
+      padding: 5px;
+      width: 10%;
+    }
   }
 }
 
@@ -148,6 +172,10 @@ dd {
   &:nth-child(4) span {
     text-align: left;
   }
+}
+
+dl {
+  padding: 0 3%;
 }
 
 input, textarea {
@@ -225,7 +253,6 @@ ul.skills {
   display: block;
 }
 
-.section {
-  padding: 0 10%;
-  text-align: justify;
+nav svg {
+  width: 100%;
 }
