@@ -234,15 +234,16 @@ body {
   color: #B868A0;
 }
 
-ul.skills {
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   padding: 0 3%;
   li {
-    padding: 0 2%;
+    padding: 0 1%;
     width: 20%;
+    font-size: .8rem;
   }
   svg {
     width: 100%;

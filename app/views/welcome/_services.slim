@@ -5,7 +5,7 @@ div itemscope="" itemtype="http://schema.org/Thing"
     .skills
       - I18n.t('services.skills').each_with_index do |skill, index|
         #cont data-pct=skill[:level]
-          .skill-tooltip= skill[:skill_name]
+          .skill-tooltip= skill[:name]
           svg#svg height="200" version="1.1" viewport=("0 0 100 100") width="200" xmlns="http://www.w3.org/2000/svg"
             circle cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565" stroke-dashoffset="0"
             circle#bar cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565" style="stroke-dashoffset: #{3.03*(100-skill[:level])}%"
