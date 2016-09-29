@@ -1,5 +1,5 @@
 h6=t('.title')
-= form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
+= form_tag '/contact' do
   input#name name='contact[name]' type='text' placeholder="#{ t('.name_placeholder') }"
   input#email name='contact[email]' type='email' placeholder="#{ t('.email_placeholder') }" required=true
   textarea#text name='contact[message]' placeholder="#{ t('.message_placeholder') }" rows=4 required=true minlength=10
