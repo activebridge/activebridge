@@ -8,7 +8,13 @@ html {
 
 nav svg {
   path, polygon, rect {
-    stroke: #B96BA2;
+    // transition: stroke .3s, fill .3s;
+  }
+}
+
+nav a.active svg {
+  path, polygon, rect {
+    stroke: #B96BA2 !important;
   }
 }
 
@@ -36,11 +42,7 @@ body {
     transition: transform .2s;
   }
 
-  &[data-page='portfolio'] {
-    transform: translate(-400%);
-  }
-
-  &[data-page='team'] {
+  &[data-page='contact'] {
     transform: translate(-300%);
   }
 

@@ -73,13 +73,8 @@
       transition: transform .1s;
 
       g {
-        stroke: #504850 !important;
+        stroke: #504850;
       }
-    }
-
-    mark, .mark {
-      background: transparent;
-      color: #B868A0;
     }
 
 doctype 5
@@ -89,9 +84,9 @@ html
     = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
     main#pages= yield
     nav
-      a href='home'= inline_svg('mobile/icons/menu-home', class: :xl)
+      a.active href='home'= inline_svg('mobile/icons/menu-home', class: :xl)
       a href='about'= inline_svg('mobile/icons/menu-about', class: :xl)
       a href='services'= inline_svg('mobile/icons/menu-services', class: :xl)
-      a href='team'= inline_svg('mobile/icons/menu-contacts', class: :xl)
+      a href='contact'= inline_svg('mobile/icons/menu-contacts', class: :xl)
     = stylesheet_link_tag :mobile, media: :all, async: true
     = javascript_include_tag :mobile, async: true
