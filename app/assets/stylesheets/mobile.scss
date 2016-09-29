@@ -67,7 +67,7 @@ section {
   padding-bottom: 60px;
 }
 
-@media screen and (orientation:landscape) {
+@media screen and (min-aspect-ratio: 13/9) {
   h6, button, label {
     padding: 3% 5% !important;
     margin: 2% !important;
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 2rem;
-  text-shadow: 1px 0 0 currentColor;
+  text-shadow: .5px 0 0 currentColor;
 }
 
 h6, button, label {
@@ -140,7 +140,7 @@ h6, button, label {
   margin: 5% 0;
   color: #B868A0;
   box-shadow: 0 0 20px 0 rgba(black, .4);
-  text-shadow: 1px 0 0 currentColor;
+  text-shadow: .5px 0 0 currentColor;
   font-size: 1rem;
   border: none;
   display: inline-block;
@@ -227,7 +227,7 @@ body {
 
 [data-label]:before {
   content: attr(data-label);
-  margin-top: 20px;
+  margin-top: 10px;
   display: block;
   color: #B868A0;
 }
@@ -242,6 +242,7 @@ ul {
     padding: 0 1%;
     width: 20%;
     font-size: .8rem;
+    word-spacing: 100vmax;
   }
   svg {
     width: 100%;
