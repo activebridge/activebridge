@@ -1,11 +1,11 @@
-.title: span= t('.title')
-.section== t('.description')
-dl.about-items
-  dt.title: span= t('.core_values')
+h6= t('.title')
+div== t('.description')
+dl
+  dt: label= t('.core_values')
   dd itemprop='description'
     = inline_svg 'mobile/icons/friends.svg'
     span.right== t('.experienced_team')
-  dt.title: span= t('.benefits')
+  dt: label= t('.benefits')
   dd itemprop='description'
     span== t('.cost_efficient')
     = inline_svg 'mobile/icons/cup.svg'
