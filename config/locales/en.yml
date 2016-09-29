@@ -75,7 +75,7 @@ en:
         level: 99
         icon: rails
       - id: js
-        skill_name: Javascript / ReactJS / jQuery / AngularJS / Backbone.js
+        name: Javascript / ReactJS / jQuery / AngularJS / Backbone.js
         level: 88
         icon: js
       - id: html
@@ -83,11 +83,11 @@ en:
         level: 95
         icon: code
       - id: css
-        skill_name: CSS / SASS / LESS / Compass
+        name: CSS / SASS / LESS / Compass
         level: 97
         icon: css3
       - id: sql
-        skill_name: MySQL / PostgreSQL / MongoDB / Redis
+        name: MySQL / PostgreSQL / MongoDB / Redis
         level: 85
         icon: database
     scrum:
