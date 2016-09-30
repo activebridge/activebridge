@@ -5,6 +5,7 @@
   height: 100%;
   color: $dark-violet;
   position: relative;
+  overflow: hidden;
 
   &-background-svg {
     position: absolute;
@@ -19,6 +20,7 @@
     background: #eff0f1;
     background: linear-gradient(0deg, #eff0f1, #dfcace);
     padding: 30px 40px;
+    left: 1%;
     width: 70%;
     height: 35%;
     font-size: 1.2rem;
@@ -37,10 +39,14 @@
       background: $white;
       z-index: -1;
     }
+    &-text {
+      height: 100%;
+      overflow-y: auto;
+    }
 
     &-mark {
       position: absolute;
-      top: 68%;
+      top: 75%;
       right: 60%;
       z-index: 100;
     }
@@ -49,7 +55,7 @@
       width: 190px;
       height: 190px;
       right: 50%;
-      top: 84%;
+      top: 100%;
       background-color: $light-grey;
       position: absolute;
       z-index: 99;
@@ -131,6 +137,11 @@
       top: -75px;
       width: 36%;
       left: 32%;
+    }
+
+    &-wrapper {
+      height: 100%;
+      overflow-y: auto;
     }
 
     &-circle {
