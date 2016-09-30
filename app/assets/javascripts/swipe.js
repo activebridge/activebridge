@@ -12,10 +12,11 @@ slider.addEventListener('touchstart', function(event) {
 }, false);
 
 slider.addEventListener('touchmove', function(event) {
-  swipeX = (Math.abs(event.changedTouches[0].pageX - startX) / window.outerWidth * 100)
-  swipeY = (Math.abs(event.changedTouches[0].pageY - startY) / window.outerHeight * 100)
+  swipeX = (Math.abs(event.changedTouches[0].pageX - startX) / (window.outerWidth || window.innerWidth) * 100)
+  swipeY = (Math.abs(event.changedTouches[0].pageY - startY) / (window.outerHeight || window.innerHeight) * 100)
   horizontal = horizontal || swipeX > swipeY
   if (horizontal) {
+    event.preventDefault();
     if (startX > event.changedTouches[0].pageX) {
       touch = Math.abs(swipeEndX) + swipeX
     } else {
