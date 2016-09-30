@@ -1,5 +1,6 @@
 $lazy-start:      translateY(-500%);
 $lazy-end:        translateY(0%);
+$lazy-close:      image_url('icons/esc-button.svg');
 
 @import 'variables';
 @import 'lazybox';
@@ -31,6 +32,14 @@ svg#main {
   transition: opacity 1s .5s;
 }
 
+#lazy_close {
+  transform: scale(0.6);
+  transition: opacity .2s ease;
+  &:hover {
+    opacity: .8;
+  }
+}
+
 .object {
   visibility: hidden;
 }
@@ -57,7 +66,13 @@ svg#main {
   transform: translate(0%, $y);
   transition: transform .5s, visibility .5s;
   &:hover {
+    path.photo-button {
+      opacity: 0;
+      transform: opacity .1s ease;
+      transition-delay: .15s;
+    }
     ellipse#Oval-1 {
+      transition: transform .3s ease;
       transform: translateY(6px);
     }
   }
@@ -72,11 +87,12 @@ svg#main {
   transform: translate(50%, -50%) scale(0);
   transition: transform .5s, visibility .5s;
   transform-origin: 50%;
+  opacity: 0;
   #apples-MacBook-Pro-2 {
-    transform: translateY(0) skewY(29deg);
+    transform: translateY(10px) skewY(29deg);
   }
   @keyframes logs {
-    from { transform: translateY(0) skewY(29deg) } to { transform: translateY(-1000px) skewY(29deg) }
+    from { transform: translateY(10px) skewY(29deg) } to { transform: translateY(-400px) skewY(29deg) }
   }
 }
 
@@ -92,6 +108,7 @@ svg#main {
   transition: transform 1s, visibility 1s;
   transform-origin: 100% 80%;
   transition-delay: .2s;
+  opacity: 0;
 }
 
 #contact {
@@ -119,19 +136,19 @@ svg#main {
   #team {
     transform: translate(0%, 0%) scale(1);
     transition-delay: .5s;
-    #title-container {
-      transition: .3s;
-      transition-delay: 0s;
+    opacity: 1;
+    #screen-background {
+      transition: fill .3s ease;
     }
     &:hover {
       #title-container {
         opacity: 0;
       }
-      #mac-screen #screen-background {
-        fill: none;
+      #screen-background {
+        fill: black;
       }
       #apples-MacBook-Pro-2 {
-        animation: logs 2s steps(10, start) 0s infinite normal;
+        animation: logs 5s steps(80, start) 0s infinite normal;
       }
     }
   }
@@ -142,8 +159,9 @@ svg#main {
 
   #portfolio {
     transform: translate(0%, 0%);
-    transition: transform .5s;
+    transition: transform .5s, visibility .1s;;
     transition-delay: 0s;
+    opacity: 1;
     &:hover {
       transform: translate(-4%, 3%);
     }

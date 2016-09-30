@@ -190,7 +190,7 @@
                                     <use xlink:href="#path-23"></use>
                                 </g>
                                 <g id='server-logs' mask="url(#mask-24)">
-                                  <text id="apples-MacBook-Pro-2" stroke="none" fill="none" sketch:type="MSTextLayer" font-family="Menlo" font-size="12" font-weight="normal">
+                                  <text id="apples-MacBook-Pro-2" stroke="none" fill="none" sketch:type="MSTextLayer" font-family="monospace" font-size="12" font-weight="normal">
                                       <tspan x="19" y="378" fill="#CECECE">apples-MacBook-Pro-2:activebridge apple$ rails s</tspan>
                                       <tspan x="19" y="392" fill="#CECECE">=&gt; Booting Thin</tspan>
                                       <tspan x="19" y="406" fill="#CECECE">=&gt; Rails 4.2.6 application starting in development on http://</tspan>
@@ -342,7 +342,7 @@
                         </mask>
                         <use id="Mask" fill="#FFFFFF" sketch:type="MSShapeGroup" xlink:href="#path-47"></use>
                         <path d="M78.248607,149.874922 C83.947178,132.578118 75.6917649,110.840821 59.8050485,101.338271 C43.9163415,91.8422284 26.6203476,97.4993134 21.1779424,113.958761 C15.7386025,130.408189 24.0055357,152.10783 39.638077,162.441228 C55.2686278,172.781133 72.5531015,167.161705 78.248607,149.874922 Z" id="Oval-1" fill="#4A4A4A" sketch:type="MSShapeGroup" mask="url(#mask-48)"></path>
-                        <path d="M89.9039445,30.734803 C89.9039445,36.4041148 83.2097185,41 74.9519723,41 C66.694226,41 60,36.4041148 60,30.734803 L60,24.9606297 L62.5879617,24.9606297 C65.2792732,22.2496288 69.8128409,20.469606 74.9519723,20.469606 C80.0911037,20.469606 84.6246713,22.2496288 87.3159828,24.9606297 L89.9039445,24.9606297 L89.9039445,30.734803 Z" id="Oval-1" fill="#D2D6D6" sketch:type="MSShapeGroup"></path>
+                        <path d="M89.9039445,30.734803 C89.9039445,36.4041148 83.2097185,41 74.9519723,41 C66.694226,41 60,36.4041148 60,30.734803 L60,24.9606297 L62.5879617,24.9606297 C65.2792732,22.2496288 69.8128409,20.469606 74.9519723,20.469606 C80.0911037,20.469606 84.6246713,22.2496288 87.3159828,24.9606297 L89.9039445,24.9606297 L89.9039445,30.734803 Z" id="Oval-1" class='photo-button' fill="#D2D6D6" sketch:type="MSShapeGroup"></path>
                         <ellipse id="Oval-1" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="74.9519723" cy="24.9606297" rx="14.9519723" ry="10.265197"></ellipse>
                     </g>
                 </a>
