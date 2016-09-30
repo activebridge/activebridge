@@ -1,3 +1,4 @@
+#= require google_tag_manager
 #= require swipe
 
 [].forEach.call document.querySelectorAll('nav a'), (a) ->
