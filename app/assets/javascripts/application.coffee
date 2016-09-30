@@ -18,7 +18,7 @@ window.animate = -> document.getElementById('ab').checked = true
 closeWindow = ->
   document.querySelector('#lazy_overlay').className = ''
   document.body.className = ''
-  history.pushState({}, null, "/")
+  history.pushState({}, null, '/')
 
 openPage = (event) ->
   document.getElementById('lazy_overlay').className = 'active'
@@ -30,6 +30,7 @@ openPage = (event) ->
     if (xhr.readyState == 4 && xhr.status == 200)
       document.body.className = href
       eval(xhr.responseText)
+      keepFocus()
   xhr.send()
   initTeamScroll()
   event.preventDefault()
@@ -79,14 +80,17 @@ ajax = (method, href, async = true) ->
   xhr.open(method, href, async)
   xhr.setRequestHeader('X-CSRF-Token', csrf)
   xhr.setRequestHeader('Accept', 'text/javascript')
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
   return xhr
 
 window.onpopstate = closeWindow
 
-controls = document.querySelectorAll("input[type='radio']")
-return unless controls[0]
-controls.forEach (input) ->
-  input.addEventListener 'keydown', (e) ->
-    @.focus()
-    e.preventDefault() if (e.which == 9)
+keepFocus = ->
+  controls = document.querySelectorAll("input[type='radio']")
+  return unless controls[0]
+  controls.forEach (input) ->
+    input.addEventListener 'keydown', (e) ->
+      console.log(2)
+      @.focus()
+      e.preventDefault() if (e.which == 9)
+
+keepFocus()

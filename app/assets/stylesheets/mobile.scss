@@ -6,6 +6,12 @@ html {
   font-size: 16px;
 }
 
+html, body {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
 nav svg {
   path, polygon, rect {
     // transition: stroke .3s, fill .3s;
@@ -23,6 +29,7 @@ body {
   overflow: hidden;
   max-height: 100vmax;
   margin: 0;
+  max-width: 100%;
 }
 
 #pages {
@@ -129,7 +136,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 2rem;
-  text-shadow: .5px 0 0 currentColor;
+  text-shadow: .1px 0 0 currentColor;
 }
 
 h6, button, label {
@@ -140,7 +147,7 @@ h6, button, label {
   margin: 5% 0;
   color: #B868A0;
   box-shadow: 0 0 20px 0 rgba(black, .4);
-  text-shadow: .5px 0 0 currentColor;
+  text-shadow: .1px 0 0 currentColor;
   font-size: 1rem;
   border: none;
   display: inline-block;
