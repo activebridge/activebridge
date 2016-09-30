@@ -23,5 +23,5 @@ html
           = svg("social/#{icon}")
 
     img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=552167954950145&ev=PageView&noscript=1"
-  = render_lazybox
-  = javascript_include_tag 'application'
+    = render_lazybox
+    = javascript_include_tag 'application', async: false

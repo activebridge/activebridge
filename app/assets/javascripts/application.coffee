@@ -82,6 +82,8 @@ ajax = (method, href, async = true) ->
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
   return xhr
 
+window.onpopstate = closeWindow
+
 controls = document.querySelectorAll("input[type='radio']")
 return unless controls[0]
 controls.forEach (input) ->
