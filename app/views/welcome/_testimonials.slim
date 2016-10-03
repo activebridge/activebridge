@@ -1,5 +1,6 @@
-.testimonials-title= t('.title')
+.contact-title= t('.title')
 .content.testimonials
+  = inline_svg 'testimonials/testimonials-bg.svg', class: 'testimonials-background-svg'
   .wrapper
     - I18n.t('testimonials.all').each do |testimonial|
       input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=true autofocus=true
