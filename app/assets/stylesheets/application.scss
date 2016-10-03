@@ -11,7 +11,6 @@ $lazy-close:      image_url('icons/esc-button.svg');
 @import 'portfolio';
 @import 'services';
 @import 'about';
-@import 'progress_bar';
 
 $x: 500%;
 $y: 500%;
@@ -259,7 +258,7 @@ svg#main {
   opacity: 1;
 }
 
-.page-title, .contact-title, .testimonials-title {
+.page-title, .contact-title, .testimonials-title, .services-title {
   position: fixed;
   padding: 1% 5%;
   background: $white;
@@ -280,14 +279,14 @@ svg#main {
 
 }
 
-.contact-title, .testimonials-title {
+.contact-title, .testimonials-title, .services-title {
   top: 6%;
   right: 10%;
   box-shadow: 7px 7px 0 rgba(black, 0.1);
   text-transform: uppercase;
 }
 
-.testimonials-title {
+.testimonials-title, .services-title {
   top: 3%;
   right: 50%;
   transform: translateX(50%);

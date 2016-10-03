@@ -11,13 +11,12 @@
 
   .testimonials-background-svg {
     position: absolute;
-    width: 95vw;
     left: 50%;
     transform: translateX(-50%);
-    top: -14vh;
+    height: 100%;
+    width: 100%;
     opacity: 1;
-    z-index: -1t gui
-    ;
+    z-index: -1;
   }
 
   .wrapper {
