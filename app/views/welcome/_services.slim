@@ -1,22 +1,19 @@
 div itemscope="" itemtype="http://schema.org/Thing"
   .content.services
-    .title= t('services.title')
-    .text-center= t('services.we_do')
+    .services-title= t('services.title')
+    = inline_svg 'services/services-bg.svg', class: 'services-background-svg'
+    h3.text-center= t('services.we_do')
     .skills
       - I18n.t('services.skills').each_with_index do |skill, index|
-        #cont data-pct=skill[:level]
-          .skill-tooltip= skill[:name]
-          svg#svg height="200" version="1.1" viewport=("0 0 100 100") width="200" xmlns="http://www.w3.org/2000/svg"
-            circle cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565" stroke-dashoffset="0"
-            circle#bar cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565" style="stroke-dashoffset: #{3.03*(100-skill[:level])}%"
-          .skill-icon= svg(skill[:icon])
-
-    .section-tabs
+        .skill
+          = svg("skills/#{skill[:id]}")
+          .skill-title= skill[:name]
+    .services-section
       input#agile_programming type='radio' hidden=true name='active-tab' checked=true
-      .section-tab.text-left
-        h2.section-tab-title
+      .services-section-tab.text-left
+        h2.services-section-tab-title
           label for='agile_programming'= t('services.agile_programming')
-        dl.section-tab-description.text-center itemprop='description'
+        dl.services-section-tab-description.text-center itemprop='description'
           dt itemprop='description': h3= t('services.custom_web_development.title')
           dd itemprop='description'== t('services.custom_web_development.desc')
           dt itemprop='description': h3= t('services.scrum.title')
@@ -25,15 +22,15 @@ div itemscope="" itemtype="http://schema.org/Thing"
           dd itemprop='description'== t('services.free_review.desc')
 
       input#maintenance type='radio' hidden=true name='active-tab'
-      .section-tab.text-center
-        h3.section-tab-title
+      .services-section-tab.text-center
+        h3.services-section-tab-title
           label for='maintenance'
             = t('services.maintenance_and_support')
-        div itemprop='description' class= 'section-tab-description text-center'
+        div itemprop='description' class= 'services-section-tab-description text-center'
           == t('services.code_audit')
       input#outstaffing type='radio' hidden=true name='active-tab'
-      .section-tab.text-right
-        h3.section-tab-title
+      .services-section-tab.text-right
+        h3.services-section-tab-title
           label for='outstaffing'= t('services.outstaffing')
-        div itemprop='description' class= 'section-tab-description text-center'
+        div itemprop='description' class= 'services-section-tab-description text-center'
           == t('services.team')

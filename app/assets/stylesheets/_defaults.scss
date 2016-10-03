@@ -28,7 +28,6 @@
   font-size: 3em;
   font-weight: normal;
   top: 0;
-  right: 0;
   z-index: 111;
 }
 
@@ -61,10 +60,6 @@
   box-sizing: border-box;
   text-align: center;
   padding-bottom: 2.5%;
-
-  &.services {
-    padding-top: 2%;
-  }
 
   &.projects {
     overflow: hidden;

@@ -3,7 +3,7 @@ p.text-center= t('services.we_do')
 ul.skills
   - I18n.t('services.skills').each_with_index do |skill, index|
     li
-      = inline_svg("mobile/icons/#{skill[:id]}.svg")
+      = svg("skills/#{skill[:id]}")
       = skill[:name].gsub('/', ' ')
 label: h2= t('services.agile_programming')
 dl.text-left.section itemprop='description'
