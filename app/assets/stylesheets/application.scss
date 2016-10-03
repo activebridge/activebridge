@@ -257,7 +257,7 @@ svg#main {
   opacity: 1;
 }
 
-.page-title, .contact-title {
+.page-title, .contact-title, .testimonials-title {
   position: fixed;
   padding: 1% 5%;
   background: $white;
@@ -278,11 +278,17 @@ svg#main {
 
 }
 
-.contact-title {
+.contact-title, .testimonials-title {
   top: 6%;
   right: 10%;
   box-shadow: 7px 7px 0 rgba(black, 0.1);
   text-transform: uppercase;
+}
+
+.testimonials-title {
+  top: 3%;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .social-icons {
