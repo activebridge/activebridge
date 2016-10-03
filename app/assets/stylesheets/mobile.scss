@@ -75,7 +75,7 @@ section {
 }
 
 @media screen and (min-aspect-ratio: 13/9) {
-  h6, button, label {
+  h6, button, cite {
     padding: 3% 5% !important;
     margin: 2% !important;
   }
@@ -139,7 +139,7 @@ h1 {
   text-shadow: .1px 0 0 currentColor;
 }
 
-h6, button, label {
+h6, button, cite {
   text-align: center;
   padding: 5% 10%;
   background: white;
@@ -152,6 +152,7 @@ h6, button, label {
   border: none;
   display: inline-block;
   font-weight: normal;
+  font-style: normal;
 }
 
 h6 {

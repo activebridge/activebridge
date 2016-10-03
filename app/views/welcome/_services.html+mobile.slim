@@ -5,7 +5,7 @@ ul.skills
     li
       = svg("skills/#{skill[:id]}")
       = skill[:name].gsub('/', ' ')
-label: h2= t('services.agile_programming')
+cite: h2= t('services.agile_programming')
 dl.text-left.section itemprop='description'
   dt: h3.mark= t('services.custom_web_development.title')
   dd itemprop='description'== t('services.custom_web_development.desc')
@@ -14,7 +14,7 @@ dl.text-left.section itemprop='description'
   dt: h3.mark= t('services.free_review.title')
   dd itemprop='description'== t('services.free_review.desc')
 
-label: h3= t('services.maintenance_and_support')
+cite: h3= t('services.maintenance_and_support')
 div itemprop='description' == t('services.code_audit')
-label: h3= t('services.outstaffing')
+cite: h3= t('services.outstaffing')
 div itemprop='description' == t('services.team')
