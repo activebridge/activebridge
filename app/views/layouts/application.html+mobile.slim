@@ -1,86 +1,6 @@
 = content_for :head do
-  scss:
-    body {
-      overflow: hidden;
-      background: #433B43;
-      color: white;
-      text-align: center;
-    }
-
-    section {
-      padding-bottom: 60px;
-    }
-
-    main {
-      position: relative;
-      z-index: 100;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .page {
-      height: 100vh;
-      font-size: 16px;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .social-icons {
-      width: 80%;
-      margin: 0 auto;
-      padding-top: 35px;
-      text-align: center;
-      a {
-        display: inline-block;
-        padding: 10px;
-        width: 16%;
-        svg path {
-          fill: white;
-        }
-      }
-    }
-
-    nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: white;
-      font-size: 0;
-      z-index: 1000;
-      box-shadow: 0px 0 5px 5px rgba(black, .3);
-      a {
-        display: inline-block;
-        width: 25%;
-        padding: 10px 0;
-        font-size: 1rem;
-        box-sizing: border-box;
-        text-align: center;
-      }
-    }
-
-    .logo {
-      width: 80%;
-      margin-top: 40px;
-    }
-
-    .bg {
-      position: absolute;
-      bottom: 0;
-      left: -85%;
-      max-height: 100vmax;
-      padding-bottom: 50px;
-      width: 200%;
-      transition: transform .1s;
-
-      g {
-        stroke: #504850;
-      }
-    }
+  = render 'layouts/critical_css'
+  = stylesheet_link_tag 'fonts', media: :none, onload: "if(media!='all')media='all'"
 
 doctype 5
 html
@@ -89,9 +9,8 @@ html
     = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
     main#pages= yield
     nav
-      a.active href='home'= inline_svg('mobile/icons/menu-home', class: :xl)
-      a href='about'= inline_svg('mobile/icons/menu-about', class: :xl)
-      a href='services'= inline_svg('mobile/icons/menu-services', class: :xl)
-      a href='contact'= inline_svg('mobile/icons/menu-contacts', class: :xl)
-    = stylesheet_link_tag :mobile, media: :all, async: true
-    = javascript_include_tag :mobile, async: true
+      a.active href='home'= inline_svg('mobile/icons/menu-home')
+      a href='about'= inline_svg('mobile/icons/menu-about')
+      a href='services'= inline_svg('mobile/icons/menu-services')
+      a href='contact'= inline_svg('mobile/icons/menu-contacts')
+  = javascript_include_tag :mobile, async: true

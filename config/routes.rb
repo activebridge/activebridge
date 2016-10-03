@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
-  post '/contact', to: 'requests#create'
+  post '/contact', to: 'requests#create', as: :contact
 
   root to: 'welcome#index'
 end
