@@ -29,6 +29,9 @@ svg#main {
   height: 100vh;
   transform-origin: 80% 70%;
   transition: opacity 1s .5s;
+  a {
+    outline: none;
+  }
 }
 
 #lazy_close {
@@ -55,16 +58,18 @@ svg#main {
     transition: .2s;
     box-shadow: 0px 0px 10px 3px rgba(black, .5);
   }
-  &:hover #testimonials_tooltip {
-    visibility: visible;
-    transform: translateX(0) translateY(0) scale(1);
+  &:hover, &:focus {
+    #testimonials_tooltip {
+      visibility: visible;
+      transform: translateX(0) translateY(0) scale(1);
+    }
   }
 }
 
 #testimonials {
   transform: translate(0%, $y);
   transition: transform .5s, visibility .5s;
-  &:hover {
+  &:hover, &:focus {
     path.photo-button {
       opacity: 0;
       transform: opacity .1s ease;
@@ -140,7 +145,7 @@ svg#main {
     #screen-background {
       transition: fill .3s ease;
     }
-    &:hover {
+    &:hover, &:focus {
       #title-container {
         opacity: 0;
       }
@@ -156,6 +161,10 @@ svg#main {
 
   #services {
     transform: scale(1);
+    &:hover {
+      transition-delay: 0s;
+      transform: scale(1) translateX(-15px);
+    }
   }
 
   #portfolio {
@@ -163,7 +172,7 @@ svg#main {
     transition: transform .5s, visibility .1s;;
     transition-delay: 0s;
     opacity: 1;
-    &:hover {
+    &:hover, &:focus {
       transform: translate(-4%, 3%);
     }
   }
@@ -181,7 +190,7 @@ svg#main {
   #contact {
     transform: translate(0%, 0%);
     visibility: visible;
-    &:hover {
+    &:hover, &:focus {
       transition-delay: 0s;
       transform: translate(-5%, 5%) scale(1.1);
     }
@@ -247,10 +256,6 @@ svg#main {
   .ab {
     transform: scale(0) rotate(-440deg);
     opacity: 0;
-
-    #services:hover {
-      transform: rotate(-5deg);
-    }
   }
 }
 
@@ -309,14 +314,18 @@ svg#main {
     background: rgba($white, 0.6);
     border-radius: 50%;
     margin: 1vmin 3vmin 4vmin 1vmin;
+    outline: none;
     @for $i from 0 through 10 {
       &.position-#{$i} {
         transform: translateX(0%) translateY(-1000% + $i * 100%) rotate(-900deg);
         transition: transform .5s ease .7s + (0.2s * $i);
       }
     }
-    &:hover {
+    &:hover, &:focus {
       box-shadow: inset 0 0 50px black;
+      svg {
+        box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      }
     }
     svg {
       position: absolute;
@@ -329,9 +338,6 @@ svg#main {
       max-width: 8vmin;
       border-radius: 50%;
       transition: box-shadow .2s;
-      &:hover {
-        box-shadow: 0 0 10px rgba(0,0,0,0.7);
-      }
     }
   }
   &.left {
