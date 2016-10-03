@@ -20,7 +20,7 @@
     background: linear-gradient(0deg, #eff0f1, #dfcace);
     padding: 30px 40px;
     left: 1%;
-    width: 70%;
+    width: 67%;
     height: 35%;
     font-size: 1.2rem;
     transform: rotate(-5deg);
@@ -106,13 +106,17 @@
     font-size: 1rem;
     top: 34%;
     position: absolute;
-    right: 0;
+    right: 3%;
     transform: rotate(5deg);
     -webkit-backface-visibility: hidden;
 
     dt {
       text-align: center;
       font-weight: bold;
+    }
+
+    dd {
+      margin-left: 35px;
     }
 
     &:before, &:after {
@@ -153,6 +157,55 @@
       top: 38%;
       right: 90%;
       box-shadow: 3px 4px rgba(158, 155, 155, 0.14);
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      transform: none;
+      margin: 0 auto;
+      margin-top: 10px;
+      transform: scale(.7);
+    }
+
+    &-desc {
+      width: 90%;
+      margin-left: 4vw;
+      height: auto;
+      transform: none;
+
+      &-mark {
+        display: none;
+      }
+
+      &-square-mark {
+        display: none;
+      }
+    }
+
+    &-items {
+      transform: translateX(-50%);
+      top: 7%;
+      width: 85%;
+      left: 50%;
+      right: auto;
+      height: auto;
+      position: relative;
+      font-size: 1.2rem;
+
+      dd {
+        margin-left: 0;
+      }
+
+      &-circle {
+        display: none;
+      }
     }
   }
 }
