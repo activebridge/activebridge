@@ -50,6 +50,12 @@
       border-radius: 0 0 15px 15px;
 
       h3, h2 { margin: 0; }
+      h4 {
+        font-size: inherit;
+        font-weight: normal;
+        display: inline;
+      }
+
 
       &-title {
         background: $light-grey;
