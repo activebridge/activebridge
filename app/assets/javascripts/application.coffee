@@ -31,8 +31,8 @@ openPage = (event) ->
       document.body.className = href
       eval(xhr.responseText)
       keepFocus()
+      initTeamScroll()
   xhr.send()
-  initTeamScroll()
   event.preventDefault()
 
 initTeamScroll = ->
@@ -49,6 +49,7 @@ rotateTeam = (direction) ->
   currentRotate = document.querySelector('#rotate-shape').style.transform.split('(')[1]
   angle = parseInt(currentRotate) + 2*direction
   document.querySelector('#rotate-shape').style.transform = 'rotateY(' + angle + 'deg)'
+
 
 browseTeam = (keyCode) ->
   switch event.keyCode

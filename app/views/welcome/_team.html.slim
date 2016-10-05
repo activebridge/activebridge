@@ -1,20 +1,13 @@
 div itemscope="" itemtype="http://schema.org/Person"
-  h1.title= t('team.title')
+  .contact-title= t('team.title')
   .content.members
-    .logo
-      = image_tag('ActiveBridge.svg')
+    #ballWrapper
+      #ball style='background-position-x: 0px'
+      #ballShadow
     #rotate-shape.main style="transform: rotateY(0deg)"
-      - (1..12).map do |placeholder|
-        .member.placeholder style="transform: rotateY(#{30*placeholder + 10}deg) rotateX(-50deg) translateZ(47vmin) scale(.7)"
-          .member-image
-            = image_tag('//res.cloudinary.com/active-bridge/image/upload/v1474923737/hexagon_down.png')
-        .member.placeholder style="transform: rotateY(#{30*placeholder + 10}deg) rotateX(48deg) translateZ(49vmin) scale(.6, .55)"
-          .member-image
-            = image_tag('//res.cloudinary.com/active-bridge/image/upload/v1474923745/hexagon_up.png')
       - @members.each_with_index do |member, index|
-        .member id="member_#{member.id}" style="transform: rotateY(#{360/@members.size*(index+1) + (cycle(0,1,-1, name: 'sign').to_i)*5}deg) rotateX(#{cycle(0,-24,24, name: 'x_axis')}deg) translateZ(48vmin) scale(.7)"
-
-          .member-image style=("background-image: url('#{member.cartoon.url(cycle(:mask, :mask_down, :mask_up, name: 'image'))}')")
+        .member id="member_#{member.id}" style="transform: rotateY(#{360/@members.size*(index+1) + (cycle(0,1,-1, name: 'sign').to_i)*5}deg) rotateX(#{cycle(0,-26,26, name: 'x_axis')}deg) translateZ(40vmin) scale(.5)"
+          .member-image
             = image_tag(member.avatar.url(cycle(:mask, :mask_down, :mask_up, name: 'avatar')))
           /* .details */
           /*   h4 itemprop='name'= member.name */

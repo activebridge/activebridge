@@ -3,17 +3,17 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :mask do
     process convert: :png
-    cloudinary_transformation transformation: :hexx
+    cloudinary_transformation transformation: :hexagon_center
   end
 
   version :mask_up do
     process convert: :png
-    cloudinary_transformation transformation: :hex_up
+    cloudinary_transformation transformation: :hexagon_up
   end
 
   version :mask_down do
     process convert: :png
-    cloudinary_transformation transformation: :hex_down
+    cloudinary_transformation transformation: :hexagon_down
   end
 
   version :logo do
