@@ -89,7 +89,6 @@ keepFocus = ->
   return unless controls[0]
   controls.forEach (input) ->
     input.addEventListener 'keydown', (e) ->
-      console.log(2)
       @.focus()
       e.preventDefault() if (e.which == 9)
 

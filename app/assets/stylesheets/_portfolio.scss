@@ -1,18 +1,30 @@
 @import 'variables';
 
 .content.projects {
-  overflow: hidden;
+  overflow: visible;
   left: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   max-height: 100vh;
   position: relative;
   white-space: nowrap;
-  padding-top: 50px;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0 auto;
   .content-wrapper {
     width: auto;
-    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    padding: 20%;
+    bottom: 0;
+    right: 0;
+    padding-right: 10%;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translateY(-50%);
     white-space: nowrap;
     transition: .5s;
     z-index: 101;
@@ -23,8 +35,8 @@
     .project-wrapper {
       outline: none;
       white-space: normal;
-      background-color: rgba(0,0,0,.9);
-      box-shadow: -5px 0 15px 0 $violet;
+      background-color: rgba($light-grey, .9);
+      box-shadow: -5px 0 15px 0 rgba(black, 0.3);
       z-index: 100;
       position: absolute;
       min-width: 25%;
@@ -41,11 +53,11 @@
         border: none;
       }
       &:hover {
-        background-color: rgba(211,211,211,1);
+        background-color: rgba($light-grey, 1);
         color: $black;
         transform: perspective(500px) rotateY(50deg) translateX(-20%);
         & + input + .background-wrapper + .project-wrapper {
-          background-color: rgba(0,0,0,0.5);
+          background-color: rgba($light-grey, .3);
         }
       }
       .project {
@@ -72,6 +84,7 @@
         width: 150px;
         height: auto;
         padding-top: 1%;
+        position: absolute;
       }
       .project-description, .project-info, .project-link {
         display: none;
@@ -185,6 +198,7 @@
         }
         img {
           display: inline-block;
+          position: relative;
         }
       }
       .arrows {
