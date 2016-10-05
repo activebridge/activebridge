@@ -34,6 +34,7 @@
     position: relative;
     .project-wrapper {
       outline: none;
+      max-width: 800px;
       white-space: normal;
       background-color: rgba($light-grey, .9);
       box-shadow: -5px 0 15px 0 rgba(black, 0.3);
@@ -41,21 +42,21 @@
       position: absolute;
       min-width: 25%;
       width: 25%;
-      height: 70%;
+      height: 50vh;
       display: inline-block;
-      transform: perspective(500px) rotateY(50deg);
+      transform: perspective(500px) rotateY(60deg);
       overflow: hidden;
       color: $white;
       transition: .5s;
       border-right: 1px solid $white;
-      top: 15%;
+      top: 30%;
       &:nth-child-last {
         border: none;
       }
       &:hover {
         background-color: rgba($light-grey, 1);
         color: $black;
-        transform: perspective(500px) rotateY(50deg) translateX(-20%);
+        transform: perspective(500px) rotateY(60deg) translateX(-10%);
         & + input + .background-wrapper + .project-wrapper {
           background-color: rgba($light-grey, .3);
         }
@@ -170,6 +171,7 @@
     }
     input:checked + .background-wrapper + .project-wrapper {
       min-width: 90vw;
+      top: 15%;
       background: rgba(233,233,233,0.9);
       color: $black;
       transform: perspective(500px) rotateY(0deg);
