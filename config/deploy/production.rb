@@ -1,4 +1,4 @@
-location = 'active-bridge.com'
+location = '104.131.66.248'
 
 role :app, location
 role :web, location
