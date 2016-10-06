@@ -1,6 +1,6 @@
 $lazy-start:      translateY(-500%);
 $lazy-end:        translateY(0%);
-$lazy-close:      image_url('icons/esc-button.svg');
+$lazy-close:      asset-data-url('icons/esc-button.svg');
 
 @import 'variables';
 @import 'lazybox';

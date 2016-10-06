@@ -1,3 +1,5 @@
+#= require _analytics
+
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
   xhr = ajax('POST', form.action)

@@ -1,5 +1,5 @@
-#= require google_tag_manager
-#= require swipe
+#= require _analytics
+#= require _swipe
 
 [].forEach.call document.querySelectorAll('nav a'), (a) ->
   a.addEventListener('click', (e) -> navigate(e))

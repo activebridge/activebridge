@@ -9,7 +9,7 @@ doctype 5
 html
   = render 'layouts/head', type: :application, media: :all
   body onload='animate()' class="#{params[:page]}-page"
-    input#ab type='checkbox'
+    input#ab type='checkbox' hidden=true
     .ab-wrapper
       label.ab for='ab'
         = inline_svg :ActiveBridge

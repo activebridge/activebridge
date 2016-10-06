@@ -27,6 +27,7 @@
     transform: translateY(-50%);
     white-space: nowrap;
     transition: .5s;
+    -moz-transition: none !important;
     z-index: 101;
     display: flex;
     justify-content: center;
@@ -48,6 +49,7 @@
       overflow: hidden;
       color: $white;
       transition: .5s;
+      -moz-transition: none !important;
       border-right: 1px solid $white;
       top: 30%;
       &:nth-child-last {
@@ -78,6 +80,7 @@
         .content-widen {
           opacity: 0;
           transition-delay: 0;
+          -moz-transition: none !important;
           position: absolute;
         }
       }
@@ -162,6 +165,7 @@
       bottom: 0;
       right: 0;
       transition: .5s;
+      -moz-transition: none !important;
       background-size: 100%;
       opacity: 0;
     }
