@@ -1,5 +1,5 @@
-#= require google_tag_manager
-#= require swipe
+#= require _analytics
+#= require _swipe
 
 [].forEach.call document.querySelectorAll('nav a'), (a) ->
   a.addEventListener('click', (e) -> navigate(e))
@@ -9,7 +9,21 @@ navigate = (e) ->
   @page = @pages.indexOf(e.currentTarget.getAttribute('href'))
   @swipeEndX = @page * 100
   @slider.className = 'active'
+  nav(@page)
   slide(@swipeEndX)
   navigator.vibrate(70)
 
-navigator.serviceWorker.register('/sw.js') if (navigator.serviceWorker)
+@nav = (i) ->
+  document.querySelector('a.active').className = ''
+  document.querySelectorAll('nav a')[i].className = 'active'
+
+
+# IOS safari zoom hack
+document.body.addEventListener 'gesturestart', (e) -> e.preventDefault()
+#
+
+#Anchor
+document.getElementById('pages').setAttribute('data-page', location.pathname.split('/')[1])
+
+#Service Worker
+# navigator.serviceWorker.register('/sw.js') if (navigator.serviceWorker)

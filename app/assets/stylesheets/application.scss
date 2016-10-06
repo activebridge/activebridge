@@ -1,8 +1,398 @@
+$lazy-start:      translateY(-500%);
+$lazy-end:        translateY(0%);
+$lazy-close:      asset-data-url('icons/esc-button.svg');
+
 @import 'variables';
 @import 'lazybox';
-@import 'base';
 @import 'defaults';
-@import 'bridge';
-@import 'loader';
 @import 'members';
 @import 'testimonials';
+@import 'contact';
+@import 'portfolio';
+@import 'services';
+@import 'about';
+
+$x: 500%;
+$y: 500%;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: #744A71;
+}
+
+svg#main {
+  width: 100%;
+  height: 100vh;
+  transform-origin: 80% 70%;
+  transition: opacity 1s .5s;
+  a {
+    outline: none;
+  }
+}
+
+#lazy_close {
+  transform: scale(0.6);
+  transition: opacity .2s ease;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.object {
+  visibility: hidden;
+}
+
+#about {
+  transform: translate(-$x, $y);
+  transition: transform .5s, visibility .3s;
+  transition-delay: .3s;
+  transform-origin: 50% 60%;
+  #testimonials_tooltip {
+    -webkit-transform-origin: 50% 60%;
+    visibility: hidden;
+    transform: translateX(30%) translateY(30%) scale(0);
+    transition: .2s;
+    box-shadow: 0px 0px 10px 3px rgba(black, .5);
+  }
+  &:hover, &:focus {
+    #testimonials_tooltip {
+      visibility: visible;
+      transform: translateX(0) translateY(0) scale(1);
+    }
+  }
+}
+
+#testimonials {
+  transform: translate(0%, $y);
+  transition: transform .5s, visibility .5s;
+  &:hover, &:focus {
+    path.photo-button {
+      opacity: 0;
+      transform: opacity .1s ease;
+      transition-delay: .15s;
+    }
+    ellipse#Oval-1 {
+      transition: transform .3s ease;
+      transform: translateY(6px);
+    }
+  }
+}
+
+#title {
+  opacity: 0;
+  transition: opacity .1s;
+}
+
+#team {
+  transform: translate(50%, -50%) scale(0);
+  transition: transform .5s, visibility .5s;
+  transform-origin: 50%;
+  opacity: 0;
+  #apples-MacBook-Pro-2 {
+    transform: translateY(10px) skewY(29deg);
+    visibility: hidden;
+  }
+  @keyframes logs {
+    from { transform: translateY(10px) skewY(29deg) } to { transform: translateY(-400px) skewY(29deg) }
+  }
+}
+
+#services {
+  transform: scale(0);
+  transition: transform .3s, visibility .3s;
+  transform-origin: 50%;
+  transition-delay: .3s;
+}
+
+#portfolio {
+  transform: translate(-$x, $y);
+  transition: transform 1s, visibility 1s;
+  transform-origin: 100% 80%;
+  transition-delay: .2s;
+  opacity: 0;
+}
+
+#contact {
+  transform: translate(0%, -$y);
+  visibility: hidden;
+  transition: transform .3s, visibility .3s;
+  transform-origin: 50% 60%;
+  transition-delay: .3s;
+}
+
+#ab:checked ~ #main {
+  opacity: 1;
+  transition: opacity 1s;
+
+  .object {
+    visibility: visible;
+  }
+
+  #title {
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 1s;
+  }
+
+  #team {
+    transform: translate(0%, 0%) scale(1);
+    transition-delay: .5s;
+    opacity: 1;
+    #screen-background {
+      transition: fill .3s ease;
+    }
+    &:hover, &:focus {
+      #title-container {
+        opacity: 0;
+      }
+      #screen-background {
+        fill: black;
+      }
+      #apples-MacBook-Pro-2 {
+        visibility: visible;
+        animation: logs 5s steps(80, start) 0s infinite normal;
+      }
+    }
+  }
+
+  #services {
+    transform: scale(1);
+    &:hover {
+      transition-delay: 0s;
+      transform: scale(1) translateX(-15px);
+    }
+  }
+
+  #portfolio {
+    transform: translate(0%, 0%);
+    transition: transform .5s, visibility .1s;;
+    transition-delay: 0s;
+    opacity: 1;
+    &:hover, &:focus {
+      transform: translate(-4%, 3%);
+    }
+  }
+
+  #about {
+    transition: transform .5s, visibility .1s;
+    transform: translate(0%, 0%);
+  }
+
+  #testimonials {
+    transform: translate(0%, 0%);
+    transition-delay: .5s;
+  }
+
+  #contact {
+    transform: translate(0%, 0%);
+    visibility: visible;
+    &:hover, &:focus {
+      transition-delay: 0s;
+      transform: translate(-5%, 5%) scale(1.1);
+    }
+  }
+}
+
+#lazybox {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  transition: opacity .3s, transform .3s;
+  #lazy_body {
+    height: 100vh;
+  }
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+#lazy_overlay {
+  background: $dark-violet;
+}
+
+.portfolio #portfolio {
+  transform: scale(30);
+}
+
+.ab-wrapper {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+
+  .ab {
+    pointer-events: all;
+    position: relative;
+    opacity: .9;
+    max-width: 80%;
+  }
+}
+
+.ab, #ab {
+  transition: 1s;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#ab {
+  position: absolute;
+}
+
+#ab:checked + .ab-wrapper {
+  .ab {
+    transform: scale(0) rotate(-440deg);
+    opacity: 0;
+  }
+}
+
+.contact #lazy_overlay {
+  opacity: 1;
+}
+
+.page-title, .contact-title, .testimonials-title, .services-title {
+  position: fixed;
+  padding: 1% 5%;
+  background: $white;
+  color: $dark-violet;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.page-title {
+  top: -10%;
+  box-shadow: 7px 7px 7px rgba(black, .3);
+  transform: rotate(-110deg);
+  transition: transform .3s, top .3s;
+  transition-delay: .3s;
+  -webkit-backface-visibility: hidden;
+  transform-origin: 0;
+
+}
+
+.contact-title, .testimonials-title, .services-title {
+  top: 6%;
+  right: 10%;
+  box-shadow: 7px 7px 0 rgba(black, 0.1);
+  text-transform: uppercase;
+}
+
+.testimonials-title, .services-title {
+  top: 3%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.social-icons {
+  top: 5vmin;
+  left: 0;
+  position: absolute;
+  transform: translateY(-110%);
+  transition: .5s;
+  a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    height: 6vmin;
+    width: 6vmin;
+    max-height: 6vmin;
+    max-width: 6vmin;
+    background: rgba($white, 0.6);
+    border-radius: 50%;
+    margin: 1vmin 3vmin 4vmin 1vmin;
+    outline: none;
+    @for $i from 0 through 10 {
+      &.position-#{$i} {
+        transform: translateX(0%) translateY(-1000% + $i * 100%) rotate(-900deg);
+        transition: transform .5s ease .7s + (0.2s * $i);
+      }
+    }
+    &:hover, &:focus {
+      box-shadow: inset 0 0 50px black;
+      svg {
+        box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      }
+    }
+    svg {
+      position: absolute;
+      position: absolute;
+      top: -1vmin;
+      left: -1vmin;
+      height: 8vmin;
+      width: 8vmin;
+      max-height: 8vmin;
+      max-width: 8vmin;
+      border-radius: 50%;
+      transition: box-shadow .2s;
+    }
+  }
+  &.left {
+    transition-delay: 1s;
+    a {
+      &:nth-child(1) {
+        transform: translateX(-50%) translateY(-1000%) rotate(-900deg);
+      }
+    }
+  }
+  &.top {
+    top: 0;
+    left: 12vmin;
+    transition-delay: .5s;
+    a {
+      display: inline-block;
+
+      @for $i from 0 through 10 {
+        &.position-#{$i} {
+          transform: translateX(-1000% + $i * 100%) translateY(-1000% + $i * 100%) rotate(-900deg);
+          transition: transform .5s ease .7s - (0.2s * $i);
+        }
+      }
+    }
+  }
+}
+
+#ab:checked ~ .social-icons {
+  transform: translateY(0%);
+  transition-delay: .7s;
+  a {
+    transform: translateX(0%) translateY(0%) rotate(360deg);
+    @for $i from 0 through 10 {
+      &.position-#{$i} {
+          transition: transform 1.5s ease 1.5s - (0.2s * $i);
+      }
+    }
+  }
+  &.top {
+    a {
+      transform: translateX(0%) translateY(0%) rotate(360deg);
+      @for $i from 0 through 10 {
+        &.position-#{$i} {
+          transition: transform 1.5s ease 1.5s + (0.25s * $i);
+        }
+      }
+    }
+  }
+  &.left {
+    a:nth-child(1) {
+      transform: translateX(50%) translateY(0%) rotate(360deg);
+    }
+  }
+}
+
+* {
+  font-weight: normal;
+}

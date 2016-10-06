@@ -1,33 +1,39 @@
-@import 'variables';
-@import 'defaults';
-@import 'base';
-@import 'members';
-@import 'bridge';
+$bg: #433B43;
 
 html {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+  font-size: 16px;
+}
+
+html, body {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+nav svg {
+  path, polygon, rect {
+    // transition: stroke .3s, fill .3s;
+  }
+}
+
+nav a.active svg {
+  path, polygon, rect {
+    stroke: #B96BA2 !important;
+  }
 }
 
 body {
   height: 100%;
   overflow: hidden;
-  max-height: 100vh;
-}
-
-main:before {
-  content: '';
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: image-url('bg.jpeg') no-repeat;
-  background-size: cover;
-  filter: blur(3px);
+  max-height: 100vmax;
+  margin: 0;
+  max-width: 100%;
 }
 
 #pages {
+  z-index: 100;
   position: relative;
   white-space: nowrap;
   font-size: 0;
@@ -35,15 +41,15 @@ main:before {
   backface-visibility: hidden;
   perspective: 1000;
 
+  > * {
+    font-size: 1rem;
+  }
+
   &.active {
     transition: transform .2s;
   }
 
-  &[data-page='portfolio'] {
-    transform: translate(-400%);
-  }
-
-  &[data-page='team'] {
+  &[data-page='contact'] {
     transform: translate(-300%);
   }
 
@@ -56,34 +62,28 @@ main:before {
   }
 }
 
-.page {
-  background: rgba(white, 0.5);
+section {
   vertical-align: top;
   width: 100%;
   white-space: normal;
   height: 100vh;
   overflow-y: auto;
-  font-size: 16px;
   display: inline-block;
   position: relative;
-  h1 {
-    margin: 0;
-    padding: 10px 0;
-    text-align: center;
-    color: white;
-    background: rgba(rebeccapurple, 0.9);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-  }
+  box-sizing: border-box;
+  padding-bottom: 80px;
 }
 
-.members .member {
-  width: 33%;
-  &:hover img {
-    opacity: 1;
+@media screen and (min-aspect-ratio: 13/9) {
+  h6, button, cite {
+    padding: 3% 5% !important;
+    margin: 2% !important;
   }
-}
 
-@media screen and (orientation:landscape) {
+  .bg {
+    padding-bottom: 0;
+  }
+
   nav {
     left: auto;
     top: 0;
@@ -99,11 +99,187 @@ main:before {
     }
   }
 
-  main {
-    padding-right: 54px;
+  section {
+    padding-right: 60px;
+    padding-bottom: 0;
   }
 
-  .members .member {
-    width: 25%;
+  .logo {
+    max-height: 30vh;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    width: 90%;
+    padding: 10px;
+    a {
+      padding: 5px;
+      width: 10%;
+    }
+  }
+}
+
+div, p {
+  padding: 0 10%;
+}
+
+div {
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: .1px 0 0 currentColor;
+}
+
+h6, button, cite {
+  text-align: center;
+  padding: 5% 10%;
+  background: white;
+  display: inline-block;
+  margin: 5% 0;
+  color: #B868A0;
+  box-shadow: 0 0 20px 0 rgba(black, .4);
+  text-shadow: .1px 0 0 currentColor;
+  font-size: 1rem;
+  border: none;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+dd {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  svg {
+    padding: 0 3%;
+    width: 45%;
+  }
+  span {
+    padding: 0 3%;
+    width: 55%;
+  }
+  .right {
+    text-align: right;
+  }
+  margin-bottom: 20px;
+  &:nth-child(4) span {
+    text-align: left;
+  }
+}
+
+dl {
+  padding: 0 3%;
+}
+
+input, textarea {
+  border: 2px dashed gray;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  margin: 10px 0;
+  background: transparent;
+  color: #B868A0;
+  border-radius: 5px;
+  display: block;
+  font-size: 1rem;
+  &:focus {
+    outline: none;
+    border-color: #B868A0;
+  }
+}
+
+form {
+  padding: 0 5%;
+  text-align: right;
+}
+
+address {
+  font-style: normal;
+  text-align: center;
+  a {
+    color: white;
+  }
+}
+
+button {
+  text-transform: uppercase;
+}
+
+body {
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}
+
+[data-label]:before {
+  content: attr(data-label);
+  margin-top: 10px;
+  display: block;
+  color: #B868A0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  padding: 0 3%;
+  li {
+    padding: 0 1%;
+    width: 20%;
+    font-size: .8rem;
+    word-spacing: 100vmax;
+  }
+  svg {
+    width: 100%;
+  }
+}
+
+#services dd {
+  display: block;
+}
+
+nav svg {
+  width: 100%;
+}
+
+// iOS hacks
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  body {
+    height: 1024px;
+  }
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  body {
+    height: 768px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  body {
+    height: 500px;
   }
 }

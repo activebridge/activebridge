@@ -1,0 +1,208 @@
+%placehoder {
+  font-family: 'Railway', arial;
+}
+
+::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, input:-moz-placeholder {
+  @extend %placehoder;
+}
+
+.contact-background-svg {
+  position: absolute;
+  top: 12vh;
+  right: 6%;
+  width: 100vw;
+  height: 88vh;
+}
+
+.contact-us {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  padding-top: 3%;
+
+  form, .envelope {
+    height: 70vh;
+    width: 80vw;
+    max-height: 740px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 12vh;
+    border-radius: 5px;
+    &:before {
+      border-radius: 5px;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      position: absolute;
+      background-image: linear-gradient(135deg,$white 5%, $light-violet 5%, $light-violet 10%, $white 10%, $white 15%, $light-grey 15%, $light-grey 20%, $white 20%,
+      $white 25%, $light-violet 25%, $light-violet 30%, $white 30%, $white 35%, $light-grey 35%, $light-grey 40%, $white 40%,
+      $white 45%, $light-violet 45%, $light-violet 50%, $white 50%, $white 55%, $light-grey 55%, $light-grey 60%, $white 60%,
+      $white 65%, $light-violet 65%, $light-violet 70%, $white 70%, $white 75%, $light-grey 75%, $light-grey 80%, $white 80%,
+      $white 85%, $light-violet 85%, $light-violet 90%, $white 90%, $white 95%, $light-grey 95%, $light-grey 100%, $white 100%);
+      box-shadow: 0px 0px 4px 1px rgba(56, 56, 56, 0.33);
+    }
+    &:after {
+      background: white;
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+    }
+    .envelope {
+      margin-top: 0;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      transform: rotate(2deg);
+      -webkit-backface-visibility: hidden;
+      z-index: -1;
+    }
+    .data {
+      position: relative;
+      z-index: 1;
+    }
+
+    .mark-main {
+      max-width: 20vh;
+      position: absolute;
+      top: 80px;
+      height: auto;
+      right: 110px;
+      z-index: 10;
+    }
+
+    .mark-background {
+      max-width: 20vh;
+      position: absolute;
+      top: 50px;
+      height: auto;
+      right: 50px;
+      opacity: 0.1;
+      filter: grayscale(100%);
+    }
+
+    fieldset {
+      width: 50%;
+      max-height: 35vh;
+      padding: 5% 5% 5% 5%;
+      border: none;
+      position: relative;
+      z-index: 2;
+      ::-webkit-input-placeholder {color: $gray; opacity: .3}
+      ::-moz-placeholder          {color: $gray; opacity: .3}
+      :-moz-placeholder           {color: $gray; opacity: .3}
+      :-ms-input-placeholder      {color: $gray; opacity: .3}
+    }
+    input, textarea {
+      font-family: Arial;
+      margin-bottom: 10px;
+      padding: 10px 0;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid rgba(106,106,106,0.4);
+      color: $dark-violet;
+      resize: none;
+      transition: border-color .3s;
+      font-size: 1.2rem;
+      &:focus {
+        outline: none;
+        border-color: $dark-violet;
+      }
+    }
+    button {
+      background: none;
+      text-transform: uppercase;
+      border: none;
+      font-weight: bold;
+      color: rgb(159, 75, 132);
+      font-size: 1.2rem;
+      transition: box-shadow .3s;
+      cursor: pointer;
+      transition: opacity .3s;
+      &:hover {
+        opacity: .7;
+      }
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $light-violet;
+      }
+      &:disabled {
+        color: rgba($dark-violet, .1);
+      }
+    }
+  }
+
+  .info-wrapper {
+    position: relative;
+    float: right;
+    margin-right: 6vw;
+    text-align: center;
+    padding-top: 15px;
+    max-height: 35vh;
+    font-weight: bold;
+    z-index: 1;
+    .info {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      text-align: left;
+      padding-bottom: 5%;
+      &-label {
+        font-size: 1.5rem;
+        color: rgb(159, 75, 132);
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  address {
+    line-height: 2.5;
+    font-style: normal;
+    color: rgba(106,106,106,0.4);
+    a {
+      color: rgba(106,106,106,0.4);
+      transition: color .3s;
+      &:hover {
+        color: $dark-violet;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contact-us form {
+    fieldset, .info-wrapper {
+      padding: 8%;
+      width: 100%;
+    }
+    fieldset {
+      input, textarea {
+        font-size: 1rem;
+      }
+    }
+    .info-wrapper {
+      float: none;
+      margin-top: 55px;
+      .info-label {
+        display: none;
+      }
+      address {
+        text-align: center;
+        line-height: 2;
+      }
+    }
+  }
+  .mark-main, .mark-background {
+    display: none;
+  }
+}

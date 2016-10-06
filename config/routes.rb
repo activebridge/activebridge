@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get ':page', to: 'welcome#index',
-               constraints: { page: /(team|about|services|portfolio|testimonials)/ },
+               constraints: { page: /(team|about|services|portfolio|testimonials|contact)/ },
                as: :page
   get 'expire_cache', to: 'welcome#expire_cache'
 
-  resource :team, only: :show
   resources :articles, constraints: { subdomain: 'blog' }, path: '/' do
     collection do
       get 'category/:category', action: :index, as: 'category'
@@ -15,6 +14,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  post '/contact', to: 'requests#create', as: :contact
 
   root to: 'welcome#index'
 end

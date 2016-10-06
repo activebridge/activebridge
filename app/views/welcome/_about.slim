@@ -1,16 +1,15 @@
-div itemscope="" itemtype="http://schema.org/Thing"
-  h1.title= t('about.title')
-  .content.about
-    h4.text-center= t('about.description')
-    .section
-      .section-title
-        = svg(:free)
-        div= t('about.core_values')
-      ul.section-description
-        li itemprop='description'= t('about.experienced_team')
-    .section
-      .section-title
-        = svg(:trophy)
-        div= t('about.benefits')
-      ul.section-description
-        li itemprop='description'= t('about.cost_efficient')
+div.about itemscope="" itemtype="http://schema.org/thing"
+  = inline_svg 'about/about-bg-pattern.svg', class: 'about-background-svg'
+  h1.about-title= inline_svg 'about/about-title.svg'
+  .about-desc
+    .about-desc-text
+      == t('.description')
+    = inline_svg 'about/about-pics.svg', class: 'about-desc-mark'
+    .about-desc-square-mark
+  dl.about-items
+    .about-items-wrapper
+      dt= t('.core_values')
+      dd itemprop='description'== t('.experienced_team')
+      dt= t('.benefits')
+      dd itemprop='description'== t('.cost_efficient')
+      dl.about-items-circle

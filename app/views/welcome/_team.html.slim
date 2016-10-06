@@ -1,10 +1,14 @@
 div itemscope="" itemtype="http://schema.org/Person"
-  h1.title= t('team.title')
+  .contact-title= t('team.title')
   .content.members
-    - @members.map do |member|
-      .member id="member_#{member.id}"
-        .member-image style=("background-image: url('#{member.cartoon.url(:mask)}')")
-          = image_tag(member.avatar.url)
-        .details
-          h4 itemprop='name'= member.name
-          p itemprop='jobTitle'= member.position
+    #ballWrapper
+      #ball style='background-position-x: 0px'
+      #ballShadow
+    #rotate-shape.main style="transform: rotateY(0deg)"
+      - @members.each_with_index do |member, index|
+        .member id="member_#{member.id}" style="transform: rotateY(#{360/@members.size*(index+1) + (cycle(0,1,-1, name: 'sign').to_i)*5}deg) rotateX(#{cycle(0,-26,26, name: 'x_axis')}deg) translateZ(40vmin) scale(.5)"
+          .member-image
+            = image_tag(member.avatar.url(cycle(:mask, :mask_down, :mask_up, name: 'avatar')))
+          /* .details */
+          /*   h4 itemprop='name'= member.name */
+          /*   p itemprop='jobTitle'= member.position */

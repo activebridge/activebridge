@@ -1,38 +1,54 @@
 en:
   hello:
-    Hello! We are Active Bridge -  a Ruby on rails web development team.
-    Our company provides modern web methods for building high-quality
+    Hello! We are Active Bridge - a Ruby on Rails web development agency.
+    Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
   meta:
     desription:
-      Full stack web development agency operating in Ukraine.
-      We offer innovative web solutions for your business
-      from start-ups to large companies.
+       Great project, happy clients! Web application development agency,
+       based on ruby on rails technology.
+       Huge work experience with companies from USA, Canada, Europe.
     keywords:
-      ruby on rails developers ukraine, ruby on rails team ukraine,
-      agile Ruby development, web application development, backend web development
-  about:
-    title: About
-    description: At Active Bridge, we all come to work every day with a great enthusiasm,
-      because we're inspired by our mission. To resolve all doubts of web development process
-      and show how simple and clear it is.
-      Every day new web projects, ideas, brands appear. And in many ways, their future depends on the chosen
-      programming technology. Our goal, at Active Bridge, connects your ideas with global community as soon as possible.
-      To provide this we implement the most faster and effective way - Ruby on Rails framework.
-      We want to popularize the way we do and show it's comprehensive facilities
-    core_values: Core Values
-    experienced_team: Foremost, we're the team, united by mutual ideas and interests.
-      Our passion is Ruby, fundamental value - friendship relationship.
-      Active Bridge success pillars based on  customized approach,
-      contribution to the Rails framework and sharing our experience
-
-    benefits: Benefits
-    cost_efficient: We know the whole importance of your project and provide great
-      service to create a superior finished product.
-      All our Senior and Middle developers have Master's degree
-      and more than 6 years development experience in a variety
-      of industries.
-
+  welcome:
+    about:
+      title: About
+      subtitle: because we love the way we do
+      description: At Active Bridge - <h3>ruby on rails agency</h3>, we all come to work every day
+                 with a great enthusiasm, because we're inspired by our mission. To resolve all doubts
+                 of <h4>web development process</h4> and show how simple and clear it is.
+        Every day new <h4>website projects</h4>, ideas, brands appear. And in many ways, their future depends on
+        the chosen <h4>programming language</h4> technology. Our goal, at Active Bridge,
+        connects your ideas with global community as soon as possible. To provide this we implement
+        the most faster and effective way - <h3>Ruby on Rails framework</h3>. We want to popularize
+        the way we do and show it's comprehensive facilities.
+      core_values: Our Team Core values
+      experienced_team: Foremost, we're the team of <h3>web app developers</h3>, united by mutual ideas
+        and interests.
+        Our passion is Ruby, fundamental value - friendship relationship. Our <h3>web development agency</h3>
+        success pillars based on  customized approach, contribution to the Rails framework and
+        sharing our experience.
+      benefits: Our main benefits
+      cost_efficient: We know the whole importance of your <h4>web project idea</h4> and provide great service
+        to create a superior finished product. All our <h3>Senior and Middle ruby on rails developers</h3>
+        have Master's degree, good English speaking skills and more than 6 years experience in
+        <h3>web development<h3> across a variety of industries. Our web development company have
+        many years’ experience of cooperation with other <h4>web development companies</h4>
+        in USA, Canada, and Europe.
+    contact:
+      title: Contact us
+      name_placeholder: Your name
+      email_placeholder: Your email
+      message_placeholder: Text message
+      send: Send
+      info: 'Contact info:'
+      organization: Active Bridge, LLC
+      email: contact@active-bridge.com
+      location: Cherkasy
+      country: Ukraine
+      postal_code: 18000
+      phone_number: '+380636086045'
+    testimonials:
+      title: Testimonials
   team:
     title: Team
   portfolio:
@@ -46,46 +62,65 @@ en:
   services:
     title: Services
     we_do: We can help you on evry stage of web development process
-
-    agile_programming: Agile Programming
-    custom_web_development: As Ruby on Rails developers we know a variety of
-      programming languages and technologies. Our team has
-      fundamental knowledge in
-      Strong Skills':'
-                   Ruby on Rails - 99%
-                   Javascript / CoffeeScript / jQuery
-                   AngularJS / Ember.js / Backbone.js - 88%
-                   HTML / Haml / Slim - 95%
-                   CSS / SASS / LESS / Compass - 90%
-                   MySQL / PostgreSQL / MongoDB / Redis - 75%
-    scrum: Thanks to using Scrum methodology, we can deliver large and complex products.
-      Through effective planning and good communication within our team,
-      we can complete the projects with fast delivery times
-    free_review: We implement this engineering practice in terms of agile development methodology.
-      Main goal code review is to identify differences in code writing style according to Ruby style guide.
-      To provide this convention we use rubocob gem and make the description of problem-solving in a short time.
-
+    agile_programming: Ruby on Rails web development
+    custom_web_development:
+      title: Custom Web Development
+      desc: As Ruby on Rails developers, we know a variety of
+        programming languages and technologies. Our team has
+        fundamental knowledge in
+        Strong Skills.
+    skills:
+      - id: ror
+        name: Ruby on Rails
+        level: 99
+        icon: rails
+      - id: js
+        name: Javascript ReactJS jQuery AngularJS Backbone.js
+        level: 88
+        icon: js
+      - id: html
+        name: HTML Haml Slim
+        level: 95
+        icon: code
+      - id: css
+        name: CSS SASS LESS Compass
+        level: 97
+        icon: css3
+      - id: sql
+        name: MySQL PostgreSQL MongoDB Redis
+        level: 85
+        icon: database
+    scrum:
+      title: Scrum process
+      desc:
+        Thanks to using <h4>Scrum methodology</h4>, we can deliver large and complex products.
+        Through effective planning and good communication within our <h4>agile development rails</h4> team,
+        we can complete the projects with fast delivery times.
+    free_review:
+      title: Free code review
+      desc:
+        We implement this engineering practice in terms of <h4>agile development methodology</h4>.
+        Main goal code review is to identify differences in code writing style according to Ruby style guide.
+        To provide this convention we use rubocob gem and make the description of problem-solving
+        in a short time.
     maintenance_and_support: Maintenance and Support
-    code_audit: The existing application needs sustained attention.
-      It is necessary to make some updates and enhancements to the features.
-      We offer web development management, maintenance, and support services
-      to achieve your business needs. Our team keeps this process strong with
-      regular checkups and web analytical tools
-
+    code_audit:
+      The existing <h4>web application</h4> needs sustained attention. It is necessary to make some updates
+      and enhancements to the features. We offer <h4>web development project management</h4>,
+      maintenance, and support services to achieve your business needs. Our team keeps this process strong
+      with regular checkups and web analytic tools.
     outstaffing: Outstaffing
-    team: The development process is an ongoing process for all time product existing.
-          That's what the main idea of development industry':'
-          Dedicated Team is necessary to develop and maintain web product.
-          The main features of dedicated team realization':'
-          short product releases, halving functional step-by-step;
-          there is no psychological problem as hiding troubles from customers when product realization is;
-          the customer has ability quickly responds and makes decisions relating to functional improvement.
-          Ordering-company no needs to create a development and product testing division.
-          Save your financial and material resources':'
-          time and financial costs for the set of a team;
-          providing workplaces;
-          training for the officers;
-          utility costs.
+    team: <h3>Web support</h3>
+      The development process is an ongoing process for all time product existing.
+      That's why the main idea of development industry is <h4>Dedicated Team</h4>.
+      What's necessary to develop and maintain web product.
+      The main features of dedicated team realization can be short <h4>product releases</h4>,
+      halving functional step-by-step; there is no psychological problem as hiding troubles
+      from customers when product realization is; the customer has ability quickly responds
+      and makes decisions relating to functional improvement.
+      Ordering-company no needs to create a development and product testing division.
+      Save your financial and material resources, time and financial costs for set
+      of a <h4>dedicated team<h4>; providing workplaces; training for the officers; utilities costs.
   testimonials:
     title: Testimonials
     all:
@@ -106,6 +141,7 @@ en:
           Awesome team. Full stack development. Happy to work with these guys any day.
       - company: Preeline
         logo: https://d1qb2nb5cznatu.cloudfront.net/startups/i/297009-8af321cc567f3918450b0fcc98ddf8f6-medium_jpg.jpg?buster=1424202571
+        banner: https://preeline.com/assets/preeline-horizontal-070b759047259186fb90765b1e54f068ed25c7429b615de052cb690e58cec34b.svg
         author: Julia Macalaster
         image: https://media.licdn.com/media/p/4/005/081/397/117ba71.jpg
         description:
@@ -115,7 +151,8 @@ en:
           Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
           We feel so incredibly lucky to be working with them
       - company: Freestak
-        logo: http://new.freestak.com/wp-content/uploads/2015/11/TEN_FreestakLogo.png
+        logo: https://res.cloudinary.com/active-bridge/image/upload/v1474614652/freestak.png
+        banner: https://res.cloudinary.com/active-bridge/image/upload/v1474614834/freestak_logo.png
         author: Julie Freeman Kummer
         image: https://media.licdn.com/media/p/2/000/012/005/0fcec38.jpg
         description:

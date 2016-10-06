@@ -1,39 +1,12 @@
 head
   title Active Bridge - ruby on rails web development team
-  meta name = "description" content=t('meta.desription')
-  meta name = "keywords" content=t('meta.keywords')
-  meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  meta content = "1AeEQ7FZFB4K7URidlmD2UP6z9pzq5HMUACZOhVRbpA" name="google-site-verification"
+  meta charset='utf-8'
+  meta name = 'description' content=t('meta.desription')
+  meta name = 'viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no'
+  meta content = '1AeEQ7FZFB4K7URidlmD2UP6z9pzq5HMUACZOhVRbpA' name='google-site-verification'
   meta name='mobile-web-app-capable' content='yes'
   link rel='manifest' href='manifest.json'
   link rel='icon' sizes='192x192' href='/icon-4x.png'
-  link rel='dns-prefetch' href='//res.cloudinary.com'
-  = stylesheet_link_tag type, media: media, 'data-turbolinks-track' => true
-  = stylesheet_link_tag 'fonts', media: :none, 'data-turbolinks-track' => true, onload: "if(media!='all')media='all'"
+  = stylesheet_link_tag type, media: media, onload: "if(media!='all')media='all'"
   = csrf_meta_tags
-  scss:
-    $violet: #842B98;
-    svg.icon {
-      max-width: 48px;
-      height: 48px;
-      display: inline-block;
-      path {
-        fill: $violet;
-      }
-    }
-
-    svg.xl {
-      height: 32px;
-    }
-
-    .page#home {
-      text-align: center;
-      background: transparent;
-      .logo svg {
-        height: 100px;
-      }
-      p {
-        padding: 0 10%;
-      }
-    }
   = yield :head

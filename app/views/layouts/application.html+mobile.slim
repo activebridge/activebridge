@@ -1,59 +1,16 @@
 = content_for :head do
-  scss:
-    body {
-      overflow: hidden;
-      background: rgb(103, 138, 179);
-    }
-    .page {
-      height: 100vh;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .social-icons {
-      padding-top: 35px;
-      a {
-        display: inline-block;
-        padding: 10px;
-      }
-    }
-
-    nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #123;
-      font-size: 0;
-      a {
-        display: inline-block;
-        width: 25%;
-        padding: 10px 0;
-        font-size: 1rem;
-        box-sizing: border-box;
-        text-align: center;
-      }
-
-      svg.icon path {
-        fill: white;
-      }
-    }
+  = render 'layouts/critical_css'
+  = stylesheet_link_tag 'fonts', media: :none, onload: "if(media!='all')media='all'"
 
 doctype 5
 html
   = render 'layouts/head', type: :mobile, media: :none
   body
-    main= yield
+    = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
+    main#pages= yield
     nav
-      a href='home'
-        = svg(:home, :xl)
-      a href='about'
-        = svg(:info, :xl)
-      a href='services'
-        = svg(:cogs, :xl)
-      a href='team'
-        = svg(:group, :xl)
-    = stylesheet_link_tag :mobile, media: :all, async: true
-    = javascript_include_tag :mobile, async: true
+      a.active href='home'= inline_svg('mobile/icons/menu-home')
+      a href='about'= inline_svg('mobile/icons/menu-about')
+      a href='services'= inline_svg('mobile/icons/menu-services')
+      a href='contact'= inline_svg('mobile/icons/menu-contacts')
+  = javascript_include_tag :mobile, async: true

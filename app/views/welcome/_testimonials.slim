@@ -1,15 +1,16 @@
-div
-h1.title.portfolio= t('testimonials.title')
-.content.projects
-  .arrows
-    i.arrow#left= svg('chevron-left', :xl)
-    i.arrow#right= svg('chevron-right', :xl)
-  .wrapper data-step=1 data-tf=0
-    - I18n.t('testimonials.all').map do |testimonial|
-      .project-wrapper
-        .project
-          = image_tag(testimonial[:logo])
-          h2
-            => image_tag(testimonial[:image], class: :author)
-            = testimonial[:author]
-          div= testimonial[:description]
+.contact-title= t('.title')
+.content.testimonials
+  = inline_svg 'testimonials/testimonials-bg.svg', class: 'testimonials-background-svg'
+  .wrapper
+    - I18n.t('testimonials.all').each do |testimonial|
+      input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=true autofocus=true
+      .testimonial class="testimonial #{testimonial[:company].underscore}"
+        .testimonial-logo= image_tag(testimonial[:banner] || testimonial[:logo])
+        .testimonial-body
+          .testimonial-wrapper
+            h2: q= testimonial[:description]
+            hr
+            h3= testimonial[:author]
+          = image_tag(testimonial[:image], class: :author)
+      label for="testimonial_#{testimonial[:company].underscore}"
+        = image_tag(testimonial[:logo])
