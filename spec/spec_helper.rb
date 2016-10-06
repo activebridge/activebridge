@@ -1,7 +1,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
-require 'support/login_helper'
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'simplecov'
@@ -27,7 +26,6 @@ Capybara.register_driver :poltergeist do |app|
 end
 
 RSpec.configure do |config|
-  config.include LoginHelper, type: :feature
   config.include FactoryGirl::Syntax::Methods
 
   config.before(:suite) do
