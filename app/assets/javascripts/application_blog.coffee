@@ -3,7 +3,7 @@
 #= require simplemde.min
 #= require turbolinks
 #= require jquery_ufujs
-#= require google_tag_manager
+#= require _analytics
 
 Turbolinks.enableProgressBar()
 Turbolinks.enableTransitionCache()
