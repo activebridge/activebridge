@@ -311,7 +311,7 @@ svg#main {
     width: 6vmin;
     max-height: 6vmin;
     max-width: 6vmin;
-    background: rgba($white, 0.6);
+    background: #cca2c0;
     border-radius: 50%;
     margin: 1vmin 3vmin 4vmin 1vmin;
     outline: none;
@@ -322,10 +322,7 @@ svg#main {
       }
     }
     &:hover, &:focus {
-      box-shadow: inset 0 0 50px black;
-      svg {
-        box-shadow: 0 0 10px rgba(0,0,0,0.7);
-      }
+      background: white;
     }
     svg {
       position: absolute;
@@ -372,7 +369,7 @@ svg#main {
     transform: translateX(0%) translateY(0%) rotate(360deg);
     @for $i from 0 through 10 {
       &.position-#{$i} {
-          transition: transform 1.5s ease 1.5s - (0.2s * $i);
+          transition: transform 1.5s ease 1.5s - (0.2s * $i), background .3s;
       }
     }
   }
@@ -381,7 +378,7 @@ svg#main {
       transform: translateX(0%) translateY(0%) rotate(360deg);
       @for $i from 0 through 10 {
         &.position-#{$i} {
-          transition: transform 1.5s ease 1.5s + (0.25s * $i);
+          transition: transform 1.5s ease 1.5s + (0.25s * $i), background .3s;
         }
       }
     }
