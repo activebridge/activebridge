@@ -1,5 +1,5 @@
 module ApplicationHelper
-  MD_OPTIONS = %w(
+  MD_OPTIONS = %i(
     fenced_code_blocks
     no_intra_emphasis
     autolink
