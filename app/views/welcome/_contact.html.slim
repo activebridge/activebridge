@@ -4,8 +4,8 @@
   = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
     #contact_form.envelope
     .data
-      = inline_svg 'ActiveBridge', class: 'mark-main'
-      = inline_svg 'contact/mark-background', class: 'mark-background'
+      = inline_svg 'ActiveBridge.svg', class: 'mark-main'
+      = inline_svg 'contact/mark-background.svg', class: 'mark-background'
       fieldset
         input#name name='contact[name]' type='text' placeholder="#{ t('.name_placeholder') }"
         input#email name='contact[email]' type='email' placeholder="#{ t('.email_placeholder') }" required=true
