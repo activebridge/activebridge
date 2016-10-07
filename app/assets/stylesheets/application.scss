@@ -97,7 +97,7 @@ svg#main {
     visibility: hidden;
   }
   @keyframes logs {
-    from { transform: translateY(10px) skewY(29deg) } to { transform: translateY(-400px) skewY(29deg) }
+    from { transform: translateY(50px) skewY(29deg) } to { transform: translateY(-350px) skewY(29deg) }
   }
 }
 
@@ -154,7 +154,7 @@ svg#main {
       }
       #apples-MacBook-Pro-2 {
         visibility: visible;
-        animation: logs 5s steps(80, start) 0s infinite normal;
+        animation: logs 2s steps(10, start) 0s infinite normal;
       }
     }
   }

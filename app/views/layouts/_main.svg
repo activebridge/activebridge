@@ -191,60 +191,60 @@
                                 </g>
                                 <g id='server-logs' mask="url(#mask-24)">
                                   <text id="apples-MacBook-Pro-2" stroke="none" fill="none" sketch:type="MSTextLayer" font-family="monospace" font-size="12" font-weight="normal">
-                                      <tspan x="19" y="378" fill="#CECECE">apples-MacBook-Pro-2:activebridge apple$ rails s</tspan>
-                                      <tspan x="19" y="392" fill="#CECECE">=&gt; Booting Thin</tspan>
-                                      <tspan x="19" y="406" fill="#CECECE">=&gt; Rails 4.2.6 application starting in development on http://</tspan>
-                                      <tspan x="19" y="420" fill="#CECECE">localhost:3000</tspan>
-                                      <tspan x="19" y="434" fill="#CECECE">=&gt; Run `rails server -h` for more startup options</tspan>
-                                      <tspan x="19" y="448" fill="#CECECE">=&gt; Ctrl-C to shutdown server</tspan>
-                                      <tspan x="19" y="462" fill="#CECECE">Thin web server (v1.6.4 codename Gob Bluth)</tspan>
-                                      <tspan x="19" y="476" fill="#CECECE">Maximum connections set to 1024</tspan>
-                                      <tspan x="19" y="490" fill="#CECECE">Listening on localhost:3000, CTRL+C to stop</tspan>
-                                      <tspan x="19" y="504" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="518" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="532" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:51:55 +0300</tspan>
-                                      <tspan x="19" y="546" fill="#CECECE">  </tspan>
-                                      <tspan x="33.4492188" y="546" font-weight="bold" fill="#2EAEBB">ActiveRecord::SchemaMigration Load (31.8ms)</tspan>
-                                      <tspan x="344.107422" y="546" fill="#CECECE">  </tspan>
-                                      <tspan x="358.556641" y="546" font-weight="bold" fill="#B500B5">SELECT </tspan>
-                                      <tspan x="19" y="560" font-weight="bold" fill="#B500B5">"schema_migrations".* FROM "schema_migrations"</tspan>
-                                      <tspan x="351.332031" y="560" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="574" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="588" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="602" fill="#CECECE">(24.4ms)</tspan>
-                                      <tspan x="19" y="616" fill="#CECECE">  Rendered layouts/_head.slim (710.7ms)</tspan>
-                                      <tspan x="19" y="630" fill="#CECECE">  Rendered layouts/_main.svg (6.5ms)</tspan>
-                                      <tspan x="19" y="644" fill="#CECECE">Completed 200 OK in 891ms (Views: 875.4ms | ActiveRecord: </tspan>
-                                      <tspan x="19" y="658" fill="#CECECE">0.0ms)</tspan>
-                                      <tspan x="19" y="672" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="686" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="700" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:52:01 +0300</tspan>
-                                      <tspan x="19" y="714" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="728" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="742" fill="#CECECE">(0.1ms)</tspan>
-                                      <tspan x="19" y="756" fill="#CECECE">  Rendered layouts/_head.slim (6.9ms)</tspan>
-                                      <tspan x="19" y="770" fill="#CECECE">  Rendered layouts/_main.svg (0.2ms)</tspan>
-                                      <tspan x="19" y="784" fill="#CECECE">Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)</tspan>
-                                      <tspan x="19" y="798" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="812" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="826" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:52:02 +0300</tspan>
-                                      <tspan x="19" y="840" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="854" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="868" fill="#CECECE">(0.1ms)</tspan>
-                                      <tspan x="19" y="882" fill="#CECECE">  Rendered layouts/_head.slim (12.0ms)</tspan>
-                                      <tspan x="19" y="896" fill="#CECECE">  Rendered layouts/_main.svg (0.2ms)</tspan>
-                                      <tspan x="19" y="910" fill="#CECECE">Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)</tspan>
-                                      <tspan x="19" y="924" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="938" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="952" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 16:20:55 +0300</tspan>
-                                      <tspan x="19" y="966" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="980" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="994" fill="#CECECE">(1.9ms)</tspan>
-                                      <tspan x="19" y="1008" fill="#CECECE">  Rendered layouts/_head.slim (51.1ms)</tspan>
-                                      <tspan x="19" y="1022" fill="#CECECE">  Rendered layouts/_main.svg (0.5ms)</tspan>
-                                      <tspan x="19" y="1036" fill="#CECECE">Completed 200 OK in 183ms (Views: 161.7ms | ActiveRecord: </tspan>
-                                      <tspan x="19" y="1050" fill="#CECECE">0.0ms)</tspan>
-                                      <tspan x="19" y="1064" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="19" fill="#CECECE">apples-MacBook-Pro-2:activebridge apple$ rails s</tspan>
+                                      <tspan x="19" y="33" fill="#CECECE">=&gt; Booting Thin</tspan>
+                                      <tspan x="19" y="47" fill="#CECECE">=&gt; Rails 4.2.6 application starting in development on http://</tspan>
+                                      <tspan x="19" y="61" fill="#CECECE">localhost:3000</tspan>
+                                      <tspan x="19" y="75" fill="#CECECE">=&gt; Run `rails server -h` for more startup options</tspan>
+                                      <tspan x="19" y="89" fill="#CECECE">=&gt; Ctrl-C to shutdown server</tspan>
+                                      <tspan x="19" y="103" fill="#CECECE">Thin web server (v1.6.4 codename Gob Bluth)</tspan>
+                                      <tspan x="19" y="117" fill="#CECECE">Maximum connections set to 1024</tspan>
+                                      <tspan x="19" y="141" fill="#CECECE">Listening on localhost:3000, CTRL+C to stop</tspan>
+                                      <tspan x="19" y="145" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="159" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="173" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:51:55 +0300</tspan>
+                                      <tspan x="19" y="187" fill="#CECECE">  </tspan>
+                                      <tspan x="33.4492188" y="201" font-weight="bold" fill="#2EAEBB">ActiveRecord::SchemaMigration Load (31.8ms)</tspan>
+                                      <tspan x="344.107422" y="201" fill="#CECECE">  </tspan>
+                                      <tspan x="358.556641" y="201" font-weight="bold" fill="#B500B5">SELECT </tspan>
+                                      <tspan x="19" y="215" font-weight="bold" fill="#B500B5">"schema_migrations".* FROM "schema_migrations"</tspan>
+                                      <tspan x="351.332031" y="215" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="229" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
+                                      <tspan x="19" y="243" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
+                                      <tspan x="19" y="257" fill="#CECECE">(24.4ms)</tspan>
+                                      <tspan x="19" y="271" fill="#CECECE">  Rendered layouts/_head.slim (710.7ms)</tspan>
+                                      <tspan x="19" y="285" fill="#CECECE">  Rendered layouts/_main.svg (6.5ms)</tspan>
+                                      <tspan x="19" y="299" fill="#CECECE">Completed 200 OK in 891ms (Views: 875.4ms | ActiveRecord: </tspan>
+                                      <tspan x="19" y="313" fill="#CECECE">0.0ms)</tspan>
+                                      <tspan x="19" y="327" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="341" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="355" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:52:01 +0300</tspan>
+                                      <tspan x="19" y="369" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
+                                      <tspan x="19" y="383" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
+                                      <tspan x="19" y="397" fill="#CECECE">(0.1ms)</tspan>
+                                      <tspan x="19" y="411" fill="#CECECE">  Rendered layouts/_head.slim (6.9ms)</tspan>
+                                      <tspan x="19" y="425" fill="#CECECE">  Rendered layouts/_main.svg (0.2ms)</tspan>
+                                      <tspan x="19" y="439" fill="#CECECE">Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)</tspan>
+                                      <tspan x="19" y="453" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="467" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="481" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:52:02 +0300</tspan>
+                                      <tspan x="19" y="495" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
+                                      <tspan x="19" y="509" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
+                                      <tspan x="19" y="523" fill="#CECECE">(0.1ms)</tspan>
+                                      <tspan x="19" y="537" fill="#CECECE">  Rendered layouts/_head.slim (12.0ms)</tspan>
+                                      <tspan x="19" y="551" fill="#CECECE">  Rendered layouts/_main.svg (0.2ms)</tspan>
+                                      <tspan x="19" y="565" fill="#CECECE">Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)</tspan>
+                                      <tspan x="19" y="579" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="593" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="607" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 16:20:55 +0300</tspan>
+                                      <tspan x="19" y="621" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
+                                      <tspan x="19" y="635" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
+                                      <tspan x="19" y="649" fill="#CECECE">(1.9ms)</tspan>
+                                      <tspan x="19" y="663" fill="#CECECE">  Rendered layouts/_head.slim (51.1ms)</tspan>
+                                      <tspan x="19" y="677" fill="#CECECE">  Rendered layouts/_main.svg (0.5ms)</tspan>
+                                      <tspan x="19" y="691" fill="#CECECE">Completed 200 OK in 183ms (Views: 161.7ms | ActiveRecord: </tspan>
+                                      <tspan x="19" y="705" fill="#CECECE">0.0ms)</tspan>
+                                      <tspan x="19" y="719" fill="#CECECE"></tspan>
                                   </text>
                                 </g>
                             </g>
