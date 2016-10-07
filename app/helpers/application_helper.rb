@@ -1,4 +1,14 @@
 module ApplicationHelper
+  MD_OPTIONS = %w(
+    fenced_code_blocks
+    no_intra_emphasis
+    autolink
+    strikethrough
+    lax_html_blocks
+    superscript
+    tables
+  ).each_with_object({}) { |e, o| o[e] = true }.freeze
+
   def svg(path, klass = nil)
     inline_svg("icons/#{path}.svg", class: "icon #{klass}")
   end
@@ -12,19 +22,7 @@ module ApplicationHelper
 
   def md(text)
     coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
-    markdown_to_html = Redcarpet::Markdown.new(coderayified, md_options)
+    markdown_to_html = Redcarpet::Markdown.new(coderayified, MD_OPTIONS)
     markdown_to_html.render(text).html_safe
-  end
-
-  def md_options
-    {
-      fenced_code_blocks: true,
-      no_intra_emphasis: true,
-      autolink: true,
-      strikethrough: true,
-      lax_html_blocks: true,
-      superscript: true,
-      tables: true
-    }
   end
 end
