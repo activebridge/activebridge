@@ -1,6 +1,7 @@
 {
   "short_name": "Active Bridge",
-  "name": "Active Bridge, LLC",
+  "name": "Active Bridge",
+  "background_color": "#433B43",
   "icons": [
     {
       "src": "icon-2x.png",
