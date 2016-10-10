@@ -12,6 +12,13 @@ html, body {
   height: 100%;
 }
 
+body.active {
+  overflow: hidden;
+  section {
+    display: inline-block;
+  }
+}
+
 nav svg {
   path, polygon, rect {
     // transition: stroke .3s, fill .3s;
@@ -26,7 +33,8 @@ nav a.active svg {
 
 body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   max-height: 100vmax;
   margin: 0;
   max-width: 100%;
@@ -68,7 +76,7 @@ section {
   white-space: normal;
   height: 100vh;
   overflow-y: auto;
-  display: inline-block;
+  display: block;
   position: relative;
   box-sizing: border-box;
   padding-bottom: 80px;

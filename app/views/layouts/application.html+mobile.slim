@@ -5,7 +5,7 @@
 doctype 5
 html
   = render 'layouts/head', type: :mobile, media: :none
-  body
+  body onload="if (navigator.userAgent.includes(' ')) { document.body.className = 'active' }"
     = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
     main#pages= yield
     nav
