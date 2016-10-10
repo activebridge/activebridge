@@ -16,6 +16,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_controller.default_url_options = { host: 'active-bridge.com' }
+  config.action_mailer.asset_host = 'https://active-bridge.com'
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     authentication: :plain,
