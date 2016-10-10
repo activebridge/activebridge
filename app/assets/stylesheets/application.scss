@@ -170,9 +170,16 @@ svg#main {
 
   #services {
     transform: scale(1);
+    &-title {
+      transform: translateY(0px);
+      opacity: 0;
+      transition: .2s ease-out;
+    }
     &:hover {
-      transition-delay: 0s;
-      transform: scale(1) translateX(-15px);
+      #services-title {
+        transform: translateY(190px);
+        opacity: 1;
+      }
     }
   }
 
