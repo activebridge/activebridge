@@ -17,7 +17,7 @@ html
         padding: 5%;
       }
 
-      svg {
+      img {
         display: block;
         margin: 0 auto;
         max-width: 100%;
@@ -43,6 +43,6 @@ html
       }
 
   body
-    = inline_svg('email-logo.svg')
+    = image_tag('email-logo.svg')
     hr
     main= yield
