@@ -1,6 +1,6 @@
 class Request < ApplicationMailer
   def notify(attrs)
-    @body = attrs[:body]
+    @body = attrs[:message]
     mail(
       from: "#{attrs[:name]} <#{attrs[:email]}>",
       to: 'contact@active-bridge.com',
