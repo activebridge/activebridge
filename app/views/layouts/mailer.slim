@@ -1,0 +1,48 @@
+html
+  head
+    scss:
+      body {
+        width: 100%;
+        background: #353535;
+        height: 100%;
+        padding: 5%;
+        color: #7b7b7b;
+        box-sizing: border-box;
+        font-size: 20px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      main {
+        padding: 5%;
+      }
+
+      svg {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 5% 0;
+      }
+
+      hr {
+        border-color: #7B7B7B;
+      }
+
+      h1 {
+        color: white;
+        font-size: 24px;
+      }
+
+      mark {
+        background: none;
+        color: #A35EE0;
+      }
+
+      p {
+        text-indent: 5%;
+      }
+
+  body
+    = inline_svg('email-logo.svg')
+    hr
+    main= yield
