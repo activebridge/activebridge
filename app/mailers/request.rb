@@ -11,8 +11,8 @@ class Request < ApplicationMailer
   def confirm(attrs)
     @name = attrs[:name]
     mail(
-      from: attrs[:email],
-      to: 'contact@active-bridge.com',
+      from: 'contact@active-bridge.com',
+      to: attrs[:email],
       subject: "Active Bridge",
     )
   end
