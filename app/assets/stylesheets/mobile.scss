@@ -17,6 +17,11 @@ body.active {
   section {
     display: inline-block;
   }
+
+  .bg {
+    width: 200%;
+    opacity: 1;
+  }
 }
 
 nav svg {

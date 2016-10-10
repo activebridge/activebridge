@@ -1,5 +1,6 @@
 <style type='text/css'>
   body {
+    overflow-x: hidden;
     background: #433B43;
     color: white;
     text-align: center;
@@ -96,8 +97,9 @@
     left: -85%;
     max-height: 100vmax;
     padding-bottom: 50px;
-    width: 200%;
-    transition: transform .1s;
+    width: 100%;
+    transition: transform .1s, opacity .5s;
+    opacity: 0;
   }
 
   .bg g {
