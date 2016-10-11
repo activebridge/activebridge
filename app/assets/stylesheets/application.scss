@@ -170,16 +170,15 @@ svg#main {
 
   #services {
     transform: scale(1);
-    &-title {
-      transform: translateY(0px);
-      opacity: 0;
-      transition: .2s ease-out;
+    &-frame {
+      stroke: $light-violet;
+      stroke-width: 2px;
+      stroke-dasharray: 1000;
+      animation: light 1.5s infinite;
     }
     &:hover {
-      #services-title {
-        transform: translateY(190px);
-        opacity: 1;
-      }
+      transform: translateX(20px);
+      transition-delay: 0s;
     }
   }
 
@@ -408,4 +407,13 @@ svg#main {
 
 * {
   font-weight: normal;
+}
+
+@keyframes light {
+  50% {
+    stroke: $dark-violet;
+  }
+  100% {
+    stroke: $light-violet;
+  }
 }
