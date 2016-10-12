@@ -13,6 +13,7 @@ window.submit = (form) ->
 
   data = new FormData(document.querySelector('form'))
   xhr.send(data)
+  dataLayer.push({'event':'formSubmitted', 'formName':'Contact Us'})
   return false
 
 window.animate = -> document.getElementById('ab').checked = true
@@ -35,6 +36,11 @@ openPage = (event) ->
       keepFocus()
       initTeamScroll()
   xhr.send()
+  dataLayer.push({
+    'event':'VirtualPageview',
+    'virtualPageURL': href,
+    'virtualPageTitle' : href
+  })
   event.preventDefault()
 
 initTeamScroll = ->
