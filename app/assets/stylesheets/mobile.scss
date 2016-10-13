@@ -133,7 +133,7 @@ section {
 }
 
 div, p {
-  padding: 0 10%;
+  padding: 0 6%;
 }
 
 div {
@@ -174,22 +174,36 @@ h6 {
 
 dd {
   margin: 0;
-  display: flex;
-  align-items: center;
-  svg {
-    padding: 0 3%;
-    width: 45%;
-  }
+  padding: 0 4%;
   span {
     padding: 0 3%;
-    width: 55%;
+    width: 100%;
+  }
+  svg {
+    shape-outside: polygon(0 45%, 50% 0, 100% 45%, 75% 100%, 25% 100%);
+    shape-margin: 5%;
+    height: auto;
+    width: 40%;
+    margin: 0 8px 8px;
+  }
+  .left {
+    float: left;
   }
   .right {
-    text-align: right;
+    float: right;
   }
   margin-bottom: 20px;
-  &:nth-child(4) span {
+  &:nth-child(2) {
+    text-align: right;
+    h1, h2, h3, h4, h5 {
+      text-align: right;
+    }
+  }
+  &:nth-child(4) {
     text-align: left;
+    h1, h2, h3, h4, h5 {
+      text-align: left;
+    }
   }
 }
 
