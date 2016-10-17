@@ -1,0 +1,45 @@
+.envelope {
+  position: absolute;
+  top: -100%;
+  width: 10%;
+  max-width: 50px;
+  left: 0%;
+  z-index: 10000;
+  transition: transform 1s, top 1s, left 1s;
+  transform: rotate(360deg);
+  backface-visibility: hidden;
+  svg {
+    height: auto;
+    max-width: 150px;
+  }
+}
+
+.about .envelope {
+  top: 60%;
+  left: 53%;
+  transform: rotate(-11deg);
+}
+
+.testimonials .envelope {
+  top: 80%;
+  left: 2%;
+  transform: rotate(11deg);
+}
+
+.services .envelope {
+  top: 20%;
+  left: 3%;
+  transform: rotate(-9deg);
+}
+
+.team .envelope {
+  top: 3%;
+  left: 3%;
+  transform: rotate(-9deg);
+}
+
+.portfolio .envelope {
+  top: 2%;
+  left: 12%;
+  transform: rotate(9deg);
+}

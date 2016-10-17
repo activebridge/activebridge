@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="257px" height="178px" viewBox="0 0 257 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="nanapath-1" x="8.65316637" y="7.69905952" width="247.305792" height="169.314478" rx="14"></rect>
+        <linearGradient x1="14.1299829%" y1="-12.2920194%" x2="57.2311523%" y2="145.612106%" id="naGradient">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#C7C7C7" offset="100%"></stop>
+        </linearGradient>
+        <path id="nanapath-4" d="M3.35277418,16.8094618 C3.35277418,9.0776065 9.62077393,2.80969937 17.3575871,2.80969937 L236.653753,2.80969937 C244.388398,2.80969937 250.658566,9.08715987 250.658566,16.8094618 L250.658566,158.124415 C250.658566,165.85627 244.390566,172.124177 236.653753,172.124177 L17.3575871,172.124177 C9.62294249,172.124177 3.35277418,165.846716 3.35277418,158.124415 L3.35277418,16.8094618 L3.35277418,16.8094618 Z"></path>
+        <radialGradient cx="43.5241729%" cy="20.3030923%" fx="43.5241729%" fy="20.3030923%" r="67.6006866%" id="radialGradient-6">
+            <stop stop-color="#CC8EBC" offset="0%"></stop>
+            <stop stop-color="#9C5587" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="77.0628988%" y2="187.220694%" id="linearGradient-7">
+            <stop stop-color="#EFF0F1" offset="0%"></stop>
+            <stop stop-color="#A8B8BD" offset="100%"></stop>
+        </linearGradient>
+        <path id="nanapath-8" d="M2.27373675e-13,13.9997624 C2.27373675e-13,6.26790713 6.26799975,-9.09494702e-13 14.0048129,-9.09494702e-13 L233.300979,-9.09494702e-13 C241.035624,-9.09494702e-13 247.305792,6.2774605 247.305792,13.9997624 L247.305792,155.314715 C247.305792,163.04657 241.037792,169.314478 233.300979,169.314478 L14.0048129,169.314478 C6.2701683,169.314478 2.27373675e-13,163.037017 2.27373675e-13,155.314715 L2.27373675e-13,13.9997624 L2.27373675e-13,13.9997624 Z"></path>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-10">
+            <stop stop-color="#B873A6" offset="0%"></stop>
+            <stop stop-color="#94457B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="11.6478967%" y1="17.6127719%" x2="36.9321156%" y2="76.8479202%" id="linearGradient-11">
+            <stop stop-color="#D5DCDE" offset="0%"></stop>
+            <stop stop-color="#D4DBDD" offset="14.8888258%"></stop>
+            <stop stop-color="#BAC0C1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="21.4318207%" y1="-7.21920418%" x2="90.1312549%" y2="50%" id="linearGradient-12">
+            <stop stop-color="#000000" stop-opacity="0.0955049819" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.0955049819" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="46.8711959%" cy="99.0906048%" fx="46.8711959%" fy="99.0906048%" r="68.5607093%" id="radialGradient-13">
+            <stop stop-color="#B06098" offset="0%"></stop>
+            <stop stop-color="#8C4D79" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="35.9118288%" y1="-21.8413004%" x2="54.6776791%" y2="153.129933%" id="linearGradient-14">
+            <stop stop-color="#CE83BA" offset="0%"></stop>
+            <stop stop-color="#9F4B84" offset="100%"></stop>
+        </linearGradient>
+        <path id="nanapath-15" d="M-2.33109508,21.6837828 L123.489172,103.81414 L249.30944,21.6837834 L249.30944,-2.76532941 L-2.33109462,-2.76532941 L-2.33109508,21.6837828 Z"></path>
+        <linearGradient x1="50%" y1="0%" x2="113.210238%" y2="229.30315%" id="linearGradient-16">
+            <stop stop-color="#EFF0F1" offset="0%"></stop>
+            <stop stop-color="#A8B8BD" offset="100%"></stop>
+        </linearGradient>
+        <path id="nanapath-17" d="M-3.22062032,-12.9689928 L122.599647,69.1613648 L248.419914,-12.9689922 L248.419914,-37.4181051 L-3.22061986,-37.4181051 L-3.22062032,-12.9689928 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-6" transform="translate(-611.000000, -1186.000000)">
+            <g id="envelope" transform="translate(611.346775, 1186.195603)">
+                <mask id="namask-2" fill="white">
+                    <use xlink:href="#nanapath-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="none" xlink:href="#nanapath-1"></use>
+                    <use fill-opacity="0.06" fill="#000000" fill-rule="evenodd" xlink:href="#nanapath-1"></use>
+                </g>
+                <mask id="namask-5" fill="white">
+                    <use xlink:href="#nanapath-4"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="none" xlink:href="#nanapath-4"></use>
+                    <use fill="url(#naGradient)" fill-rule="evenodd" xlink:href="#nanapath-4"></use>
+                    <use fill="none" xlink:href="#nanapath-4"></use>
+                </g>
+                <path d="M37.4548578,181.342776 L29.8577755,190.665927 L38.2013251,194.563925 L231.505618,180.194192 L223.023467,169.204538 L199.360186,-6.90020636 L272.514918,-10.136411 C272.514918,-10.136411 262.529116,31.9891089 262.529116,41.0827059 C262.529116,50.1763029 267.830684,155.567197 267.830684,155.567197 C267.830684,155.567197 233.691376,197.642475 229.927777,197.642477 C226.164178,197.642479 137.583243,197.17991 137.583239,197.179915 C137.583234,197.179919 -16.0269804,210.418093 -16.0269804,210.418093 L-15.708779,176.530342 C-15.708779,176.530342 18.240104,162.824083 18.2401018,162.824084 C18.2400996,162.824085 37.4548578,181.342776 37.4548578,181.342776 Z" id="Path-3196" fill="url(#radialGradient-6)" mask="url(#namask-5)"></path>
+                <mask id="namask-9" fill="white">
+                    <use xlink:href="#nanapath-8"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="url(#linearGradient-7)" xlink:href="#nanapath-8"></use>
+                    <use fill-opacity="0.596325861" fill="#F0F0F0" xlink:href="#nanapath-8"></use>
+                </g>
+                <path d="M-5.1804002,-5.33273945 L25.0500789,-5.33273945 L25.0500789,199.977729 L-5.1804002,199.977729 L-5.1804002,-5.33273945 L-5.1804002,-5.33273945 Z M222.922306,-5.33273945 L253.152785,-5.33273945 L253.152785,199.977729 L222.922306,199.977729 L222.922306,-5.33273945 L222.922306,-5.33273945 Z" id="Rectangle-230" fill="url(#linearGradient-10)" mask="url(#namask-9)"></path>
+                <path d="M252.046289,19.7108754 L28.2189206,168.510386 L28.2189206,9.56360929 L252.046289,19.7108754 Z" id="Path-3194" stroke="#C5C5C5" opacity="0.10651819" fill="url(#linearGradient-11)" mask="url(#namask-9)"></path>
+                <path d="M-6.75625377,18.1745198 L169.973384,172.412093 L268.532637,170.497435 L254.306144,13.17437 L121.281168,14.0027909 L-3.92903426,14.7825449 L-6.75625377,18.1745198 Z" id="Path-3193" opacity="0.932252799" fill="url(#linearGradient-12)" mask="url(#namask-9)"></path>
+                <path d="M-8.46482447,18.8733765 L123.599074,103.703123 L289.740462,-2.62433567 L-24.2553881,-18.2216744 L-8.46482447,18.8733765 Z" id="Path-3201" opacity="0.35494403" fill="url(#radialGradient-13)" mask="url(#namask-9)"></path>
+                <g id="Path-3193">
+                    <use fill="url(#linearGradient-14)" fill-rule="evenodd" mask="url(#namask-9)" xlink:href="#nanapath-15"></use>
+                    <use fill="none" xlink:href="#nanapath-15"></use>
+                </g>
+                <g id="Path-3193">
+                    <use fill="url(#linearGradient-14)" mask="url(#namask-9)" xlink:href="#nanapath-17"></use>
+                    <use fill="url(#linearGradient-16)" xlink:href="#nanapath-17"></use>
+                    <use fill-opacity="0.349892437" fill="#FFFFFF" xlink:href="#nanapath-17"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

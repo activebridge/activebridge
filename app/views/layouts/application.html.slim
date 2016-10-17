@@ -8,7 +8,7 @@
 doctype 5
 html
   = render 'layouts/head', type: :application, media: :all
-  body onload='animate()' class="#{params[:page]}-page"
+  body onload='animate()' class="#{params[:page]}"
     input#ab type='checkbox' hidden=true
     .ab-wrapper
       label.ab for='ab'
@@ -22,7 +22,8 @@ html
       - %w[linkedin pinterest twitter youtube].each_with_index do |icon, i|
         = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do
           = svg("social/#{icon}")
+    = link_to page_path(:contact), class: :envelope do
+      = inline_svg 'icons/envelope.svg'
 
-    img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=552167954950145&ev=PageView&noscript=1"
     = render_lazybox
     = javascript_include_tag 'application', async: false
