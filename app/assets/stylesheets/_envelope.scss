@@ -5,23 +5,19 @@
   max-width: 50px;
   left: 0;
   z-index: 10000;
-  transition: transform 1s, top 1s, left 1s;
-  transform: rotate(360deg) translate(-100%, -300%);
+  transition: transform 1.4s, top 1s, left 1s;
+  transform: rotate(360deg) translate(-100%, -300%) scale(.1);
   transform-origin: 50%, 50%;
   backface-visibility: hidden;
-  svg {
-    height: auto;
-    max-width: 150px;
-  }
 }
 
 .about .envelope {
-  transform: rotate(-11deg) translate(1050%, 700%);
+  transform: rotate(23deg) translate(940%, 340%) scale(0.5);
 }
 
 .testimonials .envelope,
 .services .envelope,
 .team .envelope,
 .portfolio .envelope {
-  transform: rotate(11deg) translate(80%, 10%);
+  transform: rotate(11deg) translate(80%, 10%) scale(.5);
 }

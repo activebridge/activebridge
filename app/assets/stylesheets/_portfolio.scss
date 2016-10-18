@@ -178,7 +178,7 @@
       top: 15%;
       background: rgba(233,233,233,0.9);
       color: $black;
-      transform: perspective(500px) rotateY(0deg);
+      transform: perspective(500px) rotateY(0deg) translateZ(200px) scale(.6);
       z-index: 110;
       height: 80%;
       display: flex;
