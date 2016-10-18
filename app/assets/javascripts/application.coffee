@@ -27,7 +27,7 @@ openPage = (event) ->
   document.getElementById('lazy_overlay').className = 'active'
   document.getElementById('lazy_body').innerHTML = ''
   document.getElementById('lazybox').className = 'hidden'
-  href = this.href.baseVal
+  href = this.href.baseVal || this.href
   xhr = ajax('GET', href)
   xhr.onload = ->
     if (xhr.readyState == 4 && xhr.status == 200)
@@ -80,6 +80,7 @@ document.querySelector('#contact').addEventListener('click', openPage, false)
 document.querySelector('#about').addEventListener('click', openPage, false)
 document.querySelector('#services').addEventListener('click', openPage, false)
 document.querySelector('#team').addEventListener('click', openPage, false)
+document.querySelector('#contactus').addEventListener('click', openPage, false)
 document.addEventListener('keydown', browseData, false)
 initTeamScroll()
 

@@ -22,7 +22,7 @@ html
       - %w[linkedin pinterest twitter youtube].each_with_index do |icon, i|
         = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do
           = svg("social/#{icon}")
-    = link_to page_path(:contact), class: :envelope do
+    = link_to page_path(:contact), class: :envelope, id: :contactus do
       = inline_svg 'icons/envelope.svg'
 
     = render_lazybox

@@ -1,12 +1,13 @@
 .envelope {
   position: absolute;
-  top: -100%;
+  top: 0;
   width: 10%;
   max-width: 50px;
-  left: 0%;
+  left: 0;
   z-index: 10000;
   transition: transform 1s, top 1s, left 1s;
-  transform: rotate(360deg);
+  transform: rotate(360deg) translate(-100%, -300%);
+  transform-origin: 50%, 50%;
   backface-visibility: hidden;
   svg {
     height: auto;
@@ -15,31 +16,12 @@
 }
 
 .about .envelope {
-  top: 60%;
-  left: 53%;
-  transform: rotate(-11deg);
+  transform: rotate(-11deg) translate(1050%, 700%);
 }
 
-.testimonials .envelope {
-  top: 80%;
-  left: 2%;
-  transform: rotate(11deg);
-}
-
-.services .envelope {
-  top: 20%;
-  left: 3%;
-  transform: rotate(-9deg);
-}
-
-.team .envelope {
-  top: 3%;
-  left: 3%;
-  transform: rotate(-9deg);
-}
-
+.testimonials .envelope,
+.services .envelope,
+.team .envelope,
 .portfolio .envelope {
-  top: 2%;
-  left: 12%;
-  transform: rotate(9deg);
+  transform: rotate(11deg) translate(80%, 10%);
 }
