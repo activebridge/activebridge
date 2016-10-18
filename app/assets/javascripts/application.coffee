@@ -14,6 +14,7 @@ window.submit = (form) ->
   data = new FormData(document.querySelector('form'))
   xhr.send(data)
   dataLayer.push({'event':'formSubmitted', 'formName':'Contact Us'})
+  onClick = ga('send', 'event', { eventCategory: 'Send', eventAction: 'Click'})
   return false
 
 window.animate = -> document.getElementById('ab').checked = true
