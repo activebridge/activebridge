@@ -3,14 +3,14 @@
   = inline_svg 'testimonials/testimonials-bg.svg', class: 'testimonials-background-svg'
   .wrapper
     - I18n.t('testimonials.all').each do |testimonial|
-      input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=true autofocus=true
+      input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=true autofocus=true onblur='keepFocus(this)'
       .testimonial class="testimonial #{testimonial[:company].underscore}"
         .testimonial-logo= image_tag(testimonial[:banner] || testimonial[:logo])
         .testimonial-body
           .testimonial-wrapper
             h2: q= testimonial[:description]
             hr
-            h3= testimonial[:author]
+            h3 data-title=testimonial[:title] = testimonial[:author]
           = image_tag(testimonial[:image], class: :author)
       label for="testimonial_#{testimonial[:company].underscore}"
         = image_tag(testimonial[:logo])

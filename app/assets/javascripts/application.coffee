@@ -33,7 +33,7 @@ openPage = (event) ->
     if (xhr.readyState == 4 && xhr.status == 200)
       document.body.className = href
       eval(xhr.responseText)
-      keepFocus()
+      focus()
       initTeamScroll()
   xhr.send()
   dataLayer.push({
@@ -94,7 +94,7 @@ ajax = (method, href, async = true) ->
 
 window.onpopstate = closeWindow
 
-keepFocus = ->
+focus = ->
   controls = document.querySelectorAll("input[type='radio']")
   return unless controls[0]
   controls.forEach (input) ->
@@ -102,4 +102,10 @@ keepFocus = ->
       @.focus()
       e.preventDefault() if (e.which == 9)
 
-keepFocus()
+focus()
+
+@keepFocus = (input) ->
+  setTimeout ->
+    return if document.querySelector('input[type="radio"]:checked') != input
+    input.focus()
+  , 10

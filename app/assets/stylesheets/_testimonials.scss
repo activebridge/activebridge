@@ -41,6 +41,7 @@
     }
     &:checked + .testimonial {
       opacity: 1;
+      z-index: 1000;
       & + label img {
         filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
       }
@@ -105,9 +106,21 @@
     transform: translateY(-50%);
     top: 50%;
 
-    &.freestak {
-      .testimonial-logo {
-        background: #512b4e;
+    &.freestak .testimonial-logo {
+      background: #512b4e;
+    }
+
+    &.def {
+      .testimonial-body {
+        color: $white;
+        background: #333;
+        &:before {
+          border-top-color: #333;
+          border-left-color: #333;
+        }
+        img {
+          border-color: #333;
+        }
       }
     }
 
@@ -196,10 +209,17 @@
   }
 }
 
+[data-title]:after {
+  content: attr(data-title);
+  display: block;
+  opacity: .7;
+}
+
 @media (max-width: 900px) {
   .testimonials .testimonial {
     display: block;
     height: auto;
+    max-height: none;
     .testimonial-logo, .testimonial-body {
       height: auto;
       width: 100%;
