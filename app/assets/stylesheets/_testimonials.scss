@@ -1,13 +1,12 @@
 .testimonials {
   perspective: 700px;
   perspective-origin-x: 400px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
   position: relative;
   max-height: 100vh;
-  padding-top: 0;
-  padding-bottom: 0;
 
   .testimonials-background-svg {
     position: absolute;
@@ -47,7 +46,7 @@
       }
     }
   }
-  label {
+  label.company-logo {
     z-index: 9999;
     overflow: hidden;
     display: inline-flex;
@@ -105,6 +104,29 @@
     margin: 0 auto;
     transform: translateY(-50%);
     top: 50%;
+    .arrows {
+      .arrow {
+        cursor: pointer;
+        position: absolute;
+        height: auto;
+        min-width: 5em;
+        top: 50%;
+        z-index: 10000;
+        &#left {
+          left: -5vw;
+        }
+        &#right {
+          right: -5vw;
+        }
+        svg path {
+          transition: .3s;
+          fill: $light-violet;
+        }
+        &:hover svg path {
+          fill: $gray;
+        }
+      }
+    }
 
     &.freestak .testimonial-logo {
       background: #512b4e;
@@ -216,18 +238,34 @@
 }
 
 @media (max-width: 900px) {
-  .testimonials .testimonial {
-    display: block;
-    height: auto;
-    max-height: none;
-    .testimonial-logo, .testimonial-body {
+  .testimonials {
+    padding: 0 5%;
+    .testimonial {
+      display: block;
       height: auto;
-      width: 100%;
-    }
+      max-height: none;
+      .arrows {
+        .arrow {
+          top: 1em;
+          &#left {
+            left: 1%;
+          }
+          &#right {
+            right: 1%;
+          }
+        }
+      }
+      .testimonial-logo, .testimonial-body {
+        width: 100%;
+      }
 
-    &-logo img {
-      margin: 10px 0;
-      max-height: 200px;
+      .testimonial-logo {
+        height: 7em;
+        img {
+          margin: 10px 0;
+          max-height: 7em;
+        }
+      }
     }
   }
 }

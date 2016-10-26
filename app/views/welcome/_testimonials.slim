@@ -2,9 +2,15 @@
 .content.testimonials
   = inline_svg 'testimonials/testimonials-bg.svg', class: 'testimonials-background-svg'
   .wrapper
-    - I18n.t('testimonials.all').each do |testimonial|
+    - testimonials = I18n.t('testimonials.all')
+    - testimonials.each_with_index do |testimonial, index|
       input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=true autofocus=true onblur='keepFocus(this)'
       .testimonial class="testimonial #{testimonial[:company].underscore}"
+        .arrows
+          label for="testimonial_#{testimonials[index-1][:company].underscore}"
+            i.arrow#left= svg('chevron-left', :xl)
+          label for="testimonial_#{testimonials[index+1 == testimonials.size ? 0 : index+1][:company].underscore}"
+            i.arrow#right= svg('chevron-right', :xl)
         .testimonial-logo= image_tag(testimonial[:banner] || testimonial[:logo])
         .testimonial-body
           .testimonial-wrapper
@@ -12,5 +18,5 @@
             hr
             h3 data-title=testimonial[:title] = testimonial[:author]
           = image_tag(testimonial[:image], class: :author)
-      label for="testimonial_#{testimonial[:company].underscore}"
+      label.company-logo for="testimonial_#{testimonial[:company].underscore}"
         = image_tag(testimonial[:logo])
