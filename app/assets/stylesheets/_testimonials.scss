@@ -5,8 +5,11 @@
   padding: 0;
   height: 100%;
   width: 100%;
+  left: 0;
+  right: 0;
   position: relative;
   max-height: 100vh;
+  overflow: hidden;
 
   .testimonials-background-svg {
     position: absolute;
@@ -26,6 +29,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    overflow: hidden;
   }
   img.author {
     display: inline-block;
@@ -109,7 +113,8 @@
         cursor: pointer;
         position: absolute;
         height: auto;
-        min-width: 5em;
+        width: 5em;
+        max-width: 5em;
         top: 50%;
         z-index: 10000;
         &#left {
@@ -184,6 +189,7 @@
     .testimonial-logo {
       background: white;
       img {
+        position: relative;
         max-width: 100%;
         height: auto;
         padding-top: 1%;
