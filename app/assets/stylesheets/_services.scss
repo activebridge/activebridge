@@ -6,6 +6,7 @@
   position: relative;
   color: $light-grey;
   padding-top: 5rem;
+  padding-bottom: 0;
   .skills {
     white-space: nowrap;
     padding: 0 10%;
@@ -96,10 +97,10 @@
       &-description {
         opacity: 0;
         position: relative;
-        top: 0;
-        left: 0;
         height: 35vh;
         width: 100%;
+        top: -3px;
+        left: 0;
         bottom: 0;
         padding: 2%;
         z-index: 10;
@@ -109,8 +110,8 @@
         line-height: 1em;
         text-align: justify;
         font-size: 1rem;
-        margin-top: -3px;
         overflow: auto;
+        margin: 0;
         h3 {
           margin: 0;
         }
