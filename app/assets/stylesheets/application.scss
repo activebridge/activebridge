@@ -94,7 +94,7 @@ svg#main {
   }
 }
 
-#title {
+#title, #title-logo {
   opacity: 0;
   transition: opacity .1s;
 }
@@ -144,7 +144,7 @@ svg#main {
     visibility: visible;
   }
 
-  #title {
+  #title, #title-logo {
     opacity: 1;
     transition: opacity 1s;
     transition-delay: 1s;
