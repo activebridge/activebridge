@@ -20,4 +20,8 @@ class ApplicationController < ActionController::Base
   def mobile?
     browser.device.mobile? || browser.device.tablet? || browser.device.tv?
   end
+
+  def test
+    p :test
+  end
 end
