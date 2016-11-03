@@ -33,17 +33,19 @@ RSpec.feature 'Main', type: :feature do
 
   scenario 'Visit js pages', js: true do
     visit root_path
-    find('#team').trigger :click
+    find('#team', visible: false).trigger :click
     expect(page).to have_content('Active Bridge')
-    find('#about').trigger :click
+    find('#about', visible: false).trigger :click
     expect(page).to have_content('TESTIMONIALS')
-    find('#services').trigger :click
+    find('#services', visible: false).trigger :click
     expect(page).to have_content('SERVICES')
-    find('#testimonials').trigger :click
+    find('#testimonials', visible: false).trigger :click
     expect(page).to have_content('TEAM')
-    find('#portfolio').trigger :click
+    find('#portfolio', visible: false).trigger :click
     expect(page).to have_content('PORTFOLIO')
-    find('#contact').trigger :click
+    find('#contact', visible: false).trigger :click
     expect(page).to have_content('contact@active-bridge.com')
+    find('#lazy_close', visible: false).trigger :click
+    expect(page).not_to have_selector('#lazybox')
   end
 end
