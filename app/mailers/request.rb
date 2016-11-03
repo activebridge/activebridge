@@ -13,7 +13,7 @@ class Request < ApplicationMailer
     mail(
       from: 'contact@active-bridge.com',
       to: attrs[:email],
-      subject: "Active Bridge",
+      subject: 'Active Bridge',
     )
   end
 end

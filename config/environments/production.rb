@@ -24,6 +24,6 @@ Rails.application.configure do
     port: 587,
     domain: 'active-bridge.com',
     user_name: ENV['mailgun_login'],
-    password: ENV['mailgun_password']
+    password: ENV['mailgun_password'],
   }
 end

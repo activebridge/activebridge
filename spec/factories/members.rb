@@ -5,5 +5,4 @@ FactoryGirl.define do
     avatar ''
     cartoon ''
   end
-
 end

@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Activebridge"
+  config.site_title = 'Activebridge'
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -256,7 +256,7 @@ ActiveAdmin.setup do |config|
 
   config.namespace :admin do |admin|
     admin.build_menu :default do |menu|
-      menu.add label: "Clear Cache", url: "/expire_cache"
+      menu.add label: 'Clear Cache', url: '/expire_cache'
     end
   end
 
@@ -264,9 +264,9 @@ ActiveAdmin.setup do |config|
     module WillPaginate
       module ActiveRecord
         module RelationMethods
-          alias_method :per, :per_page
-          alias_method :num_pages, :total_pages
-          alias_method :total_count, :count
+          alias per per_page
+          alias num_pages total_pages
+          alias total_count count
         end
       end
     end

@@ -7,7 +7,7 @@ ActiveAdmin.register Member do
     selectable_column
     column :name
     column :position
-    column "Avatar" do |member|
+    column 'Avatar' do |member|
       cl_image_tag(member.avatar.url, width: 100, height: 100, crop: :thumb, gravity: :face)
     end
     column :priority
