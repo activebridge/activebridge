@@ -1,5 +1,18 @@
 ActiveAdmin.register Project do
-  permit_params :description, :logo, :logo_cache, :technology, :duration, :team_size, :client, :industry, :link, :priority, :image, :image_cache
+  permit_params(
+    :description,
+    :logo,
+    :logo_cache,
+    :technology,
+    :duration,
+    :team_size,
+    :client,
+    :industry,
+    :link,
+    :priority,
+    :image,
+    :image_cache,
+  )
   menu priority: 3
   config.sort_order = 'priority_asc'
 

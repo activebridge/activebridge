@@ -1,5 +1,16 @@
 ActiveAdmin.register Member do
-  permit_params :name, :position, :avatar, :avatar_cache, :careers, :linkedin, :github, :cartoon, :cartoon_cache, :priority
+  permit_params(
+    :name,
+    :position,
+    :avatar,
+    :avatar_cache,
+    :careers,
+    :linkedin,
+    :github,
+    :cartoon,
+    :cartoon_cache,
+    :priority,
+  )
   menu priority: 2
   config.sort_order = 'priority_asc'
 

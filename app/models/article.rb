@@ -7,6 +7,13 @@ class Article < ActiveRecord::Base
   validates :body, length: { minimum: 100 }
 
   scope :by_category, ->(slug) { where('category = ?', slug) if slug }
+  scope :blog, lambda { |category, page|
+    done
+      .includes(:member)
+      .by_category(Article.categories[category])
+      .paginate(page: page, per_page: 5)
+      .order(created_at: :desc)
+  }
 
   extend FriendlyId
   friendly_id :title, use: :slugged
