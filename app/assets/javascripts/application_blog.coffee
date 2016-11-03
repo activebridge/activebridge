@@ -7,6 +7,3 @@
 
 Turbolinks.enableProgressBar()
 Turbolinks.enableTransitionCache()
-
-$(document).on 'page:change', ->
-  simplemde = new SimpleMDE({ element: document.getElementById('simplemde') })
