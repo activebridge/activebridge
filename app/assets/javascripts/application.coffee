@@ -94,11 +94,9 @@ document.querySelector('#contactus').addEventListener('click', openPage, false)
 document.addEventListener('keydown', browseData, false)
 initTeamScroll()
 
-csrf = document.head.querySelector('meta[name=csrf-token]').content
 ajax = (method, href, async = true) ->
   xhr = new XMLHttpRequest()
   xhr.open(method, href, async)
-  xhr.setRequestHeader('X-CSRF-Token', csrf)
   xhr.setRequestHeader('Accept', 'text/javascript')
   return xhr
 
@@ -107,11 +105,9 @@ window.onpopstate = closeWindow
 focus = ->
   controls = document.querySelectorAll("input[type='radio']")
   return unless controls[0]
-  controls.forEach (input) ->
-    input.addEventListener 'keydown', (e) ->
-      @.focus()
-      e.preventDefault() if (e.which == 9)
-
+  input.addEventListener('keydown', (e) ->
+    @.focus()
+    e.preventDefault() if (e.which == 9)) for input in controls
 focus()
 
 @keepFocus = (input) ->
