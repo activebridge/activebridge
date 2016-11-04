@@ -1,35 +1,32 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
+gem 'actionpack-action_caching'
 gem 'activeadmin', github: 'activeadmin'
+gem 'autoprefixer-rails'
+gem 'browser'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'coderay'
 gem 'coffee-rails'
+gem 'friendly_id'
+gem 'inline_svg'
 gem 'jbuilder'
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'lazybox'
 gem 'pg'
 gem 'rails', '4.2.7.1'
-gem 'rubocop', require: false
+gem 'redcarpet'
+gem 'roadie-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'serviceworker-rails'
+gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'uglifier'
-gem 'decent_exposure'
-gem 'friendly_id'
-gem 'will_paginate'
-gem 'autoprefixer-rails'
-gem 'redcarpet'
-gem 'roadie-rails'
-gem 'coderay'
-gem 'browser'
-gem 'ufujs-rails'
-gem 'carrierwave-base64'
-gem 'customize-rails'
-gem 'actionpack-action_caching'
-gem 'inline_svg'
-gem 'sitemap_generator'
-gem 'serviceworker-rails'
 gem 'whenever', require: false
 
 group :development, :test do
@@ -43,13 +40,14 @@ group :development, :test do
   gem 'pry'
   gem 'rack_session_access'
   gem 'rspec-rails'
+  gem 'rubocop', require: false
   gem 'simplecov', require: false
 end
 
 group :development do
-  gem 'web-console'
+  gem 'capistrano-db-tasks', require: false
+  gem 'quiet_assets'
   gem 'spring'
   gem 'thin'
-  gem 'quiet_assets'
-  gem 'capistrano-db-tasks', require: false
+  gem 'web-console'
 end

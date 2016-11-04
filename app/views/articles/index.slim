@@ -1,6 +1,7 @@
 main
   = render partial: 'article', collection: articles, as: :article
-  = will_paginate articles, page_links: false
+  => link_to_previous_page articles, '‹ Previous '
+  = link_to_next_page articles, 'Next ›'
 
 .sidebar
   .popular-posts

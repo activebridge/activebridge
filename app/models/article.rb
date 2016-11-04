@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+  paginates_per 5
+
   belongs_to :member
 
   enum review_status: [:pending, :done]
@@ -11,14 +13,14 @@ class Article < ActiveRecord::Base
     done
       .includes(:member)
       .by_category(Article.categories[category])
-      .paginate(page: page, per_page: 5)
+      .page(page)
       .order(created_at: :desc)
   }
 
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  mount_base64_uploader :picture, ImageUploader
+  mount_uploader :picture, ImageUploader
 
   def increment_viewed
     increment! :viewed unless pending?

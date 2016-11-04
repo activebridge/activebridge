@@ -102,8 +102,6 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
-    carrierwave-base64 (2.3.2)
-      carrierwave (>= 0.8.0)
     chronic (0.10.2)
     cliver (0.3.2)
     cloudinary (1.2.4)
@@ -120,12 +118,9 @@ GEM
     concurrent-ruby (1.0.2)
     css_parser (1.4.6)
       addressable
-    customize-rails (0.0.2)
     daemons (1.2.4)
     database_cleaner (1.5.3)
     debug_inspector (0.0.2)
-    decent_exposure (3.0.2)
-      activesupport (>= 4.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
     domain_name (0.5.20161021)
@@ -348,7 +343,6 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2016.9)
       tzinfo (>= 1.0.0)
-    ufujs-rails (0.0.2)
     uglifier (3.0.3)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
@@ -365,7 +359,6 @@ GEM
     websocket-extensions (0.1.2)
     whenever (0.9.7)
       chronic (>= 0.6.3)
-    will_paginate (3.1.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -383,18 +376,16 @@ DEPENDENCIES
   capistrano-rails
   capybara
   carrierwave
-  carrierwave-base64
   cloudinary
   coderay
   coffee-rails
-  customize-rails
   database_cleaner
-  decent_exposure
   factory_girl_rails
   friendly_id
   inline_svg
   jbuilder
   jquery-rails
+  kaminari
   lazybox
   letter_opener
   pg
@@ -416,11 +407,9 @@ DEPENDENCIES
   thin
   turbolinks
   tzinfo-data
-  ufujs-rails
   uglifier
   web-console
   whenever
-  will_paginate
 
 BUNDLED WITH
    1.12.5
