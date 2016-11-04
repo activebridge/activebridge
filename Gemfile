@@ -20,6 +20,7 @@ gem 'pg'
 gem 'rails', '4.2.7.1'
 gem 'redcarpet'
 gem 'roadie-rails'
+gem 'rubocop', require: false
 gem 'sass-rails', '~> 5.0'
 gem 'serviceworker-rails'
 gem 'sitemap_generator'
@@ -40,7 +41,6 @@ group :development, :test do
   gem 'pry'
   gem 'rack_session_access'
   gem 'rspec-rails'
-  gem 'rubocop', require: false
   gem 'simplecov', require: false
 end
 
