@@ -39,7 +39,6 @@ group :development, :test do
   gem 'letter_opener'
   gem 'poltergeist'
   gem 'pry'
-  gem 'rack_session_access'
   gem 'rspec-rails'
   gem 'simplecov', require: false
 end
@@ -49,5 +48,4 @@ group :development do
   gem 'quiet_assets'
   gem 'spring'
   gem 'thin'
-  gem 'web-console'
 end
