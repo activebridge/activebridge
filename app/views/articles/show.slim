@@ -1,10 +1,11 @@
 = content_for :head do
-  meta name='og:url' content='test'
   meta name='og:type' content='website'
-  meta name='og:title' content=article.title
-  meta name='og:image' content=article.picture_url
-  meta name='og:description' content=strip_tags(article.body)
-  meta name='og:updated_time' content='1454583404'
+  meta property='og:title' content=article.title
+  meta property='og:url' content=request.original_url
+  meta property='og:image' content=article.picture_url
+  meta property='og:description' content=clean_truncate(article.body)
+  meta property='og:updated_time' content=article.updated_at.to_i
+  meta property='fb:app_id' content={YOUR_APP_ID}
 
 .article
   .user-image
