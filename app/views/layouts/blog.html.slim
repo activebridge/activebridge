@@ -3,10 +3,9 @@ html
   = render 'layouts/head', type: :blog, media: :all
   body
     header.header
-      = link_to '', root_url, class: 'back-to-site'
-      = render 'social_icons', klass: :xl
-    .content
+      = link_to 'Active Bridge', root_url
       = render 'shared/blog/main_bar'
+    main.main
       = yield
     = render 'shared/blog/footer'
     = javascript_include_tag 'blog', 'data-turbolinks-track' => true
