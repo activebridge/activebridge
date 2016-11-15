@@ -13,7 +13,7 @@ SitemapGenerator::Sitemap.create do
       host: 'http://blog.active-bridge.com',
       changefreq: 'daily',
       priority: 0.9
-  Article.find_each do |article|
+  Article.done.find_each do |article|
     add article_path(article),
         host: 'http://blog.active-bridge.com',
         changefreq: 'never'
