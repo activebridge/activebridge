@@ -193,59 +193,59 @@
                                 </g>
                                 <g id='server-logs' mask="url(#mask-24)">
                                   <text id="apples-MacBook-Pro-2" stroke="none" fill="none" sketch:type="MSTextLayer" font-family="monospace" font-size="12" font-weight="normal">
-                                      <tspan x="19" y="19" fill="#CECECE">apples-MacBook-Pro-2:activebridge apple$ rails s</tspan>
-                                      <tspan x="19" y="33" fill="#CECECE">=&gt; Booting Thin</tspan>
-                                      <tspan x="19" y="47" fill="#CECECE">=&gt; Rails 4.2.6 application starting in development on http://</tspan>
-                                      <tspan x="19" y="61" fill="#CECECE">localhost:3000</tspan>
-                                      <tspan x="19" y="75" fill="#CECECE">=&gt; Run `rails server -h` for more startup options</tspan>
-                                      <tspan x="19" y="89" fill="#CECECE">=&gt; Ctrl-C to shutdown server</tspan>
-                                      <tspan x="19" y="103" fill="#CECECE">Thin web server (v1.6.4 codename Gob Bluth)</tspan>
-                                      <tspan x="19" y="117" fill="#CECECE">Maximum connections set to 1024</tspan>
-                                      <tspan x="19" y="141" fill="#CECECE">Listening on localhost:3000, CTRL+C to stop</tspan>
+                                      <tspan x="19" y="19" fill="#CECECE">Active Bridge is a web application development agency,</tspan>
+                                      <tspan x="19" y="33" fill="#CECECE">doing an outsource web development services.</tspan>
+                                      <tspan x="19" y="47" fill="#CECECE">We have a great work experiance in a variety of industries</tspan>
+                                      <tspan x="19" y="61" fill="#CECECE">with web development agencies in the USA</tspan>
+                                      <tspan x="19" y="75" fill="#CECECE">espessialy Chicago, San Francisco, California.</tspan>
+                                      <tspan x="19" y="89" fill="#CECECE">Active Bridge is leading web development company</tspan>
+                                      <tspan x="19" y="103" fill="#CECECE">in Ukraine.</tspan>
+                                      <tspan x="19" y="117" fill="#CECECE">Custom web application development</tspan>
+                                      <tspan x="19" y="141" fill="#CECECE">and website development services for small business</tspan>
                                       <tspan x="19" y="145" fill="#CECECE"></tspan>
                                       <tspan x="19" y="159" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="173" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:51:55 +0300</tspan>
+                                      <tspan x="19" y="173" fill="#CECECE">are our main business priorities.</tspan>
                                       <tspan x="19" y="187" fill="#CECECE">  </tspan>
-                                      <tspan x="33.4492188" y="201" font-weight="bold" fill="#2EAEBB">ActiveRecord::SchemaMigration Load (31.8ms)</tspan>
+                                      <tspan x="33.4492188" y="201" font-weight="bold" fill="#2EAEBB">We are</tspan>
                                       <tspan x="344.107422" y="201" fill="#CECECE">  </tspan>
-                                      <tspan x="358.556641" y="201" font-weight="bold" fill="#B500B5">SELECT </tspan>
-                                      <tspan x="19" y="215" font-weight="bold" fill="#B500B5">"schema_migrations".* FROM "schema_migrations"</tspan>
+                                      <tspan x="358.556641" y="201" font-weight="bold" fill="#B500B5">ror development company.</tspan>
+                                      <tspan x="19" y="215" font-weight="bold" fill="#B500B5">Website built using ruby on rails</tspan>
                                       <tspan x="351.332031" y="215" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="229" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="243" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="257" fill="#CECECE">(24.4ms)</tspan>
-                                      <tspan x="19" y="271" fill="#CECECE">  Rendered layouts/_head.slim (710.7ms)</tspan>
-                                      <tspan x="19" y="285" fill="#CECECE">  Rendered layouts/_main.svg (6.5ms)</tspan>
-                                      <tspan x="19" y="299" fill="#CECECE">Completed 200 OK in 891ms (Views: 875.4ms | ActiveRecord: </tspan>
-                                      <tspan x="19" y="313" fill="#CECECE">0.0ms)</tspan>
+                                      <tspan x="19" y="229" fill="#CECECE">are more faster, productive and easy implemented.L</tspan>
+                                      <tspan x="19" y="243" fill="#CECECE"> Furthemore, Active Bridge team </tspan>
+                                      <tspan x="19" y="257" fill="#CECECE">implement </tspan>
+                                      <tspan x="19" y="271" fill="#CECECE">  agile web development with ruby on rails </tspan>
+                                      <tspan x="19" y="285" fill="#CECECE">  and</tspan>
+                                      <tspan x="19" y="299" fill="#CECECE">ruby on rails mobile development technology. </tspan>
+                                      <tspan x="19" y="313" fill="#CECECE"></tspan>
                                       <tspan x="19" y="327" fill="#CECECE"></tspan>
                                       <tspan x="19" y="341" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="355" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:52:01 +0300</tspan>
-                                      <tspan x="19" y="369" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="383" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="397" fill="#CECECE">(0.1ms)</tspan>
-                                      <tspan x="19" y="411" fill="#CECECE">  Rendered layouts/_head.slim (6.9ms)</tspan>
-                                      <tspan x="19" y="425" fill="#CECECE">  Rendered layouts/_main.svg (0.2ms)</tspan>
-                                      <tspan x="19" y="439" fill="#CECECE">Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)</tspan>
+                                      <tspan x="19" y="355" fill="#CECECE">We're operating as </tspan>
+                                      <tspan x="19" y="369" fill="#CECECE">outcource web development company</tspan>
+                                      <tspan x="19" y="383" fill="#CECECE">  and </tspan>
+                                      <tspan x="19" y="397" fill="#CECECE"> </tspan>
+                                      <tspan x="19" y="411" fill="#CECECE">  have a great pool of </tspan>
+                                      <tspan x="19" y="425" fill="#CECECE">  dedicated ruby on rails</tspan>
+                                      <tspan x="19" y="439" fill="#CECECE">developers to hire</tspan>
                                       <tspan x="19" y="453" fill="#CECECE"></tspan>
                                       <tspan x="19" y="467" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="481" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 15:52:02 +0300</tspan>
-                                      <tspan x="19" y="495" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="509" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="523" fill="#CECECE">(0.1ms)</tspan>
-                                      <tspan x="19" y="537" fill="#CECECE">  Rendered layouts/_head.slim (12.0ms)</tspan>
-                                      <tspan x="19" y="551" fill="#CECECE">  Rendered layouts/_main.svg (0.2ms)</tspan>
-                                      <tspan x="19" y="565" fill="#CECECE">Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)</tspan>
+                                      <tspan x="19" y="481" fill="#CECECE">Active Bridge follows the SCRUM methodology</tspan>
+                                      <tspan x="19" y="495" fill="#CECECE">and Agile practice.</tspan>
+                                      <tspan x="19" y="509" fill="#CECECE">  We contribute to the </tspan>
+                                      <tspan x="19" y="523" fill="#CECECE">Rails framework</tspan>
+                                      <tspan x="19" y="537" fill="#CECECE"> Also, we speak at Ruby developer events</tspan>
+                                      <tspan x="19" y="551" fill="#CECECE">  and share our experience</tspan>
+                                      <tspan x="19" y="565" fill="#CECECE"></tspan>
                                       <tspan x="19" y="579" fill="#CECECE"></tspan>
                                       <tspan x="19" y="593" fill="#CECECE"></tspan>
-                                      <tspan x="19" y="607" fill="#CECECE">Started GET "/" for 127.0.0.1 at 2016-09-29 16:20:55 +0300</tspan>
-                                      <tspan x="19" y="621" fill="#CECECE">Processing by WelcomeController#index as HTML</tspan>
-                                      <tspan x="19" y="635" fill="#CECECE">  Rendered welcome/index.slim within layouts/application </tspan>
-                                      <tspan x="19" y="649" fill="#CECECE">(1.9ms)</tspan>
-                                      <tspan x="19" y="663" fill="#CECECE">  Rendered layouts/_head.slim (51.1ms)</tspan>
-                                      <tspan x="19" y="677" fill="#CECECE">  Rendered layouts/_main.svg (0.5ms)</tspan>
-                                      <tspan x="19" y="691" fill="#CECECE">Completed 200 OK in 183ms (Views: 161.7ms | ActiveRecord: </tspan>
-                                      <tspan x="19" y="705" fill="#CECECE">0.0ms)</tspan>
+                                      <tspan x="19" y="607" fill="#CECECE">with ror community.</tspan>
+                                      <tspan x="19" y="621" fill="#CECECE">Our team bridge your ideas with life.</tspan>
+                                      <tspan x="19" y="635" fill="#CECECE">  If you need turnkey development team </tspan>
+                                      <tspan x="19" y="649" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="663" fill="#CECECE">  or experienced RoR dev,</tspan>
+                                      <tspan x="19" y="677" fill="#CECECE">  you are welcome.</tspan>
+                                      <tspan x="19" y="691" fill="#CECECE"></tspan>
+                                      <tspan x="19" y="705" fill="#CECECE"></tspan>
                                       <tspan x="19" y="719" fill="#CECECE"></tspan>
                                   </text>
                                 </g>
