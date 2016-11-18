@@ -5,10 +5,6 @@ if navigator.appVersion.toUpperCase().indexOf('MSIE') != -1 or
       navigator.appVersion.toUpperCase().indexOf('EDGE') != -1
 
   document.querySelector('html').classList.add('ie')
-  members = document.querySelectorAll('.member')
-  n = members.length-1
-  for i in [0..n]
-    members[i].style.backgroundImage = members[i].style.backgroundImage.replace(/(hexagon_up|hexagon_down)/, 'hexagon_center')
 
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
