@@ -9,6 +9,12 @@ class WelcomeController < ApplicationController
     @projects = Project.order(priority: :asc)
   end
 
+  def bing_site_auth
+    respond_to do |format|
+      format.xml
+    end
+  end
+
   def expire_cache
     Rails.cache.clear
     redirect_to '/admin'
