@@ -25,6 +25,7 @@ html
           = svg("social/#{icon}")
     = link_to page_path(:contact), class: :envelope, id: :contactus do
       = image_tag 'icons/envelope.svg'
+      span SEND REQUEST
 
     = render_lazybox
     = javascript_include_tag 'application', async: false

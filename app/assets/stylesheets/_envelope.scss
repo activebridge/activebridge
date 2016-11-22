@@ -9,6 +9,23 @@
   transform: rotate(360deg) translate(-100%, -300%) scale(.1);
   transform-origin: 50%, 50%;
   backface-visibility: hidden;
+  text-decoration: none;
+  span {
+    display: inline-block;
+    width: 250px;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    animation: blinker 1.5s linear infinite;
+  }
+  img {
+    position: relative;
+    z-index: 100;
+  }
+
+  @keyframes blinker {
+    50% { opacity: 0; }
+  }
 }
 
 .about .envelope {
