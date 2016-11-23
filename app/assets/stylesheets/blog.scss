@@ -32,7 +32,8 @@ nav {
 
 .popular {
   a {
-    width: 30%;
+    margin: 10px;
+    width: 31%;
     display: inline-block;
     position: relative;
     background-size: cover;
@@ -40,6 +41,26 @@ nav {
       content: "";
       display: block;
       padding-top: 100%;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    p { margin: 0; }
+  }
+
+  .author-avatar {
+    border-radius: 50%;
+    margin: 0 10px 15px 20px;
+    float: left;
+  }
+
+  .meta {
+    margin-top: 11px;
+
+    .article-title {
+      color: white;
     }
   }
 }

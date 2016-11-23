@@ -22,6 +22,8 @@ class Article < ActiveRecord::Base
 
   mount_uploader :picture, ImageUploader
 
+  delegate :name, to: :member, allow_nil: true, prefix: true
+
   def increment_viewed
     increment! :viewed unless pending?
   end
