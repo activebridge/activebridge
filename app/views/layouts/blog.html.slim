@@ -2,10 +2,7 @@ doctype 5
 html
   = render 'layouts/head', type: :blog, media: :all
   body
-    header.header
-      = link_to 'Active Bridge', root_url
-      = render 'shared/blog/main_bar'
+    = render 'shared/blog/header'
     main.main
       = yield
-    = render 'shared/blog/footer'
     = javascript_include_tag 'blog', 'data-turbolinks-track' => true

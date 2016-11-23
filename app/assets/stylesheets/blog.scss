@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'defaults';
 @import 'base';
 
 $font-size: 16px;
@@ -13,9 +14,10 @@ body {
   background: $dark-violet;
   background: radial-gradient(#5F4076, #8A62AA);
   color: white;
+  font-family: Arial;
 }
 
-a {
+a, small {
   color: rgba($white, .5);
   text-decoration: none;
 }
@@ -50,4 +52,23 @@ nav {
   svg {
     width: 32px;
   }
+}
+
+.nav-left {
+  float: left;
+
+  a {
+    padding-right: 0;
+
+    &:after {
+      content: " | ";
+      padding: 0 5px;
+    }
+  }
+}
+
+.main {
+  padding: 20px 0 20px 30px;
+
+  h2 { margin-bottom: 0; }
 }
