@@ -92,4 +92,29 @@ nav {
   padding: 20px 0 20px 30px;
 
   h2 { margin-bottom: 0; }
+
+  .post {
+    width: 48%;
+    float: left;
+    height: 340px;
+    background: #8b68a3;
+    margin: 20px 20px 0 0;
+    padding: 15px;
+
+    .thumbnail {
+      float: left;
+      margin-right: 15px;
+    }
+
+    .title {
+      margin-top: 0;
+      padding-top: 0;
+      text-align: left;
+      font-size: 1.5em;
+    }
+
+    .author-avatar img {
+      border-radius: 50%;
+    }
+  }
 }

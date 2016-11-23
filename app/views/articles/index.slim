@@ -4,7 +4,8 @@ small = pluralize(popular_articles.count, 'item')
   = render partial: 'popular_article', collection: popular_articles, as: :popular_article
 
 h2 All posts
-small = pluralize(articles.count, 'item')
+div
+  small = pluralize(articles.count, 'item')
 = render partial: 'article', collection: articles, as: :article
 => link_to_previous_page articles, '‹ Previous '
 = link_to_next_page articles, 'Next ›'
