@@ -1,4 +1,5 @@
-.popular-post
-  = link_to article_path(popular_article)
-    p = image_tag popular_article.picture_url, class: 'img-resonsive'
-    = link_to popular_article.title, article_path(popular_article), class: 'bold'
+= link_to article_path(popular_article), style: "background-image: url(#{popular_article.picture_url})" do
+  = image_tag popular_article.member.avatar.url, height: '60', width: '60', class: 'author-avatar'
+  .meta
+    p.article-title = popular_article.title
+    small= popular_article.member_name

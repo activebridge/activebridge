@@ -1,6 +1,0 @@
-.categories
-  => link_to_unless_current 'All Posts', articles_path do
-    span All Posts
-  - I18n.t('category').each do |e|
-    => link_to_unless_current e.first, category_articles_path(e.last) do
-      span= e.first

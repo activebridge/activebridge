@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  paginates_per 5
+  paginates_per 4
 
   belongs_to :member
 
@@ -21,6 +21,8 @@ class Article < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   mount_uploader :picture, ImageUploader
+
+  delegate :name, to: :member, allow_nil: true, prefix: true
 
   def increment_viewed
     increment! :viewed unless pending?

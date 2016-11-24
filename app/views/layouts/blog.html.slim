@@ -2,11 +2,7 @@ doctype 5
 html
   = render 'layouts/head', type: :blog, media: :all
   body
-    header.header
-      = link_to '', root_url, class: 'back-to-site'
-      = render 'social_icons', klass: :xl
-    .content
-      = render 'shared/blog/main_bar'
+    = render 'shared/blog/header'
+    main.main
       = yield
-    = render 'shared/blog/footer'
     = javascript_include_tag 'blog', 'data-turbolinks-track' => true
