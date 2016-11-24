@@ -101,9 +101,17 @@ nav {
     margin: 20px 20px 0 0;
     padding: 15px;
 
+    .left-section {
+      float: left;
+
+      p {
+        margin: 0;
+      }
+    }
+
     .thumbnail {
       float: left;
-      margin-right: 15px;
+      margin: 0 15px 55px 0;
     }
 
     .title {
@@ -113,8 +121,30 @@ nav {
       font-size: 1.5em;
     }
 
-    .author-avatar img {
-      border-radius: 50%;
+    .meta {
+      .author-avatar img {
+        width: 60px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .posts-header {
+    width: 97%;
+    margin-bottom: 15px;
+
+    h2 { display: table; }
+
+    .link-group {
+      float: right;
+
+      a {
+        padding: 0 15px 5px 15px;
+        border: 1px solid rgba($white, .5);
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+      }
     }
   }
 }

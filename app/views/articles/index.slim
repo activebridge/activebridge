@@ -3,9 +3,10 @@ small = pluralize(popular_articles.count, 'item')
 .popular
   = render partial: 'popular_article', collection: popular_articles, as: :popular_article
 
-h2 All posts
-div
+.posts-header
+  .link-group
+    = link_to_previous_page articles, '‹'
+    = link_to_next_page articles, '›'
+  h2 = render_category_name(params[:category])
   small = pluralize(articles.count, 'item')
 = render partial: 'article', collection: articles, as: :article
-=> link_to_previous_page articles, '‹ Previous '
-= link_to_next_page articles, 'Next ›'
