@@ -7,6 +7,6 @@ small = pluralize(popular_articles.count, 'item')
   .link-group
     = link_to_previous_page articles, '‹'
     = link_to_next_page articles, '›'
-  h2 = render_category_name(params[:category])
-  small = pluralize(articles.count, 'item')
+  h2 = params[:category].titleize
+  small = pluralize(articles.total_count, 'item')
 = render partial: 'article', collection: articles, as: :article

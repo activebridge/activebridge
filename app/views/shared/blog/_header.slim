@@ -4,5 +4,5 @@ header.header
       = link_to 'Active::Bridge', root_url
       | Blog
     => link_to_unless_current 'All Posts', articles_path
-    - I18n.t('category').each do |e|
-      => link_to_unless_current e.first, category_articles_path(e.last)
+    - Article.categories.keys.each do |c|
+      => link_to_unless_current c.titleize, category_articles_path(c)
