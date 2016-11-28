@@ -1,8 +1,0 @@
-header.header
-  nav
-    .nav-left
-      = link_to 'Active::Bridge', root_url
-      | Blog
-    => link_to_unless_current 'All Posts', articles_path
-    - I18n.t('category').each do |e|
-      => link_to_unless_current e.first, category_articles_path(e.last)

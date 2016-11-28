@@ -1,13 +1,11 @@
 .post
-  .left-section
-    = link_to article_path(article), class: :thumbnail
-      = image_tag article.picture_url, width: '150px', height: '150px'
-    .meta
-      .author-avatar
-        = image_tag article.member.avatar.url
-      .description
-        p = article.member.name
-        p = article.created_at.strftime('%B %d, %Y')
+  = link_to article_path(article), class: :thumbnail
+    = image_tag article.picture_url, width: '150px', height: '150px'
   span.post-body
-    h2.title = link_to article.title, article_path(article)
+    h1.title = link_to article.title, article_path(article)
     .preview-body = clean_truncate(article.body)
+    .author-avatar
+      = image_tag article.member.avatar.url, height: '60', width: '60'
+    .meta
+      p = article.member.name
+      p = article.created_at.strftime('%B %d, %Y')
