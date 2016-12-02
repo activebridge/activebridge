@@ -1,8 +1,11 @@
 header.header
   nav
     .nav-left
-      = link_to 'Active::Bridge', root_url
+      = link_to root_url do
+        = inline_svg 'ActiveBridge.svg', class: :logo
+        | Active::Bridge
       | Blog
-    => link_to_unless_current 'All Posts', articles_path
-    - Article.categories.keys.each do |c|
-      => link_to_unless_current c.titleize, category_articles_path(c)
+    .nav-right
+      => link_to_unless_current 'All Posts', articles_path
+      - Article.categories.keys.each do |c|
+        => link_to_unless_current c.titleize, category_articles_path(c)

@@ -15,6 +15,7 @@ body {
   background: radial-gradient(#5F4076, #8A62AA);
   color: white;
   font-family: Arial;
+  overflow-x: hidden;
 }
 
 a, small {
@@ -23,20 +24,28 @@ a, small {
 }
 
 nav {
+  position: relative;
   padding: 20px;
   text-align: right;
+  display: flex;
   a {
     padding: 0 10px;
   }
 }
 
 .popular {
+  display: flex;
+  justify-content: space-between;
   a {
-    margin: 10px;
-    width: 31%;
-    display: inline-block;
+    margin: 1%;
+    padding: 1%;
+    width: 30%;
+    display: inline-flex;
     position: relative;
     background-size: cover;
+    box-shadow: 0 0 30px 10px $black;
+    transition: .3s;
+
     &:before{
       content: "";
       display: block;
@@ -47,20 +56,38 @@ nav {
       margin-left: 0;
     }
 
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2n) {
+      align-items: flex-end;
+    }
+
+    &:hover {
+      transform: scale(1.05)
+    }
+
     p { margin: 0; }
   }
 
   .author-avatar {
     border-radius: 50%;
-    margin: 0 10px 15px 20px;
+    margin: 10px;
     float: left;
   }
 
   .meta {
-    margin-top: 11px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 2px white);
 
     .article-title {
-      color: white;
+      color: $black;
+    }
+
+    small {
+      color: $gray;
     }
   }
 }
@@ -75,10 +102,20 @@ nav {
   }
 }
 
+.nav-left, .nav-right {
+  display: inline-flex;
+  align-items: center;
+  width: 75%;
+  align-content: flex-end;
+}
+
 .nav-left {
-  float: left;
+  width: 25%;
 
   a {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
     padding-right: 0;
 
     &:after {
@@ -86,51 +123,21 @@ nav {
       padding: 0 5px;
     }
   }
+
+  .logo {
+    max-width: 50px;
+    max-height: 50px;
+  }
 }
 
 .main {
-  padding: 20px 0 20px 30px;
+  padding: 20px;
 
   h2 { margin-bottom: 0; }
 
-  .post {
-    width: 48%;
-    float: left;
-    height: 340px;
-    background: #8b68a3;
-    margin: 20px 20px 0 0;
-    padding: 15px;
-
-    .left-section {
-      float: left;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .thumbnail {
-      float: left;
-      margin: 0 15px 55px 0;
-    }
-
-    .title {
-      margin-top: 0;
-      padding-top: 0;
-      text-align: left;
-      font-size: 1.5em;
-    }
-
-    .meta {
-      .author-avatar img {
-        width: 60px;
-        border-radius: 50%;
-      }
-    }
-  }
-
   .posts-header {
-    width: 97%;
+    width: 100%;
+    height: 100%;
     margin-bottom: 15px;
 
     h2 { display: table; }
@@ -144,6 +151,68 @@ nav {
         font-size: 30px;
         font-weight: bold;
         color: white;
+      }
+    }
+  }
+
+  .posts {
+    position: relative;
+    width: 100%;
+    min-height: 86vh;
+
+    .post {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      width: 49%;
+      float: left;
+      height: 41vh;
+      background: #8b68a3;
+      margin: 0;
+      padding: 15px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+        right: 0;
+        left: auto;
+      }
+
+      &:nth-child(3), &:nth-child(4) {
+        bottom: 0;
+        top: auto;
+      }
+
+      .left-section {
+        float: left;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .thumbnail {
+        float: left;
+        margin: 0 15px 15px 0;
+      }
+
+      .title {
+        margin-top: 0;
+        padding-top: 0;
+        text-align: left;
+        font-size: 2vmax;
+        word-break: break-word;
+      }
+
+      .meta {
+        .author-avatar img {
+          width: 60px;
+          border-radius: 50%;
+        }
+      }
+
+      .preview-body {
+        font-size: 1.5vmax;
       }
     }
   }
