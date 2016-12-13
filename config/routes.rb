@@ -4,6 +4,7 @@ Rails.application.routes.draw do
                constraints: { page: /(team|about|services|portfolio|testimonials|contact)/ },
                as: :page
   get 'expire_cache', to: 'welcome#expire_cache'
+  get 'BingSiteAuth.xml' => 'welcome#bing_site_auth', format: 'xml', as: :BingSiteAuth
 
   resources :articles, constraints: { subdomain: 'blog' }, path: '/' do
     collection do

@@ -1,4 +1,6 @@
 class RequestsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def create
     Request.confirm(params[:contact]).deliver_later
     Request.notify(params[:contact]).deliver_later
