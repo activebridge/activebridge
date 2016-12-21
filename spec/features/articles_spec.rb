@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'View article', type: :feature do
+RSpec.feature 'Articles page', type: :feature do
   let(:member) { create(:member) }
   let!(:article) { create(:article, member: member) }
 
@@ -10,10 +10,11 @@ feature 'View article', type: :feature do
 
   scenario do
     visit root_path
-    click_link 'Random title', match: :first
+    expect(page).to have_content('Active::Bridge')
+    expect(page).to have_content('Popular posts')
+    expect(page).to have_content('All Posts')
+    expect(page).to have_content('1 item')
     expect(page).to have_content('Alex')
     expect(page).to have_content('Random title')
-    expect(page).to have_content(article.body)
-    expect(current_path).to eq('/random-title')
   end
 end
