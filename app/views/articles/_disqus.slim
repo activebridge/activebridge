@@ -1,15 +1,15 @@
 #disqus_thread
 javascript:
-   var disqus_config = function () {
-   this.page.url = '#{url_for([article, {only_path: false}])}';
-   this.page.identifier = '#{article.id}';
-   };
+    var disqus_config = function () {
+    this.page.url = '#{url_for(article)}';
+    this.page.identifier = '#{article.id}';
+    };
 
-   (function() {
-   var d = document, s = d.createElement('script');
+    (function() {
+    var d = document, s = d.createElement('script');
 
-   s.src = '//active-bridge.disqus.com/embed.js';
+    s.src = '//active-bridge.disqus.com/embed.js';
 
-   s.setAttribute('data-timestamp', +new Date());
-   (d.head || d.body).appendChild(s);
-   })();
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();

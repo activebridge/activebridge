@@ -1,7 +1,7 @@
 .post
   .left-section
     = link_to article_path(article), class: :thumbnail
-      = image_tag article.picture_url, width: '120px', height: '120px'
+      div style="background-image: url(#{article.picture_url})"
     .meta
       .author-avatar
         = image_tag article.member.avatar.url
