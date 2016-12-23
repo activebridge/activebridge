@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def md(text)
-    coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
+    coderayified = CodeRayify.new(hard_wrap: true)
     markdown_to_html = Redcarpet::Markdown.new(coderayified, MD_OPTIONS)
     markdown_to_html.render(text).html_safe
   end
