@@ -1,14 +1,3 @@
-h2 Popular posts
-small = pluralize(popular_articles.count, 'item')
-.popular
-  = render partial: 'popular_article', collection: popular_articles, as: :popular_article
-
-.posts-header
-  .link-group
-    = link_to_previous_page articles, '‹'
-    = link_to_next_page articles, '›'
-  h2 = params[:category].titleize
-  small = pluralize(articles.total_count, 'item')
 .posts
   = render partial: 'article', collection: articles, as: :article
   = render_empty_boxes articles

@@ -1,13 +1,7 @@
-.post
-  .left-section
-    = link_to article_path(article), class: :thumbnail
-      div style="background-image: url(#{article.picture_url})"
+= link_to article_path(article), style: "background-image: url(#{article.picture_url})", class: 'article', remote: true do
+  .article-rollover
     .meta
-      .author-avatar
-        = image_tag article.member.avatar.url
-      .description
-        p = article.member.name
-        p = article.created_at.strftime('%B %d, %Y')
-  span.post-body
-    h2.title = link_to article.title, article_path(article)
+      = image_tag article.member.avatar.url, class: 'author-avatar'
+      h4.article-title = article.title
+      span = article.member_name
     .preview-body = clean_truncate(article.body)

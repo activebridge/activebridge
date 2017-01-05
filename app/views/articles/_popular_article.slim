@@ -1,6 +1,7 @@
-= link_to article_path(popular_article), style: "background-image: url(#{popular_article.picture_url})" do
-  .author-wrap
-    = image_tag popular_article.member.avatar.url, class: 'author-avatar'
-  .meta
-    p.article-title = popular_article.title
-    small= popular_article.member_name
+= link_to article_path(popular_article), style: "background-image: url(#{popular_article.picture_url})", class: 'article', remote: true do
+  .article-rollover
+    .meta
+      = image_tag popular_article.member.avatar.url, class: 'author-avatar'
+      h4.article-title = popular_article.title
+      span = popular_article.member_name
+    .preview-body = clean_truncate(popular_article.body)
