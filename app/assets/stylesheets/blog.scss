@@ -2,6 +2,7 @@
 @import 'defaults';
 @import 'base';
 @import 'disqus_thread';
+@import 'coderay';
 
 $font-size: 16px;
 $line-height: 1.75;
@@ -26,8 +27,6 @@ body {
   background: radial-gradient(top, $blog-violet-hotspot, $blog-violet);
 }
 
-header { padding: 8px 8px 0 8px }
-
 a {
   color: rgba($white, .5);
   text-decoration: none;
@@ -36,7 +35,7 @@ a {
 
 nav {
   position: relative;
-  padding: 20px;
+  padding: 28px 28px 20px;
   text-align: right;
   display: flex;
   a {
@@ -94,6 +93,9 @@ a.article {
     .article-rollover {
       background: rgba($blog-popular-post, .95);
       padding: 1.8vmax;
+      &:after {
+        opacity: 1;
+      }
       .preview-body {
         opacity: 1;
       }
@@ -111,10 +113,20 @@ a.article {
   color: white;
   font-size: 1vmax;
   transition: background .4s, padding .8s;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(top, rgba($blog-popular-post, 0) 0%, rgba($blog-popular-post, 1) 100%);
+    opacity: 0;
+  }
   img {
     float: left;
     width: 4.5vmax;
-
     margin-right: 3%;
     border-radius: 50%;
   }
@@ -224,6 +236,7 @@ a.article {
 }
 
 .link-group {
+  margin-top: 1.2vmax;
   float: right;
 
   a {
@@ -291,7 +304,7 @@ a.article {
       transition: background .3s;
       line-height: 1;
       &:hover {
-        background: rgba($blog-violet, 0.6);
+        background: rgba($blog-violet, 0.7);
       }
     }
     .CodeRay {
@@ -325,8 +338,193 @@ a.article {
   }
 }
 
-@media all and (max-width: 1025px) {
+.menu-button {
+  float: right;
+  opacity: 0;
+}
+
+
+@media (max-width: 1200px) {
+  .article-rollover {
+    padding: 76% 1.8vmax 1.8vmax;
+  }
+}
+
+@media (max-width: 1025px) {
   .main {
-    padding: 20px 40px 0 40px;
+    padding: 20px 40px 50px 40px;
+  }
+  .article-rollover {
+    padding: 140px 1.8vmax 1.8vmax;
+    .preview-body {
+      margin-top: 10px;
+    }
+  }
+  .menu-button {
+    margin-top: 5px;
+    opacity: 1;
+    order: 2;
+    cursor: pointer;
+    transition: opacity .3s;
+    outline: none;
+    &:hover {
+      opacity: .5;
+    }
+    &:focus + .menu-items {
+      opacity: 1;
+      z-index: 1;
+    }
+    & + .menu-items {
+      order: 1;
+
+    }
+    & > svg {
+      fill: white;
+      height: 27px;
+    }
+  }
+  .menu-items {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(99, 56, 123, 0.98);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    opacity: 0;
+    transition: opacity .3s ease;
+    a:hover {
+      opacity: .7;
+    }
+    &:hover {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  .main > .title {
+    opacity: .5;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      opacity: 1;
+    }
+    &:focus ~ .popular {
+      height: auto;
+    }
+    &:not(:focus) ~ .popular {
+      height: 0;
+      &:hover {
+        height: auto;
+      }
+    }
+  }
+
+  a.article:hover {
+    box-shadow: 0 4px 5px 0px rgba(0, 0, 0, 0.15)
+  }
+
+  .popular {
+    height: 0;
+    display: block;
+    overflow: hidden;
+    a {
+      width: 100%;
+      height: 200px;
+      margin: 11px 0;
+      display: block;
+      position: relative;
+      & > div {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  .article-rollover .preview-body {
+    font-size: 11px;
+  }
+
+  .main {
+    h2.title {
+      margin: 0;
+      font-size: 14px;
+    }
+    span.items_counter {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .posts {
+    display: block;
+    a {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      height: 200px;
+      &:nth-child(2n) {
+        margin: 10px 0;
+      }
+    }
+    .article-rollover {
+      top: 0;
+      padding: 155px 1.8vmax 1.8vmax;
+    }
+  }
+
+  .article-box {
+    font-size: 11px;
+    .post-info h2.title {
+      font-size: 13px;
+      padding-top: 3px;
+    }
+  }
+
+  .posts .article-rollover,
+  .article-rollover {
+    .meta {
+      .article-title {
+        font-size: 12px;
+        padding-top: 3px;
+      }
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 15px 0px 10px;
+  }
+
+  .nav-left {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 10px 25px 50px 25px;
+  }
+
+  .main {
+    padding: 20px 20px 50px 20px;
+  }
+
+  a.article:hover .article-rollover {
+    padding: 25px 20px;
+  }
+
+  .posts .article-rollover,
+  .article-rollover {
+    padding: 150px 20px 25px;
   }
 }
