@@ -281,7 +281,7 @@ svg#main {
   opacity: 1;
 }
 
-.page-title, .contact-title, .testimonials-title {
+.page-title, .contact-title, .testimonials-title, .services-title {
   position: fixed;
   padding: 1% 5%;
   background: $white;
@@ -309,24 +309,8 @@ svg#main {
   text-transform: uppercase;
 }
 
-.testimonials-title {
+.testimonials-title, .services-title {
   top: 3%;
-  right: 50%;
-  transform: translateX(50%);
-}
-
-.services-title {
-  top: 24px;
-  right: 50%;
-  transform: translateX(50%);
-  position: fixed;
-  padding: 10px 5%;
-  background: $white;
-  color: $dark-violet;
-  font-size: 2rem;
-  font-weight: bold;
-  z-index: 1000;
-  top: 24px;
   right: 50%;
   transform: translateX(50%);
 }
