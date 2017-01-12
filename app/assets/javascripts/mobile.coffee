@@ -26,4 +26,4 @@ document.body.addEventListener 'gesturestart', (e) -> e.preventDefault()
 document.getElementById('pages').setAttribute('data-page', location.pathname.split('/')[1])
 
 #Service Worker
-navigator.serviceWorker.register('/sw.js', { scope: './' }) if (navigator.serviceWorker)
+navigator.serviceWorker.register('/serviceworker.js', { scope: './' }) if (navigator.serviceWorker)

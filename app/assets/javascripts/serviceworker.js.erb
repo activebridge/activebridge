@@ -1,0 +1,52 @@
+var versionCache = "activebridge-v1"
+
+function onInstall(event) {
+  if (self.skipWaiting) {
+    self.skipWaiting();
+  }
+
+  event.waitUntil(
+    caches.open(versionCache).then(function(cache) {
+      fetch('/').then(function (response) {
+        cache.put('/index.html', response);
+      });
+      return cache.addAll([
+        '<%= asset_path "mobile.js" %>',
+        '<%= asset_path "mobile.css" %>',
+        '<%= asset_path "fonts.css" %>',
+        'icon-2x.png',
+        'icon-3x.png',
+        'icon-4x.png',
+      ]);
+    })
+  );
+}
+
+function onActivate(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheName !== versionCache) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+}
+
+
+function onFetch(e) {
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    }).catch(function() {
+      return caches.match('/index.html');
+    })
+  );
+}
+
+self.addEventListener('install', onInstall);
+self.addEventListener('fetch', onFetch);
+self.addEventListener('activate', onActivate)
