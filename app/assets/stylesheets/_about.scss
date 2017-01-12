@@ -162,6 +162,12 @@
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .about-desc {
+    min-height: 325px;
+  }
+}
+
 @media screen and (max-width: 950px) {
   .about {
     position: relative;
