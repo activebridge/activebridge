@@ -1,14 +1,13 @@
 div.about itemscope="" itemtype="http://schema.org/thing"
   = inline_svg 'about/about-bg-pattern.svg', class: 'about-background-svg'
-  h1.about-title= inline_svg 'about/about-title.svg'
+  = inline_svg 'about/about-title.svg', class: 'about-title'
   .about-desc
     .about-desc-text
       == t('.description')
     = inline_svg 'about/about-pics.svg', class: 'about-desc-mark'
     .about-desc-square-mark
   dl.about-items
-    .about-items-wrapper
-      dt= t('.core_values')
-      dd itemprop='description'== t('.experienced_team')
-      dt= t('.benefits')
-      dd itemprop='description'== t('.cost_efficient')
+    dt= t('.core_values')
+    dd itemprop='description'== t('.experienced_team')
+    dt= t('.benefits')
+    dd itemprop='description'== t('.cost_efficient')

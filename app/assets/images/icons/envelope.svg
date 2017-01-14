@@ -44,7 +44,7 @@
         </linearGradient>
         <path id="nanapath-17" d="M-3.22062032,-12.9689928 L122.599647,69.1613648 L248.419914,-12.9689922 L248.419914,-37.4181051 L-3.22061986,-37.4181051 L-3.22062032,-12.9689928 Z"></path>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard-6" transform="translate(-611.000000, -1186.000000)">
             <g id="envelope" transform="translate(611.346775, 1186.195603)">
                 <mask id="namask-2" fill="white">
@@ -72,13 +72,13 @@
                 </g>
                 <path d="M-5.1804002,-5.33273945 L25.0500789,-5.33273945 L25.0500789,199.977729 L-5.1804002,199.977729 L-5.1804002,-5.33273945 L-5.1804002,-5.33273945 Z M222.922306,-5.33273945 L253.152785,-5.33273945 L253.152785,199.977729 L222.922306,199.977729 L222.922306,-5.33273945 L222.922306,-5.33273945 Z" id="Rectangle-230" fill="url(#linearGradient-10)" mask="url(#namask-9)"></path>
                 <path d="M252.046289,19.7108754 L28.2189206,168.510386 L28.2189206,9.56360929 L252.046289,19.7108754 Z" stroke="#C5C5C5" opacity="0.10651819" fill="url(#linearGradient-11)" mask="url(#namask-9)"></path>
-                <path d="M-6.75625377,18.1745198 L169.973384,172.412093 L268.532637,170.497435 L254.306144,13.17437 L121.281168,14.0027909 L-3.92903426,14.7825449 L-6.75625377,18.1745198 Z" id="Path-3193" opacity="0.932252799" fill="url(#linearGradient-12)" mask="url(#namask-9)"></path>
-                <path d="M-8.46482447,18.8733765 L123.599074,103.703123 L289.740462,-2.62433567 L-24.2553881,-18.2216744 L-8.46482447,18.8733765 Z" id="Path-3201" opacity="0.35494403" fill="url(#radialGradient-13)" mask="url(#namask-9)"></path>
-                <g id="Path-3193">
+                <path d="M-6.75625377,18.1745198 L169.973384,172.412093 L268.532637,170.497435 L254.306144,13.17437 L121.281168,14.0027909 L-3.92903426,14.7825449 L-6.75625377,18.1745198 Z" opacity="0.932252799" fill="url(#linearGradient-12)" mask="url(#namask-9)"></path>
+                <path d="M-8.46482447,18.8733765 L123.599074,103.703123 L289.740462,-2.62433567 L-24.2553881,-18.2216744 L-8.46482447,18.8733765 Z" opacity="0.35494403" fill="url(#radialGradient-13)" mask="url(#namask-9)"></path>
+                <g>
                     <use fill="url(#linearGradient-14)" fill-rule="evenodd" mask="url(#namask-9)" xlink:href="#nanapath-15"></use>
                     <use fill="none" xlink:href="#nanapath-15"></use>
                 </g>
-                <g id="Path-3193">
+                <g>
                     <use fill="url(#linearGradient-14)" mask="url(#namask-9)" xlink:href="#nanapath-17"></use>
                     <use fill="url(#linearGradient-16)" xlink:href="#nanapath-17"></use>
                     <use fill-opacity="0.349892437" fill="#FFFFFF" xlink:href="#nanapath-17"></use>
