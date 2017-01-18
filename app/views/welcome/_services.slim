@@ -14,13 +14,13 @@ div itemscope="" itemtype="http://schema.org/Thing"
         .services-section-tab.text-left
           h2.services-section-tab-title
             label for='agile_programming'= t('services.agile_programming')
-          dl.services-section-tab-description.text-center itemprop='description'
-            dt itemprop='description': h3= t('services.custom_web_development.title')
-            dd itemprop='description'== t('services.custom_web_development.desc')
-            dt itemprop='description': h3= t('services.scrum.title')
-            dd itemprop='description'== t('services.scrum.desc')
-            dt itemprop='description': h3= t('services.free_review.title')
-            dd itemprop='description'== t('services.free_review.desc')
+          dl.services-section-tab-description.text-center
+            dt== t('services.custom_web_development.title')
+            dd== t('services.custom_web_development.desc')
+            dt== t('services.scrum.title')
+            dd== t('services.scrum.desc')
+            dt== t('services.free_review.title')
+            dd== t('services.free_review.desc')
 
         input#maintenance type='radio' hidden=true name='active-tab'
         .services-section-tab.text-center

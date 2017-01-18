@@ -50,14 +50,14 @@
                 <mask id="namask-2" fill="white">
                     <use xlink:href="#nanapath-1"></use>
                 </mask>
-                <g id="Mask">
+                <g>
                     <use fill="none" xlink:href="#nanapath-1"></use>
                     <use fill-opacity="0.06" fill="#000000" fill-rule="evenodd" xlink:href="#nanapath-1"></use>
                 </g>
                 <mask id="namask-5" fill="white">
                     <use xlink:href="#nanapath-4"></use>
                 </mask>
-                <g id="Mask">
+                <g>
                     <use fill="none" xlink:href="#nanapath-4"></use>
                     <use fill="url(#naGradient)" fill-rule="evenodd" xlink:href="#nanapath-4"></use>
                     <use fill="none" xlink:href="#nanapath-4"></use>
@@ -66,7 +66,7 @@
                 <mask id="namask-9" fill="white">
                     <use xlink:href="#nanapath-8"></use>
                 </mask>
-                <g id="Mask">
+                <g>
                     <use fill="url(#linearGradient-7)" xlink:href="#nanapath-8"></use>
                     <use fill-opacity="0.596325861" fill="#F0F0F0" xlink:href="#nanapath-8"></use>
                 </g>
