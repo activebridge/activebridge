@@ -4,9 +4,9 @@
         <path id="nav-path-2" d="M0.125200441,11.087628 L11.1657041,0.459048575 L46.3949477,0.459048575 L57.8369242,11.0975849 L28.9810623,40.4409364 L0.125200441,11.087628 Z"></path>
     </defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="AB-mobile" transform="translate(-2519.000000, -1483.000000)">
-            <g id="screen-3" transform="translate(2046.000000, 143.000000)">
-                <g id="Group" transform="translate(-698.000000, 100.000000)">
+        <g transform="translate(-2519.000000, -1483.000000)">
+            <g transform="translate(2046.000000, 143.000000)">
+                <g class="Group" transform="translate(-698.000000, 100.000000)">
                     <g id="menu-services-button" transform="translate(1174.000000, 1242.000000)">
                         <mask id="nav-mask-2" fill="white">
                             <use xlink:href="#nav-path-2"></use>

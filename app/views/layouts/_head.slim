@@ -11,6 +11,14 @@ head
   = stylesheet_link_tag type, media: media, onload: "if(media!='all')media='all'"
   = csrf_meta_tags
   = yield :head
+  javascript:
+    var head = document.head,
+        link = document.createElement('link');
+
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = "#{ asset_path('fonts.css')}";
+    head.appendChild(link);
 
   script type = 'application/ld+json'
     |

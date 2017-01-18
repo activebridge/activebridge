@@ -5,16 +5,18 @@ ul.skills
     li
       = svg("skills/#{skill[:id]}")
       = skill[:name].gsub('/', ' ')
-cite: h2= t('services.agile_programming')
-dl.text-left.section itemprop='description'
-  dt: h3.mark= t('services.custom_web_development.title')
+.accented_title: h2= t('services.agile_programming')
+dl.text-left.section itemscope="" itemtype="http://schema.org/thing"
+  dt.mark= t('services.custom_web_development.title')
   dd itemprop='description'== t('services.custom_web_development.desc')
-  dt: h3.mark= t('services.scrum.title')
+  dt.mark= t('services.scrum.title')
   dd itemprop='description'== t('services.scrum.desc')
-  dt: h3.mark= t('services.free_review.title')
+  dt.mark= t('services.free_review.title')
   dd itemprop='description'== t('services.free_review.desc')
 
-cite: h3= t('services.maintenance_and_support')
-div itemprop='description' == t('services.code_audit')
-cite: h3= t('services.outstaffing')
-div itemprop='description' == t('services.team')
+.accented_title: h3= t('services.maintenance_and_support')
+div itemscope="" itemtype="http://schema.org/thing"
+  .text-wrap itemprop='description' == t('services.code_audit')
+.accented_title: h3= t('services.outstaffing')
+div itemscope="" itemtype="http://schema.org/thing"
+  .text-wrap itemprop='description' == t('services.team')

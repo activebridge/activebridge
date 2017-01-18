@@ -65,9 +65,8 @@
       }
       .project {
         padding: 5%;
-        position: relative;
+        position: absolute;
         text-align: center;
-        height: 100%;
         overflow: hidden;
         overflow-y: auto;
         display: flex;
@@ -212,6 +211,12 @@
       }
     }
   }
+}
+
+.project-open {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 label[for=reset] {
