@@ -10,8 +10,9 @@ h1.services-title= t('portfolio.title')
         .project-wrapper.about style="left: #{100/@projects.size*(i+1)}%; margin-left: -#{100/@projects.size}%;"
           .content.project
             = image_tag(project.logo.url(:logo), style: "top: #{cycle(35, 45, 55, 45)}%", itemprop: 'logo')
-            .project-description itemprop='description'
-              = project.description
+            div
+              .project-description itemprop='description'
+                = project.description
             .project-info
               - t('portfolio.project_info').each do |key, value|
                 .info-section
