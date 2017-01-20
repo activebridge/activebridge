@@ -7,7 +7,7 @@ html lang='en'
   body onload="if (navigator.userAgent.includes(' ')) { document.body.className = 'active' }"
     = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
     main#pages= yield
-    nav
+    nav#nav
       a.active href='home'= inline_svg('mobile/icons/menu-home.svg')
       a href='about'= inline_svg('mobile/icons/menu-about.svg')
       a href='services'= inline_svg('mobile/icons/menu-services.svg')
