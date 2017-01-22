@@ -191,6 +191,7 @@
       position: fixed;
 
       .project {
+        z-index: 999;
         overflow-y: visible;
         display: block;
         .content-widen {
