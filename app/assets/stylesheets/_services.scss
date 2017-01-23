@@ -20,11 +20,17 @@
         min-width: 15vmin;
         min-height: 15vmin;
         max-height: 150px;
-        #tech-mask {
+        .tech-mask {
           fill: white;
         }
       }
     }
+  }
+  &-content {
+    top: 3%;
+    position: absolute;
+    width: 100%;
+    padding-top: 5%;
   }
   &-background-svg {
     position: absolute;
@@ -112,8 +118,9 @@
         font-size: 1rem;
         overflow: auto;
         margin: 0;
-        h3 {
-          margin: 0;
+        dt {
+          color: #744a71;
+          font-size: 1.17em;
         }
       }
     }

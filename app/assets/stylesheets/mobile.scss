@@ -88,7 +88,7 @@ section {
 }
 
 @media screen and (min-aspect-ratio: 13/9) {
-  h6, button, cite {
+  h6, button, .accented_title {
     padding: 3% 5% !important;
     margin: 2% !important;
   }
@@ -97,9 +97,10 @@ section {
     padding-bottom: 0;
   }
 
-  nav {
+  #nav {
     left: auto;
     top: 0;
+    height: 100%;
 
     a {
       width: 54px;
@@ -152,7 +153,7 @@ h1 {
   text-shadow: .1px 0 0 currentColor;
 }
 
-h6, button, cite {
+h6, button, .accented_title {
   text-align: center;
   padding: 5% 10%;
   background: white;
@@ -193,18 +194,6 @@ dd {
     float: right;
   }
   margin-bottom: 20px;
-  &:nth-child(2) {
-    text-align: right;
-    h1, h2, h3, h4, h5 {
-      text-align: right;
-    }
-  }
-  &:nth-child(4) {
-    text-align: left;
-    h1, h2, h3, h4, h5 {
-      text-align: left;
-    }
-  }
 }
 
 dl {
@@ -286,6 +275,39 @@ ul {
 
 #services dd {
   display: block;
+}
+
+#about {
+  dd {
+    &:nth-child(2) {
+      text-align: right;
+      h1, h2, h3, h4, h5 {
+        text-align: right;
+      }
+      div {
+        padding: 0 3%;
+        width: 100%;
+        display: inline;
+        text-align: left;
+      }
+    }
+    &:nth-child(4) {
+      text-align: left;
+      h1, h2, h3, h4, h5 {
+        text-align: left;
+      }
+      div {
+        padding: 0 3%;
+        width: 100%;
+        display: inline;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.text-wrap {
+  padding: 0;
 }
 
 nav svg {

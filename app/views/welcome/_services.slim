@@ -1,36 +1,37 @@
 div itemscope="" itemtype="http://schema.org/Thing"
-  .content.services
+  = inline_svg 'services/services-bg.svg', class: 'services-background-svg'
+  .services
     .services-title= t('services.title')
-    = inline_svg 'services/services-bg.svg', class: 'services-background-svg'
-    h3.text-center= t('services.we_do')
-    .skills
-      - I18n.t('services.skills').each_with_index do |skill, index|
-        .skill
-          = svg("skills/#{skill[:id]}")
-          .skill-title= skill[:name]
-    .services-section
-      input#agile_programming type='radio' hidden=true name='active-tab' checked=true
-      .services-section-tab.text-left
-        h2.services-section-tab-title
-          label for='agile_programming'= t('services.agile_programming')
-        dl.services-section-tab-description.text-center itemprop='description'
-          dt itemprop='description': h3= t('services.custom_web_development.title')
-          dd itemprop='description'== t('services.custom_web_development.desc')
-          dt itemprop='description': h3= t('services.scrum.title')
-          dd itemprop='description'== t('services.scrum.desc')
-          dt itemprop='description': h3= t('services.free_review.title')
-          dd itemprop='description'== t('services.free_review.desc')
+    .content.services-content
+      h3.text-center= t('services.we_do')
+      .skills
+        - I18n.t('services.skills').each_with_index do |skill, index|
+          .skill
+            = svg("skills/#{skill[:id]}")
+            .skill-title= skill[:name]
+      .services-section
+        input#agile_programming type='radio' hidden=true name='active-tab' checked=true
+        .services-section-tab.text-left
+          h2.services-section-tab-title
+            label for='agile_programming'= t('services.agile_programming')
+          dl.services-section-tab-description.text-center
+            dt== t('services.custom_web_development.title')
+            dd== t('services.custom_web_development.desc')
+            dt== t('services.scrum.title')
+            dd== t('services.scrum.desc')
+            dt== t('services.free_review.title')
+            dd== t('services.free_review.desc')
 
-      input#maintenance type='radio' hidden=true name='active-tab'
-      .services-section-tab.text-center
-        h3.services-section-tab-title
-          label for='maintenance'
-            = t('services.maintenance_and_support')
-        div itemprop='description' class= 'services-section-tab-description text-center'
-          == t('services.code_audit')
-      input#outstaffing type='radio' hidden=true name='active-tab'
-      .services-section-tab.text-right
-        h3.services-section-tab-title
-          label for='outstaffing'= t('services.outstaffing')
-        div itemprop='description' class= 'services-section-tab-description text-center'
-          == t('services.team')
+        input#maintenance type='radio' hidden=true name='active-tab'
+        .services-section-tab.text-center
+          h3.services-section-tab-title
+            label for='maintenance'
+              = t('services.maintenance_and_support')
+          div itemprop='description' class= 'services-section-tab-description text-center'
+            == t('services.code_audit')
+        input#outstaffing type='radio' hidden=true name='active-tab'
+        .services-section-tab.text-right
+          h3.services-section-tab-title
+            label for='outstaffing'= t('services.outstaffing')
+          div itemprop='description' class= 'services-section-tab-description text-center'
+            == t('services.team')
