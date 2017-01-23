@@ -3,5 +3,5 @@
     .meta
       = image_tag popular_article.member.avatar.url, class: 'author-avatar'
       h4.article-title = popular_article.title
-      span = popular_article.member_name
+      span = popular_article.member.name
     .preview-body = clean_truncate(popular_article.body)
