@@ -110,17 +110,19 @@ en:
       maintenance, and support services to achieve your business needs. Our team keeps this process strong
       with regular checkups and web analytic tools.
     outstaffing: Outstaffing
-    team: <h3>Web support</h3>
-      The development process is an ongoing process for all time product existing.
-      That's why the main idea of development industry is <h4>Dedicated Team</h4>.
-      What's necessary to develop and maintain web product.
-      The main features of dedicated team realization can be short <h4>product releases</h4>,
-      halving functional step-by-step; there is no psychological problem as hiding troubles
-      from customers when product realization is; the customer has ability quickly responds
-      and makes decisions relating to functional improvement.
-      Ordering-company no needs to create a development and product testing division.
-      Save your financial and material resources, time and financial costs for the set
-      of a <h4>dedicated team</h4>; providing workplaces; training for the officers; utility costs.
+    team:
+      title: Web support
+      desc:
+        The development process is an ongoing process for all time product existing.
+        That's why the main idea of development industry is <h4>Dedicated Team</h4>.
+        What's necessary to develop and maintain web product.
+        The main features of dedicated team realization can be short <h4>product releases</h4>,
+        halving functional step-by-step; there is no psychological problem as hiding troubles
+        from customers when product realization is; the customer has ability quickly responds
+        and makes decisions relating to functional improvement.
+        Ordering-company no needs to create a development and product testing division.
+        Save your financial and material resources, time and financial costs for the set
+        of a <h4>dedicated team</h4>; providing workplaces; training for the officers; utility costs.
   testimonials:
     title: Testimonials
     all:

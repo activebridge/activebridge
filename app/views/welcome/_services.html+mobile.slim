@@ -19,4 +19,7 @@ div itemscope="" itemtype="http://schema.org/thing"
   .text-wrap itemprop='description' == t('services.code_audit')
 .accented_title: h3= t('services.outstaffing')
 div itemscope="" itemtype="http://schema.org/thing"
-  .text-wrap itemprop='description' == t('services.team')
+  .text-wrap itemprop='description'
+    h3
+      = t('services.team.title')
+    div == t('services.team.desc')
