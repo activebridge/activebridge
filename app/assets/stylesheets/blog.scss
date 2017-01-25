@@ -230,6 +230,9 @@ a.article {
       margin-bottom: 0;
     }
   }
+  a:last-child {
+    margin: 2% 0 0 0;
+  }
   .article-rollover {
     padding: 15vmax 1.8vmax 1.8vmax;
   }
