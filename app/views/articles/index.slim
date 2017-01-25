@@ -1,9 +1,2 @@
-main
+.posts
   = render partial: 'article', collection: articles, as: :article
-  => link_to_previous_page articles, '‹ Previous '
-  = link_to_next_page articles, 'Next ›'
-
-.sidebar
-  .popular-posts
-    h4 Popular Posts
-    = render partial: 'popular_article', collection: popular_articles, as: :popular_article

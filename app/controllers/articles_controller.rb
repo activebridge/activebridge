@@ -1,9 +1,8 @@
 class ArticlesController < ApplicationController
   layout 'blog'
-
-  def show
-    article.increment_viewed
-  end
+  caches_action :index, cache_path: proc { "#{params[:category]}#{articles.first&.cache_key}" }
+  caches_action :show, cache_path: proc { article.cache_key }
+  respond_to :js
 
   private
 
@@ -18,7 +17,7 @@ class ArticlesController < ApplicationController
   helper_method :article
 
   def popular_articles
-    @popular_articles ||= Article.done.order(viewed: :desc).first(3)
+    @popular_articles ||= Article.done.includes(:member).order(viewed: :desc).first(3)
   end
   helper_method :popular_articles
 end

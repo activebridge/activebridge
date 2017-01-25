@@ -1,0 +1,13 @@
+header.header
+  nav
+    .nav-left
+      = link_to root_url, class: 'main-site-link' do
+        | Active::Bridge
+      | Blog
+    .nav-right
+      .menu-button tabindex='-1'
+        = inline_svg 'icons/hamburger.svg'
+      .menu-items
+        => link_to_unless_current 'All Posts', articles_path, class: 'menu-item'
+        - Article.categories.keys.each do |c|
+          => link_to_unless_current c.titleize, category_articles_path(c), class: 'menu-item'
