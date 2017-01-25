@@ -27,6 +27,10 @@ body {
   background: radial-gradient(top, $blog-violet-hotspot, $blog-violet);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
+}
+
 a {
   color: rgba($white, .5);
   text-decoration: none;
@@ -252,7 +256,7 @@ a.article {
   margin-top: 1%;
   position: relative;
   padding: 2vmax;
-  font-size: 1vmax;
+  font-size: 1.2vmax;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
   background: $blog-violet-post;
   overflow: hidden;
@@ -278,7 +282,7 @@ a.article {
     h2.title {
       margin: 0;
       padding-right: 5vmax;
-      font-size: 1.3vmax;
+      font-size: 1.7vmax;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -294,26 +298,31 @@ a.article {
   article {
     clear: both;
     margin-top: 3vmax;
-    line-height: 1.5;
+    line-height: 1.4;
+    letter-spacing: 1px;
     img {
       max-width: 100%;
       height: auto;
     }
+    strong {
+      letter-spacing: 2px;
+    }
     .CodeRay, blockquote {
       background: rgba($blog-violet, 0.5);
       transition: background .3s;
-      line-height: 1;
       &:hover {
         background: rgba($blog-violet, 0.7);
       }
     }
     .CodeRay {
+      font-size: 1vmax;
       padding: 1vmax 1.7vmax;
       border-radius: 10px;
-      overflow: scroll;
+      overflow: auto;
       cursor: text;
       pre {
         margin: 0;
+        overflow: visible;
       }
     }
     blockquote {
