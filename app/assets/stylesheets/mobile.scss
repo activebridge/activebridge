@@ -143,7 +143,7 @@ div {
 
 h1, h2, h3, h4, h5 {
   margin: 0;
-  display: inline-block;
+  display: inline;
   font-size: inherit;
   font-weight: normal;
 }
@@ -308,6 +308,10 @@ ul {
 
 .text-wrap {
   padding: 0;
+  > div {
+    padding: 0;
+    display: inline;
+  }
 }
 
 nav svg {

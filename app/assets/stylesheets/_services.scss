@@ -105,22 +105,31 @@
         position: relative;
         height: 35vh;
         width: 100%;
-        top: -3px;
+        top: -4px;
         left: 0;
         bottom: 0;
         padding: 2%;
         z-index: 10;
         transition: .3s;
-        font-size: .8em;
         border-radius: 0 0 15px 15px;
-        line-height: 1em;
+        line-height: 1.15rem;
         text-align: justify;
         font-size: 1rem;
         overflow: auto;
         margin: 0;
+        text-indent: 2vw;
         dt {
+          text-indent: 0;
           color: #744a71;
-          font-size: 1.17em;
+          line-height: 1.17rem;
+          font-size: 1.17rem;
+          padding: 11px 0 4px 0;
+        }
+        dt:first-child {
+          padding: 0 0 4px 0;
+        }
+        dd {
+          margin-left: 0px;
         }
       }
     }
@@ -132,10 +141,64 @@
         z-index: 100;
         h3 {
           color: $dark-violet;
+          padding-bottom: 7px;
+          text-indent: 0;
         }
       }
       .services-section-tab-title {
         background: $white;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .services {
+    .skills .skill {
+      font-size: 1.2vw;
+    }
+    &-content {
+      padding-bottom: 11vw;
+      > h3 {
+        font-size: 1.4vw;
+      }
+    }
+    &-section {
+      &-tab {
+        &-title {
+          height: 3.6vw;
+          line-height: 1.75vw;
+          font-size: 1.75vw;
+        }
+        &-description {
+          line-height: 1.4vw;
+          font-size: 1.2vw;
+          text-indent: 2vw;
+          height: 18vw;
+          dt {
+            text-indent: 0;
+            line-height: 1.5vw;
+            font-size: 1.5vw;
+            padding: .8vw 0 .3vw 0;
+          }
+          dt:first-child {
+            padding: 0 0 .3vw 0;
+          }
+          dd {
+            margin-left: 0px;
+          }
+        }
+      }
+      input:checked + .services-section-tab {
+        .services-section-tab-description {
+          text-indent: 2vw;
+          h3 {
+            padding: 0 0 .3vw 0;
+            line-height: 1.5vw;
+            font-size: 1.5vw;
+            text-indent: 0;
+          }
+        }
       }
     }
   }

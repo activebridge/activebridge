@@ -34,4 +34,7 @@ div itemscope="" itemtype="http://schema.org/Thing"
           h3.services-section-tab-title
             label for='outstaffing'= t('services.outstaffing')
           div itemprop='description' class= 'services-section-tab-description text-center'
-            == t('services.team')
+            h3
+              = t('services.team.title')
+            div
+              == t('services.team.desc')

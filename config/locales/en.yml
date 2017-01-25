@@ -110,17 +110,19 @@ en:
       maintenance, and support services to achieve your business needs. Our team keeps this process strong
       with regular checkups and web analytic tools.
     outstaffing: Outstaffing
-    team: <h3>Web support</h3>
-      The development process is an ongoing process for all time product existing.
-      That's why the main idea of development industry is <h4>Dedicated Team</h4>.
-      What's necessary to develop and maintain web product.
-      The main features of dedicated team realization can be short <h4>product releases</h4>,
-      halving functional step-by-step; there is no psychological problem as hiding troubles
-      from customers when product realization is; the customer has ability quickly responds
-      and makes decisions relating to functional improvement.
-      Ordering-company no needs to create a development and product testing division.
-      Save your financial and material resources, time and financial costs for the set
-      of a <h4>dedicated team</h4>; providing workplaces; training for the officers; utility costs.
+    team:
+      title: Web support
+      desc:
+        The development process is an ongoing process for all time product existing.
+        That's why the main idea of development industry is <h4>Dedicated Team</h4>.
+        What's necessary to develop and maintain web product.
+        The main features of dedicated team realization can be short <h4>product releases</h4>,
+        halving functional step-by-step; there is no psychological problem as hiding troubles
+        from customers when product realization is; the customer has ability quickly responds
+        and makes decisions relating to functional improvement.
+        Ordering-company no needs to create a development and product testing division.
+        Save your financial and material resources, time and financial costs for the set
+        of a <h4>dedicated team</h4>; providing workplaces; training for the officers; utility costs.
   testimonials:
     title: Testimonials
     all:
@@ -182,6 +184,29 @@ en:
           which we really appreciate as we don’t have an in-house technical team.
           After the active development phase, we’ve retained Active Bridge for the ongoing development and maintenance
           of our platform and I couldn’t recommend them enough.
+      - company: LifeLinker Inc
+        logo: https://i.imgur.com/OYJyxdx.jpg
+        banner: https://d20gtr5xsxly4a.cloudfront.net/assets/LifeLinkerLogoNew-484645cd8ffdb8bb7b4d616030fcdf0bd83d3a06ba513654b06631d33f3da9b1.png
+        author: David Rowell
+        image: https://i.imgur.com/OPSEqgl.jpg
+        title: Founder/CEO at LifeLinker Inc
+        description:
+          After previously hiring contract developers in countries ranging from the US and Canada, to Vietnam and India,
+          and after having paid variously three times more and three times less per hour, we finally got it right when
+          we found Active-Bridge. Their staff are as competent and productive as the three times more expensive people,
+          and deliver more code per dollar than the three times less expensive people.
+          There’s no better source for best quality, best practice and best value development services than
+          Active-Bridge. We’re delighted and most appreciative. Thank you.
+      - company: Joseph_Carpenter
+        logo: https://i.imgur.com/cg6gnIV.jpg
+        banner: https://i.imgur.com/tZGdPhv.png
+        author: Joseph Carpenter
+        image: https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/15326595_10210921551572178_961783778380965665_n.jpg?oh=febfa44a0f7f5605069a52b4fbf2a906&oe=590AC380
+        title: Founder at MyScool411
+        description:
+          If anyone needs a kickass website company, these are your guys! I have used many other companies with nothing
+          but issues and have nothing but good results from Eugene and Active Bridge. You will not find a better company
+          period.
   social:
     linkedin: 'https://www.linkedin.com/company/active-bridge'
     twitter: 'https://twitter.com/activebridge'

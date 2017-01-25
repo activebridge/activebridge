@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'actionpack-action_caching'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'activeadmin', github: 'activeadmin'
 gem 'autoprefixer-rails'
 gem 'browser'
@@ -17,7 +18,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'lazybox'
 gem 'pg'
-gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.1'
 gem 'redcarpet'
 gem 'roadie-rails'
 gem 'rubocop', require: false
@@ -45,7 +46,6 @@ end
 
 group :development do
   gem 'capistrano-db-tasks', require: false
-  gem 'quiet_assets'
   gem 'spring'
   gem 'thin'
 end
