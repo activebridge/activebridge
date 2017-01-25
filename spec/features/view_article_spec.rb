@@ -4,7 +4,7 @@ feature 'View article', type: :feature do
   let(:member) { create(:member) }
   let!(:article) { create(:article, member: member) }
 
-  before(:each) { change_host 'blog.lvh.me:8000' }
+  before(:each) { change_host 'blog.lvh.me:3000' }
 
   after(:each) { change_host 'localhost:3000' }
 
