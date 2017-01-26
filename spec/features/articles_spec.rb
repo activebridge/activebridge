@@ -6,8 +6,6 @@ RSpec.feature 'Articles page', type: :feature do
 
   before(:each) { change_host 'blog.lvh.me:3000' }
 
-  after(:each) { change_host 'localhost:3000' }
-
   scenario do
     visit root_path
     expect(page).to have_content('Active::Bridge')

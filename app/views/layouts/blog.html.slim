@@ -4,7 +4,9 @@ html
   body
     = render 'shared/blog/header'
     main.main
-      h2.title tabindex='-1' Popular posts
+      h2.title tabindex='-1'
+        | Popular posts
+        span.title-arrow ›
       span.items_counter = pluralize(popular_articles.count, 'item')
       .popular
         = render partial: 'popular_article', collection: popular_articles, as: :popular_article

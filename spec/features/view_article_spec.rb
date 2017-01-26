@@ -1,12 +1,10 @@
 require 'rails_helper'
 
-feature 'View article', type: :feature do
+RSpec.feature 'View article', type: :feature do
   let(:member) { create(:member) }
   let!(:article) { create(:article, member: member) }
 
   before(:each) { change_host 'blog.lvh.me:3000' }
-
-  after(:each) { change_host 'localhost:3000' }
 
   scenario do
     visit root_path
