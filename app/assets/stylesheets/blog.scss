@@ -355,6 +355,15 @@ a.article {
   opacity: 0;
 }
 
+@media (min-width: 1024px) {
+  h2.title .title-arrow {
+    display: none;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 30px;
+  }
+}
+
 
 @media (max-width: 1200px) {
   .article-rollover {
@@ -423,8 +432,15 @@ a.article {
     opacity: .5;
     cursor: pointer;
     outline: none;
+    .title-arrow {
+      display: inline-block;
+      transform: rotate(90.0deg);
+    }
     &:hover {
       opacity: 1;
+    }
+    &:focus .title-arrow {
+      transform: rotate(-90.0deg);
     }
     &:focus ~ .popular {
       height: auto;
