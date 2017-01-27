@@ -4,18 +4,12 @@ html
   body
     = render 'shared/blog/header'
     main.main
-      h2.title tabindex='-1'
+      h2.title.popular-posts-title tabindex='-1'
         | Popular posts
         span.title-arrow ›
       span.items_counter = pluralize(popular_articles.count, 'item')
       .popular
         = render partial: 'popular_article', collection: popular_articles, as: :popular_article
-      .posts-header
-        .link-group
-          = link_to_previous_page articles, '‹'
-          = link_to_next_page articles, '›'
-        h2.title = params[:category] ? params[:category].titleize : 'All Posts'
-        span.items_counter = pluralize(articles.total_count, 'item')
       .yield
         = yield
     = javascript_include_tag 'blog'

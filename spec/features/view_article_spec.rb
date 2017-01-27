@@ -6,6 +6,8 @@ RSpec.feature 'View article', type: :feature do
 
   before(:each) { change_host 'blog.lvh.me:3000' }
 
+  after(:each) { change_host 'localhost:3000' }
+
   scenario do
     visit root_path
     click_link 'Random title', match: :first
