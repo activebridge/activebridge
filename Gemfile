@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'actionpack-action_caching'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'activeadmin', github: 'activeadmin'
 gem 'autoprefixer-rails'
 gem 'browser'
@@ -12,6 +11,7 @@ gem 'cloudinary'
 gem 'coderay'
 gem 'coffee-rails'
 gem 'friendly_id'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'inline_svg'
 gem 'jbuilder'
 gem 'jquery-rails'
@@ -41,6 +41,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'pry'
   gem 'rspec-rails'
+  gem 'rspec-retry'
   gem 'simplecov', require: false
 end
 

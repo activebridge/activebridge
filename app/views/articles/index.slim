@@ -1,2 +1,8 @@
+.posts-header#posts
+  .link-group
+    = link_to_previous_page articles, '‹'
+    = link_to_next_page articles, '›'
+  h2.title = params[:category] ? params[:category].titleize : 'All Posts'
+  span.items_counter = pluralize(articles.total_count, 'item')
 .posts
   = render partial: 'article', collection: articles, as: :article

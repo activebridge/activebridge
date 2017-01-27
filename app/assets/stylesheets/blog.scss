@@ -54,6 +54,9 @@ nav {
     font-weight: bold;
     color: white;
     text-align: left;
+    &:focus {
+      outline:0;
+    }
   }
   span.items_counter {
     display: block;
@@ -356,11 +359,11 @@ a.article {
 }
 
 @media (min-width: 1024px) {
-  h2.title .title-arrow {
-    display: none;
-    margin-left: 10px;
-    vertical-align: middle;
-    font-size: 30px;
+  h2.title {
+    cursor: default;
+    .title-arrow {
+      display: none;
+    }
   }
 }
 
@@ -430,11 +433,18 @@ a.article {
 
   .main > .title {
     opacity: .5;
-    cursor: pointer;
     outline: none;
     .title-arrow {
+      margin-left: 10px;
+      font-size: 30px;
+      height: 40px;
+      padding-left: 1px;
+      vertical-align: middle;
       display: inline-block;
       transform: rotate(90.0deg);
+    }
+    &.popular-posts-title {
+      cursor: pointer;
     }
     &:hover {
       opacity: 1;

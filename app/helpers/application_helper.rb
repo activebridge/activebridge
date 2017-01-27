@@ -25,4 +25,8 @@ module ApplicationHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayified, MD_OPTIONS)
     markdown_to_html.render(text).html_safe
   end
+
+  def back_path
+    url_for(:back) + '#posts'
+  end
 end
