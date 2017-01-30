@@ -179,7 +179,7 @@ svg#main {
       stroke-dasharray: 1000;
       animation: light 1.5s infinite;
     }
-    &:hover {
+    &:hover, &:focus {
       transform: translateX(20px);
       transition-delay: 0s;
     }
