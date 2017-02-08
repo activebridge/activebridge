@@ -2,11 +2,14 @@ doctype 5
 html
   = render 'layouts/head', type: :blog, media: :all
   body
-    header.header
-      = link_to '', root_url, class: 'back-to-site'
-      = render 'social_icons', klass: :xl
-    .content
-      = render 'shared/blog/main_bar'
-      = yield
-    = render 'shared/blog/footer'
-    = javascript_include_tag 'blog', 'data-turbolinks-track' => true
+    = render 'shared/blog/header'
+    main.main
+      h2.title.popular-posts-title tabindex='-1'
+        | Popular posts
+        span.title-arrow ›
+      span.items_counter = pluralize(popular_articles.count, 'item')
+      .popular
+        = render partial: 'popular_article', collection: popular_articles, as: :popular_article
+      .yield
+        = yield
+    = javascript_include_tag 'blog'

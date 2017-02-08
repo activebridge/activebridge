@@ -2,7 +2,8 @@ FactoryGirl.define do
   factory :member do
     name 'Alex'
     position 'RoR Developer'
-    avatar ''
-    cartoon ''
+    avatar File.open(File.join(Rails.root, '/spec/fixtures/image.jpg'))
+    cartoon File.open(File.join(Rails.root, '/spec/fixtures/image.jpg'))
+    priority 1
   end
 end

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'Main', type: :feature do
   scenario 'Visit main page' do
     visit root_url
-    expect(page).to have_content('active-bridge')
+    expect(page).to have_content('Active Bridge')
   end
 
   scenario 'Visit about page' do

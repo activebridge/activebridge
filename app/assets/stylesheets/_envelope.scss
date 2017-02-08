@@ -1,9 +1,9 @@
 .envelope {
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 10%;
   max-width: 50px;
-  left: 0;
+  left: 0px;
   z-index: 10000;
   transition: transform 1.4s, top 1s, left 1s;
   transform: rotate(360deg) translate(-100%, -300%) scale(.1);
@@ -30,6 +30,8 @@
 
 .about .envelope {
   transform: rotate(23deg) translate(940%, 340%) scale(0.5);
+  top: -495px;
+  left: 392px;
 }
 
 .testimonials .envelope,

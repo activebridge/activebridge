@@ -16,13 +16,17 @@ module ApplicationHelper
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
       language ||= :plaintext
-      CodeRay.scan(code, language).div
+      CodeRay.scan(code, language).div(css: :class)
     end
   end
 
   def md(text)
-    coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
+    coderayified = CodeRayify.new(hard_wrap: true)
     markdown_to_html = Redcarpet::Markdown.new(coderayified, MD_OPTIONS)
     markdown_to_html.render(text).html_safe
+  end
+
+  def back_path
+    url_for(:back) + '#posts'
   end
 end

@@ -7,15 +7,14 @@
   meta property='og:updated_time' content=article.updated_at.to_i
   meta property='fb:app_id' content=639665256206886
 
-.article
-  .user-image
-    = image_tag article.member.avatar.url
-    .author-details
-      = article.member.name
-      p = article.created_at.strftime('%B %d, %Y')
-  article.post-body-show
-    h1.title = article.title
-    .main-body == md(article.body)
+.article-box
+  = link_to '➦', back_path, remote: true, class: 'back-link'
 
-  - unless article.pending?
-    = render 'disqus'
+  = image_tag article.member.avatar.url, class: 'author-info'
+  .post-info
+    h2.title = article.title
+    span.created_date = article.created_at.strftime('%B %d, %Y')
+  article.post-body-show
+    = md(article.body)
+    - unless article.pending?
+      = render 'disqus'

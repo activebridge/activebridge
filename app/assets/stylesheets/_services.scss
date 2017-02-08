@@ -5,25 +5,35 @@
   overflow-x: hidden;
   position: relative;
   color: $light-grey;
-  padding-top: 5rem;
-  padding-bottom: 0;
   .skills {
     white-space: nowrap;
-    padding: 0 10%;
+    margin: 0 10%;
+    height: 30vh;
     .skill {
-      width: 20%;
-      padding: 1% 2%;
+      width: 18%;
       display: inline-block;
       vertical-align: top;
       white-space: normal;
       svg {
-        min-width: 15vmin;
-        min-height: 15vmin;
+        max-height: 15vmin;
         max-height: 150px;
-        #tech-mask {
+        height: 22vmin;
+        width: 95%;
+        .tech-mask {
           fill: white;
         }
       }
+    }
+  }
+  &-content {
+    position: absolute;
+    width: 100%;
+    padding-top: 12vh;
+    height: 100vh;
+    > h3 {
+      margin: 0;
+      height: 10vh;
+      line-height: 10vh;
     }
   }
   &-background-svg {
@@ -37,7 +47,7 @@
     z-index: -1;
   }
   &-section {
-    min-height: 45vh;
+    min-height: 27vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -58,8 +68,6 @@
         font-weight: normal;
         display: inline;
       }
-
-
       &-title {
         background: $light-grey;
         position: relative;
@@ -97,23 +105,33 @@
       &-description {
         opacity: 0;
         position: relative;
-        height: 35vh;
+        height: 32vh;
         width: 100%;
-        top: -3px;
+        top: -4px;
         left: 0;
         bottom: 0;
         padding: 2%;
         z-index: 10;
         transition: .3s;
-        font-size: .8em;
         border-radius: 0 0 15px 15px;
-        line-height: 1em;
+        line-height: 1.15rem;
         text-align: justify;
         font-size: 1rem;
         overflow: auto;
         margin: 0;
-        h3 {
-          margin: 0;
+        text-indent: 2vw;
+        dt {
+          text-indent: 0;
+          color: #744a71;
+          line-height: 1.17rem;
+          font-size: 1.17rem;
+          padding: 11px 0 4px 0;
+        }
+        dt:first-child {
+          padding: 0 0 4px 0;
+        }
+        dd {
+          margin-left: 0px;
         }
       }
     }
@@ -125,10 +143,62 @@
         z-index: 100;
         h3 {
           color: $dark-violet;
+          padding-bottom: 7px;
+          text-indent: 0;
         }
       }
       .services-section-tab-title {
         background: $white;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .services {
+    .skills .skill {
+      font-size: 2.4vmin;
+    }
+    &-content {
+      > h3 {
+        font-size: 3vmin;
+      }
+    }
+    &-section {
+      &-tab {
+        &-title {
+          height: 8vmin;
+          line-height: 3.6vmin;
+          font-size: 3.6vmin;
+        }
+        &-description {
+          line-height: 2.6vmin;
+          font-size: 2.4vmin;
+          text-indent: 2vw;
+          dt {
+            text-indent: 0;
+            line-height: 3vmin;
+            font-size: 3vmin;
+            padding: .8vw 0 .3vw 0;
+          }
+          dt:first-child {
+            padding: 0 0 .3vw 0;
+          }
+          dd {
+            margin-left: 0px;
+          }
+        }
+      }
+      input:checked + .services-section-tab {
+        .services-section-tab-description {
+          text-indent: 2vw;
+          h3 {
+            padding: 0 0 .3vw 0;
+            line-height: 1.5vw;
+            font-size: 1.5vw;
+            text-indent: 0;
+          }
+        }
       }
     }
   }

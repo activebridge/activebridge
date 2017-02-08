@@ -65,9 +65,10 @@
       }
       .project {
         padding: 5%;
-        position: relative;
-        text-align: center;
+        position: absolute;
+        width: 100%;
         height: 100%;
+        text-align: center;
         overflow: hidden;
         overflow-y: auto;
         display: flex;
@@ -149,10 +150,10 @@
               fill: $violet;
             }
           }
-          &#left {
+          &.left {
             left: 0%;
           }
-          &#right {
+          &.right {
             right: 0%;
           }
         }
@@ -190,6 +191,7 @@
       position: fixed;
 
       .project {
+        z-index: 999;
         overflow-y: visible;
         display: block;
         .content-widen {
@@ -214,6 +216,13 @@
   }
 }
 
+.project-open {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 label[for=reset] {
   position: absolute;
   top: -50px;
@@ -226,4 +235,11 @@ label[for=reset] {
 input[type=radio] {
   opacity: 0;
   z-index: -1;
+}
+
+input[type=radio]:checked + div + .project-wrapper > .content {
+  position: initial !important;
+  img {
+    top: 0% !important;
+  }
 }

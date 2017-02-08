@@ -1,19 +1,18 @@
-div itemscope="" itemtype="http://schema.org/Product" /
 h1.services-title= t('portfolio.title')
 .content.projects
-  .content-wrapper data-step=1 data-tf=0
+  .content-wrapper
     input#reset name='active-section' tabindex='-1' type='radio' autofocus=true
     label for='reset'
     - @projects.each_with_index do |project, i|
-
-      input id="project-#{project.id}" type='radio' name='active-section'
-      .background-wrapper style="background-image: url(#{project.image.url})"
-      section.project-wrapper.about style="left: #{100/@projects.size*(i+1)}%; margin-left: -#{100/@projects.size}%;"
-        label.project-open for="project-#{project.id}"
+      div itemscope="" itemtype="http://schema.org/Product"
+        input id="project-#{project.id}" type='radio' name='active-section'
+        .background-wrapper style="background-image: url(#{project.image.url})"
+        .project-wrapper.about style="left: #{100/@projects.size*(i+1)}%; margin-left: -#{100/@projects.size}%;"
           .content.project
-            = image_tag(project.logo.url(:logo), style: "top: #{cycle(35, 45, 55, 45)}%")
-            .project-description
-              = project.description
+            = image_tag(project.logo.url(:logo), style: "top: #{cycle(35, 45, 55, 45)}%", itemprop: 'logo')
+            div
+              .project-description itemprop='description'
+                = project.description
             .project-info
               - t('portfolio.project_info').each do |key, value|
                 .info-section
@@ -22,9 +21,10 @@ h1.services-title= t('portfolio.title')
             .project-link.text-center= link_to project.link, target: '_blank', class: 'view-project' do
               | View Project
               i.icon.icon-arrow-right
+          label.project-open for="project-#{project.id}"
 
-        .arrows
-          label for="project-#{@projects[i-1]&.id}"
-            i.arrow#left= svg('chevron-left', :xl)
-          label for="project-#{@projects[i+1 == @projects.size ? 0 : i+1]&.id}"
-            i.arrow#right= svg('chevron-right', :xl)
+          .arrows
+            label for="project-#{@projects[i-1]&.id}"
+              i.arrow.left= svg('chevron-left', :xl)
+            label for="project-#{@projects[i+1 == @projects.size ? 0 : i+1]&.id}"
+              i.arrow.right= svg('chevron-right', :xl)

@@ -8,7 +8,7 @@ Rails.application.config.assets.precompile += %w(
   mobile.js
   mobile.css
   fonts.css
-  sw.js
+  serviceworker.js
 )
 
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
