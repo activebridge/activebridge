@@ -10,7 +10,7 @@ div itemscope="" itemtype="http://schema.org/Thing"
             = svg("skills/#{skill[:id]}")
             .skill-title= skill[:name]
       .services-section
-        input#agile_programming type='radio' hidden=true name='active-tab' checked=true
+        input#agile_programming type='radio' name='active-tab' checked=true autofocus='true'
         .services-section-tab.text-left
           h2.services-section-tab-title
             label for='agile_programming'= t('services.agile_programming')
@@ -22,14 +22,14 @@ div itemscope="" itemtype="http://schema.org/Thing"
             dt== t('services.free_review.title')
             dd== t('services.free_review.desc')
 
-        input#maintenance type='radio' hidden=true name='active-tab'
+        input#maintenance type='radio' name='active-tab'
         .services-section-tab.text-center
           h3.services-section-tab-title
             label for='maintenance'
               = t('services.maintenance_and_support')
           div itemprop='description' class= 'services-section-tab-description text-center'
             == t('services.code_audit')
-        input#outstaffing type='radio' hidden=true name='active-tab'
+        input#outstaffing type='radio' name='active-tab'
         .services-section-tab.text-right
           h3.services-section-tab-title
             label for='outstaffing'= t('services.outstaffing')
