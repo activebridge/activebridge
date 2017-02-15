@@ -6,7 +6,7 @@ RSpec.feature 'Articles page', type: :feature do
 
   before(:each) { change_host 'blog.lvh.me:3000' }
 
-  after(:each) { change_host 'localhost:3000' }
+  after(:each) { Capybara.app_host = nil }
 
   scenario do
     visit root_path
