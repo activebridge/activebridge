@@ -8,7 +8,7 @@ class Article < ActiveRecord::Base
   validates :title, :body, :category, :picture, presence: true
   validates :body, length: { minimum: 100 }
 
-  scope :by_category, ->(slug) { slug ? where('category = ?', slug) : without_team_life }
+  scope :by_category, ->(slug) { slug ? where('category = ?', slug) : without('team-life') }
   scope :blog, lambda { |category, page|
     done
       .includes(:member)
@@ -16,8 +16,8 @@ class Article < ActiveRecord::Base
       .page(page)
       .order(created_at: :desc)
   }
-  scope :popular, -> { done.without_team_life.order(viewed: :desc) }
-  scope :without_team_life, -> { where.not(category: categories['team-life']) }
+  scope :popular, -> { without('team-life').done.order(viewed: :desc) }
+  scope :without, ->(category) { where.not(category: categories[category]) }
 
   extend FriendlyId
   friendly_id :title, use: :slugged
