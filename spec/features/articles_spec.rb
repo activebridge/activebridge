@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Articles page', type: :feature do
-  let(:member) { create(:member) }
-  let!(:article) { create(:article, member: member) }
+  let!(:ror_development_article) { create(:article, title: 'ror-development-article', category: 'ror-development') }
+  let!(:team_life_article) { create(:article, title: 'team-life-article', category: 'team-life') }
 
   before(:each) { change_host 'blog.lvh.me:3000' }
 
@@ -15,6 +15,12 @@ RSpec.feature 'Articles page', type: :feature do
     expect(page).to have_content('All Posts')
     expect(page).to have_content('1 item')
     expect(page).to have_content('Alex')
-    expect(page).to have_content('Random title')
+    expect(page).to have_content(ror_development_article.title)
+    expect(page).to_not have_content(team_life_article.title)
+  end
+
+  scenario do
+    visit category_articles_path(category: 'team-life')
+    expect(page).to have_content(team_life_article.title)
   end
 end

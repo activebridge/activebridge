@@ -1,9 +1,11 @@
 FactoryGirl.define do
+  sequence(:priority) { |n| n }
+
   factory :member do
     name 'Alex'
     position 'RoR Developer'
     avatar File.open(File.join(Rails.root, '/spec/fixtures/image.jpg'))
     cartoon File.open(File.join(Rails.root, '/spec/fixtures/image.jpg'))
-    priority 1
+    priority
   end
 end

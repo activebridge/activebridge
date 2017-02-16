@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
   helper_method :article
 
   def popular_articles
-    @popular_articles ||= Article.done.includes(:member).order(viewed: :desc).first(3)
+    @popular_articles ||= Article.popular.includes(:member).first(3)
   end
   helper_method :popular_articles
 end
