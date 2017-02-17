@@ -1,4 +1,4 @@
-= link_to article_path(article), style: "background-image: url(#{article.picture_url})", class: 'article', remote: true do
+= link_to article_path(article, anchor: 'post'), style: "background-image: url(#{article.picture_url})", class: 'article', remote: true do
   .article-rollover
     .meta
       = image_tag article.member.avatar.url, class: 'author-avatar'
