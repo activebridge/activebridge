@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   layout 'blog'
-  caches_action :index, cache_path: proc { "#{params[:category]}#{articles.first&.cache_key}" }
+  caches_action :index, cache_path: proc { "#{params[:category] || 'all'}-#{articles.first&.cache_key}" }
   caches_action :show, cache_path: proc { article.cache_key }
   respond_to :js
 
