@@ -25,10 +25,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #4c4b54;
-  background-image: -webkit-gradient(linear, 14.6% -8.4%, 85.4% 108.4%,color-stop(0, rgb(58, 56, 64)),color-stop(0.46, rgb(96, 95, 105)),color-stop(1, rgb(53, 53, 63)));
-  background-image: -webkit-repeating-linear-gradient(290deg,rgb(58, 56, 64) 0%,rgb(96, 95, 105) 46%,rgb(53, 53, 63) 100%);
   background-image: repeating-linear-gradient(160deg,rgb(58, 56, 64) 0%,rgb(96, 95, 105) 46%,rgb(53, 53, 63) 100%);
-  background-image: -ms-repeating-linear-gradient(290deg,rgb(58, 56, 64) 0%,rgb(96, 95, 105) 46%,rgb(53, 53, 63) 100%);
 }
 
 svg#main {
