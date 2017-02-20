@@ -22,9 +22,10 @@ $y: 500%;
 
 body {
   overflow: hidden;
-  background: #744A71;
   padding: 0;
   margin: 0;
+  background-color: #4c4b54;
+  background-image: repeating-linear-gradient(160deg,rgb(58, 56, 64) 0%,rgb(96, 95, 105) 46%,rgb(53, 53, 63) 100%);
 }
 
 svg#main {
