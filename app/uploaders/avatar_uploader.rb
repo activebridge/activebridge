@@ -1,8 +1,10 @@
 class AvatarUploader < CarrierWave::Uploader::Base
+  include CarrierWave::TinyPNG
   include Cloudinary::CarrierWave
 
   process tags: [:avatar]
-  process convert: :jpg
+  process convert: :png
+  process :tinypng
   process resize_to_fill: [200, 200, :face]
 
   version :mask do

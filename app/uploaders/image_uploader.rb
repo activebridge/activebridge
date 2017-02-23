@@ -1,5 +1,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::TinyPNG
   include Cloudinary::CarrierWave
+
+  process convert: :png
+  process :tinypng
 
   version :mask do
     process convert: :png
