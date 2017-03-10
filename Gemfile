@@ -26,6 +26,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'serviceworker-rails'
 gem 'sitemap_generator'
 gem 'slim-rails'
+gem 'tinify'
 gem 'turbolinks'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'uglifier'

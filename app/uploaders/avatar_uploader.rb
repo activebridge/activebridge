@@ -1,6 +1,4 @@
-class AvatarUploader < CarrierWave::Uploader::Base
-  include Cloudinary::CarrierWave
-
+class AvatarUploader < BaseUploader
   process tags: [:avatar]
   process convert: :jpg
   process resize_to_fill: [200, 200, :face]
@@ -18,9 +16,5 @@ class AvatarUploader < CarrierWave::Uploader::Base
   version :mask_down do
     process convert: :png
     cloudinary_transformation transformation: :hexagon_down
-  end
-
-  def extension_white_list
-    %w(jpg jpeg gif png)
   end
 end
