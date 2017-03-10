@@ -2,7 +2,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::TinyPNG
   include Cloudinary::CarrierWave
 
-  process :tinypng
+  before :cache, :tinify
 
   version :mask do
     process convert: :png
@@ -26,5 +26,13 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def extension_white_list
     %w(jpg jpeg gif png)
+  end
+
+  private
+
+  def tinify(_file)
+    Tinify.key = CarrierWave::TinyPNG.configuration.key
+    source = Tinify.from_file(current_path)
+    source.to_file(current_path)
   end
 end

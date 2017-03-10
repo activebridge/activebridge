@@ -157,6 +157,7 @@ GEM
       activesupport (>= 4.1, < 5.1)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httpclient (2.8.3)
     i18n (0.7.0)
     inline_svg (0.11.1)
       activesupport (>= 4.0)
@@ -339,6 +340,8 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    tinify (1.5.0)
+      httpclient (~> 2.6)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -401,6 +404,7 @@ DEPENDENCIES
   slim-rails
   spring
   thin
+  tinify
   turbolinks
   tzinfo-data
   uglifier
