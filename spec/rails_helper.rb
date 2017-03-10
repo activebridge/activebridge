@@ -42,4 +42,8 @@ RSpec.configure do |config|
       FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/uploads"])
     end
   end
+
+  config.before(:each) do
+    allow_any_instance_of(BaseUploader).to receive(:tinify).and_return(nil)
+  end
 end

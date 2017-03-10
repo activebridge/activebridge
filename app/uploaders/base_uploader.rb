@@ -10,7 +10,6 @@ class BaseUploader < CarrierWave::Uploader::Base
   private
 
   def tinify(_file)
-    Tinify.key = ENV['tinypng_key']
     source = Tinify.from_file(current_path)
     source.to_file(current_path)
   end
