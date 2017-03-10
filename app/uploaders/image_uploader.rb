@@ -1,9 +1,4 @@
-class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::TinyPNG
-  include Cloudinary::CarrierWave
-
-  before :cache, :tinify
-
+class ImageUploader < BaseUploader
   version :mask do
     process convert: :png
     cloudinary_transformation transformation: :hexagon_center
