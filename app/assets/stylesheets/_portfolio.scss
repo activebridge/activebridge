@@ -96,7 +96,7 @@
       }
       .project-description {
         padding: 3% 1%;
-        font-size: .9em;
+        font-size: 1.3em;
         background: rgba(255, 255, 255, 0.6);
         border-radius: 10px;
         margin: 10px 0;
@@ -111,10 +111,22 @@
         border-radius: 10px;
         padding: 12px;
         box-sizing: border-box;
+
         .info-section {
           display: inline-block;
           width: 20%;
         }
+
+        .item-title {
+          text-transform: uppercase;
+          color: grey;
+        }
+
+        .item-description {
+          text-shadow: 0px 0 0 #333;
+          font-size: 1.2em
+        }
+
       }
       a.view-project {
         padding: 10px 15px;
@@ -194,6 +206,8 @@
         z-index: 999;
         overflow-y: visible;
         display: block;
+        height: auto;
+
         .content-widen {
           position: relative;
           transition: .5s;
