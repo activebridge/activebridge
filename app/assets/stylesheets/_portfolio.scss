@@ -206,6 +206,8 @@
         z-index: 999;
         overflow-y: visible;
         display: block;
+        height: auto;
+
         .content-widen {
           position: relative;
           transition: .5s;
