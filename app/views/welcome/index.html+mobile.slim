@@ -1,12 +1,15 @@
 section#home
-  = inline_svg 'mobile/icons/main-logo.svg', class: :logo
-  h1
-    | Active
-    mark
-      | ::
-    | Bridge
-  p= t('hello')
-  = render 'social_icons'
+  .home
+    = inline_svg 'mobile/icons/main-logo.svg', class: :logo
+    h1
+      | Active
+      mark
+        | ::
+      | Bridge
+    p= t('hello')
+    = render 'social_icons'
+    .swipe-prompt-container
+        = image_tag 'icons/hand-pointer-o', class: 'swipe-prompt'
 section#about= render 'about'
 section#services= render 'services'
 section#contact= render 'contact'

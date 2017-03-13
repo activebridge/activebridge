@@ -336,3 +336,39 @@ nav svg {
     height: 500px;
   }
 }
+
+.swipe-prompt-container {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 10px
+}
+
+.swipe-prompt {
+  animation:swipe-side 2s ease-in-out infinite;
+  color:#000;
+  font-size:40px;
+  height:40px;
+  left:calc(50% - 50px);
+  opacity:.6;
+  position:relative;
+  top:calc(50% - 50px);
+  transform-origin:bottom;
+  width:75px;
+}
+
+@keyframes swipe-side {
+  0% { transform: translate(100%) rotate(0deg); }
+  70% { opacity: 1; transform: translate(-100%) rotate(-10deg); }
+  100% { transform: translate(100%) rotate(0deg); }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+
+  p { margin: 0; }
+}
