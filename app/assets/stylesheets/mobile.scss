@@ -131,6 +131,14 @@ section {
     padding-bottom: 0;
   }
 
+  #testimonials .testimonial .testimonial-body {
+    max-height: 100vh;
+    margin-bottom: 40px;
+    q {
+      margin-top: 13vw;
+    }
+  }
+
   .logo {
     max-height: 30vh;
     margin-top: 10px;
@@ -301,10 +309,12 @@ ul {
   .testimonial-project-logo {
     width: 25vw;
     height: 25vw;
+    max-width: 120px;
+    max-height: 120px;
     object-fit: cover;
     top: -8vw;
     left: 50%;
-    margin-left: -12.5vw;
+    transform: translateX(-50%);
     border-radius: 50%;
     position: absolute;
     display: block;
