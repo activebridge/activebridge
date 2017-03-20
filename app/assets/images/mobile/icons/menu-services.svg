@@ -14,9 +14,7 @@
                         <use id="menu-services-mask" stroke="#A6A6A6" stroke-width="2" xlink:href="#nav-path-2"></use>
                         <path d="M9.20083213,-1.27310595 L15.746221,11.426812 L-4.08493134,11.426812 L9.20083213,-1.27310595 Z" id="menu-services-path-4" stroke="#A6A6A6" stroke-width="2" mask="url(#nav-mask-2)"></path>
                         <path d="M48.2992085,-1.27310595 L41.7538196,11.426812 L61.5849719,11.426812 L48.2992085,-1.27310595 L48.2992085,-1.27310595 Z" id="menu-services-path-3" stroke="#A6A6A6" stroke-width="2" mask="url(#nav-mask-2)"></path>
-                        <rect id="menu-services-rectangle-1" stroke="#A6A6A6" stroke-width="2" opacity="0.1" mask="url(#nav-mask-2)" x="-3.54736701" y="11.0545574" width="66.390867" height="33.4332008"></rect>
                         <path d="M15.7713683,11.3697992 L28.9420885,42.9420052 L41.6613556,11.3697992 L15.7713683,11.3697992 Z" id="menu-services-path-2" stroke="#A6A6A6" stroke-width="2" mask="url(#nav-mask-2)"></path>
-                        <path d="M61.4174307,11.3509339 L42.6829696,11.3509339 L29.796363,43.3858306 L61.4174307,11.3509339 Z" id="menu-services-path-1" stroke="#A6A6A6" stroke-width="2" mask="url(#nav-mask-2)"></path>
                         <polygon id="menu-services-triangle-1" stroke="#A6A6A6" stroke-width="2" mask="url(#nav-mask-2)" points="28.7658569 1.01811217 41.5552073 11.2220554 15.6229562 11.2220554 "></polygon>
                     </g>
                 </g>
