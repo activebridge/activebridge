@@ -1,5 +1,5 @@
 var startX = startY = endX = endY = swipeX = swipeY = page = 0,
-  pages = ['home', 'about', 'services', 'contact'],
+  pages = ['home', 'about', 'services', 'testimonials', 'contact'],
   slider = document.getElementById('pages'),
   bg = document.getElementById('bg'),
   horizontal,
@@ -35,8 +35,8 @@ slider.addEventListener('touchend', function(event) {
       page -= 1;
     }
   }
-  if (page > 3) page = 0;
-  if (page < 0) page = 3;
+  if (page > pages.length - 1) page = 0;
+  if (page < 0) page = pages.length - 1;
   swipeX = 100 * page;
   swipeEndX = swipeX
   horizontal = null;
