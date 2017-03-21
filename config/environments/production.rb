@@ -4,7 +4,7 @@ Rails.application.configure do
   config.consider_all_requests_local                =  false
   config.action_controller.perform_caching          =  true
   config.cache_store                                =  :memory_store, { size: 24.megabytes }
-  config.serve_static_files                         =  false
+  config.public_file_server.enabled                 =  false
   config.assets.js_compressor                       =  :uglifier
   config.assets.compile                             =  false
   config.assets.digest                              =  true
