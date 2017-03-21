@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Main', type: :feature do
+  let!(:member) { create(:member) }
+
   scenario 'Visit main page' do
     visit root_url
     expect(page).to have_content('Active Bridge')
