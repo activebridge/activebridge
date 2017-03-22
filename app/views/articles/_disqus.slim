@@ -1,15 +1,15 @@
 #disqus_thread
 javascript:
-    var disqus_config = function () {
-    this.page.url = '#{url_for(article)}';
+  var disqus_config = function () {
+    this.page.url = '#{request.original_url}';
     this.page.identifier = '#{article.id}';
-    };
+  };
 
-    (function() {
+  (function() {
     var d = document, s = d.createElement('script');
 
     s.src = '//active-bridge.disqus.com/embed.js';
-
     s.setAttribute('data-timestamp', +new Date());
+
     (d.head || d.body).appendChild(s);
-    })();
+  })();
