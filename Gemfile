@@ -21,6 +21,7 @@ gem 'pg'
 gem 'rails', '5.0.1'
 gem 'redcarpet'
 gem 'roadie-rails'
+gem 'rollbar'
 gem 'rubocop', require: false
 gem 'sass-rails', '~> 5.0'
 gem 'serviceworker-rails'
