@@ -5,13 +5,7 @@ Rollbar.configure do |config|
   config.access_token = 'd4e1faf9b4284a1285857df19c282350'
 
   # Here we'll disable in 'test':
-  if Rails.env.test?
-    config.enabled = false
-  end
-
-  if Rails.env.development?
-    config.enabled = false
-  end
+  config.enabled = Rails.env.production?
 
   # By default, Rollbar will try to call the `current_user` controller method
   # to fetch the logged-in user object, and then call that object's `id`,
@@ -59,7 +53,7 @@ Rollbar.configure do |config|
   # https://devcenter.heroku.com/articles/deploying-to-a-custom-rails-environment
   config.environment = ENV['ROLLBAR_ENV'] || Rails.env
 
-  config.js_enabled = true
+  config.js_enabled = Rails.env.production?
   config.js_options = {
     accessToken: '2d20431b6c7547d086448d41ac794e9e',
     captureUncaught: true,
