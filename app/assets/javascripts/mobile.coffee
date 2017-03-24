@@ -15,7 +15,8 @@ navigate = (e) ->
   navigator.vibrate(70)
 
 @nav = (i) ->
-  document.querySelector('a.active').className = ''
+  link = document.querySelector('nav a.active')
+  link && link.className = ''
   document.querySelectorAll('nav a')[i].className = 'active'
 
 
@@ -29,4 +30,5 @@ document.getElementById('pages').setAttribute('data-page', location.pathname.spl
 #Service Worker
 navigator.serviceWorker.register('/serviceworker.js', { scope: './' }) if (navigator.serviceWorker)
 
-document.querySelector("a[href='" + location.pathname + "']").setAttribute('class', 'active')
+link = document.querySelector("nav a[href='#{location.pathname}']")
+link && link.className = 'active'
