@@ -1,5 +1,5 @@
 var pages = ['/', '/about', '/services', '/testimonials', '/contact'],
-  startX = startY = endX = endY = swipeX = swipeY = page = pages.indexOf(location.pathname),
+  startX = startY = endX = endY = swipeX = swipeY = page = Math.max(0, pages.indexOf(location.pathname)),
   slider = document.getElementById('pages'),
   bg = document.getElementById('bg'),
   horizontal,
