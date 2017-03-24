@@ -2,6 +2,7 @@
 #= require _swipe
 
 [].forEach.call document.querySelectorAll('nav a'), (a) ->
+  a.className = ''
   a.addEventListener('click', (e) -> navigate(e))
 
 navigate = (e) ->
@@ -27,3 +28,5 @@ document.getElementById('pages').setAttribute('data-page', location.pathname.spl
 
 #Service Worker
 navigator.serviceWorker.register('/serviceworker.js', { scope: './' }) if (navigator.serviceWorker)
+
+document.querySelector("a[href='" + location.pathname + "']").setAttribute('class', 'active')
