@@ -8,9 +8,9 @@ html lang='en'
     = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
     main#pages= yield
     nav#nav
-      a.active href='home'= inline_svg('mobile/icons/menu-home.svg')
-      a href='about'= inline_svg('mobile/icons/menu-about.svg')
-      a href='services'= inline_svg('mobile/icons/menu-services.svg')
-      a href='testimonials'= inline_svg('mobile/icons/menu-testimonials.svg')
-      a href='contact'= inline_svg('mobile/icons/menu-contacts.svg')
+      a title='home' href='/'= inline_svg('mobile/icons/menu-home.svg')
+      a title='about' href='/about'= inline_svg('mobile/icons/menu-about.svg')
+      a title='services' href='/services'= inline_svg('mobile/icons/menu-services.svg')
+      a title='testimonials' href='/testimonials'= inline_svg('mobile/icons/menu-testimonials.svg')
+      a title='contact' href='/contact'= inline_svg('mobile/icons/menu-contacts.svg')
     = javascript_include_tag :mobile, async: true
