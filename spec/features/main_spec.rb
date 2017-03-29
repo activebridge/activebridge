@@ -38,11 +38,11 @@ RSpec.feature 'Main', type: :feature do
     find('#team', visible: false).trigger :click
     expect(page).to have_content('Active Bridge')
     find('#about', visible: false).trigger :click
-    expect(page).to have_content('TESTIMONIALS')
+    expect(page).to have_content('Active Bridge - ruby on rails agency')
     find('#services', visible: false).trigger :click
     expect(page).to have_content('SERVICES')
     find('#testimonials', visible: false).trigger :click
-    expect(page).to have_content('TEAM')
+    expect(page).to have_content('TESTIMONIALS')
     find('#portfolio', visible: false).trigger :click
     expect(page).to have_content('PORTFOLIO')
     find('#contact', visible: false).trigger :click

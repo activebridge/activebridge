@@ -174,7 +174,7 @@ svg#main-svg {
   }
 }
 
-#team {
+#team-cont {
   #shot-button,
   #upper-shot-button,
   #objectglass-shadow,
@@ -217,7 +217,7 @@ svg#main-svg {
   }
 }
 
-#services {
+#services-cont {
   transition: transform .3s;
   &:hover {
     transform: translate(10px, 5px);
