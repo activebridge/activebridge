@@ -6,26 +6,27 @@
 
 doctype 5
 html lang='en'
-  meta property='og:url'    content='https://active-bridge.com/'
-  meta property='og:title'  content='Active Bridge - web development agency'
-  meta property='og:description' content='Active Bridge  is a dedicated Ruby on Rails development team, focused on full project service for building high quality custom web application'
-  meta property='og:image'  content='https://imgur.com/VObMwOF'
-  = render 'layouts/head', type: :application, media: :all
-  body onload='animate()' class="#{params[:page]}"
+  meta property='og:url'         content='https://active-bridge.com/'
+  meta property='og:title'       content='Active Bridge - web development agency'
+  meta property='og:description' content='Active Bridge is a dedicated Ruby on Rails development team, focused on full project service for building high quality custom web application'
+  meta property='og:image'  content='https://i.imgur.com/VObMwOF.jpg'
 
-    input#ab type='checkbox' hidden=true
-    .ab-wrapper
-      label.ab for='ab'
-        = inline_svg 'ActiveBridge.svg'
-    = render 'layouts/main.svg'
-    .social-icons.left
-      - %w[blog facebook github linkedin google].each_with_index do |icon, i|
-        = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do
-          = svg("social/#{icon}")
-    .social-icons.top
-      - %w[linkedin pinterest twitter youtube].each_with_index do |icon, i|
-        = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do
-          = svg("social/#{icon}")
+  = render 'layouts/head', type: :application, media: :all
+
+  body class="#{params[:page]}"
+    /* input#ab type='checkbox' hidden=true */
+    /* .ab-wrapper */
+    /*   label.ab for='ab' */
+    /*     = inline_svg 'ActiveBridge.svg' */
+    = render 'layouts/main_v2.svg'
+    /* .social-icons.left */
+    /*   - %w[blog facebook github linkedin google].each_with_index do |icon, i| */
+    /*     = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do */
+    /*       = svg("social/#{icon}") */
+    /* .social-icons.top */
+    /*   - %w[linkedin pinterest twitter youtube].each_with_index do |icon, i| */
+    /*     = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do */
+    /*       = svg("social/#{icon}") */
     = link_to page_path(:contact), class: :envelope, id: :contactus do
       = image_tag 'icons/envelope.svg'
       span SEND REQUEST
