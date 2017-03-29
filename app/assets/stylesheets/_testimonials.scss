@@ -125,10 +125,10 @@
         }
         svg path {
           transition: .3s;
-          fill: $light-violet;
+          fill: white;
         }
         &:hover svg path {
-          fill: $gray;
+          fill: darken(white, 30%);
         }
       }
     }
@@ -262,6 +262,12 @@
           }
           &#right {
             right: 1%;
+          }
+          svg path {
+            fill: $dark-violet;
+          }
+          &:hover svg path {
+            fill: lighten($dark-violet, 10%);
           }
         }
       }

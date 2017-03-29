@@ -14,25 +14,15 @@ html lang='en'
   = render 'layouts/head', type: :application, media: :all
 
   body class="#{params[:page]}"
-    /* input#ab type='checkbox' hidden=true */
-    /* .ab-wrapper */
-    /*   label.ab for='ab' */
-    /*     = inline_svg 'ActiveBridge.svg' */
     = render 'layouts/main_v2.svg'
-    /* .social-icons.left */
-    /*   - %w[blog facebook github linkedin google].each_with_index do |icon, i| */
-    /*     = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do */
-    /*       = svg("social/#{icon}") */
-    /* .social-icons.top */
-    /*   - %w[linkedin pinterest twitter youtube].each_with_index do |icon, i| */
-    /*     = link_to I18n.t("social.#{icon}"), class: "position-#{i}", target: :blank do */
-    /*       = svg("social/#{icon}") */
+
     = link_to page_path(:contact), class: :envelope, id: :contactus do
       = image_tag 'icons/envelope.svg'
       span SEND REQUEST
 
     = render_lazybox
     = javascript_include_tag 'application', async: false
+
     h1 Active Bridge - web development agency
     | That has deal with
     h2 Ruby on Rails website development technology
@@ -45,3 +35,17 @@ html lang='en'
     | \.
     h4> Outsource web development services
     | \.
+
+    pre
+     | Active Bridge is a web application development agency, doing an outsource web development services.
+      We have a great work experiance in a variety of industries with web development agencies in the USA espessialy Chicago, San Francisco, California.
+      Active Bridge is leading web development company in Ukraine.
+      Custom web application development and website development services for small business are our main business priorities.
+      We are RoR development company.
+      Website built using Ruby on Rails are more faster, productive and easy implemented.
+      Furthemore, Active Bridge team implement agile web development with Ruby on Rails and Ruby on Rails mobile development technology.
+      We're operating as outcource web development company and have a great pool of dedicated Ruby on Rails developers to hire.
+      Active Bridge follows the SCRUM methodology and Agile practice. We contribute to the Rails framework.
+      Also, we speak at Ruby developer events and share our experience with RoR community.
+      Our team bridge your ideas with life.
+      If you need turnkey development team or experienced RoR dev, you are welcome.
