@@ -24,15 +24,36 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  background-color: #4c4b54;
-  background-image: repeating-linear-gradient(160deg,rgb(58, 56, 64) 0%,rgb(96, 95, 105) 46%,rgb(53, 53, 63) 100%);
+  // background: -moz-linear-gradient(-45deg, #5e2c77 0%, #884faf 50%, #623578 100%, #5e2c77 100%);
+  // background: -webkit-linear-gradient(-45deg, #5e2c77 0%,#884faf 50%,#623578 100%,#5e2c77 100%);
+  // background: linear-gradient(135deg, #5e2c77 0%,#884faf 50%,#623578 100%,#5e2c77 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e2c77', endColorstr='#5e2c77',GradientType=1 );
+  background: asset-url('wall.svg') center #5e2c77;
+  background-size: cover;
+
+  svg a[id] {
+    transition: opacity .2s, transform .2s;
+    transform: scale(1);
+    transform-origin: bottom left;
+    opacity: 1;
+  }
+
+  $pages: ('contact', 'portfolio', 'testimonials', 'about', 'services', 'team', 'contactus');
+  $selector: ();
+
+  @each $item in $pages {
+    $selector: append($selector, unquote('&.#{$item} svg a##{$item}'), 'comma');
+  }
+
+  #{$selector} {
+    transform: scale(.7);
+    opacity: 0;
+  }
 }
 
-svg#main {
+svg#main-svg {
   width: 100%;
   height: 100vh;
-  transform-origin: 80% 70%;
-  transition: opacity 1s .5s;
   a {
     outline: none;
   }
@@ -43,176 +64,6 @@ svg#main {
   transition: opacity .2s ease;
   &:hover {
     opacity: .8;
-  }
-}
-
-.object {
-  visibility: hidden;
-}
-
-#about {
-  transform: translate(-$x, $y);
-  transition: transform .5s, visibility .3s;
-  transition-delay: .3s;
-  transform-origin: 50% 60%;
-  #testimonials_tooltip {
-    -webkit-transform-origin: 50% 60%;
-    visibility: hidden;
-    transform: translateX(30%) translateY(30%) scale(0);
-    transition: .2s;
-    box-shadow: 0px 0px 10px 3px rgba(black, .5);
-  }
-  &:hover, &:focus {
-    #testimonials_tooltip {
-      visibility: visible;
-      transform: translateX(0) translateY(0) scale(1);
-    }
-  }
-}
-
-#testimonials {
-  transform: translate(0%, $y);
-  transition: transform .5s, visibility .5s;
-  path.photo-button {
-    opacity: 1;
-    transition-delay: 0;
-    transform: all .3s ease;
-  }
-  ellipse#camera-button {
-    transition: transform .3s;
-    transform: translateY(0px);
-  }
-  &:hover, &:focus {
-    path.photo-button {
-      opacity: 0;
-      height: 0;
-      transform: all .3s ease;
-      transition-delay: .15s;
-    }
-    ellipse#camera-button {
-      transform: translateY(6px);
-    }
-  }
-}
-
-#title, #title-logo {
-  opacity: 0;
-  transition: opacity .1s;
-}
-
-#team {
-  transform: translate(50%, -50%) scale(0);
-  transition: transform .5s, visibility .5s;
-  transform-origin: 50%;
-  opacity: 0;
-  #apples-MacBook-Pro-2 {
-    transform: translateY(10px) skewY(29deg);
-    visibility: hidden;
-  }
-  @keyframes logs {
-    from { transform: translateY(50px) skewY(29deg) } to { transform: translateY(-350px) skewY(29deg) }
-  }
-}
-
-#services {
-  transform: scale(0);
-  transition: transform .3s, visibility .3s;
-  transform-origin: 50%;
-  transition-delay: .2s;
-}
-
-#portfolio {
-  transform: translate(-$x, $y);
-  transition: transform 1s, visibility 1s;
-  transform-origin: 100% 80%;
-  transition-delay: .2s;
-  opacity: 0;
-}
-
-#contact {
-  transform: translate(0%, -$y);
-  visibility: hidden;
-  transition: transform .3s, visibility .3s;
-  transform-origin: 50% 60%;
-  transition-delay: .2s;
-}
-
-#ab:checked ~ #main {
-  opacity: 1;
-  transition: opacity 1s;
-
-  .object {
-    visibility: visible;
-  }
-
-  #title, #title-logo {
-    opacity: 1;
-    transition: opacity 1s;
-    transition-delay: 1s;
-  }
-
-  #team {
-    transform: translate(0%, 0%) scale(1);
-    transition-delay: .5s;
-    opacity: 1;
-    #screen-background {
-      transition: fill .3s ease;
-    }
-    &:hover, &:focus {
-      #title-container {
-        opacity: 0;
-      }
-      #screen-background {
-        fill: black;
-      }
-      #apples-MacBook-Pro-2 {
-        visibility: visible;
-        animation: logs 2s steps(10, start) 0s infinite normal;
-      }
-    }
-  }
-
-  #services {
-    transform: scale(1);
-    &-frame {
-      stroke: $light-violet;
-      stroke-width: 2px;
-      stroke-dasharray: 1000;
-      animation: light 1.5s infinite;
-    }
-    &:hover, &:focus {
-      transform: translateX(20px);
-      transition-delay: 0s;
-    }
-  }
-
-  #portfolio {
-    transform: translate(0%, 0%);
-    transition: transform .5s, visibility .1s;;
-    transition-delay: 0s;
-    opacity: 1;
-    &:hover, &:focus {
-      transform: translate(-4%, 3%);
-    }
-  }
-
-  #about {
-    transition: transform .5s, visibility .1s;
-    transform: translate(0%, 0%);
-  }
-
-  #testimonials {
-    transform: translate(0%, 0%);
-    transition-delay: .5s;
-  }
-
-  #contact {
-    transform: translate(0%, 0%);
-    visibility: visible;
-    &:hover, &:focus {
-      transition-delay: 0s;
-      transform: scale(1.1);
-    }
   }
 }
 
@@ -233,54 +84,185 @@ svg#main {
 }
 
 #lazy_overlay {
-  background: $dark-violet;
+  background: rgba(133, 77, 171, 0.8);
 }
 
-.portfolio #portfolio {
-  transform: scale(30);
-}
+// -- main animations --
 
-.ab-wrapper {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  pointer-events: none;
-
-  .ab {
-    pointer-events: all;
-    position: relative;
-    opacity: .9;
-    max-width: 80%;
+#screen-cont {
+  #title-logo path {
+    transition: opacity .2s, transform .2s;
   }
-}
-
-.ab, #ab {
-  transition: 1s;
-  z-index: 10;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-#ab {
-  position: absolute;
-}
-
-#ab:checked + .ab-wrapper {
-  .ab {
-    transform: scale(0) rotate(-440deg);
+  #social-icons g {
+    transition: opacity .1s, transform .2s;
+    transform-origin: bottom;
+    transform: translateY(30px);
     opacity: 0;
+    cursor: pointer;
+  }
+  &:hover {
+    #title-logo {
+      path {
+        opacity: 0;
+      }
+      #active, #active-shadow {
+        transform: translate(50px, 50px);
+      }
+      #left-column, #left-shadow {
+        transform: translate(0px, 100px);
+      }
+      #right-column, #right-shadow {
+        transform: translate(0px, 120px);
+      }
+      #curve, #curve-shadow {
+        transform: translate(0px, -100px);
+      }
+      #bridge, #bridge-shadow {
+        transform: translate(-20px, -20px);
+      }
+    }
+    #social-icons {
+      g {
+        transform: translateY(0);
+        opacity: 1;
+        &:hover {
+          transform: translate(0) scale(1);
+          transform-origin: center;
+          animation: button_jump .3s 1;
+        }
+      }
+    }
   }
 }
 
-.contact #lazy_overlay {
+#lighting-shape {
+  stroke: #cc8ec6;
+  stroke-width: 2px;
+  stroke-dasharray: 500;
+  animation: light 3s infinite;
+}
+
+#laptop-keyboard {
+  opacity: .3;
+}
+
+#testimonial {
+  transition: transform .2s, opacity .2s;
+  transform: scale(0);
+  transform-origin: bottom center;
+  opacity: 0;
+}
+
+#laptop-cont:hover ~ #testimonial,
+#laptop-keyboard:hover ~ #testimonial,
+#testimonial:hover {
+  transform: scale(1);
   opacity: 1;
 }
+
+#project-cont {
+  transition: transform .3s;
+  &:hover {
+    transform: translate(30px, -20px);
+  }
+}
+
+#mail {
+  transition: transform .3s;
+  &:hover {
+    transform: translateY(-20px);
+  }
+}
+
+#team-cont {
+  #shot-button,
+  #upper-shot-button,
+  #objectglass-shadow,
+  #under-objectglass-shadow,
+  #minor-shadow {
+    transition: all .2s;
+  }
+  #white-lamp {
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    transform: translate(-7px, 0) !important;
+  }
+  #original-lamp {
+    transform: translate(-7px, 0) !important;
+  }
+  #lighting-blick {
+    opacity: 0;
+    transition: opacity .1s ease-in;
+    transform: translate(-19px, 0) !important;
+  }
+  &:hover {
+    #objectglass-shadow {
+      transform: translate(-29px, -16px);
+      opacity: .5;
+    }
+    #under-objectglass-shadow,
+    #minor-shadow {
+      opacity: .5;
+    }
+    #shot-button {
+      transform: translateY(6px);
+    }
+    #upper-shot-button {
+      opacity: 0;
+    }
+    #white-lamp, #lighting-blick {
+      animation: photo_blink .2s linear 1;
+      opacity: 1;
+    }
+  }
+}
+
+#services-cont {
+  transition: transform .3s;
+  &:hover {
+    transform: translate(10px, 5px);
+    #chips path {
+      animation: svg_light_blink .6s infinite;
+      &:nth-of-type(3n) {
+        fill: rgba(255, 255, 255, .2);
+        animation: svg_light_blink .3s infinite .2s;
+      }
+      &:last-of-type {
+        fill: white;
+        fill-opacity: 1;
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes light {
+  0% {
+    stroke-dashoffset: 500;
+    fill: rgba(255,255,255,0);
+  }
+  100% {
+    stroke-width: 0;
+    stroke-dashoffset: 0;
+    fill: rgba(255,255,255,.5);
+  }
+}
+
+@keyframes button_jump {
+  50% { transform: translate(1px, 0px) scale(.8); }
+}
+
+@keyframes svg_light_blink {
+  0% { fill-opacity: 1; }
+  50% { fill-opacity: 0; }
+  100% { fill-opacity: 1; }
+}
+
+@keyframes photo_blink {
+  50% { opacity: 0; }
+}
+
+// ----------
 
 .page-title, .contact-title, .testimonials-title, .services-title {
   position: fixed;
@@ -314,110 +296,4 @@ svg#main {
   top: 3%;
   right: 50%;
   transform: translateX(50%);
-}
-
-.social-icons {
-  top: 5vmin;
-  left: 0;
-  position: absolute;
-  transform: translateY(-110%);
-  transition: .5s;
-  a {
-    text-decoration: none;
-    position: relative;
-    display: block;
-    height: 6vmin;
-    width: 6vmin;
-    max-height: 6vmin;
-    max-width: 6vmin;
-    background: #cca2c0;
-    border-radius: 50%;
-    margin: 1vmin 3vmin 4vmin 1vmin;
-    outline: none;
-    @for $i from 0 through 10 {
-      &.position-#{$i} {
-        transform: translateX(0%) translateY(-1000% + $i * 100%) rotate(-900deg);
-        transition: transform .5s ease .7s + (0.2s * $i);
-      }
-    }
-    &:hover, &:focus {
-      background: white;
-    }
-    svg {
-      position: absolute;
-      position: absolute;
-      top: -1vmin;
-      left: -1vmin;
-      height: 8vmin;
-      width: 8vmin;
-      max-height: 8vmin;
-      max-width: 8vmin;
-      border-radius: 50%;
-      transition: box-shadow .2s;
-    }
-  }
-  &.left {
-    transition-delay: 1s;
-    a {
-      &:nth-child(1) {
-        transform: translateX(-50%) translateY(-1000%) rotate(-900deg);
-      }
-    }
-  }
-  &.top {
-    top: 0;
-    left: 12vmin;
-    transition-delay: .5s;
-    a {
-      display: inline-block;
-
-      @for $i from 0 through 10 {
-        &.position-#{$i} {
-          transform: translateX(-1000% + $i * 100%) translateY(-1000% + $i * 100%) rotate(-900deg);
-          transition: transform .5s ease .7s - (0.2s * $i);
-        }
-      }
-    }
-  }
-}
-
-#ab:checked ~ .social-icons {
-  transform: translateY(0%);
-  transition-delay: .7s;
-  a {
-    transform: translateX(0%) translateY(0%) rotate(360deg);
-    @for $i from 0 through 10 {
-      &.position-#{$i} {
-          transition: transform 1.5s ease 1.5s - (0.2s * $i), background .3s;
-      }
-    }
-  }
-  &.top {
-    a {
-      transform: translateX(0%) translateY(0%) rotate(360deg);
-      @for $i from 0 through 10 {
-        &.position-#{$i} {
-          transition: transform 1.5s ease 1.5s + (0.25s * $i), background .3s;
-        }
-      }
-    }
-  }
-  &.left {
-    a:nth-child(1) {
-      transform: translateX(50%) translateY(0%) rotate(360deg);
-    }
-  }
-}
-
-* {
-  font-weight: normal;
-}
-
-@keyframes light {
-  50% {
-    stroke: $dark-violet;
-  }
-  100% {
-    stroke: $light-violet;
-  }
 }

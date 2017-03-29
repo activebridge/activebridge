@@ -124,7 +124,7 @@
       text-transform: uppercase;
       border: none;
       font-weight: bold;
-      color: rgb(159, 75, 132);
+      color: $dark-violet;
       font-size: 1.2rem;
       transition: box-shadow .3s;
       cursor: pointer;
@@ -159,7 +159,7 @@
       padding-bottom: 5%;
       &-label {
         font-size: 1.5rem;
-        color: rgb(159, 75, 132);
+        color: $dark-violet;
         padding-bottom: 10px;
       }
     }
