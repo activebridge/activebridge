@@ -14,13 +14,13 @@ html lang='en'
   = render 'layouts/head', type: :application, media: :all
 
   body class="#{params[:page]}"
+    = render_lazybox
     = render 'layouts/main_v2.svg'
 
     = link_to page_path(:contact), class: :envelope, id: :contactus do
       = image_tag 'icons/envelope.svg'
       span SEND REQUEST
 
-    = render_lazybox
     = javascript_include_tag 'application', async: false
 
     h1 Active Bridge - web development agency

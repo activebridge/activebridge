@@ -30,30 +30,19 @@ body {
   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e2c77', endColorstr='#5e2c77',GradientType=1 );
   background: asset-url('wall.svg') center #5e2c77;
   background-size: cover;
-
-  svg a[id] {
-    transition: opacity .2s, transform .2s;
+  #lazy_overlay:not([class='active']) ~ #main-svg {
     transform: scale(1);
-    transform-origin: bottom left;
     opacity: 1;
-  }
-
-  $pages: ('contact', 'portfolio', 'testimonials', 'about', 'services', 'team', 'contactus');
-  $selector: ();
-
-  @each $item in $pages {
-    $selector: append($selector, unquote('&.#{$item} svg a##{$item}'), 'comma');
-  }
-
-  #{$selector} {
-    transform: scale(.7);
-    opacity: 0;
   }
 }
 
 svg#main-svg {
   width: 100%;
   height: 100vh;
+  transition: opacity 1s, transform 1s;
+  transform: scale(.7);
+  transform-origin: center 30%;
+  opacity: .3;
   a {
     outline: none;
   }
@@ -61,7 +50,7 @@ svg#main-svg {
 
 #lazy_close {
   transform: scale(0.6);
-  transition: opacity .2s ease;
+  transition: opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     opacity: .8;
   }
@@ -84,7 +73,7 @@ svg#main-svg {
 }
 
 #lazy_overlay {
-  background: rgba(133, 77, 171, 0.8);
+  background: rgba(0,0,0,.3);
 }
 
 // -- main animations --

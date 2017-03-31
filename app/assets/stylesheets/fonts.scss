@@ -1,11 +1,5 @@
-@font-face {
-  font-family: 'Raleway';
-  font-display: swap;
-  src: asset-data-url('coolvetica.woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
 body {
-  font-family: 'Raleway', arial;
+  font-family: 'Roboto', arial, sans-serif;
 }
