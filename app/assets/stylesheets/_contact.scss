@@ -5,6 +5,21 @@
   width: 100%;
   max-width: 840px;
   transform: translateX(-50%);
+  @media screen and (max-height: 900px) and (max-width: 1400px) {
+    top: 17vh;
+    transform: translateX(-50%) scale(.7);
+    * {
+      font-size: 18px !important;
+      line-height: 24px;
+    }
+    .error, [class^=material] label {
+      font-size: 16px !important;
+    }
+  }
+
+  label[for='toggle-envelop-checkbox'] {
+    cursor: pointer;
+  }
   svg {
     position: absolute;
     top: 0;
@@ -16,7 +31,6 @@
   }
   .up-triangle {
     top: 2vw;
-    // left: 14px;
     z-index: 5;
     transform-origin: top;
     transition: all .2s;
@@ -32,7 +46,7 @@
     z-index: 4;
   }
   .contact-form {
-    position: absolute;
+    position: relative;
     top: 7vw;
     left: 14vw;
     width: 71.5vw;
@@ -50,33 +64,20 @@
       left: 10%;
     }
   }
-  .info-label {
+  address.vcard {
     position: absolute;
-    bottom: 106px;
-    left: 158px;
-    font-size: 18px;
+    top: 385px;
+    left: 16%;
+    font-size: 14px;
     font-style: normal !important;
     font-family: 'Roboto', sans-serif;
+    color: #666;
+    line-height: 22px;
     z-index: 4;
-    .info {
-      font-weight: 500;
+    a {
       color: #a94e9d;
-      margin-bottom: 20px;
-      display: block;
-      font-size: 26px;
+      text-decoration: none;
     }
-    .vcard {
-      font-style: normal;
-      color: rgb(154, 158, 165);
-      opacity: 1;
-      & > * {
-        margin-top: 5px;
-        border-bottom: 1px solid #dcdcdc;
-        text-decoration: none;
-        font-weight: 400;
-      }
-    }
-    .email { color: #a94e9d }
   }
 }
 
@@ -125,7 +126,20 @@ body[class='contact'] #lazy_overlay.active {
                   0 -5px 2px -1px rgba(0,0,0,.1);
       transform: translateY(-280px);
     }
-
+    form:invalid + .material-button {
+      background: #888;
+    }
+    .material-button {
+      pointer-events: auto;
+      &:after {
+        transform: rotate(-90deg);
+        opacity: 0;
+      }
+      &:before {
+        transform: rotate(0);
+        opacity: 1;
+      }
+    }
     #contact-envelop-shadow {
       animation: none;
       transition: all .3s;
@@ -164,43 +178,60 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-// form:invalid .material-button {
-//   color: rgba(0, 0, 0, .2);
-//   background: rgba(217, 217, 217, .3);
-//   box-shadow: none;
-//   pointer-events: none;
-// }
+form:valid + .material-button {
+  pointer-events: auto;
+  background-color: $gradient;
+  &:after {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  &:before {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
 
-// form:valid .material-button {
-//   &:active {
-//     box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px 0px;
-//   }
-//   box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 5px 0px;
-// }
-
-
-// .material-button {
-//   display: block;
-//   margin: 30px auto 0;
-//   padding: 8px 10px;
-//   min-width: 88px;
-//   border-radius: 3px;
-//   font-size: $font-size - 2px;
-//   font-weight: 500;
-//   color: white;
-//   text-align: center;
-//   text-transform: uppercase;
-//   border: none;
-//   outline: none;
-//   cursor: pointer;
-//   background-color: $gradient;
-//   box-shadow: 0pt 1.125pt 3pt 0.75pt rgba(0,0,0,0.25);
-//   transition: background-color .2s, color .2s, box-shadow .2s;
-//   &:hover, &:focus {
-//     background-color: darken($gradient, 10%);
-//     box-shadow: 0pt 1.125pt 3pt 0.75pt rgba(0,0,0,0.25);
-//   }
-// }
+.material-button {
+  position: absolute;
+  display: block;
+  top: 410px;
+  right: 6%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background-color: $gradient;
+  z-index: 7;
+  cursor: pointer;
+  opacity: 1;
+  transition: background-color .2s,
+              box-shadow .2s;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 5px 0px;
+  outline: none;
+  pointer-events: none;
+  &:hover {
+    background-color: darken($gradient, 10%);
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    display: block;
+    height: 24px;
+    width: 24px;
+    transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:before {
+    background: image-url('contact/send-icon.svg') 100% no-repeat / contain;
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  &:after {
+    background: image-url('contact/create-icon.svg') 100% no-repeat / contain;
+  }
+}
 
 .material-input {
   height: 70px;
