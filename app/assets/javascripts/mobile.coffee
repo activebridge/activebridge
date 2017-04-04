@@ -12,7 +12,7 @@ navigate = (e) ->
   @slider.className = 'active'
   nav(@page)
   slide(@swipeEndX)
-  navigator.vibrate(70)
+  navigator.vibrate(70) if 'vibrate' in navigator
 
 @nav = (i) ->
   link = document.querySelector('nav a.active')
