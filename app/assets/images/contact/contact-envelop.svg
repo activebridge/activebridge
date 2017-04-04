@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -180 900 1093" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="contact-b" x1="-14.604%" x2="130.379%" y1="35.713%" y2="35.713%">
+      <stop stop-color="#B24E98" offset="0%"/>
+      <stop stop-color="#7F51B9" offset="100%"/>
+    </linearGradient>
+    <rect id="contact-a" width="916" height="600" y="156" rx="45"/>
+    <linearGradient id="contact-c" x1="-8.988%" x2="135.734%" y1="-8.641%" y2="112.936%">
+      <stop stop-color="#FBFBFB" offset="0%"/>
+      <stop stop-color="#DBE0E9" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="contact-d" x1="48.853%" x2="42.317%" y1="65.372%" y2="10.225%">
+      <stop stop-opacity="0" offset="0%"/>
+      <stop offset="100%"/>
+    </linearGradient>
+    <linearGradient id="contact-e" x1="-52.095%" x2="145.922%" y1="-32.952%" y2="123.842%">
+      <stop stop-color="#B24E98" offset="0%"/>
+      <stop stop-color="#7F51B9" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="contact-f" x1="-1.762%" x2="102.434%" y1="35.713%" y2="35.713%">
+      <stop stop-color="#AF4F9B" offset="0%"/>
+      <stop stop-color="#8A50B1" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g id='contact-envelop-shadow'>
+      <path fill="#000" fill-opacity=".1" d="M896.793 810.423L925 842H10l28.207-31.577h858.586z"/>
+      <!-- L459.5,897-->
+      <path fill="#000" fill-opacity=".1" d="M820,842 L919,842 L459.5,850 L0,842 0Z"/>
+    </g>
+    <g id='contact-envelop-back'>
+      <rect width="868" height="569" x="24" y="142" fill="#DADFE1" rx="45"/>
+      <path fill="#000" fill-opacity=".04" d="M13.287 171.256L464.36 495.52l441.428-324.264h-892.5z"/>
+    </g>
+  </g>
+</svg>

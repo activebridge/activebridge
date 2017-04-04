@@ -42,7 +42,7 @@ svg#main-svg {
   transition: opacity 1s, transform 1s;
   transform: scale(.7);
   transform-origin: center 30%;
-  opacity: .3;
+  opacity: .1;
   a {
     outline: none;
   }
@@ -63,6 +63,7 @@ svg#main-svg {
   max-width: 100%;
   width: 100%;
   height: 100vh;
+  transform: none;
   transition: opacity .3s, transform .3s;
   #lazy_body {
     height: 100vh;
@@ -73,7 +74,14 @@ svg#main-svg {
 }
 
 #lazy_overlay {
-  background: rgba(0,0,0,.3);
+  transform: scale(1.3);
+  opacity: 0;
+  transition: all 1s;
+  background: rgba(0,0,0,.2);
+  &.active {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 // -- main animations --

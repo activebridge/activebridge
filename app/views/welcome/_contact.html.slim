@@ -1,27 +1,61 @@
-= inline_svg 'contact/contact-bg-pattern.svg', class: 'contact-background-svg'
-.contact-title = t('.title')
-.content.contact-us
-  = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do
-    #contact_form.envelope
-    .data
-      = inline_svg 'contact/mark-main.svg', class: 'mark-main'
-      = inline_svg 'contact/mark-background.svg', class: 'mark-background'
-      fieldset
-        input#name name='contact[name]' type='text' placeholder="#{ t('.name_placeholder') }"
-        input#email name='contact[email]' type='email' placeholder="#{ t('.email_placeholder') }" required=true
-        textarea#text name='contact[message]' placeholder="#{ t('.message_placeholder') }" rows=7 required=true minlength=10
-        .text-right
-          button#submit.button = t('.send')
-      .info-wrapper
-        .info
-          .info-label = t('.info')
-          address.vcard
-            a.url.fn.n href='https://active-bridge.com'
-            .org = t('.organization')
-            a.email href='mailto:contact@active-bridge.com' = t('.email')
-            .adr
-              span.locality = t('.location')
-              ' ,
-              span.postal-code => t('.postal_code')
-              span.country-name = t('.country')
-              .tel = t('.phone_number')
+input type='checkbox' id='toggle-envelop-checkbox'
+.envelop
+  .wrapper
+    label for='toggle-envelop-checkbox'
+      = inline_svg 'contact/up-triangle.svg', class: 'up-triangle'
+      = inline_svg 'contact/up-envelop.svg', class: 'up-envelop'
+    .info-label
+      span.info = t('.info')
+      address.vcard
+        .org = t('.organization')
+        a.url href='https://active-bridge.com'
+        a.email href='mailto:contact@active-bridge.com' = t('.email')
+        .adr
+          span.locality = t('.location')
+          ' ,
+          span.postal-code => t('.postal_code')
+          span.country-name = t('.country')
+          .tel = t('.phone_number')
+    .contact-form
+      = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this);', id: 'contact_form' do
+        .material-input.left
+          input id='name' type='text' minlength='2' autofocus='true' placeholder=' ' required='true'
+          label for='name' =t('.name_placeholder')
+          span.error Name have to contain more than 2 letters
+
+        .material-input.right
+          input id='email' type='email' placeholder=' ' required='true'
+          label for='email' =t('.email_placeholder')
+          span.error Please, input valid email
+
+        .material-textarea
+          textarea id='body' placeholder=' ' minlength='10' maxlength='500' required='true'
+          label for='body' =t('.message_placeholder')
+          span.error Body have to contain at least 10 characters
+        button#submit type='submit' class='material-button' =t('.send')
+    label for='toggle-envelop-checkbox'
+      = inline_svg 'contact/down-envelop.svg', class: 'down-envelop'
+/* .contact-title = t('.title') */
+/* .content.contact-us */
+/*   = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this)' do */
+/*     #contact_form.envelope */
+/*     .data */
+/*       fieldset */
+/*         input#name name='contact[name]' type='text' placeholder="#{ t('.name_placeholder') }" */
+/*         input#email name='contact[email]' type='email' placeholder="#{ t('.email_placeholder') }" required=true */
+/*         textarea#text name='contact[message]' placeholder="#{ t('.message_placeholder') }" rows=7 required=true minlength=10 */
+/*         .text-right */
+/*           button#submit.button = t('.send') */
+/*       .info-wrapper */
+/*         .info */
+/*           .info-label = t('.info') */
+/*           address.vcard */
+/*             a.url.fn.n href='https://active-bridge.com' */
+/*             .org = t('.organization') */
+/*             a.email href='mailto:contact@active-bridge.com' = t('.email') */
+/*             .adr */
+/*               span.locality = t('.location') */
+/*               ' , */
+/*               span.postal-code => t('.postal_code') */
+/*               span.country-name = t('.country') */
+/*               .tel = t('.phone_number') */
