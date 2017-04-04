@@ -1,43 +1,54 @@
-.contact-envelop {
-  width: 100%;
-  max-height: 80vh;
-  margin-top: 10vh;
-}
 .envelop {
   position: relative;
-  top: 18vh;
+  top: 18vmax;
   left: 50%;
-  width: 928px;
-  transform: translateX(-50%) scale(.7);
+  width: 100%;
+  max-width: 840px;
+  transform: translateX(-50%);
   svg {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 840px;
     transition: all .3s;
   }
   .up-triangle {
-    top: 24px;
-    left: 14px;
+    top: 2vw;
+    // left: 14px;
     z-index: 5;
     transform-origin: top;
     transition: all .2s;
+    @media (min-width: 840px) {
+      top: 24px;
+    }
   }
   .up-envelop {
-    top: 25px;
-    left: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translate(0);
     z-index: 4;
   }
   .contact-form {
     position: absolute;
-    top: 90px;
-    left: 105px;
-    width: 710px;
-    height: 505px;
+    top: 7vw;
+    left: 14vw;
+    width: 71.5vw;
+    max-width: 670px;
+
     padding: 40px 50px;
     background: white;
     z-index: 3;
-    transition: transform .3s .1s, height .2s .2s;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+    transition: transform .3s .1s;
+    @media (min-width: 840px) {
+      left: calc((100% - 72.5vw)/2);
+    }
+    @media (min-width: 944px) {
+      top: 84px;
+      left: 10%;
+    }
   }
   .info-label {
     position: absolute;
@@ -71,7 +82,7 @@
 
 body[class='contact'] #lazy_overlay.active {
   .wrapper {
-    height: 610px;
+    height: 570px;
     transform-origin: center center;
     transition: all .3s;
     animation: pulse-minus 1s infinite .5s;
@@ -97,7 +108,7 @@ body[class='contact'] #lazy_overlay.active {
     transition: all .3s;
     svg.up-triangle {
       transform-origin: center top;
-      transform: rotateX(180deg) translateY(-3px) translateX(2px);
+      transform: rotateX(180deg) translateY(-1px) translateX(-50%);
       transition: all .3s;
       z-index: 2;
     }
@@ -108,9 +119,11 @@ body[class='contact'] #lazy_overlay.active {
       pointer-events: none;
     }
     .contact-form {
-      transition: transform .3s .1s, height .1s .15s;
+      transition: transform .3s .1s, box-shadow .3s .1s;
+      box-shadow: 5px 0 2px -1px rgba(0,0,0,.1),
+                  -5px 0 2px -1px rgba(0,0,0,.1),
+                  0 -5px 2px -1px rgba(0,0,0,.1);
       transform: translateY(-280px);
-      height: 535px;
     }
 
     #contact-envelop-shadow {
@@ -143,7 +156,7 @@ body[class='contact'] #lazy_overlay.active {
   }
 }
 
-$font-size: 20px;
+$font-size: 16px;
 $main-color: $gradient;
 $textarea-height: 120px;
 
@@ -151,42 +164,43 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-form:invalid .material-button {
-  color: rgba(0, 0, 0, .2);
-  background: rgba(217, 217, 217, .3);
-  box-shadow: none;
-  pointer-events: none;
-}
+// form:invalid .material-button {
+//   color: rgba(0, 0, 0, .2);
+//   background: rgba(217, 217, 217, .3);
+//   box-shadow: none;
+//   pointer-events: none;
+// }
 
-form:valid .material-button {
-  &:active {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px 0px;
-  }
-  box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 5px 0px;
-}
+// form:valid .material-button {
+//   &:active {
+//     box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px 0px;
+//   }
+//   box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 5px 0px;
+// }
 
 
-.material-button {
-  display: block;
-  margin: 30px auto 0;
-  padding: 8px 10px;
-  min-width: 88px;
-  border-radius: 3px;
-  font-size: $font-size - 2px;
-  font-weight: 500;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: $gradient;
-  box-shadow: 0pt 1.125pt 3pt 0.75pt rgba(0,0,0,0.25);
-  transition: background-color .2s, color .2s, box-shadow .2s;
-  &:hover, &:focus {
-    background-color: darken($gradient, 10%);
-  }
-}
+// .material-button {
+//   display: block;
+//   margin: 30px auto 0;
+//   padding: 8px 10px;
+//   min-width: 88px;
+//   border-radius: 3px;
+//   font-size: $font-size - 2px;
+//   font-weight: 500;
+//   color: white;
+//   text-align: center;
+//   text-transform: uppercase;
+//   border: none;
+//   outline: none;
+//   cursor: pointer;
+//   background-color: $gradient;
+//   box-shadow: 0pt 1.125pt 3pt 0.75pt rgba(0,0,0,0.25);
+//   transition: background-color .2s, color .2s, box-shadow .2s;
+//   &:hover, &:focus {
+//     background-color: darken($gradient, 10%);
+//     box-shadow: 0pt 1.125pt 3pt 0.75pt rgba(0,0,0,0.25);
+//   }
+// }
 
 .material-input {
   height: 70px;
