@@ -4,4 +4,5 @@
 #= require turbolinks
 
 $(document).on 'page:load ready', ->
-  simplemde = new SimpleMDE({ element: document.getElementById('simplemde')[0] })
+  simplemde = document.getElementById('simplemde')
+  new SimpleMDE({ element: simplemde[0] }) if simplemde
