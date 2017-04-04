@@ -67,7 +67,7 @@ rotateTeam = (direction) ->
 
 
 browseTeam = (keyCode) ->
-  switch event.keyCode
+  switch keyCode
     when 37 then direction = -1
     when 39 then direction = 1
     when 27 then document.getElementById('lazy_close').click()
