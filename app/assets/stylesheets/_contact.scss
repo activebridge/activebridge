@@ -1,13 +1,14 @@
 .envelop {
   position: relative;
   top: 18vmax;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
   max-width: 840px;
-  transform: translateX(-50%);
   @media screen and (max-height: 900px) and (max-width: 1400px) {
     top: 17vh;
-    transform: translateX(-50%) scale(.7);
+    transform: scale(.7);
     * {
       font-size: 18px !important;
       line-height: 24px;
@@ -23,20 +24,26 @@
   svg {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 90vw;
     max-width: 840px;
     transition: all .3s;
   }
   .up-triangle {
     top: 2vw;
+    transform-origin: center top;
+    transform: rotateX(0) translateY(0);
+    transition: transform .3s .1s, z-index 0s .125s;
     z-index: 5;
-    transform-origin: top;
-    transition: all .2s;
     @media (min-width: 840px) {
       top: 24px;
     }
+  }
+  #up-triangle-shadow, #up-triangle-shadow-2 {
+    transition: opacity .2s .15s;
+    opacity: 1;
   }
   .up-envelop {
     left: 0;
@@ -81,24 +88,21 @@
   }
 }
 
-body[class='contact'] #lazy_overlay.active {
+body[class~=contact] #lazy_overlay.active {
   .wrapper {
     height: 570px;
     transform-origin: center center;
     transition: all .3s;
     animation: pulse-minus 1s infinite .5s;
   }
-  svg.up-triangle {
-    transition: transform .3s .1s, z-index .1s .1s;
+  #up-triangle-shadow, #up-triangle-shadow-2 {
+    opacity: 1;
   }
   .contact-form {
     transition: all .3s;
     transform: translateY(0);
   }
-  #up-triangle-shadow, #up-triangle-shadow-2 {
-    transition: opacity .3s;
-    opacity: 1;
-  }
+
   #contact-envelop-shadow {
     opacity: 1;
     transition: all .3s;
@@ -107,13 +111,13 @@ body[class='contact'] #lazy_overlay.active {
   #toggle-envelop-checkbox:checked ~ .envelop .wrapper {
     animation: none;
     transition: all .3s;
-    svg.up-triangle {
-      transform-origin: center top;
-      transform: rotateX(180deg) translateY(-1px) translateX(-50%);
-      transition: all .3s;
+    .up-triangle {
+      transform: rotateX(180deg) translateY(-1px);
+      transition: transform .3s 0s, z-index .2s 0s;
       z-index: 2;
     }
     #up-triangle-shadow, #up-triangle-shadow-2 {
+      transition-delay: 0s;
       opacity: 0;
     }
     .up-envelop {
