@@ -6,9 +6,9 @@ input type='checkbox' id='toggle-envelop-checkbox'
       = inline_svg 'contact/up-envelop.svg', class: 'up-envelop'
     address.vcard
       span.info = t('.info')
-      a.url href='https://active-bridge.com'
+      a.url href="#{ t('.site') }"
         .org = t('.organization')
-      a.email href='mailto:contact@active-bridge.com' = t('.email')
+      a.email href="mailto:#{ t('.email') }" = t('.email')
       .adr
         span.locality = t('.location')
         ' ,
@@ -21,17 +21,17 @@ input type='checkbox' id='toggle-envelop-checkbox'
       .material-input.left
         input id='name' type='text' minlength='2' autofocus='true' placeholder=' ' required='true'
         label for='name' =t('.name_placeholder')
-        span.error Name have to contain more than 2 letters
+        span.error =t('name_error')
 
       .material-input.right
         input id='email' type='email' placeholder=' ' required='true'
         label for='email' =t('.email_placeholder')
-        span.error Please, input valid email
+        span.error =t('email_error')
 
       .material-textarea
         textarea id='body' placeholder=' ' minlength='10' maxlength='500' required='true'
         label for='body' =t('.message_placeholder')
-        span.error Body have to contain at least 10 characters
+        span.error =t('.message_error')
     button#submit form='contact_form' type='submit' class='material-button'
 
     label for='toggle-envelop-checkbox'

@@ -1,3 +1,9 @@
+#toggle-envelop-checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -5;
+}
+
 .envelop {
   position: relative;
   top: 18vmax;
