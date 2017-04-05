@@ -6,7 +6,11 @@
   margin: 0 auto;
   width: 100%;
   max-width: 840px;
-  @media screen and (max-height: 900px) and (max-width: 1400px) {
+  @media
+  only screen and (max-height: 900px) and (max-width: 1400px),
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1500px),
+  only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1500px)
+  {
     top: 17vh;
     transform: scale(.7);
     * {
@@ -56,7 +60,7 @@
     position: relative;
     top: 7vw;
     left: 14vw;
-    width: 71.5vw;
+    width: 72vw;
     max-width: 670px;
 
     padding: 40px 50px;
@@ -64,7 +68,7 @@
     z-index: 3;
     transition: transform .3s .1s;
     @media (min-width: 840px) {
-      left: calc((100% - 72.5vw)/2);
+      left: calc((100% - 72vw)/2);
     }
     @media (min-width: 944px) {
       top: 84px;
@@ -199,7 +203,7 @@ form:valid + .material-button {
   position: absolute;
   display: block;
   top: 410px;
-  right: 6%;
+  right: 50px;
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -228,12 +232,16 @@ form:valid + .material-button {
                 opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:before {
-    background: image-url('contact/send-icon.svg') 100% no-repeat / contain;
+    background-image: image-url('contact/send-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
     opacity: 0;
     transform: rotate(90deg);
   }
   &:after {
-    background: image-url('contact/create-icon.svg') 100% no-repeat / contain;
+    background-image: image-url('contact/create-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -279,6 +287,8 @@ form:valid + .material-button {
     border: none;
     margin: 8px 0;
     background: none;
+    box-shadow: none;
+    outline: none;
     z-index: 2;
     &:focus { outline: none; }
     &:focus + label, &:valid + label,
