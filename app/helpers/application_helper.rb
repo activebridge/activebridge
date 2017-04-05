@@ -27,6 +27,10 @@ module ApplicationHelper
   end
 
   def back_path
-    url_for(:back) + '#posts'
+    if request.referer.present? && request.referer != request.env['REQUEST_URI']
+      "#{url_for(:back)}#posts"
+    else
+      "#{articles_url}#posts"
+    end
   end
 end
