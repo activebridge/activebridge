@@ -90,9 +90,13 @@
       text-decoration: none;
     }
   }
+  #contact-envelop-shadow {
+    opacity: .1;
+    transition: all .3s;
+  }
 }
 
-body[class~=contact] #lazy_overlay.active {
+body[class*='contact'] #lazy_overlay.active {
   .wrapper {
     height: 570px;
     transform-origin: center center;
@@ -108,8 +112,7 @@ body[class~=contact] #lazy_overlay.active {
   }
 
   #contact-envelop-shadow {
-    opacity: 1;
-    transition: all .3s;
+    opacity: .1;
     animation: pulse-shadow 1s infinite .5s;
   }
   #toggle-envelop-checkbox:checked ~ .envelop .wrapper {
@@ -150,8 +153,7 @@ body[class~=contact] #lazy_overlay.active {
     }
     #contact-envelop-shadow {
       animation: none;
-      transition: all .3s;
-      transform: translateY(-10px);
+      transform: translateY(0);
     }
   }
 }
@@ -174,7 +176,7 @@ body[class~=contact] #lazy_overlay.active {
 @keyframes pulse-shadow {
   50% {
     transform: translateY(10px);
-    opacity: .5;
+    opacity: .05;
   }
 }
 
