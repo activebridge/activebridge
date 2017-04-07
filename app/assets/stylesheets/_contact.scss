@@ -12,6 +12,18 @@
   margin: 0 auto;
   width: 100%;
   max-width: 840px;
+  .wrapper {
+    height: 570px;
+    transform-origin: center center;
+    transition: all .3s;
+    animation: pulse-minus 1s infinite .5s;
+    animation-play-state: paused;
+  }
+  #contact-envelop-shadow {
+    opacity: .1;
+    animation: pulse-shadow 1s infinite .5s;
+    animation-play-state: paused;
+  }
   @media
   only screen and (max-height: 900px) and (max-width: 1400px),
   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1500px),
@@ -104,10 +116,7 @@
 
 body[class*='contact'] #lazy_overlay.active {
   .wrapper {
-    height: 570px;
-    transform-origin: center center;
-    transition: all .3s;
-    animation: pulse-minus 1s infinite .5s;
+    animation-play-state: running;
   }
   #up-triangle-shadow, #up-triangle-shadow-2 {
     opacity: 1;
@@ -118,8 +127,7 @@ body[class*='contact'] #lazy_overlay.active {
   }
 
   #contact-envelop-shadow {
-    opacity: .1;
-    animation: pulse-shadow 1s infinite .5s;
+    animation-play-state: running;
   }
   #toggle-envelop-checkbox:checked ~ .envelop .wrapper {
     animation: none;
