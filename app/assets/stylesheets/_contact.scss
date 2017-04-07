@@ -13,11 +13,24 @@
   width: 100%;
   max-width: 840px;
   .wrapper {
-    height: 570px;
+    height: 50vmin;
+    min-height: 25vmax;
+    max-height: 90vmin;
     transform-origin: center center;
     transition: all .3s;
     animation: pulse-minus 1s infinite .5s;
     animation-play-state: paused;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    @media (min-width: 650px) {
+      height: 55vmin;
+    }
+    @media (min-width: 840px) {
+      height: 60vmin;
+    }
   }
   #contact-envelop-shadow {
     opacity: .1;
@@ -29,11 +42,11 @@
   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1500px),
   only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1500px)
   {
-    top: 17vh;
+    top: 28vh;
     transform: scale(.7);
     * {
-      font-size: 18px !important;
-      line-height: 24px;
+      font-size: 3vmin;
+      line-height: 4vmin;
     }
     .error, [class^=material] label {
       font-size: 16px !important;
@@ -75,13 +88,15 @@
     z-index: 4;
   }
   .contact-form {
-    position: relative;
-    top: 7vw;
+    height: 90%;
+    position: absolute;
     left: 14vw;
     width: 72vw;
     max-width: 670px;
-
-    padding: 40px 50px;
+    max-height: 50vh;
+    bottom: 0;
+    padding: 5%;
+    padding-bottom: 10%;
     background: white;
     z-index: 3;
     transition: transform .3s .1s;
@@ -89,13 +104,12 @@
       left: calc((100% - 72vw)/2);
     }
     @media (min-width: 944px) {
-      top: 84px;
       left: 10%;
     }
   }
   address.vcard {
     position: absolute;
-    top: 385px;
+    bottom: 1vmin;
     left: 16%;
     font-size: 14px;
     font-style: normal !important;
@@ -149,7 +163,7 @@ body[class*='contact'] #lazy_overlay.active {
       box-shadow: 5px 0 2px -1px rgba(0,0,0,.1),
                   -5px 0 2px -1px rgba(0,0,0,.1),
                   0 -5px 2px -1px rgba(0,0,0,.1);
-      transform: translateY(-280px);
+      transform: translateY(-35vmin);
     }
     form:invalid + .material-button {
       background: #888;
@@ -218,10 +232,10 @@ form:valid + .material-button {
 .material-button {
   position: absolute;
   display: block;
-  top: 410px;
-  right: 50px;
-  width: 64px;
-  height: 64px;
+  bottom: 0;
+  right: 8vmin;
+  width: 10vmin;
+  height: 10vmin;
   border-radius: 50%;
   border: none;
   background-color: $gradient;
@@ -239,11 +253,11 @@ form:valid + .material-button {
   &:before, &:after {
     content: '';
     position: absolute;
-    top: 21px;
-    left: 21px;
+    top: 25%;
+    left: 25%;
     display: block;
-    height: 24px;
-    width: 24px;
+    height: 50%;
+    width: 50%;
     transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1),
                 opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -262,7 +276,8 @@ form:valid + .material-button {
 }
 
 .material-input {
-  height: 70px;
+  height: 33%;
+  display: inline-flex;
   &.left {
     float: left;
     width: 46%;
@@ -277,10 +292,12 @@ form:valid + .material-button {
   }
 }
 .material-textarea {
+  max-height: 66%;
   height: $textarea-height + 52px;
   label {
     line-height: $font-size + 46px;
     height: $textarea-height + 30px;
+    max-height: 100%;
   }
 }
 .material-input, .material-textarea {
