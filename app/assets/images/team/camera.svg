@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1049 774" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="team-a" d="M2.536 773.85l100.34-66.533h844.44l98.882 66.534H2.536zM806.34 650.16H550.945l-24.066 57.157h341.997L806.34 650.16z"/>
+    <linearGradient id="team-b" x1="-14.604%" x2="151.214%" y1="35.713%" y2="108.379%">
+      <stop stop-color="#B64E96" offset="0%"/>
+      <stop stop-color="#5F52CA" offset="100%"/>
+    </linearGradient>
+    <path id="team-c" d="M105.248 30.892c4.542-2.652 12.48-4.802 17.753-4.802h804.153c5.263 0 13.198 2.173 17.728 4.857l79.467 52.258H24.274l80.974-52.313z"/>
+    <rect id="team-d" width="1049" height="623.169" y="66.683" rx="70"/>
+    <linearGradient id="team-f" x1="0%" x2="93.8%" y1="-3.17%" y2="98.266%">
+      <stop stop-color="#B64E96" offset="0%"/>
+      <stop stop-color="#7D51B9" offset="100%"/>
+    </linearGradient>
+    <path id="team-h" d="M-7.935 60.332H1123.59v144.48H-7.937V60.332zm0 262.763H1123.59v381.047H-7.937V323.095z"/>
+    <ellipse id="team-i" cx="97.203" cy="98.04" rx="41.559" ry="41.578"/>
+    <linearGradient id="team-k" x1="2.05%" y1="3.457%" y2="98.485%">
+      <stop stop-color="#843A73" offset="0%"/>
+      <stop stop-color="#6D408B" offset="100%"/>
+    </linearGradient>
+    <rect id="team-j" width="731.602" height="512.031" rx="28"/>
+    <linearGradient id="team-m" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop stop-color="#EEE" offset="0%"/>
+      <stop stop-color="#D8D8D8" offset="100%"/>
+    </linearGradient>
+    <ellipse id="team-n" cx="62.686" cy="9.923" rx="62.686" ry="9.923"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g opacity=".1">
+      <use xlink:href="#team-a"/>
+      <use xlink:href="#team-a"/>
+      <use fill="#000" xlink:href="#team-a"/>
+    </g>
+    <use fill="url(#team-b)" xlink:href="#team-c"/>
+    <use fill="#000" fill-opacity=".08" xlink:href="#team-c"/>
+    <mask id="team-g" fill="#fff">
+      <use xlink:href="#team-d"/>
+    </mask>
+    <rect x="0" y="204" width="100%" height="120" fill='#f2f2f2' />
+    <use fill="url(#team-f)" mask="url(#team-g)" xlink:href="#team-h"/>
+    <use xlink:href="#team-h"/>
+    <g transform="translate(826.82 446.935)">
+      <ellipse cx="97.203" cy="97.246" fill="#000" opacity=".1" rx="97.203" ry="97.246"/>
+      <ellipse cx="96.41" cy="96.452" fill="#FFF" rx="86.094" ry="86.132"/>
+      <use fill="#F2F2F2" xlink:href="#team-i"/>
+      <use xlink:href="#team-i"/>
+      <path fill="#8150B6" fill-opacity=".36" d="M158.7 115.108V79.385l11.108 17.86-11.11 17.863zM38.088 79.385v35.723l-11.11-17.862 11.11-17.86z"/>
+    </g>
+    <rect width="754.613" height="531.083" x="41.262" y="107.963" fill="#000" opacity=".1" rx="37"/>
+    <!-- <g transform="translate(52.37 117.49)"> -->
+    <!--   <mask id="team-l" fill="#fff"> -->
+    <!--     <use xlink:href="#team-j"/> -->
+    <!--   </mask> -->
+    <!--   <use fill="url(#team-k)" xlink:href="#team-j"/> -->
+    <!--   <path stroke="#FFF" stroke-width="5" d="M24.995 446.538v40.632h110.268M706.58 446.538v40.632H596.31M24.995 66.432V25.8h110.268M706.58 66.432V25.8H596.31" stroke-linecap="round" mask="url(#team-l)"/> -->
+    <!--   <path stroke="#FFF" d="M24.598 25.403h682.405v462.812H24.598z" mask="url(#team-l)"/> -->
+    <!--   <text fill="#FFF" mask="url(#team-l)" font-size="27.77" font-weight="420"> -->
+    <!--     <tspan x="45.229" y="72.249">~/TEAM</tspan> -->
+    <!--   </text> -->
+    <!--   <text fill="#FFF" mask="url(#team-l)" font-size="27.77" font-weight="420"> -->
+    <!--     <tspan x="45.229" y="469.172">16 Mpix. 4898 × 3265</tspan> -->
+    <!--   </text> -->
+    <!-- </g> -->
+    <g transform="rotate(-180 369.77 96.055)">
+      <path stroke="#FFF" stroke-width="3" d="M66.013 7.16C65.593 3.146 62.193 0 58.06 0H8.177C3.77 0 .18 3.58.18 8v12.58c0 4.408 3.58 7.998 7.996 7.998H58.06c4.126 0 7.534-3.137 7.953-7.16 2.04-.186 3.634-1.9 3.634-3.984v-6.29c0-2.08-1.596-3.797-3.634-3.983z"/>
+      <rect width="17.561" height="21.68" x="4.312" y="3.203" fill="#FFF" rx="4"/>
+      <rect width="17.561" height="21.68" x="44.885" y="3.203" fill="#FFF" rx="4"/>
+      <rect width="17.561" height="21.68" x="24.598" y="3.203" fill="#FFF" rx="4"/>
+    </g>
+    <path fill="url(#team-m)" d="M125.323 46.837h.05V10.32H0v36.517h.05c1.315 5.296 28.855 9.526 62.636 9.526 33.78 0 61.32-4.23 62.637-9.526z" transform="translate(783.18)"/>
+    <g transform="translate(783.18)">
+      <use xlink:href="#team-n"/>
+      <use fill="#D6D6D6" xlink:href="#team-n"/>
+    </g>
+    <text fill="#8551B5" font-size="38.878" font-weight="420">
+      <tspan x="837.93" y="290.443">Memories</tspan>
+    </text>
+    <text fill="#8E50AE" font-size="26.976" font-weight="420">
+      <tspan x="839.517" y="255.422">Active::Bridge</tspan>
+    </text>
+  </g>
+</svg>
