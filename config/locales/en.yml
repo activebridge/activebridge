@@ -37,10 +37,14 @@ en:
     contact:
       title: Contact us
       name_placeholder: Your name
+      name_error: Please, input real name
       email_placeholder: Your email
+      email_error: Please, input valid email
       message_placeholder: Text message
+      message_error: Body have to contain at least 10 characters
       send: Send
       info: 'Contact info:'
+      site: https://active-bridge.com
       organization: Active Bridge, LLC
       email: contact@active-bridge.com
       location: Cherkasy

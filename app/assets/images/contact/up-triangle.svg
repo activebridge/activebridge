@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70%" viewBox="-15 0 913 317">
+  <defs>
+    <linearGradient id="up-triangle-a" x1="-1.762%" x2="102.434%" y1="35.713%" y2="35.713%">
+      <stop stop-color="#AF4F9B" offset="0%"/>
+      <stop stop-color="#8A50B1" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#up-triangle-a)" fill-rule="evenodd" d="M462 342l437.8-316.344-885.636.764" transform="translate(-15 -25)"/>
+</svg>

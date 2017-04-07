@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70%" viewBox="0 -27 902 604">
+  <defs>
+    <linearGradient id="up-envelop-a" x1="-8.988%" x2="135.734%" y1="-8.641%" y2="112.936%">
+      <stop stop-color="#FBFBFB" offset="0%"/>
+      <stop stop-color="#DBE0E9" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="up-envelop-b" x1="48.853%" x2="42.317%" y1="65.372%" y2="10.225%">
+      <stop stop-opacity="0" offset="0%"/>
+      <stop offset="100%"/>
+    </linearGradient>
+    <linearGradient id="up-envelop-c" x1="-52.095%" x2="145.922%" y1="-32.952%" y2="123.842%">
+      <stop stop-color="#B24E98" offset="0%"/>
+      <stop stop-color="#7F51B9" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect fill='#fff' width='520' height='240' x='190' y='120' />
+    <path fill="#000" transform='translate(5)' fill-opacity=".03" d="M87.26 40.98l30.292 15.11 333.264 244.713L785.37 56.09l29.9-15.355L450.6 318.403 87.26 40.98z"/>
+    <path fill="url(#up-envelop-a)" d="M88.24 41.87H87v546.428h726V41.868h-.24L455.5 311.305 88.24 41.87z"/>
+    <path id='up-triangle-shadow-2' fill="url(#up-envelop-b)" fill-opacity=".05" d="M7.54.664l563.45 588.908h284.72c26.51 0 48.002-21.488 48.002-48.003V29.97c0-11.296-14.77-29.306-14.77-29.306H7.54z"/>
+    <path id='up-triangle-shadow' transform="translate(5, -3)" fill="#000" fill-opacity=".04" d="M.287 3.256L451.36 327.52 892.788 3.257H.288z"/>
+  </g>
+</svg>

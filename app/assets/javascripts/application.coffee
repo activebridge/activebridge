@@ -13,7 +13,7 @@ window.submit = (form) ->
   xhr.onreadystatechange = ->
     return if xhr.readyState != 4
     if xhr.status == 200
-      form = document.getElementById('contact_form').parentNode
+      form = document.getElementById('contact_form')
       form.reset()
     else
       document.getElementById('submit').disabled = false
@@ -21,6 +21,8 @@ window.submit = (form) ->
   data = new FormData(document.querySelector('form'))
   xhr.send(data)
   dataLayer.push({'event':'formSubmitted', 'formName':'ContactUs'})
+  document.getElementById('toggle-envelop-checkbox').checked = false
+  closeWindow()
   return false
 
 window.animate = -> document.getElementById('ab').checked = true
