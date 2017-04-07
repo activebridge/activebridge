@@ -45,12 +45,6 @@
       <use xlink:href="#team-i"/>
     </g>
     <rect width="754.613" height="531.083" x="41.262" y="107.963" fill="#000" opacity=".1" rx="37"/>
-    <g transform="rotate(-180 369.77 96.055)">
-      <path stroke="#FFF" stroke-width="3" d="M66.013 7.16C65.593 3.146 62.193 0 58.06 0H8.177C3.77 0 .18 3.58.18 8v12.58c0 4.408 3.58 7.998 7.996 7.998H58.06c4.126 0 7.534-3.137 7.953-7.16 2.04-.186 3.634-1.9 3.634-3.984v-6.29c0-2.08-1.596-3.797-3.634-3.983z"/>
-      <rect width="17.561" height="21.68" x="4.312" y="3.203" fill="#FFF" rx="4"/>
-      <rect width="17.561" height="21.68" x="44.885" y="3.203" fill="#FFF" rx="4"/>
-      <rect width="17.561" height="21.68" x="24.598" y="3.203" fill="#FFF" rx="4"/>
-    </g>
     <path fill="url(#team-m)" d="M125.323 46.837h.05V10.32H0v36.517h.05c1.315 5.296 28.855 9.526 62.636 9.526 33.78 0 61.32-4.23 62.637-9.526z" transform="translate(783.18)"/>
     <g transform="translate(783.18)">
       <use xlink:href="#team-n"/>
