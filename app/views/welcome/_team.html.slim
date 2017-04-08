@@ -1,10 +1,8 @@
-/* - hexagon = nil */
 div itemscope="" itemtype="http://schema.org/Person"
 .camera
   = inline_svg('team/camera.svg')
   .photos-container
-    - photos = I18n.t('.team.photos')
-    - photos.each_with_index do |url, index|
+    - I18n.t('.team.photos').each_with_index do |url, index|
       input id="team-photo-#{index}" name='team-photos' type='radio' checked=(true if index == 0) autofocus=(true if index == 0)
       .photo
         img src="#{url}" class='team-photos'

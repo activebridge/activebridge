@@ -2,8 +2,7 @@
 .content.testimonials
   = inline_svg 'testimonials/testimonials-bg.svg', class: 'testimonials-background-svg'
   .wrapper
-    - testimonials = I18n.t('testimonials.all')
-    - testimonials.each_with_index do |testimonial, index|
+    - I18n.t('testimonials.all').each_with_index do |testimonial, index|
       input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=true autofocus=true onblur='keepFocus(this)'
       .testimonial class="testimonial #{testimonial[:company].underscore}"
         .arrows
