@@ -7,6 +7,6 @@ div itemscope="" itemtype="http://schema.org/Person"
       .photo
         img src="#{url}" class='team-photos'
       .team-photo-controls
-        label.prev for="team-photo-#{index - 1 == -1 ? photos.length - 1 : index - 1}"
-        label.next for="team-photo-#{index + 1 == photos.size ? 0 : index + 1}"
+        label.prev for="team-photo-#{index - 1 == -1 ? I18n.t('.team.photos').length - 1 : index - 1}"
+        label.next for="team-photo-#{index + 1 == I18n.t('.team.photos').size ? 0 : index + 1}"
   = inline_svg('team/camera-interface.svg')
