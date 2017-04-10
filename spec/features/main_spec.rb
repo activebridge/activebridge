@@ -40,7 +40,7 @@ RSpec.feature 'Main', type: :feature do
     find('#about', visible: false).trigger :click
     expect(page).to have_content('Active Bridge - ruby on rails agency')
     find('#services', visible: false).trigger :click
-    expect(page).to have_content('SERVICES')
+    expect(page).to have_content('OUR PROF. SKILLS')
     find('#testimonials', visible: false).trigger :click
     expect(page).to have_content('TESTIMONIALS')
     find('#portfolio', visible: false).trigger :click
