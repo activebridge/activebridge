@@ -15,7 +15,7 @@ RSpec.feature 'Main', type: :feature do
 
   scenario 'Visit services page' do
     visit page_url(:services)
-    expect(page).to have_content('Services')
+    expect(page).to have_content('OUR PROF. SKILLS')
   end
 
   scenario 'Visit testimonials page' do
