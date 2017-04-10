@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1049 774" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="team-a" d="M2.536 773.85l100.34-66.533h844.44l98.882 66.534H2.536zM806.34 650.16H550.945l-24.066 57.157h341.997L806.34 650.16z"/>
+    <linearGradient id="team-b" x1="-14.604%" x2="151.214%" y1="35.713%" y2="108.379%">
+      <stop stop-color="#B64E96" offset="0%"/>
+      <stop stop-color="#5F52CA" offset="100%"/>
+    </linearGradient>
+    <path id="team-c" d="M105.248 30.892c4.542-2.652 12.48-4.802 17.753-4.802h804.153c5.263 0 13.198 2.173 17.728 4.857l79.467 52.258H24.274l80.974-52.313z"/>
+    <rect id="team-d" width="1049" height="623.169" y="66.683" rx="70"/>
+    <linearGradient id="team-f" x1="0%" x2="93.8%" y1="-3.17%" y2="98.266%">
+      <stop stop-color="#B64E96" offset="0%"/>
+      <stop stop-color="#7D51B9" offset="100%"/>
+    </linearGradient>
+    <path id="team-h" d="M-7.935 60.332H1123.59v144.48H-7.937V60.332zm0 262.763H1123.59v381.047H-7.937V323.095z"/>
+    <ellipse id="team-i" cx="97.203" cy="98.04" rx="41.559" ry="41.578"/>
+    <linearGradient id="team-k" x1="2.05%" y1="3.457%" y2="98.485%">
+      <stop stop-color="#843A73" offset="0%"/>
+      <stop stop-color="#6D408B" offset="100%"/>
+    </linearGradient>
+    <rect id="team-j" width="731.602" height="512.031" rx="28"/>
+    <linearGradient id="team-m" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop stop-color="#EEE" offset="0%"/>
+      <stop stop-color="#D8D8D8" offset="100%"/>
+    </linearGradient>
+    <ellipse id="team-n" cx="62.686" cy="9.923" rx="62.686" ry="9.923"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g opacity=".1">
+      <use xlink:href="#team-a"/>
+      <use xlink:href="#team-a"/>
+      <use fill="#000" xlink:href="#team-a"/>
+    </g>
+    <use fill="url(#team-b)" xlink:href="#team-c"/>
+    <use fill="#000" fill-opacity=".08" xlink:href="#team-c"/>
+    <mask id="team-g" fill="#fff">
+      <use xlink:href="#team-d"/>
+    </mask>
+    <rect x="0" y="204" width="100%" height="120" fill='#f2f2f2' />
+    <use fill="url(#team-f)" mask="url(#team-g)" xlink:href="#team-h"/>
+    <use xlink:href="#team-h"/>
+    <g transform="translate(826.82 446.935)">
+      <ellipse cx="97.203" cy="97.246" fill="#000" opacity=".1" rx="97.203" ry="97.246"/>
+      <ellipse cx="96.41" cy="96.452" fill="#FFF" rx="86.094" ry="86.132"/>
+      <use fill="#F2F2F2" xlink:href="#team-i"/>
+      <use xlink:href="#team-i"/>
+    </g>
+    <rect width="754.613" height="531.083" x="41.262" y="107.963" fill="#000" opacity=".1" rx="37"/>
+    <path fill="url(#team-m)" d="M125.323 46.837h.05V10.32H0v36.517h.05c1.315 5.296 28.855 9.526 62.636 9.526 33.78 0 61.32-4.23 62.637-9.526z" transform="translate(783.18)"/>
+    <g transform="translate(783.18)">
+      <use xlink:href="#team-n"/>
+      <use fill="#D6D6D6" xlink:href="#team-n"/>
+    </g>
+    <text fill="#8551B5" font-size="38.878" font-weight="420">
+      <tspan x="837.93" y="290.443">Memories</tspan>
+    </text>
+    <text fill="#8E50AE" font-size="26.976" font-weight="420">
+      <tspan x="839.517" y="255.422">Active::Bridge</tspan>
+    </text>
+  </g>
+</svg>

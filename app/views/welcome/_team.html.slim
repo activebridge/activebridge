@@ -1,20 +1,12 @@
-- hexagon = nil
 div itemscope="" itemtype="http://schema.org/Person"
-  .contact-title= t('team.title')
-  .content.members
-    #ballWrapper
-      #ball style='background-position-x: 0px'
-      #ballShadow
-    #rotate-shape.main style="transform: rotateY(0deg)"
-      - @members.each_with_index do |member, index|
-        - hexagon = cycle(:mask, :mask_down, :mask_up, name: 'avatar')
-        .member id="member_#{member.id}" style="transform: rotateY(#{360/Member::MAX_PLACEHOLDERS_SIZE*(index+1) + (cycle(0,1,-1, name: 'sign').to_i)*5}deg) rotateX(#{cycle(0,-26,26, name: 'x_axis')}deg) translateZ(40vmin) scale(.5); background-image: url(#{member.avatar.url(hexagon)});"
-          /* .member-image */
-            = image_tag(member.avatar.url(hexagon))
-          /* .details */
-          /*   h4 itemprop='name'= member.name */
-          /*   p itemprop='jobTitle'= member.position */
-      - size = Member::MAX_PLACEHOLDERS_SIZE - @members.count
-      - size.times do |i|
-        - index = @members.count + i + 1
-        .member style="transform: rotateY(#{360/Member::MAX_PLACEHOLDERS_SIZE*index + (cycle(0,1,-1, name: 'sign').to_i)*5}deg) rotateX(#{cycle(0,-26,26, name: 'x_axis')}deg) translateZ(40vmin) scale(.5); background-image: url(#{Member.default_placeholder(cycle(Member::HEXAGONS[hexagon.to_sym]))});"
+.camera
+  = inline_svg('team/camera.svg')
+  .photos-container
+    - I18n.t('.team.photos').each_with_index do |url, index|
+      input id="team-photo-#{index}" name='team-photos' type='radio' checked=(true if index == 0) autofocus=(true if index == 0)
+      .photo
+        img src="#{url}" class='team-photos'
+      .team-photo-controls
+        label.prev for="team-photo-#{index - 1 == -1 ? I18n.t('.team.photos').length - 1 : index - 1}"
+        label.next for="team-photo-#{index + 1 == I18n.t('.team.photos').size ? 0 : index + 1}"
+  = inline_svg('team/camera-interface.svg')
