@@ -56,8 +56,8 @@ en:
   team:
     title: Team
     photos:
-      - http://i.imgur.com/HtFZC6N.jpg
-      - http://i.imgur.com/5CTZocf.jpg
+      - https://i.imgur.com/HtFZC6N.jpg
+      - https://i.imgur.com/5CTZocf.jpg
   portfolio:
     title: Portfolio
     project_info:
