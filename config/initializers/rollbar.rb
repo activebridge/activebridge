@@ -53,13 +53,13 @@ Rollbar.configure do |config|
   # https://devcenter.heroku.com/articles/deploying-to-a-custom-rails-environment
   config.environment = ENV['ROLLBAR_ENV'] || Rails.env
 
-  config.js_enabled = Rails.env.production?
-  config.js_options = {
-    accessToken: '2d20431b6c7547d086448d41ac794e9e',
-    captureUncaught: true,
-    captureUnhandledRejections: true,
-    payload: {
-      environment: "production"
-    }
-  }
+  # config.js_enabled = Rails.env.production?
+  # config.js_options = {
+  #   accessToken: '2d20431b6c7547d086448d41ac794e9e',
+  #   captureUncaught: true,
+  #   captureUnhandledRejections: true,
+  #   payload: {
+  #     environment: "production"
+  #   }
+  # }
 end
