@@ -34,7 +34,7 @@
       <g fill="url(#services-d)" mask="url(#services-c)" class="contacts">
         <g transform="translate(-20 182)">
           <rect id="contacts-1-1" width="117" height="32" y="360" rx="6" opacity=".131"/>
-          <animate xlink:href="#contacts-1-1" id="contact_1" attributeType="XML" attributeName="opacity" from=".131" to="1" dur=".3s" begin=".3s;ENTER_letter.end" />
+          <animate xlink:href="#contacts-1-1" id="anim_contacts_1_1" attributeType="XML" attributeName="opacity" from=".131" to=".5" dur=".2s" begin=".1s;ENTER_letter.end" />
           <rect width="117" height="32" y="320" rx="6" opacity=".131"/>
           <rect width="117" height="32" y="280" rx="6" opacity=".131"/>
           <rect width="117" height="32" y="240" rx="6" opacity=".131"/>
@@ -42,18 +42,20 @@
           <rect width="117" height="32" y="160" rx="6" opacity=".131"/>
           <rect width="117" height="32" y="120" rx="6" opacity=".131"/>
           <rect width="117" height="32" y="80" rx="6" opacity=".131"/>
-          <rect width="117" height="32" y="40" rx="6" opacity=".131"/>
+          <rect id="contacts-2-1" width="117" height="32" y="40" rx="6" opacity=".131"/>
+          <animate xlink:href="#contacts-2-1" id="anim_contacts_2_1" attributeType="XML" attributeName="opacity" from=".1" to=".5" dur=".2s" begin="anim_contacts_1_1.end + .5s" />
           <rect width="117" height="32" rx="6" opacity=".131"/>
         </g>
       </g>
       <g mask="url(#services-c)" class='lines'>
         <g transform="translate(96 77)">
-          <path stroke="#FFF" stroke-width="3" d="M.808 162.134h25.466V.814h281.118V32.96" opacity=".1"/>
+          <path id="contacts-2-2" stroke="#FFF" stroke-width="3" d="M.808 162.134h25.466V.814h281.118V32.96" opacity=".1"/>
+          <animate xlink:href="#contacts-2-2" id="anim_contacts_2_2" attributeType="XML" attributeName="opacity" from=".1" to=".5" dur=".2s" begin="anim_contacts_2_1.begin" />
           <path stroke="#FFF" stroke-width="3" d="M1.05 121.556h10.166V23.35h336.43v10.408" opacity=".1"/>
           <path stroke="#FFF" stroke-width="3" d="M.867 240.866h41.44V13.5h64.625v21.078" opacity=".1"/>
           <path stroke="#FFF" stroke-width="3" d="M1.09 201.566h15.245v91.26H30.01v-63.97h46.838" opacity=".1"/>
           <path id="contacts-1-2" stroke="#FFF" stroke-width="3" d="M.945 481.13h13.79v121.326h253.377V543.02" opacity=".1"/>
-          <animate xlink:href="#contacts-1-2" id="contact_2" attributeType="XML" attributeName="opacity" from=".1" to="1" dur=".3s" begin="contact_1.begin" />
+          <animate xlink:href="#contacts-1-2" id="anim_contacts_1_2" attributeType="XML" attributeName="opacity" from=".1" to=".5" dur=".2s" begin="anim_contacts_1_1.begin" />
           <path stroke="#FFF" stroke-width="3" d="M.978 441.52h22.854v136.82H187.35v-35.832M425.647 424.45h53.903v86.303h42.376v-56.636h67.984" opacity=".1"/>
           <circle cx="526" cy="102" r="9" fill="#FFF" fill-opacity=".1"/>
           <circle cx="526" cy="132" r="9" fill="#FFF" fill-opacity=".1"/>
@@ -87,8 +89,7 @@
       </g>
       <g>
         <path id="contacts-1-3" fill="#FFF" d="M367.645 606.18v13.848h-8.11V606.18h-8.92v-19.04h25.14v19.04h-8.11z" opacity=".633"/>
-        <animate xlink:href="#contacts-1-3" id="contact_3" attributeType="XML" attributeName="opacity" from=".633" to="1" dur=".3s" begin="contact_1.begin" />
-        <!-- <animate xlink:href="#contacts-1-3" id="contact_3" attributeType="XML" attributeName="opacity" from=".633" to="1" dur=".2s" begin="contact_1.begin" /> -->
+        <animate xlink:href="#contacts-1-3" id="anim_contacts_1_3" attributeType="XML" attributeName="opacity" from=".633" to=".5" dur=".2s" begin="anim_contacts_1_2.begin" />
         <path fill="#D8D8D8" d="M350.614 587.14h25.14l8.11 3.462h-25.14l-8.11-3.462z"/>
         <path fill="#000" d="M350.795 587.2l8.07 2.922 16.89-41.717-16.89-4.682-8.07 10.017v33.46z" opacity=".05"/>
         <path fill="#C8C8C8" d="M356.29 588.005l2.896 2.554h22.246v-43.236l-22.924-3.445-2.217 3.445v40.678z"/>
