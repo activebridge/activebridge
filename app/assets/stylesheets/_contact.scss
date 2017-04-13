@@ -15,11 +15,14 @@
   max-width: 840px;
   .wrapper {
     max-height: 570px;
-    height: 100vh;
+    height: 63vw;
     transform-origin: center center;
     transition: all .3s;
     animation: pulse-minus 1s infinite .5s;
     animation-play-state: paused;
+    @media (min-width: 870px){
+      height: 100vh;
+    }
   }
   #contact-envelop-shadow {
     opacity: .1;
@@ -149,7 +152,10 @@ body[class*='contact'] #lazy_overlay.active {
       box-shadow: 5px 0 2px -1px rgba(0,0,0,.1),
                   -5px 0 2px -1px rgba(0,0,0,.1),
                   0 -5px 2px -1px rgba(0,0,0,.1);
-      transform: translateY(-91%);
+      transform: translateY(-38vw);
+      @media (min-width: 870px) {
+        transform: translateY(-91%);
+      }
     }
     form:invalid + .material-button {
       background: #888;
@@ -219,7 +225,7 @@ form:valid + .material-button {
   position: absolute;
   display: block;
   bottom: 14%;
-  right: 6%;
+  right: 16%;
   width: 5vw;
   height: 5vw;
   min-height: 40px;
