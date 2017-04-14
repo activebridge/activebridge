@@ -17,7 +17,7 @@
     max-height: 570px;
     height: 63vw;
     transform-origin: center center;
-    transition: all .3s;
+    transition: transform .3s;
     animation: pulse-minus 1s infinite .5s;
     animation-play-state: paused;
     @media (min-width: 870px){
@@ -80,15 +80,19 @@
   }
   .contact-form {
     position: absolute;
+    visibility: hidden !important;
+    height: 0;
+    max-height: 380px;
     left: 14vw;
     width: 72vw;
     max-width: 670px;
-    bottom: 10%;
+    bottom: 5%;
     padding: 5%;
     padding-bottom: 10%;
     background: white;
     z-index: 3;
-    transition: transform .3s .1s;
+    transform: translateY(0);
+    transition: transform .3s .1s, height .25s, visibility .1s;
     @media (min-width: 840px) {
       left: calc((100% - 72vw)/2);
     }
@@ -124,17 +128,13 @@ body[class*='contact'] #lazy_overlay.active {
   #up-triangle-shadow, #up-triangle-shadow-2 {
     opacity: 1;
   }
-  .contact-form {
-    transition: all .3s;
-    transform: translateY(0);
-  }
 
   #contact-envelop-shadow {
     animation-play-state: running;
   }
   #toggle-envelop-checkbox:checked ~ .envelop .wrapper {
     animation: none;
-    transition: all .3s;
+    transition: transform .3s;
     .up-triangle {
       transform: rotateX(180deg) translateY(-1px);
       transition: transform .3s 0s, z-index .2s 0s;
@@ -148,11 +148,14 @@ body[class*='contact'] #lazy_overlay.active {
       pointer-events: none;
     }
     .contact-form {
-      transition: transform .3s .1s, box-shadow .3s .1s;
+      transition: transform .3s .1s, box-shadow .3s .1s, height .25s, visibility .1s .1s;
       box-shadow: 5px 0 2px -1px rgba(0,0,0,.1),
                   -5px 0 2px -1px rgba(0,0,0,.1),
                   0 -5px 2px -1px rgba(0,0,0,.1);
       transform: translateY(-38vw);
+      height: 100%;
+      visibility: visible !important;
+      bottom: 10%;
       @media (min-width: 870px) {
         transform: translateY(-91%);
       }
