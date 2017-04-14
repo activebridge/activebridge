@@ -32,6 +32,9 @@
 .team-photos {
   position: absolute;
   max-height: 477px;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
   @media (max-width: 1118px) {
     height: 44vw;
   }
