@@ -32,10 +32,9 @@
   @media
   only screen and (max-height: 900px) and (max-width: 1400px),
   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1500px),
-  only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1500px)
+  only screen and (min-resolution: 120dpi) and (min-width: 1024px) and (max-width: 1500px)
   {
-    top: 18vh;
-    transform: scale(.7);
+    transform: translateY(-30%) scale(.7);
     * {
       font-size: 2.5vmin;
       line-height: 3.7vmin;
