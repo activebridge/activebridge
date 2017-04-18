@@ -1,6 +1,7 @@
 .camera {
   position: relative;
-  top: 16vmax;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -13,10 +14,9 @@
   @media
   only screen and (max-height: 900px) and (max-width: 1400px),
   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1500px),
-  only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1500px)
+  only screen and (min-resolution: 120dpi) and (min-width: 1024px) and (max-width: 1500px)
   {
-    top: 4vh;
-    transform: scale(.7);
+    transform: translateY(-50%) scale(.7);
   }
   svg {
     position: absolute;
