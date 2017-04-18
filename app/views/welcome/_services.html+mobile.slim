@@ -3,7 +3,7 @@ p.text-center= t('services.we_do')
 ul.skills
   - I18n.t('services.skills').each_with_index do |skill, index|
     li
-      = svg("skills/#{skill[:id]}")
+      = svg("skills/#{skill[:id]}_hex")
       = skill[:name].gsub('/', ' ')
 .accented_title: h2= t('services.agile_programming')
 dl.text-left.section itemscope="" itemtype="http://schema.org/thing"

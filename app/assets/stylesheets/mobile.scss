@@ -294,8 +294,13 @@ ul {
   }
 }
 
-#services dd {
-  display: block;
+#services {
+  .skills g path {
+    fill: #B868A0;
+  }
+  dd {
+    display: block;
+  }
 }
 
 #testimonials {

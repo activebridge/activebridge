@@ -7,7 +7,7 @@ div itemscope="" itemtype="http://schema.org/Thing"
       .skills
         - I18n.t('services.skills').each_with_index do |skill, index|
           .skill
-            = svg("skills/#{skill[:id]}")
+            = svg("skills/#{skill[:id]}_hex")
             .skill-title= skill[:name]
       .services-section
         input#agile_programming type='radio' name='active-tab' checked=true autofocus='true'
