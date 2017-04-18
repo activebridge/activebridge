@@ -1,7 +1,7 @@
 div itemscope="" itemtype="http://schema.org/Thing"
 .services-cont
-  input type='checkbox' id='toggle-terminal'
-  .terminal
+  /* input type='checkbox' id='toggle-terminal' */
+  /* .terminal */
     label for='toggle-terminal' ×
     .info
       p
@@ -40,17 +40,16 @@ div itemscope="" itemtype="http://schema.org/Thing"
       p officers; utility costs.
       p
         span.pointer
-  label.info-button for='toggle-terminal'
+  /* label.info-button for='toggle-terminal' */
     = image_tag 'services/info-button.svg'
   = inline_svg 'services/services_chip.svg', class: 'services-chip'
+  .skills
+    - I18n.t('services.skills').each_with_index do |skill, index|
+      = inline_svg "icons/skills/#{skill[:id]}", class: "#{skill[:id]}-skill"
   /* .services */
   /*   .services-title= t('services.title') */
   /*   .content.services-content */
   /*     h3.text-center= t('services.we_do') */
-  /*     .skills */
-  /*       - I18n.t('services.skills').each_with_index do |skill, index| */
-  /*         .skill */
-  /*           = svg("skills/#{skill[:id]}") */
   /*           .skill-title= skill[:name] */
   /*     .services-section */
   /*       input#agile_programming type='radio' name='active-tab' checked=true autofocus='true' */

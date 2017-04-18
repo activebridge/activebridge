@@ -30,6 +30,23 @@
       transition: opacity .2s;
     }
   }
+  .skills {
+    $skills: 5;
+    $time_per_skill: 2;
+    $total_animation_time: $time_per_skill * $skills;
+
+    svg {
+      opacity: 0;
+      animation: round #{$total_animation_time}s infinite;
+    }
+
+    @for $i from 1 to $skills {
+      svg:nth-of-type(#{$i}) {
+        animation-delay: #{$total_animation_time - $time_per_skill * $i}s;
+      }
+    }
+  }
+
   .terminal {
     position: relative;
     overflow: hidden;
@@ -169,212 +186,10 @@
   from { width: 0; }
   to { width: 100%; }
 }
+@keyframes round {
+  25% { opacity:1; }
+  40% { opacity:0; }
+ }
 
 @keyframes blink { to { opacity: .0; } }
 @keyframes show { to { opacity: 1; } }
-// .services {
-//   perspective: 500px;
-//   max-height: 100vh;
-//   height: 100vh;
-//   overflow-x: hidden;
-//   position: relative;
-//   color: $light-grey;
-//   .skills {
-//     white-space: nowrap;
-//     margin: 0 10%;
-//     height: 35vh;
-//     .skill {
-//       width: 18%;
-//       display: inline-block;
-//       vertical-align: top;
-//       white-space: normal;
-//       svg {
-//         max-height: 15vmin;
-//         max-height: 150px;
-//         height: 22vmin;
-//         width: 95%;
-//         .tech-mask {
-//           fill: white;
-//         }
-//       }
-//     }
-//   }
-//   &-content {
-//     position: absolute;
-//     width: 100%;
-//     padding-top: 12vh;
-//     height: 100vh;
-//     > h3 {
-//       margin: 0;
-//       height: 10vh;
-//       line-height: 10vh;
-//     }
-//   }
-//   &-background-svg {
-//     position: absolute;
-//     width: 90%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     margin: 0 5%;
-//     opacity: 0.9;
-//     z-index: -1;
-//   }
-//   &-section {
-//     min-height: 27vh;
-//     width: 100%;
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     border-radius: 0 0 15px 15px;
-//     &-tab {
-//       line-height: 1em;
-//       top: 0;
-//       left: 0;
-//       right: 0;
-//       bottom: 0;
-//       position: absolute;
-//       border-radius: 0 0 15px 15px;
-
-//       h3, h2 { margin: 0; }
-//       h4 {
-//         font-size: inherit;
-//         font-weight: normal;
-//         display: inline;
-//       }
-//       &-title {
-//         background: $light-grey;
-//         position: relative;
-//         height: 10vh;
-//         line-height: 20px;
-//         z-index: 1;
-//         width: 33%;
-//         left: 0;
-//         display: inline-block;
-//         color: $dark-violet;
-//         transition: .2s;
-//         font-size: 1.5rem;
-//         box-sizing: border-box;
-//         border-radius: 15px 15px 0 0;
-//         outline: none;
-//         &:nth-child(2) {
-//           left: 33%;
-//         }
-//         &:hover {
-//           background: rgba($white, 0.5);
-//           color: #333;
-//         }
-//         label {
-//           padding: 10px 2%;
-//           display: flex;
-//           justify-content: center;
-//           align-items: center;
-//           text-align: center;
-//           position: absolute;
-//           left: 0;
-//           right: 0;
-//           top: 0;
-//           bottom: 0;
-//         }
-//       }
-//       &-description {
-//         opacity: 0;
-//         position: relative;
-//         height: 32vh;
-//         width: 100%;
-//         top: -4px;
-//         left: 0;
-//         bottom: 0;
-//         padding: 2%;
-//         z-index: 10;
-//         transition: .3s;
-//         border-radius: 0 0 15px 15px;
-//         line-height: 1.15rem;
-//         text-align: justify;
-//         font-size: 1rem;
-//         overflow: auto;
-//         margin: 0;
-//         text-indent: 2vw;
-//         dt {
-//           text-indent: 0;
-//           color: #744a71;
-//           line-height: 1.17rem;
-//           font-size: 1.17rem;
-//           padding: 11px 0 4px 0;
-//         }
-//         dt:first-child {
-//           padding: 0 0 4px 0;
-//         }
-//         dd {
-//           margin-left: 0px;
-//         }
-//       }
-//     }
-//     input:checked + .services-section-tab {
-//       .services-section-tab-description {
-//         background: $white;
-//         opacity: 1;
-//         color: $gray;
-//         z-index: 100;
-//         h3 {
-//           color: $dark-violet;
-//           padding-bottom: 7px;
-//           text-indent: 0;
-//         }
-//       }
-//       .services-section-tab-title {
-//         background: $white;
-//       }
-//     }
-//   }
-// }
-
-// @media only screen and (min-width: 1441px) {
-//   .services {
-//     .skills .skill {
-//       font-size: 2.4vmin;
-//     }
-//     &-content {
-//       > h3 {
-//         font-size: 3vmin;
-//       }
-//     }
-//     &-section {
-//       &-tab {
-//         &-title {
-//           height: 8vmin;
-//           line-height: 3.6vmin;
-//           font-size: 3.6vmin;
-//         }
-//         &-description {
-//           line-height: 2.6vmin;
-//           font-size: 2.4vmin;
-//           text-indent: 2vw;
-//           dt {
-//             text-indent: 0;
-//             line-height: 3vmin;
-//             font-size: 3vmin;
-//             padding: .8vw 0 .3vw 0;
-//           }
-//           dt:first-child {
-//             padding: 0 0 .3vw 0;
-//           }
-//           dd {
-//             margin-left: 0px;
-//           }
-//         }
-//       }
-//       input:checked + .services-section-tab {
-//         .services-section-tab-description {
-//           text-indent: 2vw;
-//           h3 {
-//             padding: 0 0 .3vw 0;
-//             line-height: 1.5vw;
-//             font-size: 1.5vw;
-//             text-indent: 0;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
