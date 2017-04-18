@@ -6,30 +6,22 @@
 
 .envelop {
   position: relative;
-  top: 18vmax;
+  top: 50%;
+  transform: translateY(-30%);
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 100%;
   max-width: 840px;
   .wrapper {
-    height: 50vmin;
-    min-height: 25vmax;
-    max-height: 90vmin;
+    max-height: 570px;
+    height: 63vw;
     transform-origin: center center;
-    transition: all .3s;
+    transition: transform .3s;
     animation: pulse-minus 1s infinite .5s;
     animation-play-state: paused;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    @media (min-width: 650px) {
-      height: 55vmin;
-    }
-    @media (min-width: 840px) {
-      height: 60vmin;
+    @media (min-width: 870px){
+      height: 100vh;
     }
   }
   #contact-envelop-shadow {
@@ -40,13 +32,12 @@
   @media
   only screen and (max-height: 900px) and (max-width: 1400px),
   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1500px),
-  only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1500px)
+  only screen and (min-resolution: 120dpi) and (min-width: 1024px) and (max-width: 1500px)
   {
-    top: 28vh;
-    transform: scale(.7);
+    transform: translateY(-30%) scale(.7);
     * {
-      font-size: 3vmin;
-      line-height: 4vmin;
+      font-size: 2.5vmin;
+      line-height: 3.7vmin;
     }
     .error, [class^=material] label {
       font-size: 16px !important;
@@ -64,7 +55,6 @@
     margin: 0 auto;
     width: 90vw;
     max-width: 840px;
-    transition: all .3s;
   }
   .up-triangle {
     top: 2vw;
@@ -88,18 +78,20 @@
     z-index: 4;
   }
   .contact-form {
-    height: 90%;
     position: absolute;
+    visibility: hidden !important;
+    height: 0;
+    max-height: 380px;
     left: 14vw;
     width: 72vw;
     max-width: 670px;
-    max-height: 50vh;
-    bottom: 0;
+    bottom: 5%;
     padding: 5%;
     padding-bottom: 10%;
     background: white;
     z-index: 3;
-    transition: transform .3s .1s;
+    transform: translateY(0);
+    transition: transform .3s .1s, height .25s, visibility .1s;
     @media (min-width: 840px) {
       left: calc((100% - 72vw)/2);
     }
@@ -109,7 +101,7 @@
   }
   address.vcard {
     position: absolute;
-    bottom: 1vmin;
+    bottom: 10%;
     left: 16%;
     font-size: 14px;
     font-style: normal !important;
@@ -135,17 +127,13 @@ body[class*='contact'] #lazy_overlay.active {
   #up-triangle-shadow, #up-triangle-shadow-2 {
     opacity: 1;
   }
-  .contact-form {
-    transition: all .3s;
-    transform: translateY(0);
-  }
 
   #contact-envelop-shadow {
     animation-play-state: running;
   }
   #toggle-envelop-checkbox:checked ~ .envelop .wrapper {
     animation: none;
-    transition: all .3s;
+    transition: transform .3s;
     .up-triangle {
       transform: rotateX(180deg) translateY(-1px);
       transition: transform .3s 0s, z-index .2s 0s;
@@ -159,11 +147,17 @@ body[class*='contact'] #lazy_overlay.active {
       pointer-events: none;
     }
     .contact-form {
-      transition: transform .3s .1s, box-shadow .3s .1s;
+      transition: transform .3s .1s, box-shadow .3s .1s, height .25s, visibility .1s .1s;
       box-shadow: 5px 0 2px -1px rgba(0,0,0,.1),
                   -5px 0 2px -1px rgba(0,0,0,.1),
                   0 -5px 2px -1px rgba(0,0,0,.1);
-      transform: translateY(-35vmin);
+      transform: translateY(-38vw);
+      height: 100%;
+      visibility: visible !important;
+      bottom: 10%;
+      @media (min-width: 870px) {
+        transform: translateY(-91%);
+      }
     }
     form:invalid + .material-button {
       background: #888;
@@ -232,10 +226,14 @@ form:valid + .material-button {
 .material-button {
   position: absolute;
   display: block;
-  bottom: 0;
-  right: 8vmin;
-  width: 10vmin;
-  height: 10vmin;
+  bottom: 14%;
+  right: 16%;
+  width: 5vw;
+  height: 5vw;
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 60px;
+  max-width: 60px;
   border-radius: 50%;
   border: none;
   background-color: $gradient;
@@ -253,15 +251,15 @@ form:valid + .material-button {
   &:before, &:after {
     content: '';
     position: absolute;
-    top: 25%;
-    left: 25%;
     display: block;
-    height: 50%;
-    width: 50%;
     transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1),
                 opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:before {
+    top: 26%;
+    left: 28%;
+    height: 45%;
+    width: 45%;
     background-image: image-url('contact/send-icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -269,6 +267,10 @@ form:valid + .material-button {
     transform: rotate(90deg);
   }
   &:after {
+    top: 25%;
+    left: 25%;
+    height: 50%;
+    width: 50%;
     background-image: image-url('contact/create-icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -276,8 +278,7 @@ form:valid + .material-button {
 }
 
 .material-input {
-  height: 33%;
-  display: inline-flex;
+  height: 70px;
   &.left {
     float: left;
     width: 46%;
