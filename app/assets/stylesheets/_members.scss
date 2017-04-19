@@ -8,6 +8,7 @@
   width: 100%;
   max-width: 1000px;
   height: 740px;
+  z-index: 2;
   @media (max-width: 1118px) {
     height: 66vw;
   }
