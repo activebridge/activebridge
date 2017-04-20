@@ -21,7 +21,7 @@ RSpec.feature 'Mailer', type: :feature do
     contact_mail = perform_enqueued_jobs { ActionMailer::DeliveryJob.perform_now(*enqueued_jobs.first[:args]) }
     user_mail    = perform_enqueued_jobs { ActionMailer::DeliveryJob.perform_now(*enqueued_jobs.second[:args]) }
 
-    expect(contact_mail.body).to have_content('We will look over your message and get back to you as soon as possible')
+    expect(contact_mail.body).to have_content(I18n.t('.request.confirm.message'))
     expect(user_mail.body).to have_content(message)
   end
 end
