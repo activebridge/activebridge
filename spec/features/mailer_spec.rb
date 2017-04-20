@@ -2,26 +2,25 @@ require 'rails_helper'
 
 include ActiveJob::TestHelper
 
-ActiveJob::Base.queue_adapter = :test
-
 RSpec.feature 'Mailer', type: :feature do
-  let(:message) { 'Active Bridge - the best company ever!' }
-
-  before { clear_enqueued_jobs }
+  let(:info) {{
+    name: 'Alex',
+    email: 'valid_email@active-bridge.com',
+    message: 'Active Bridge - the best company ever!'
+  }}
+  let(:ab_email) { 'contact@active-bridge.com' }
 
   scenario 'send emails via contact form' do
     visit page_url(:contact)
-    expect(page).to have_content('contact@active-bridge.com')
+    expect(page).to have_content(ab_email)
 
-    fill_in 'Your name', with: 'Alex'
-    fill_in 'Your email', with: 'valid_email@active-bridge.com'
-    fill_in 'Text message', with: message
-    expect { click_button 'submit'}.to change { enqueued_jobs.size }.by(2)
+    fill_in 'Your name', with: info[:name]
+    fill_in 'Your email', with: info[:email]
+    fill_in 'Text message', with: info[:message]
 
-    contact_mail = perform_enqueued_jobs { ActionMailer::DeliveryJob.perform_now(*enqueued_jobs.first[:args]) }
-    user_mail    = perform_enqueued_jobs { ActionMailer::DeliveryJob.perform_now(*enqueued_jobs.second[:args]) }
+    click_button 'submit'
 
-    expect(contact_mail.body).to have_content(I18n.t('.request.confirm.message'))
-    expect(user_mail.body).to have_content(message)
+    open_email ab_email
+    expect(current_email.body).to have_content(info[:message])
   end
 end

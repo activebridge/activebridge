@@ -37,6 +37,7 @@ group :development, :test do
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capybara'
+  gem 'capybara-email'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'letter_opener'
