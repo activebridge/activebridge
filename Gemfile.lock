@@ -255,6 +255,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.3)
+    rb-readline (0.5.4)
     redcarpet (3.4.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
@@ -391,6 +392,7 @@ DEPENDENCIES
   poltergeist
   pry
   rails (= 5.0.1)
+  rb-readline
   redcarpet
   roadie-rails
   rollbar
