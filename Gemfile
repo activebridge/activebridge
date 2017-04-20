@@ -42,6 +42,7 @@ group :development, :test do
   gem 'letter_opener'
   gem 'poltergeist'
   gem 'pry'
+  gem 'rb-readline'
   gem 'rspec-rails'
   gem 'rspec-retry'
   gem 'simplecov', require: false
