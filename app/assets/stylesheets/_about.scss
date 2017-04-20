@@ -84,6 +84,7 @@
   }
 
   &-title {
+    position: relative;
     font-size: 2rem;
     color: $white;
     display: inline-block;
@@ -91,6 +92,7 @@
     text-shadow: 1px 3px rgba($black, .9);
     transform: rotate(-5deg);
     -webkit-backface-visibility: hidden;
+    z-index: 1;
   }
 
   &-desc:hover, &-items:hover {
@@ -110,6 +112,7 @@
     right: 3%;
     transform: rotate(5deg);
     -webkit-backface-visibility: hidden;
+    z-index: 1;
 
     dt {
       text-align: center;
