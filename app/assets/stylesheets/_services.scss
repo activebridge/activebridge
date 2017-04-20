@@ -1,6 +1,5 @@
 .services-cont {
   position: relative;
-  transform: translateY(-50%);
   top: 50%;
   left: 0;
   right: 0;
@@ -9,6 +8,11 @@
   max-width: 450px;
   height: 100%;
   max-height: 512px;
+  transform: translateY(-50%) scale(.9);
+  transition: opacity .3s;
+  @media (max-width: 1000px) {
+    transform: translateY(-50%) scale(.8);
+  }
   svg {
     position: absolute;
     top: 50%;
@@ -44,8 +48,8 @@
       opacity: 0;
       animation: round #{$total_animation_time}s infinite;
       path {
-        fill: #c7c7c7;
-        stroke: rgba(169, 169, 169, 0.46);
+        fill: #ffffff;
+        stroke: rgba(192, 192, 193, 0.64);
         stroke-dashoffset: 500;
         animation: stroke #{$total_animation_time / $time_per_skill}s infinite;
       }

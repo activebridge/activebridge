@@ -9,6 +9,7 @@
   max-width: 1000px;
   height: 740px;
   z-index: 2;
+  transition: opacity .3s;
   @media (max-width: 1118px) {
     height: 66vw;
   }
