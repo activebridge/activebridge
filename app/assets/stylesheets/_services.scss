@@ -65,141 +65,221 @@
     }
   }
 
-  .terminal {
+//   .terminal {
+//     position: relative;
+//     overflow: hidden;
+//     left: 5%;
+//     width: 90%;
+//     height: 100%;
+//     opacity: 1;
+//     border-radius: 8px;
+//     box-shadow: none;
+//     background: none;
+//     transition: box-shadow .3s 0s;
+//     z-index: 1;
+//     &:before {
+//       content: '';
+//       display: block;
+//       z-index: 1;
+//       position: absolute;
+//       border-radius: 50%;
+//       top: 2%;
+//       left: 2%;
+//       height: 0;
+//       width: 0;
+//       opacity: 0;
+//       transform: translate(-50%, -50%);
+//       transition: width .4s .3s, height .4s .3s, opacity .2s .6s;
+//       background: black;
+//     }
+//     &:after {
+//       content: '';
+//       top: 0;
+//       left: 0;
+//       height: 0;
+//       width: 100%;
+//       position: absolute;
+//       z-index: 2;
+//       background: #ccc;
+//       transition: height .3s 0s;
+//     }
+//     label {
+//       width: 16px;
+//       height: 16px;
+//       top: 7px;
+//       left: 10px;
+//       border-radius: 50%;
+//       background: #9a4fa7;
+//       text-align: center;
+//       font-size: 14px;
+//       line-height: 15px;
+//       color: #9a4fa7;
+//       opacity: 0;
+//       transition: opacity .2s;
+//       &:hover {
+//         color: white;
+//       }
+//     }
+//     .info {
+//       position: absolute;
+//       z-index: 1;
+//       top: 30px;
+//       left: 0;
+//       opacity: 0;
+//       padding: 10px 15px;
+//     }
+//     p {
+//       color: lime;
+//       font-family: "Courier";
+//       white-space: nowrap;
+//       overflow: hidden;
+//       width: 0;
+//       margin: 0;
+//       line-height: 20px;
+//       animation: type 2s steps(120, end);
+//       animation-play-state: paused;
+//       animation-fill-mode: forwards;
+//       position: relative;
+//       padding: 0px 0 0 195px;
+//       &:before {
+//         content: 'ab@team:~/services$ ';
+//         left: 0;
+//         position: absolute;
+//         color: white;
+//         opacity: 0;
+//         animation: show 0s 1;
+//         animation-play-state: paused;
+//         animation-fill-mode: forwards;
+//       }
+//     }
+//   }
+
+//   #toggle-terminal:checked + .terminal {
+//     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+//     transition: box-shadow 0s .2s;
+//     &:before {
+//       top: 2%;
+//       left: 2%;
+//       opacity: 1;
+//       height: 170vmax;
+//       width: 170vmax;
+//       transition-delay: 0s;
+//     }
+//     &:after {
+//       height: 30px;
+//       transition: height .3s .2s;
+//     }
+//     label {
+//       opacity: 1;
+//       transition-delay: .5s;
+//     }
+//     + label {
+//       opacity: 0;
+//     }
+//     .info {
+//       opacity: 1;
+//     }
+
+//     $lines: 32;
+//     $delay: 2;
+
+//     @for $i from 1 to $lines {
+//       p:nth-of-type(#{$i}) {
+//         animation-play-state: running;
+//         animation-delay: #{$i * $delay - $delay}s;
+//         &:before {
+//           animation-play-state: running;
+//           animation-delay: #{$i * $delay - $delay}s;
+//         }
+//       }
+//     }
+
+//     span{
+//       animation: blink 1s infinite;
+//     }
+//   }
+}
+
+
+.terminal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  .info {
     position: relative;
-    overflow: hidden;
-    left: 5%;
-    width: 90%;
-    height: 100%;
-    opacity: 1;
-    border-radius: 8px;
-    box-shadow: none;
-    background: none;
-    transition: box-shadow .3s 0s;
+    top: 50%;
+    left: 50%;
+    max-width: 800px;
+    width: 80vw;
+    padding: 20px;
+    font-family: monospace, sans-serif;
+    border: 2px solid #00ABDF;
+    color: white;
     z-index: 1;
+    transform: translate(-50%, -50%);
     &:before {
-      content: '';
-      display: block;
-      z-index: 1;
       position: absolute;
-      border-radius: 50%;
-      top: 2%;
-      left: 2%;
-      height: 0;
-      width: 0;
-      opacity: 0;
-      transform: translate(-50%, -50%);
-      transition: width .4s .3s, height .4s .3s, opacity .2s .6s;
-      background: black;
+      font-size: 24px;
+      top: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: 'Extended skills info';
+      text-transform: uppercase;
+      padding: 0 13px;
+      border-left: 2px solid #00ABDF;
+      border-right: 2px solid #00ABDF;
     }
-    &:after {
-      content: '';
-      top: 0;
-      left: 0;
-      height: 0;
-      width: 100%;
-      position: absolute;
-      z-index: 2;
-      background: #ccc;
-      transition: height .3s 0s;
-    }
-    label {
-      width: 16px;
-      height: 16px;
-      top: 7px;
-      left: 10px;
-      border-radius: 50%;
-      background: #9a4fa7;
-      text-align: center;
-      font-size: 14px;
-      line-height: 15px;
-      color: #9a4fa7;
-      opacity: 0;
-      transition: opacity .2s;
-      &:hover {
-        color: white;
+    .text-block {
+      max-height: 300px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 6px;
+        background: rgba(white, .1);
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color: #00ABDF;
       }
     }
-    .info {
-      position: absolute;
-      z-index: 1;
-      top: 30px;
-      left: 0;
-      opacity: 0;
-      padding: 10px 15px;
-    }
-    p {
-      color: lime;
-      font-family: "Courier";
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      margin: 0;
-      line-height: 20px;
-      animation: type 2s steps(120, end);
-      animation-play-state: paused;
-      animation-fill-mode: forwards;
-      position: relative;
-      padding: 0px 0 0 195px;
-      &:before {
-        content: 'ab@team:~/services$ ';
-        left: 0;
-        position: absolute;
-        color: white;
-        opacity: 0;
-        animation: show 0s 1;
-        animation-play-state: paused;
-        animation-fill-mode: forwards;
-      }
-    }
+
   }
-
-  #toggle-terminal:checked + .terminal {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-    transition: box-shadow 0s .2s;
-    &:before {
-      top: 2%;
-      left: 2%;
-      opacity: 1;
-      height: 170vmax;
-      width: 170vmax;
-      transition-delay: 0s;
-    }
-    &:after {
-      height: 30px;
-      transition: height .3s .2s;
-    }
-    label {
-      opacity: 1;
-      transition-delay: .5s;
-    }
-    + label {
-      opacity: 0;
-    }
-    .info {
-      opacity: 1;
-    }
-
-    $lines: 32;
-    $delay: 2;
-
-    @for $i from 1 to $lines {
-      p:nth-of-type(#{$i}) {
-        animation-play-state: running;
-        animation-delay: #{$i * $delay - $delay}s;
-        &:before {
-          animation-play-state: running;
-          animation-delay: #{$i * $delay - $delay}s;
-        }
+  label {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+  }
+  .waves {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 70px;
+    svg {
+      position: absolute;
+      &:last-of-type {
+        top: 30px;
+        animation: play 10s infinite cubic-bezier(0, 0.17, 1, 0.78);
       }
-    }
-
-    span{
-      animation: blink 1s infinite;
     }
   }
 }
 
+
+#toggle-terminal:checked + .terminal-container {
+  opacity: 1;
+  z-index: 1;
+}
+@keyframes play {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-75.5%);
+  }
+}
 @keyframes type {
   from { width: 0; }
   to { width: 100%; }

@@ -1,47 +1,5 @@
 div itemscope="" itemtype="http://schema.org/Thing"
 .services-cont
-  /* input type='checkbox' id='toggle-terminal' */
-  /* .terminal */
-    label for='toggle-terminal' ×
-    .info
-      p
-        b Web support
-      p The development process is an ongoing process for all time
-      p product existing. That's why the main idea of development
-      p industry is Dedicated Team. What's necessary to develop
-      p and maintain web product. The main features of dedicated
-      p team realization can be short product releases, halving
-      p functional step-by-step; there is no psychological problem
-      p as hiding troubles from customers when product realization
-      p is; the customer has ability quickly responds and makes
-      p decisions relating to functional improvement.
-      p Ordering-company no needs to create a development and
-      p product testing division. Save your financial and material
-      p resources, time and financial costs for the set of a
-      p dedicated team; providing workplaces; training for the
-      p officers; utility costs.
-      p
-        span.pointer
-      p
-        b Web support
-      p The development process is an ongoing process for all time
-      p product existing. That's why the main idea of development
-      p industry is Dedicated Team. What's necessary to develop
-      p and maintain web product. The main features of dedicated
-      p team realization can be short product releases, halving
-      p functional step-by-step; there is no psychological problem
-      p as hiding troubles from customers when product realization
-      p is; the customer has ability quickly responds and makes
-      p decisions relating to functional improvement.
-      p Ordering-company no needs to create a development and
-      p product testing division. Save your financial and material
-      p resources, time and financial costs for the set of a
-      p dedicated team; providing workplaces; training for the
-      p officers; utility costs.
-      p
-        span.pointer
-  /* label.info-button for='toggle-terminal' */
-    = image_tag 'services/info-button.svg'
   = inline_svg 'services/services_chip.svg', class: 'services-chip'
   .skills
     - I18n.t('services.skills').each_with_index do |skill, index|
@@ -80,3 +38,60 @@ div itemscope="" itemtype="http://schema.org/Thing"
   /*             = t('services.team.title') */
   /*           div */
   /*             == t('services.team.desc') */
+  label.info-button for='toggle-terminal'
+    = image_tag 'services/info-button.svg'
+input type='checkbox' id='toggle-terminal' style="z-index: 10; position: absolute; top: 50px; left: 50px;"
+.terminal-container
+  label for='toggle-terminal' ×
+  .info
+    .text-block
+      == t('services.custom_web_development.title')
+      == t('services.custom_web_development.desc')
+      == t('services.scrum.title')
+      == t('services.scrum.desc')
+      == t('services.free_review.title')
+      == t('services.free_review.desc')
+      == t('services.code_audit')
+      == t('services.team.desc')
+
+    .waves
+      = inline_svg 'services/waves_bg.svg'
+      = inline_svg 'services/curve_line.svg'
+
+
+    /* p */
+    /*   b Web support */
+    /* p The development process is an ongoing process for all time */
+    /* p product existing. That's why the main idea of development */
+    /* p industry is Dedicated Team. What's necessary to develop */
+    /* p and maintain web product. The main features of dedicated */
+    /* p team realization can be short product releases, halving */
+    /* p functional step-by-step; there is no psychological problem */
+    /* p as hiding troubles from customers when product realization */
+    /* p is; the customer has ability quickly responds and makes */
+    /* p decisions relating to functional improvement. */
+    /* p Ordering-company no needs to create a development and */
+    /* p product testing division. Save your financial and material */
+    /* p resources, time and financial costs for the set of a */
+    /* p dedicated team; providing workplaces; training for the */
+    /* p officers; utility costs. */
+    /* p */
+    /*   span.pointer */
+    /* p */
+    /*   b Web support */
+    /* p The development process is an ongoing process for all time */
+    /* p product existing. That's why the main idea of development */
+    /* p industry is Dedicated Team. What's necessary to develop */
+    /* p and maintain web product. The main features of dedicated */
+    /* p team realization can be short product releases, halving */
+    /* p functional step-by-step; there is no psychological problem */
+    /* p as hiding troubles from customers when product realization */
+    /* p is; the customer has ability quickly responds and makes */
+    /* p decisions relating to functional improvement. */
+    /* p Ordering-company no needs to create a development and */
+    /* p product testing division. Save your financial and material */
+    /* p resources, time and financial costs for the set of a */
+    /* p dedicated team; providing workplaces; training for the */
+    /* p officers; utility costs. */
+    /* p */
+    /*   span.pointer */
