@@ -1,5 +1,6 @@
 $lazy-start:      translateY(-500%);
 $lazy-end:        translateY(0%);
+$lazy-close:      asset-data-url('icons/esc-button.svg');
 
 @import 'variables';
 @import 'lazybox';
@@ -50,16 +51,10 @@ svg#main-svg {
 }
 
 #lazy_close {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(yellow, .7);
-  z-index: 1;
-  cursor: default;
-  &:after {
-    content: '';
+  transform: scale(0.6);
+  transition: opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    opacity: .8;
   }
 }
 
