@@ -26,6 +26,7 @@ window.submit = (form) ->
   return false
 
 window.animate = -> document.getElementById('ab').checked = true
+window.onload = -> openEnvelope(this.location.pathname)
 
 closeWindow = ->
   document.querySelector('#lazy_overlay').className = ''
@@ -44,13 +45,19 @@ openPage = (event) ->
       eval(xhr.responseText)
       focus()
       initTeamScroll()
+      openEnvelope(href)
   xhr.send()
   dataLayer.push({
     'event':'VirtualPageview',
     'virtualPageURL': href,
     'virtualPageTitle' : href
   })
+
   event.preventDefault()
+
+openEnvelope = (href) ->
+  return unless href.indexOf('contact') == -1
+  setTimeout "document.querySelector('#toggle-envelop-checkbox').checked = true", 1500
 
 initTeamScroll = ->
   if document.querySelector('.members')
