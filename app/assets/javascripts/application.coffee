@@ -56,8 +56,8 @@ openPage = (event) ->
   event.preventDefault()
 
 openEnvelope = (href) ->
-  return unless href.indexOf('contact') == -1
-  setTimeout "document.querySelector('#toggle-envelop-checkbox').checked = true", 1500
+  return unless href.indexOf('contact') != -1
+  setTimeout "document.querySelector('#toggle-envelop-checkbox').checked = true", 2500
 
 initTeamScroll = ->
   if document.querySelector('.members')
