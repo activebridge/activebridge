@@ -15,7 +15,7 @@ RSpec.feature 'Main', type: :feature do
 
   scenario 'Visit services page' do
     visit page_url(:services)
-    expect(page).to have_content('Services')
+    expect(page).to have_content('OUR PROF. SKILLS')
   end
 
   scenario 'Visit testimonials page' do
@@ -40,7 +40,7 @@ RSpec.feature 'Main', type: :feature do
     find('#about', visible: false).trigger :click
     expect(page).to have_content('Active Bridge - ruby on rails agency')
     find('#services', visible: false).trigger :click
-    expect(page).to have_content('SERVICES')
+    expect(page).to have_content('OUR PROF. SKILLS')
     find('#testimonials', visible: false).trigger :click
     expect(page).to have_content('TESTIMONIALS')
     find('#portfolio', visible: false).trigger :click
