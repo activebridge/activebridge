@@ -95,12 +95,13 @@ en:
     title: Services
     we_do: We can help you on every stage of web development process
     agile_programming: Ruby on Rails web development
-    custom_web_development:
-      title: Custom Web Development
-      desc: As Ruby on Rails developers, we know a variety of
-        programming languages and technologies. Our team has
-        fundamental knowledge in
-        Strong Skills.
+    full_stack_development:
+      title: Full Stack Development
+      desc:
+        Members of our web development company are Senior/Middle Ruby on Rails developers.
+        It means they provide frontend, backend programming, working with networks and databases,
+        and other architectural solutions. Our specialists bring your product to success stage,
+        making fast iterations and building MVP completely.
     skills:
       - id: ror
         name: Ruby on Rails
@@ -122,19 +123,20 @@ en:
         name: MySQL PostgreSQL MongoDB Redis
         level: 85
         icon: database
-    scrum:
-      title: Scrum process
+    agile_methodology:
+      title: Agile Methodology
       desc:
-        Thanks to using <h4>Scrum methodology</h4>, we can deliver large and complex products.
-        Through effective planning and good communication within our <h4>agile development rails</h4> team,
-        we can complete the projects with fast delivery times.
-    free_review:
-      title: Free code review
+        Active Bridge follows agile development team structure and scrum process. Thanks to using
+        this methodology, we can deliver large and complex software and web products. Through implementing
+        Extreme programming like test-driven development, daily meetings, fine-scale feedbacks, continuous
+        integration, refactoring and small releases we provide effectiveness and productivity across all
+        programming process
+    technologies:
+      title: Technologies
       desc:
-        We implement this engineering practice in terms of <h4>agile development methodology</h4>.
-        Main goal code review is to identify differences in code writing style according to Ruby style guide.
-        To provide this convention we use rubocob gem and make the description of problem-solving
-        in a short time.
+        As Ruby on Rails developers we know a variety of programming languages and technologies. Our team
+        has fundamental knowledge in':' Javascript / CoffeeScript / jQuery; AngularJS / Ember.js / Backbone.js;
+        HTML / Haml / Slim; CSS / SASS / LESS / Compass; MySQL / PostgreSQL / MongoDB / Redis
     maintenance_and_support: Maintenance and Support
     code_audit:
       The existing <h4>web application</h4> needs sustained attention. It is necessary to make some updates
@@ -143,18 +145,13 @@ en:
       with regular checkups and web analytic tools.
     outstaffing: Outstaffing
     team:
-      title: Web support
+      title: Quality and Transparency
       desc:
-        The development process is an ongoing process for all time product existing.
-        That's why the main idea of development industry is <h4>Dedicated Team</h4>.
-        What's necessary to develop and maintain web product.
-        The main features of dedicated team realization can be short <h4>product releases</h4>,
-        halving functional step-by-step; there is no psychological problem as hiding troubles
-        from customers when product realization is; the customer has ability quickly responds
-        and makes decisions relating to functional improvement.
-        Ordering-company no needs to create a development and product testing division.
-        Save your financial and material resources, time and financial costs for the set
-        of a <h4>dedicated team</h4>; providing workplaces; training for the officers; utility costs.
+        We review code to understand clearly how the products work. Following the test-driven
+        development process our programmers can design and avoid all possible bugs that can destroy
+        application functionality and security.
+        Our customers can be involved in development process any time and as long as they want.
+        We use open source platforms to perform our changes and customize management process.
   testimonials:
     title: Testimonials
     all:
