@@ -2,12 +2,9 @@ en:
   request:
     confirm:
       message:
-        Thanks for filling out our form
-        We will look over your message and get back to you as soon as possible.
-        If your inquiry is urgent, please use the telephone number listed below, to talk to one of our staff members.
-        Otherwise, we will reply by email shortly.
-        +380636086045
-
+        Thanks for contacting us! This email is checked  during business hours (9-6 EEST).
+        We’ll look over your message and get back to you as soon as possible, usually within a few hours.
+        If your inquiry is urgent, feel free to call us  +380636086045.
   hello:
     Hello! We are Active Bridge - a Ruby on Rails web development agency.
     Our team provides modern web methods for building high-quality
