@@ -129,11 +129,11 @@ svg#main-svg {
     }
     #social-icons {
       g {
+        transform-origin: center;
+        -moz-transform-origin: top;
         transform: translateY(0);
         opacity: 1;
         &:hover {
-          transform: translate(0) scale(1);
-          transform-origin: center;
           animation: button_jump .3s 1;
         }
       }
@@ -255,7 +255,10 @@ svg#main-svg {
 }
 
 @keyframes button_jump {
-  50% { transform: translate(1px, 0px) scale(.8); }
+  50% {
+    transform: scale(.8);
+    -moz-transform: scale(.99);
+  }
 }
 
 @keyframes svg_light_blink {
