@@ -4,7 +4,7 @@ input type='checkbox' id='toggle-terminal' style="z-index: 10; position: absolut
   = inline_svg 'services/services_chip.svg', class: 'services-chip'
   .skills
     - I18n.t('services.skills').each_with_index do |skill, index|
-      = inline_svg "icons/skills/#{skill[:id]}", class: "#{skill[:id]}-skill"
+      = inline_svg "icons/skills/#{skill[:id]}.svg", class: "#{skill[:id]}-skill"
   label.info-button for='toggle-terminal'
     = image_tag 'services/info-button.svg'
 .terminal-container
