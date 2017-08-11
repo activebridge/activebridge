@@ -57,6 +57,7 @@ en:
       country: Ukraine
       postal_code: 18000
       phone_number: '+380636086045'
+      success_message: "Thank you! Your message has been successfully sent.\n Please check your email."
     testimonials:
       title: Testimonials
   team:
