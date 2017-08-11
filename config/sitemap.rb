@@ -4,7 +4,8 @@ require 'sitemap_generator'
 PAGES = %i(about services team portfolio).freeze
 
 SitemapGenerator::Sitemap.default_host = 'https://active-bridge.com'
-SitemapGenerator::Sitemap.sitemaps_path = 'shared/'
+SitemapGenerator::Sitemap.public_path = 'public/sitemap/'
+SitemapGenerator::Sitemap.sitemaps_path = 'sitemap/'
 SitemapGenerator::Sitemap.create do
   PAGES.each do |p|
     add p, changefreq: :never
