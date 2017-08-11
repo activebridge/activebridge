@@ -13,27 +13,27 @@
   box-sizing: border-box;
   margin: 0 auto;
   .content-wrapper {
+    pointer-events: none;
     width: auto;
-    position: absolute;
+    top: 50%;
     left: 0;
-    top: 0;
-    height: 100vh;
-    padding: 20%;
     bottom: 0;
     right: 0;
+    height: 100vh;
+    padding: 20%;
     padding-right: 10%;
     box-sizing: border-box;
-    top: 50%;
     transform: translateY(-50%);
-    white-space: nowrap;
     transition: .5s;
     -moz-transition: none !important;
+    white-space: nowrap;
     z-index: 101;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     .project-wrapper {
+      pointer-events: all;
       outline: none;
       max-width: 800px;
       white-space: normal;
