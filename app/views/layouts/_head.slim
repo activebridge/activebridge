@@ -8,17 +8,8 @@ head
   link rel='manifest' href='manifest.json'
   link rel='icon' sizes='192x192' href='/icon-4x.png'
   meta name="msvalidate.01" content="A484A7672177506CA8F6FA11A7463867"
-  = stylesheet_link_tag type, media: media, onload: "if(media!='all')media='all'"
   = csrf_meta_tags
   = yield :head
-  javascript:
-    var head = document.head,
-        link = document.createElement('link');
-
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = "#{ asset_path('fonts.css')}";
-    head.appendChild(link);
 
   script type = 'application/ld+json'
     |

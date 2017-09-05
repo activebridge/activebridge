@@ -41,3 +41,13 @@ html lang='en'
       Custom web application development, website development services and software solutions for web are our main business priorities.
       Furthermore, Active Bridge team implements agile web development methodology for web application development and Ruby on Rails mobile development technology.
       We're operating as outsource web development team and have a great pool of dedicated, professional Ruby on Rails developers to hire.
+
+    = stylesheet_link_tag :application, media: :all
+    javascript:
+      var head = document.head,
+          link = document.createElement('link');
+
+      link.type = 'text/css';
+      link.rel = 'stylesheet';
+      link.href = "#{ asset_path('fonts.css')}";
+      head.appendChild(link);

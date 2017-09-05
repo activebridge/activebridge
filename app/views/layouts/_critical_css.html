@@ -1,13 +1,18 @@
 <style type='text/css'>
-  body {
+  html {
     overflow-x: hidden;
+  }
+
+  body {
+    overflow: visible;
     background: #433B43;
     color: white;
     text-align: center;
     -webkit-animation: none;
     -moz-animation: none;
     -ms-animation: none;
-    animation:none
+    animation: none;
+    font-family: arial, sans-serif;
   }
 
   section {
@@ -68,7 +73,7 @@
     background: white;
     font-size: 0;
     z-index: 1000;
-    box-shadow: 0 0 5px 5px rgba(black, .3);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
     height: 60px;
     top: auto;
   }
@@ -106,13 +111,13 @@
   }
 
   .bg {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: -85%;
     max-height: 100vmax;
     padding-bottom: 50px;
     width: 100%;
-    transition: transform .1s, opacity .5s;
+    transition: opacity .5s;
     opacity: 0;
   }
 

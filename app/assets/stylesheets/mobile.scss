@@ -2,31 +2,20 @@ $bg: #433B43;
 
 html {
   -ms-touch-action: manipulation;
-  touch-action: manipulation;
   font-size: 16px;
+  scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 html, body {
-  overflow: hidden;
-  position: relative;
   height: 100%;
+  position: relative;
 }
 
-body.active {
-  overflow: hidden;
-  section {
-    display: inline-block;
-  }
-
+body {
   .bg {
-    width: 200%;
     opacity: 1;
-  }
-}
-
-nav svg {
-  path, polygon, rect {
-    // transition: stroke .3s, fill .3s;
+    width: 200%;
   }
 }
 
@@ -43,11 +32,10 @@ nav a.active {
 
 body {
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  max-height: 100vmax;
   margin: 0;
+  max-height: 100vmax;
   max-width: 100%;
+  overflow: visible;
 }
 
 #pages {
@@ -55,7 +43,6 @@ body {
   position: relative;
   white-space: nowrap;
   font-size: 0;
-  will-change: transform;
   backface-visibility: hidden;
   perspective: 1000;
 
@@ -88,8 +75,8 @@ section {
   vertical-align: top;
   width: 100%;
   white-space: normal;
-  height: 100vh;
-  overflow-y: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
   display: block;
   position: relative;
   box-sizing: border-box;
@@ -445,6 +432,7 @@ ul {
 }
 
 nav svg {
+  pointer-events: none;
   width: 100%;
 }
 

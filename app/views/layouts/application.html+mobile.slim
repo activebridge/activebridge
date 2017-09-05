@@ -4,13 +4,14 @@
 doctype 5
 html lang='en'
   = render 'layouts/head', type: :mobile, media: :all
-  body onload="if (navigator.userAgent.includes(' ')) { document.body.className = 'active' }"
+  body
     = inline_svg 'mobile/pattern.svg', class: :bg, id: :bg
     main#pages= yield
     nav#nav
-      a title='home' href='/'= inline_svg('mobile/icons/menu-home.svg')
-      a title='about' href='/about'= inline_svg('mobile/icons/menu-about.svg')
-      a title='services' href='/services'= inline_svg('mobile/icons/menu-services.svg')
-      a title='testimonials' href='/testimonials'= inline_svg('mobile/icons/menu-testimonials.svg')
-      a title='contact' href='/contact'= inline_svg('mobile/icons/menu-contacts.svg')
+      a title='home' class='active' href='#home'= inline_svg('mobile/icons/menu-home.svg')
+      a title='about' href='#about'= inline_svg('mobile/icons/menu-about.svg')
+      a title='services' href='#services'= inline_svg('mobile/icons/menu-services.svg')
+      a title='testimonials' href='#testimonials'= inline_svg('mobile/icons/menu-testimonials.svg')
+      a title='contact' href='#contact'= inline_svg('mobile/icons/menu-contacts.svg')
     = javascript_include_tag :mobile, async: true
+    = stylesheet_link_tag :mobile, media: :all
