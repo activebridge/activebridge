@@ -12,4 +12,5 @@ html
         = render partial: 'popular_article', collection: popular_articles, as: :popular_article
       .yield
         = yield
-    = javascript_include_tag 'blog'
+    = javascript_include_tag :blog
+    = stylesheet_link_tag :blog, media: :all
