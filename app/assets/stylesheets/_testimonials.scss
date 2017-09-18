@@ -20,10 +20,12 @@
   }
 
   img.author {
-    display: inline-block;
-    vertical-align: middle;
+    background: #d6e0e3;
     border-radius: 50%;
+    display: inline-block;
+    height: 100px;
     max-width: 100px;
+    vertical-align: middle;
   }
   input {
     position: absolute;

@@ -16,6 +16,6 @@
             h2: q= testimonial[:description]
             hr
             h3 data-title=testimonial[:title] = testimonial[:author]
-          = image_tag(testimonial[:image], class: :author)
+          = image_tag(testimonial[:image], class: :author, alt: nil)
       label.company-logo for="testimonial_#{testimonial[:company].underscore}"
         = image_tag(testimonial[:logo])
