@@ -12,7 +12,7 @@
 
   = image_tag article.member.avatar.url, class: 'author-info'
   .post-info
-    h2.title = article.title
+    h1.title = article.title
     span.created_date = article.created_at.strftime('%B %d, %Y')
   article.post-body-show
     = md(article.body)
