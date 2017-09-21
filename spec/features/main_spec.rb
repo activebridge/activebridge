@@ -36,7 +36,6 @@ RSpec.feature 'Main', type: :feature do
   scenario 'Visit js pages', js: true do
     visit root_path
     find('#team', visible: false).trigger :click
-    expect(page).to have_content('Active Bridge')
     find('#about', visible: false).trigger :click
     expect(page).to have_content('Active Bridge - ruby on rails agency')
     find('#services', visible: false).trigger :click
