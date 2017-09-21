@@ -2,6 +2,15 @@
   scss:
     #lazy_overlay {
       visibility: hidden;
+      position: fixed;
+    }
+
+    body {
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      background: rgb(79,50,102);
+      background: linear-gradient(145deg, rgba(79,50,102,1) 0%,rgba(137,80,176,1) 40%,rgba(87,45,104,1) 100%);
     }
 
 doctype 5
@@ -22,7 +31,7 @@ html lang='en'
       span SEND REQUEST
 
     = javascript_include_tag 'application', async: false
-
+  .hidden
     h1 Web development company - Active Bridge
     | Ruby on rails web development company Active Bridge is one of the top 15 in the list of IT companies in Ukraine.
     h2 Ruby on Rails web development services.

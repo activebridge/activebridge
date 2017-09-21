@@ -23,11 +23,8 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  // background: -moz-linear-gradient(-45deg, #5e2c77 0%, #884faf 50%, #623578 100%, #5e2c77 100%);
-  // background: -webkit-linear-gradient(-45deg, #5e2c77 0%,#884faf 50%,#623578 100%,#5e2c77 100%);
-  // background: linear-gradient(135deg, #5e2c77 0%,#884faf 50%,#623578 100%,#5e2c77 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e2c77', endColorstr='#5e2c77',GradientType=1 );
-  background: asset-url('wall.svg') center #5e2c77;
+  background: rgb(79,50,102);
+  background: linear-gradient(145deg, rgba(79,50,102,1) 0%,rgba(137,80,176,1) 40%,rgba(87,45,104,1) 100%);
   background-size: cover;
   #lazy_overlay:not([class='active']) ~ #main-svg {
     transform: scale(1);
@@ -305,4 +302,8 @@ svg#main-svg {
   top: 3%;
   right: 50%;
   transform: translateX(50%);
+}
+
+.hidden {
+  display: none;
 }

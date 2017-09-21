@@ -1,4 +1,4 @@
-<svg id='main-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1150" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id='main-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1150" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 100vh; width: 100%;">
   <title>Active Bridge</title>
   <defs>
     <linearGradient id="d" x1="50%" x2="9.172%" y1="100%" y2="-4.57%">
