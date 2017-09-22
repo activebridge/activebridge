@@ -170,13 +170,6 @@ svg#main-svg {
   }
 }
 
-#mail {
-  transition: transform .3s;
-  &:hover {
-    transform: translateY(-20px);
-  }
-}
-
 #team-cont {
   #shot-button,
   #upper-shot-button,
@@ -223,17 +216,11 @@ svg#main-svg {
 #services-cont {
   transition: transform .3s;
   &:hover {
-    transform: translate(10px, 5px);
     #chips path {
       animation: svg_light_blink .6s infinite;
+      fill: rgba(255, 255, 255, .7);
       &:nth-of-type(3n) {
-        fill: rgba(255, 255, 255, .2);
         animation: svg_light_blink .3s infinite .2s;
-      }
-      &:last-of-type {
-        fill: white;
-        fill-opacity: 1;
-        animation: none;
       }
     }
   }
