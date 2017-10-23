@@ -22,10 +22,10 @@ window.submit = (form) ->
   xhr.send(data)
   dataLayer.push({'event':'formSubmitted', 'formName':'ContactUs'})
   document.getElementById('toggle-envelop-checkbox').checked = false
-  document.getElementById('success_message').style.opacity = '0.8'
+  document.getElementById('envelop_success_message').style.opacity = '0.8'
   setTimeout ->
     closeWindow()
-  , 2500
+  , 3500
   return false
 
 window.animate = -> document.getElementById('ab').checked = true
