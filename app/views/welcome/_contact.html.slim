@@ -1,7 +1,7 @@
 input type='checkbox' id='toggle-envelop-checkbox'
+div#envelop_success_message= t('.success_message')
 .envelop
   .wrapper
-    div#success_message= t('.success_message')
     label for='toggle-envelop-checkbox'
       = inline_svg 'contact/up-triangle.svg', class: 'up-triangle'
       = inline_svg 'contact/up-envelop.svg', class: 'up-envelop'
