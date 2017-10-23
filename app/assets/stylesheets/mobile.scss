@@ -75,12 +75,29 @@ section {
   vertical-align: top;
   width: 100%;
   white-space: normal;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
   overflow-x: hidden;
   display: block;
   position: relative;
   box-sizing: border-box;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
+
+  &#home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    & > svg, div {
+      min-height: 25vh;
+      max-height: 30vh;
+    }
+  }
+
+  &#contact {
+    button {
+      margin: 0;
+    }
+  }
 }
 
 @media screen and (min-aspect-ratio: 13/9) {
@@ -114,6 +131,7 @@ section {
   }
 
   section {
+    min-height: 100vh;
     padding-right: 60px;
     padding-bottom: 0;
   }
@@ -122,7 +140,12 @@ section {
     max-height: 100vh;
     margin-bottom: 40px;
     q {
-      margin-top: 13vw;
+      margin-top: 6vw;
+    }
+    img {
+      max-width: 10vw;
+      max-height: 10vw;
+      top: -4vw;
     }
   }
 
