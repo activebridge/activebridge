@@ -1,13 +1,10 @@
 h6=t('testimonials.title')
 - testimonials = I18n.t('testimonials.all')
-- testimonials.each_with_index do |testimonial, index|
-  input type='radio' name='active-testimonial' id="testimonial_#{testimonial[:company].underscore}" checked=(true if index == 0)
-  .testimonial class="#{testimonial[:company].underscore}"
-    label class='arrow left' for="testimonial_#{testimonials[index-1][:company].underscore}"
-    label class='arrow right' for="testimonial_#{testimonials[index+1 == testimonials.size ? 0 : index+1][:company].underscore}"
-    .testimonial-body
+ul
+  - testimonials.each_with_index do |testimonial, index|
+    li.testimonial class="#{testimonial[:company].underscore}"
       = image_tag(testimonial[:logo], class: 'testimonial-project-logo')
       q= testimonial[:description]
-      .author-info
+      span.author-info
         em= testimonial[:author]
         span= testimonial[:title]

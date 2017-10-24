@@ -136,19 +136,6 @@ section {
     padding-bottom: 0;
   }
 
-  #testimonials .testimonial .testimonial-body {
-    max-height: 100vh;
-    margin-bottom: 40px;
-    q {
-      margin-top: 6vw;
-    }
-    img {
-      max-width: 10vw;
-      max-height: 10vw;
-      top: -4vw;
-    }
-  }
-
   .logo {
     max-height: 30vh;
     margin-top: 10px;
@@ -314,106 +301,27 @@ ul {
 }
 
 #testimonials {
-  .testimonial {
-    position: relative;
-    padding: 0;
-    visibility: hidden;
-    transition: viibility .3s, opacity .3s;
-    opacity: 0;
-  }
-  .testimonial-project-logo {
-    width: 25vw;
-    height: 25vw;
-    max-width: 120px;
-    max-height: 120px;
-    object-fit: cover;
-    top: -8vw;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    position: absolute;
+  ul {
     display: block;
-  }
-  input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-  input[name='active-testimonial']:checked + .testimonial {
-    visibility: visible;
-    opacity: 1;
-    .testimonial-body {
-      transform: scale(1) translateX(-50%) translateY(0px);
-    }
-    .arrow {
-      opacity: .3;
-      &.left {
-        left: 0;
-      }
-      &.right {
-        right: 0;
-      }
-    }
-  }
-  .arrow {
-    position: absolute;
-    display: block;
-    height: 40vh;
-    width: 25px;
-    background: white;
-    opacity: 0;
-    transition: all .4s;
-    &.left {
-      top: 50px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      left: -30px;
-    }
-    &.right {
-      top: 50px;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      right: -30px;
-    }
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
   }
 
-  .testimonial-body {
-    margin-top: 30px;
-    padding: 0;
-    max-height: 61vh;
-    width: 71vw;
-    left: 50%;
-    transition: all .3s;
-    transform: scale(.7) translateX(-50%) translateY(-10px);
-    transform-origin: 0 50%;
+  .testimonial {
+    display: inline-block;
+    height: 75vh;
+    white-space: normal;
+    width: 100vw;
+  }
+
+  q {
     background: white;
-    border-radius: 5px;
-    position: absolute;
-    q {
-      display: block;
-      margin-top: 20vw;
-      color: #635c63;
-      font-size: 0.9rem;
-      padding: 0 9%;
-      max-height: 36vh;
-      overflow: hidden;
-    }
-    .author-info {
-      border-top: 1px solid rgba(128, 128, 128, 0.19);
-      margin-top: 20px;
-      text-align: center;
-      padding: 10px;
-      em {
-        display: block;
-        font-style: normal;
-        color: #B868A0;
-      }
-      span {
-        font-size: 0.6rem;
-        color: rgba(128, 128, 128, 0.59);
-        font-family: arial, sans-serif;
-      }
-    }
+    color: black;
+    display: block;
+    padding: 0 9%;
+    width: 75%;
+    word-spacing: 1;
   }
 }
 
