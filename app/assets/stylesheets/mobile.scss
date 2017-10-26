@@ -80,6 +80,7 @@ section {
   display: block;
   position: relative;
   box-sizing: border-box;
+  padding: 0;
   padding-bottom: 60px;
 
   &#home {
@@ -252,7 +253,6 @@ ul {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  padding: 0;
   white-space: nowrap;
   overflow-y: hidden;
 
@@ -261,11 +261,9 @@ ul {
     white-space: normal;
     max-height: 70vh;
     min-width: 90%;
-    width: 90vw;
+    width: 90%;
     height: auto;
     position: relative;
-    padding: 0;
-    scroll-snap-align: start;
     padding: 0 5%;
 
     .testimonial-project-logo {
@@ -338,9 +336,9 @@ ul {
 
     overflow-scrolling: touch;
     scroll-snap-type: mandatory;
-    /* older spec implementation */
-    scroll-snap-destination: 0% 100%;
-    scroll-snap-points-x: repeat(100%);
+    scroll-snap-align: start;
+    scroll-snap-destination: 0 99.99%;
+    scroll-snap-points-x: repeat(99.99%);
   }
 }
 
@@ -418,13 +416,11 @@ nav svg {
 
   section {
     min-height: 100vh;
-    padding-right: 60px;
     padding-bottom: 0;
+    padding-right: 55px;
   }
 
   #testimonials {
-    padding-right: 55px;
-
     .testimonial {
       .testimonial-body {
         q {
