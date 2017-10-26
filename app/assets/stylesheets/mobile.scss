@@ -100,70 +100,6 @@ section {
   }
 }
 
-@media screen and (min-aspect-ratio: 13/9) {
-  h6, button, .accented_title {
-    padding: 3% 5% !important;
-    margin: 2% !important;
-  }
-
-  .bg {
-    padding-bottom: 0;
-  }
-
-  #nav {
-    left: auto;
-    top: 0;
-    height: 100%;
-
-    a {
-      width: 54px;
-      padding: 0;
-      padding-top: 45%;
-      line-height: 0.8;
-      height: 20vh;
-      display: block;
-      word-wrap: break-word;
-      &:before {
-        top: 60px;
-        font-size: 0.5rem;
-      }
-    }
-  }
-
-  section {
-    min-height: 100vh;
-    padding-right: 60px;
-    padding-bottom: 0;
-  }
-
-  #testimonials .testimonial .testimonial-body {
-    max-height: 100vh;
-    margin-bottom: 40px;
-    q {
-      margin-top: 6vw;
-    }
-    img {
-      max-width: 10vw;
-      max-height: 10vw;
-      top: -4vw;
-    }
-  }
-
-  .logo {
-    max-height: 30vh;
-    margin-top: 10px;
-  }
-
-  .social-icons {
-    width: 90%;
-    padding: 10px;
-    a {
-      padding: 5px;
-      width: 10%;
-    }
-  }
-}
-
 div, p {
   padding: 0 6%;
 }
@@ -297,7 +233,6 @@ ul {
     padding: 0 1%;
     width: 20%;
     font-size: .8rem;
-    word-spacing: 100vmax;
   }
   svg {
     width: 100%;
@@ -314,106 +249,98 @@ ul {
 }
 
 #testimonials {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-y: hidden;
+
   .testimonial {
+    display: inline-block;
+    white-space: normal;
+    max-height: 70vh;
+    min-width: 90%;
+    width: 90vw;
+    height: auto;
     position: relative;
     padding: 0;
-    visibility: hidden;
-    transition: viibility .3s, opacity .3s;
-    opacity: 0;
-  }
-  .testimonial-project-logo {
-    width: 25vw;
-    height: 25vw;
-    max-width: 120px;
-    max-height: 120px;
-    object-fit: cover;
-    top: -8vw;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    position: absolute;
-    display: block;
-  }
-  input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-  input[name='active-testimonial']:checked + .testimonial {
-    visibility: visible;
-    opacity: 1;
+    scroll-snap-align: start;
+    padding: 0 5%;
+
+    .testimonial-project-logo {
+      width: 20vmin;
+      height: 20vmin;
+      max-width: 120px;
+      max-height: 120px;
+      object-fit: cover;
+      top: -10vmin;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+    }
+
     .testimonial-body {
-      transform: scale(1) translateX(-50%) translateY(0px);
-    }
-    .arrow {
-      opacity: .3;
-      &.left {
-        left: 0;
+      padding: 0;
+      width: 100%;
+      left: 50%;
+      transition: all .3s;
+      transform: translateX(-50%) translateY(-10px);
+      transform-origin: 0 50%;
+      background: white;
+      border-radius: 5px;
+      position: relative;
+      padding-top: 10vmin;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      q {
+        display: block;
+        color: #635c63;
+        font-size: 3.5vmin;
+        padding: 0 10% 1%;
+        max-height: 80%;
+        overflow: hidden;
+        width: 80%;
       }
-      &.right {
-        right: 0;
+      .author-info {
+        position: relative;
+        border-top: 1px solid rgba(128, 128, 128, 0.19);
+        text-align: center;
+        padding: 1vmin;
+        em {
+          display: block;
+          font-style: normal;
+          color: #B868A0;
+          font-size: 2.5vmax;
+        }
+        span {
+          font-size: 0.6rem;
+          color: rgba(128, 128, 128, 0.59);
+          font-family: arial, sans-serif;
+        }
       }
-    }
-  }
-  .arrow {
-    position: absolute;
-    display: block;
-    height: 40vh;
-    width: 25px;
-    background: white;
-    opacity: 0;
-    transition: all .4s;
-    &.left {
-      top: 50px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      left: -30px;
-    }
-    &.right {
-      top: 50px;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      right: -30px;
     }
   }
 
-  .testimonial-body {
-    margin-top: 30px;
+  ul {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    height: 65%;
     padding: 0;
-    max-height: 61vh;
-    width: 71vw;
-    left: 50%;
-    transition: all .3s;
-    transform: scale(.7) translateX(-50%) translateY(-10px);
-    transform-origin: 0 50%;
-    background: white;
-    border-radius: 5px;
-    position: absolute;
-    q {
-      display: block;
-      margin-top: 20vw;
-      color: #635c63;
-      font-size: 0.9rem;
-      padding: 0 9%;
-      max-height: 36vh;
-      overflow: hidden;
-    }
-    .author-info {
-      border-top: 1px solid rgba(128, 128, 128, 0.19);
-      margin-top: 20px;
-      text-align: center;
-      padding: 10px;
-      em {
-        display: block;
-        font-style: normal;
-        color: #B868A0;
-      }
-      span {
-        font-size: 0.6rem;
-        color: rgba(128, 128, 128, 0.59);
-        font-family: arial, sans-serif;
-      }
-    }
+    padding-top: 10vmin;
+
+    overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+    /* older spec implementation */
+    scroll-snap-destination: 0% 100%;
+    scroll-snap-points-x: repeat(100%);
   }
 }
 
@@ -457,6 +384,71 @@ ul {
 nav svg {
   pointer-events: none;
   width: 100%;
+}
+
+@media screen and (min-aspect-ratio: 13/10) {
+  h6, button, .accented_title {
+    padding: 2vh 5vw !important;
+    margin: 2vh !important;
+  }
+
+  .bg {
+    padding-bottom: 0;
+  }
+
+  #nav {
+    left: auto;
+    top: 0;
+    height: 100%;
+
+    a {
+      width: 54px;
+      padding: 0;
+      padding-top: 45%;
+      line-height: 0.8;
+      height: 20vh;
+      display: block;
+      word-wrap: break-word;
+      &:before {
+        top: 60px;
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  section {
+    min-height: 100vh;
+    padding-right: 60px;
+    padding-bottom: 0;
+  }
+
+  #testimonials {
+    padding-right: 55px;
+
+    .testimonial {
+      .testimonial-body {
+        q {
+          overflow-y: scroll;
+          padding: 0 5% 1%;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .logo {
+    max-height: 30vh;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    width: 90%;
+    padding: 10px;
+    a {
+      padding: 5px;
+      width: 10%;
+    }
+  }
 }
 
 // iOS hacks
