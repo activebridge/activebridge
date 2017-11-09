@@ -88,6 +88,7 @@ en:
       team_size: team size
       client: client
       industry: industry
+    button: View Project
   services:
     title: Services
     we_do: We can help you on every stage of web development process

@@ -33,6 +33,10 @@ body {
   }
 }
 
+body:not(.index) svg#main-svg {
+  filter: blur(5px);
+}
+
 svg#main-svg {
   width: 100%;
   height: 100vh;
