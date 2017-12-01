@@ -25,7 +25,7 @@ RSpec.feature 'Main', type: :feature do
 
   scenario 'Visit portfolio page' do
     visit page_url(:portfolio)
-    expect(page).to have_content('Portfolio')
+    expect(page).to have_css('.portfolio')
   end
 
   scenario 'Visit contact page' do
@@ -43,7 +43,7 @@ RSpec.feature 'Main', type: :feature do
     find('#testimonials', visible: false).trigger :click
     expect(page).to have_content('TESTIMONIALS')
     find('#portfolio', visible: false).trigger :click
-    expect(page).to have_content('PORTFOLIO')
+    expect(page).to have_css('.portfolio')
     find('#contact', visible: false).trigger :click
     expect(page).to have_content('contact@active-bridge.com')
     find('#lazy_close', visible: false).trigger :click

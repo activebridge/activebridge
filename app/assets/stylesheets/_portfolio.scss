@@ -1,10 +1,26 @@
 @import 'variables';
 
 $technologies: rails, angular, react, backbone, android, ios;
-$projects: zozi, twadlock, quick_quack, numa, daisybill, def_method, everseat,
-           ach_payments, etutorcloud, myschool, somasoft_inc, moozen_apps,
-           classly, total_adventure_zazmic, zigloop, freestak, knockknock_city,
-           beatthread;
+$projects: (
+  zozi: #43A7DC,
+  twadlock: #53AD71,
+  quick_quack: #44715A,
+  numa: #4BAAB9,
+  daisybill: #D44D5C,
+  def_method: #332E44,
+  everseat: #3B566A,
+  ach_payments: #4D6E9D,
+  etutorcloud: #4C79AE,
+  myschool: #8DBB5B,
+  somasoft_inc: #1C1C1C,
+  moozen_apps: #47A1C8,
+  classly: #7891CA,
+  total_adventure_zazmic: #5E5E5E,
+  zigloop: #469ECB,
+  freestak: #79BDA0,
+  knockknock_city: #6DB7D5,
+  beatthread: #53AD71,
+);
 
 .content.projects {
   height: 100vh;
@@ -82,15 +98,36 @@ $projects: zozi, twadlock, quick_quack, numa, daisybill, def_method, everseat,
         stroke-width: 10px;
       }
     }
-  }
 
-  #zozi:target {
-    display: block;
-  }
+    a ~ g.technologies {
+      @each $project, $bg-color in $projects {
+        a[href="##{$project}"] {
+          &:target {
+            display: block;
+          }
 
-  @each $project in $projects {
-    ##{$project}:target {
-      display: block;
+          &:hover {
+            path, text, circle.st0 {
+              fill: white !important;
+            }
+
+            path.st12, path.st14, path.st15, path.st19 {
+              fill: none !important;
+              stroke: white !important;
+              fill: none !important;
+              stroke: white !important;
+            }
+
+            path.background {
+              fill-opacity: 1 !important;
+              fill: $bg-color !important;
+              stroke-opacity: 1 !important;
+              stroke-width: 10px !important;
+              stroke: white !important;
+            }
+          }
+        }
+      }
     }
   }
 
