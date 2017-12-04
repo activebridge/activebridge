@@ -170,7 +170,7 @@
       stroke-opacity:0.5;
     }
     .st27 {
-      fill:none;
+      fill:white;
       stroke:#FFFFFF;
       stroke-width:2.1718;
       stroke-miterlimit:10;
@@ -348,7 +348,9 @@
     </a>
   </g>
   <g id="dots">
-    <circle id="XMLID_39_" class="st0" cx="1394.2" cy="267.6" r="13.1"></circle>
+    <circle id="XMLID_39_" class="st0" cx="1394.2" cy="267.6" r="13.1">
+      <animate xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#XMLID_39_" attributeType="XML" attributeName="fill-opacity" values=".25;.25;1;.25;.25" dur="2.5s" begin="0s" repeatCount="indefinite"></animate>
+    </circle>
     <circle id="XMLID_40_" class="st3" cx="1349.2" cy="267.6" r="13.1"></circle>
     <circle id="XMLID_41_" class="st3" cx="1394.2" cy="312.6" r="13.1"></circle>
     <circle id="XMLID_36_" class="st3" cx="1316.9" cy="652.2" r="10.7"></circle>
