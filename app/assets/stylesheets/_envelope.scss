@@ -1,5 +1,5 @@
 .envelope {
-  position: absolute;
+  position: fixed;
   top: 0px;
   width: 10%;
   max-width: 50px;
@@ -10,14 +10,7 @@
   transform-origin: 50%, 50%;
   backface-visibility: hidden;
   text-decoration: none;
-  span {
-    display: inline-block;
-    width: 250px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    animation: blinker 1.5s linear infinite;
-  }
+  animation: blinker 3s linear infinite;
   img {
     position: relative;
     z-index: 100;
@@ -28,15 +21,14 @@
   }
 }
 
-.about .envelope {
-  transform: rotate(23deg) translate(940%, 340%) scale(0.5);
-  top: -495px;
-  left: 392px;
-}
-
+.about .envelope,
 .testimonials .envelope,
 .services .envelope,
 .team .envelope,
 .portfolio .envelope {
-  transform: rotate(11deg) translate(80%, 10%) scale(.5);
+  transform: rotate(40deg) translate(-193%, -19%) scale(0.5);
+  &:hover {
+    transform: rotate(0deg) translate(-17%, -23%) scale(0.5);
+    animation: none;
+  }
 }

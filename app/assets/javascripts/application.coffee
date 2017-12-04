@@ -33,7 +33,7 @@ window.onload = -> openEnvelope(this.location.pathname)
 
 closeWindow = ->
   document.querySelector('#lazy_overlay').className = ''
-  document.body.className = ''
+  document.body.className = 'index'
   history.pushState({}, null, '/')
 
 openPage = (event) ->
@@ -109,7 +109,8 @@ ajax = (method, href, async = true) ->
   xhr.setRequestHeader('Accept', 'text/javascript')
   return xhr
 
-window.onpopstate = closeWindow
+window.onpopstate = ->
+  closeWindow() if location.pathname == '/'
 
 focus = ->
   controls = document.querySelectorAll("input[type='radio']")

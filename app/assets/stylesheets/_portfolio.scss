@@ -1,259 +1,452 @@
 @import 'variables';
 
+$technologies: rails, angular, react, backbone, android, ios;
+$projects: (
+  zozi: #43A7DC,
+  twadlock: #53AD71,
+  quick_quack: #44715A,
+  numa: #4BAAB9,
+  daisybill: #D44D5C,
+  def_method: #332E44,
+  everseat: #3B566A,
+  ach_payments: #4D6E9D,
+  etutorcloud: #4C79AE,
+  myschool: #8DBB5B,
+  somasoft_inc: #1C1C1C,
+  moozen_apps: #47A1C8,
+  classly: #7891CA,
+  total_adventure_zazmic: #5E5E5E,
+  zigloop: #469ECB,
+  freestak: #79BDA0,
+  knockknock_city: #6DB7D5,
+  beatthread: #53AD71,
+);
+
 .content.projects {
-  overflow: visible;
-  left: 0;
-  right: 0;
-  width: 100%;
   height: 100vh;
-  max-height: 100vh;
-  position: relative;
-  white-space: nowrap;
-  position: absolute;
-  box-sizing: border-box;
-  margin: 0 auto;
-  .content-wrapper {
-    pointer-events: none;
-    width: auto;
-    top: 50%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100vh;
-    padding: 20%;
-    padding-right: 10%;
-    box-sizing: border-box;
-    transform: translateY(-50%);
-    transition: .5s;
-    -moz-transition: none !important;
-    white-space: nowrap;
-    z-index: 101;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    .project-wrapper {
-      pointer-events: all;
-      outline: none;
-      max-width: 800px;
-      white-space: normal;
-      background-color: rgba($light-grey, .9);
-      box-shadow: -5px 0 15px 0 rgba(black, 0.3);
-      z-index: 100;
-      position: absolute;
-      min-width: 25%;
-      width: 25%;
-      height: 50vh;
-      display: inline-block;
-      transform: perspective(500px) rotateY(60deg);
-      overflow: hidden;
-      color: $white;
-      transition: .5s;
-      -moz-transition: none !important;
-      border-right: 1px solid $white;
-      top: 30%;
-      &:nth-child-last {
-        border: none;
-      }
-      &:hover {
-        background-color: rgba($light-grey, 1);
-        color: $black;
-        transform: perspective(500px) rotateY(60deg) translateX(-10%);
-        & + input + .background-wrapper + .project-wrapper {
-          background-color: rgba($light-grey, .3);
+  display: flex;
+  align-items: center;
+
+  .close-portfolio {
+    position: absolute;
+    right: 0.5%;
+    top: 0.5%;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .portfolio-background {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 91%;
+    height: 90%;
+    opacity: 1;
+    z-index: 2;
+
+    path.background {
+      fill-opacity: 0;
+    }
+
+    path, text {
+      transition: all 0.3s;
+    }
+
+    @each $tech in $technologies {
+      a.#{$tech}:hover,
+      a.#{$tech}:focus {
+        path {
+          fill-opacity: 0.7;
         }
       }
-      .project {
-        padding: 5%;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        overflow: hidden;
-        overflow-y: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-          display: flex;
+
+      a.#{$tech}:hover ~ g.technologies a[data-#{$tech}='true'],
+      a.#{$tech}:focus ~ g.technologies a[data-#{$tech}='true'] {
+        path, text {
+          fill: #694086;
+          stroke: none;
         }
 
-        .content-widen {
-          opacity: 0;
-          transition-delay: 0;
-          -moz-transition: none !important;
-          position: absolute;
-        }
-      }
-      img {
-        width: 150px;
-        height: auto;
-        padding-top: 1%;
-        position: absolute;
-      }
-      .project-description, .project-info, .project-link {
-        display: none;
-      }
-      .project-description {
-        padding: 3% 1%;
-        font-size: 1.3em;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 10px;
-        margin: 10px 0;
-      }
-      .project-info {
-        width: 100%;
-        flex-flow: row;
-        flex-wrap: wrap;
-        text-align: center;
-        font-size: small;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 10px;
-        padding: 12px;
-        box-sizing: border-box;
-
-        .info-section {
-          display: inline-block;
-          width: 20%;
+        circle.st0 {
+          fill: #694086;
         }
 
-        .item-title {
-          text-transform: uppercase;
-          color: grey;
+        path.st19, path.st14 {
+          fill: none;
+          stroke: #694086;
         }
 
-        .item-description {
-          text-shadow: 0px 0 0 #333;
-          font-size: 1.2em
+        path.st15 {
+          stroke: #694086;
         }
 
+        path.st12 {
+          fill: #EEEEEE;
+          stroke: #694086;
+        }
+
+        path.background {
+          fill-opacity: 1;
+          fill: #EEEEEE;
+        }
       }
-      a.view-project {
-        padding: 10px 15px;
-        border: 1px solid #842B98;
-        border-radius: 30px;
-        min-width: 150px;
-        display: inline-block;
-        margin: 20px 0;
-        color: white;
-        background: #842B98;
+    }
+
+    g.technologies a[data-rails='true']:hover {
+      cursor: pointer;
+
+      path:not(.st6, .st8), text, path.st3, path.st5, path.st7, path.st9 {
+        fill: white;
+        stroke: none;
       }
 
-      .arrows {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 1px;
-        top: 45%;
-        z-index: 999;
-        margin: 0;
-        .arrow {
-          position: absolute;
-          cursor: pointer;
-          svg {
-            height: 3em;
-            path {
-              fill: $black;
-            }
-          }
+      path.st27 {
+        fill: none;
+      }
+
+      path.background {
+        fill-opacity: 1;
+        stroke-opacity: 1;
+        stroke-width: 10px;
+      }
+    }
+
+
+    a ~ g.technologies {
+      @each $project, $bg-color in $projects {
+        a[href="##{$project}"] {
           &:hover {
-            svg path {
-              fill: $violet;
+            path, text, circle.st0 {
+              fill: white !important;
             }
-          }
-          &.left {
-            left: 0%;
-          }
-          &.right {
-            right: 0%;
+
+            path.st12, path.st14, path.st15, path.st19 {
+              fill: none !important;
+              stroke: white !important;
+              fill: none !important;
+              stroke: white !important;
+            }
+
+            path.background {
+              fill-opacity: 1 !important;
+              fill: $bg-color !important;
+              stroke-opacity: 1 !important;
+              stroke-width: 10px !important;
+              stroke: white !important;
+            }
           }
         }
       }
     }
-    .background-wrapper {
-      position: fixed;
+  }
+
+  @each $project, $bg-color in $projects {
+    ##{$project}:target {
+      display: block;
+    }
+  }
+
+  .project {
+    width: 80%;
+    height: 70%;
+    display: none;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 10;
+    margin: 15vh auto;
+
+    .close-project {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
       top: 0;
       left: 0;
-      bottom: 0;
-      right: 0;
-      transition: .5s;
-      -moz-transition: none !important;
-      background-size: 100%;
-      opacity: 0;
     }
 
-    input:checked + .background-wrapper {
-      opacity: 1;
-    }
-    input:checked + .background-wrapper + .project-wrapper {
-      min-width: 90vw;
-      top: 15%;
-      background: rgba(233,233,233,0.9);
-      color: $black;
-      transform: perspective(500px) rotateY(0deg) translateZ(225px) scale(.6);
-      z-index: 110;
-      height: 80%;
-      display: flex;
-      align-items: center;
-      box-shadow: none;
-      justify-content: center;
-      left: 5vw !important;
-      margin-left: 0 !important;
-      position: fixed;
+    .project-info {
+      float: left;
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      padding: 3%;
+      padding-right: 1%;
+      vertical-align: top;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #543575;
 
-      .project {
-        z-index: 999;
-        overflow-y: visible;
-        display: block;
-        height: auto;
+      .item {
+        display: flex;
+        width: 100%;
+        float: left;
+        text-align: left;
+        position: relative;
+        height: 20%;
+        justify-content: space-between;
+        align-items: center;
 
-        .content-widen {
-          position: relative;
-          transition: .5s;
-        }
-        .project-description, .project-link {
-          display: inline-block;
-        }
-        .project-info {
+        .item-title {
+          width: 68%;
           display: flex;
+          align-items: center;
+
+          .name {
+            display: inline-flex;
+            z-index: 1;
+            padding-left: 49px;
+            margin-right: 3%;
+            white-space: nowrap;
+          }
+
+          .hexagon:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 3.7vh solid #E0D2E2;
+            border-left: 5.2vh solid transparent;
+            border-right: 5.2vh solid transparent;
+            position: absolute;
+            top: -3.7vh;
+          }
+
+          .hexagon {
+            width: 10.4vh;
+            height: 4.9vh;
+            background-color: #E0D2E2;
+            position: absolute;
+            top: 20px;
+          }
+
+          .hexagon:after {
+            content: '';
+            width: 0;
+            position: absolute;
+            bottom: -3.7vh;
+            border-top: 3.7vh solid #E0D2E2;
+            border-left: 5.2vh solid transparent;
+            border-right: 5.2vh solid transparent;
+          }
         }
-        img {
-          display: inline-block;
+
+        .connection {
+          width: 100%;
+          height: 2px;
+          background: #B898CB;
           position: relative;
+          display: inline-flex;
+          align-items: center;
+
+          .multilink {
+            width: 65px;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+          }
+
+          .technologies_1 {
+            g:nth-child(4n+1), g:nth-child(2n) {
+              display: none;
+            }
+          }
+
+          .technologies_2 g:nth-child(3n+1) {
+            display: none;
+          }
+
+          .technologies_3 g:nth-child(4) {
+            display: none;
+          }
+
+          .technologies_2, .technologies_3, .technologies_4 {
+            g:nth-child(5) {
+              display: none;
+            }
+          }
+        }
+
+        .connection:before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          top: -3px;
+          background: #B898CB;
+        }
+
+        .connection:after {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          top: -3px;
+          right: 0;
+          background: #B898CB;
         }
       }
-      .arrows {
+
+      li.item:nth-of-type(even) {
+        .name {
+          left: 80px;
+          padding-left: 89px;
+        }
+
+        .hexagon {
+          left: 40px;
+        }
+      }
+
+      .item-description {
+        line-height: 20px;
+        display: flex;
+        text-align: left;
+        width: 30%;
+        float: right;
+        height: 100px;
+        align-items: center;
+
+        .tech {
+          padding-bottom: 1.5px;
+        }
+      }
+
+      .item-description[data-tech-count] {
+        align-items: normal;
+      }
+
+      .item-description[data-tech-count="2"] {
+        padding-top: 2.5vh;
+      }
+
+      .item-description[data-tech-count="1"] {
+        align-items: center;
+      }
+    }
+
+    .page-separator {
+      height: 100%;
+      display: inline-block;
+      margin-top: 3px;
+      width: 3%;
+    }
+
+    .project-details {
+      display: inline-block;
+      width: 44%;
+      vertical-align: top;
+      height: 100%;
+      position: relative;
+
+      img {
+        margin: 10%;
+        width: 35%;
+      }
+
+      .project-description {
+        font-weight: bold;
+        color: rgba(51, 51, 51, 0.95);
+        text-align: left;
+        margin: 7%;
+        letter-spacing: 0.5px;
+        line-height: 1.4em;
         display: block;
+      }
+
+      .view-project {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 84%;
+        width: 180px;
+        letter-spacing: 0.5px;
+        padding: 10px 0;
+        border-radius: 10px;
+        font-weight: 500;
+        background: #835697;
+        text-decoration: none;
+        color: white;
+        z-index: 1;
+        transition: all .3s;
+        box-shadow: 0px 3px 6px rgba(136, 136, 136, 0.85);
+      }
+
+      .view-project:hover {
+        background: #714d82;
+        box-shadow: none;
+        top: 85%;
       }
     }
   }
 }
 
-.project-open {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+@media (max-width: 1050px) {
+  .content.projects {
+    .project {
+      height: 90vh;
+      width: 90%;
+      margin: 5vh auto;
+      display: none;
+      z-index: 10;
 
-label[for=reset] {
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-}
+      .project-info {
+        float: none;
+        display: block;
+        width: 100%;
+        height: 60%;
+        padding-left: 20%;
+        padding-right: 20%;
 
-input[type=radio] {
-  opacity: 0;
-  z-index: -1;
-}
+        .item {
+          height: 78px;
+        }
+      }
 
-input[type=radio]:checked + div + .project-wrapper > .content {
-  position: initial !important;
-  img {
-    top: 0% !important;
+      .page-separator {
+        position: absolute;
+        transform: rotate(90deg);
+        left: 49%;
+        top: 17%;
+        height: 100%;
+        margin: 0;
+        width: 1%;
+      }
+
+      .project-details {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 35%;
+
+        img {
+          display: inline-flex;
+          width: 20%;
+          left: 15%;
+          position: absolute;
+          margin: 0;
+        }
+
+        .project-description {
+          display: inline-flex;
+          width: 50%;
+          float: right;
+          margin: 5%;
+        }
+
+        .view-project {
+          left: 50%;
+          top: 82%;
+          width: 30%;
+        }
+
+        .view-project:hover {
+          background: #714d82;
+          box-shadow: none;
+          top: 83%;
+        }
+      }
+    }
   }
 }

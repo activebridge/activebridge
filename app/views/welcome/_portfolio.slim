@@ -1,30 +1,28 @@
-h1.services-title= t('portfolio.title')
 .content.projects
-  .content-wrapper
-    input#reset name='active-section' tabindex='-1' type='radio' autofocus=true
-    label for='reset'
-    - @projects.each_with_index do |project, i|
-      div itemscope="" itemtype="http://schema.org/Product"
-        input id="project-#{project.id}" type='radio' name='active-section'
-        .background-wrapper style="background-image: url(#{project.image.url})"
-        .project-wrapper.about style="left: #{100/@projects.size*(i+1)}%; margin-left: -#{100/@projects.size}%;"
-          .content.project
-            = image_tag(project.logo.url(:logo), style: "top: #{cycle(35, 45, 55, 45)}%", itemprop: 'logo')
-            div
-              .project-description itemprop='description'
-                = project.description
-            .project-info
-              - t('portfolio.project_info').each do |key, value|
-                .info-section
-                  .item-title= value
-                  .item-description= project.send(key)
-            .project-link.text-center= link_to project.link, target: '_blank', class: 'view-project' do
-              | View Project
-              i.icon.icon-arrow-right
-          label.project-open for="project-#{project.id}"
+  = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
+  .close-portfolio ✕
 
-          .arrows
-            label for="project-#{@projects[i-1]&.id}"
-              i.arrow.left= svg('chevron-left', :xl)
-            label for="project-#{@projects[i+1 == @projects.size ? 0 : i+1]&.id}"
-              i.arrow.right= svg('chevron-right', :xl)
+  - @projects.each_with_index do |project, i|
+    .project id=project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')
+      = link_to '', '#', class: 'close-project'
+      ul.project-info
+        - t('portfolio.project_info').each do |key, value|
+          li.item
+            .item-title
+              .name= value
+              .hexagon
+              .connection
+                = inline_svg 'portfolio/fork.svg', class: "multilink technologies_#{project.send(key).split(',').size}" if value == 'technology'
+            - if value == 'technology'
+              .item-description data-tech-count=project.send(key).split(',').size
+                - project.send(key).split(',').each_with_index do |tech, i|
+                  = tech
+                  br
+            - else
+              .item-description= project.send(key)
+      = inline_svg 'portfolio/line.svg', class: 'page-separator'
+      .project-details
+        = image_tag("portfolio/projects/#{project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')}.svg", class: 'project-logo')
+        .project-description= project.description
+        = link_to project.link, target: '_blank', class: 'view-project' do
+          = t('portfolio.button')

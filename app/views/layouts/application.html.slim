@@ -22,13 +22,12 @@ html lang='en'
 
   = render 'layouts/head', type: :application, media: :all
 
-  body class="#{params[:page]}"
+  body class="#{params[:page] || 'index'}"
     = render_lazybox
     = render 'layouts/main_v2.svg'
 
     = link_to page_path(:contact), class: :envelope, id: :contactus do
       = image_tag 'icons/envelope.svg'
-      span SEND REQUEST
 
     a.youteam href='https://youteam.co.uk/partner/active-bridge?ref=active-bridge' target=:_blank
       = inline_svg('youteam.svg')
