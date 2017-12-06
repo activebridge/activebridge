@@ -2,6 +2,7 @@ doctype 5
 html
   = render 'layouts/head', type: :blog, media: :all
   body
+    = inline_svg 'blog/stripe.svg', class: 'blog-background'
     = render 'shared/blog/header'
     main.main
       h2.title.popular-posts-title tabindex='-1'
@@ -13,4 +14,4 @@ html
       .yield
         = yield
     = javascript_include_tag :blog
-    = stylesheet_link_tag :blog, media: :all
+    = stylesheet_link_tag :blog, 'https://fonts.googleapis.com/css?family=Raleway', media: :all

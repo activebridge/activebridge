@@ -7,6 +7,7 @@
 $font-size: 16px;
 $line-height: 1.75;
 $lines-to-show: 4;
+$dark-font: #443848;
 
 * {
   box-sizing: border-box;
@@ -20,7 +21,7 @@ html {
 body {
   min-height: 100vh;
   color: $white;
-  font-family: Arial;
+  font-family: Raleway;
   overflow-x: hidden;
   margin: 0px;
   background: $dark-violet;
@@ -47,19 +48,28 @@ nav {
   }
 }
 
+.blog-background {
+  position: absolute;
+  width: 100vw;
+  height: 122vw;
+  background: $dark-violet;
+  background: radial-gradient(top, $blog-violet-hotspot, $blog-violet);
+}
+
 .main {
   h2.title {
-    margin: 1.2vmax 0 0.6vmax;
+    margin: 0vmax 0 0.6vmax;
     font-size: 1.8vmax;
     font-weight: bold;
     color: white;
     text-align: left;
+    position: relative;
     &:focus {
       outline:0;
     }
   }
   span.items_counter {
-    display: block;
+    display: inline-block;
     opacity: .5;
     font-size: 1vmax;
   }
@@ -67,7 +77,7 @@ nav {
 .popular {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 a.article {
@@ -77,7 +87,7 @@ a.article {
   position: relative;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 2px 14px 0px $blog-violet-shadow;
+  box-shadow: 0 2px 14px 0px rgba(0, 0, 0, 0.3), inset 0px 140px 110px -15px rgba(32, 16, 48, 0.93);
   overflow: hidden;
   transition: padding .3s, box-shadow .5s;
 
@@ -99,7 +109,9 @@ a.article {
     box-shadow: 0 10px 26px 0px rgba(0, 0, 0, 0.34);
     .article-rollover {
       background: rgba($blog-popular-post, .95);
-      padding: 1.8vmax;
+      img, span {
+        opacity: 1;
+      }
       &:after {
         opacity: 1;
       }
@@ -111,10 +123,8 @@ a.article {
 }
 
 .article-rollover{
-  background: rgba(0, 0, 0, .6);
-  background: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 77%,rgba(0,0,0,0.6) 100%);
   position: absolute;
-  padding: 77% 1.8vmax 1.8vmax;
+  padding: 5% 1.3vmax 1.3vmax;
   height: 100%;
   width: 100%;
   color: white;
@@ -132,25 +142,34 @@ a.article {
     opacity: 0;
   }
   img {
-    float: left;
-    width: 4.5vmax;
-    margin-right: 3%;
+    display: inline-block;
+    text-align: center;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    width: 9.5vmax;
+    margin: 10vmax auto 0;
     border-radius: 50%;
   }
   .meta {
-    height: 20%;
+    position: relative;
+    text-align: center;
     .article-title {
-      padding-top: 1vmax;
-      margin: 0;
-      font-size: 1.1vmax;
-      white-space: nowrap;
+      padding-top: 0.5vmax;
+      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+      font-size: 1.6vmax;
+      text-transform: uppercase;
+      text-align: center;
       text-overflow: ellipsis;
       overflow: hidden;
     }
     span {
-      margin-top: 1%;
+      transition: opacity .3s ease-in-out;
       display: block;
-      opacity: .5;
+      opacity: 0;
+      text-align: center;
+      font-size: 1.2vmax;
     }
   }
 
@@ -237,16 +256,21 @@ a.article {
     margin: 2% 0 0 0;
   }
   .article-rollover {
-    padding: 15vmax 1.8vmax 1.8vmax;
+    padding: 1vmax 1.8vmax 1.8vmax;
+
+    img {
+      margin: 7vmax auto 0;;
+    }
   }
 }
 
 .main {
-  padding: 20px 103px 50px 103px;
+  padding: 0px 103px 8% 103px;
 }
 
 .link-group {
-  margin-top: 1.2vmax;
+  position: relative;
+  margin-top: 3.4vmax;
   float: right;
 
   a {
@@ -258,16 +282,26 @@ a.article {
   }
 }
 
+.bottom-group {
+  position: relative;
+  margin-top: 1vmax;
+}
+
 .article-box {
   margin-top: 1%;
   position: relative;
   padding: 2vmax;
   font-size: 1.2vmax;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
-  background: $blog-violet-post;
+  background: #f5f5f5;
+  color: $dark-font;
   overflow: hidden;
+  a {
+    color: $dark-font;
+  }
   .back-link {
     display: inline-block;
+    color: $dark-font;
     transform: scale(-1, 1);
     font-size: 3.8vmax;
     position: absolute;
@@ -294,7 +328,7 @@ a.article {
       overflow: hidden;
       text-align: left;
       font-weight: bold;
-      color: white;
+      color: $dark-font;
     }
     .created_date {
       display: block;
@@ -314,11 +348,8 @@ a.article {
       letter-spacing: 2px;
     }
     .CodeRay, blockquote {
-      background: rgba($blog-violet, 0.5);
+      background: rgba(143, 89, 185, 0.45);
       transition: background .3s;
-      &:hover {
-        background: rgba($blog-violet, 0.7);
-      }
     }
     .CodeRay {
       font-size: 1vmax;
@@ -346,10 +377,15 @@ a.article {
         position: absolute;
       }
     }
-    #disqus_thread {
-      background: none;
-      box-shadow: none;
-    }
+  }
+}
+
+.disqus-block {
+  background: #472f5a;
+  #disqus_thread {
+    background: none;
+    box-shadow: none;
+    padding: 20px 126px;
   }
 }
 
@@ -367,19 +403,18 @@ a.article {
   }
 }
 
-
-@media (max-width: 1200px) {
-  .article-rollover {
-    padding: 76% 1.8vmax 1.8vmax;
-  }
-}
-
 @media (max-width: 1025px) {
+  .blog-background {
+    display: none;
+  }
   .main {
     padding: 20px 40px 50px 40px;
   }
   .article-rollover {
-    padding: 140px 1.8vmax 1.8vmax;
+    padding: 20px 1.8vmax 1.8vmax;
+    img {
+      margin: 5vmax auto 0;
+    }
     .preview-body {
       margin-top: 10px;
     }
@@ -513,7 +548,7 @@ a.article {
     }
     .article-rollover {
       top: 0;
-      padding: 155px 1.8vmax 1.8vmax;
+      padding: 20px 1.8vmax 1.8vmax;
     }
   }
 
@@ -563,6 +598,6 @@ a.article {
 
   .posts .article-rollover,
   .article-rollover {
-    padding: 150px 20px 25px;
+    padding: 25px 20px 25px;
   }
 }
