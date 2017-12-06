@@ -6,6 +6,8 @@
   meta property='og:description' content=clean_truncate(article.body)
   meta property='og:updated_time' content=article.updated_at.to_i
   meta property='fb:app_id' content=639665256206886
+  = content_for :title do
+    = article.title
 
 #post.article-box
   = link_to '➦', back_path, remote: true, class: 'back-link'
@@ -16,5 +18,5 @@
     span.created_date = article.created_at.strftime('%B %d, %Y')
   article.post-body-show
     = md(article.body)
-    - unless article.pending?
-      = render 'disqus'
+- unless article.pending?
+  .disqus-block= render 'disqus'

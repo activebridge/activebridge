@@ -1,5 +1,6 @@
 head
-  title Ruby on Rails Web Development Company | Active Bridge
+  title
+    = content_for?(:title) ? content_for(:title) : 'Ruby on Rails Web Development Company | Active Bridge'
   meta charset='utf-8'
   meta name = 'description' content=t('meta.desription')
   meta name = 'viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no'

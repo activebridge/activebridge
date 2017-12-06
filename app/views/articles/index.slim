@@ -7,3 +7,6 @@
     span.items_counter = pluralize(articles.total_count, 'item')
   .posts
     = render partial: 'article', collection: articles, as: :article
+  .link-group.bottom-group
+    = link_to_previous_page articles, '‹', params: { anchor: 'posts' }
+    = link_to_next_page articles, '›', params: { anchor: 'posts' }

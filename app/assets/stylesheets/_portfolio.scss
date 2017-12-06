@@ -22,26 +22,35 @@ $projects: (
   beatthread: #53AD71,
 );
 
+.portfolio #lazy_close {
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  left: inherit;
+  z-index: 3;
+
+  &:after {
+    content: '✕';
+    position: absolute;
+    right: 0;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: white;
+  }
+}
+
 .content.projects {
   height: 100vh;
   display: flex;
   align-items: center;
 
-  .close-portfolio {
-    position: absolute;
-    right: 0.5%;
-    top: 0.5%;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: white;
-  }
-
   .portfolio-background {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 91%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
     opacity: 1;
     z-index: 2;
 
@@ -154,15 +163,6 @@ $projects: (
     background: rgba(255, 255, 255, 0.95);
     z-index: 10;
     margin: 15vh auto;
-
-    .close-project {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
 
     .project-info {
       float: left;

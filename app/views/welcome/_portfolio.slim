@@ -1,6 +1,5 @@
 .content.projects
   = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
-  .close-portfolio ✕
 
   - @projects.each_with_index do |project, i|
     .project id=project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')
