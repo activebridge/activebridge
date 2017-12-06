@@ -29,6 +29,9 @@
   }
   input {
     position: absolute;
+    &[type='radio'] {
+      display: none;
+    }
     & + .testimonial {
       opacity: 0;
     }
