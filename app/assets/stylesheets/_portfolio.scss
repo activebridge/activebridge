@@ -22,23 +22,6 @@ $projects: (
   beatthread: #53AD71,
 );
 
-.portfolio #lazy_close {
-  width: 0;
-  height: 0;
-  cursor: pointer;
-  left: inherit;
-  z-index: 4;
-
-  &:after {
-    content: '✕';
-    position: absolute;
-    right: 0;
-    font-size: 0.7em;
-    font-weight: bold;
-    color: white;
-  }
-}
-
 .content.projects {
   height: 100vh;
   display: flex;
