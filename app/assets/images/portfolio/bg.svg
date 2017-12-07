@@ -200,39 +200,38 @@
   </style>
   <a href="#" class="rails">
     <g class="rails">
-      <text transform="translate(228.937 211.954)" class="st0 st1 st2">Ruby on Rails</text>
       <path id="XMLID_5_" class="st3" d="M369.2 226.9H225.5c-3.8 0-6.8-3.1-6.8-6.8v-29c0-3.8 3.1-6.8 6.8-6.8h143.7c3.8 0 6.8 3.1 6.8 6.8v29c0 3.8-3.1 6.8-6.8 6.8z"></path>
+      <text transform="translate(228.937 211.954)" class="st0 st1 st2">Ruby on Rails</text>
     </g>
   </a>
   <a href="#" class="angular">
     <g>
-      <text transform="translate(228.937 263.454)" class="st0 st1 st2">AngularJS</text>
       <path id="XMLID_15_" class="st3" d="M369.2 278.8H225.5c-3.8 0-6.8-3.1-6.8-6.8v-29c0-3.8 3.1-6.8 6.8-6.8h143.7c3.8 0 6.8 3.1 6.8 6.8v29c0 3.7-3.1 6.8-6.8 6.8z"></path>
+      <text transform="translate(228.937 263.454)" class="st0 st1 st2">AngularJS</text>
     </g>
   </a>
   <a href="#" class="react">
     <g>
-      <text transform="translate(228.937 313.954)" class="st0 st1 st2">ReactJS</text>
       <path id="XMLID_17_" class="st3" d="M369.2 330.2H225.5c-3.8 0-6.8-3.1-6.8-6.8v-29c0-3.8 3.1-6.8 6.8-6.8h143.7c3.8 0 6.8 3.1 6.8 6.8v29c0 3.8-3.1 6.8-6.8 6.8z"></path>
+      <text transform="translate(228.937 313.954)" class="st0 st1 st2">ReactJS</text>
     </g>
   </a>
   <a href='#' class="backbone">
     <g>
+      <path id="XMLID_21_" class="st3" d="M369.2 381.7H225.5c-3.8 0-6.8-3.1-6.8-6.8v-29c0-3.8 3.1-6.8 6.8-6.8h143.7c3.8 0 6.8 3.1 6.8 6.8v29c0 3.7-3.1 6.8-6.8 6.8z"></path>
       <text transform="translate(228.937 366.33)" class="st0 st1 st2">Backbone.js</text>
-      <path id="XMLID_21_" class="st3" d="M369.2 381.7H225.5c-3.8 0-6.8-3.1-6.8-6.8v-29c0-3.8 3.1-6.8 6.8-6.8h143.7c3.8 0 6.8 3.1 6.8 6.8v29c0 3.7-3.1 6.8-6.8 6.8z">
-      </path>
     </g>
   </a>
   <a href='#' class="android">
     <g>
-      <text transform="translate(228.937 417.58)" class="st0 st1 st2">Android</text>
       <path id="XMLID_20_" class="st3" d="M369.2 433.5H225.5c-3.8 0-6.8-3.1-6.8-6.8v-29c0-3.8 3.1-6.8 6.8-6.8h143.7c3.8 0 6.8 3.1 6.8 6.8v29c0 3.7-3.1 6.8-6.8 6.8z"></path>
+      <text transform="translate(228.937 417.58)" class="st0 st1 st2">Android</text>
     </g>
   </a>
   <a href='#' class="ios">
     <g>
-      <text transform="translate(228.937 470.33)" class="st0 st1 st2">iOS</text>
       <path id="XMLID_1_" class="st3" d="M369.2 485H225.5c-3.8 0-6.8-3.1-6.8-6.8v-29c0-3.8 3.1-6.8 6.8-6.8h143.7c3.8 0 6.8 3.1 6.8 6.8v29c0 3.7-3.1 6.8-6.8 6.8z"></path>
+      <text transform="translate(228.937 470.33)" class="st0 st1 st2">iOS</text>
     </g>
   </a>
   <g class="technologies" id="technologies">

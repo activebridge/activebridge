@@ -43,6 +43,7 @@ $projects: (
   height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
 
   .portfolio-background {
     position: absolute;
@@ -66,7 +67,12 @@ $projects: (
       a.#{$tech}:hover,
       a.#{$tech}:focus {
         path {
-          fill-opacity: 0.7;
+          fill: white;
+          opacity: 1;
+        }
+
+        text {
+          fill: #694086;
         }
       }
 
@@ -121,7 +127,6 @@ $projects: (
       }
     }
 
-
     a ~ g.technologies {
       @each $project, $bg-color in $projects {
         a[href="##{$project}"] {
@@ -152,26 +157,36 @@ $projects: (
 
   @each $project, $bg-color in $projects {
     ##{$project}:target {
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      z-index: 4;
+
     }
+
+    ##{$project}:target ~ #close_project {
+      z-index: 3;
+    }
+  }
+
+  #close_project {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 
   .project {
     width: 80%;
     height: 70%;
-    display: none;
     background: rgba(255, 255, 255, 0.95);
-    z-index: 3;
-    margin: 15vh auto;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: visibility 0s linear .3s, opacity .3s linear;
 
-    .close-project {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
 
     .project-info {
       float: left;
@@ -397,9 +412,12 @@ $projects: (
     .project {
       height: 90vh;
       width: 90%;
-      margin: 5vh auto;
-      display: none;
-      z-index: 3;
+      background: rgba(255, 255, 255, 0.95);
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      left: 50%;
+      transform: translateX(-50%);
 
       .project-info {
         float: none;
