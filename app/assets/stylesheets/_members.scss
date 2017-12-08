@@ -89,7 +89,6 @@
 
 input[name='team-photos'] {
   position: absolute;
-  display: none;
   &:checked + .photo,
   &:checked + .photo + .team-photo-controls{
     visibility: visible;

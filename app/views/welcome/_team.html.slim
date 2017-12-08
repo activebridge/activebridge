@@ -3,7 +3,7 @@ div itemscope="" itemtype="http://schema.org/Person"
   = inline_svg('team/camera.svg')
   .photos-container
     - I18n.t('.team.photos').each_with_index do |url, index|
-      input id="team-photo-#{index}" name='team-photos' type='radio' checked=(true if index == 0) autofocus=(true if index == 0)
+      input id="team-photo-#{index}" name='team-photos' type='radio' checked=(true if index == 0) autofocus=(true if index == 0) onblur='keepFocus(this);'
       .photo
         img src="#{url}" class='team-photos'
       .team-photo-controls
