@@ -3,7 +3,6 @@
 
   - @projects.each_with_index do |project, i|
     .project id=project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')
-      = link_to '', '#', class: 'close-project'
       ul.project-info
         - t('portfolio.project_info').each do |key, value|
           li.item
@@ -25,3 +24,4 @@
         .project-description= project.description
         = link_to project.link, target: '_blank', class: 'view-project' do
           = t('portfolio.button')
+  = link_to '', '#', id: 'close_project'
