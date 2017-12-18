@@ -154,8 +154,7 @@ en:
     title: Testimonials
     all:
       - company: DaisyBill
-        logo: https://i.imgur.com/9bmHcwy.png
-        banner:  https://static1.squarespace.com/static/552d8208e4b06b5975258e3a/t/552d855ae4b01b3a8097a3c6/1473963858921/?format=1500w
+        logo: testimonials/daisy_bill.svg
         author: Ben Liscio
         image: https://media.licdn.com/media/p/1/000/1f6/35d/2a93ca9.jpg
         title: Co-Founder DaisyBill
@@ -167,8 +166,7 @@ en:
           We consider the engineers assigned to our company a core part of the team.
           Thanks guys!
       - company: Def Method
-        logo: https://media.licdn.com/media/AAEAAQAAAAAAAAKFAAAAJDBkZmM4Yzg2LTYwYTEtNDVlYy1iZjAzLTlkNjlhYzU0ZDg4Zg.png
-        banner: https://static1.squarespace.com/static/57d83ff1d482e91ad11d5834/t/5829e05de3df28280ca964b0/1479457732015
+        logo: testimonials/def_method.svg
         author: Joseph Leo
         image: https://media.licdn.com/media/p/2/005/053/099/297c2cc.jpg
         title: President/Partnership Director at Def Method
@@ -178,15 +176,14 @@ en:
           tested features in an Agile fashion across multiple countries and time zones.
           Their commitment to quality and efficiency is outstanding.
       - company: Modean Apps
-        logo: https://avatars3.githubusercontent.com/u/8191701?v=3&s=200
+        logo: testimonials/modean_apps.svg
         author: Benjamin Sigidi
         image: https://media.licdn.com/media/AAEAAQAAAAAAAAvKAAAAJGRhOThhNWE3LTExNzktNDc0Zi1hODVlLWNjOTY3MDViNTkwNA.jpg
         title: Software Developer at MODEAN APPS
         description:
           Awesome team. Full stack development. Happy to work with these guys any day.
       - company: Preeline
-        logo: https://d1qb2nb5cznatu.cloudfront.net/startups/i/297009-8af321cc567f3918450b0fcc98ddf8f6-medium_jpg.jpg?buster=1424202571
-        banner: https://preeline.com/assets/preeline-horizontal-070b759047259186fb90765b1e54f068ed25c7429b615de052cb690e58cec34b.svg
+        logo: testimonials/preeline.svg
         author: Julia Macalaster
         image: https://res.cloudinary.com/active-bridge/image/upload/c_fit,g_center,h_200,q_85,r_0,w_200/v1477382138/julia_xibee4.jpg
         title: COO, Co-Founder at PreeLine
@@ -197,8 +194,7 @@ en:
           Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
           We feel so incredibly lucky to be working with them
       - company: Freestak
-        logo: https://res.cloudinary.com/active-bridge/image/upload/v1474614652/freestak.png
-        banner: https://res.cloudinary.com/active-bridge/image/upload/v1474614834/freestak_logo.png
+        logo: testimonials/freestak.svg
         author: Julie Freeman Kummer
         image: https://res.cloudinary.com/active-bridge/image/upload/c_crop,g_face,h_200,w_200/v1477380297/Julie_z78plm.jpg
         title: Co-founder and COO at freestak Ltd
@@ -212,8 +208,7 @@ en:
           After the active development phase, we’ve retained Active Bridge for the ongoing development and maintenance
           of our platform and I couldn’t recommend them enough.
       - company: LifeLinker Inc
-        logo: https://i.imgur.com/wTRDRJs.jpg
-        banner: https://i.imgur.com/Vxbg88n.jpg
+        logo: testimonials/life_linker.svg
         author: David Rowell
         image: https://i.imgur.com/vlvxXxn.jpg
         title: Founder/CEO at LifeLinker Inc
@@ -225,8 +220,7 @@ en:
           There’s no better source for best quality, best practice and best value development services than
           Active-Bridge. We’re delighted and most appreciative. Thank you.
       - company: Joseph_Carpenter
-        logo: https://i.imgur.com/l1jyndS.jpg
-        banner: https://i.imgur.com/NQfJU9P.png
+        logo: testimonials/my_school.svg
         author: Joseph Carpenter
         image: https://i.imgur.com/oMUiO6J.jpg
         title: Founder at MyScool411

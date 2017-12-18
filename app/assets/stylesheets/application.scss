@@ -332,3 +332,8 @@ svg#main-svg {
   position: fixed;
   right: 0;
 }
+
+input[type=radio] {
+  opacity: 0;
+  z-index: -1;
+}
