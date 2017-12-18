@@ -20,7 +20,7 @@ RSpec.feature 'Main', type: :feature do
 
   scenario 'Visit testimonials page' do
     visit page_url(:testimonials)
-    expect(page).to have_content('Testimonials')
+    expect(page).to have_css('.testimonial')
   end
 
   scenario 'Visit portfolio page' do
@@ -41,7 +41,7 @@ RSpec.feature 'Main', type: :feature do
     find('#services', visible: false).trigger :click
     expect(page).to have_content('OUR PROF. SKILLS')
     find('#testimonials', visible: false).trigger :click
-    expect(page).to have_content('TESTIMONIALS')
+    expect(page).to have_css('.testimonial')
     find('#portfolio', visible: false).trigger :click
     expect(page).to have_css('.portfolio')
     find('#contact', visible: false).trigger :click
