@@ -162,7 +162,8 @@ $companies: (
       position: relative;
       text-align: left;
       padding: 35px;
-      font-size: 18px;
+      font-size: 1em;
+      line-height: 25px;
       font-weight: bold;
       background: #dad0de;
       border: 4px solid #9370af;
@@ -208,23 +209,20 @@ $companies: (
         }
       }
 
-      &:before, &:after {
-        content: '"';
-        font-size: 2em;
-        font-family: cursive;
+      .open-quotes, .close-quotes {
+        width: 15px;
         position: absolute;
-        color: #9370af;
       }
 
-      &:before {
+      .open-quotes {
+        top: 10px;
+        left: 15px;
+      }
+
+      .close-quotes {
+        bottom: 10px;
+        right: 15px;
         transform: rotate(180deg);
-        top: -20px;
-        left: 20px;
-      }
-
-      &:after {
-        bottom: -20px;
-        right: 20px;
       }
     }
 

@@ -16,6 +16,8 @@
       .testimonial-logo id=testimonial[:company].underscore.gsub(/\s+/, '_')
         = image_tag(testimonial[:logo])
       .testimonial-body
+        = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
+        = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
         = inline_svg 'testimonials/speaker.svg', class: 'speaker'
         .triangle
           = inline_svg 'testimonials/big_like.svg', class: 'big-like'
