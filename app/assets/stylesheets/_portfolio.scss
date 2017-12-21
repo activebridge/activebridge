@@ -59,8 +59,8 @@ $projects: (
         }
       }
 
-      a.#{$tech}:hover ~ g.technologies a[data-#{$tech}='true'],
-      a.#{$tech}:focus ~ g.technologies a[data-#{$tech}='true'] {
+      a.#{$tech}:hover ~ g.technologies a[data-technologies*=#{$tech}],
+      a.#{$tech}:focus ~ g.technologies a[data-technologies*=#{$tech}] {
         path, text {
           fill: #694086;
           stroke: none;
@@ -91,7 +91,7 @@ $projects: (
       }
     }
 
-    g.technologies a[data-rails='true']:hover {
+    g.technologies a[data-technologies*='rails']:hover {
       cursor: pointer;
 
       path:not(.st6, .st8), text, path.st3, path.st5, path.st7, path.st9 {
@@ -170,6 +170,33 @@ $projects: (
     transform: translateX(-50%);
     transition: visibility 0s linear .3s, opacity .3s linear;
 
+    .prev-project, .next-project {
+      transition: all .2s linear;
+      position: absolute;
+      z-index: 5;
+      bottom: 45%;
+      border-top: 50px solid transparent;
+    }
+
+    .prev-project {
+      left: -25px;
+      transform: rotate(45deg);
+      border-left: 50px solid #B898CB;
+    }
+
+    .prev-project:hover {
+      border-left: 50px solid #8c66a2;
+    }
+
+    .next-project:hover {
+      border-right: 50px solid #8c66a2;
+    }
+
+    .next-project {
+      transform: rotate(-45deg);
+      right: -25px;
+      border-right: 50px solid #B898CB;
+    }
 
     .project-info {
       float: left;
@@ -349,29 +376,32 @@ $projects: (
       position: relative;
 
       img {
-        margin: 10%;
-        width: 35%;
+        display: block;
+        margin: 30px auto;
+        width: 40%;
+        height: 25%;
       }
 
       .project-description {
+        overflow-y: scroll;
+        height: 45%;
         font-weight: bold;
         color: rgba(51, 51, 51, 0.95);
         text-align: left;
-        margin: 7%;
+        padding: 10px 30px;
         letter-spacing: 0.5px;
         line-height: 1.4em;
         display: block;
       }
 
       .view-project {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 84%;
+        display: block;
+        height: 35px;
         width: 180px;
         letter-spacing: 0.5px;
-        padding: 10px 0;
+        padding: 8px 0;
         border-radius: 10px;
+        margin: 10px auto;
         font-weight: 500;
         background: #835697;
         text-decoration: none;
@@ -384,7 +414,6 @@ $projects: (
       .view-project:hover {
         background: #714d82;
         box-shadow: none;
-        top: 85%;
       }
     }
   }
@@ -443,20 +472,16 @@ $projects: (
         .project-description {
           display: inline-flex;
           width: 50%;
-          float: right;
+          max-height: 50%;
           margin: 5%;
         }
 
         .view-project {
+          position: absolute;
           left: 50%;
-          top: 82%;
+          bottom: 0;
           width: 30%;
-        }
-
-        .view-project:hover {
-          background: #714d82;
-          box-shadow: none;
-          top: 83%;
+          transform: translateX(-50%);
         }
       }
     }
