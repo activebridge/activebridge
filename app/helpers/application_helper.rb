@@ -33,4 +33,12 @@ module ApplicationHelper
       "#{articles_url}#posts"
     end
   end
+
+  def project_name(project)
+    project.downcase.gsub(/[,.]/, '').tr(' ', '_')
+  end
+
+  def next_project(projects, i)
+    projects.length.pred == i ? project_name(projects[0].client) : project_name(projects[i.next].client)
+  end
 end

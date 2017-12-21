@@ -7,7 +7,8 @@ div.about itemscope="" itemtype="http://schema.org/thing"
     = inline_svg 'about/about-pics.svg', class: 'about-desc-mark'
     .about-desc-square-mark
   dl.about-items
-    dt= t('.core_values')
-    dd itemprop='description'== t('.experienced_team')
-    dt= t('.benefits')
-    dd itemprop='description'== t('.cost_efficient')
+    div
+      dt= t('.core_values')
+      dd itemprop='description'== t('.experienced_team')
+      dt= t('.benefits')
+      dd itemprop='description'== t('.cost_efficient')
