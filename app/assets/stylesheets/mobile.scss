@@ -267,17 +267,20 @@ ul {
     padding: 0 5%;
 
     .testimonial-project-logo {
-      width: 20vmin;
-      height: 20vmin;
       max-width: 120px;
       max-height: 120px;
       object-fit: cover;
-      top: -10vmin;
+      top: -70px;
       left: 50%;
       transform: translateX(-50%);
-      border-radius: 50%;
       position: absolute;
       display: block;
+    }
+
+    img[alt='Freestak'],
+    img[alt='Preeline'],
+    img[alt='Daisy bill'] {
+      top: -50px;
     }
 
     .testimonial-body {
