@@ -277,12 +277,6 @@ ul {
       display: block;
     }
 
-    img[alt='Freestak'],
-    img[alt='Preeline'],
-    img[alt='Daisy bill'] {
-      top: -50px;
-    }
-
     .testimonial-body {
       padding: 0;
       width: 100%;
@@ -324,6 +318,12 @@ ul {
           font-family: arial, sans-serif;
         }
       }
+    }
+  }
+
+  .freestak, .preeline, .daysi_bill {
+    .testimonial-project-logo {
+      top: -50px;
     }
   }
 
