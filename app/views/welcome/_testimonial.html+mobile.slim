@@ -1,6 +1,6 @@
 li.testimonial class="#{testimonial[:company].underscore}"
   .testimonial-body
-    = image_tag(testimonial[:logo], class: 'testimonial-project-logo')
+    = inline_svg testimonial[:logo], class: 'testimonial-project-logo'
     q= testimonial[:description]
     span.author-info
       em= testimonial[:author]
