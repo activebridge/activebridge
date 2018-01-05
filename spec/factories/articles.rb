@@ -13,7 +13,7 @@ ei, id per hinc tota iusto. Labitur sapientem eos cu, mei ad urbanitas signiferu
 labitur sapientem his. Prima aperiri fierent vis te, pro aliquam delicatissimi ne.'
     picture File.new(File.join(Rails.root + 'spec/fixtures/image.jpg'))
     review_status :done
-    category 'ror-development'
+    category :ror
     association :member
   end
 end
