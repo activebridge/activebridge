@@ -233,7 +233,28 @@ en:
     twitter: 'https://twitter.com/activebridge'
     facebook: 'https://facebook.com/ActiveBridgeTeam'
     google: 'https://plus.google.com/+ActiveBridgeTeam'
-    youtube: 'https://youtube.com/channel/UCw5hPDX1sKgDZczIvcaIepw'
+    instagram: 'https://www.instagram.com/active.bridge'
     pinterest: 'https://ru.pinterest.com/activebridg0459'
     github: 'https://github.com/activebridge'
     blog: 'http://blog.active-bridge.com'
+  categories:
+    ror: RoR Development
+    pm: Product Management
+    seo: Entrepreneurship
+    team: Insights
+  blog:
+    recommended: RECOMMENDED POSTS
+    footer:
+      pages:
+        about: About
+        services: Services
+        team: Team
+        portfolio: Portfolio
+      title: Active Bridge is a premium web development company, providing Ruby on Rails technology and integrating design and search optimization practice to deliver rapid, cost-effective results in an iterative manner.
+      company: Company
+      contacts: Contacts
+      email: contact@active-bridge.com
+      mobile: '+380636086045'
+      contact_us: Contact Us
+      follow: Stay tuned
+      copyright: '© 2017 Active Bridge, LLC'

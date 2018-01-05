@@ -16,8 +16,8 @@ class ArticlesController < ApplicationController
   end
   helper_method :article
 
-  def popular_articles
-    @popular_articles ||= Article.popular.includes(:member).first(3)
+  def recommended_articles
+    @recommended_articles ||= Article.by_category(article.category).recommended(article)
   end
-  helper_method :popular_articles
+  helper_method :recommended_articles
 end

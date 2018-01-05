@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   color: $white;
   font-family: Raleway;
@@ -44,22 +45,29 @@ nav {
   text-align: right;
   display: flex;
   a {
-    padding: 0 10px;
+    padding: 0 7px;
   }
 }
 
 .blog-background {
+  width: 100%;
   position: absolute;
-  width: 100vw;
-  height: 122vw;
+  height: 100%;
+  overflow: hidden;
   background: $dark-violet;
   background: radial-gradient(top, $blog-violet-hotspot, $blog-violet);
+
+  .stripes {
+    width: 100vw;
+    height: 122vw;
+  }
 }
 
 .main {
+  position: relative;
   h2.title {
     margin: 0vmax 0 0.6vmax;
-    font-size: 1.8vmax;
+    font-size: 1.5vmax;
     font-weight: bold;
     color: white;
     text-align: left;
@@ -182,21 +190,19 @@ a.article {
   }
 }
 
-.social-icons {
-  a {
-    padding: 0 1%;
-  }
-  svg {
-    width: 32px;
-  }
-}
-
 .nav-right {
   align-items: center;
   width: 75%;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
+
+  .contact-us {
+    margin-left: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+  }
 }
 
 .nav-left {
@@ -380,6 +386,125 @@ a.article {
   }
 }
 
+.recommended {
+  background: white;
+  font-size: 1.2vmax;
+  color: #463159;
+  text-align: center;
+  padding-bottom: 20px;
+
+  h3 {
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #80808036;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .articles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      transition: .3s all ease-in-out;
+      color: #463159;
+      display: inline-flex;
+      width: 30%;
+      height: 100px;
+      font-weight: bold;
+      background: #B5A2BA;
+      margin: 0 15px;
+      padding: 15px 50px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a:hover {
+      background: #937c9e;
+    }
+  }
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    color: #c398d0;
+    font-family: Raleway;
+    background: rgba(54, 33, 64, 0.9);
+
+  a:hover {
+    color: #926e9c;
+    border-color: #926e9c;
+  }
+
+  h4 {
+    color: white;
+  }
+
+  &-title {
+    background: #4f2f6180;
+    padding: 5px 20%;
+    text-align: center;
+  }
+
+  &-pages {
+    display: inline-block;
+    width: 15%;
+    float: left;
+    margin-left: 10%;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: #c398d0;
+      }
+    }
+  }
+
+  &-contacts {
+    display: inline-block;
+    width: 20%;
+
+    a {
+      background: transparent;
+      color: #c398d0;
+      display: block;
+      text-align: center;
+      border: 2px solid #c398d0;
+      border-radius: 5px;
+      width: 75%;
+    }
+  }
+
+  &-right {
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+
+    .social-icons {
+      padding: 0;
+
+      a {
+        padding: 0 5px;
+      }
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &-bottom p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+}
+
 .disqus-block {
   background: #472f5a;
   #disqus_thread {
@@ -403,10 +528,7 @@ a.article {
   }
 }
 
-@media (max-width: 1025px) {
-  .blog-background {
-    display: none;
-  }
+@media (max-width: 1130px) {
   .main {
     padding: 20px 40px 50px 40px;
   }
@@ -457,6 +579,7 @@ a.article {
     font-size: 25px;
     opacity: 0;
     transition: opacity .3s ease;
+
     a:hover {
       opacity: .7;
     }
@@ -560,6 +683,11 @@ a.article {
     }
   }
 
+  .recommended .articles a {
+    height: 60px;
+    padding: 15px;
+  }
+
   .posts .article-rollover,
   .article-rollover {
     .meta {
@@ -573,9 +701,32 @@ a.article {
     }
   }
 
+  .footer {
+    &-title {
+      padding: 5px 10%;
+    }
+
+    &-pages {
+      margin-left: 50px;
+      width: 25%;
+    }
+
+    &-contacts {
+      width: 25%;
+    }
+
+    &-right {
+      width: 30%;
+      margin-right: 15px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
+  h1 {
+    font-size: 1em;
+  }
+
   nav {
     padding: 10px 15px 0px 10px;
   }
@@ -599,5 +750,27 @@ a.article {
   .posts .article-rollover,
   .article-rollover {
     padding: 25px 20px 25px;
+  }
+
+  .footer {
+    &-title {
+      padding: 5px 3%;
+    }
+
+    &-pages {
+      width: 35%;
+      margin-left: 70px;
+    }
+
+    &-contacts {
+      width: 45%;
+    }
+
+    &-right {
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
 }

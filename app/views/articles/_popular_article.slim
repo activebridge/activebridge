@@ -1,6 +1,0 @@
-= link_to article_path(popular_article, anchor: 'post'), style: "background-image: url(#{popular_article.picture_url})", class: 'article', remote: true do
-  .article-rollover
-    .meta
-      h4.article-title = popular_article.title
-      = image_tag popular_article.member.avatar.url, class: 'author-avatar'
-      span = popular_article.member.name

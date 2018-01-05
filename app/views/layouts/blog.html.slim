@@ -2,16 +2,11 @@ doctype 5
 html
   = render 'layouts/head', type: :blog, media: :all
   body
-    = inline_svg 'blog/stripe.svg', class: 'blog-background'
+    .blog-background= inline_svg 'blog/stripe.svg', class: 'stripes'
     = render 'shared/blog/header'
     main.main
-      h2.title.popular-posts-title tabindex='-1'
-        | Popular posts
-        span.title-arrow ›
-      span.items_counter = pluralize(popular_articles.count, 'item')
-      .popular
-        = render partial: 'popular_article', collection: popular_articles, as: :popular_article
       .yield
         = yield
+    = render 'shared/blog/footer'
     = javascript_include_tag :blog
     = stylesheet_link_tag :blog, 'https://fonts.googleapis.com/css?family=Raleway', media: :all

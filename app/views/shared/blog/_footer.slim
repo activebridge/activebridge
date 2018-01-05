@@ -1,14 +1,18 @@
 footer.footer
-  .footer-left
-    h3 Active Bridge
-    p Active Bridge is a Ruby on Rails development team, which brings your ideas to life
-  .footer-center
-    h4 Company
+  .footer-title
+    p= t('blog.footer.title')
+  .footer-pages
+    h4= t('blog.footer.company')
     ul.footer-page-list
-      li= link_to 'About', page_url(:about)
-      li= link_to 'Services', page_url(:services)
-      li= link_to 'Team', page_url(:team)
-      li= link_to 'Portfolio', page_url(:portfolio)
+      - I18n.t('blog.footer.pages').each_pair do |key, value|
+        li= link_to value, page_url(key), target: '_blank'
+  .footer-contacts
+    h4= t('blog.footer.contacts')
+    p= t('blog.footer.mobile')
+    p= t('blog.footer.email')
+    = link_to t('blog.footer.contact_us'), page_url(:contact), target: '_blank'
   .footer-right
-    h4 Follow us
+    h4= t('blog.footer.follow')
     = render 'social_icons', klass: :xl
+  .footer-bottom
+    p= t('blog.footer.copyright')

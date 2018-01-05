@@ -9,6 +9,7 @@
   = content_for :title do
     = article.title
 
+h2.title = "Home › Blog › #{t("categories.#{article.category}")}"
 #post.article-box
   = link_to '➦', back_path, remote: true, class: 'back-link'
 
@@ -18,5 +19,10 @@
     span.created_date = article.created_at.strftime('%B %d, %Y')
   article.post-body-show
     = md(article.body)
+- if recommended_articles.any?
+  .recommended
+    h3= t('blog.recommended')
+    .articles
+      = render partial: 'recommended_article', collection: recommended_articles, as: :recommended_article
 - unless article.pending?
   .disqus-block= render 'disqus'
