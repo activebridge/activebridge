@@ -4,11 +4,11 @@ class Article < ActiveRecord::Base
   belongs_to :member
 
   enum review_status: %i(pending done)
-  enum category: %i(ror pm seo team)
+  enum category: %i(ror-development product-manegement entrepreneurship insights)
   validates :title, :body, :category, :picture, presence: true
   validates :body, length: { minimum: 100 }
 
-  scope :by_category, ->(slug) { slug ? where(category: slug) : without(:team) }
+  scope :by_category, ->(slug) { slug ? where(category: slug) : without(:insights) }
   scope :blog, lambda { |category, page|
     done
       .includes(:member)
