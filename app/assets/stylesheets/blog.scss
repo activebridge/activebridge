@@ -199,8 +199,15 @@ a.article {
 
   .contact-us {
     margin-left: 10px;
-    border: 2px solid white;
     border-radius: 5px;
+    color: #5C376E;
+    background-color: #9A73B3;
+    font-weight: bold;
+    padding: 5px 7px;
+    transition: .2s all ease-in-out;
+  }
+
+  .contact-us:hover {
     color: white;
   }
 }
@@ -551,13 +558,8 @@ a.article {
     &:hover {
       opacity: .5;
     }
-    &:focus + .menu-items {
-      opacity: 1;
-      z-index: 1;
-    }
     & + .menu-items {
       order: 1;
-
     }
     & > svg {
       fill: white;
@@ -580,12 +582,20 @@ a.article {
     opacity: 0;
     transition: opacity .3s ease;
 
+    a.menu-item {
+      z-index: 2;
+    }
     a:hover {
       opacity: .7;
     }
-    &:hover {
+    &:target {
       opacity: 1;
       z-index: 1;
+    }
+    a.hide-menu {
+      width: 100%;
+      height: 100%;
+      position: absolute;
     }
   }
 
@@ -658,6 +668,15 @@ a.article {
 }
 
 @media (max-width: 720px) {
+  .link-group a {
+    padding: 0 2vmax 0.7vmax 2vmax;
+    font-size: 3.5vmax;
+  }
+
+  .bottom-group {
+    margin-top: 2vmax;
+  }
+
   .posts {
     display: block;
     a {

@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   resources :articles, constraints: { subdomain: 'blog' }, defaults: { format: :html }, path: '/' do
     collection do
-      get 'category/:category', action: :index, as: 'category'
+      get 'category(/:category)', action: :index,
+                                  as: :category,
+                                  constraints: { category: /(#{Article.categories.keys.join('|')})/ }
       get 'page/:page', action: :index, as: 'page'
       scope ':type', constraints: { type: /(pending|done)/ } do
         get '/', action: :index, as: :index
