@@ -551,6 +551,7 @@ a.article {
   .menu-button {
     margin-top: 5px;
     opacity: 1;
+    z-index: 1;
     order: 2;
     cursor: pointer;
     transition: opacity .3s;
@@ -561,6 +562,9 @@ a.article {
     & + .menu-items {
       order: 1;
     }
+    &:focus + .menu-items {
+      height: 100vh;
+    }
     & > svg {
       fill: white;
       height: 27px;
@@ -569,33 +573,20 @@ a.article {
   .menu-items {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 0;
     background: rgba(99, 56, 123, 0.98);
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     font-size: 25px;
-    opacity: 0;
-    transition: opacity .3s ease;
-
-    a.menu-item {
-      z-index: 2;
-    }
+    overflow: hidden;
+    transition: height .3s .1s;
     a:hover {
       opacity: .7;
-    }
-    &:target {
-      opacity: 1;
-      z-index: 1;
-    }
-    a.hide-menu {
-      width: 100%;
-      height: 100%;
-      position: absolute;
     }
   }
 
