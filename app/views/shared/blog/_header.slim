@@ -5,11 +5,10 @@ header.header
         h1 Active::Bridge
       h1 Blog
     .nav-right
-      = link_to '#menu', class: 'menu-button' do
+      .menu-button tabindex='-1'
         = inline_svg 'icons/hamburger.svg'
-      .menu-items#menu
+      .menu-items
         => link_to_unless_current 'All Posts', articles_path, class: 'menu-item'
         - Article.categories.keys.each do |c|
           => link_to_unless_current t("blog.categories.#{c}"), category_articles_path(c), class: 'menu-item'
-        = link_to t('blog.footer.contact_us'), page_url(:contact), target: '_blank', class: 'menu-item contact-us'
-        = link_to '', '#', class: 'hide-menu'
+        = link_to t('blog.footer.contact_us'), page_url(:contact, anchor: :contact), target: '_blank', class: 'menu-item contact-us'
