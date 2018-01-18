@@ -65,7 +65,7 @@ nav {
 
 .main {
   position: relative;
-  h2.title {
+  .title {
     margin: 0vmax 0 0.6vmax;
     font-size: 1.5vmax;
     font-weight: bold;
@@ -218,6 +218,12 @@ a.article {
   width: 25%;
   min-width: 270px;
   align-content: flex-end;
+
+  span {
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
 
   a.main-site-link {
     display: inline-flex;
