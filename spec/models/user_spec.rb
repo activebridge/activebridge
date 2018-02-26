@@ -7,5 +7,6 @@ RSpec.describe User, type: :model do
 
   describe 'associations' do
     it { is_expected.to belong_to(:company) }
+    it { is_expected.to have_many(:invoices) }
   end
 end
