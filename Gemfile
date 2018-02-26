@@ -26,6 +26,7 @@ gem 'rubocop', require: false
 gem 'sass-rails', '~> 5.0'
 gem 'serviceworker-rails'
 gem 'sitemap_generator'
+gem 'slack-api'
 gem 'slim-rails'
 gem 'tinify'
 gem 'turbolinks'
