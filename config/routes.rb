@@ -21,4 +21,12 @@ Rails.application.routes.draw do
   post '/contact', to: 'requests#create', as: :contact
 
   root to: 'welcome#index'
+
+  resources :slacks, only: :check_project do
+    collection do
+      post 'check_project'
+    end
+  end
+
+  get '/slacks/default', to: 'slacks#default', as: :slacks
 end
