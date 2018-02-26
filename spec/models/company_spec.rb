@@ -7,5 +7,12 @@ RSpec.describe Company, type: :model do
 
   describe 'associations' do
     it { is_expected.to have_many(:users) }
+    it { is_expected.to have_many(:customers) }
+  end
+
+  describe '#self.default' do
+    let!(:company){ create(:company) }
+
+    it { expect(subject.class.default.name).to eq 'Active Bridge LLC' }
   end
 end
