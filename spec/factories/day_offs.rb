@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :day_off do
-    date "2018-02-26"
-    user nil
-    company nil
-    deleted false
+    date { Faker::Date.between(Date.current.beginning_of_month, Date.current.end_of_month) }
+    company
+    user
   end
 end

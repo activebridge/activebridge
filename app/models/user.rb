@@ -37,4 +37,8 @@ class User < ApplicationRecord
     workdays_count * WORKING_HOURS_PER_DAY
   end
 
+  def self.current_months_full_working_hours
+    workdays_count = Date.current_month_workdays.count - DayOff.general.this_months.count
+    workdays_count * WORKING_HOURS_PER_DAY
+  end
 end

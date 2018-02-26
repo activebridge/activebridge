@@ -29,4 +29,6 @@ Rails.application.routes.draw do
   end
 
   get '/slacks/default', to: 'slacks#default', as: :slacks
+
+  get '/download/invoices/:date', to: 'download#invoices', defaults: { format: :xlsx }
 end

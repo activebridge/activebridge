@@ -1,9 +1,7 @@
 FactoryGirl.define do
   factory :invoice do
-    hours 1
-    date "2018-02-26"
-    confirmed false
-    user nil
-    customer nil
+    hours 160
+    user
+    customer
   end
 end

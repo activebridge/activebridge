@@ -1,0 +1,20 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Invoices") do |sheet|
+  sheet.column_widths 10, 20, 20, 10, 15
+
+  sheet.add_row %w(Month Developer Customer Hours Status)
+  working_hours = User.current_months_full_working_hours
+
+  @result.each do |invoice|
+
+    if invoice.confirmed
+      status = "Confirmed"
+    else
+      status = "Unconfirmed"
+    end
+
+
+    sheet.add_row [invoice.date.strftime("%b_%Y"), invoice.user.slack_name, invoice.customer.name, invoice.hours, status]
+  end
+end
