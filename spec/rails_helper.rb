@@ -5,6 +5,15 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/poltergeist'
 require 'support/host_helper'
+require 'shoulda/matchers'
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
 Capybara.javascript_driver = :poltergeist
 
 ActiveRecord::Migration.maintain_test_schema!

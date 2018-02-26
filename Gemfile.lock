@@ -146,6 +146,8 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
+    faker (1.8.7)
+      i18n (>= 0.7)
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -309,6 +311,8 @@ GEM
       tilt (>= 1.1, < 3)
     serviceworker-rails (0.5.3)
       railties (>= 3.1)
+    shoulda-matchers (3.1.2)
+      activesupport (>= 4.0.0)
     simplecov (0.12.0)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -384,6 +388,7 @@ DEPENDENCIES
   coffee-rails
   database_cleaner
   factory_girl_rails
+  faker
   friendly_id
   inherited_resources!
   inline_svg
@@ -405,6 +410,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   serviceworker-rails
+  shoulda-matchers
   simplecov
   sitemap_generator
   slim-rails
@@ -420,4 +426,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.14.6
+   1.16.1

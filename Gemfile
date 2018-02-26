@@ -40,12 +40,14 @@ group :development, :test do
   gem 'capybara-email'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'letter_opener'
   gem 'poltergeist'
   gem 'pry'
   gem 'rb-readline'
   gem 'rspec-rails'
   gem 'rspec-retry'
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
 end
 
