@@ -6,8 +6,31 @@ module Bot
 
       def get
         return if user.developer? || value.nil?
+        @date = value
 
-        @text = "Download invoice https://active-slack-bot.herokuapp.com/download/invoices/" + value
+        if date_valid?
+          @text = "Download invoice #{ENV['HOST']}/download/invoices/" + value.gsub(' ', '+')
+        else
+          @text = "Invalid date"
+        end
+      end
+
+      def date_valid?
+        if @date.length == 7
+          month_valid?
+        elsif @date.length == 23
+          parse_date
+        end
+      end
+
+      def parse_date
+        unless @date.gsub(/from|to/, '').split.map{ |m| m.to_i.between?(1,12) }.include? false
+          true
+        end
+      end
+
+      def month_valid?
+        @value.to_i.between?(1,12)
       end
     end
   end
