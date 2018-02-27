@@ -9,13 +9,15 @@ task accounting_bot: :environment do # should run once in a months (last busines
 
     User.active.developers.each do |user|
       result = client.im_open(user: user.slack_id)
-      channel_id = result['channel']['id']
+      if result['ok']
+        channel_id = result['channel']['id']
 
-      message = Bot::Message.new(channel_id: channel_id, customer_name: user.last_customer_name, hours: user.current_month_working_hours)
-      message.extend(Bot::Messages::FullTime)
-      customer = Customer.find_by(name: user.last_customer_name)
-      Invoice.create(customer_id: customer.id, user_id: user.id, hours: user.current_month_working_hours, date: Date.today)
-      client.chat_postMessage(message.generate)
+        message = Bot::Message.new(channel_id: channel_id, customer_name: user.last_customer_name, hours: user.current_month_working_hours)
+        message.extend(Bot::Messages::FullTime)
+        customer = Customer.find_by(name: user.last_customer_name)
+        Invoice.create(customer_id: customer.id, user_id: user.id, hours: user.current_month_working_hours, date: Date.today)
+        client.chat_postMessage(message.generate)
+      end
     end
   end
 end

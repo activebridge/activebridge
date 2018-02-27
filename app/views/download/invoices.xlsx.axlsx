@@ -3,18 +3,25 @@ wb = xlsx_package.workbook
 wb.add_worksheet(name: "Invoices") do |sheet|
   sheet.column_widths 10, 20, 20, 10, 15
 
-  sheet.add_row %w(Month Developer Customer Hours Status)
-  working_hours = User.current_months_full_working_hours
+  header_style    = sheet.styles.add_style(bg_color: '002060')
+  date_style      = sheet.styles.add_style(bg_color: 'fbe4d5')
+  user_style      = sheet.styles.add_style(bg_color: 'ffe598')
+  customer_style  = sheet.styles.add_style(bg_color: 'fef2cb')
+  status_style    = sheet.styles.add_style(bg_color: '50b752')
+  status_style_2  = sheet.styles.add_style(bg_color: 'a3a3a3')
+
+  sheet.add_row %w(Month Developer Customer Hours Status), style: header_style
 
   @result.each do |invoice|
+    hours_style = sheet.styles.add_style(bg_color: hours_color(invoice.hours))
+    status = "Confirmed"
+    style = [date_style, user_style, customer_style, hours_style, status_style]
 
-    if invoice.confirmed
-      status = "Confirmed"
-    else
+    unless invoice.confirmed
       status = "Unconfirmed"
+      style = status_style_2
     end
 
-
-    sheet.add_row [invoice.date.strftime("%b_%Y"), invoice.user.slack_name, invoice.customer.name, invoice.hours, status]
+    sheet.add_row [invoice.date.strftime("%b_%Y"), invoice.user.slack_name, invoice.customer.name, invoice.hours, status], style: style
   end
 end

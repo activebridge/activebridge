@@ -18,7 +18,7 @@ module Bot
       end
 
       def dayoff_admin_text_message
-        "Add a New dayoff: e.g. `dayoff add ...`\nDelete a dayoff: e.g. `dayoff delete ...`\n"
+        "Add a New dayoff: e.g. `dayoff add ...`\nDelete a dayoff: e.g. `dayoff delete ...`\nDownload invoices: e.g. `invoices get` 02-2018\nDownload invoices: e.g. `invoices get from` 12-2017 `to` 03-2018\n"
       end
 
       def dayoff_text_message
