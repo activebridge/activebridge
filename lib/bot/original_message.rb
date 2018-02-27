@@ -20,14 +20,19 @@ module Bot
 
     def full_time
       return choose_project_message unless confirmed?
-
-      Invoice.create(customer: customer, user: user, hours: user.current_month_working_hours)
+      Invoice.where(user_id: user.id).last.update(confirmed: true)
       send_to_accountent
       generate_final_message
     end
 
     def choose_project
-      Invoice.create(customer: customer, user: user)
+      date = Invoice.where(user_id: user.id).last.date
+      last_unconfirmed_invoice = Invoice.where(user_id: user.id, confirmed: false).last
+      unless last_unconfirmed_invoice.nil?
+        last_unconfirmed_invoice.delete
+      end
+
+      Invoice.create(customer: customer, user: user, confirmed: true, date: date)
       message.customer_name = customer.name
       message.extend(Bot::Messages::InsertHours)
     end
@@ -68,7 +73,7 @@ module Bot
 
     def final_text_message
       text = ''
-      current_month_invoices.each do |invoice|
+      current_month_invoices.where(confirmed: true).each do |invoice|
         text += " • #{invoice.customer_name}: #{invoice.hours} hours. \n"
       end
 
