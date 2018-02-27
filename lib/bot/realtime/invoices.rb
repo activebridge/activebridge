@@ -6,7 +6,6 @@ module Bot
 
       def get
         return if user.developer? || value.nil?
-        @date = value
 
         if date_valid?
           @text = "Download invoice #{ENV['HOST']}/download/invoices/" + value.gsub(' ', '+')
@@ -16,21 +15,21 @@ module Bot
       end
 
       def date_valid?
-        if @date.length == 7
+        if value.length == 7
           month_valid?
-        elsif @date.length == 23
-          parse_date
+        elsif value.length == 23
+          parse_value
         end
       end
 
-      def parse_date
-        unless @date.gsub(/from|to/, '').split.map{ |m| m.to_i.between?(1,12) }.include? false
+      def parse_value
+        unless value.gsub(/from|to/, '').split.map{ |m| m.to_i.between?(1,12) }.include? false
           true
         end
       end
 
       def month_valid?
-        @value.to_i.between?(1,12)
+        value.to_i.between?(1,12)
       end
     end
   end

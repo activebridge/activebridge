@@ -1,20 +1,10 @@
 class DownloadController < ApplicationController
   before_action :parse_params, only: :invoices
+  before_filter :authenticate
 
   def invoices
-    date = parse_params
-    d0 = Date.parse(date[0])
-
-    if date[1].nil?
-      d1 = d0.beginning_of_month.next_month - 1
-    else
-      d1 = Date.parse(date[1]).beginning_of_month.next_month - 1
-    end
-
-    @result = Invoice.where(date: d0..d1).order('date ASC')
-
+    @result = Invoice.where(date: begin_date..end_date).order('date ASC')
     render "invoices.xlsx.axlsx"
-
   end
 
   private
@@ -27,6 +17,23 @@ class DownloadController < ApplicationController
     end
   end
 
-  def last_month
+  def begin_date
+    Date.parse(parse_params[0])
+  end
+
+  def end_date
+    if parse_params[1].nil?
+      begin_date.beginning_of_month.next_month - 1
+    else
+      Date.parse(parse_params[1]).beginning_of_month.next_month - 1
+    end
+  end
+
+  protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV['USER'] && password == ENV['SECRET']
+    end
   end
 end

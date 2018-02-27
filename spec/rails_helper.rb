@@ -7,6 +7,7 @@ require 'capybara/poltergeist'
 require 'support/host_helper'
 require 'shoulda/matchers'
 require 'support/shared_examples/generate_message'
+require 'support/auth_helper'
 
 Dir["#{Rails.root}/bot/**/*.rb"].each {|file| require file }
 
