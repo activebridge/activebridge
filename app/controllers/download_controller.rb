@@ -11,7 +11,7 @@ class DownloadController < ApplicationController
 
   def parse_params
     if params[:date].include?('from')
-      params[:date].gsub('from+', '01-').gsub('to+', '01-').split('+')
+      params[:date].gsub('from_', '01-').gsub('to_', '01-').gsub('.xlsx', '').split('_')
     else
       ('01-' + params[:date]).split
     end

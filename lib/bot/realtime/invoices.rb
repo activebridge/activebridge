@@ -8,7 +8,7 @@ module Bot
         return if user.developer? || value.nil?
 
         if date_valid?
-          @text = "Download invoice #{ENV['HOST']}/download/invoices/" + value.gsub(' ', '+')
+          @text = "Download invoice #{ENV['HOST']}/download/invoices/" + value.gsub(' ', '_') + ".xlsx"
         else
           @text = "Invalid date"
         end
