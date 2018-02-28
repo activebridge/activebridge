@@ -6,7 +6,7 @@ class Company < ApplicationRecord
   validates :name, presence: true
 
   def self.default
-    find_or_create_by(name: 'Active Bridge LLC')
+    find_or_create_by(name: 'Active Bridge LLC', slack_team_id: 'T040ZA47T')
   end
 
   def default_customer

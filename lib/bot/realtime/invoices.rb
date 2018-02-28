@@ -16,21 +16,27 @@ module Bot
 
       def date_valid?
         if value.length == 7
-          month_valid?
+          month_valid?(value) && year_valid?(value)
         elsif value.length == 23
           parse_value
         end
       end
 
       def parse_value
-        unless value.gsub(/from|to/, '').split.map{ |m| m.to_i.between?(1,12) }.include? false
+        unless value.gsub(/from|to/, '').split.map{ |m| month_valid?(m) && year_valid?(m) }.include? false
           true
         end
       end
 
-      def month_valid?
-        value.to_i.between?(1,12)
+      def month_valid?(date)
+        date.first(2).to_i.between?(1,12)
       end
+
+      def year_valid?(date)
+        date.last(4).to_i.between?(1999,9999)
+      end
+
+
     end
   end
 end

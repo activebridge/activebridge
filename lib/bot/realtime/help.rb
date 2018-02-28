@@ -22,7 +22,7 @@ module Bot
       end
 
       def dayoff_text_message
-        "List of dayoffs: e.g. `dayoff list`\nAdd a vacation: e.g. `dayoff vacation from `Jan 06, 2017 ` to ` Jan 08, 2017\nAdd a vacation: e.g. `dayoff vacation from `15-03-2017 ` to ` 22-03-2017\n"
+        "List of dayoffs: e.g. `dayoff list`\n"
       end
     end
   end

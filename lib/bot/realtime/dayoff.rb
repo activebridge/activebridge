@@ -6,8 +6,8 @@ module Bot
       after_hook :notify
 
       def list
-        dayoffs = company.day_offs.general + user.day_offs
-        @text = list_of_dates(dayoffs.map(&:date)) + unused_dayoffs_text
+        dayoffs = company.day_offs.general
+        @text = list_of_dates(dayoffs.map(&:date))
       end
 
       def add
