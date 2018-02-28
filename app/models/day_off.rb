@@ -1,4 +1,4 @@
-class DayOff < ApplicationRecord
+class DayOff < ActiveRecord::Base
   DAYOFFS_PER_YEAR = 15
   belongs_to :user
   belongs_to :company

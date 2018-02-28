@@ -1,4 +1,4 @@
-class Company < ApplicationRecord
+class Company < ActiveRecord::Base
   has_many :users
   has_many :customers
   has_many :day_offs

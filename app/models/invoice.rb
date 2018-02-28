@@ -1,4 +1,4 @@
-class Invoice < ApplicationRecord
+class Invoice < ActiveRecord::Base
   belongs_to :customer
   belongs_to :user
 

@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
   WORKING_HOURS_PER_DAY = 8
 
   validates :slack_name, presence: true
