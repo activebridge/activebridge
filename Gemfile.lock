@@ -123,6 +123,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    chroma (0.2.0)
     chronic (0.10.2)
     cliver (0.3.2)
     cloudinary (1.3.0)
@@ -411,6 +412,7 @@ DEPENDENCIES
   capybara
   capybara-email
   carrierwave
+  chroma
   cloudinary
   coderay
   coffee-rails
