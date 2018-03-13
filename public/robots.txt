@@ -4,7 +4,6 @@
 User-agent: *
 Disallow: /assets/
 Disallow: /cdn-cgi/
-Disallow: /category/
 Disallow: /page/
 
 Sitemap: https://active-bridge.com/shared/sitemap.xml.gz
