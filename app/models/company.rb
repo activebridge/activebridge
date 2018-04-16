@@ -16,5 +16,4 @@ class Company < ActiveRecord::Base
   def accountant
     users.find_by(role: 'accountant') || users.find_by(role: 'admin') || users.first
   end
-
 end
