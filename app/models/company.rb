@@ -6,7 +6,7 @@ class Company < ActiveRecord::Base
   validates :name, presence: true
 
   def self.default
-    find_or_create_by(name: 'Active Bridge LLC', slack_team_id: 'T040ZA47T')
+    find_or_create_by(name: 'Active Bridge LLC', slack_team_id: ENV['SLACK_TEAM_ID'])
   end
 
   def default_customer
