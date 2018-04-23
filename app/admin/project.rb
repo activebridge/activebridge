@@ -18,7 +18,7 @@ ActiveAdmin.register Project do
 
   index do
     selectable_column
-    column :title
+    column :client
     column :description
     column 'Logo' do |project|
       cl_image_tag(project.logo.url, width: 150, crop: :thumb)
