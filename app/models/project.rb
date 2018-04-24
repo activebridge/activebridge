@@ -10,7 +10,6 @@ class Project < ActiveRecord::Base
             :industry,
             :link,
             :priority,
-            :image,
             presence: true
   validates :priority, uniqueness: true
 
