@@ -4,17 +4,16 @@
     .st0 {
       fill:#FFFFFF;
     }
-    .st1 {
+    .technology-bg {
+      opacity: 0.2;
+      fill: #FFFFFF;
+      enable-background:new;
+    }
+    .technology-link {
+      fill: #FFFFFF;
       font-family:Arial;
       font-weight:600
-    }
-    .st2 {
       font-size:18px;
-    }
-    .st3 {
-      opacity:0.2;
-      fill:#FFFFFF;
-      enable-background:new;
     }
     .cablook-bg {
       stroke:#FFFFFF;
@@ -198,44 +197,44 @@
   </style>
   <a href="#" class="rails">
     <g class="rails">
-      <path id="XMLID_5_" opacity="0.2" fill="#FFFFFF" enable-background="new    " d="M642.5-162.4H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
+      <path id="XMLID_5_" class="technology-bg" d="M642.5-162.4H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
         c0-3.8,3.1-6.8,6.8-6.8h143.7c3.8,0,6.8,3.1,6.8,6.8v29C649.3-165.4,646.2-162.4,642.5-162.4z"/>
-      <text transform="matrix(1 0 0 1 502.2754 -177.3158)" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="18px">Ruby on Rails</text>
+      <text transform="matrix(1 0 0 1 502.2754 -177.3158)" class="technology-link">Ruby on Rails</text>
     </g>
   </a>
   <a href="#" class="angular">
     <g>
-      <path id="XMLID_15_" opacity="0.2" fill="#FFFFFF" enable-background="new    " d="M642.5-110.5H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
+      <path id="XMLID_15_" class="technology-bg" d="M642.5-110.5H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
         c0-3.8,3.1-6.8,6.8-6.8h143.7c3.8,0,6.8,3.1,6.8,6.8v29C649.3-113.6,646.2-110.5,642.5-110.5z"/>
-      <text transform="matrix(1 0 0 1 502.2754 -125.8158)" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="18px">AngularJS</text>
+      <text transform="matrix(1 0 0 1 502.2754 -125.8158)" class="technology-link">AngularJS</text>
     </g>
   </a>
   <a href="#" class="react">
     <g>
-      <path id="XMLID_17_" opacity="0.2" fill="#FFFFFF" enable-background="new    " d="M642.5-59.1H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
+      <path id="XMLID_17_" class="technology-bg" d="M642.5-59.1H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
         c0-3.8,3.1-6.8,6.8-6.8h143.7c3.8,0,6.8,3.1,6.8,6.8v29C649.3-62.1,646.2-59.1,642.5-59.1z"/>
-      <text transform="matrix(1 0 0 1 502.2754 -75.3158)" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="18px">ReactJS</text>
+      <text transform="matrix(1 0 0 1 502.2754 -75.3158)" class="technology-link">ReactJS</text>
     </g>
   </a>
   <a href='#' class="backbone">
     <g>
-      <path id="XMLID_21_" opacity="0.2" fill="#FFFFFF" enable-background="new    " d="M642.5-7.6H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
+      <path id="XMLID_21_" class="technology-bg" d="M642.5-7.6H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
         c0-3.8,3.1-6.8,6.8-6.8h143.7c3.8,0,6.8,3.1,6.8,6.8v29C649.3-10.7,646.2-7.6,642.5-7.6z"/>
-      <text transform="matrix(1 0 0 1 502.2754 -22.9398)" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="18px">Backbone.js</text>
+      <text transform="matrix(1 0 0 1 502.2754 -22.9398)" class="technology-link">Backbone.js</text>
     </g>
   </a>
   <a href='#' class="android">
     <g>
-      <path id="XMLID_20_" opacity="0.2" fill="#FFFFFF" enable-background="new    " d="M642.5,44.2H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
+      <path id="XMLID_20_" class="technology-bg" d="M642.5,44.2H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
         c0-3.8,3.1-6.8,6.8-6.8h143.7c3.8,0,6.8,3.1,6.8,6.8v29C649.3,41.1,646.2,44.2,642.5,44.2z"/>
-      <text transform="matrix(1 0 0 1 502.2754 28.3102)" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="18px">Android</text>
+      <text transform="matrix(1 0 0 1 502.2754 28.3102)" class="technology-link">Android</text>
     </g>
   </a>
   <a href='#' class="ios">
     <g>
-      <path id="XMLID_1_" opacity="0.2" fill="#FFFFFF" enable-background="new    " d="M642.5,95.7H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
+      <path id="XMLID_1_" class="technology-bg" d="M642.5,95.7H498.8c-3.8,0-6.8-3.1-6.8-6.8v-29
         c0-3.8,3.1-6.8,6.8-6.8h143.7c3.8,0,6.8,3.1,6.8,6.8v29C649.3,92.6,646.2,95.7,642.5,95.7z"/>
-      <text transform="matrix(1 0 0 1 502.2754 81.0602)" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="18px">iOS</text>
+      <text transform="matrix(1 0 0 1 502.2754 81.0602)" class="technology-link">iOS</text>
     </g>
   </a>
   <g class="technologies" id="technologies">
