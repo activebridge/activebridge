@@ -239,7 +239,7 @@
     </g>
   </a>
   <g class="technologies" id="technologies">
-    <a href="#cablook" data-technologies="rails ios android">
+    <a href="#cablook_taxi" data-technologies="rails ios android">
       <path class="background cablook-bg" d="M1545.9,609.3
         l-100.8-58.2V434.7l100.8-58.2l100.8,58.2v116.4L1545.9,609.3L1545.9,609.3z" />
       <path stroke="#FFFFFF" stroke-width="1.8" stroke-miterlimit="10" stroke-opacity="0.5" />
