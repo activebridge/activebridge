@@ -16,10 +16,13 @@ $projects: (
   moozen_apps: #47A1C8,
   classly: #7891CA,
   total_adventure_zazmic: #5E5E5E,
-  zigloop: #469ECB,
+  zigloop: #F8921F,
   freestak: #79BDA0,
   knockknock_city: #6DB7D5,
   beatthread: #53AD71,
+  foundersuite: #F48420,
+  cablook_taxi: #19A160,
+  upstack: #57B16D,
 );
 
 .content.projects {
@@ -61,7 +64,7 @@ $projects: (
 
       a.#{$tech}:hover ~ g.technologies a[data-technologies*=#{$tech}],
       a.#{$tech}:focus ~ g.technologies a[data-technologies*=#{$tech}] {
-        path, text {
+        path, text, polygon {
           fill: #694086;
           stroke: none;
         }
@@ -70,7 +73,7 @@ $projects: (
           fill: #694086;
         }
 
-        path.st19, path.st14 {
+        path.st19, path.st14, line.st13 {
           fill: none;
           stroke: #694086;
         }
