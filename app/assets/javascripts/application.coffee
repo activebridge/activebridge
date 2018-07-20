@@ -33,11 +33,11 @@ window.onload = -> openEnvelope(this.location.pathname)
 
 closeWindow = ->
   document.querySelector('#lazy_overlay').className = ''
-  document.getElementById('lazy_body').innerHTML = ''
   document.body.className = 'index'
   history.pushState({}, null, '/')
 
 openPage = (event) ->
+  document.getElementById('lazy_body').innerHTML = ''
   document.getElementById('lazy_overlay').className = 'active'
   document.getElementById('lazybox').className = 'hidden'
   href = this.href.baseVal || this.href
