@@ -3,9 +3,9 @@ input type='checkbox' id='toggle-terminal' style="z-index: 10; position: absolut
 .services-cont
   label for='toggle-terminal'
     = inline_svg 'services/services_chip.svg', class: 'services-chip'
-  .skills
-    - I18n.t('services.skills').each_with_index do |skill, index|
-      = inline_svg "icons/skills/#{skill[:id]}.svg", class: "#{skill[:id]}-skill"
+    .skills
+      - I18n.t('services.skills').each_with_index do |skill, index|
+        = inline_svg "icons/skills/#{skill[:id]}.svg", class: "#{skill[:id]}-skill"
 .terminal-container
   label for='toggle-terminal'
   .info
