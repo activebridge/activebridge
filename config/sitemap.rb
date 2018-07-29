@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sitemap_generator'
 
-PAGES = %i(about services team portfolio).freeze
+PAGES = %i[about services team portfolio].freeze
 
 SitemapGenerator::Sitemap.default_host = 'https://active-bridge.com'
 SitemapGenerator::Sitemap.sitemaps_path = 'shared/'

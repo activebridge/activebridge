@@ -1,5 +1,5 @@
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w(
+Rails.application.config.assets.precompile += %w[
   active_admin.js
   application.js
   application.css
@@ -9,6 +9,6 @@ Rails.application.config.assets.precompile += %w(
   mobile.css
   fonts.css
   serviceworker.js
-)
+]
 
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/

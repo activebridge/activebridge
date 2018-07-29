@@ -1,5 +1,5 @@
 module ApplicationHelper
-  MD_OPTIONS = %i(
+  MD_OPTIONS = %i[
     fenced_code_blocks
     no_intra_emphasis
     autolink
@@ -7,7 +7,7 @@ module ApplicationHelper
     lax_html_blocks
     superscript
     tables
-  ).each_with_object({}) { |e, o| o[e] = true }.freeze
+  ].each_with_object({}) { |e, o| o[e] = true }.freeze
 
   def svg(path, klass = nil)
     inline_svg("icons/#{path}.svg", class: "icon #{klass}")

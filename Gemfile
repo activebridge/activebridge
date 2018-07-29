@@ -29,7 +29,7 @@ gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'tinify'
 gem 'turbolinks'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier'
 gem 'whenever', require: false
 
