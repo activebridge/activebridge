@@ -4,7 +4,7 @@ class BaseUploader < CarrierWave::Uploader::Base
   before :cache, :tinify
 
   def extension_white_list
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 
   private

@@ -3,11 +3,13 @@ require 'rails_helper'
 include ActiveJob::TestHelper
 
 RSpec.feature 'Mailer', type: :feature do
-  let(:info) {{
-    name: 'Alex',
-    email: 'valid_email@active-bridge.com',
-    message: 'Active Bridge - the best company ever!'
-  }}
+  let(:info) do
+    {
+      name: 'Alex',
+      email: 'valid_email@active-bridge.com',
+      message: 'Active Bridge - the best company ever!',
+    }
+  end
   let(:ab_email) { 'contact@active-bridge.com' }
 
   scenario 'send emails via contact form' do

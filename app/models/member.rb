@@ -1,9 +1,9 @@
 class Member < ActiveRecord::Base
   MAX_PLACEHOLDERS_SIZE = 36
   HEXAGONS = {
-    mask: [:down, :up, :center],
-    mask_down: [:up, :center, :down],
-    mask_up: [:center, :down, :up],
+    mask: %i[down up center],
+    mask_down: %i[up center down],
+    mask_up: %i[center down up],
   }.freeze
 
   mount_uploader :avatar, AvatarUploader
