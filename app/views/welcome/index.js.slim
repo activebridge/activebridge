@@ -1,6 +1,7 @@
 |
   history.pushState({}, null, "#{params[:page]}");
   document.getElementById('lazy_body').innerHTML = "#{ j(render partial: params[:page]) }";
+  document.getElementById('lazy_body').style.opacity = 1;
   document.getElementById('lazybox').className = '';
   reset = document.querySelector('input[type="radio"]');
   if (reset) reset.focus()
