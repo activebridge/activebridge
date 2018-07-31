@@ -56,6 +56,10 @@ svg#main-svg {
   }
 }
 
+#lazy_body {
+  transition: opacity 1s, transform 1s;
+}
+
 #lazybox {
   background: transparent;
   border: none;

@@ -37,7 +37,6 @@ closeWindow = ->
   history.pushState({}, null, '/')
 
 openPage = (event) ->
-  document.getElementById('lazy_body').innerHTML = ''
   document.getElementById('lazy_overlay').className = 'active'
   document.getElementById('lazybox').className = 'hidden'
   href = this.href.baseVal || this.href
@@ -92,6 +91,17 @@ browseData = (event) ->
   else if event.keyCode == 27
     document.getElementById('lazy_close').click()
 
+isRootPage = ->
+  location.pathname == '/'
+
+startLazyBodyTransition = ->
+  if isRootPage()
+    document.getElementById('lazybox').className = ''
+    document.getElementById('lazy_body').style.opacity = 0
+
+clearLazyBodyContent = ->
+  document.getElementById('lazy_body').innerHTML = '' if isRootPage()
+
 document.querySelector('#lazy_close').addEventListener('click', closeWindow, false)
 document.querySelector('#portfolio').addEventListener('click', openPage, false)
 document.querySelector('#testimonials').addEventListener('click', openPage, false)
@@ -100,6 +110,8 @@ document.querySelector('#about').addEventListener('click', openPage, false)
 document.querySelector('#services').addEventListener('click', openPage, false)
 document.querySelector('#team').addEventListener('click', openPage, false)
 document.querySelector('#contactus').addEventListener('click', openPage, false)
+document.querySelector('#lazy_overlay').addEventListener('transitionend', startLazyBodyTransition)
+document.querySelector('#lazy_body').addEventListener('transitionend', clearLazyBodyContent)
 document.addEventListener('keydown', browseData, false)
 initTeamScroll()
 
@@ -110,7 +122,7 @@ ajax = (method, href, async = true) ->
   return xhr
 
 window.onpopstate = ->
-  closeWindow() if location.pathname == '/'
+  closeWindow() if isRootPage()
 
 focus = ->
   controls = document.querySelectorAll("input[type='radio']")
