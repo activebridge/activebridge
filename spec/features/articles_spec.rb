@@ -4,12 +4,8 @@ RSpec.feature 'Articles page', type: :feature do
   let!(:ror_article) { create(:article, title: 'ror-development-article', category: :'ror-development') }
   let!(:insights_article) { create(:article, title: 'insights-article', category: :insights) }
 
-  before(:each) { change_host 'blog.lvh.me:3000' }
-
-  after(:each) { Capybara.app_host = nil }
-
   scenario do
-    visit root_path
+    visit articles_path
     expect(page).to have_content('Active::Bridge')
     expect(page).to have_content('All Posts')
     expect(page).to have_content('1 item')
