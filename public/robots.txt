@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /cdn-cgi/
 
 Sitemap: https://activebridge.org/shared/sitemap.xml.gz
+Host: activebridge.org
