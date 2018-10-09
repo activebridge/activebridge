@@ -1,17 +1,5 @@
 = content_for :head do
-  scss:
-    #lazy_overlay {
-      visibility: hidden;
-      position: fixed;
-    }
 
-    body {
-      overflow: hidden;
-      padding: 0;
-      margin: 0;
-      background: rgb(79,50,102);
-      background: linear-gradient(145deg, rgba(79,50,102,1) 0%,rgba(137,80,176,1) 40%,rgba(87,45,104,1) 100%);
-    }
 
 doctype 5
 html lang='en'
@@ -22,15 +10,36 @@ html lang='en'
 
   = render 'layouts/head', type: :application, media: :all
 
-  body class="#{params[:page] || 'index'}"
-    = render_lazybox
-    = render 'layouts/main_v2.svg'
-
-    = link_to page_path(:contact), class: :envelope, id: :contactus do
-      = image_tag 'icons/envelope.svg'
-
-    a.youteam href='https://youteam.co.uk/partner/active-bridge?ref=active-bridge' target=:_blank
-      = inline_svg('youteam.svg')
+  body
+    = yield
+    .gradient-circle-1
+    .gradient-circle-2
+    nav
+      ul
+        li 
+          span 
+           b How we work
+          a href='/' Dedicated Team
+          a href='/' Team Extension
+          a href='/' Project Model
+        li 
+          sapn 
+            b Services
+          a href='/' Web Application Development
+          a href='/' Mobile Application Development
+        li 
+          span 
+            b Portfolio
+          a href='/' Projects
+          a href='/' Testmonials
+        li 
+          span 
+            b Team
+        li
+          span 
+            b Contact Us
+          a href='/' Headquarters
+          a href='/' Email Us
     = javascript_include_tag 'application', async: false
     .hidden
       h1 Web development company - Active Bridge

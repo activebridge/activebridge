@@ -1,0 +1,54 @@
+.logo_container{
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  position: relative;  
+  margin-top: 8vh;
+  text-align: center;
+  width: 50vw;
+  height: 100%;
+  z-index: 2;
+
+
+  h1 {
+    color: #b64e96;
+  }
+
+  h2{
+    color: #5f52ca;
+    text-transform: uppercase;
+  }
+
+  .img__logo {
+    width: 35vw;
+  }
+
+  .btn_work{
+    border-radius: 30px;
+    border: solid 1px #20538D;
+    background: linear-gradient(to right, #b64e96, #5f52ca);
+    color: #FFF;
+    padding: 18px 35px;
+    text-decoration: none;
+  }
+  p {
+    margin-top: 4vh;
+    font-size: 45px;
+    color: #b64e96;
+  }
+
+  .inner {
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+  }
+
+  .container{
+    perspective: 40px;
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+  }
+}
