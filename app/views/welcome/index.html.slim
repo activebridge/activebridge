@@ -1,21 +1,39 @@
 - if params[:page]
   = content_for :lazybox do
     = render params[:page]
-.logo_container
+.container
   .logo#logo_holder
     h1 Active Bridge
     h2 Your ideas. Our talents. Great result.
-    .container#container
+    .logo_container#logo_container
       .inner#inner
-        = inline_svg 'logo', class: 'img__logo', id: 'logo'
+        = inline_svg 'index/logo', class: 'img__logo', id: 'logo'
     br
-    a.btn_work  href='/' 
+    a.btn_work  href='#about_us' 
       b Learn how we work
     p ↓
-
+a#about_us
+.about_us_container
+  .description_container
+    = inline_svg 'index/home_page_1', class: 'home_page_1 home_page'
+    = inline_svg 'index/home_page_1_pink', class: 'home_page home_page_pink home_page_pink_1'
+    div
+      =t('about_us.information.first')
+      = inline_svg 'index/home_page_line_1', class: 'home_page_line'
+  .description_container
+    div
+      =t('about_us.information.second')
+      = inline_svg 'index/home_page_line_2', class: 'home_page_line'
+    = inline_svg 'index/home_page_2', class: 'home_page home_page_2'
+    = inline_svg 'index/home_page_2_pink', class: 'home_page home_page_pink home_page_pink_2'
+     
+  .description_container
+    = inline_svg 'index/home_page_3', class: 'home_page home_page_3'
+    = inline_svg 'index/home_page_3_pink', class: 'home_page home_page_pink'
+    div=t('about_us.information.third')
 javascript:
-  (function() {
-    var container = document.getElementById("container"),
+  (function () {
+    var container = document.getElementById("logo_container"),
       inner = document.getElementById("inner");
 
     var mouse = {

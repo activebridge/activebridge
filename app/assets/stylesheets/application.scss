@@ -21,7 +21,8 @@ $y: 500%;
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   background: white;
@@ -66,7 +67,7 @@ nav {
   right: 0; 
   top: 0;
   width: 15vw;
-  height: 100%;
+  height: 200vh;
   z-index: 5;
   
   ul{
@@ -89,10 +90,32 @@ nav {
       width: 15vw;
 
       a{
+        position: relative;
         text-decoration: none;
         margin-top: 3vh;
         color: white;
         display: none;
+
+        &:hover:before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: white;
+          visibility: hidden;
+          transform: scaleX(0);
+          -webkit-transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+        }
       }
     }
   }

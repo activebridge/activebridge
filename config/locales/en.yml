@@ -237,6 +237,21 @@ en:
     pinterest: 'https://ru.pinterest.com/activebridg0459'
     github: 'https://github.com/activebridge'
     blog: 'https://activebridge.org'
+  about_us: 
+    information:
+      first: Active Bridge is an IT contracting company that specializes in providing dedicated full-stack developers 
+             to help our clients and augment their in-house teams. Since 2013, our offshore IT staffing agency has been 
+             assisting clients in the development and maintenance of websites and web-based systems, mobile applications, 
+             and software products.
+      second: Active Bridge started out as a small team of Ukrainian developers passionate about Ruby on Rails programming
+              and providing effective web solutions for our clients in the United States and Europe. Today, our company has
+              grown to include a staff of talented and experienced tech professionals with over 20 successful major projects 
+              under our belt. 
+      third: Our team has worked with startups, small and medium-sized enterprises (SMEs), and large corporations in both 
+             North America and Eastern Europe. Our goal is always to prioritize the needs of our customers, and we strive to 
+             build and maintain trust and productive relationships with all of our partners. That customer-centered focus is 
+             why Active Bridge was named one of the “Top B2B Service Providers, 2017” by Clutch.co., and why we’re consistently 
+             rated as one of the top web and software developers in Eastern Europe. 
   blog:
     categories:
       ror-development: RoR Development

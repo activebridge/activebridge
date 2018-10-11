@@ -1,4 +1,6 @@
-.logo_container{
+.container{
+  height: 100vh;
+  width: calc(100% - 15vw);
   display: flex;
   justify-content: center;
 }
@@ -8,7 +10,6 @@
   margin-top: 8vh;
   text-align: center;
   width: 50vw;
-  height: 100%;
   z-index: 2;
 
 
@@ -32,9 +33,19 @@
     color: #FFF;
     padding: 18px 35px;
     text-decoration: none;
+
+    &:hover{
+      box-shadow: 0px 0px 100px#5f52ca;
+    }
   }
+
+  .btn_work:hover + p{
+    transition: font-size 1s;
+    font-size: 100px;
+  }
+
   p {
-    margin-top: 4vh;
+    margin-top: 15px;
     font-size: 45px;
     color: #b64e96;
   }
@@ -46,9 +57,66 @@
     -o-transition: transform 0.5s;
   }
 
-  .container{
+  .logo_container{
     perspective: 40px;
     margin-top: 1vh;
     margin-bottom: 10vh;
   }
+}
+
+.about_us_container {
+  margin-left: 5vw;
+  height: 95vh;
+  width: calc(100% - 10vw);
+
+  .description_container{
+    margin-top: 5vh;
+    display: flex;
+    font-size: 1.2em;
+    width: 90%;
+
+    div {
+      width: 80%;
+      svg {
+        margin-top: 2vh;
+      }
+    }
+  }
+}
+
+.home_page{
+  width: 20%;
+}
+
+.home_page_1{
+  margin-top: 6vh;
+}
+
+.home_page_1:hover ~ .home_page_pink{
+  visibility: visible;
+}
+
+.home_page_2:hover ~ .home_page_pink{
+  visibility: visible;
+}
+
+.home_page_3:hover ~ .home_page_pink{
+  visibility: visible;
+}
+
+.home_page_pink{
+  margin-left: -20%;
+  visibility: hidden;
+}
+
+.home_page_pink_1{
+  margin-top: 6vh;
+}
+
+.home_page_pink_2{
+  margin-top: -3vh;
+}
+
+.home_page_line{
+  width: 105%;
 }
