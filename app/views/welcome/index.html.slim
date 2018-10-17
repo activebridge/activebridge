@@ -1,6 +1,7 @@
 - if params[:page]
-  = content_for :lazybox do
     = render params[:page]
+.gradient-circle-1
+.gradient-circle-2
 .container
   .logo#logo_holder
     h1 Active Bridge
@@ -12,11 +13,11 @@
     a.btn_work  href='#about_us' 
       b Learn how we work
     p ↓
-a#about_us
 .about_us_container
+  a#about_us
   .description_container
     = inline_svg 'index/home_page_1', class: 'home_page_1 home_page'
-    = inline_svg 'index/home_page_1_pink', class: 'home_page home_page_pink home_page_pink_1'
+    = inline_svg 'index/home_page_1_pink', class: 'home_page home_page_pink home_page_1'
     div
       =t('about_us.information.first')
       = inline_svg 'index/home_page_line_1', class: 'home_page_line'

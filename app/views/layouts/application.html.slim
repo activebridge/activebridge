@@ -10,36 +10,57 @@ html lang='en'
 
   = render 'layouts/head', type: :application, media: :all
 
-  body
+  body onscroll='toggleHeader()'
     = yield
-    .gradient-circle-1
-    .gradient-circle-2
+    header#header
+      .logotype
+        a href='/'= inline_svg 'index/logo', class: 'logotype'
+      .path
+        'Home
+        - if @page
+          '\ 
+          = @page.capitalize
+    .form_container#form_container
+      = form_tag '/contact', onsubmit: 'event.preventDefault(); console.log(this);',
+                            id: 'contact_us', class: 'contact_us' do
+        .text_holder
+          textarea rows='6' placeholder='Ask you question'
+        .button_holder
+          span Contact us
+          = image_submit_tag 'index/chat_button', class: 'chat_button' 
+
     nav
       ul
         li 
           span 
-           b How we work
-          a href='/' Dedicated Team
-          a href='/' Team Extension
-          a href='/' Project Model
+           b 
+            a.page href='/' How we work
+          a.anchor href='/' Dedicated Team
+          a.anchor href='/' Team Extension
+          a.anchor href='/' Project Model
         li 
           sapn 
-            b Services
-          a href='/' Web Application Development
-          a href='/' Mobile Application Development
+            b 
+              a.page href='/services' Services
+          a.anchor href='/' Web Application Development
+          a.anchor href='/' Mobile Application Development
         li 
           span 
-            b Portfolio
-          a href='/' Projects
-          a href='/' Testmonials
+            b 
+              a.page href='/portfolio' Portfolio
+          a.anchor href='/portfolio#projects' Projects
+          a.anchor href='/portfolio#testimonials' Testmonials
         li 
           span 
-            b Team
+            b 
+              a.page href='/team' Team
         li
           span 
-            b Contact Us
-          a href='/' Headquarters
-          a href='/' Email Us
+            b 
+              a.page href='/contact' Contact Us
+          a.anchor href='/' Headquarters
+          a.anchor href='/' Email Us
+
     = javascript_include_tag 'application', async: false
     .hidden
       h1 Web development company - Active Bridge
@@ -70,3 +91,17 @@ html lang='en'
       link.rel = 'stylesheet';
       link.href = "#{ asset_path('fonts.css')}";
       head.appendChild(link);
+      let currentEl = 0
+      let prevEl = 0
+      function toggleHeader(){
+        prevEl = currentEl
+        currentEl = window.pageYOffset
+        if ( currentEl > prevEl ){
+          document.getElementById('header').style.cssText = 'opacity: 1;'
+          document.getElementById('form_container').style.cssText = 'opacity: 1;'
+        }
+        else{
+          document.getElementById('header').style.cssText = 'opacity: 0;'
+          document.getElementById('form_container').style.cssText = 'opacity: 0;'
+        }
+      }

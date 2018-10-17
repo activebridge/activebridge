@@ -154,10 +154,10 @@ en:
     title: Testimonials
     all:
       - company: DaisyBill
-        logo: testimonials/daisy_bill.svg
+        logo: portfolio/projects/daisybill.svg
         author: Ben Liscio
         image: https://i.imgur.com/eEQ7YxW.jpg
-        title: Co-Founder DaisyBill
+        title: Co-Founder
         description:
           We initially engaged with Active Bridge in 2014 while re-structuring our product and engineering team.
           More than two years later, we're still engaged to augment our engineering team.
@@ -166,27 +166,27 @@ en:
           We consider the engineers assigned to our company a core part of the team.
           Thanks guys!
       - company: Def Method
-        logo: testimonials/def_method.svg
+        logo: portfolio/projects/def_method.svg
         author: Joseph Leo
         image: https://i.imgur.com/orRlQpS.jpg
-        title: President/Partnership Director at Def Method
+        title: President/Partnership Director
         description:
           Active Bridge drives our remote engineering team at Def Method.
           Collaborating with their engineers has kept us delivering running,
           tested features in an Agile fashion across multiple countries and time zones.
           Their commitment to quality and efficiency is outstanding.
       - company: Modean Apps
-        logo: testimonials/modean_apps.svg
+        logo: portfolio/projects/modean_apps.svg
         author: Benjamin Sigidi
         image: https://i.imgur.com/YlApFGd.jpg
-        title: Software Developer at MODEAN APPS
+        title: Software Developer
         description:
           Awesome team. Full stack development. Happy to work with these guys any day.
       - company: Preeline
-        logo: testimonials/preeline.svg
+        logo: portfolio/projects/preeline.svg
         author: Julia Macalaster
         image: https://res.cloudinary.com/active-bridge/image/upload/c_fit,g_center,h_200,q_85,r_0,w_200/v1477382138/julia_xibee4.jpg
-        title: COO, Co-Founder at PreeLine
+        title: COO, Co-Founder
         description:
           We worked with Active Bridge as a young startup to build out our first MVP and subsequent updated products.
           Not only did their teams execute on the assigned tasks ahead of schedule, but they also contributed to our thinking around UX,
@@ -194,10 +194,10 @@ en:
           Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
           We feel so incredibly lucky to be working with them
       - company: Freestak
-        logo: testimonials/freestak.svg
+        logo: portfolio/projects/freestak.svg
         author: Julie Freeman Kummer
         image: https://res.cloudinary.com/active-bridge/image/upload/c_crop,g_face,h_200,w_200/v1477380297/Julie_z78plm.jpg
-        title: Co-founder and COO at freestak Ltd
+        title: Co-founder and COO
         description:
           We’ve been working with Active Bridge since August 2015.
           In the first six months, our application (marketplace in the sports industry)
@@ -208,10 +208,10 @@ en:
           After the active development phase, we’ve retained Active Bridge for the ongoing development and maintenance
           of our platform and I couldn’t recommend them enough.
       - company: LifeLinker Inc
-        logo: testimonials/life_linker.svg
+        logo: portfolio/projects/life_linker.svg
         author: David Rowell
         image: https://i.imgur.com/vlvxXxn.jpg
-        title: Founder/CEO at LifeLinker Inc
+        title: Founder/CEO
         description:
           After previously hiring contract developers in countries ranging from the US and Canada, to Vietnam and India,
           and after having paid variously three times more and three times less per hour, we finally got it right when
@@ -220,10 +220,10 @@ en:
           There’s no better source for best quality, best practice and best value development services than
           Active-Bridge. We’re delighted and most appreciative. Thank you.
       - company: Joseph_Carpenter
-        logo: testimonials/my_school.svg
+        logo: portfolio/projects/myschool.svg
         author: Joseph Carpenter
         image: https://i.imgur.com/oMUiO6J.jpg
-        title: Founder at MyScool411
+        title: Founder
         description:
           If anyone needs a kickass website company, these are your guys! I have used many other companies with nothing
           but issues and have nothing but good results from Eugene and Active Bridge. You will not find a better company

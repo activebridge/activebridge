@@ -23,7 +23,24 @@ $projects: (
   foundersuite: #F48420,
   cablook_taxi: #19A160,
   upstack: #57B16D,
+  preeline: #57B16D,
+  split: #44715A,
+  invoyis: #44715A,
+  mediprocity: #44715A,
+  lifelinker_inc: #44715A,
+  joseph_carpenter: #444471,
+  modean_apps: #999
 );
+
+.header_portfolio{
+  width: calc(100% - 10vw);
+  text-align: center;
+}
+
+hr{
+  border: none;
+  border-top: 2px solid #5f52ca;
+}
 
 .content.projects {
   height: 100vh;
@@ -33,10 +50,11 @@ $projects: (
 
   .portfolio-background {
     position: absolute;
-    left: 50%;
+    top: 5%;
+    left: 45%;
     transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
     padding: 5%;
     opacity: 1;
     z-index: 2;
@@ -91,6 +109,23 @@ $projects: (
           fill-opacity: 1;
           fill: #EEEEEE;
         }
+      }
+    }
+
+    @each $project, $bg-color in $projects {
+      a[href="##{$project}"] {
+          path, polygon, rect, circle{
+            transition: all .6s ease;
+          }
+          &:hover{
+            path, polygon, rect, circle{
+              stroke: #b64e96;
+              fill: #b64e96;
+            }
+            .bg{
+              stroke-width: 3px; 
+            }
+          }
       }
     }
 
@@ -150,6 +185,7 @@ $projects: (
     }
 
     ##{$project}:target ~ #close_project {
+      position: fixed;
       z-index: 3;
     }
   }
@@ -162,17 +198,7 @@ $projects: (
     left: 0;
   }
 
-  .project {
-    width: 80%;
-    height: 70%;
-    background: rgba(255, 255, 255, 0.95);
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: visibility 0s linear .3s, opacity .3s linear;
-
+  .informational_container {
     .prev-project, .next-project {
       transition: all .2s linear;
       position: absolute;
@@ -373,50 +399,46 @@ $projects: (
 
     .project-details {
       display: inline-block;
-      width: 44%;
+      width: 90%;
       vertical-align: top;
       height: 100%;
       position: relative;
-
+    
       img {
         display: block;
         margin: 30px auto;
-        width: 40%;
-        height: 25%;
+        width: 30%;
       }
 
       .project-description {
-        overflow-y: scroll;
         height: 45%;
-        font-weight: bold;
-        color: rgba(51, 51, 51, 0.95);
         text-align: left;
-        padding: 10px 30px;
         letter-spacing: 0.5px;
         line-height: 1.4em;
         display: block;
+
+        span{
+          font-weight: bold;
+        }
       }
 
       .view-project {
-        display: block;
-        height: 35px;
-        width: 180px;
+        display: inline-block;
+        margin-bottom: 2vh;
+        text-transform: uppercase;
         letter-spacing: 0.5px;
-        padding: 8px 0;
-        border-radius: 10px;
-        margin: 10px auto;
         font-weight: 500;
-        background: #835697;
+        border-radius: 30px;
+        background: linear-gradient(to right, #b64e96, #5f52ca);
+        color: #FFF;
+        padding: 12px 40px;
         text-decoration: none;
-        color: white;
         z-index: 1;
         transition: all .3s;
-        box-shadow: 0px 3px 6px rgba(136, 136, 136, 0.85);
-      }
-
-      .view-project:hover {
-        background: #714d82;
-        box-shadow: none;
+        &:hover {
+          background: linear-gradient(to right, #5f52ca, #b64e96);
+          box-shadow: 0px 3px 6px rgba(136, 136, 136, 0.85);
+        }
       }
     }
   }
@@ -490,3 +512,151 @@ $projects: (
     }
   }
 }
+
+.portfolio_testimonials {
+  z-index: 3;
+  height: 90vh;
+  width: calc(100% - 15vw);
+  display: flex;
+  flex-direction: column;
+  margin-left: 3vw;
+
+  .testimonial {
+    height: 10vh;
+    margin: 1vh;
+    width: 90%;
+    align-self: center;
+    a {
+      text-decoration: none;
+      height: 100%;
+    .description_wrapper{
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      .like{
+        height: 100%;
+        transition: all .3s ease-in-out;
+      }
+
+      span {
+        margin-left: 2vw;
+      }
+      .open-quotes, .close-quotes{
+        width: 15px;
+      }
+  
+      .open-quotes{
+        margin-bottom: 15px;
+      }
+  
+      .close-quotes{
+        margin-top: 15px;
+      }
+
+      .spacer {
+        flex: 1;
+      }
+      .read_more{
+        border: 2px solid  #5f52ca;
+        font-size: 1rem;
+        background: white;
+        color: #5f52ca;
+        text-decoration: none;
+        transition: all .5s ease-in-out;
+        height: 70%;
+        width: 10%;
+        cursor: pointer;
+      }
+
+      &:hover{
+        
+        .like{
+          transform: rotate(45deg);
+        }
+
+        .read_more{
+          border: 2px solid white;
+          color: white;
+          background: linear-gradient(to right, #b64e96, #5f52ca);
+        }
+      }
+    }
+  }
+  }
+}
+
+.testimonials_cards{
+  .informational_container {
+    .testimonial_container {
+      display: inline-block;
+      width: 90%;
+      vertical-align: top;
+      height: 100%;
+      position: relative;
+      
+      .company_logo {
+        display: block;
+        margin: 30px auto;
+        width: 30%;
+      }
+      .testimonial_author{
+        display: flex;
+        justify-content: center;
+        .author{
+          width: 150px;
+          height: 150px;
+        }
+        .author_info{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: left;
+          margin-left: 2vw;
+        }
+      }
+      .testimonial_description{
+        text-align: justify;
+      }
+    }
+  }
+  @each $project, $bg-color in $projects {
+    #testimonial_#{$project}:target {
+      visibility: visible;
+      opacity: 1;
+      z-index: 4;
+    }
+  
+    #testimonial_#{$project}:target ~ #close_testimonial {
+      z-index: 3;
+      position: fixed;
+
+    } 
+  }
+}
+
+#close_testimonial{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 720px) {
+  .testimonial_body{
+    .testimonial_container{
+      .testimonial_author{
+        .author{
+          min-width: 100px;
+          min-height: 100px;
+        }
+      }
+      .testimonial_description{
+        overflow-y: scroll;
+        max-height: 30%;
+      }
+    }
+  }
+}
+

@@ -113,6 +113,7 @@ document.querySelector('#contactus').addEventListener('click', openPage, false)
 document.querySelector('#lazy_overlay').addEventListener('transitionend', startLazyBodyTransition)
 document.querySelector('#lazy_body').addEventListener('transitionend', clearLazyBodyContent)
 document.addEventListener('keydown', browseData, false)
+document.querySelector('#header').addEventListener('onscroll', displayHeader, false)
 initTeamScroll()
 
 ajax = (method, href, async = true) ->
