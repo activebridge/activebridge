@@ -3,7 +3,7 @@ body{
   overflow-y: auto;
 }
 
-.container{
+.container_index{
   height: 100vh;
   width: calc(100% - 15vw);
   display: flex;
@@ -56,15 +56,7 @@ body{
     color: #b64e96;
   }
 
-  .inner {
-    transition: transform 0.5s;
-    -webkit-transition: transform 0.5s;
-    -moz-transition: transform 0.5s;
-    -o-transition: transform 0.5s;
-  }
-
   .logo_container{
-    perspective: 40px;
     margin-top: 1vh;
     margin-bottom: 10vh;
   }

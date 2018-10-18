@@ -1,0 +1,34 @@
+.container
+  .header_2 Services
+  a#web_dev
+  a#moblile_dev
+  .services
+    - I18n.t('services.development').each_with_index do |service, i|
+      .development
+        .logo_container
+          - (1..100).each do |cell|
+            = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+          .inner
+            = inline_svg(service[:logo], class: 'service_icon')
+        .header_3= service[:title]
+        .description= service[:description]
+        - unless i != 0
+          a.bdd_show href='#bdd'
+            span +Behavior-Driven Developmnet(BDD)
+            button.read_more href='#bdd' Read more
+          .informational_container#bdd
+            = service[:bdd][:desc]
+            p= service[:bdd][:advantages][:title]
+            ul
+              - service[:bdd][:advantages][:items].each do |a|
+                li= a
+  .header_2 Core technologies we specialize in
+  a#core_tech
+  .services
+    - I18n.t('services.development').each_with_index do |service, i|
+      .development
+        .technologies
+          - service[:technologies].each do |t|
+            .technology
+              span= t[:title]
+              .tech_desc= t[:desc]

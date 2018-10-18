@@ -50,7 +50,20 @@ header {
   color: #5f52ca;
   text-transform: uppercase;
   font-size: 1.5em;
+  margin-top: 7vh;
+}
+
+.header_3{
+  color: #5f52ca;
+  text-transform: uppercase;
+  text-align: center;
   margin: 3vh;
+  font-size: 1em;
+}
+
+.container{
+  width: calc(100% - 15vw);
+  text-align: center;
 }
 
 .form_container{
@@ -110,6 +123,51 @@ header {
       }
     }
   }
+}
+
+.logo_container{
+  width: 100%;
+  display: inline-block;
+  perspective: 300px;
+
+  .inner {
+    transition: transform .7s;
+    transform: rotateX(0) rotateY(0);
+  }
+  
+  .reflection-grid-cell{
+    position:absolute;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+  }
+  @for $r from 1 to 11{ 
+    @for $c from 1 to 11 {
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)}{
+        top:($r*10%)-10%;
+        left:($c*10%)-10%;
+      }
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover ~ .inner{
+        transform:rotateX((($r*-5)+25deg)) rotateY((-25deg+($c*5)));
+        &:before{
+          transform:translateY(25-(5%*$r));
+        }
+      }
+
+    }
+  }
+}
+
+.read_more{
+  border: 1px solid  #5f52ca;
+  font-size: 1rem;
+  background: white;
+  color: #5f52ca;
+  text-decoration: none;
+  transition: all .5s ease-in-out;
+  height: 70%;
+  width: 10%;
+  cursor: pointer;
 }
 
 nav {
@@ -511,6 +569,6 @@ input[type=radio] {
   top: 15%;
   left: 45%;
   transform: translateX(-50%);
-  transition: visibility 0s linear .3s, opacity .3s linear;
+  transition: visibility 1s linear .3s, opacity .3s linear;
   box-shadow: 0px 3px 20px rgba(136, 136, 136, 0.85);
 }

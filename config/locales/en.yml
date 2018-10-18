@@ -129,6 +129,59 @@ en:
         Extreme programming like test-driven development, daily meetings, fine-scale feedbacks, continuous
         integration, refactoring and small releases we provide effectiveness and productivity across all
         programming process
+    development: 
+      - title: Web application development
+        logo: services/web_icon.svg
+        description: 
+          At Active Bridge, our number one goal is to find effective web
+          solutions to meet the needs and goals of our clients’ businesses. 
+          To cover all aspects of our clients’ web programming needs, we employ a full-stack 
+          web development process, meaning our developers are experienced in both back-end 
+          development (server-side) and front-end development (user-side). As a result, we 
+          can offer our clients elegant and professional web solutions, whatever their needs 
+          may be.
+        bdd:
+          desc:
+            To ensure successful achievement of the goals of our clients’ projects we utilize
+            behavior-driven development, or BDD. Simply put, BDD is a software development 
+            process based on user behavior, ensuring that the finished product provides the best 
+            possible experience for the end users it’s intended for. 
+          advantages:
+            title: Advantages
+            items: 
+              - Tests are easy to understand for non-tech managers
+              - Tests are easily changed as needed
+              - Tests can be written by product-owners
+              - Tests focus on description and implementation without unnecessary complication
+        technologies: 
+          - title: Ruby on Rails
+            desc:
+              Ruby on Rails is a fast, reliable framework that includes everything needed to build 
+              complex database-backed applications.
+          - title: Angular JS
+            desc:
+              Angular JS is a front-end web application framework used for single-page web apps that 
+              allow processing of data on the user-side. 
+          - title: React 
+            desc: 
+              React is a JavaScript library for developing user interfaces ideal for solving performance 
+              project issues and increasing delivery speed. 
+      - title: Mobile application development
+        logo: services/mobile_icon.svg
+        description:
+          At Active Bridge we bring our mobile development expertise together with your ideas to 
+          create incredible apps. We’re experienced in building mobile applications for both specific 
+          mobile operating systems as well as hybrid applications, so whether you want your app to run 
+          on iOS, Android, or an embedded web browser, we can help.
+        technologies:
+          - title: React Native
+            desc:
+              React Native is a JavaScript framework used for developing native apps using React. It’s ideal 
+              for building fast, easily scalable apps for both iOS and Android.
+          - title: Ionic
+            desc: 
+              Ionic is a software development kit (SDK) used for hybrid mobile applications and cross-platform 
+              mobile development. 
     technologies:
       title: Technologies
       desc:

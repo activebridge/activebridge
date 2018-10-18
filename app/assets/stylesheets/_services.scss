@@ -213,3 +213,114 @@ $main-terminal-color: #00ABDF;
 }
 @keyframes blink { to { opacity: .0; } }
 @keyframes show { to { opacity: 1; } }
+
+.container{
+  margin-left: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  .services{
+    display: flex;
+    justify-content: center;
+    .development {
+      color: #5f52ca;
+      width: 45%;
+      margin: 3vw;
+
+      .service_icon{
+        width: 75%;
+
+        .svg_center{
+          z-index: 3;
+          position: absolute;
+        }
+      }
+
+      .description{
+        text-align: justify;
+      }
+      
+      .bdd_show:hover ~ #bdd{
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+      }
+
+      .bdd_show{
+        margin-top: 3vh;
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content: space-between;
+        text-transform: uppercase;
+        span{
+          transition: transform .5s ease;
+          font-weight: bold;
+        }
+
+        .read_more{
+          display: none;
+          width: 20%;
+          height: 100%;
+        }
+        &:hover{
+          span{
+            transform: translateX(10%);
+          }
+          .read_more{
+            border: 1px solid white;
+            color: white;
+            background: linear-gradient(to right, #b64e96, #5f52ca);
+          }  
+        }
+        }
+
+        .informational_container{
+          height: 40%;
+          text-align: justify;
+          padding: 1vw;
+        }
+        .technologies{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .technology{
+            display: flex;
+            align-items: center;    
+            flex-wrap: nowrap;
+            .tech_desc{
+              flex: 1;
+              padding: 1vw;
+              text-align: justify;
+              margin-left: 2vw;
+              opacity: 0;
+              transition: visibility 1s linear .3s, opacity .3s linear;
+              box-shadow: 0px 3px 20px rgba(136, 136, 136, 0.85);
+            }
+            
+            span{
+              white-space: nowrap;
+              text-transform: uppercase;
+              
+              &:hover{
+                color: #b64e96;
+                cursor: pointer;
+              }
+              &:hover ~ .tech_desc{
+                color: #b64e96;
+                opacity: 1;
+                z-index: 3;
+              }
+            }
+
+
+          }
+
+        }
+      }
+    .additional_info{
+      margin: 3vh 0;
+    }
+  }
+}

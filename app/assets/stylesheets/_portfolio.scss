@@ -557,26 +557,14 @@ hr{
       .spacer {
         flex: 1;
       }
-      .read_more{
-        border: 2px solid  #5f52ca;
-        font-size: 1rem;
-        background: white;
-        color: #5f52ca;
-        text-decoration: none;
-        transition: all .5s ease-in-out;
-        height: 70%;
-        width: 10%;
-        cursor: pointer;
-      }
 
       &:hover{
-        
         .like{
           transform: rotate(45deg);
         }
 
         .read_more{
-          border: 2px solid white;
+          border: 1px solid white;
           color: white;
           background: linear-gradient(to right, #b64e96, #5f52ca);
         }
