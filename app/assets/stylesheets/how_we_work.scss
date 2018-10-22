@@ -1,0 +1,123 @@
+$models: dedicated_team, team_extension, project_model;
+
+.how_we_work_container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  
+  .work_desc{
+    margin-top: 5vh;
+    text-align: justify;
+    line-height: 35px;
+    font-size: 1.1em;
+  }
+
+  .keyboard_container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    margin: 5vh 0;
+
+
+    &:hover{
+      .key_hover{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .keyboard{
+      width: 80%;
+      margin-left: -40%;
+    }
+    .key_hover{
+      visibility: hidden;
+      width: 80%;
+      margin-top: -1%;  
+      margin-right: -40%;
+      opacity: 0;
+      transition: all .3s linear;
+    }
+    .spacer {
+      flex: 1;
+    }
+  }
+  .cooperation_models_cards{
+    width: 100%;
+    height: 85vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-between;
+
+    .model_card{
+      width: 30%;
+      height: 100%; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .descr{
+        color: #5f52ca;
+        text-align: justify;
+      }
+      
+      .learn_more{
+        border-radius: 30px;
+        border: none;
+        background: linear-gradient(to right, #b64e96, #5f52ca);
+        color: #FFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 14px 40px;
+        cursor: pointer; 
+        transition: all .2s linear;
+    
+        &:hover{
+          font-weight: bold;
+          box-shadow: 0px 0px 100px#5f52ca;
+          background: linear-gradient(to right, #5f52ca, #b64e96);
+        }
+      }
+    }
+    @media (min-height: 800px){
+      height: 65vh;
+    }
+  }
+  .models_information{
+    .informational_container{
+      text-align: justify;
+      display: flex;
+      overflow-y: auto;
+      justify-content: center;
+      .desc_container{
+        width: 85%;
+        p.title{
+          text-decoration: #5f52ca underline;
+        }
+      }
+    }
+  }
+  @each $model in $models{
+    ##{$model}:target{
+      visibility: visible;
+      opacity: 1;
+      z-index: 4;
+    }
+
+    ##{$model}:target ~ #close_model{
+      position: fixed;
+      z-index: 3;
+      visibility: visible;
+    }
+  }
+  #close_model{
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}

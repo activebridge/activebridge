@@ -326,3 +326,74 @@ en:
       contact_us: Contact Us
       follow: Stay tuned
       copyright: '© 2018 Active Bridge, LLC'
+  how_we_work:
+    title: How we work
+    description: 
+      Active Bridge provides senior-level developers to help companies augment 
+      their in-house teams and scale up their development processes. Our talented developers 
+      integrate seamlessly with your engineering team, giving you flexible staffing solutions 
+      to meet your project’s needs. We offer solutions for multiple types of collaboration, 
+      including team extensions, dedicated developer teams, and project-model contracts. 
+      Whatever way you choose to engage our team, we always offer unrivaled customer support 
+      to ensure your satisfaction.
+    cooperation_models:
+      - title: Dedicated Team
+        logo: how_we_work/dedicated_team
+        definition: 
+          We provide a team of dedicated developers on a long-term basis in 
+          accordance with your estimates. You may choose to manage the team from your side 
+          or assign one of our Active Bridge project managers to the job.. 
+        for_who:
+          - Experienced managers that have a deep knowledge of the project field
+          - Mid-sized companies with clear future plans for the project
+          - Corporations with strong internal management capabilities
+        scope_of_work: 
+          The scope of work will be laid out in the agreement based on your needs. 
+          Usually, tasks are defined as user stories that can be determined during the development 
+          process. Estimations are used as a guideline
+        cost: 
+          Daily rates for hired developers are always agreed upon beforehand. At the end of each month, 
+          we will send an invoice based on the agreed-upon rates and billable hours of the dedicated team.
+          Weekly reports are provided to ensure you and Active Bridge are always on the same page
+        advantages:
+          - Flexible budgets
+          - No additional overhead or tax burden required to bring on our developers in place of in-house staff
+          - No recruitment risks, or requirement to bring on extra management for expansion
+          - Clients completely control the development process 
+      - title: Team Extension
+        logo: how_we_work/team_extension
+        definition:
+          Our developers become an integrated part of your existing in-house development team for the duration
+          of the project. Our talented staff will immerse themselves in your project, adopt and maintain your 
+          company culture, and make your team’s goals their own, ensuring a seamless integration.
+        for_who:
+          - Small and medium-sized businesses developing new modules or applications
+          - Companies with in-house teams in temporary need of a few extra coders
+          - Any business that already has a core development team
+        scope_of_work: 
+          The scope of work will be laid out in the agreement based on your needs. Developers can be engaged
+          wither full or part-time and will fully integrate with your existing tracking systems. 
+        cost: Developers are billed out at an hourly rate based on the stack and experience level required for the project.
+        advantages:
+          - Engage flexible, qualified, experienced help when needed for a limited time
+          - More cost-efficient than hiring full-time employees or bringing in local contractors
+          - No additional overhead or tax burden required to bring on our developers in place of in-house staff
+          - No requirement for HR managers or recruiters to engage in costly and time-consuming interviewing
+          - No added management requirement to handle new staffing
+      - title: Project Model
+        logo: how_we_work/project_model
+        definition:
+          Under this model, we’ll provide the full-force of our development team to cost out and implement your project.
+        for_who:
+          - Start-ups without development teams
+          - Businesses with a clear idea of the end product they’re looking for, but without the in-house expertise or staff to implement it
+        scope_of_work: 
+          The scope of work will be laid out in the agreement based on your needs. We’ll provide expert estimates on the resources and developer 
+          experience levels required for the job.
+        cost: 
+          Developers are billed out at hourly rates agreed upon beforehand. We’ll provide tracking statistics detailing billable hours and completed tasks. 
+        advantages:
+          - No recruitment costs
+          - Fixed deadlines 
+          - No additional management costs
+          - Clear understanding of project goals and expert implementation by our seasoned developers

@@ -12,6 +12,7 @@ $lazy-end:        translateY(0%);
 @import 'about';
 @import 'envelope';
 @import 'index';
+@import 'how_we_work';
 
 $x: 500%;
 $y: 500%;
@@ -168,6 +169,10 @@ header {
   height: 70%;
   width: 10%;
   cursor: pointer;
+}
+
+.spacer {
+  flex: 1;
 }
 
 nav {

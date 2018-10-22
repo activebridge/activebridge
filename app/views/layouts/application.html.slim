@@ -19,7 +19,7 @@ html lang='en'
         'Home
         - if @page
           '\ 
-          = @page.capitalize
+          = @page.gsub('_', ' ').capitalize
     .form_container#form_container
       = form_tag '/contact', onsubmit: 'event.preventDefault(); console.log(this);',
                             id: 'contact_us', class: 'contact_us' do
@@ -34,10 +34,10 @@ html lang='en'
         li 
           span 
            b 
-            a.page href='/' How we work
-          a.anchor href='/' Dedicated Team
-          a.anchor href='/' Team Extension
-          a.anchor href='/' Project Model
+            a.page href='/how_we_work' How we work
+          a.anchor href='how_we_work#dedicated_team' Dedicated Team
+          a.anchor href='how_we_work#team_extension' Team Extension
+          a.anchor href='how_we_work#project_model' Project Model
         li 
           sapn 
             b 

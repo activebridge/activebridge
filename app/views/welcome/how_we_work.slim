@@ -1,0 +1,49 @@
+.container
+  .how_we_work_container
+    .header_2
+      = t('how_we_work.title')
+    .work_desc
+      = t('how_we_work.description')
+    .keyboard_container
+      .spacer
+      = inline_svg 'how_we_work/keyboard_hover', class: 'key_hover'
+      = inline_svg 'how_we_work/keyboard', class: 'keyboard'
+      .spacer
+    a#cooperation_models
+    .cooperation_models_cards
+      - I18n.t('how_we_work.cooperation_models').each do |cooperation|
+        .model_card
+          .logo_container
+            - (1..100).each do |cell|
+              = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+            .inner
+              = inline_svg cooperation[:logo], class: 'inner'
+          .descr
+            - cooperation[:for_who].each do |who|
+              p
+                'FOR:
+                = who
+          .spacer
+          a.learn_more href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '_')}' 
+            'Learn more
+    .models_information
+      - I18n.t('how_we_work.cooperation_models').each do |cooperation|
+        .informational_container id='#{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '_')}'
+          .desc_container
+            / .header_3
+            /   =cooperation[:title]
+            p.title Definition
+            p=cooperation[:definition]
+            p.title Who is this model best for?
+            ul
+              - cooperation[:for_who].each do |f|
+                li=f
+            p.title How is the scope of work defined?
+            p=cooperation[:scope_of_work]
+            p.title How is the cost of work defined?
+            p=cooperation[:cost]
+            p.title Customer Advantages
+            ul 
+              -cooperation[:advantages].each do |a|
+                li=a
+        a#close_model href='#cooperation_models'

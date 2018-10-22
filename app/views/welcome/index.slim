@@ -1,0 +1,90 @@
+- if params[:page]
+    = render params[:page]
+.gradient-circle-1
+.gradient-circle-2
+.container
+  .container_index
+    .logo#logo_holder
+      h1 Active Bridge
+      h2 Your ideas. Our talents. Great result.
+      .logo_container#logo_container
+        - (1..100).each do |cell|
+          = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+        .inner#inner
+          = inline_svg 'index/logo', class: 'img__logo', id: 'logo'
+      br
+      a.btn_work  href='#about_us' 
+        b Learn how we work
+      p ↓
+  .about_us_container
+    a#about_us
+    .description_container
+      = inline_svg 'index/home_page_1', class: 'home_page_1 home_page'
+      = inline_svg 'index/home_page_1_pink', class: 'home_page home_page_pink home_page_1'
+      div
+        =t('about_us.information.first')
+        = inline_svg 'index/home_page_line_1', class: 'home_page_line'
+    .description_container
+      div
+        =t('about_us.information.second')
+        = inline_svg 'index/home_page_line_2', class: 'home_page_line'
+      = inline_svg 'index/home_page_2', class: 'home_page home_page_2'
+      = inline_svg 'index/home_page_2_pink', class: 'home_page home_page_pink home_page_pink_2'
+      
+    .description_container
+      = inline_svg 'index/home_page_3', class: 'home_page home_page_3'
+      = inline_svg 'index/home_page_3_pink', class: 'home_page home_page_pink'
+      div=t('about_us.information.third')
+  .solutions_and_benefits#solutions_and_benefits onmouseover="transformYDown()" onmouseleave="transformYUp()"
+    .solutions
+      .header_2 Solutions for business
+      .tetris_container
+        .first_element.tetris_holder#first
+          span Full stack experience where you need it
+          = inline_svg 'index/tetris1', class: 'tetris'
+        .second_element.tetris_holder#second
+          span Project staffing and recruiting
+          = inline_svg 'index/tetris2', class: 'tetris'
+        .third_element.tetris_holder#third
+          span A motivated workforce
+          =inline_svg 'index/tetris3', class: 'tetris'
+        .fourth_element.tetris_holder#fourth
+          span Timely delivery
+          = inline_svg 'index/tetris4', class: 'tetris'
+        .fifth_element.tetris_holder#fifth
+          span Team extending
+          = inline_svg 'index/tetris5', class: 'tetris'
+    .benefits
+      .header_2 The benefits of collaboration with Active Bridge
+javascript:
+  let currEl = 0
+  let preEl = 0
+  var first = document.getElementById('first')
+  var second = document.getElementById('second')
+  var third = document.getElementById('third')
+  var fourth = document.getElementById('fourth')
+  var fifth = document.getElementById('fifth')
+  var container = document.getElementById('solutions_and_benefits')
+  function transformYDown(){
+
+    first.style.transform = 'rotate(90deg)'
+    second.style.transform = 'translate(56%, 168%)'
+    third.style.transform = 'rotate(180deg) translate(-55%, 58%)'
+    fourth.style.transform = 'rotate(90deg) translate(13%, -87%)'
+    fifth.style.transform = 'rotate(90deg) translate(19%, 424%)'
+
+    
+
+  }
+
+  function transformYUp(){
+    first.style.transform = ''  
+    second.style.transform = ''
+    third.style.transform = ''
+    fourth.style.transform = ''
+    fifth.style.transform = ''
+  }
+
+
+  
+  

@@ -2,10 +2,8 @@ body{
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 .container_index{
   height: 100vh;
-  width: calc(100% - 15vw);
   display: flex;
   justify-content: center;
 }
@@ -63,15 +61,17 @@ body{
 }
 
 .about_us_container {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   flex-direction: column;
   height: 105vh;
   margin-left: 5vw;
-  width: calc(100% - 10vw);
+
 
   .description_container{
     margin-top: 5vh;
+    text-align: justify;
     display: flex;
     font-size: 1.2em;
     width: 90%;
@@ -82,6 +82,95 @@ body{
         margin-top: 2vh;
       }
     }
+  }
+}
+
+.container_for_scroll{
+  width: 90%;
+  height: 140vh;
+  margin-top: -20vh;
+  margin-bottom: -120vh;
+  width: 100%;
+}
+.solutions_and_benefits{
+  height: 120vh;
+  width: 80%;
+  align-self: center;
+  .solutions{
+    height: 40%;
+    .tetris_container{
+      margin-top: 4vh;
+      margin-left: 7vw;
+      height: 80%;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+
+      .tetris_holder{
+        transition: all .3s linear;
+        display: flex;
+        flex-direction: column;
+        span{
+          z-index: 3;
+          color: white;
+          text-transform: uppercase;
+          font-size: 1em;
+        }
+        .tetris{
+          z-index: 2;
+        }
+      }
+
+      .first_element, .fourth_element{
+        align-self: flex-end;
+        width: 30%;        
+      }
+      .second_element, .third_element, .fifth_element{
+        align-self: flex-end;
+        width: 20%;
+      }
+  
+      .fourth_element, .fifth_element{
+        margin-left: -10%;
+      }
+
+      .fifth_element{
+        span{
+          margin-bottom: -130%;
+        }
+      }
+
+      .fourth_element{
+        span{
+          margin-right: -30%;
+          margin-bottom: -20%;
+        }
+      }
+      
+      .third_element{
+        span{
+          margin-bottom: -80%;
+        }
+      }
+  
+      .second_element{
+        margin-bottom: 10%;
+        span{
+          margin-bottom: -60%;
+        }
+      }
+
+      .first_element{
+        margin-right: -20%;
+        span{
+          margin-bottom: -55%;
+        }
+      }
+    }
+  }
+
+  .benefits{
+    height: 60%;
   }
 }
 
