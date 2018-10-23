@@ -304,7 +304,56 @@ en:
              North America and Eastern Europe. Our goal is always to prioritize the needs of our customers, and we strive to 
              build and maintain trust and productive relationships with all of our partners. That customer-centered focus is 
              why Active Bridge was named one of the “Top B2B Service Providers, 2017” by Clutch.co., and why we’re consistently 
-             rated as one of the top web and software developers in Eastern Europe. 
+             rated as one of the top web and software developers in Eastern Europe.
+    solutions_and_benefits:
+      solutions:
+        - id: first
+          title: Full-stack expertise where you need it
+          desc: When you hire web programmers through Active Bridge, you get access to the full breadth of skills and experience 
+                that our team has to offer. Our dedicated full-stack developers are experienced in both server-side development and client-side 
+                project building, meaning whatever the details of your project may be, we’re ready to help
+        - id: second
+          title: Project staffing and recruiting
+          desc: Recruiting talent for complex IT projects can be difficult, but we’re here to help. When you partner with Active Bridge, we take 
+                care of the sourcing and selection of qualified candidates with the needed skills and experience level for your job. Click here 
+                for more information on our process.   
+        - id: third
+          title: A motivated workforce
+          desc: Companies can sometimes be wary about bringing in an IT contractor to work on new projects, but at Active Bridge, our senior 
+                developers are experts at integrating with our clients’ in-house teams and treating every project as if it was our own. 
+                Our developers get fired up by emerging technologies, challenging tasks, interesting ideas, and Rails collaboration, making 
+                them enthusiastic and productive team members.
+        - id: fourth
+          title: Timely delivery
+          desc: Whether you choose to bring Active Bridge talent into your organization to augment an in-house team or engage our full team of 
+                talented web developers, we always ensure your project is delivered on-time and inline with the expectations of your stakeholders. 
+        - id: fifth
+          title: Team extending
+          desc: Whether your business is growing or just taking on a larger-than-normal project, Active Bridge is always ready to meet your staffing
+                needs. Our experienced developers are ready to augment your in-house teams to ensure you’ve got the staffing and flexibility you need to succeed. 
+      benefits:
+        - id: first
+          title: Dedicated web developers
+          desc: Our staff isn’t big, but all of our team members are senior/middle-level developers with extensive experience in full-stack web development and 
+                widely-ranging backgrounds.
+        - id: second
+          title: Teamwork and expert integration
+          desc: Our staff aren’t just expert full-stack developers, they’re also expert team-players. They’ll seamlessly integrate into your existing team and work 
+                environment, making your team’s values, goals, ideas, and expectations their own. 
+        - id: third
+          title: Flexibility
+          desc: Our offshore web developers join your project as in-house employees. We adhere to Agile methodologies, like Scrum and Kanban, and use behavior-driven
+                development (BDD) methods. We give you the flexibility to add experienced staff when you need it on a project-by-project basis.  
+        - id: fourth
+          title: Fluent English communication
+          desc: Our full-stack developers are all excellent English speakers, meaning we can integrate easily into your teams and meetings without any worry of language 
+                barriers getting in the way. 
+        - id: fifth
+          title: Transparency and face-to-face communication
+          desc: As an offshore IT contractor, it’s absolutely crucial that we make workflow easy and transparent. That’s why our team is committed to providing constant 
+                information about project progress. We’ll participate in meetings as often as you require, send daily, weekly, or monthly status reports depending on your 
+                needs, and maintain a 24/7 customer support channel. We always guarantee that our developers are assigned to only a single project, meaning you’ll always 
+                have their full dedication to your team’s goals.
   blog:
     categories:
       ror-development: RoR Development

@@ -35,54 +35,52 @@
       = inline_svg 'index/home_page_3', class: 'home_page home_page_3'
       = inline_svg 'index/home_page_3_pink', class: 'home_page home_page_pink'
       div=t('about_us.information.third')
-  .solutions_and_benefits#solutions_and_benefits onmouseover="transformYDown()" onmouseleave="transformYUp()"
+  .solutions_and_benefits#solutions_and_benefits onscroll="transformYDown()"
     .solutions
       .header_2 Solutions for business
-      .tetris_container
-        .first_element.tetris_holder#first
-          span Full stack experience where you need it
-          = inline_svg 'index/tetris1', class: 'tetris'
-        .second_element.tetris_holder#second
-          span Project staffing and recruiting
-          = inline_svg 'index/tetris2', class: 'tetris'
-        .third_element.tetris_holder#third
-          span A motivated workforce
-          =inline_svg 'index/tetris3', class: 'tetris'
-        .fourth_element.tetris_holder#fourth
-          span Timely delivery
-          = inline_svg 'index/tetris4', class: 'tetris'
-        .fifth_element.tetris_holder#fifth
-          span Team extending
-          = inline_svg 'index/tetris5', class: 'tetris'
+      .tetris_container.higher
+        - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, index|
+          div class='#{el[:id]}_element tetris_holder' id='#{el[:id]}'
+            span
+              a href='##{id_name(el[:title])}'= el[:title]
+            a href='##{id_name(el[:title])}'
+              = inline_svg(('index/tetris'+ (index+1).to_s),   class: 'tetris')   
+      .tetris_container.lower#lower
+        - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, index|
+          div class='#{el[:id]}_element tetris_holder' id='#{el[:id]}_lower'
+            span
+              a href='##{id_name(el[:title])}'= el[:title]
+            a href='##{id_name(el[:title])}'  
+              = inline_svg(('index/tetris'+ (index+1).to_s),   class: 'tetris')  
     .benefits
       .header_2 The benefits of collaboration with Active Bridge
+    .solutions_and_benefits_desc
+      - I18n.t('about_us.solutions_and_benefits.solutions').each do |el|
+        .informational_container id='#{id_name(el[:title])}'
+          div
+          .title= el[:title]
+          = el[:desc]   
+      - I18n.t('about_us.solutions_and_benefits.benefits').each do |el|
+        .informational_container id='#{id_name(el[:title])}'
+          div
+          .title= el[:title]
+          = el[:desc]   
+      = link_to '', '#solutions_and_benefits', id: 'close_description'  
 javascript:
-  let currEl = 0
-  let preEl = 0
-  var first = document.getElementById('first')
-  var second = document.getElementById('second')
-  var third = document.getElementById('third')
-  var fourth = document.getElementById('fourth')
-  var fifth = document.getElementById('fifth')
-  var container = document.getElementById('solutions_and_benefits')
+  var first = document.getElementById('first_lower')
+  var second = document.getElementById('second_lower')
+  var third = document.getElementById('third_lower')
+  var fourth = document.getElementById('fourth_lower')
+  var fifth = document.getElementById('fifth_lower')
+  var container = document.getElementById('lower')
   function transformYDown(){
-
     first.style.transform = 'rotate(90deg)'
-    second.style.transform = 'translate(56%, 168%)'
-    third.style.transform = 'rotate(180deg) translate(-55%, 58%)'
-    fourth.style.transform = 'rotate(90deg) translate(13%, -87%)'
-    fifth.style.transform = 'rotate(90deg) translate(19%, 424%)'
-
-    
-
-  }
-
-  function transformYUp(){
-    first.style.transform = ''  
-    second.style.transform = ''
-    third.style.transform = ''
-    fourth.style.transform = ''
-    fifth.style.transform = ''
+    second.style.transform = 'translate(56%, 164%)'
+    third.style.transform = 'rotate(180deg) translate(-55%, 80%)'
+    fourth.style.transform = 'rotate(90deg) translate(17%, -78%)'
+    fifth.style.transform = 'rotate(90deg) translate(30%, 218%)'
+    lower.style.visibility = 'visible'
+    lower.style.transform = 'translateY(150%) translateX(-5%)'
   }
 
 

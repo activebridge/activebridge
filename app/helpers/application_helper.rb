@@ -34,6 +34,10 @@ module ApplicationHelper
     end
   end
 
+  def id_name(str)
+    str.downcase.gsub(/[ -]/, '_')
+  end
+
   def project_name(project)
     project.downcase.gsub(/[,.]/, '').tr(' ', '_')
   end

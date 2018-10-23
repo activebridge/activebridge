@@ -1,3 +1,15 @@
+$solutions_and_benefits: 
+  full_stack_expertise_where_you_need_it, 
+  project_staffing_and_recruiting,
+  a_motivated_workforce,
+  timely_delivery,
+  team_extending,
+  dedicated_web_developers,
+  teamwork_and_expert_integration,
+  transparency_and_face_to_face_communication,
+  flexibility,
+  fluent_english_communication; 
+
 body{
   overflow-x: hidden;
   overflow-y: auto;
@@ -52,6 +64,7 @@ body{
     margin-top: 15px;
     font-size: 45px;
     color: #b64e96;
+    transition: all .3s ease;
   }
 
   .logo_container{
@@ -96,8 +109,15 @@ body{
   height: 120vh;
   width: 80%;
   align-self: center;
+  overflow-y: auto;
+  overflow-x: hidden;
   .solutions{
     height: 40%;
+
+    .higher{
+      z-index: 3;
+    }
+
     .tetris_container{
       margin-top: 4vh;
       margin-left: 7vw;
@@ -107,7 +127,6 @@ body{
       flex-wrap: nowrap;
 
       .tetris_holder{
-        transition: all .3s linear;
         display: flex;
         flex-direction: column;
         span{
@@ -115,6 +134,11 @@ body{
           color: white;
           text-transform: uppercase;
           font-size: 1em;
+
+          a{
+            text-decoration: none;
+            color: white;
+          }
         }
         .tetris{
           z-index: 2;
@@ -167,10 +191,85 @@ body{
         }
       }
     }
+
+    .lower{
+      margin-top: -29.5%;
+      transition: transform 2.3s linear;
+      z-index: 2;
+      visibility: hidden;
+
+      #first_lower{
+        span{
+          width: 50%;
+          transform: rotate(-90deg) translateY(-50%) translateX(20%);
+        }
+        transition: all 1.5s linear;
+      }
+      #second_lower{
+        transition: all 1.3s linear;
+      }
+      #third_lower{
+        span{
+          transform: rotate(180deg);
+        }
+        transition: all 1.9s linear;
+      }
+      #fourth_lower{
+        span{
+          width: 50%;
+          transform: rotate(-90deg) translateY(140%) translateX(-45%);
+        }
+        transition: all 2.1s linear;
+      }
+      #fifth_lower{
+        span{
+          transform: rotate(-90deg) translateY(60%) translateX(30%);
+        }
+        transition: all 1.7s linear;
+      }
+    }
   }
 
   .benefits{
     height: 60%;
+  }
+
+  .solutions_and_benefits_desc{
+    .informational_container{
+      top: 25%;
+      width: 35%;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      div{
+        overflow-y: auto;
+        text-align: justify;
+        width: 80%;
+      }
+    }
+    @each $element in $solutions_and_benefits{
+      ##{$element}:target{
+        z-index:4;
+        opacity: 1;
+        visibility: visible;
+      }
+      ##{$element}:target ~ #close_description{
+        position: fixed;
+        z-index: 3;
+        visibility: visible;
+      }
+    }
+  }
+
+  #close_description{
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 }
 
