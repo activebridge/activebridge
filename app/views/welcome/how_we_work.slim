@@ -9,8 +9,7 @@
       = inline_svg 'how_we_work/keyboard_hover', class: 'key_hover'
       = inline_svg 'how_we_work/keyboard', class: 'keyboard'
       .spacer
-    a#cooperation_models
-    .cooperation_models_cards
+    .cooperation_models_cards#cooperation_models
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
         .model_card
           .logo_container
@@ -30,19 +29,24 @@
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
         .informational_container id='#{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '_')}'
           .desc_container
-            / .header_3
-            /   =cooperation[:title]
-            p.title Definition
-            p=cooperation[:definition]
-            p.title Who is this model best for?
+            .header_2
+              =cooperation[:title]
+            p 
+              span Definition: 
+              =cooperation[:definition]
+            p 
+              span Who is this model best for? 
             ul
               - cooperation[:for_who].each do |f|
                 li=f
-            p.title How is the scope of work defined?
-            p=cooperation[:scope_of_work]
-            p.title How is the cost of work defined?
-            p=cooperation[:cost]
-            p.title Customer Advantages
+            p
+              span How is the scope of work defined? 
+              p=cooperation[:scope_of_work]
+            p
+              span How is the cost of work defined? 
+              p=cooperation[:cost]
+            p 
+              span Customer Advantages
             ul 
               -cooperation[:advantages].each do |a|
                 li=a

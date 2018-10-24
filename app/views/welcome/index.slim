@@ -57,14 +57,16 @@
     .solutions_and_benefits_desc
       - I18n.t('about_us.solutions_and_benefits.solutions').each do |el|
         .informational_container id='#{id_name(el[:title])}'
-          div
-          .title= el[:title]
-          = el[:desc]   
+          .descr
+            .title= el[:title]
+            hr
+            = el[:desc]   
       - I18n.t('about_us.solutions_and_benefits.benefits').each do |el|
         .informational_container id='#{id_name(el[:title])}'
-          div
-          .title= el[:title]
-          = el[:desc]   
+          .descr
+            .title= el[:title]
+            hr
+            = el[:desc]   
       = link_to '', '#solutions_and_benefits', id: 'close_description'  
 javascript:
   var first = document.getElementById('first_lower')

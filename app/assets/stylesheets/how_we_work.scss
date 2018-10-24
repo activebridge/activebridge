@@ -93,8 +93,14 @@ $models: dedicated_team, team_extension, project_model;
       justify-content: center;
       .desc_container{
         width: 85%;
-        p.title{
-          text-decoration: #5f52ca underline;
+
+        .header_2{
+          text-align: center;
+        }
+        p{
+          span{
+            font-weight: bold;
+          }
         }
       }
     }

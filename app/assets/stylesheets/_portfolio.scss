@@ -579,10 +579,6 @@ hr{
     .testimonial_container {
       display: inline-block;
       width: 90%;
-      vertical-align: top;
-      height: 100%;
-      position: relative;
-      
       .company_logo {
         display: block;
         margin: 30px auto;
@@ -605,6 +601,7 @@ hr{
       }
       .testimonial_description{
         text-align: justify;
+        overflow-y: auto;
       }
     }
   }
