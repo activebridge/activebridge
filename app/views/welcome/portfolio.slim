@@ -1,4 +1,3 @@
--@title = 'Offshore IT Contracting Company || Active Bridge'
 .header_2.header_portfolio Remarkable Projects
 a#projects
 .content.projects
@@ -7,21 +6,6 @@ a#projects
     .informational_container id=project_name(project.client)
       = link_to '', "##{project_name(@projects[i-1].client)}", class: 'prev-project'
       = link_to '', "##{next_project(@projects, i)}", class: 'next-project'
-      / ul.project-info
-      /   - t('portfolio.project_info').each do |key, value|
-      /     li.item
-      /       .item-title
-      /         .name= value
-      /         .hexagon
-      /         .connection
-      /           = inline_svg 'portfolio/fork.svg', class: "multilink technologies_#{project.send(key).split(',').size}" if value == 'technology'
-      /       - if value == 'technology'
-      /         .item-description data-tech-count=project.send(key).split(',').size
-      /           - project.send(key).split(',').each_with_index do |tech, i|
-      /             = tech
-      /             br
-      /       - else
-      /         .item-description= project.send(key)
       .project-details
         = image_tag("portfolio/projects/#{project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')}.svg", class: 'project-logo')
         = link_to project.link, target: '_blank', class: 'view-project' do
@@ -33,9 +17,11 @@ a#projects
           br
           br
           span Technologies: 
-          - project.technology.split(' ').each do |tech, i|
-            = tech
-            '  /
+          - technologies = project.technology.split(' ')
+          - technologies.each_with_index do |tech, i|
+            =tech
+            - if i != technologies.size-1 
+              '  / 
           hr 
           span Description: 
           = project.description
