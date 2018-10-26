@@ -1,7 +1,7 @@
 class AvatarUploader < BaseUploader
   process tags: [:avatar]
   process convert: :jpg
-  process resize_to_fill: [200, 200, :face]
+  process resize_to_fill: [200, 175, :face]
 
   version :mask do
     process convert: :png

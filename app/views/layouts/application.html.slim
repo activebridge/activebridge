@@ -62,15 +62,18 @@ html lang='en'
       head.appendChild(link);
       let currentEl = 0
       let prevEl = 0
+      let header = document.getElementById('header')
+      let form_container = document.getElementById('form_container')
+      let display = 'display: flex; visibility: visible; opacity: 1; animation: display 1s;'
       function toggleHeader(){
         prevEl = currentEl
         currentEl = window.pageYOffset
         if ( currentEl > prevEl ){
-          document.getElementById('header').style.cssText = 'opacity: 1;'
-          document.getElementById('form_container').style.cssText = 'opacity: 1;'
+          header.style.cssText = display
+          form_container.style.cssText = display
         }
         else{
-          document.getElementById('header').style.cssText = 'opacity: 0;'
-          document.getElementById('form_container').style.cssText = 'opacity: 0;'
+          header.style.cssText = 'opacity: 0;'
+          form_container.style.cssText = 'opacity: 0;'
         }
       }

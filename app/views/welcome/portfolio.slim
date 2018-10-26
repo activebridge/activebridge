@@ -3,9 +3,9 @@ a#projects
 .content.projects
   = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
   - @projects.each_with_index do |project, i|
-    .informational_container id=project_name(project.client)
-      = link_to '', "##{project_name(@projects[i-1].client)}", class: 'prev-project'
-      = link_to '', "##{next_project(@projects, i)}", class: 'next-project'
+    .informational_container id=item_name(project.client)
+      = link_to '', "##{item_name(@projects[i-1].client)}", class: 'prev'
+      = link_to '', "##{item_name(next_item(@projects, i).client)}", class: 'next'
       .project-details
         = image_tag("portfolio/projects/#{project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')}.svg", class: 'project-logo')
         = link_to project.link, target: '_blank', class: 'view-project' do

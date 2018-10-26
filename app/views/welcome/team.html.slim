@@ -1,0 +1,35 @@
+.container
+  .cartoon_cards
+    - @members.each do |member|
+      .cartoon_container
+        a href='##{id_name(member.name)}'
+          = image_tag(member.cartoon.url) 
+
+  .members_cards
+    - @members.each_with_index do |member, i|
+      .informational_container id='#{id_name(member.name)}'
+        = link_to '', "##{item_name(@members[i-1].name)}", class: 'prev'
+        = link_to '', "##{item_name(next_item(@members, i).name)}", class: 'next'
+        .member_information
+          .member
+            = image_tag (member.cartoon.url)
+            .name_and_post
+              .spacer
+              .info
+                .name= member.name
+                p.position= member.position
+              .spacer
+              hr
+          .description 
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, praesentium. Aliquam temporibus mollitia facere repudiandae doloribus eaque fuga voluptatum ipsum.
+          .title_projects
+            hr
+            span Projects
+            hr
+          ul.projects
+            - member.projects.split(' ').each do |project|
+              li=project
+              li=project
+              li=project
+    = link_to '', '#', id: 'close_member'
+     

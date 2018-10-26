@@ -17,6 +17,26 @@ $lazy-end:        translateY(0%);
 $x: 500%;
 $y: 500%;
 
+@keyframes display {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -29,8 +49,9 @@ body {
 }
 
 header {
-  display: flex;
+  display: none;
   opacity: 0;
+  visibility: hidden;
   align-items: center;
   z-index: 4;
   top: 0;
@@ -40,7 +61,7 @@ header {
   height: 11vh;
   background-color: white;
   box-shadow: 0px 0px 20px #DAD7D7;
-  transition: opacity 1s;
+  transition: opacity 1s linear, visibility 1s linear;
   .logotype{
     width: 10vw;
     height: 85%;
@@ -566,7 +587,7 @@ input[type=radio] {
   color: #5f52ca;
   text-align: center;
   width: 40%;
-  height: 80%;
+  height: 70%;
   background: rgba(255, 255, 255, 0.95);
   position: fixed;
   visibility: hidden;
@@ -577,6 +598,33 @@ input[type=radio] {
   transition: visibility 1s linear .3s, opacity .3s linear;
   box-shadow: 0px 3px 20px rgba(136, 136, 136, 0.85);
 
+  .prev, .next {
+    transition: all .2s linear;
+    position: absolute;
+    z-index: 5;
+    bottom: 45%;
+    border-top: 50px solid transparent;
+  }
+
+  .prev {
+    left: -25px;
+    transform: rotate(45deg);
+    border-left: 50px solid #B898CB;
+  }
+
+  .prev:hover {
+    border-left: 50px solid #8c66a2;
+  }
+
+  .next:hover {
+    border-right: 50px solid #8c66a2;
+  }
+
+  .next {
+    transform: rotate(-45deg);
+    right: -25px;
+    border-right: 50px solid #B898CB;
+  }
   @media (min-width: 1380px){
     width: 35%;
     height: 65%;

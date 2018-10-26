@@ -10,6 +10,8 @@ ActiveAdmin.register Member do
     :cartoon,
     :cartoon_cache,
     :priority,
+    :description,
+    :projects
   )
   menu priority: 2
   config.sort_order = 'priority_asc'
@@ -36,6 +38,8 @@ ActiveAdmin.register Member do
     f.inputs 'Member Editing' do
       f.input :name
       f.input :position
+      f.input :description, as: :text
+      f.input :projects
       f.input :avatar, as: :file, hint: image_tag(f.object.avatar.url)
       f.input :avatar_cache, as: :hidden
       f.input :careers

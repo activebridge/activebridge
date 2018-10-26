@@ -199,33 +199,6 @@ hr{
   }
 
   .informational_container {
-    .prev-project, .next-project {
-      transition: all .2s linear;
-      position: absolute;
-      z-index: 5;
-      bottom: 45%;
-      border-top: 50px solid transparent;
-    }
-
-    .prev-project {
-      left: -25px;
-      transform: rotate(45deg);
-      border-left: 50px solid #B898CB;
-    }
-
-    .prev-project:hover {
-      border-left: 50px solid #8c66a2;
-    }
-
-    .next-project:hover {
-      border-right: 50px solid #8c66a2;
-    }
-
-    .next-project {
-      transform: rotate(-45deg);
-      right: -25px;
-      border-right: 50px solid #B898CB;
-    }
 
     .project-info {
       float: left;
