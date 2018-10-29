@@ -84,7 +84,7 @@ header {
 }
 
 .container{
-  width: calc(100% - 15vw);
+  width: calc(100% - 20vw);
   text-align: center;
 }
 
@@ -95,7 +95,7 @@ header {
   width: 15vw;
   position: fixed;
   top: 11vh;
-  right: 13vw;
+  right: 19vw;
   background-color: white;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0px 0px 20px #DAD7D7;
@@ -223,6 +223,9 @@ nav {
       z-index: 1;
       display: flex;
       width: 15vw;
+      margin-left: -5.5vw;
+      transition: all 0.3s ease-in-out;
+
 
       .page {
         text-decoration: none;
@@ -255,7 +258,7 @@ nav {
           transform: scaleX(0);
           -webkit-transform: scaleX(0);
           -webkit-transition: all 0.3s ease-in-out 0s;
-          transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out;
         }
       }
     }

@@ -1,62 +1,63 @@
-.header_2.header_portfolio Remarkable Projects
-a#projects
-.content.projects
-  = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
-  - @projects.each_with_index do |project, i|
-    .informational_container id=item_name(project.client)
-      = link_to '', "##{item_name(@projects[i-1].client)}", class: 'prev'
-      = link_to '', "##{item_name(next_item(@projects, i).client)}", class: 'next'
-      .project-details
-        = image_tag("portfolio/projects/#{project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')}.svg", class: 'project-logo')
-        = link_to project.link, target: '_blank', class: 'view-project' do
-          = t('portfolio.button')
-        hr
-        .project-description
-          span Industry: 
-          = project.industry
-          br
-          br
-          span Technologies: 
-          - technologies = project.technology.split(' ')
-          - technologies.each_with_index do |tech, i|
-            =tech
-            - if i != technologies.size-1 
-              '  / 
-          hr 
-          span Description: 
-          = project.description
-  = link_to '', '#', id: 'close_project'
-a#testimonials
-.portfolio_testimonials
-  - I18n.t('testimonials.all').each_with_index do |testimonial, index|
-    .testimonial class="portfolio_testimonial"
-      a href="#testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}"
-        .description_wrapper
-          = inline_svg 'testimonials/like', class: 'like'
-          span
-            = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
-            = testimonial[:description].slice(0..95)
-            '...
-            = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
-          .spacer
-          button.read_more href="#testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}" Read more
+.container
+  .header_2 Remarkable Projects
+  a#projects
+  .content.projects
+    = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
+    - @projects.each_with_index do |project, i|
+      .informational_container id=item_name(project.client)
+        = link_to '', "##{item_name(@projects[i-1].client)}", class: 'prev'
+        = link_to '', "##{item_name(next_item(@projects, i).client)}", class: 'next'
+        .project-details
+          = image_tag("portfolio/projects/#{project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')}.svg", class: 'project-logo')
+          = link_to project.link, target: '_blank', class: 'view-project' do
+            = t('portfolio.button')
+          hr
+          .project-description
+            span Industry: 
+            = project.industry
+            br
+            br
+            span Technologies: 
+            - technologies = project.technology.split(' ')
+            - technologies.each_with_index do |tech, i|
+              =tech
+              - if i != technologies.size-1 
+                '  / 
+            hr 
+            span Description: 
+            = project.description
+    = link_to '', '#', id: 'close_project'
+  a#testimonials
+  .portfolio_testimonials
+    - I18n.t('testimonials.all').each_with_index do |testimonial, index|
+      .testimonial class="portfolio_testimonial"
+        a href="#testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}"
+          .description_wrapper
+            = inline_svg 'testimonials/like', class: 'like'
+            span
+              = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
+              = testimonial[:description].slice(0..95)
+              '...
+              = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
+            .spacer
+            button.read_more href="#testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}" Read more
 
-.testimonials_cards
-  - I18n.t('testimonials.all').each_with_index do |testimonial, index|
-    .informational_container id='testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}'
-      .testimonial_container 
-        = image_tag(testimonial[:logo], class: 'company_logo')
-        hr
-        .testimonial_author
-          = image_tag(testimonial[:image], class: 'author', alt: nil)
-          .author_info
-            span= testimonial[:author]
-            ' 
-            = testimonial[:title]
-        hr
-        .testimonial_description
-          = testimonial[:description]
-  = link_to '', '#testimonials', id: 'close_testimonial'
+  .testimonials_cards
+    - I18n.t('testimonials.all').each_with_index do |testimonial, index|
+      .informational_container id='testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}'
+        .testimonial_container 
+          = image_tag(testimonial[:logo], class: 'company_logo')
+          hr
+          .testimonial_author
+            = image_tag(testimonial[:image], class: 'author', alt: nil)
+            .author_info
+              span= testimonial[:author]
+              ' 
+              = testimonial[:title]
+          hr
+          .testimonial_description
+            = testimonial[:description]
+    = link_to '', '#testimonials', id: 'close_testimonial'
 
   
 

@@ -32,11 +32,6 @@ $projects: (
   modean_apps: #999
 );
 
-.header_portfolio{
-  width: calc(100% - 10vw);
-  text-align: center;
-}
-
 hr{
   border: none;
   border-top: 2px solid #5f52ca;
@@ -50,10 +45,9 @@ hr{
 
   .portfolio-background {
     position: absolute;
-    top: 5%;
-    left: 45%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 100%;
     height: 80%;
     padding: 5%;
     opacity: 1;
@@ -489,10 +483,9 @@ hr{
 .portfolio_testimonials {
   z-index: 3;
   height: 90vh;
-  width: calc(100% - 15vw);
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 3vw;
 
   .testimonial {
     height: 10vh;
