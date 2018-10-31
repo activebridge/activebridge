@@ -7,6 +7,12 @@ if navigator.appVersion.toUpperCase().indexOf('MSIE') != -1 or
 
   document.querySelector('html').classList.add('ie')
 
+ajax = (method, href, async = true) ->
+  xhr = new XMLHttpRequest()
+  xhr.open(method, href, async)
+  xhr.setRequestHeader('Accept', 'text/javascript')
+  return xhr
+  
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
   xhr = ajax('POST', form.action)
@@ -115,12 +121,6 @@ document.querySelector('#lazy_body').addEventListener('transitionend', clearLazy
 document.addEventListener('keydown', browseData, false)
 document.querySelector('#header').addEventListener('onscroll', displayHeader, false)
 initTeamScroll()
-
-ajax = (method, href, async = true) ->
-  xhr = new XMLHttpRequest()
-  xhr.open(method, href, async)
-  xhr.setRequestHeader('Accept', 'text/javascript')
-  return xhr
 
 window.onpopstate = ->
   closeWindow() if isRootPage()

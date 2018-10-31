@@ -68,7 +68,7 @@ en:
         description: 
           Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
           mobile developers for your in-house teams. Learn more
-      contact_us:
+      contact:
         title: Hire App Developers in 48 hours || Active Bridge
         keywords: hire ruby on rails developer
                   hire web developer
@@ -106,23 +106,53 @@ en:
         many years’ experience of cooperation with other <h4>web development companies</h4>
         in USA, Canada, and Europe.
     contact:
-      title: Contact us
+      title: Get in touch
+      discuss: Want to discuss your project or partnership?
+      find_us:
+        - link: contact@active-bridge.com
+          logo: contact/email
+        - link: +380636086045
+          logo: contact/phone
+        - link: https://www.facebook.com/ActiveBridgeTeam
+          logo: contact/fb
+        - link: https://www.linkedin.com/company/active-bridge
+          logo: contact/linkedin
+        - link: https://github.com/activebridge
+          logo: contact/github
+      entities:
+        - entity: Ukraine Entity
+          logo: contact/address
+          name: Active Bridge, LLC
+          address: Marshala Krasovskogo, 8 Street
+          post: Cherkasy 18000
+          country: Ukraine
+        - entity: US Entity
+          logo: contact/address
+          name: Active Bridge, LLC
+          address: 4644 North 22nd Street
+          post: Phoenix, AZ 85016
+          country: United States
+      help: We are ready to help
+      complete_fields: Please complete all the form fields so we can provide a better solution for you
       name_placeholder: Your name
       name_error: Please, input real name
-      email_placeholder: Your email
+      email_placeholder: Your business email
       email_error: Please, input valid email
-      message_placeholder: Text message
+      message_placeholder: About the project
+      country: Your country
+      send: Send
+      reason_placeholder: Contact reason 
       message_error: Body have to contain at least 10 characters
       send: Send
       info: 'Contact info:'
       site: https://activebridge.org
-      organization: Active Bridge, LLC
-      email: contact@active-bridge.com
-      location: Cherkasy
-      country: Ukraine
-      postal_code: 18000
-      phone_number: '+380636086045'
       success_message: "Thank you! Your message has been successfully sent.\n Please check your email."
+      reasons:
+        - I’m looking for a full-stack developer
+        - I need an estimate
+        - I want to join your team
+        - I want to sell you something
+        - Just have a talks
     testimonials:
       title: Testimonials
   team:

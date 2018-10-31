@@ -17,8 +17,8 @@ RSpec.feature 'Mailer', type: :feature do
     expect(page).to have_content(ab_email)
 
     fill_in 'Your name', with: info[:name]
-    fill_in 'Your email', with: info[:email]
-    fill_in 'Text message', with: info[:message]
+    fill_in 'Your business email', with: info[:email]
+    fill_in 'About the project', with: info[:message]
 
     click_button 'submit'
 

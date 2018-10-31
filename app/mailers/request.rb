@@ -10,10 +10,11 @@ class Request < ApplicationMailer
 
   def confirm(attrs)
     @name = attrs['name']
+    @country = attrs['country']
     mail(
       from: 'contact@active-bridge.com',
       to: attrs['email'],
-      subject: 'Active Bridge',
+      subject: 'Active Bridge ' + attrs['reason'],
     )
   end
 end
