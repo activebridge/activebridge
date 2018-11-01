@@ -1,25 +1,74 @@
-$members: alex_bidofan, oleynikov_oleg;
+$members: 
+bidochka_alex, 
+oleynikov_oleg,
+galushka_alex,
+milevskyi_ruslan,
+zimin_anton,
+lukin_alexey,
+savenko_serhii;
 
 .cartoon_cards{
-  height: 100%;
+  height: 90%;
   display: flex;
-  justify-content: space-around;
-  
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
   .cartoon_container{
+    cursor: pointer;
     width: 20%;
     height: 30vh;
     display: flex;
-    background-color: aquamarine;
-    
-    
-    a{
+    flex-direction: column;
+
+    .cartoon_logo_container{
       display: flex;
-      margin: auto;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+
+      .cartoon_logo{
+        width: 80%;
+        margin-right: -40%;
+        height: 100%;
+      }
+
+      .cartoon_logo_hover{
+        width: 80%;
+        height: 100%;
+        margin-left: -40%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3 linear;
+      }
+      &:hover{
+        .cartoon_logo_hover {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    .descr{
+      width: 100%;
+      height: 30%;
+      align-self: flex-end;
+      span{
+        color: #5f52ca;
+
+        &.name{
+          font-weight: bold;
+          text-transform: uppercase;  
+        }
+
+        &.position{
+          font-size: .75rem;
+        }
+      }
+    }
+
+    svg{
+      height: 70%;
     }
   }
-}
-
-.members_cards{
   .informational_container{
     display: flex;
     justify-content: center;
@@ -29,7 +78,7 @@ $members: alex_bidofan, oleynikov_oleg;
       display: flex;
       flex-direction: column;
       width: 80%; 
-      height: 90%;
+      height: 100%;
 
       .member{
         display: flex;
@@ -43,14 +92,17 @@ $members: alex_bidofan, oleynikov_oleg;
         .name_and_post{
           display: flex;
           flex-direction: column;
+          align-items: center;
           height: 100%;
           width: calc(100% - 100px);
 
           .info{
-            align-self: center;
+            text-align: left; 
+            width: 75%;
             .name{
               text-transform: uppercase;
               font-size: 1.5em;
+              margin-bottom: 15px;
             }
             .position{
               color: black;
@@ -66,9 +118,10 @@ $members: alex_bidofan, oleynikov_oleg;
       .description{
         height: 35%;
         overflow-y: auto;
+        margin-bottom: 15px;
       }
       .title_projects{
-        height: 10%;
+        height: 7%;
         text-align: center;
         font-size: 1.5em;
         hr{
@@ -89,9 +142,20 @@ $members: alex_bidofan, oleynikov_oleg;
         }
       }
     }
+    @media screen and (max-width: 1000px){
+      top: 25%;
+      width: 50%;
+      height: 50%;
+    }
+
+    @media screen and (min-height: 900px){
+      top: 25%;
+      height: 50%;
+      width: 30%;
+    }
   }
   @each $member in $members{
-    ##{$member}:target{
+    ##{$member}:focus ~ ##{$member}_card{
       z-index: 4;
       opacity: 1;
       visibility: visible;
@@ -102,15 +166,5 @@ $members: alex_bidofan, oleynikov_oleg;
       opacity: 1;
       visibility: visible;
     }
-  }
-  #close_member{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    background-color: rgba(255, 255, 255, 0.7);
   }
 }

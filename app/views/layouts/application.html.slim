@@ -3,11 +3,14 @@
 
 doctype 5
 html lang='en'
+  title=t('meta.pages.' + @page + '.title')
   meta property='og:url'         content='https://activebridge.org/'
   meta property='og:title'       content='Ruby on Rails Web Development Company, Full-stack | Active Bridge'
   meta property='og:description' content='Ruby on Rails development company, web application development & custom software solution provider. Huge work experience with markets of USA, Canada and Europe.'
   meta property='og:image'       content='https://i.imgur.com/VObMwOF.jpg'
-
+  meta name = 'description' content=t('meta.pages.' + @page + '.description')
+  meta name = 'keywords' content=t('meta.pages.' + @page + '.keywords')
+  
   = render 'layouts/head', type: :application, media: :all
 
   body onscroll='toggleHeader()'
@@ -64,16 +67,19 @@ html lang='en'
       let prevEl = 0
       let header = document.getElementById('header')
       let form_container = document.getElementById('form_container')
-      let display = 'display: flex; visibility: visible; opacity: 1; animation: display 1s;'
       function toggleHeader(){
         prevEl = currentEl
         currentEl = window.pageYOffset
         if ( currentEl > prevEl ){
-          header.style.cssText = display
-          form_container.style.cssText = display
+          header.style.cssText = 'opacity: 1; z-index: 4'
+          form_container.style.cssText = 'opacity: 1; z-index: 3'
         }
         else{
-          header.style.cssText = 'opacity: 0;'
-          form_container.style.cssText = 'opacity: 0;'
+          header.style.cssText = 'opacity: 0'
+          form_container.style.cssText = 'opacity: 0'
         }
+      }
+      let changeItem = (item) => {
+        console.log(item)
+        item[0].focus()
       }

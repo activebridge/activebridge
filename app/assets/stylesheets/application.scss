@@ -49,11 +49,10 @@ body {
 }
 
 header {
-  display: none;
+  display: flex;
   opacity: 0;
-  visibility: hidden;
   align-items: center;
-  z-index: 4;
+  z-index: -1;
   top: 0;
   left: 0;
   position: fixed;
@@ -90,7 +89,7 @@ header {
 
 .form_container{
   display: inline;
-  z-index: 3;
+  z-index: -1;
   height: 5.5vh;
   width: 15vw;
   position: fixed;
