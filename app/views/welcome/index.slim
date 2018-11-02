@@ -13,7 +13,6 @@
       br
       a.btn_work  href='#about_us' 
         b Learn how we work
-      p ↓
   .about_us_container
     a#about_us
     .description_container
@@ -42,29 +41,31 @@
             span
               a href='##{id_name(el[:title])}'= el[:title]
             a href='##{id_name(el[:title])}'
-              = inline_svg(('index/tetris'+ (index+1).to_s),   class: 'tetris')   
+              = inline_svg(('index/tetris'+ (index+1).to_s), class: 'tetris')   
       .tetris_container.lower#lower
         - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, index|
           div class='#{el[:id]}_element tetris_holder' id='#{el[:id]}_lower'
             span
               a href='##{id_name(el[:title])}'= el[:title]
             a href='##{id_name(el[:title])}'  
-              = inline_svg(('index/tetris'+ (index+1).to_s),   class: 'tetris')  
+              = inline_svg(('index/tetris'+ (index+1).to_s), class: 'tetris')  
     .benefits
       .header_2 The benefits of collaboration with Active Bridge
     .solutions_and_benefits_desc
       - I18n.t('about_us.solutions_and_benefits.solutions').each do |el|
         .informational_container id='#{id_name(el[:title])}'
-          .descr
-            .title= el[:title]
-            hr
-            = el[:desc]   
+          .about_item
+            .title_holder
+              .title= el[:title]
+              hr
+            .description= el[:desc]    
       - I18n.t('about_us.solutions_and_benefits.benefits').each do |el|
         .informational_container id='#{id_name(el[:title])}'
-          .descr
-            .title= el[:title]
-            hr
-            = el[:desc]   
+          .about_item
+            .title_holder
+              .title= el[:title]
+              hr
+            .description= el[:desc]   
       = link_to '', '#solutions_and_benefits', id: 'close_description'  
 javascript:
   var first = document.getElementById('first_lower')
@@ -75,10 +76,10 @@ javascript:
   var container = document.getElementById('lower')
   function transformYDown(){
     first.style.transform = 'rotate(90deg)'
-    second.style.transform = 'translate(58%, 177%)'
-    third.style.transform = 'rotate(180deg) translate(-57.5%, 79%)'
-    fourth.style.transform = 'rotate(90deg) translate(17.5%, -83%)'
-    fifth.style.transform = 'rotate(90deg) translate(31%, 237%)'
+    second.style.transform = 'translate(56.6%, 167%)'
+    third.style.transform = 'rotate(180deg) translate(-56.5%, 77.5%)'
+    fourth.style.transform = 'rotate(90deg) translate(17.5%, -81%)'
+    fifth.style.transform = 'rotate(90deg) translate(32%, 217%)'
     lower.style.visibility = 'visible'
     lower.style.transform = 'translateY(150%) translateX(-7%)'
   }

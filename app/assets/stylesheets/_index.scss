@@ -55,18 +55,6 @@ body{
     }
   }
 
-  .btn_work:hover + p{
-    transition: font-size 1s;
-    font-size: 100px;
-  }
-
-  p {
-    margin-top: 15px;
-    font-size: 45px;
-    color: #b64e96;
-    transition: all .3s ease;
-  }
-
   .logo_container{
     margin-top: 1vh;
     margin-bottom: 10vh;
@@ -84,7 +72,7 @@ body{
 
   .description_container{
     margin-top: 5vh;
-    text-align: justify;
+    text-align: left;
     display: flex;
     font-size: 1.2em;
     width: 90%;
@@ -122,7 +110,7 @@ body{
       margin-top: 10vh;
       margin-left: 3vw;
       height: 80%;
-      width: 800px;
+      width: 700px;
       display: flex;
       flex-wrap: nowrap;
 
@@ -250,26 +238,32 @@ body{
       align-items: center;
       flex-direction: column;
 
-      .descr{
-        overflow-y: auto;
+      .about_item{
         text-align: justify;
-        width: 75%;
+        width: 80%;
+        height: 100%; 
 
-        .title{
-          font-size: 1.5rem;
-          color: #5f52ca;
-          text-transform: uppercase;
-          margin: 4vh 0;
+        .title_holder{
+          height: 25%;
+          margin-top: 10%;
+          .title{
+            font-size: 1.5rem;
+            color: #5f52ca;
+            text-transform: uppercase;
+          }
         }
 
-        hr{
-          margin: 5vh 0;
+        .description{
+          height: 65%;
+          width: 100%;
+          overflow-y: auto;
         }
-        
       }
-
-      @media (min-width: 1380px){
+      @media screen and (min-width: 1450px){
         width: 30%;
+      }
+      @media screen and (min-height: 850px){
+        height: 50%;
       }
     }
     @each $element in $solutions_and_benefits{

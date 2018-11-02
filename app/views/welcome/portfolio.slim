@@ -8,7 +8,7 @@
         = link_to '', "##{item_name(@projects[i-1].client)}", class: 'prev'
         = link_to '', "##{item_name(next_item(@projects, i).client)}", class: 'next'
         .project-details
-          = image_tag("portfolio/projects/#{project.client.downcase.gsub(/[,.]/, '').gsub(' ', '_')}.svg", class: 'project-logo')
+          = image_tag("portfolio/projects/#{item_name(project.client)}.svg", class: 'project-logo')
           = link_to project.link, target: '_blank', class: 'view-project' do
             = t('portfolio.button')
           hr
@@ -31,32 +31,36 @@
   .portfolio_testimonials
     - I18n.t('testimonials.all').each_with_index do |testimonial, index|
       .testimonial class="portfolio_testimonial"
-        a href="#testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}"
+        a href="#testimonial_#{item_name(testimonial[:company])}"
           .description_wrapper
             = inline_svg 'testimonials/like', class: 'like'
             span
               = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
-              = testimonial[:description].slice(0..95)
+              = testimonial[:description].slice(0..90)
               '...
               = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
             .spacer
-            button.read_more href="#testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}" Read more
+            button.read_more href="#testimonial_#{item_name(testimonial[:company])}" Read more
 
   .testimonials_cards
     - I18n.t('testimonials.all').each_with_index do |testimonial, index|
-      .informational_container id='testimonial_#{testimonial[:company].downcase.gsub(/[,.]/, '').gsub(' ', '_')}'
+      .informational_container id='testimonial_#{item_name(testimonial[:company])}'
         .testimonial_container 
-          = image_tag(testimonial[:logo], class: 'company_logo')
-          hr
+          .testimonial_logo_container
+            = image_tag(testimonial[:logo], class: 'company_logo')
           .testimonial_author
-            = image_tag(testimonial[:image], class: 'author', alt: nil)
+            hr
             .author_info
-              span= testimonial[:author]
-              ' 
-              = testimonial[:title]
-          hr
+              = image_tag(testimonial[:image], class: 'author', alt: nil)
+              .info
+                span= testimonial[:author]
+                ' 
+                = testimonial[:title]
+            hr
           .testimonial_description
+            = inline_svg 'testimonials/small_quotes', class: 'open-quotes'
             = testimonial[:description]
+            = inline_svg 'testimonials/small_quotes', class: 'close-quotes'
     = link_to '', '#testimonials', id: 'close_testimonial'
 
   

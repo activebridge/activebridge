@@ -57,12 +57,12 @@ header {
   left: 0;
   position: fixed;
   width: 100%;
-  height: 11vh;
+  height: 75px;
   background-color: white;
   box-shadow: 0px 0px 20px #DAD7D7;
   transition: opacity 1s linear, visibility 1s linear;
   .logotype{
-    width: 10vw;
+    width: 120px;
     height: 85%;
   }
 }
@@ -90,10 +90,10 @@ header {
 .form_container{
   display: inline;
   z-index: -1;
-  height: 5.5vh;
-  width: 15vw;
+  height: 35px;;
+  width: 220px;
   position: fixed;
-  top: 11vh;
+  top: 75px;
   right: 19vw;
   background-color: white;
   border-radius: 0px 0px 10px 10px;
@@ -113,7 +113,7 @@ header {
     .button_holder{
       display: flex;
       align-items: center;
-      height: 5vh;
+      height: 35px;
       white-space: nowrap;
     }
     textarea{
@@ -129,18 +129,22 @@ header {
     }
 
     .chat_button{
-      height: 5vh;
+      height: 33px;
     }
   }
 
   &:hover{
-    height: 21vh;
+    height: 150px;
     .contact_us{
       .text_holder{
         width: 90%;
       }
       textarea{
         display: inline;
+      }
+
+      .button_holder{
+        margin-top: 5px;
       }
     }
   }
@@ -606,6 +610,7 @@ input[type=radio] {
     z-index: 5;
     bottom: 45%;
     border-top: 50px solid transparent;
+    cursor: pointer;
   }
 
   .prev {

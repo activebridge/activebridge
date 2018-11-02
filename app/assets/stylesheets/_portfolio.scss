@@ -508,17 +508,6 @@ hr{
       span {
         margin-left: 2vw;
       }
-      .open-quotes, .close-quotes{
-        width: 15px;
-      }
-  
-      .open-quotes{
-        margin-bottom: 15px;
-      }
-  
-      .close-quotes{
-        margin-top: 15px;
-      }
 
       .spacer {
         flex: 1;
@@ -540,34 +529,81 @@ hr{
   }
 }
 
+.open-quotes, .close-quotes{
+  width: 15px;
+}
+
+.open-quotes{
+  margin-bottom: 15px;
+}
+
+.close-quotes{
+  transform: rotate(180deg);
+  margin-top: 15px;
+}
+
 .testimonials_cards{
   .informational_container {
+    display: flex;
+    justify-content: center;
+    width: 30%;
     .testimonial_container {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
       width: 90%;
-      .company_logo {
-        display: block;
-        margin: 30px auto;
-        width: 30%;
+      height: 95%;
+      .testimonial_logo_container{
+        display: flex;
+        height: 20%;
+        .company_logo {
+          margin: auto;
+          width: 50%;
+          height: 90%;
+        }
       }
       .testimonial_author{
         display: flex;
-        justify-content: center;
-        .author{
-          width: 150px;
-          height: 150px;
+        flex-direction: column;
+        align-items: center;
+        height: 135px;
+
+        hr{
+          margin: 0;
+          height: 1px;
+          width: 100%;
         }
+
         .author_info{
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: left;
-          margin-left: 2vw;
+
+          .author{
+            width: 100px;
+            height: 100px;
+          }
+
+          .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            margin-left: 2vw;
+          }
         }
       }
       .testimonial_description{
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 25% - 102px);
+        overflow-y: auto;
         text-align: justify;
         overflow-y: auto;
+
+        .open-quotes, .close-quotes{
+          width: 35px;
+        }
+        .close-quotes{
+          align-self: flex-end;
+        }
       }
     }
   }
