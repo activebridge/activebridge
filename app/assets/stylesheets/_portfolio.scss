@@ -378,14 +378,17 @@ hr{
       }
 
       .project-description {
-        height: 45%;
-        text-align: left;
+        height: 60%;
+        text-align: justify;
         letter-spacing: 0.5px;
         line-height: 1.4em;
         display: block;
+        overflow-y: auto;
 
-        span{
-          font-weight: bold;
+        p{
+          b{
+            text-transform: capitalize;
+          }
         }
       }
 

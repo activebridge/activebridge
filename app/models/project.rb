@@ -1,7 +1,8 @@
 class Project < ActiveRecord::Base
   mount_uploader :logo, ImageUploader
   mount_uploader :image, ImageUploader
-  validates :description,
+  validates :challenge,
+            :solution,
             :logo,
             :technology,
             :duration,

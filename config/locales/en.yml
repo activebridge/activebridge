@@ -182,6 +182,8 @@ en:
       technology: technology
       project_length: project length
       team_size: team size
+      challenge: challenge
+      solution: solution
       client: client
       industry: industry
     button: View Project
