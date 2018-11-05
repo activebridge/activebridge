@@ -1,37 +1,34 @@
 .container
   .cartoon_cards
-    - (0..3).each do |e| 
-      - @members.each_with_index do |member, i|
-        .cartoon_container id='#{id_name(member.name)}' tabindex='0'
-          .cartoon_logo_container
-            .spacer
-            = inline_svg 'team/cartoon/' + id_name(member.name), class: 'cartoon_logo'
-            = inline_svg 'team/cartoon/' + id_name(member.name), class: 'cartoon_logo_hover'
-            .spacer
-          .descr
-            span.name= member.name
-            br
-            span.position= member.position
-        .informational_container id='#{id_name(member.name)}_card'
-          div onclick='changeItem(#{item_name(@members[i-1].name)})' class='prev'
-          div onclick='changeItem(#{item_name(next_item(@members, i).name)})' class='next'
-          .member_information
-            .member
-              = image_tag (member.avatar.url)
-              .name_and_post
-                .spacer
-                .info
-                  .name= member.name
-                  span.position= member.position
-                .spacer
-                hr
-            .description
-              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint vitae voluptas quisquam vero minus provident similique dolores tempora aperiam. Fuga eius, saepe voluptate itaque ad animi ipsam ducimus non voluptatum ipsa veritatis consequuntur accusamus tempora, at delectus nam labore? Necessitatibus debitis suscipit repudiandae officiis illum sint totam, eum numquam aut minus reprehenderit commodi dolor veritatis nulla fugiat ut eaque.
-            .title_projects
+    - @members.each_with_index do |member, i|
+      .cartoon_container id='#{id_name(member.name)}' tabindex='0'
+        .cartoon_logo_container
+          = inline_svg 'team/cartoon/' + id_name(member.name), class: 'cartoon_logo'
+          = inline_svg 'team/cartoon_hover/' + id_name(member.name), class: 'cartoon_logo hover'
+        .descr
+          span.name= member.name
+          br
+          span.position= member.position
+      .informational_container id='#{id_name(member.name)}_card'
+        div onclick='changeItem(#{item_name(@members[i-1].name)})' class='prev'
+        div onclick='changeItem(#{item_name(next_item(@members, i).name)})' class='next'
+        .member_information
+          .member
+            = image_tag (member.avatar.url)
+            .name_and_post
+              .spacer
+              .info
+                .name= member.name
+                span.position= member.position
+              .spacer
               hr
-              span Projects
-              hr
-            ul.projects
-              - member.projects.split(' ').each do |project|
-                li=project
+          .description
+            = member.description
+          .title_projects
+            hr
+            span Projects
+            hr
+          ul.projects
+            - member.projects.split(' ').each do |project|
+              li=project
      

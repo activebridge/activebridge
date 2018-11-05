@@ -1,72 +1,108 @@
-$members: 
-bidochka_alex, 
-oleynikov_oleg,
+$members:
+andreieva_nastya,
+bidochka_alex,
+bilan_igor,
+bondarenko_vitaliy,
+borodai_alex,
+domotenko_eugene,
+dzyoma_artem,
 galushka_alex,
-milevskyi_ruslan,
-zimin_anton,
+karpenko_alex,
+kovtun_vitaliy,
+kovtun_volodymyr,
+kuritsyna_dasha,
 lukin_alexey,
-savenko_serhii;
+makodzeba_dima,
+marchenko_alex,
+mihailovskiy_pavel,
+milevskyi_ruslan,
+motuzko_alex,
+motuzko_anastasia,
+mшsan_misha,
+naumenko_sergii,
+novitsky_dmitryi,
+okunieva_lena,
+oleynikov_oleg,
+pedan_andriy,
+savenko_serhii,
+serebryansky_maxim,
+shmygol_victor,
+surzhko_eugene,
+tsibulko_alex,
+tupitsky_vladyslav,
+tupitsky_yaroslav,
+verbivsky_alexey,
+voloshyn_oleg,
+zimin_anton,
+zubritsky_denis;
 
-.cartoon_cards{
+.cartoon_cards {
   height: 90%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 
-  .cartoon_container{
+  .cartoon_container {
     cursor: pointer;
-    width: 20%;
-    height: 30vh;
+    width: 25%;
+    height: 33vh;
     display: flex;
     flex-direction: column;
 
-    .cartoon_logo_container{
-      display: flex;
-      align-items: center;
+    .cartoon_logo_container {
+      display: block;
+      position: relative;
       width: 100%;
       height: 80%;
 
-      .cartoon_logo{
-        width: 80%;
-        margin-right: -40%;
+      .cartoon_logo {
+        width: 100%;
         height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
-      .cartoon_logo_hover{
-        width: 80%;
-        height: 100%;
-        margin-left: -40%;
+      .hover {
+        top: -2px;
+        left: 2px;
         visibility: hidden;
         opacity: 0;
-        transition: all .3 linear;
-      }
-      &:hover{
-        .cartoon_logo_hover {
-          visibility: visible;
-          opacity: 1;
-        }
+        transition: all .3s linear;
       }
     }
-    .descr{
+    .descr {
       width: 100%;
       height: 30%;
       align-self: flex-end;
-      span{
+      span {
         color: #5f52ca;
+        transition: all .3s linear;
 
-        &.name{
+        &.name {
           font-weight: bold;
-          text-transform: uppercase;  
+          text-transform: uppercase;
         }
 
-        &.position{
+        &.position {
           font-size: .75rem;
         }
       }
     }
 
-    svg{
-      height: 70%;
+    &:hover {
+      .descr {
+        span {
+          color: #b64e96;
+          }
+        }
+      
+      .cartoon_logo_container {
+        .hover {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
     }
   }
   .informational_container{
@@ -74,94 +110,94 @@ savenko_serhii;
     justify-content: center;
     text-align: justify;
 
-    .member_information{
+    .member_information {
       display: flex;
       flex-direction: column;
-      width: 80%; 
+      width: 80%;
       height: 100%;
 
-      .member{
+      .member {
         display: flex;
         height: 35%;
         margin-bottom: 5%;
-        img{
-          width: 100px;
-          height: 125px;
+        img {
+          width: 25%;
+          min-width: 100px;
           align-self: flex-end;
         }
-        .name_and_post{
+        .name_and_post {
           display: flex;
           flex-direction: column;
           align-items: center;
           height: 100%;
-          width: calc(100% - 100px);
+          width: 75%;
 
-          .info{
-            text-align: left; 
+          .info {
+            text-align: left;
             width: 75%;
-            .name{
+            .name {
               text-transform: uppercase;
               font-size: 1.5em;
               margin-bottom: 15px;
             }
-            .position{
+            .position {
               color: black;
             }
           }
-          hr{
+          hr {
             margin: 0;
             padding: 0;
             width: 100%;
           }
         }
       }
-      .description{
+      .description {
         height: 35%;
         overflow-y: auto;
         margin-bottom: 15px;
       }
-      .title_projects{
+      .title_projects {
         height: 7%;
         text-align: center;
         font-size: 1.5em;
-        hr{
+        hr {
           margin: 0;
           padding: 0;
         }
       }
 
-      .projects{
+      .projects {
         overflow-y: auto;
         display: flex;
         height: 20%;
         flex-wrap: wrap;
-      
-        li{
+
+        li {
           width: 50%;
           letter-spacing: 1px;
         }
       }
     }
-    @media screen and (max-width: 1000px){
+    @media screen and (max-width: 1000px) {
       top: 25%;
       width: 50%;
       height: 50%;
     }
 
-    @media screen and (min-height: 900px){
+    @media screen and (min-height: 900px) {
       top: 25%;
       height: 50%;
       width: 30%;
     }
   }
-  @each $member in $members{
-    ##{$member}:focus ~ ##{$member}_card{
+  @each $member in $members {
+    ##{$member}:focus ~ ##{$member}_card {
       z-index: 4;
       opacity: 1;
       visibility: visible;
     }
 
-    ##{$member}:target ~ #close_member{
+    ##{$member}:target ~ #close_member {
       z-index: 3;
       opacity: 1;
       visibility: visible;
