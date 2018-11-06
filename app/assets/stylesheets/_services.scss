@@ -246,6 +246,7 @@ $main-terminal-color: #00ABDF;
       }
 
       .bdd_show{
+        cursor: pointer;
         margin-top: 3vh;
         height: 5vh;
         width: 100%;
@@ -277,9 +278,38 @@ $main-terminal-color: #00ABDF;
         }
 
         .informational_container{
-          height: 40%;
+          height: auto;
           text-align: justify;
-          padding: 1vw;
+          padding: 3vw;
+          display: flex;
+          flex-direction: column;
+          .bdd_desc{
+            .bdd_title{
+              font-size: 1.25em;
+              text-align: center;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+          }
+
+          .advantages{
+            position: relative;
+            hr{
+              width: 100%;
+              line-height: 2px;
+            }
+  
+            .ruby{
+              width: 12%;
+              position: absolute;
+              top: 15px;
+              right: 5px;
+            }
+  
+            ul{
+              padding-left: 17px;
+            }
+          }
         }
         .technologies{
           display: flex;

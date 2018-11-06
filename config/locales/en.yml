@@ -239,6 +239,7 @@ en:
           can offer our clients elegant and professional web solutions, whatever their needs 
           may be.
         bdd:
+          title: Behavior-Driven Development (BDD)
           desc:
             To ensure successful achievement of the goals of our clients’ projects we utilize
             behavior-driven development, or BDD. Simply put, BDD is a software development 

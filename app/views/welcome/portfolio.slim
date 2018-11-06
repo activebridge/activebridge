@@ -84,7 +84,7 @@
             hr
           .testimonial_description
             = inline_svg 'testimonials/small_quotes', class: 'open-quotes'
-            = testimonial[:description]
+            .description= testimonial[:description]
             = inline_svg 'testimonials/small_quotes', class: 'close-quotes'
     = link_to '', '#testimonials', id: 'close_testimonial'
 

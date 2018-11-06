@@ -534,7 +534,8 @@ hr{
 }
 
 .open-quotes, .close-quotes{
-  width: 15px;
+  width: 1.5vw;
+  max-width: 25px;
 }
 
 .open-quotes{
@@ -598,12 +599,15 @@ hr{
         display: flex;
         flex-direction: column;
         height: calc(100% - 25% - 102px);
-        overflow-y: auto;
         text-align: justify;
-        overflow-y: auto;
+
+        .description{
+          height: 80%;
+          overflow-y: auto;
+        }
 
         .open-quotes, .close-quotes{
-          width: 35px;
+          height: 10%;
         }
         .close-quotes{
           align-self: flex-end;

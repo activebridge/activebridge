@@ -7,7 +7,6 @@
       = t('.help')
   p= t('.complete_fields')
   = inline_svg 'contact/background', class: 'bg'
-  / div#success_message= t('.success_message')
   .informational_container#contact_form_holder
     = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this);',
                             id: 'contact_form', class: 'contact-form' do
@@ -22,7 +21,6 @@
       .material-input
         label for='email' =t('.email_placeholder')
         input#email name='contact[email]' type='email' placeholder=' ' required='true'
-        / span.error =t('.email_error')
       
       .material-input
         label for='country' =t('.country')
@@ -30,7 +28,6 @@
       .material-input.textarea
         label for='body' =t('.message_placeholder')
         textarea#body name='contact[message]' placeholder=' ' minlength='10' maxlength='500' required='true'
-        / span.error =t('.message_error')
       input#submit form='contact_form' type='submit' value='#{t('.send')}' class='contact-button'
 
   .find_us

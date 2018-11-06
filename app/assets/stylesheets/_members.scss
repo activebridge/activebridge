@@ -191,7 +191,7 @@ zubritsky_denis;
     }
   }
   @each $member in $members {
-    ##{$member}:focus ~ ##{$member}_card {
+    ##{$member}:focus ~ ##{$member}_card, ##{$member}:active ~ ##{$member}_card {
       z-index: 4;
       opacity: 1;
       visibility: visible;

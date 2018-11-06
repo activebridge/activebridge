@@ -1,7 +1,16 @@
 = content_for :head do
 
-
 doctype 5
+
+head
+  css:
+    .informational_container{
+      visibility: hidden;
+      opacity: 0;
+    }
+    header{
+      opacity: 0;
+    }
 html lang='en'
   title=t('meta.pages.' + @page + '.title')
   meta property='og:url'         content='https://activebridge.org/'
@@ -13,7 +22,7 @@ html lang='en'
   
   = render 'layouts/head', type: :application, media: :all
 
-  body onscroll='toggleHeader()'
+  body
     = render 'shared/navbar'
     = yield
     header#header
@@ -21,19 +30,19 @@ html lang='en'
         a href='/'= inline_svg 'index/logo', class: 'logotype'
       .path
         'Home
-        - if @page
+        - if !@page.eql? '/'
           '\ 
           = @page.gsub('_', ' ').capitalize
-    .form_container#form_container
-      = form_tag '/contact', onsubmit: 'event.preventDefault(); console.log(this);',
-                            id: 'contact_us', class: 'contact_us' do
-        .text_holder
-          textarea rows='6' placeholder='Ask you question'
-        .button_holder
-          span Contact us
-          = image_submit_tag 'index/chat_button', class: 'chat_button' 
+    / .form_container#form_container
+    /   = form_tag '/contact', onsubmit: 'event.preventDefault(); console.log(this);',
+    /                         id: 'contact_us', class: 'contact_us' do
+    /     .text_holder
+    /       textarea rows='6' placeholder='Ask you question'
+    /     .button_holder
+    /       span Contact us
+    /       = image_submit_tag 'index/chat_button', class: 'chat_button' 
 
-    = javascript_include_tag 'application', async: false
+    = javascript_include_tag 'application', async: true
     .hidden
       h1 Web development company - Active Bridge
       | Ruby on rails web development company Active Bridge is one of the top 15 in the list of IT companies in Ukraine.
@@ -63,23 +72,10 @@ html lang='en'
       link.rel = 'stylesheet';
       link.href = "#{ asset_path('fonts.css')}";
       head.appendChild(link);
-      let currentEl = 0
-      let prevEl = 0
-      let header = document.getElementById('header')
-      let form_container = document.getElementById('form_container')
-      function toggleHeader(){
-        prevEl = currentEl
-        currentEl = window.pageYOffset
-        if ( currentEl > prevEl ){
-          header.style.cssText = 'opacity: 1; z-index: 4'
-          form_container.style.cssText = 'opacity: 1; z-index: 3'
-        }
-        else{
-          header.style.cssText = 'opacity: 0'
-          form_container.style.cssText = 'opacity: 0'
-        }
-      }
       let changeItem = (item) => {
         console.log(item)
-        item[0].focus()
+        setTimeout(() =>{
+          item.focus()
+        }  
+        , 500)
       }

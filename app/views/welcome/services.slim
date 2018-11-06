@@ -1,5 +1,6 @@
 .container
-  .header_2 Services
+  .header_2 
+    b= t('services.title')
   a#web_dev
   a#moblile_dev
   .services
@@ -10,18 +11,26 @@
             = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
           .inner
             = inline_svg(service[:logo], class: 'service_icon')
-        .header_3= service[:title]
+        .header_3
+          b= service[:title]
         .description= service[:description]
         - unless i != 0
-          a.bdd_show href='#bdd'
-            span +Behavior-Driven Developmnet(BDD)
-            button.read_more href='#bdd' Read more
+          span.bdd_show
+            span
+              '+
+              = service[:bdd][:title]
           .informational_container#bdd
-            = service[:bdd][:desc]
-            p= service[:bdd][:advantages][:title]
-            ul
-              - service[:bdd][:advantages][:items].each do |a|
-                li= a
+            .bdd_desc
+              p.bdd_title= service[:bdd][:title]
+              = service[:bdd][:desc]
+            .advantages
+              hr
+              = inline_svg 'services/ruby', class: 'ruby'
+              span
+                b= service[:bdd][:advantages][:title]
+              ul
+                - service[:bdd][:advantages][:items].each do |a|
+                  li= a
   .header_2 Core technologies we specialize in
   a#core_tech
   .services
@@ -30,5 +39,6 @@
         .technologies
           - service[:technologies].each do |t|
             .technology
-              span= t[:title]
+              span
+                b= t[:title]
               .tech_desc= t[:desc]

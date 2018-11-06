@@ -1,10 +1,10 @@
 .gradient-circle-1
 .gradient-circle-2
-.container
+.container#container
   .container_index
     .logo#logo_holder
-      h1 Active Bridge
-      h2 Your ideas. Our talents. Great result.
+      .index_header Active Bridge
+      .index_header_2 Your ideas. Our talents. Great result.
       .logo_container#logo_container
         - (1..100).each do |cell|
           = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
@@ -16,24 +16,26 @@
   .about_us_container
     a#about_us
     .description_container
-      = inline_svg 'index/home_page_1', class: 'home_page_1 home_page'
-      = inline_svg 'index/home_page_1_pink', class: 'home_page home_page_pink home_page_1'
-      div
+      .description_img
+        = inline_svg 'index/home_page_1', class: 'home_page'
+        = inline_svg 'index/home_page_1_pink', class: 'home_page home_page_pink'
+      .description_text
         =t('about_us.information.first')
         = inline_svg 'index/home_page_line_1', class: 'home_page_line'
     .description_container
-      div
+      .description_text
         =t('about_us.information.second')
         = inline_svg 'index/home_page_line_2', class: 'home_page_line'
-      = inline_svg 'index/home_page_2', class: 'home_page home_page_2'
-      = inline_svg 'index/home_page_2_pink', class: 'home_page home_page_pink home_page_pink_2'
-      
+      .description_img
+        = inline_svg 'index/home_page_2', class: 'home_page'
+        = inline_svg 'index/home_page_2_pink', class: 'home_page home_page_pink home_page_pink_2'
     .description_container
-      = inline_svg 'index/home_page_3', class: 'home_page home_page_3'
-      = inline_svg 'index/home_page_3_pink', class: 'home_page home_page_pink'
-      div=t('about_us.information.third')
-  .solutions_and_benefits#solutions_and_benefits onscroll="transformYDown()"
-    .solutions
+      .description_img
+        = inline_svg 'index/home_page_3', class: 'home_page'
+        = inline_svg 'index/home_page_3_pink', class: 'home_page home_page_pink'
+      .description_text=t('about_us.information.third')
+  .solutions_and_benefits#solutions_and_benefits 
+    .solutions#solutions
       .header_2 Solutions for business
       .tetris_container.higher
         - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, index|
@@ -49,7 +51,7 @@
               a href='##{id_name(el[:title])}'= el[:title]
             a href='##{id_name(el[:title])}'  
               = inline_svg(('index/tetris'+ (index+1).to_s), class: 'tetris')  
-    .benefits
+    .benefits#benefits
       .header_2 The benefits of collaboration with Active Bridge
     .solutions_and_benefits_desc
       - I18n.t('about_us.solutions_and_benefits.solutions').each do |el|
@@ -58,7 +60,8 @@
             .title_holder
               .title= el[:title]
               hr
-            .description= el[:desc]    
+            .description= el[:desc]
+      = link_to '', '#solutions', class: 'close_description', id: 'solutions'   
       - I18n.t('about_us.solutions_and_benefits.benefits').each do |el|
         .informational_container id='#{id_name(el[:title])}'
           .about_item
@@ -66,23 +69,8 @@
               .title= el[:title]
               hr
             .description= el[:desc]   
-      = link_to '', '#solutions_and_benefits', id: 'close_description'  
-javascript:
-  var first = document.getElementById('first_lower')
-  var second = document.getElementById('second_lower')
-  var third = document.getElementById('third_lower')
-  var fourth = document.getElementById('fourth_lower')
-  var fifth = document.getElementById('fifth_lower')
-  var container = document.getElementById('lower')
-  function transformYDown(){
-    first.style.transform = 'rotate(90deg)'
-    second.style.transform = 'translate(56.6%, 167%)'
-    third.style.transform = 'rotate(180deg) translate(-56.5%, 77.5%)'
-    fourth.style.transform = 'rotate(90deg) translate(17.5%, -81%)'
-    fifth.style.transform = 'rotate(90deg) translate(32%, 217%)'
-    lower.style.visibility = 'visible'
-    lower.style.transform = 'translateY(150%) translateX(-7%)'
-  }
+      = link_to '', '#benefits', class: 'close_description', id: 'benefits'  
+
 
 
   

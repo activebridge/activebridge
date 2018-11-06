@@ -12,7 +12,40 @@ ajax = (method, href, async = true) ->
   xhr.open(method, href, async)
   xhr.setRequestHeader('Accept', 'text/javascript')
   return xhr
-  
+
+currentEl = 0
+prevEl = 0
+header = document.getElementById('header')
+form_container = document.getElementById('form_container')
+transformTetris = (first, second, third, fourth, fifth, lower) ->
+  first.style.transform = 'rotate(90deg)'
+  second.style.transform = 'translate(56.6%, 167%)'
+  third.style.transform = 'rotate(180deg) translate(-56.5%, 77.5%)'
+  fourth.style.transform = 'rotate(90deg) translate(17.5%, -81%)'
+  fifth.style.transform = 'rotate(90deg) translate(32%, 217%)'
+  lower.style.visibility = 'visible'
+  lower.style.transform = 'translateY(150%) translateX(-7%)'
+    
+
+toggleHeader = () ->
+  prevEl = currentEl
+  currentEl = window.pageYOffset
+  if ( currentEl > prevEl )
+    header.style.cssText = 'opacity: 1; z-index: 4'
+    # form_container.style.cssText = 'opacity: 1; z-index: 3'
+  else
+    header.style.cssText = 'opacity: 0'
+    # form_container.style.cssText = 'opacity: 0'
+  if ((currentEl/document.documentElement.clientHeight * 100) > 160 )
+    console.log('Should show tetris')
+    first = document.getElementById('first_lower')
+    second = document.getElementById('second_lower')
+    third = document.getElementById('third_lower')
+    fourth = document.getElementById('fourth_lower')
+    fifth = document.getElementById('fifth_lower')
+    lower = document.getElementById('lower')
+    transformTetris(first, second, third, fourth, fifth, lower)
+
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
   xhr = ajax('POST', form.action)
@@ -108,18 +141,8 @@ startLazyBodyTransition = ->
 clearLazyBodyContent = ->
   document.getElementById('lazy_body').innerHTML = '' if isRootPage()
 
-document.querySelector('#lazy_close').addEventListener('click', closeWindow, false)
-document.querySelector('#portfolio').addEventListener('click', openPage, false)
-document.querySelector('#testimonials').addEventListener('click', openPage, false)
-document.querySelector('#contact').addEventListener('click', openPage, false)
-document.querySelector('#about').addEventListener('click', openPage, false)
-document.querySelector('#services').addEventListener('click', openPage, false)
-document.querySelector('#team').addEventListener('click', openPage, false)
-document.querySelector('#contactus').addEventListener('click', openPage, false)
-document.querySelector('#lazy_overlay').addEventListener('transitionend', startLazyBodyTransition)
-document.querySelector('#lazy_body').addEventListener('transitionend', clearLazyBodyContent)
+document.body.onscroll = (toggleHeader)
 document.addEventListener('keydown', browseData, false)
-document.querySelector('#header').addEventListener('onscroll', displayHeader, false)
 initTeamScroll()
 
 window.onpopstate = ->
