@@ -11,6 +11,11 @@ head
     header{
       opacity: 0;
     }
+
+    .hire_us_container{
+      opacity: 0;
+    }
+    
 html lang='en'
   title=t('meta.pages.' + @page + '.title')
   meta property='og:url'         content='https://activebridge.org/'
@@ -33,14 +38,9 @@ html lang='en'
         - if !@page.eql? '/'
           '\ 
           = @page.gsub('_', ' ').capitalize
-    / .form_container#form_container
-    /   = form_tag '/contact', onsubmit: 'event.preventDefault(); console.log(this);',
-    /                         id: 'contact_us', class: 'contact_us' do
-    /     .text_holder
-    /       textarea rows='6' placeholder='Ask you question'
-    /     .button_holder
-    /       span Contact us
-    /       = image_submit_tag 'index/chat_button', class: 'chat_button' 
+    a.hire_us_container#hire_us_container href='/contact'
+      span Contact us
+      = image_submit_tag 'index/chat_button', class: 'chat_button' 
 
     = javascript_include_tag 'application', async: true
     .hidden
@@ -73,7 +73,6 @@ html lang='en'
       link.href = "#{ asset_path('fonts.css')}";
       head.appendChild(link);
       let changeItem = (item) => {
-        console.log(item)
         setTimeout(() =>{
           item.focus()
         }  

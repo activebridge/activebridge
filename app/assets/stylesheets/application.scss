@@ -53,7 +53,7 @@ header {
   font-size: 1.25rem;
   background-color: white;
   box-shadow: 0px 0px 20px #DAD7D7;
-  transition: opacity 1s linear, visibility 1s linear;
+  transition: all 1s linear;
   .logotype{
     width: 120px;
     height: 85%;
@@ -80,10 +80,12 @@ header {
   text-align: center;
 }
 
-.form_container{
-  display: inline;
+.hire_us_container{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   z-index: -1;
-  height: 35px;;
+  height: 45px;
   width: 220px;
   position: fixed;
   top: 75px;
@@ -92,54 +94,31 @@ header {
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0px 0px 20px #DAD7D7;
   opacity: 0;
-  transition: opacity 1s ease-in;
-  .contact_us {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    .text_holder{
-      text-align: center;
-      width: 0%;
-      transition: 1s ease;
-    }
-    .button_holder{
-      display: flex;
-      align-items: center;
-      height: 35px;
-      white-space: nowrap;
-    }
-    textarea{
-      display: none;
-      width: 90%;
-      resize: none;
-      border-radius: 0px 0px 10px 10px;
-    }
-    span{
+  font-size: 1.25em;
+  transition: all 1s linear;
+  span{
+    width: 70%;
+    color: #5f52ca;
+    margin-left: 1vw;
+    transition: all .3s linear;
+  }
 
-      color: #5f52ca;
-      margin-right: 5vw;
-    }
-
-    .chat_button{
-      height: 33px;
-    }
+  .chat_button{
+    width: 30%;
+    height: 33px;
+    transition: all .3s linear;
   }
 
   &:hover{
-    height: 150px;
-    .contact_us{
-      .text_holder{
-        width: 90%;
-      }
-      textarea{
-        display: inline;
-      }
-
-      .button_holder{
-        margin-top: 5px;
-      }
+    span{
+      margin-left: 0;
+      transform: translateX(20%);
     }
+
+    .chat_button{
+      transform: translateX(-20%);
+    }
+
   }
 }
 

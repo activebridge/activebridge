@@ -16,7 +16,7 @@ ajax = (method, href, async = true) ->
 currentEl = 0
 prevEl = 0
 header = document.getElementById('header')
-form_container = document.getElementById('form_container')
+hire_us_container = document.getElementById('hire_us_container')
 transformTetris = (first, second, third, fourth, fifth, lower) ->
   first.style.transform = 'rotate(90deg)'
   second.style.transform = 'translate(56.6%, 167%)'
@@ -32,12 +32,11 @@ toggleHeader = () ->
   currentEl = window.pageYOffset
   if ( currentEl > prevEl )
     header.style.cssText = 'opacity: 1; z-index: 4'
-    # form_container.style.cssText = 'opacity: 1; z-index: 3'
+    hire_us_container.style.cssText = 'opacity: 1; z-index: 3'
   else
     header.style.cssText = 'opacity: 0'
-    # form_container.style.cssText = 'opacity: 0'
+    hire_us_container.style.cssText = 'opacity: 0'
   if ((currentEl/document.documentElement.clientHeight * 100) > 160 )
-    console.log('Should show tetris')
     first = document.getElementById('first_lower')
     second = document.getElementById('second_lower')
     third = document.getElementById('third_lower')
