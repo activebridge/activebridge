@@ -6,9 +6,6 @@ $initial-margin: 5;
 .container{
   .contact_header_2, .contact_header_3{
     font-weight: bold;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1s linear;
   }
   #contact_form_holder{
     position: absolute;
@@ -17,7 +14,7 @@ $initial-margin: 5;
     width: 30%;
     visibility: visible;
     opacity: 1;
-    transition: all 1s ease-in-out;
+    transition: all 1s linear;
     display: flex;
     justify-content: center;
 
@@ -128,7 +125,7 @@ $initial-margin: 5;
     justify-content: space-around;
     text-align: left;
     color: #5f52ca;
-    margin-top: 5vh;
+    margin: 5vh 0;
 
     .entity{
       width: 300px;

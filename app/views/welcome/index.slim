@@ -1,8 +1,17 @@
+.gradient_container
+  .gradient-circle-1
+  .gradient-circle-2
+  .gradient-circle-3
+  .gradient-circle.left-bottom
+  .gradient-circle.right-bottom
+  .gradient-circle.top-first
+  .gradient-circle.top-second 
+  .white-line
 .container#container
   .container_index
     .logo#logo_holder
-      .index_header Active Bridge
-      .index_header_2 Your ideas. Our talents. Great result.
+      .index_header= t('about_us.active_bridge')
+      .index_header_2= t('about_us.slogan')
       .logo_container#logo_container
         - (1..100).each do |cell|
           = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
@@ -10,7 +19,7 @@
           = inline_svg 'index/logo', class: 'img__logo', id: 'logo'
       br
       a.btn_work  href='#about_us' 
-        b Learn how we work
+        b= t('about_us.about')
   .about_us_container
     a#about_us
     .description_container
@@ -34,7 +43,7 @@
       .description_text=t('about_us.information.third')
   .solutions_and_benefits#solutions_and_benefits 
     .solutions#solutions
-      .header_2 Solutions for business
+      .header_2= t('about_us.solutions_and_benefits.solutions_title')
       .tetris_container.higher
         - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, index|
           div class='#{el[:id]}_element tetris_holder' id='#{el[:id]}'
@@ -50,7 +59,7 @@
             a href='##{id_name(el[:title])}'  
               = inline_svg(('index/tetris'+ (index+1).to_s), class: 'tetris')  
     .benefits#benefits
-      .header_2 The benefits of collaboration with Active Bridge
+      .header_2= t('about_us.solutions_and_benefits.benefits_title')
     .solutions_and_benefits_desc
       - I18n.t('about_us.solutions_and_benefits.solutions').each do |el|
         .informational_container id='#{id_name(el[:title])}'

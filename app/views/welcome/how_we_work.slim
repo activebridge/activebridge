@@ -20,7 +20,7 @@
           .descr
             - cooperation[:for_who].each do |who|
               p
-                'FOR:
+                'For:
                 = who
           .spacer
           a.learn_more href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '_')}' 
@@ -32,21 +32,21 @@
             .header_2
               =cooperation[:title]
             p 
-              span Definition: 
+              span= t('how_we_work.model_questions.definition') 
               =cooperation[:definition]
             p 
-              span Who is this model best for? 
+              span= t('how_we_work.model_questions.for_who') 
             ul
               - cooperation[:for_who].each do |f|
                 li=f
             p
-              span How is the scope of work defined? 
+              span= t('how_we_work.model_questions.scope_of_work')   
               p=cooperation[:scope_of_work]
             p
-              span How is the cost of work defined? 
+              span= t('how_we_work.model_questions.cost')
               p=cooperation[:cost]
             p 
-              span Customer Advantages
+              span= t('how_we_work.model_questions.advantages')
             ul 
               -cooperation[:advantages].each do |a|
                 li=a

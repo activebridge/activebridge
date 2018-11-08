@@ -177,15 +177,15 @@ en:
       - https://i.imgur.com/EX4M7rY.jpg
       - https://i.imgur.com/zM8lLWt.jpg
   portfolio:
-    title: Portfolio
+    title: Remarkable Projects
     project_info:
-      technology: technology
-      project_length: project length
-      team_size: team size
-      challenge: challenge
-      solution: solution
-      client: client
-      industry: industry
+      technology: 'technology: '
+      project_length: 'project length: '
+      team_size: 'team size: '
+      challenge: 'challenge: '
+      solution: 'solution: '
+      client: 'client: '
+      industry: 'industry: '
     button: View Project
   services:
     title: Services
@@ -239,7 +239,7 @@ en:
           can offer our clients elegant and professional web solutions, whatever their needs 
           may be.
         bdd:
-          title: Behavior-Driven Development (BDD)
+          title: '+Behavior-Driven Development (BDD)'
           desc:
             To ensure successful achievement of the goals of our clients’ projects we utilize
             behavior-driven development, or BDD. Simply put, BDD is a software development 
@@ -309,7 +309,7 @@ en:
         logo: portfolio/projects/daisybill.svg
         author: Ben Liscio
         image: https://i.imgur.com/eEQ7YxW.jpg
-        title: Co-Founder
+        post: Co-Founder
         description:
           We initially engaged with Active Bridge in 2014 while re-structuring our product and engineering team.
           More than two years later, we're still engaged to augment our engineering team.
@@ -321,7 +321,7 @@ en:
         logo: portfolio/projects/def_method.svg
         author: Joseph Leo
         image: https://i.imgur.com/orRlQpS.jpg
-        title: President/Partnership Director
+        post: President/Partnership Director
         description:
           Active Bridge drives our remote engineering team at Def Method.
           Collaborating with their engineers has kept us delivering running,
@@ -331,14 +331,14 @@ en:
         logo: portfolio/projects/modean_apps.svg
         author: Benjamin Sigidi
         image: https://i.imgur.com/YlApFGd.jpg
-        title: Software Developer
+        post: Software Developer
         description:
           Awesome team. Full stack development. Happy to work with these guys any day.
       - company: Preeline
         logo: portfolio/projects/preeline.svg
         author: Julia Macalaster
         image: https://res.cloudinary.com/active-bridge/image/upload/c_fit,g_center,h_200,q_85,r_0,w_200/v1477382138/julia_xibee4.jpg
-        title: COO, Co-Founder
+        post: COO, Co-Founder
         description:
           We worked with Active Bridge as a young startup to build out our first MVP and subsequent updated products.
           Not only did their teams execute on the assigned tasks ahead of schedule, but they also contributed to our thinking around UX,
@@ -349,7 +349,7 @@ en:
         logo: portfolio/projects/freestak.svg
         author: Julie Freeman Kummer
         image: https://res.cloudinary.com/active-bridge/image/upload/c_crop,g_face,h_200,w_200/v1477380297/Julie_z78plm.jpg
-        title: Co-founder and COO
+        post: Co-founder and COO
         description:
           We’ve been working with Active Bridge since August 2015.
           In the first six months, our application (marketplace in the sports industry)
@@ -363,7 +363,7 @@ en:
         logo: portfolio/projects/life_linker.svg
         author: David Rowell
         image: https://i.imgur.com/vlvxXxn.jpg
-        title: Founder/CEO
+        post: Founder/CEO
         description:
           After previously hiring contract developers in countries ranging from the US and Canada, to Vietnam and India,
           and after having paid variously three times more and three times less per hour, we finally got it right when
@@ -375,7 +375,7 @@ en:
         logo: portfolio/projects/myschool.svg
         author: Joseph Carpenter
         image: https://i.imgur.com/oMUiO6J.jpg
-        title: Founder
+        post: Founder
         description:
           If anyone needs a kickass website company, these are your guys! I have used many other companies with nothing
           but issues and have nothing but good results from Eugene and Active Bridge. You will not find a better company
@@ -389,7 +389,10 @@ en:
     pinterest: 'https://ru.pinterest.com/activebridg0459'
     github: 'https://github.com/activebridge'
     blog: 'https://activebridge.org'
-  about_us: 
+  about_us:
+    active_bridge: Active Bridge
+    slogan: Your ideas. Our talents. Great result.
+    about: Information about us   
     information:
       first: Active Bridge is an IT contracting company that specializes in providing dedicated full-stack developers 
              to help our clients and augment their in-house teams. Since 2013, our offshore IT staffing agency has been 
@@ -405,6 +408,8 @@ en:
              why Active Bridge was named one of the “Top B2B Service Providers, 2017” by Clutch.co., and why we’re consistently 
              rated as one of the top web and software developers in Eastern Europe.
     solutions_and_benefits:
+      solutions_title: Solutions for business
+      benefits_title: The benefits of collaboration with Active Bridge
       solutions:
         - id: first
           title: Full-stack expertise where you need it
@@ -484,6 +489,13 @@ en:
       including team extensions, dedicated developer teams, and project-model contracts. 
       Whatever way you choose to engage our team, we always offer unrivaled customer support 
       to ensure your satisfaction.
+    model_questions:
+      definition: 'Definition:'
+      for_who: Who is this model best for? 
+      scope_of_work: How is the scope of work defined?
+      cost: How is the cost of work defined? 
+      advantages: 'Customer Advantages:'
+
     cooperation_models:
       - title: Dedicated Team
         logo: how_we_work/dedicated_team

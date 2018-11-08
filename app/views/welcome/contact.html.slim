@@ -49,7 +49,7 @@
         a href='tel: #{link}' class='#{class_name}'
           = logo
           span= link
-  .entities
+  .entities#headquarters
     - I18n.t('welcome.contact.entities').each do |entity|
       .entity
         .entity_holder
@@ -64,10 +64,5 @@ javascript:
   let transformForm = () =>{
     document.getElementById('contact_form_holder').style.top = '35%';
   }
-  let ready = () =>{
-    document.querySelector('.contact_header_2').classList.add('visible')
-    document.querySelector('.contact_header_3').classList.add('visible')
-  }
-  document.addEventListener("DOMContentLoaded", ready);
 
 

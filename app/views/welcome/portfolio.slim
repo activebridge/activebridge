@@ -1,5 +1,6 @@
 .container
-  .header_2 Remarkable Projects
+  .header_2
+    b= t('portfolio.title')
   a#projects
   .content.projects
     = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
@@ -14,16 +15,12 @@
           hr
           .project-description
             span 
-              b 
-                = t('portfolio.project_info.industry')             
-                ': 
+              b= t('portfolio.project_info.industry')             
               = project.industry
             br
             br
             span 
-              b 
-                = t('portfolio.project_info.technology')
-                ':  
+              b= t('portfolio.project_info.technology') 
               - technologies = project.technology.split(' ')
               - technologies.each_with_index do |tech, i|
                 =tech
@@ -31,24 +28,16 @@
                   '  / 
             hr 
             p 
-              b
-                = t('portfolio.project_info.challenge') 
-                ':  
+              b= t('portfolio.project_info.challenge') 
               = project.challenge
             p 
-              b
-                = t('portfolio.project_info.solution')
-                ':
+              b= t('portfolio.project_info.solution')
               = project.solution
             p
-              b 
-                = t('portfolio.project_info.project_length')
-                ':
+              b= t('portfolio.project_info.project_length')
               = project.project_length
             p
-              b 
-                = t('portfolio.project_info.team_size')
-                ':
+              b= t('portfolio.project_info.team_size')
               = project.team_size
 
     = link_to '', '#', id: 'close_project'
@@ -61,8 +50,7 @@
             = inline_svg 'testimonials/like', class: 'like'
             span
               = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
-              = testimonial[:description].slice(0..90)
-              '...
+              = testimonial[:description].slice(0..90) + '...'
               = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
             .spacer
             button.read_more href="#testimonial_#{item_name(testimonial[:company])}" Read more
@@ -79,8 +67,7 @@
               = image_tag(testimonial[:image], class: 'author', alt: nil)
               .info
                 span= testimonial[:author]
-                ' 
-                = testimonial[:title]
+                = testimonial[:post]
             hr
           .testimonial_description
             = inline_svg 'testimonials/small_quotes', class: 'open-quotes'

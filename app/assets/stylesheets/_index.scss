@@ -16,15 +16,113 @@ body{
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+.gradient_container{
+  position: absolute;
+  width: calc(100% - 15vw);
+  height: 100vh;
+  z-index: 1;
+
+  .gradient-circle-1{
+    height: 28vw;
+    width: 28vw;
+    opacity: 0.4;
+    background: radial-gradient(14vw 14vw, circle contain #5f52ca, rgba(white, 0));
+    background: radial-gradient(14vw 14vw, circle contain, #5f52ca, rgba(white, 0));
+    position: absolute;
+    top: 34%;
+    left: 2%;
+    z-index: 1;
+  }
+  
+  .gradient-circle-2{
+    height: 38vw;
+    width: 38vw;
+    opacity: 0.4;
+    background: radial-gradient(19vw 19vw, circle contain #5f52ca, #b64e96 5%, rgba(white, 0));
+    background: -moz-radial-gradient(19vw 19vw, circle contain, #5f52ca, #b64e96 5%, rgba(white, 0));
+    position: absolute;
+    top: 15%;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .gradient-circle-3{
+    position: absolute;
+    left: -6vw;
+    height: 12vw;
+    width: 12vw;
+    opacity: 0.5;
+    background: radial-gradient(6vw 6vw, circle contain #5f52ca, rgba(white, 0));
+    background: -moz-radial-gradient(6vw 6vw, circle contain, #5f52ca, rgba(white, 0));
+  }
+
+  .gradient-circle{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    opacity: .5;
+    background: radial-gradient(10vw 10vw, circle contain #5f52ca, rgba(white, 0));
+    background: -moz-radial-gradient(10vw 10vw, circle contain, #5f52ca, rgba(white, 0));
+
+    &.left-bottom{
+      left: -8vw;
+      bottom: -10vw;
+    }
+
+    &.right-bottom{
+      right: -10vw;
+      bottom: -10vw;
+    }
+
+    &.top-first{
+      top: -10vw;
+      left: calc(40% - 20vw);
+      background: radial-gradient(10vw 10vw, circle contain #b64e96, rgba(white, 0));
+      background: -moz-radial-gradient(10vw 10vw, circle contain, #b64e96, rgba(white, 0));
+    }
+
+    &.top-second{
+      top: -10vw;
+      right: 0;
+    }
+  }
+
+  .white-line{
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 10vw;
+    background: white;
+  }
+
+  .gradient-line-bottom{
+    position: absolute;
+    bottom: 0;
+    opacity: .5;
+    background: radial-gradient(360deg, rgba(#5f52ca, .3), rgba(white, 0));
+    height: 12vh;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .gradient-line-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    background: radial-gradient(180deg, rgba(#5f52ca, .3), rgba(white, 0));
+    height: 8vh;
+    width: 100%;
+    z-index: 1;
+  }
+}
 .container_index{
-  height: 101vh;
-  margin-left: -2vw;
-  margin-top: -1vh;
-  width: 105%;
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  background: image-url('bg.png') no-repeat center center;
-  background-size: cover;
+  z-index: 2;
 }
 
 .logo{
@@ -81,6 +179,7 @@ body{
   height: 105vh;
   margin-left: 5vw;
   line-height: 35px;
+  z-index: 2;   
 
 
   .description_container{
@@ -348,24 +447,3 @@ body{
   }
 }
 
-.gradient-circle-1{
-  height: 500px;
-  width: 500px;
-  opacity: 0.4;
-  background: radial-gradient(150px 150px, circle contain #5f52ca, white);
-  position: absolute;
-  top: 24%;
-  left: 5%;
-  z-index: 1;
-}
-
-.gradient-circle-2{
-  height: 550px;
-  width: 550px;
-  opacity: 0.4;
-  background: radial-gradient(200px 200px, circle contain #5f52ca, #b64e96 5%, white);
-  position: absolute;
-  top: 10%;
-  right: 1%;
-  z-index: 1;
-}
