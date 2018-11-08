@@ -1,40 +1,41 @@
-$members:
-andreieva_nastya,
-bidochka_alex,
-bilan_igor,
-bondarenko_vitaliy,
-borodai_alex,
-domotenko_eugene,
-dzyoma_artem,
-galushka_alex,
-karpenko_alex,
-kovtun_vitaliy,
-kovtun_volodymyr,
-kuritsyna_dasha,
-lukin_alexey,
-makodzeba_dima,
-marchenko_alex,
-mihailovskiy_pavel,
-milevskyi_ruslan,
-motuzko_alex,
-motuzko_anastasia,
-mшsan_misha,
-naumenko_sergii,
-novitsky_dmitryi,
-okunieva_lena,
-oleynikov_oleg,
-pedan_andriy,
-savenko_serhii,
-serebryansky_maxim,
-shmygol_victor,
-surzhko_eugene,
-tsibulko_alex,
-tupitsky_vladyslav,
-tupitsky_yaroslav,
-verbivsky_alexey,
-voloshyn_oleg,
-zimin_anton,
-zubritsky_denis;
+$members:(
+  andreieva_nastya,
+  bidochka_alex,
+  bilan_igor,
+  bondarenko_vitaliy,
+  borodai_alex,
+  domotenko_eugene,
+  dzyoma_artem,
+  galushka_alex,
+  karpenko_alex,
+  kovtun_vitaliy,
+  kovtun_volodymyr,
+  kuritsyna_dasha,
+  lukin_alexey,
+  makodzeba_dima,
+  marchenko_alex,
+  mihailovskiy_pavel,
+  milevskyi_ruslan,
+  motuzko_alex,
+  motuzko_anastasia,
+  mшsan_misha,
+  naumenko_sergii,
+  novitsky_dmitryi,
+  okunieva_lena,
+  oleynikov_oleg,
+  pedan_andriy,
+  savenko_serhii,
+  serebryansky_maxim,
+  shmygol_victor,
+  surzhko_eugene,
+  tsibulko_alex,
+  tupitsky_vladyslav,
+  tupitsky_yaroslav,
+  verbivsky_alexey,
+  voloshyn_oleg,
+  zimin_anton,
+  zubritsky_denis
+);
 
 .cartoon_cards {
   height: 90%;
@@ -105,7 +106,7 @@ zubritsky_denis;
       }
     }
   }
-  .informational_container{
+  .informational_container {
     display: flex;
     justify-content: center;
     text-align: justify;

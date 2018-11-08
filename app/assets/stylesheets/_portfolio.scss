@@ -2,34 +2,17 @@
 
 $technologies: rails, angular, react, backbone, android, ios;
 $projects: (
-  zozi: #43A7DC,
-  twadlock: #53AD71,
-  quick_quack: #44715A,
-  numa: #4BAAB9,
-  daisybill: #D44D5C,
-  def_method: #332E44,
-  everseat: #3B566A,
-  ach_payments: #4D6E9D,
-  etutorcloud: #4C79AE,
-  myschool: #8DBB5B,
-  somasoft_inc: #1C1C1C,
-  moozen_apps: #47A1C8,
-  classly: #7891CA,
-  total_adventure_zazmic: #5E5E5E,
-  zigloop: #F8921F,
-  freestak: #79BDA0,
-  knockknock_city: #6DB7D5,
-  beatthread: #53AD71,
-  foundersuite: #F48420,
-  cablook_taxi: #19A160,
-  upstack: #57B16D,
-  preeline: #57B16D,
-  split: #44715A,
-  invoyis: #44715A,
-  mediprocity: #44715A,
-  lifelinker_inc: #44715A,
-  joseph_carpenter: #444471,
-  modean_apps: #999
+  upstack,
+  preeline,
+  everseat,
+  daisybill,
+  freestak,
+  beatthread,
+  invoyis,
+  split,
+  mediprocity,
+  lifelinker_inc,
+  joseph_carpenter
 );
 
 hr{
@@ -170,7 +153,7 @@ hr{
     }
   }
 
-  @each $project, $bg-color in $projects {
+  @each $project in $projects {
     ##{$project}:target {
       visibility: visible;
       opacity: 1;
@@ -193,220 +176,63 @@ hr{
   }
 
   .informational_container {
-
-    .project-info {
-      float: left;
-      display: inline-block;
-      width: 50%;
-      height: 100%;
-      padding: 3%;
-      padding-right: 1%;
-      vertical-align: top;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #543575;
-
-      .item {
-        display: flex;
-        width: 100%;
-        float: left;
-        text-align: left;
-        position: relative;
-        height: 20%;
-        justify-content: space-between;
-        align-items: center;
-
-        .item-title {
-          width: 68%;
-          display: flex;
-          align-items: center;
-
-          .name {
-            display: inline-flex;
-            z-index: 1;
-            padding-left: 49px;
-            margin-right: 3%;
-            white-space: nowrap;
-          }
-
-          .hexagon:before {
-            content: '';
-            width: 0;
-            height: 0;
-            border-bottom: 3.7vh solid #E0D2E2;
-            border-left: 5.2vh solid transparent;
-            border-right: 5.2vh solid transparent;
-            position: absolute;
-            top: -3.7vh;
-          }
-
-          .hexagon {
-            width: 10.4vh;
-            height: 4.9vh;
-            background-color: #E0D2E2;
-            position: absolute;
-            top: 20px;
-          }
-
-          .hexagon:after {
-            content: '';
-            width: 0;
-            position: absolute;
-            bottom: -3.7vh;
-            border-top: 3.7vh solid #E0D2E2;
-            border-left: 5.2vh solid transparent;
-            border-right: 5.2vh solid transparent;
-          }
-        }
-
-        .connection {
-          width: 100%;
-          height: 2px;
-          background: #B898CB;
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-
-          .multilink {
-            width: 65px;
-            display: inline-block;
-            position: absolute;
-            right: 0;
-          }
-
-          .technologies_1 {
-            g:nth-child(4n+1), g:nth-child(2n) {
-              display: none;
-            }
-          }
-
-          .technologies_2 g:nth-child(3n+1) {
-            display: none;
-          }
-
-          .technologies_3 g:nth-child(4n+1) {
-            display: none;
-          }
-
-          .technologies_2, .technologies_4 {
-            g:nth-child(5) {
-              display: none;
-            }
-          }
-        }
-
-        .connection:before {
-          content: '';
-          position: absolute;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          top: -3px;
-          background: #B898CB;
-        }
-
-        .connection:after {
-          content: '';
-          position: absolute;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          top: -3px;
-          right: 0;
-          background: #B898CB;
-        }
-      }
-
-      li.item:nth-of-type(even) {
-        .name {
-          left: 80px;
-          padding-left: 89px;
-        }
-
-        .hexagon {
-          left: 40px;
-        }
-      }
-
-      .item-description {
-        line-height: 20px;
-        display: flex;
-        text-align: left;
-        width: 30%;
-        float: right;
-        height: 100px;
-        align-items: center;
-
-        .tech {
-          padding-bottom: 1.5px;
-        }
-      }
-
-      .item-description[data-tech-count] {
-        align-items: normal;
-      }
-
-
-      .item-description[data-tech-count="2"] {
-        padding-top: 2.5vh;
-      }
-
-      .item-description[data-tech-count="1"],
-      .item-description[data-tech-count="3"] {
-        align-items: center;
-      }
-    }
-
-    .page-separator {
-      height: 100%;
-      display: inline-block;
-      margin-top: 3px;
-      width: 3%;
-    }
-
+    display: flex;
     .project-details {
-      display: inline-block;
+      display: flex;
+      margin: auto;
+      flex-direction: column;
       width: 90%;
-      vertical-align: top;
-      height: 100%;
-      position: relative;
+      height: 95%;
+      text-align: justify;
 
-      img {
-        display: block;
-        margin: 30px auto;
-        width: 30%;
+      b{
+        text-transform: capitalize;
+      }
+
+      .general-info {
+        height: auto;
+
+        .name_and_link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 15px;
+
+          .view-project {
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 30px;
+            background: linear-gradient(to right, #b64e96, #5f52ca);
+            color: #FFF;
+            padding: 12px 40px;
+            text-decoration: none;
+            transition: all .3s;
+            
+            &:hover {
+              background: linear-gradient(to right, #5f52ca, #b64e96);
+              box-shadow: 0px 3px 6px rgba(136, 136, 136, 0.85);
+            }
+          }
+  
+          img {
+            display: block;
+            width: 30%;
+            margin-bottom: 15px;
+          }
+        }
+
+        .industry_and_tech{
+          height: auto;
+        }
       }
 
       .project-description {
-        height: 60%;
+        height: auto;
         text-align: justify;
         letter-spacing: 0.5px;
         line-height: 1.4em;
-        display: block;
         overflow-y: auto;
-
-        b{
-          text-transform: capitalize;
-        }
-      }
-
-      .view-project {
-        display: inline-block;
-        margin-bottom: 2vh;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-weight: 500;
-        border-radius: 30px;
-        background: linear-gradient(to right, #b64e96, #5f52ca);
-        color: #FFF;
-        padding: 12px 40px;
-        text-decoration: none;
-        z-index: 1;
-        transition: all .3s;
-        &:hover {
-          background: linear-gradient(to right, #5f52ca, #b64e96);
-          box-shadow: 0px 3px 6px rgba(136, 136, 136, 0.85);
-        }
       }
     }
   }
@@ -418,7 +244,6 @@ hr{
       height: 90vh;
       width: 90%;
       background: rgba(255, 255, 255, 0.95);
-      position: absolute;
       visibility: hidden;
       opacity: 0;
       left: 50%;
@@ -458,7 +283,6 @@ hr{
           display: inline-flex;
           width: 20%;
           left: 15%;
-          position: absolute;
           margin: 0;
         }
 
@@ -470,7 +294,6 @@ hr{
         }
 
         .view-project {
-          position: absolute;
           left: 50%;
           bottom: 0;
           width: 30%;
@@ -545,47 +368,51 @@ hr{
   margin-top: 15px;
 }
 
-.testimonials_cards{
+.testimonials_cards {
   .informational_container {
     display: flex;
     justify-content: center;
     width: 30%;
+
     .testimonial_container {
       display: flex;
       flex-direction: column;
       width: 90%;
       height: 95%;
-      .testimonial_logo_container{
+
+      .testimonial_logo_container {
         display: flex;
         height: 20%;
         padding: 2vh 0;
+
         .company_logo {
           margin: auto;
           width: 50%;
           height: 90%;
         }
       }
-      .testimonial_author{
+
+      .testimonial_author {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 135px;
 
-        hr{
+        hr {
           margin: 0;
           height: 1px;
           width: 100%;
         }
 
-        .author_info{
+        .author_info {
           display: flex;
 
-          .author{
+          .author {
             width: 100px;
             height: 100px;
           }
 
-          .info{
+          .info {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -594,27 +421,27 @@ hr{
           }
         }
       }
-      .testimonial_description{
+      .testimonial_description {
         display: flex;
         flex-direction: column;
         height: calc(100% - 25% - 102px);
         text-align: justify;
 
-        .description{
+        .description {
           height: 80%;
           overflow-y: auto;
         }
 
-        .open-quotes, .close-quotes{
+        .open-quotes, .close-quotes {
           height: 10%;
         }
-        .close-quotes{
+        .close-quotes {
           align-self: flex-end;
         }
       }
     }
   }
-  @each $project, $bg-color in $projects {
+  @each $project in $projects {
     #testimonial_#{$project}:target {
       visibility: visible;
       opacity: 1;
@@ -629,7 +456,7 @@ hr{
   }
 }
 
-#close_testimonial{
+#close_testimonial {
   top: 0;
   left: 0;
   position: absolute;
@@ -639,15 +466,16 @@ hr{
 }
 
 @media (max-width: 720px) {
-  .testimonial_body{
-    .testimonial_container{
-      .testimonial_author{
-        .author{
+  .testimonial_body {
+    .testimonial_container {
+      .testimonial_author {
+        .author {
           min-width: 100px;
           min-height: 100px;
         }
       }
-      .testimonial_description{
+
+      .testimonial_description {
         overflow-y: scroll;
         max-height: 30%;
       }

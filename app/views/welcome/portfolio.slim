@@ -9,24 +9,25 @@
         = link_to '', "##{item_name(@projects[i-1].client)}", class: 'prev'
         = link_to '', "##{item_name(next_item(@projects, i).client)}", class: 'next'
         .project-details
-          = image_tag("portfolio/projects/#{item_name(project.client)}.svg", class: 'project-logo')
-          = link_to project.link, target: '_blank', class: 'view-project' do
-            = t('portfolio.button')
-          hr
-          .project-description
-            span 
-              b= t('portfolio.project_info.industry')             
-              = project.industry
-            br
-            br
-            span 
-              b= t('portfolio.project_info.technology') 
-              - technologies = project.technology.split(' ')
-              - technologies.each_with_index do |tech, i|
-                =tech
-                - if i != technologies.size-1 
-                  '  / 
-            hr 
+          .general-info
+            .name_and_link
+              = image_tag("portfolio/projects/#{item_name(project.client)}.svg", class: 'project-logo')
+              = link_to project.link, target: '_blank', class: 'view-project' do
+                = t('portfolio.button')
+            .industry_and_tech
+              hr
+              p 
+                b= t('portfolio.project_info.industry')             
+                = project.industry
+              p 
+                b= t('portfolio.project_info.technology') 
+                - technologies = project.technology.split(' ')
+                - technologies.each_with_index do |tech, i|
+                  =tech
+                  - if i != technologies.size-1 
+                    '  / 
+              hr
+          .project-description 
             p 
               b= t('portfolio.project_info.challenge') 
               = project.challenge
