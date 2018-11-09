@@ -219,25 +219,27 @@ body {
 }
 
 .solutions_and_benefits {
-  height: 110vh;
+  height: 100vh;
   width: 80%;
   align-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   .solutions {
-    height: 40%;
+    height: 50%;
 
     .higher {
       z-index: 3;
     }
 
     .tetris_container {
-      margin-top: 10vh;
-      margin-left: 3vw;
+      margin-top: 6vh;
       height: 80%;
       width: 700px;
       display: flex;
       flex-wrap: nowrap;
-
+      
       .tetris_holder {
         display: flex;
         flex-direction: column;
@@ -307,8 +309,6 @@ body {
       }
 
       @media (min-width: 1400px) {
-        margin-top: 3vh;
-        margin-left: 10vw;
       }
     }
 
@@ -355,7 +355,8 @@ body {
   }
 
   .benefits {
-    height: 60%;
+    margin-top: 5vh;
+    height: 50%;
   }
 
   .solutions_and_benefits_desc {

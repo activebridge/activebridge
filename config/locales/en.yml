@@ -12,72 +12,32 @@ en:
   meta:
     pages:
       /:
-        title: Ruby on Rails Web Development Company || Active Bridge
+        title: Offshore IT Contracting Company || Active Bridge
         description:
           Active Bridge is your IT contracting partner providing full-stack developers and responsible for 
           development & maintaining web/mobile applications. 
-        keywords: it contracting companies,
-                  it contractor,
-                  it staffing,
-                  it staffing companies,
-                  it contract agencies,
-                  it staffing agencies
       how_we_work: 
         title: Dedicated Software Development Team || Active Bridge
-        keywords: dedicated software development team,
-                  offshore dedicated team,
-                  rent a coder,
-                  developers for rent
         description: 
           Active Bridge is your full-stack development partner. Located in Ukraine we 
           provide dedicated developments team and full-stack developers for rent 
       services: 
         title: Web and Mobile Application Development Services || Active Bridge,LLC
-        keywords: web application development,
-                  web programming,
-                  web development services,
-                  web solutions,
-                  web application development services,
-                  mobile app development,
-                  cross platform mobile development,
-                  full stack
         description: 
           More than 5 years Active Bridge has been successful provider 
           web & mobile application development solutions. Learn more 
       portfolio: 
         title: Ruby on Rails Project Examples || Active Bridge
-        keywords: ruby programming
-                  ruby code
-                  ruby on rails examples
-                  ruby on rails progects
-                  ruby applications
         description: 
           Active Bridge is a successful provider of Ruby on Rails development services on the US market.
           All our ruby on rails projects examples see here
       team:
         title: Full-stack Web Developers in one place || Active Bridge
-        keywords: web developer
-                  android developer
-                  app developer
-                  ruby on rails developer
-                  full stack developer
-                  full stack web developer
-                  full stack engineer
-                  ror developer
-                  mobile app developers
         description: 
           Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
           mobile developers for your in-house teams. Learn more
       contact:
         title: Hire App Developers in 48 hours || Active Bridge
-        keywords: hire ruby on rails developer
-                  hire web developer
-                  web developer for hire
-                  hire app developer
-                  hire ios developer
-                  fire android developer
-                  hire mobile app developer
-                  hire a web developer
         description:
           Active Bridge is your full-stack development partner, providing IT consulting services and helping hire app developers          
   welcome:
@@ -110,24 +70,24 @@ en:
       discuss: Want to discuss your project or partnership?
       find_us:
         - link: contact@active-bridge.com
-          logo: contact/email
+          logo: contact/email.svg
         - link: +380636086045
-          logo: contact/phone
+          logo: contact/phone.svg
         - link: https://www.facebook.com/ActiveBridgeTeam
-          logo: contact/fb
+          logo: contact/fb.svg
         - link: https://www.linkedin.com/company/active-bridge
-          logo: contact/linkedin
+          logo: contact/linkedin.svg
         - link: https://github.com/activebridge
-          logo: contact/github
+          logo: contact/github.svg
       entities:
         - entity: Ukraine Entity
-          logo: contact/address
+          logo: contact/address.svg
           name: Active Bridge, LLC
           address: Marshala Krasovskogo, 8 Street
           post: Cherkasy 18000
           country: Ukraine
         - entity: US Entity
-          logo: contact/address
+          logo: contact/address.svg
           name: Active Bridge, LLC
           address: 4644 North 22nd Street
           post: Phoenix, AZ 85016
@@ -498,7 +458,7 @@ en:
       advantages: 'Customer Advantages:'
     cooperation_models:
       - title: Dedicated Team
-        logo: how_we_work/dedicated_team
+        logo: how_we_work/dedicated_team.svg
         definition: 
           We provide a team of dedicated developers on a long-term basis in 
           accordance with your estimates. You may choose to manage the team from your side 
@@ -521,7 +481,7 @@ en:
           - No recruitment risks, or requirement to bring on extra management for expansion
           - Clients completely control the development process 
       - title: Team Extension
-        logo: how_we_work/team_extension
+        logo: how_we_work/team_extension.svg
         definition:
           Our developers become an integrated part of your existing in-house development team for the duration
           of the project. Our talented staff will immerse themselves in your project, adopt and maintain your 
@@ -541,7 +501,7 @@ en:
           - No requirement for HR managers or recruiters to engage in costly and time-consuming interviewing
           - No added management requirement to handle new staffing
       - title: Project Model
-        logo: how_we_work/project_model
+        logo: how_we_work/project_model.svg
         definition:
           Under this model, we’ll provide the full-force of our development team to cost out and implement your project.
         for_who:

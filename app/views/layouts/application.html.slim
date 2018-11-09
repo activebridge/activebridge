@@ -23,7 +23,6 @@ html lang='en'
   meta property='og:description' content='Ruby on Rails development company, web application development & custom software solution provider. Huge work experience with markets of USA, Canada and Europe.'
   meta property='og:image'       content='https://i.imgur.com/VObMwOF.jpg'
   meta name = 'description' content=t('meta.pages.' + @page + '.description')
-  meta name = 'keywords' content=t('meta.pages.' + @page + '.keywords')
   
   = render 'layouts/head', type: :application, media: :all
 
@@ -32,7 +31,7 @@ html lang='en'
     = yield
     header#header
       .logotype
-        a href='/'= inline_svg 'index/logo', class: 'logotype'
+        a href='/'= inline_svg 'index/logo.svg', class: 'logotype'
       .path
         'Home
         - if !@page.eql? '/'
@@ -40,28 +39,9 @@ html lang='en'
           = @page.gsub('_', ' ').capitalize
     a.hire_us_container#hire_us_container href='/contact'
       span Hire Us
-      = image_submit_tag 'index/chat_button', class: 'chat_button' 
+      = image_submit_tag 'index/chat_button.svg', class: 'chat_button' 
 
     = javascript_include_tag 'application', async: true
-    .hidden
-      h1 Web development company - Active Bridge
-      | Ruby on rails web development company Active Bridge is one of the top 15 in the list of IT companies in Ukraine.
-      h2 Ruby on Rails web development services.
-      | Our website development company provides ruby on rails development solutions for web and software custom products.
-      h2 Ruby on Rails company
-      | As Ruby on Rails developers, we know a variety of programming languages and technologies such as Ruby, Rails, HTML5, CSS3, AJAX, Angular JS, JavaScript, jQuery and so on.
-      h3> Agile web development with ruby on rails
-      | \.
-      h3> Outsource web development services
-      | \.
-
-      pre
-       | Active Bridge is a ruby on rails web development company, providing an outsource, offshore web development services.
-        We have a great work experience in a variety of industries operating on markets of the USA especially Chicago, San Francisco, California.
-        Active Bridge is a leading ruby on rails development provider.
-        Custom web application development, website development services and software solutions for web are our main business priorities.
-        Furthermore, Active Bridge team implements agile web development methodology for web application development and Ruby on Rails mobile development technology.
-        We're operating as outsource web development team and have a great pool of dedicated, professional Ruby on Rails developers to hire.
 
     = stylesheet_link_tag :application, 'https://fonts.googleapis.com/css?family=Raleway', media: :all
     javascript:

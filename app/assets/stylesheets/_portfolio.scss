@@ -1,6 +1,3 @@
-@import 'variables';
-
-$technologies: rails, angular, react, backbone, android, ios;
 $projects: (
   upstack,
   preeline,
@@ -46,109 +43,18 @@ hr{
       transition: all 0.3s;
     }
 
-    @each $tech in $technologies {
-      a.#{$tech}:hover,
-      a.#{$tech}:focus {
-        path {
-          fill: white;
-          opacity: 1;
-        }
-
-        text {
-          fill: #694086;
-        }
-      }
-
-      a.#{$tech}:hover ~ g.technologies a[data-technologies*=#{$tech}],
-      a.#{$tech}:focus ~ g.technologies a[data-technologies*=#{$tech}] {
-        path, text, polygon {
-          fill: #694086;
-          stroke: none;
-        }
-
-        circle.st0 {
-          fill: #694086;
-        }
-
-        path.st19, path.st14, line.st13 {
-          fill: none;
-          stroke: #694086;
-        }
-
-        path.st15 {
-          stroke: #694086;
-        }
-
-        path.st12 {
-          fill: #EEEEEE;
-          stroke: #694086;
-        }
-
-        path.background {
-          fill-opacity: 1;
-          fill: #EEEEEE;
-        }
-      }
-    }
-
-    @each $project, $bg-color in $projects {
+    @each $project in $projects {
       a[href="##{$project}"] {
+        path, polygon, rect, circle{
+          transition: all .6s ease;
+        }
+        &:hover{
           path, polygon, rect, circle{
-            transition: all .6s ease;
+            stroke: #b64e96;
+            fill: #b64e96;
           }
-          &:hover{
-            path, polygon, rect, circle{
-              stroke: #b64e96;
-              fill: #b64e96;
-            }
-            .bg{
-              stroke-width: 3px;
-            }
-          }
-      }
-    }
-
-    g.technologies a[data-technologies*='rails']:hover {
-      cursor: pointer;
-
-      path:not(.st6, .st8), text, path.st3, path.st5, path.st7, path.st9 {
-        fill: white;
-        stroke: none;
-      }
-
-      path.st27 {
-        fill: none;
-      }
-
-      path.background {
-        fill-opacity: 1;
-        stroke-opacity: 1;
-        stroke-width: 10px;
-      }
-    }
-
-    a ~ g.technologies {
-      @each $project, $bg-color in $projects {
-        a[href="##{$project}"] {
-          &:hover {
-            path, text, circle.st0 {
-              fill: white !important;
-            }
-
-            path.st12, path.st14, path.st15, path.st19 {
-              fill: none !important;
-              stroke: white !important;
-              fill: none !important;
-              stroke: white !important;
-            }
-
-            path.background {
-              fill-opacity: 1 !important;
-              fill: $bg-color !important;
-              stroke-opacity: 1 !important;
-              stroke-width: 10px !important;
-              stroke: white !important;
-            }
+          .bg{
+            stroke-width: 3px;
           }
         }
       }
@@ -160,7 +66,6 @@ hr{
       visibility: visible;
       opacity: 1;
       z-index: 4;
-
     }
 
     ##{$project}:target ~ #close_project {
@@ -221,6 +126,7 @@ hr{
             display: block;
             width: 30%;
             margin-bottom: 15px;
+            min-width: 125px;
           }
         }
 
@@ -235,72 +141,6 @@ hr{
         letter-spacing: 0.5px;
         line-height: 1.4em;
         overflow-y: auto;
-      }
-    }
-  }
-}
-
-@media (max-width: 1050px) {
-  .content.projects {
-    .project {
-      height: 90vh;
-      width: 90%;
-      background: rgba(255, 255, 255, 0.95);
-      visibility: hidden;
-      opacity: 0;
-      left: 50%;
-      transform: translateX(-50%);
-
-      .project-info {
-        float: none;
-        display: block;
-        width: 100%;
-        height: 60%;
-        padding-left: 20%;
-        padding-right: 20%;
-
-        .item {
-          height: 78px;
-        }
-      }
-
-      .page-separator {
-        position: absolute;
-        transform: rotate(90deg);
-        left: 49%;
-        top: 17%;
-        height: 100%;
-        margin: 0;
-        width: 1%;
-      }
-
-      .project-details {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100%;
-        height: 35%;
-
-        img {
-          display: inline-flex;
-          width: 20%;
-          left: 15%;
-          margin: 0;
-        }
-
-        .project-description {
-          display: inline-flex;
-          width: 50%;
-          max-height: 50%;
-          margin: 5%;
-        }
-
-        .view-project {
-          left: 50%;
-          bottom: 0;
-          width: 30%;
-          transform: translateX(-50%);
-        }
       }
     }
   }
@@ -329,6 +169,7 @@ hr{
 
       .like{
         height: 100%;
+        min-width: 75px;
         transition: all .3s ease-in-out;
       }
 
@@ -346,7 +187,7 @@ hr{
         }
 
         .read_more{
-          border: 1px solid white;
+          border: none;
           color: white;
           background: linear-gradient(to right, #b64e96, #5f52ca);
         }
@@ -484,4 +325,3 @@ hr{
     }
   }
 }
-

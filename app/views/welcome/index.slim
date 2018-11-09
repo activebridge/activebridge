@@ -16,7 +16,7 @@
         - (1..100).each do |cell|
           = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
         .inner#inner
-          = inline_svg 'index/logo', class: 'img__logo', id: 'logo'
+          = inline_svg 'index/logo.svg', class: 'img__logo', id: 'logo'
       br
       a.btn_work  href='#about_us' 
         b= t('about_us.about')
@@ -24,22 +24,22 @@
     a#about_us
     .description_container
       .description_img
-        = inline_svg 'index/home_page_1', class: 'home_page'
-        = inline_svg 'index/home_page_1_pink', class: 'home_page home_page_pink'
+        = inline_svg 'index/home_page_1.svg', class: 'home_page'
+        = inline_svg 'index/home_page_1_pink.svg', class: 'home_page home_page_pink'
       .description_text
         =t('about_us.information.first')
-        = inline_svg 'index/home_page_line_1', class: 'home_page_line'
+        = inline_svg 'index/home_page_line_1.svg', class: 'home_page_line'
     .description_container
       .description_text
         =t('about_us.information.second')
-        = inline_svg 'index/home_page_line_2', class: 'home_page_line'
+        = inline_svg 'index/home_page_line_2.svg', class: 'home_page_line'
       .description_img
-        = inline_svg 'index/home_page_2', class: 'home_page'
-        = inline_svg 'index/home_page_2_pink', class: 'home_page home_page_pink home_page_pink_2'
+        = inline_svg 'index/home_page_2.svg', class: 'home_page'
+        = inline_svg 'index/home_page_2_pink.svg', class: 'home_page home_page_pink home_page_pink_2'
     .description_container
       .description_img
-        = inline_svg 'index/home_page_3', class: 'home_page'
-        = inline_svg 'index/home_page_3_pink', class: 'home_page home_page_pink'
+        = inline_svg 'index/home_page_3.svg', class: 'home_page'
+        = inline_svg 'index/home_page_3_pink.svg', class: 'home_page home_page_pink'
       .description_text=t('about_us.information.third')
   .solutions_and_benefits#solutions_and_benefits 
     .solutions#solutions
@@ -50,14 +50,14 @@
             span
               a href='##{id_name(el[:title])}'= el[:title]
             a href='##{id_name(el[:title])}'
-              = inline_svg(('index/tetris'+ (index+1).to_s), class: 'tetris')   
+              = inline_svg(('index/tetris'+ (index+1).to_s + '.svg'), class: 'tetris')   
       .tetris_container.lower#lower
         - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, index|
           div class='#{el[:id]}_element tetris_holder' id='#{el[:id]}_lower'
             span
               a href='##{id_name(el[:title])}'= el[:title]
             a href='##{id_name(el[:title])}'  
-              = inline_svg(('index/tetris'+ (index+1).to_s), class: 'tetris')  
+              = inline_svg(('index/tetris'+ (index+1).to_s + '.svg'), class: 'tetris')  
     .benefits#benefits
       .header_2= t('about_us.solutions_and_benefits.benefits_title')
     .solutions_and_benefits_desc

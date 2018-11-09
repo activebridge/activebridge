@@ -48,7 +48,7 @@
       .testimonial class="portfolio_testimonial"
         a href="#testimonial_#{item_name(testimonial[:company])}"
           .description_wrapper
-            = inline_svg 'testimonials/like', class: 'like'
+            = inline_svg 'testimonials/like.svg', class: 'like'
             span
               = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
               = testimonial[:description].slice(0..90) + '...'
@@ -71,9 +71,9 @@
                 = testimonial[:post]
             hr
           .testimonial_description
-            = inline_svg 'testimonials/small_quotes', class: 'open-quotes'
+            = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             .description= testimonial[:description]
-            = inline_svg 'testimonials/small_quotes', class: 'close-quotes'
+            = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
     = link_to '', '#testimonials', id: 'close_testimonial'
 
   

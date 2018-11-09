@@ -23,7 +23,7 @@
               = service[:bdd][:desc]
             .advantages
               hr
-              = inline_svg 'services/ruby', class: 'ruby'
+              = inline_svg 'services/ruby.svg', class: 'ruby'
               span
                 b= service[:bdd][:advantages][:title]
               ul
@@ -31,9 +31,9 @@
                   li= a
   .header_2 Core technologies we specialize in
   a#core_tech
-  .services
+  .services.tech
     - I18n.t('services.development').each_with_index do |service, i|
-      .development
+      .development.tech
         .technologies
           - service[:technologies].each do |t|
             .technology

@@ -106,6 +106,10 @@ $members:(
         }
       }
     }
+
+    &:focus{
+      outline: none;
+    }
   }
   .informational_container {
     display: flex;

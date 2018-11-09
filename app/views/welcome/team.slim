@@ -8,8 +8,8 @@ head
     - @members.each_with_index do |member, i|
       .cartoon_container id='#{id_name(member.name)}' tabindex='0'
         .cartoon_logo_container
-          = inline_svg 'team/cartoon/' + id_name(member.name), class: 'cartoon_logo'
-          = inline_svg 'team/cartoon_hover/' + id_name(member.name), class: 'cartoon_logo hover'
+          = inline_svg 'team/cartoon/' + id_name(member.name) + '.svg', class: 'cartoon_logo'
+          = inline_svg 'team/cartoon_hover/' + id_name(member.name) + '.svg', class: 'cartoon_logo hover'
         .descr
           span.name= member.name
           br
