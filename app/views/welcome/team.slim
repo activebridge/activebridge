@@ -1,6 +1,6 @@
 head
   css:
-    svg{
+    .cartoon_logo{
       visibility: hidden;
     }
 .container
@@ -15,8 +15,8 @@ head
           br
           span.position= member.position
       .informational_container id='#{id_name(member.name)}_card'
-        div onclick='changeItem(#{item_name(@members[i-1].name)})' class='prev'
-        div onclick='changeItem(#{item_name(next_item(@members, i).name)})' class='next'
+        div onfocus='changeItem(#{id_name(@members[i-1].name)})' class='prev' tabindex='0'
+        div onfocus='changeItem(#{id_name(next_item(@members, i).name)})' class='next' tabindex='0'
         .member_information
           .member
             = image_tag (member.avatar.url)
@@ -27,7 +27,7 @@ head
                 span.position= member.position
               .spacer
               hr
-          - if member.position.split(' ').last.downcase == 'designer'
+          - if ['designer', 'cfo', 'manager'].include? member.position.split(' ').last.downcase
             .description.high
               = member.description
           - else

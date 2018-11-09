@@ -122,9 +122,10 @@ $members:(
         display: flex;
         height: 35%;
         margin-bottom: 5%;
+
         img {
-          width: 25%;
-          min-width: 100px;
+          height: 85%;
+          max-width: 35%;
           align-self: flex-end;
         }
         .name_and_post {
@@ -184,10 +185,11 @@ $members:(
         }
       }
     }
+
     @media screen and (max-width: 1000px) {
-      top: 25%;
+      top: 15%;
       width: 50%;
-      height: 50%;
+      height: 65%;
     }
 
     @media screen and (min-height: 900px) {
@@ -197,14 +199,8 @@ $members:(
     }
   }
   @each $member in $members {
-    ##{$member}:focus ~ ##{$member}_card, ##{$member}:active ~ ##{$member}_card {
-      z-index: 4;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    ##{$member}:target ~ #close_member {
-      z-index: 3;
+    ##{$member}:focus ~ ##{$member}_card {
+      z-index: 5;
       opacity: 1;
       visibility: visible;
     }
