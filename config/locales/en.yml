@@ -489,13 +489,13 @@ en:
       including team extensions, dedicated developer teams, and project-model contracts. 
       Whatever way you choose to engage our team, we always offer unrivaled customer support 
       to ensure your satisfaction.
+    models_title: Cooperation Models
     model_questions:
       definition: 'Definition:'
       for_who: Who is this model best for? 
       scope_of_work: How is the scope of work defined?
       cost: How is the cost of work defined? 
       advantages: 'Customer Advantages:'
-
     cooperation_models:
       - title: Dedicated Team
         logo: how_we_work/dedicated_team

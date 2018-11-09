@@ -1,3 +1,8 @@
+head
+  css:
+    svg{
+      visibility: hidden;
+    }
 .container
   .cartoon_cards
     - @members.each_with_index do |member, i|
@@ -10,8 +15,8 @@
           br
           span.position= member.position
       .informational_container id='#{id_name(member.name)}_card'
-        div onmouseover='changeItem(#{item_name(@members[i-1].name)})' class='prev'
-        div onmouseover='changeItem(#{item_name(next_item(@members, i).name)})' class='next'
+        div onclick='changeItem(#{item_name(@members[i-1].name)})' class='prev'
+        div onclick='changeItem(#{item_name(next_item(@members, i).name)})' class='next'
         .member_information
           .member
             = image_tag (member.avatar.url)
@@ -22,13 +27,17 @@
                 span.position= member.position
               .spacer
               hr
-          .description
-            = member.description
-          .title_projects
-            hr
-            span Projects
-            hr
-          ul.projects
-            - member.projects.split(' ').each do |project|
-              li=project
+          - if member.position.split(' ').last.downcase == 'designer'
+            .description.high
+              = member.description
+          - else
+            .description
+              = member.description
+            .title_projects
+              hr
+              span Projects
+              hr
+            ul.projects
+              - member.projects.split(' ').each do |project|
+                li=project
      

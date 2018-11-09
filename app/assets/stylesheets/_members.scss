@@ -17,24 +17,24 @@ $members:(
   mihailovskiy_pavel,
   milevskyi_ruslan,
   motuzko_alex,
-  motuzko_anastasia,
-  mшsan_misha,
+  motuzko_nastya,
+  misan_misha,
   naumenko_sergii,
-  novitsky_dmitryi,
+  novitskyi_dmitryi,
   okunieva_lena,
   oleynikov_oleg,
   pedan_andriy,
   savenko_serhii,
   serebryansky_maxim,
-  shmygol_victor,
+  shmigol_victor,
   surzhko_eugene,
   tsibulko_alex,
-  tupitsky_vladyslav,
-  tupitsky_yaroslav,
-  verbivsky_alexey,
+  tupitskiy_vlad,
+  tupitskiy_yarik,
+  verbivskyi_alexey,
   voloshyn_oleg,
   zimin_anton,
-  zubritsky_denis
+  zubritskiy_denis
 );
 
 .cartoon_cards {
@@ -57,6 +57,7 @@ $members:(
       height: 80%;
 
       .cartoon_logo {
+        visibility: visible;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -156,6 +157,10 @@ $members:(
         height: 35%;
         overflow-y: auto;
         margin-bottom: 15px;
+
+        &.high{
+          height: 60%;
+        }
       }
       .title_projects {
         height: 7%;

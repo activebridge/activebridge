@@ -4,11 +4,11 @@
       = t('how_we_work.title')
     .work_desc
       = t('how_we_work.description')
-    .keyboard_container
-      .spacer
-      = inline_svg 'how_we_work/keyboard_hover', class: 'key_hover'
-      = inline_svg 'how_we_work/keyboard', class: 'keyboard'
-      .spacer
+    .holder_key
+      .keyboard_container
+        = inline_svg 'how_we_work/keyboard_hover', class: 'keyboard key_hover'
+        = inline_svg 'how_we_work/keyboard', class: 'keyboard'
+        .cooperation_models= t('how_we_work.models_title')
     .cooperation_models_cards#cooperation_models
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
         .model_card
