@@ -1,11 +1,13 @@
 .container
   .how_we_work_container
     .header_2
-      = t('how_we_work.title')
+      b= t('how_we_work.title')
     .work_desc
       = t('how_we_work.description')
     .holder_key
       .keyboard_container
+        .get_dedicated
+          b=t('how_we_work.get_dedicated')
         = inline_svg 'how_we_work/keyboard_hover.svg', class: 'keyboard key_hover'
         = inline_svg 'how_we_work/keyboard.svg', class: 'keyboard'
         .cooperation_models= t('how_we_work.models_title')

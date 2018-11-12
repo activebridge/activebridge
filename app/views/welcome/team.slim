@@ -4,6 +4,8 @@ head
       visibility: hidden;
     }
 .container
+  .header_2
+    b=t('team.title')
   .cartoon_cards
     - @members.each_with_index do |member, i|
       .cartoon_container id='#{id_name(member.name)}' tabindex='0'

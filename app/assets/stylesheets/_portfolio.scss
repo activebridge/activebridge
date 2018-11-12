@@ -19,6 +19,19 @@ hr{
   border-top: 2px solid #5f52ca;
 }
 
+.subtitle{
+  margin-top: 2vh;
+  color: #5f52ca;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+}
+
+.subsubtitle{
+  margin-top: 1vh;
+  color: #5f52ca;
+  font-size: 1.3rem;
+}
+
 .content.projects {
   height: 100vh;
   display: flex;

@@ -14,32 +14,32 @@ en:
       /:
         title: Offshore IT Contracting Company || Active Bridge
         description:
-          Active Bridge is your IT contracting partner providing full-stack developers and responsible for 
-          development & maintaining web/mobile applications. 
-      how_we_work: 
+          Active Bridge is your IT contracting partner providing full-stack developers and responsible for
+          development & maintaining web/mobile applications.
+      how_we_work:
         title: Dedicated Software Development Team || Active Bridge
-        description: 
-          Active Bridge is your full-stack development partner. Located in Ukraine we 
-          provide dedicated developments team and full-stack developers for rent 
-      services: 
+        description:
+          Active Bridge is your full-stack development partner. Located in Ukraine we
+          provide dedicated developments team and full-stack developers for rent
+      services:
         title: Web and Mobile Application Development Services || Active Bridge,LLC
-        description: 
-          More than 5 years Active Bridge has been successful provider 
-          web & mobile application development solutions. Learn more 
-      portfolio: 
+        description:
+          More than 5 years Active Bridge has been successful provider
+          web & mobile application development solutions. Learn more
+      portfolio:
         title: Ruby on Rails Project Examples || Active Bridge
-        description: 
+        description:
           Active Bridge is a successful provider of Ruby on Rails development services on the US market.
           All our ruby on rails projects examples see here
       team:
         title: Full-stack Web Developers in one place || Active Bridge
-        description: 
+        description:
           Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
           mobile developers for your in-house teams. Learn more
       contact:
         title: Hire App Developers in 48 hours || Active Bridge
         description:
-          Active Bridge is your full-stack development partner, providing IT consulting services and helping hire app developers          
+          Active Bridge is your full-stack development partner, providing IT consulting services and helping hire app developers
   welcome:
     about:
       title: About
@@ -66,7 +66,7 @@ en:
         many years’ experience of cooperation with other <h4>web development companies</h4>
         in USA, Canada, and Europe.
     contact:
-      title: Get in touch
+      title: Hire web & mobile developers in 48 hours
       discuss: Want to discuss your project or partnership?
       find_us:
         - link: contact@active-bridge.com
@@ -101,7 +101,7 @@ en:
       message_placeholder: About the project
       country: Your country
       send: Send
-      reason_placeholder: Contact reason 
+      reason_placeholder: Contact reason
       message_error: Body have to contain at least 10 characters
       send: Send
       info: 'Contact info:'
@@ -116,7 +116,7 @@ en:
     testimonials:
       title: Testimonials
   team:
-    title: Team
+    title: Meet our team of full-stack developers
     photos:
       - https://i.imgur.com/6awlwXJ.jpg
       - https://i.imgur.com/5CTZocf.jpg
@@ -137,7 +137,9 @@ en:
       - https://i.imgur.com/EX4M7rY.jpg
       - https://i.imgur.com/zM8lLWt.jpg
   portfolio:
-    title: Remarkable Projects
+    title: Remarkable
+    projects: Ruby on rails Projects
+    applications: and Ruby on Rails Applications
     project_info:
       technology: 'technology: '
       project_length: 'project length: '
@@ -148,7 +150,7 @@ en:
       industry: 'industry: '
     button: View Project
   services:
-    title: Services
+    title: Full-Stack Development Services
     we_do: We can help you on every stage of web development process
     agile_programming: Ruby on Rails web development
     full_stack_development:
@@ -187,60 +189,60 @@ en:
         Extreme programming like test-driven development, daily meetings, fine-scale feedbacks, continuous
         integration, refactoring and small releases we provide effectiveness and productivity across all
         programming process
-    development: 
-      - title: Web application development
+    development:
+      - title: Web application development services
         logo: services/web_icon.svg
-        description: 
+        description:
           At Active Bridge, our number one goal is to find effective web
-          solutions to meet the needs and goals of our clients’ businesses. 
-          To cover all aspects of our clients’ web programming needs, we employ a full-stack 
-          web development process, meaning our developers are experienced in both back-end 
-          development (server-side) and front-end development (user-side). As a result, we 
-          can offer our clients elegant and professional web solutions, whatever their needs 
+          solutions to meet the needs and goals of our clients’ businesses.
+          To cover all aspects of our clients’ web programming needs, we employ a full-stack
+          web development process, meaning our developers are experienced in both back-end
+          development (server-side) and front-end development (user-side). As a result, we
+          can offer our clients elegant and professional web solutions, whatever their needs
           may be.
         bdd:
-          title: '+Behavior-Driven Development (BDD)'
+          title: Behavior-Driven Development (BDD)
           desc:
             To ensure successful achievement of the goals of our clients’ projects we utilize
-            behavior-driven development, or BDD. Simply put, BDD is a software development 
-            process based on user behavior, ensuring that the finished product provides the best 
-            possible experience for the end users it’s intended for. 
+            behavior-driven development, or BDD. Simply put, BDD is a software development
+            process based on user behavior, ensuring that the finished product provides the best
+            possible experience for the end users it’s intended for.
           advantages:
             title: Advantages
-            items: 
+            items:
               - Tests are easy to understand for non-tech managers
               - Tests are easily changed as needed
               - Tests can be written by product-owners
               - Tests focus on description and implementation without unnecessary complication
-        technologies: 
+        technologies:
           - title: Ruby on Rails
             desc:
-              Ruby on Rails is a fast, reliable framework that includes everything needed to build 
+              Ruby on Rails is a fast, reliable framework that includes everything needed to build
               complex database-backed applications.
           - title: Angular JS
             desc:
-              Angular JS is a front-end web application framework used for single-page web apps that 
-              allow processing of data on the user-side. 
-          - title: React 
-            desc: 
-              React is a JavaScript library for developing user interfaces ideal for solving performance 
-              project issues and increasing delivery speed. 
-      - title: Mobile application development
+              Angular JS is a front-end web application framework used for single-page web apps that
+              allow processing of data on the user-side.
+          - title: React
+            desc:
+              React is a JavaScript library for developing user interfaces ideal for solving performance
+              project issues and increasing delivery speed.
+      - title: Mobile application development services
         logo: services/mobile_icon.svg
         description:
-          At Active Bridge we bring our mobile development expertise together with your ideas to 
-          create incredible apps. We’re experienced in building mobile applications for both specific 
-          mobile operating systems as well as hybrid applications, so whether you want your app to run 
+          At Active Bridge we bring our mobile development expertise together with your ideas to
+          create incredible apps. We’re experienced in building mobile applications for both specific
+          mobile operating systems as well as hybrid applications, so whether you want your app to run
           on iOS, Android, or an embedded web browser, we can help.
         technologies:
           - title: React Native
             desc:
-              React Native is a JavaScript framework used for developing native apps using React. It’s ideal 
+              React Native is a JavaScript framework used for developing native apps using React. It’s ideal
               for building fast, easily scalable apps for both iOS and Android.
           - title: Ionic
-            desc: 
-              Ionic is a software development kit (SDK) used for hybrid mobile applications and cross-platform 
-              mobile development. 
+            desc:
+              Ionic is a software development kit (SDK) used for hybrid mobile applications and cross-platform
+              mobile development.
     technologies:
       title: Technologies
       desc:
@@ -352,20 +354,20 @@ en:
   about_us:
     active_bridge: Active Bridge
     slogan: Your ideas. Our talents. Great result.
-    about: Information about us   
+    about: Information about us
     information:
-      first: Active Bridge is an IT contracting company that specializes in providing dedicated full-stack developers 
-             to help our clients and augment their in-house teams. Since 2013, our offshore IT staffing agency has been 
-             assisting clients in the development and maintenance of websites and web-based systems, mobile applications, 
+      first: Active Bridge is an IT contracting company that specializes in providing dedicated full-stack developers
+             to help our clients and augment their in-house teams. Since 2013, our offshore IT staffing agency has been
+             assisting clients in the development and maintenance of websites and web-based systems, mobile applications,
              and software products.
       second: Active Bridge started out as a small team of Ukrainian developers passionate about Ruby on Rails programming
               and providing effective web solutions for our clients in the United States and Europe. Today, our company has
-              grown to include a staff of talented and experienced tech professionals with over 20 successful major projects 
-              under our belt. 
-      third: Our team has worked with startups, small and medium-sized enterprises (SMEs), and large corporations in both 
-             North America and Eastern Europe. Our goal is always to prioritize the needs of our customers, and we strive to 
-             build and maintain trust and productive relationships with all of our partners. That customer-centered focus is 
-             why Active Bridge was named one of the “Top B2B Service Providers, 2017” by Clutch.co., and why we’re consistently 
+              grown to include a staff of talented and experienced tech professionals with over 20 successful major projects
+              under our belt.
+      third: Our team has worked with startups, small and medium-sized enterprises (SMEs), and large corporations in both
+             North America and Eastern Europe. Our goal is always to prioritize the needs of our customers, and we strive to
+             build and maintain trust and productive relationships with all of our partners. That customer-centered focus is
+             why Active Bridge was named one of the “Top B2B Service Providers, 2017” by Clutch.co., and why we’re consistently
              rated as one of the top web and software developers in Eastern Europe.
     solutions_and_benefits:
       solutions_title: Solutions for business
@@ -373,50 +375,50 @@ en:
       solutions:
         - id: first
           title: Full-stack expertise where you need it
-          desc: When you hire web programmers through Active Bridge, you get access to the full breadth of skills and experience 
-                that our team has to offer. Our dedicated full-stack developers are experienced in both server-side development and client-side 
+          desc: When you hire web programmers through Active Bridge, you get access to the full breadth of skills and experience
+                that our team has to offer. Our dedicated full-stack developers are experienced in both server-side development and client-side
                 project building, meaning whatever the details of your project may be, we’re ready to help
         - id: second
           title: Project staffing and recruiting
-          desc: Recruiting talent for complex IT projects can be difficult, but we’re here to help. When you partner with Active Bridge, we take 
-                care of the sourcing and selection of qualified candidates with the needed skills and experience level for your job. Click here 
-                for more information on our process.   
+          desc: Recruiting talent for complex IT projects can be difficult, but we’re here to help. When you partner with Active Bridge, we take
+                care of the sourcing and selection of qualified candidates with the needed skills and experience level for your job. Click here
+                for more information on our process.
         - id: third
           title: A motivated workforce
-          desc: Companies can sometimes be wary about bringing in an IT contractor to work on new projects, but at Active Bridge, our senior 
-                developers are experts at integrating with our clients’ in-house teams and treating every project as if it was our own. 
-                Our developers get fired up by emerging technologies, challenging tasks, interesting ideas, and Rails collaboration, making 
+          desc: Companies can sometimes be wary about bringing in an IT contractor to work on new projects, but at Active Bridge, our senior
+                developers are experts at integrating with our clients’ in-house teams and treating every project as if it was our own.
+                Our developers get fired up by emerging technologies, challenging tasks, interesting ideas, and Rails collaboration, making
                 them enthusiastic and productive team members.
         - id: fourth
           title: Timely delivery
-          desc: Whether you choose to bring Active Bridge talent into your organization to augment an in-house team or engage our full team of 
-                talented web developers, we always ensure your project is delivered on-time and inline with the expectations of your stakeholders. 
+          desc: Whether you choose to bring Active Bridge talent into your organization to augment an in-house team or engage our full team of
+                talented web developers, we always ensure your project is delivered on-time and inline with the expectations of your stakeholders.
         - id: fifth
           title: Team extending
           desc: Whether your business is growing or just taking on a larger-than-normal project, Active Bridge is always ready to meet your staffing
-                needs. Our experienced developers are ready to augment your in-house teams to ensure you’ve got the staffing and flexibility you need to succeed. 
+                needs. Our experienced developers are ready to augment your in-house teams to ensure you’ve got the staffing and flexibility you need to succeed.
       benefits:
         - id: first
           title: Dedicated web developers
-          desc: Our staff isn’t big, but all of our team members are senior/middle-level developers with extensive experience in full-stack web development and 
+          desc: Our staff isn’t big, but all of our team members are senior/middle-level developers with extensive experience in full-stack web development and
                 widely-ranging backgrounds.
         - id: second
           title: Teamwork and expert integration
-          desc: Our staff aren’t just expert full-stack developers, they’re also expert team-players. They’ll seamlessly integrate into your existing team and work 
-                environment, making your team’s values, goals, ideas, and expectations their own. 
+          desc: Our staff aren’t just expert full-stack developers, they’re also expert team-players. They’ll seamlessly integrate into your existing team and work
+                environment, making your team’s values, goals, ideas, and expectations their own.
         - id: third
           title: Flexibility
           desc: Our offshore web developers join your project as in-house employees. We adhere to Agile methodologies, like Scrum and Kanban, and use behavior-driven
-                development (BDD) methods. We give you the flexibility to add experienced staff when you need it on a project-by-project basis.  
+                development (BDD) methods. We give you the flexibility to add experienced staff when you need it on a project-by-project basis.
         - id: fourth
           title: Fluent English communication
-          desc: Our full-stack developers are all excellent English speakers, meaning we can integrate easily into your teams and meetings without any worry of language 
-                barriers getting in the way. 
+          desc: Our full-stack developers are all excellent English speakers, meaning we can integrate easily into your teams and meetings without any worry of language
+                barriers getting in the way.
         - id: fifth
           title: Transparency and face-to-face communication
-          desc: As an offshore IT contractor, it’s absolutely crucial that we make workflow easy and transparent. That’s why our team is committed to providing constant 
-                information about project progress. We’ll participate in meetings as often as you require, send daily, weekly, or monthly status reports depending on your 
-                needs, and maintain a 24/7 customer support channel. We always guarantee that our developers are assigned to only a single project, meaning you’ll always 
+          desc: As an offshore IT contractor, it’s absolutely crucial that we make workflow easy and transparent. That’s why our team is committed to providing constant
+                information about project progress. We’ll participate in meetings as often as you require, send daily, weekly, or monthly status reports depending on your
+                needs, and maintain a 24/7 customer support channel. We always guarantee that our developers are assigned to only a single project, meaning you’ll always
                 have their full dedication to your team’s goals.
   blog:
     categories:
@@ -427,7 +429,6 @@ en:
     recommended: RECOMMENDED POSTS
     footer:
       pages:
-        about: About
         services: Services
         team: Team
         portfolio: Portfolio
@@ -441,58 +442,59 @@ en:
       copyright: '© 2018 Active Bridge, LLC'
   how_we_work:
     title: How we work
-    description: 
-      Active Bridge provides senior-level developers to help companies augment 
-      their in-house teams and scale up their development processes. Our talented developers 
-      integrate seamlessly with your engineering team, giving you flexible staffing solutions 
-      to meet your project’s needs. We offer solutions for multiple types of collaboration, 
-      including team extensions, dedicated developer teams, and project-model contracts. 
-      Whatever way you choose to engage our team, we always offer unrivaled customer support 
+    description:
+      Active Bridge provides senior-level developers to help companies augment
+      their in-house teams and scale up their development processes. Our talented developers
+      integrate seamlessly with your engineering team, giving you flexible staffing solutions
+      to meet your project’s needs. We offer solutions for multiple types of collaboration,
+      including team extensions, dedicated developer teams, and project-model contracts.
+      Whatever way you choose to engage our team, we always offer unrivaled customer support
       to ensure your satisfaction.
     models_title: Cooperation Models
+    get_dedicated: How to get dedicated developers in your in-house team
     model_questions:
       definition: 'Definition:'
-      for_who: Who is this model best for? 
+      for_who: Who is this model best for?
       scope_of_work: How is the scope of work defined?
-      cost: How is the cost of work defined? 
+      cost: How is the cost of work defined?
       advantages: 'Customer Advantages:'
     cooperation_models:
       - title: Dedicated Team
         logo: how_we_work/dedicated_team.svg
-        definition: 
-          We provide a team of dedicated developers on a long-term basis in 
-          accordance with your estimates. You may choose to manage the team from your side 
-          or assign one of our Active Bridge project managers to the job.. 
+        definition:
+          We provide a team of dedicated developers on a long-term basis in
+          accordance with your estimates. You may choose to manage the team from your side
+          or assign one of our Active Bridge project managers to the job..
         for_who:
           - Experienced managers that have a deep knowledge of the project field
           - Mid-sized companies with clear future plans for the project
           - Corporations with strong internal management capabilities
-        scope_of_work: 
-          The scope of work will be laid out in the agreement based on your needs. 
-          Usually, tasks are defined as user stories that can be determined during the development 
+        scope_of_work:
+          The scope of work will be laid out in the agreement based on your needs.
+          Usually, tasks are defined as user stories that can be determined during the development
           process. Estimations are used as a guideline
-        cost: 
-          Daily rates for hired developers are always agreed upon beforehand. At the end of each month, 
+        cost:
+          Daily rates for hired developers are always agreed upon beforehand. At the end of each month,
           we will send an invoice based on the agreed-upon rates and billable hours of the dedicated team.
           Weekly reports are provided to ensure you and Active Bridge are always on the same page
         advantages:
           - Flexible budgets
           - No additional overhead or tax burden required to bring on our developers in place of in-house staff
           - No recruitment risks, or requirement to bring on extra management for expansion
-          - Clients completely control the development process 
+          - Clients completely control the development process
       - title: Team Extension
         logo: how_we_work/team_extension.svg
         definition:
           Our developers become an integrated part of your existing in-house development team for the duration
-          of the project. Our talented staff will immerse themselves in your project, adopt and maintain your 
+          of the project. Our talented staff will immerse themselves in your project, adopt and maintain your
           company culture, and make your team’s goals their own, ensuring a seamless integration.
         for_who:
           - Small and medium-sized businesses developing new modules or applications
           - Companies with in-house teams in temporary need of a few extra coders
           - Any business that already has a core development team
-        scope_of_work: 
+        scope_of_work:
           The scope of work will be laid out in the agreement based on your needs. Developers can be engaged
-          wither full or part-time and will fully integrate with your existing tracking systems. 
+          wither full or part-time and will fully integrate with your existing tracking systems.
         cost: Developers are billed out at an hourly rate based on the stack and experience level required for the project.
         advantages:
           - Engage flexible, qualified, experienced help when needed for a limited time
@@ -507,13 +509,13 @@ en:
         for_who:
           - Start-ups without development teams
           - Businesses with a clear idea of the end product they’re looking for, but without the in-house expertise or staff to implement it
-        scope_of_work: 
-          The scope of work will be laid out in the agreement based on your needs. We’ll provide expert estimates on the resources and developer 
+        scope_of_work:
+          The scope of work will be laid out in the agreement based on your needs. We’ll provide expert estimates on the resources and developer
           experience levels required for the job.
-        cost: 
-          Developers are billed out at hourly rates agreed upon beforehand. We’ll provide tracking statistics detailing billable hours and completed tasks. 
+        cost:
+          Developers are billed out at hourly rates agreed upon beforehand. We’ll provide tracking statistics detailing billable hours and completed tasks.
         advantages:
           - No recruitment costs
-          - Fixed deadlines 
+          - Fixed deadlines
           - No additional management costs
           - Clear understanding of project goals and expert implementation by our seasoned developers

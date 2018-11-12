@@ -1,6 +1,9 @@
 .container
   .header_2
     b= t('portfolio.title')
+  .subtitle
+    b= t('portfolio.projects')
+  .subsubtitle= t('portfolio.applications')
   a#projects
   .content.projects
     = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'

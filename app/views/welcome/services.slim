@@ -16,7 +16,9 @@
         .description= service[:description]
         - unless i != 0
           span.bdd_show
-            span= service[:bdd][:title]
+            span
+              '+
+              = service[:bdd][:title]
           .informational_container#bdd
             .bdd_desc
               p.bdd_title= service[:bdd][:title]
