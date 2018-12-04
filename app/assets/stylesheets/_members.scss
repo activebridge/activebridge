@@ -1,5 +1,5 @@
 $members:(
-  andreieva_nastya,
+  andrieieva_nastya,
   bidochka_alex,
   bilan_igor,
   bondarenko_vitaliy,
@@ -29,8 +29,8 @@ $members:(
   shmigol_victor,
   surzhko_eugene,
   tsibulko_alex,
-  tupitskiy_vlad,
-  tupitskiy_yarik,
+  tupickiy_vlad,
+  tupickiy_yarik,
   verbivskyi_alexey,
   voloshyn_oleg,
   zimin_anton,
@@ -99,7 +99,7 @@ $members:(
           color: #b64e96;
           }
         }
-      
+
       .cartoon_logo_container {
         .hover {
           visibility: visible;
@@ -183,9 +183,10 @@ $members:(
         display: flex;
         height: 20%;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         li {
-          width: 50%;
+          width: 45%;
           letter-spacing: 1px;
         }
       }
