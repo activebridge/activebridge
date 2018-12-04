@@ -398,7 +398,7 @@ en:
         - https://i.imgur.com/zM8lLWt.jpg
   portfolio:
     title: Remarkable
-    projects: Ruby on rails Projects
+    project: Ruby on rails Projects
     applications: and Ruby on Rails Applications
     project_info:
       technology: 'technology: '
@@ -409,6 +409,126 @@ en:
       client: 'client: '
       industry: 'industry: '
     button: View Project
+    projects:
+      - client: Upstack
+        image: upstack.svg
+        link: https://marketplace.upstack.io/
+        industry: IT /  Marketing
+        technologies: Ruby on Rails / React / Sidekiq / Puma / Devise / PostgreSQL / Heroku
+        challenge:  
+          UpStack required a deployed IT team to be co-located with their in-house staff to aid in frontend and backend web development.
+          They also required enterprise-grade analysis of their existing project issues
+        solution: 
+           A dedicated Active Bridge development team has been working with UpStack on scalable backend and frontend web solutions. 
+           The delivered solutions provide companies and individuals with access to all agency data and statistical information.
+        project_length: 16
+        team_size: 7
+      - client: Preeline
+        image: preeline.svg
+        link: https://preeline.com/
+        industry: Fashion, Internet, E-commerce
+        technologies: Ruby on Rails / PostgreSQL / SELENIUM
+        challenge:
+          PreeLine needed a development team to build an e-commerce platform from scratch for their U.S. based fashion business. 
+        solution:
+          Active Bridge provided two full-stack developers under the team-extension model of cooperation. They designed and 
+          executed a rapid build of a fully scalable ecommerce platform integrated with PreeLine’s social networking. The new 
+          ecommerce solution also included functionality to allow PreeLine to utilize it for business analysis. 
+        project_length: 1
+        team_size: 2
+      - client: EVERSEAT
+        image: everseat.svg
+        link: https://www.everseat.com/
+        industry: Healthcare
+        technologies: Ruby on Rails / Backbone JS / PostgreSQL / EngineYard
+        challenge:
+          Everseat needed to upgrade its online presence and move it to a more powerful and scalable platform to accommodate future growth. 
+        solution:
+          Active Bridge provided an easily scalable web solution utilizing Ruby on Rails technology. The delivered application provides a 
+          web portal for appointment scheduling based on a user supply and demand equation.
+        project_length: 5
+        team_size: 1    
+      - client: DAISYBILL
+        image: daisybill.svg
+        link: https://www.daisybill.com/
+        industry: IT & Services
+        technologies: Ruby on Rails / PostgreSQL / TFA / Silenium / REDIS
+        challenge:
+          DaisyBill needed a full-stack provider to renovate their existing project structure and develop a revenue cycle management 
+          software application for the U.S. market.
+        solution:
+          Active Bridge provided a dedicated full-stack team, integrated directly into DaisyBill’s in-house development team. Responsible 
+          for frontend and backend development, our developers built a user-friendly, scalable software solution based on a PostgreSQL 
+          database. The delivered project represents one of the most robust full-service data integration solutions on the market to date, 
+          and Active Bridge has been retained on an ongoing basis to provide project maintenance. 
+        project_length: 38
+        team_size: 4
+      - client: FREESTAK
+        image: freestak.svg
+        link: https://my.freestak.com/
+        industry: Sport
+        technologies: Ruby on Rails / PostgreSQL 
+        challenge:
+          Freestack needed a dedicated full-stack development team to set up their server and integrate their project with social media.
+        solution:
+          Active Bridge provided full-stack development services to manage the backend coding on the project. A DigitalOcean server was 
+          set up and integrated with a number of popular social media network
+        project_length: 5
+        team_size: 3
+      - client: BEATTHREAD  
+        image: beatthread.svg
+        link: https://beatthread.com/
+        industry: Music, Entertainment
+        technologies: Ruby on Rails / React / PostgreSQL
+        challenge:
+          BeatThread is a startup that needed to organize their development process and build a web application similar to SoundCloud.
+        solution:
+          A dedicated team of Active Bridge developers successfully implemented audio processing technology, worked out the database 
+          architecture, and designed the front and backend of BeatThread’s new platform.
+        project_length: 8
+        team_size: 3           
+      - client: INVOYIS
+        image: invoyis.svg
+        link: https://play.google.com/store/apps/details?id=com.invoyis.app&hl=ru
+        industry: IT & Services
+        technologies: Ruby on Rails / Angular JS / IOS / Android
+        challenge:
+          nvoyis is a company that works with large market players to sell different products to a wide variety of clients. They needed 
+          software that could automatically generate and send invoices, but there was nothing on the market that met their needs. They 
+          turned to us looking for a team of developers to design and create invoicing software integrated with both PayPal and Stripe.
+        solution:
+          Active Bridge came up with a powerful solution designed specifically to cater to the client’s unique business expertise. 
+          Several existing third-party solutions had to be integrated to work together to ensure the correct analysis of data from a 
+          number of sources. Active Bridge’s developers successfully executed that integration, including PayPal, Stripe, social media 
+          modules, and an analytics API.
+        project_length: 3 
+        team_size: 3
+      - client: Split 
+        image: split.svg
+        link: https://www.splitpayments.com.au/
+        industry: Banking, Finance
+        technologies: Ruby on Rails/ Postgresql
+        challenge:
+          Split Payments, Australia’s first open banking platform, needed a development team to build an API with unmatched security, 
+          payment collection, disbursement, and management systems. 
+        solution:
+          Active Bridge’s full-stack development team provided backend support, Xero integration, event sourcing technology, and 
+          successfully implemented the automation of payment and cross-bank processes. 
+        project_length: 36 
+        team_size: 2
+      - client: Mediprocity
+        image: mediprocity.svg
+        link: https://mediprocity.com
+        industry: Services, Encryption, HIPAA
+        technologies: Ruby on Rails / Grape/ MySQL/CouchDB/Datamapper/Electron/Angular6/ionic3 / IOS / Android / windows / MacOS / docker / hapi.js / sails / AWS/ Aptible
+        challenge:
+          Mediprocity required full-stack developers to build and support a platform for securing patient health information that could be fully integrated into their existing customer portal.
+        solution:
+          Active Bridge provided team members to build a fully HIPAA-compliant platform designed to secure patient data and allow synchronization across multiple devices, including desktop 
+          computers and smartphones. The new platform can be used in a web browser or through iOS and Android apps, can be fully integrated into any existing portal, and provides features 
+          including a fully access controlled admin panel, groups, distribution lists, emergency alerts, secure form processing, and more. 
+        project_length: 24
+        team_size: 3
   services:
     title: Full-Stack Development Services
     we_do: We can help you on every stage of web development process

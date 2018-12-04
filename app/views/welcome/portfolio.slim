@@ -2,47 +2,43 @@
   .header_2
     b= t('portfolio.title')
   .subtitle
-    b= t('portfolio.projects')
+    b= t('portfolio.project')
   .subsubtitle= t('portfolio.applications')
   a#projects
   .content.projects
     = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
-    - @projects.each_with_index do |project, i|
-      .informational_container id=item_name(project.client)
-        = link_to '', "##{item_name(@projects[i-1].client)}", class: 'prev'
-        = link_to '', "##{item_name(next_item(@projects, i).client)}", class: 'next'
+    - I18n.t('portfolio.projects').each_with_index do |project, i|
+      .informational_container id=item_name(project[:client])
+        = link_to '', "##{item_name(I18n.t('portfolio.projects')[i-1][:client])}", class: 'prev'
+        = link_to '', "##{item_name(next_item(I18n.t('portfolio.projects'), i)[:client])}", class: 'next'
         .project-details
           .general-info
             .name_and_link
-              = image_tag("portfolio/projects/#{item_name(project.client)}.svg", class: 'project-logo')
-              = link_to project.link, target: '_blank', class: 'view-project' do
+              = image_tag("portfolio/projects/" + project[:image], class: 'project-logo')
+              = link_to project[:link], target: '_blank', class: 'view-project' do
                 = t('portfolio.button')
             .industry_and_tech
               hr
-              p 
-                b= t('portfolio.project_info.industry')             
-                = project.industry
-              p 
-                b= t('portfolio.project_info.technology') 
-                - technologies = project.technology.split(' ')
-                - technologies.each_with_index do |tech, i|
-                  =tech
-                  - if i != technologies.size-1 
-                    '  / 
+              p
+                b= t('portfolio.project_info.industry')
+                = project[:industry]
+              p
+                b= t('portfolio.project_info.technology')
+                =project[:technologies]
               hr
-          .project-description 
-            p 
-              b= t('portfolio.project_info.challenge') 
-              = project.challenge
-            p 
+          .project-description
+            p
+              b= t('portfolio.project_info.challenge')
+              = project[:challenge]
+            p
               b= t('portfolio.project_info.solution')
-              = project.solution
+              = project[:solution]
             p
               b= t('portfolio.project_info.project_length')
-              = project.project_length
+              = project[:project_length]
             p
               b= t('portfolio.project_info.team_size')
-              = project.team_size
+              = project[:team_size]
 
     = link_to '', '#', id: 'close_project'
   a#testimonials
@@ -62,7 +58,7 @@
   .testimonials_cards
     - I18n.t('testimonials.all').each_with_index do |testimonial, index|
       .informational_container id='testimonial_#{item_name(testimonial[:company])}'
-        .testimonial_container 
+        .testimonial_container
           .testimonial_logo_container
             = image_tag(testimonial[:logo], class: 'company_logo')
           .testimonial_author
@@ -79,5 +75,5 @@
             = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
     = link_to '', '#testimonials', id: 'close_testimonial'
 
-  
+
 
