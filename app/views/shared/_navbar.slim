@@ -1,32 +1,10 @@
-    nav
-      ul
-        li 
-          span 
-           b 
-            a.page href='/how_we_work' How we work
-          a.anchor href='how_we_work#dedicated_team' Dedicated Team
-          a.anchor href='how_we_work#team_extension' Team Extension
-          a.anchor href='how_we_work#project_model' Project Model
-        li 
-          sapn 
-            b 
-              a.page href='/services' Services
-          a.anchor href='/services#web_dev' Web Application Development
-          a.anchor href='/services#moblie_dev' Mobile Application Development
-          a.anchor href='/services#core_tech' Core Technologies
-        li 
-          span 
-            b 
-              a.page href='/portfolio' Portfolio
-          a.anchor href='/portfolio#projects' Projects
-          a.anchor href='/portfolio#testimonials' Testmonials
-        li 
-          span 
-            b 
-              a.page href='/team' Team
+- cache 'navbar' do
+  nav
+    ul
+      - I18n.t('navbar.links').each do |item|
         li
-          span 
-            b 
-              a.page href='/contact' Contact Us
-          a.anchor href='/contact#headquarters' Headquarters
-          a.anchor href='/contact#contact_form' Email Us
+          span
+            b= link_to item[:title][:name], item[:title][:link], class: 'page'
+          - if item[:links]
+            - item[:links].each do |link|
+              = link_to link[:name], link[:link], class: 'anchor'

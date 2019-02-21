@@ -1,0 +1,12 @@
+header#header
+  .logotype
+    a href='/'
+      = inline_svg 'index/logo.svg', class: 'logotype'
+  .path
+    'Home
+    - if !@page.eql? '/'
+      '\
+      = @page.gsub('_', ' ').capitalize
+a.hire_us_container#hire_us_container href='/contact'
+  span Hire Us
+  = image_submit_tag 'index/chat_button.svg', class: 'chat_button'

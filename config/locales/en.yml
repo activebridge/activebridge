@@ -9,6 +9,48 @@ en:
     Hello! We are Active Bridge - a Ruby on Rails web development agency.
     Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
+  navbar:
+    links:
+      - title:
+          name: How we work
+          link: '/how-we-work'
+        links:
+          - name: Dedicated Team
+            link: '/how-we-work#dedicated-team'
+          - name: Team Extension
+            link: '/how-we-work#team-extension'
+          - name: Project Model
+            link: '/how-we-work#project-model'
+      - title:
+          name: Services
+          link: '/services'
+        links:
+          - name: Web Application Development
+            link: '/services#web-application-development'
+          - name: Mobile Application Development
+            link: '/services#mobile-application-development'
+          - name: Core Technologies
+            link: '/services#core-technologies'
+      - title:
+          name: Portfolio
+          link: '/portfolio'
+        links:
+          - name: Projects
+            link: '/portfolio#projects'
+          - name: Testimonials
+            link: '/portfolio#testimonials'
+      - title:
+          name: Team
+          link: '/team'
+        links:
+      - title:
+          name: Contact Us
+          link: '/contact'
+        links:
+          - name: Headquarters
+            link: '/contact#headquarters'
+          - name: Email Us
+            link: '/contact#contact-form'
   meta:
     pages:
       /:
@@ -16,7 +58,7 @@ en:
         description:
           Active Bridge is your IT contracting partner providing full-stack developers and responsible for
           development & maintaining web/mobile applications.
-      how_we_work:
+      how-we-work:
         title: Dedicated Software Development Team || Active Bridge
         description:
           Active Bridge is your full-stack development partner. Located in Ukraine we
@@ -99,13 +141,18 @@ en:
       email_placeholder: Your business email
       email_error: Please, input valid email
       message_placeholder: About the project
-      country: Your country
+      your_country: Your country
       send: Send
       reason_placeholder: Contact reason
       message_error: Body have to contain at least 10 characters
       send: Send
       info: 'Contact info:'
       site: https://activebridge.org
+      email: contact@active-bridge.com
+      postal_code: 1800
+      phone_number: '+380636086045'
+      location: Cherkassy
+      country: Ukraine
       success_message: "Thank you! Your message has been successfully sent.\n Please check your email."
       reasons:
         - I’m looking for a full-stack developer
@@ -116,130 +163,130 @@ en:
     testimonials:
       title: Testimonials
     team:
-      members: 
+      members:
         - name: Galushka Alex
           avatar: Galushka.png
           position: CEO / Tech lead and backend developer
-          description: 
+          description:
             Alex is the CEO of Active Bridge and an experienced developer. He started his career as a full-stack engineer and quickly
-            developed a deep knowledge of ruby development. A lifelong idea man, Alex is a dedicated contributor to the rails community. 
-            His extraordinary mind and wide knowledge base mean Alex is capable of developing effective solutions to just about any problem, 
-            from object-oriented programming to the many challenges of running a successful company. But thanks to his experience in planning, 
+            developed a deep knowledge of ruby development. A lifelong idea man, Alex is a dedicated contributor to the rails community.
+            His extraordinary mind and wide knowledge base mean Alex is capable of developing effective solutions to just about any problem,
+            from object-oriented programming to the many challenges of running a successful company. But thanks to his experience in planning,
             organization, and leadership, Active Bridge was crowned “Best IT Employer in Ukraine, 2016”, and consistently sits among the top employers in the IT field.
           projects: ProjectR, Split Payments, PreeLine, ZOZI, ZOZI Advance, Wingsplay, Cisco Services Marketplace
         - name: Marchenko Alex
           avatar: Marchenko.png
           position: CFO
-          description: 
-            Alex, our brilliant CFO, knows Active Bridge’s financials inside and out.  In addition to his expansive general financial 
+          description:
+            Alex, our brilliant CFO, knows Active Bridge’s financials inside and out.  In addition to his expansive general financial
             expertise, Alex has an incredibly deep understanding of the economic and financial aspects specific to the IT industry. His
-            attention to detail and proactive approach to financial management ensures that Active Bridge’s cooperation with clients and 
-            partners runs smoothly and efficiently at all times. 
-          projects: 
+            attention to detail and proactive approach to financial management ensures that Active Bridge’s cooperation with clients and
+            partners runs smoothly and efficiently at all times.
+          projects:
         - name: Milevskyi Ruslan
           avatar: Milevskyi.png
           position: Tech lead / Full - stack engineer
-          description: 
-            Ruslan is an expert at developing apps based on customer specifications. When Ruslan approaches a project, he gets deep into both 
-            the overall concept and the mind of the project owner to come up with the right solution for the customer’s needs every time.   
+          description:
+            Ruslan is an expert at developing apps based on customer specifications. When Ruslan approaches a project, he gets deep into both
+            the overall concept and the mind of the project owner to come up with the right solution for the customer’s needs every time.
           projects: Example
         - name: Zimin Anton
           avatar:  Zimin.png
           position: Tech lead / Full - stack engineer
-          description: 
-            Self-organization and the ability to quickly master new technologies in record time are the hallmarks of what make Anton a great 
-            tech lead and engineer. Thanks to his deep understanding of all phases of the software development lifecycle, Anton can always be 
-            counted on to deliver highly optimized solutions for the most challenging tech projects. 
+          description:
+            Self-organization and the ability to quickly master new technologies in record time are the hallmarks of what make Anton a great
+            tech lead and engineer. Thanks to his deep understanding of all phases of the software development lifecycle, Anton can always be
+            counted on to deliver highly optimized solutions for the most challenging tech projects.
           projects: Daisybill, ZOZI, LC Laboratories, Ooma, Beanstock Media
         - name: Lukin Alexey
           avatar: Lukin.png
           position: Tech lead / Full - stack engineer
-          description: 
-            The phrase “it works on my machine” won’t cut it with Alexey. As an experienced full-stack developer and project manager, 
-            Alexey expects the same patience and clear coding from the development teams he manages that he himself brings to all the projects he works on. 
+          description:
+            The phrase “it works on my machine” won’t cut it with Alexey. As an experienced full-stack developer and project manager,
+            Alexey expects the same patience and clear coding from the development teams he manages that he himself brings to all the projects he works on.
           projects: Quick Quack, Eyes-on, It's borrowed, eTutorCloud
         - name: Mihailovskiy Pavel
           avatar: Mihailovskiy.png
           position: Tech lead / Full - stack engineer
           description:
-            If you’re looking for a highly responsible, hard-working engineer, Pavel is your man. As a team lead and dedicated full-stack developer, 
+            If you’re looking for a highly responsible, hard-working engineer, Pavel is your man. As a team lead and dedicated full-stack developer,
             Pavel knows everything there is to know about object-oriented programming and agile team management.
           projects: Daisybill, ZOZI, TotalAdventure, BETEGY, NUMA Lab, My Ooma, Wingspaly, Meditalente
         - name: Verbivskyi Alexey
           avatar: Verbivskyi.png
           position: Lead Ruby on Rails developer / Dev Ops
-          description: 
-            Alexey is indispensable when it comes to dev ops. His talents combine senior Ruby engineering with expert server configuration, 
-            and he’s one of the best in the business at both.  
+          description:
+            Alexey is indispensable when it comes to dev ops. His talents combine senior Ruby engineering with expert server configuration,
+            and he’s one of the best in the business at both.
           projects: Lab NUMA, Nuvi, MyStandby, Locol, Total Adventure, My Ooma, Beanstock Media
         - name: Shmigol Victor
           avatar: Shmigol.png
           position: Lead Ruby on Rails developer
           description:
-            Victor has a deep expertise in database design and web architecture. He’s a hardworking, reliable developer that can always be 
-            counted on to make the right project decisions at the right time. 
+            Victor has a deep expertise in database design and web architecture. He’s a hardworking, reliable developer that can always be
+            counted on to make the right project decisions at the right time.
           projects: Classly, Naprok, Mediprocity, Freestak
         - name: Bondarenko Vitaliy
           avatar: Bondarenko.png
           position: Ruby on Rails engineer
-          description: 
-            It’s hard to believe anyone could love SQL queries as much as Vitaliy, and few are better at designing and implementing them as 
-            efficiently. An incredibly hardworking developer, Vitaliy has a true passion for learning new features and then passing that knowledge on to others. 
+          description:
+            It’s hard to believe anyone could love SQL queries as much as Vitaliy, and few are better at designing and implementing them as
+            efficiently. An incredibly hardworking developer, Vitaliy has a true passion for learning new features and then passing that knowledge on to others.
           projects: Example
         - name: Surzhko Eugene
           avatar: Surzhko.png
           position: Lead Ruby on Rails engineer / DB architect
-          description: 
-            Eugene is an engineer that knows what it takes to make databases perform better than most people would think possible. His backend programming skills 
+          description:
+            Eugene is an engineer that knows what it takes to make databases perform better than most people would think possible. His backend programming skills
             are exceptional, and his insights and suggestions always bring great performance benefits to every project he works on.
           projects: Example
         - name: Domotenko Eugene
           avatar: Domotenko.png
           position: Web / Android developer
           description:
-            Eugene is a backend developer with extensive Android expertise. A big fan of friendly UI design, Eugene applies UX best practices to create mobile apps 
-            that look and function at a level that always exceeds client expectations. 
+            Eugene is a backend developer with extensive Android expertise. A big fan of friendly UI design, Eugene applies UX best practices to create mobile apps
+            that look and function at a level that always exceeds client expectations.
           projects: Cablook
         - name: Makodzeba Dima
           avatar: Makodzeba.png
           position: Ruby on Rails engineer
-          description: 
-            Dima’s specialty is carefully listening to a client’s problems and using outside-the-box thinking to come up with solutions that haven’t even been considered yet. 
-            Regardless of the project, the difficulty level, or the technology, Dima has the skills and experience to handle it all. 
+          description:
+            Dima’s specialty is carefully listening to a client’s problems and using outside-the-box thinking to come up with solutions that haven’t even been considered yet.
+            Regardless of the project, the difficulty level, or the technology, Dima has the skills and experience to handle it all.
           projects: InclideIO, Split Payments, Total Adventure, Lanehoney, Chrome Tracker, CabLook, ProjectR, KnockKnock
         - name: Kovtun Vitaliy
           avatar: Kovtun Vitaliy.png
           position: Full - stack developer
           description:
-            Vitaliy is an outgoing guy with a true passion for Rails. His huge range of interests across multiple fields makes Vitality a highly successful problem solver. 
-            Combine that with great communication skills and a background in psychology, and you’ve got a developer uniquely suited to understand the customer’s needs and 
-            build great end-products to meet them. 
+            Vitaliy is an outgoing guy with a true passion for Rails. His huge range of interests across multiple fields makes Vitality a highly successful problem solver.
+            Combine that with great communication skills and a background in psychology, and you’ve got a developer uniquely suited to understand the customer’s needs and
+            build great end-products to meet them.
           projects: include.io, GOJI, Mediprocity, Total Adventure, eTutorCloud
         - name: Kovtun Volodymyr
           avatar: Kovtun Volodymyr.png
           position: Full - stack developer
           description:
-            Vladimir is highly experienced in application development using Angular. His love of front-end development and passion for seeing the results of his work in action mean 
+            Vladimir is highly experienced in application development using Angular. His love of front-end development and passion for seeing the results of his work in action mean
             clients won’t want to limit him to just the backend!
           projects: Example
         - name: Voloshyn Oleg
           avatar: Voloshyn.png
           position: Ruby on Rails engineer
           description:
-            Oleg is a 24/7 kind of guy that never shuts down. Day and night, you’ll find him hard at work, and that tenacity means that Oleg often finds solutions where other developers 
-            fail to. Oleg’s skill as a developer and unmatched work ethic make him the kind of person that any team would be thrilled to work with.  
+            Oleg is a 24/7 kind of guy that never shuts down. Day and night, you’ll find him hard at work, and that tenacity means that Oleg often finds solutions where other developers
+            fail to. Oleg’s skill as a developer and unmatched work ethic make him the kind of person that any team would be thrilled to work with.
           projects: Freestak, BeatThread, DaisyBill, Better Finance, Easygiant Inc, Vivint, My Ooma
         - name: Tsibulko Alex
           avatar: Tsibulko.png
           position: Ruby on Rails engineer
           description:
-            Patience and precision are the hallmarks of Alex’s work, making his coding cleaner than a surgical room. Alex is committed not only to accuracy and clean design, but also to 
+            Patience and precision are the hallmarks of Alex’s work, making his coding cleaner than a surgical room. Alex is committed not only to accuracy and clean design, but also to
             thorough testing. That makes his software solutions both reliable and effective.
           projects: Zype, eTutorCloud, BETEGY, Better Finance
         - name: Naumenko Sergii
           avatar: Naumenko.png
           position: Ruby on Rails engineer
-          description: 
+          description:
             Sergii treats every client’s project as his own. The deep care and personal responsibility he feels for the work he does drives his desire for successful releases. He is a
             goal-oriented, highly dedicated developer, and a significant benefit to every team he works with.
           projects: Freestak, Myschool, Sleepy Giant, Vivint, Ooma, Lifelinker
@@ -247,58 +294,58 @@ en:
           avatar: Motuzko Nastya.png
           position: Full-stack developer
           description:
-            Anastasia is a true standout among our development team. Originally starting out as a frontend developer, Anastasia is now also one of our best backend developers, building 
-            databases and designing backend code with exceptional skill. Her excellent communication skills and interpersonal abilities make her an easy fit with any team, and she has 
-            a knack for uncovering and understanding the client’s needs. 
+            Anastasia is a true standout among our development team. Originally starting out as a frontend developer, Anastasia is now also one of our best backend developers, building
+            databases and designing backend code with exceptional skill. Her excellent communication skills and interpersonal abilities make her an easy fit with any team, and she has
+            a knack for uncovering and understanding the client’s needs.
           projects: Example
         - name: Motuzko Alex
           avatar: Motuzko Alex.png
           position: Ruby on rails developer
           description:
-            Alex is one of the rising stars of our ruby team. He understands RoR at a level that might lead you to think he’d created it, and his hard work and client-centric focus make 
+            Alex is one of the rising stars of our ruby team. He understands RoR at a level that might lead you to think he’d created it, and his hard work and client-centric focus make
             him a truly fantastic developer.
           projects: Example
         - name: Tupickiy Vlad
           avatar: Tupickiy Vlad.png
           position: Ruby on Rails developer
-          description: 
-            Vlad prides himself on his ability to keep up to date with the cutting edge of new technologies, and that drive to stay ahead of the pack enables his outstanding vision for 
+          description:
+            Vlad prides himself on his ability to keep up to date with the cutting edge of new technologies, and that drive to stay ahead of the pack enables his outstanding vision for
             problem-solving and feature building. Vlad is an active member of the global RoR community and regularly taps community events to fuel his constant learning.
           projects: Example
         - name: Tupickiy Yarik
           avatar: Tupickiy Yarik.png
           position: Ruby on Rails developer
           description:
-            Yarik is a results-oriented, highly communicative, fast-learning, and responsible developer. As a full stack developer, he has deep experience in object-oriented programming, 
-            design patterns, TDD, and BDD. 
-          projects: Example 
+            Yarik is a results-oriented, highly communicative, fast-learning, and responsible developer. As a full stack developer, he has deep experience in object-oriented programming,
+            design patterns, TDD, and BDD.
+          projects: Example
         - name: Pedan Andriy
           avatar: Pedan.png
           position: Ruby on Rails developer
           description:
-            Planning, planning, planning! If there’s one thing you can say about Andrew, it’s that his commitment to careful planning and ability to do so are second to none. Andrew uses his 
-            sharp mind to quickly generate ideas for feature implementation, and then carefully weighs the pros and cons of each. The end result is that Andrew’s work is always extremely well 
-            thought out and expertly executed. 
+            Planning, planning, planning! If there’s one thing you can say about Andrew, it’s that his commitment to careful planning and ability to do so are second to none. Andrew uses his
+            sharp mind to quickly generate ideas for feature implementation, and then carefully weighs the pros and cons of each. The end result is that Andrew’s work is always extremely well
+            thought out and expertly executed.
           projects: Example
         - name: Serebryansky Maxim
           avatar: Serebryansky.png
           position: Ruby on Rails developer
           description:
-            No matter how complex a feature may be, Max can implement it. No matter how new a framework may be, Max can build on it. He prides himself on his ability to understand even the newest 
+            No matter how complex a feature may be, Max can implement it. No matter how new a framework may be, Max can build on it. He prides himself on his ability to understand even the newest
             technologies and to apply them to come up with creative solutions to difficult problems in his development.
           projects: Example
         - name: Savenko Serhii
           avatar: Savenko.png
           position: Full-stack / IOS developer
-          description: 
-            Sergey is a strong believer that great code should be backed up by a strong mind and a strong body to boot! He doesn’t just see development as a job – he truly loves the fun of tackling 
+          description:
+            Sergey is a strong believer that great code should be backed up by a strong mind and a strong body to boot! He doesn’t just see development as a job – he truly loves the fun of tackling
             complex ruby problems that would break most other developers’ brains.
           projects: Example
         - name: Bilan Igor
           avatar: Bilan.png
           position: Tech lead / Ruby on Rails engineer
           description:
-            Igor is a highly knowledgeable Ruby on Rails developer with deep experience in building and integrating highly complex APIs. Igor has also built several chatbots and integrated these 
+            Igor is a highly knowledgeable Ruby on Rails developer with deep experience in building and integrating highly complex APIs. Igor has also built several chatbots and integrated these
             applications with third-party systems. His experience and knowledge make him a strong addition to any team.
           projects: Quick Quack, Verifeed, VMware, Avaya DevConnect Marketplace, Citrix Ready Xchange Marketplace, Beanstock Media, Calendarscribe
         - name: Novitskyi Dmitryi
@@ -311,51 +358,51 @@ en:
           avatar: Dzyoma.png
           position: Ruby on Rails developer
           description:
-            Artem is an expert frontend developer with solid experience in backend development as well. While his skillset allows him to do a wide variety of development work, he specializes in working 
-            with payment systems – like Stripe and PayPal – and in messenger APIs. 
-          projects: Example 
+            Artem is an expert frontend developer with solid experience in backend development as well. While his skillset allows him to do a wide variety of development work, he specializes in working
+            with payment systems – like Stripe and PayPal – and in messenger APIs.
+          projects: Example
         - name: Zubritskiy Denis
           avatar: Zubritskiy.png
           position: Ruby on Rails developer
           description:
-            Den is an experienced developer with a personal commitment to constant self-improvement and a creative approach to crafting innovative solutions. He’s an active member and contributor in the 
-            Rails community, and he also works with Vue.js. 
+            Den is an experienced developer with a personal commitment to constant self-improvement and a creative approach to crafting innovative solutions. He’s an active member and contributor in the
+            Rails community, and he also works with Vue.js.
           projects: Example
         - name: Borodai Alex
           avatar: Borodai.png
           position: Full-stack developer
           description:
-            Alex uses imagination and a creative approach to rails development to come up with the right solutions for his clients’ web projects. He particularly likes working with startups, as they offer 
-            a chance for him to utilize that creativity, as well as his knowledge and outstanding development skills, to their full potential.  
+            Alex uses imagination and a creative approach to rails development to come up with the right solutions for his clients’ web projects. He particularly likes working with startups, as they offer
+            a chance for him to utilize that creativity, as well as his knowledge and outstanding development skills, to their full potential.
           projects: Example
         - name: Karpenko Alex
           avatar: Karpenko.png
           position: Ruby on Rails developer
           description:
-            Alex is a full stack developer, capable of handling both back-end development as well as front-end. Passion for web development. He uses best practices in programming, always trying to write 
+            Alex is a full stack developer, capable of handling both back-end development as well as front-end. Passion for web development. He uses best practices in programming, always trying to write
             maintainable and clean code
           projects: Fixpal
         - name: Bidochka Alex
           avatar: Bidochka.png
           position: Ruby on Rails developer
           description:
-            Alex is a full-stack developer with a passion for mastering new technologies and building and integrating APIs. He’s a responsible, self-driven developer who displays exceptional initiative, 
-            and he has the ability to work on both frontend and backend development, making him a versatile addition as a team member. 
+            Alex is a full-stack developer with a passion for mastering new technologies and building and integrating APIs. He’s a responsible, self-driven developer who displays exceptional initiative,
+            and he has the ability to work on both frontend and backend development, making him a versatile addition as a team member.
           projects: Cablook, Fixpal
         - name: Oleynikov Oleg
           avatar: Oleynikov.png
           position: Ruby on Rails developer
           description:
-            Oleg enjoys studying new technologies, programming and implementing solutions based on TDD. Development of Web apps for business and startups in the area where he is intensively working.  
+            Oleg enjoys studying new technologies, programming and implementing solutions based on TDD. Development of Web apps for business and startups in the area where he is intensively working.
             He's an opportunity to work with a variety of technologies so Oleg wants to master VUE.js
           projects: Cablook, Fixpal
         - name: Okunieva Lena
           avatar: Okunieva.png
-          position: Web Designer 
+          position: Web Designer
           description:
-            Lena is a real catch for Active Bridge. The designer who loves to conceptualize 
-            and design mobile applications and web platforms with an exceptional user experience. The greatest inspiration for Lena 
-            includes imagination, talented people, and traveling.  
+            Lena is a real catch for Active Bridge. The designer who loves to conceptualize
+            and design mobile applications and web platforms with an exceptional user experience. The greatest inspiration for Lena
+            includes imagination, talented people, and traveling.
           projects:
         - name: Andrieieva Nastya
           avatar: Andrieieva.png
@@ -375,7 +422,7 @@ en:
           description:
             Dasha is passionate about search engine optimization and digital marketing. She likes to be on top with the latest industry
             trends and technologies, reading her favorite MOZ.com authors.
-          projects:           
+          projects:
       title: Meet our team of full-stack developers
       photos:
         - https://i.imgur.com/6awlwXJ.jpg
@@ -399,7 +446,7 @@ en:
   portfolio:
     title: Remarkable
     project: Ruby on rails Projects
-    applications: and Ruby on Rails Applications
+    applications: Ruby on Rails Applications
     project_info:
       technology: 'technology: '
       project_length: 'project length: '
@@ -415,11 +462,11 @@ en:
         link: https://marketplace.upstack.io/
         industry: IT /  Marketing
         technologies: Ruby on Rails / React / Sidekiq / Puma / Devise / PostgreSQL / Heroku
-        challenge:  
+        challenge:
           UpStack required a deployed IT team to be co-located with their in-house staff to aid in frontend and backend web development.
           They also required enterprise-grade analysis of their existing project issues
-        solution: 
-           A dedicated Active Bridge development team has been working with UpStack on scalable backend and frontend web solutions. 
+        solution:
+           A dedicated Active Bridge development team has been working with UpStack on scalable backend and frontend web solutions.
            The delivered solutions provide companies and individuals with access to all agency data and statistical information.
         project_length: 16
         team_size: 7
@@ -429,11 +476,11 @@ en:
         industry: Fashion, Internet, E-commerce
         technologies: Ruby on Rails / PostgreSQL / SELENIUM
         challenge:
-          PreeLine needed a development team to build an e-commerce platform from scratch for their U.S. based fashion business. 
+          PreeLine needed a development team to build an e-commerce platform from scratch for their U.S. based fashion business.
         solution:
-          Active Bridge provided two full-stack developers under the team-extension model of cooperation. They designed and 
-          executed a rapid build of a fully scalable ecommerce platform integrated with PreeLine’s social networking. The new 
-          ecommerce solution also included functionality to allow PreeLine to utilize it for business analysis. 
+          Active Bridge provided two full-stack developers under the team-extension model of cooperation. They designed and
+          executed a rapid build of a fully scalable ecommerce platform integrated with PreeLine’s social networking. The new
+          ecommerce solution also included functionality to allow PreeLine to utilize it for business analysis.
         project_length: 1
         team_size: 2
       - client: EVERSEAT
@@ -442,40 +489,40 @@ en:
         industry: Healthcare
         technologies: Ruby on Rails / Backbone JS / PostgreSQL / EngineYard
         challenge:
-          Everseat needed to upgrade its online presence and move it to a more powerful and scalable platform to accommodate future growth. 
+          Everseat needed to upgrade its online presence and move it to a more powerful and scalable platform to accommodate future growth.
         solution:
-          Active Bridge provided an easily scalable web solution utilizing Ruby on Rails technology. The delivered application provides a 
+          Active Bridge provided an easily scalable web solution utilizing Ruby on Rails technology. The delivered application provides a
           web portal for appointment scheduling based on a user supply and demand equation.
         project_length: 5
-        team_size: 1    
+        team_size: 1
       - client: DAISYBILL
         image: daisybill.svg
         link: https://www.daisybill.com/
         industry: IT & Services
         technologies: Ruby on Rails / PostgreSQL / TFA / Silenium / REDIS
         challenge:
-          DaisyBill needed a full-stack provider to renovate their existing project structure and develop a revenue cycle management 
+          DaisyBill needed a full-stack provider to renovate their existing project structure and develop a revenue cycle management
           software application for the U.S. market.
         solution:
-          Active Bridge provided a dedicated full-stack team, integrated directly into DaisyBill’s in-house development team. Responsible 
-          for frontend and backend development, our developers built a user-friendly, scalable software solution based on a PostgreSQL 
-          database. The delivered project represents one of the most robust full-service data integration solutions on the market to date, 
-          and Active Bridge has been retained on an ongoing basis to provide project maintenance. 
+          Active Bridge provided a dedicated full-stack team, integrated directly into DaisyBill’s in-house development team. Responsible
+          for frontend and backend development, our developers built a user-friendly, scalable software solution based on a PostgreSQL
+          database. The delivered project represents one of the most robust full-service data integration solutions on the market to date,
+          and Active Bridge has been retained on an ongoing basis to provide project maintenance.
         project_length: 38
         team_size: 4
       - client: FREESTAK
         image: freestak.svg
         link: https://my.freestak.com/
         industry: Sport
-        technologies: Ruby on Rails / PostgreSQL 
+        technologies: Ruby on Rails / PostgreSQL
         challenge:
           Freestack needed a dedicated full-stack development team to set up their server and integrate their project with social media.
         solution:
-          Active Bridge provided full-stack development services to manage the backend coding on the project. A DigitalOcean server was 
+          Active Bridge provided full-stack development services to manage the backend coding on the project. A DigitalOcean server was
           set up and integrated with a number of popular social media network
         project_length: 5
         team_size: 3
-      - client: BEATTHREAD  
+      - client: BEATTHREAD
         image: beatthread.svg
         link: https://beatthread.com/
         industry: Music, Entertainment
@@ -483,38 +530,38 @@ en:
         challenge:
           BeatThread is a startup that needed to organize their development process and build a web application similar to SoundCloud.
         solution:
-          A dedicated team of Active Bridge developers successfully implemented audio processing technology, worked out the database 
+          A dedicated team of Active Bridge developers successfully implemented audio processing technology, worked out the database
           architecture, and designed the front and backend of BeatThread’s new platform.
         project_length: 8
-        team_size: 3           
+        team_size: 3
       - client: INVOYIS
         image: invoyis.svg
         link: https://play.google.com/store/apps/details?id=com.invoyis.app&hl=ru
         industry: IT & Services
         technologies: Ruby on Rails / Angular JS / IOS / Android
         challenge:
-          nvoyis is a company that works with large market players to sell different products to a wide variety of clients. They needed 
-          software that could automatically generate and send invoices, but there was nothing on the market that met their needs. They 
+          nvoyis is a company that works with large market players to sell different products to a wide variety of clients. They needed
+          software that could automatically generate and send invoices, but there was nothing on the market that met their needs. They
           turned to us looking for a team of developers to design and create invoicing software integrated with both PayPal and Stripe.
         solution:
-          Active Bridge came up with a powerful solution designed specifically to cater to the client’s unique business expertise. 
-          Several existing third-party solutions had to be integrated to work together to ensure the correct analysis of data from a 
-          number of sources. Active Bridge’s developers successfully executed that integration, including PayPal, Stripe, social media 
+          Active Bridge came up with a powerful solution designed specifically to cater to the client’s unique business expertise.
+          Several existing third-party solutions had to be integrated to work together to ensure the correct analysis of data from a
+          number of sources. Active Bridge’s developers successfully executed that integration, including PayPal, Stripe, social media
           modules, and an analytics API.
-        project_length: 3 
+        project_length: 3
         team_size: 3
-      - client: Split 
+      - client: Split
         image: split.svg
         link: https://www.splitpayments.com.au/
         industry: Banking, Finance
         technologies: Ruby on Rails/ Postgresql
         challenge:
-          Split Payments, Australia’s first open banking platform, needed a development team to build an API with unmatched security, 
-          payment collection, disbursement, and management systems. 
+          Split Payments, Australia’s first open banking platform, needed a development team to build an API with unmatched security,
+          payment collection, disbursement, and management systems.
         solution:
-          Active Bridge’s full-stack development team provided backend support, Xero integration, event sourcing technology, and 
-          successfully implemented the automation of payment and cross-bank processes. 
-        project_length: 36 
+          Active Bridge’s full-stack development team provided backend support, Xero integration, event sourcing technology, and
+          successfully implemented the automation of payment and cross-bank processes.
+        project_length: 36
         team_size: 2
       - client: Mediprocity
         image: mediprocity.svg
@@ -524,9 +571,9 @@ en:
         challenge:
           Mediprocity required full-stack developers to build and support a platform for securing patient health information that could be fully integrated into their existing customer portal.
         solution:
-          Active Bridge provided team members to build a fully HIPAA-compliant platform designed to secure patient data and allow synchronization across multiple devices, including desktop 
-          computers and smartphones. The new platform can be used in a web browser or through iOS and Android apps, can be fully integrated into any existing portal, and provides features 
-          including a fully access controlled admin panel, groups, distribution lists, emergency alerts, secure form processing, and more. 
+          Active Bridge provided team members to build a fully HIPAA-compliant platform designed to secure patient data and allow synchronization across multiple devices, including desktop
+          computers and smartphones. The new platform can be used in a web browser or through iOS and Android apps, can be fully integrated into any existing portal, and provides features
+          including a fully access controlled admin panel, groups, distribution lists, emergency alerts, secure form processing, and more.
         project_length: 24
         team_size: 3
   services:
@@ -571,6 +618,7 @@ en:
         programming process
     development:
       - title: Web application development services
+        id: web-application-development
         logo: services/web_icon.svg
         description:
           At Active Bridge, our number one goal is to find effective web
@@ -608,6 +656,7 @@ en:
               React is a JavaScript library for developing user interfaces ideal for solving performance
               project issues and increasing delivery speed.
       - title: Mobile application development services
+        id: mobile-application-development
         logo: services/mobile_icon.svg
         description:
           At Active Bridge we bring our mobile development expertise together with your ideas to

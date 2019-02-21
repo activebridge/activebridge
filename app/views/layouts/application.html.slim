@@ -2,48 +2,19 @@
 
 doctype 5
 
-head
-  css:
-    .informational_container{
-      visibility: hidden;
-      opacity: 0;
-    }
-    header{
-      opacity: 0;
-    }
-
-    .hire_us_container{
-      opacity: 0;
-    }
-    
 html lang='en'
-  title=t('meta.pages.' + @page + '.title')
   meta property='og:url'         content='https://activebridge.org/'
   meta property='og:title'       content='Ruby on Rails Web Development Company, Full-stack | Active Bridge'
   meta property='og:description' content='Ruby on Rails development company, web application development & custom software solution provider. Huge work experience with markets of USA, Canada and Europe.'
   meta property='og:image'       content='https://i.imgur.com/VObMwOF.jpg'
   meta name = 'description' content=t('meta.pages.' + @page + '.description')
-  
+
   = render 'layouts/head', type: :application, media: :all
 
   body
     = render 'shared/navbar'
+    = render 'shared/header'
     = yield
-    header#header
-      .logotype
-        a href='/'= inline_svg 'index/logo.svg', class: 'logotype'
-      .path
-        'Home
-        - if !@page.eql? '/'
-          '\ 
-          = @page.gsub('_', ' ').capitalize
-    a.hire_us_container#hire_us_container href='/contact'
-      span Hire Us
-      = image_submit_tag 'index/chat_button.svg', class: 'chat_button' 
-
-    = javascript_include_tag 'application', async: true
-
-    = stylesheet_link_tag :application, 'https://fonts.googleapis.com/css?family=Raleway', media: :all
     javascript:
       var head = document.head,
           link = document.createElement('link');
@@ -52,6 +23,7 @@ html lang='en'
       link.rel = 'stylesheet';
       link.href = "#{ asset_path('fonts.css')}";
       head.appendChild(link);
+
       let changeItem = (item) => {
         item.focus()
       }

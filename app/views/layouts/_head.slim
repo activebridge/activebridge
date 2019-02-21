@@ -1,5 +1,5 @@
 head
-  title 'Ruby on Rails Development Company || Active Bridge'
+  title=t("meta.pages.#{params[:page]}.title", default: 'Ruby on Rails Development Company')
   meta charset='utf-8'
   meta name = 'viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no'
   meta name='google-site-verification' content='1AeEQ7FZFB4K7URidlmD2UP6z9pzq5HMUACZOhVRbpA'
@@ -8,6 +8,8 @@ head
   link rel='icon' sizes='192x192' href='/icon-4x.png'
   meta name="msvalidate.01" content="A484A7672177506CA8F6FA11A7463867"
   = csrf_meta_tags
+  = stylesheet_link_tag :application, 'https://fonts.googleapis.com/css?family=Raleway', media: :all
+  = javascript_include_tag 'application', async: true
   = yield :head
 
   script type = 'application/ld+json'
@@ -48,3 +50,15 @@ head
              "addressCountry" : "United States"
          }
      }}
+  css:
+    .informational_container{
+      visibility: hidden;
+      opacity: 0;
+    }
+    header{
+      opacity: 0;
+    }
+
+    .hire_us_container{
+      opacity: 0;
+    }
