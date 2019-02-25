@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get ':page', to: 'welcome#index',
-               constraints: { page: /(team|services|portfolio|contact|how_we_work)/ },
+               constraints: { page: /(team|services|portfolio|contact|how-we-work)/ },
                as: :page
   get 'expire_cache', to: 'welcome#expire_cache'
   get 'BingSiteAuth.xml' => 'welcome#bing_site_auth', format: 'xml', as: :BingSiteAuth

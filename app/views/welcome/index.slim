@@ -1,12 +1,4 @@
 .gradient_container
-  .gradient-circle-1
-  .gradient-circle-2
-  .gradient-circle-3
-  .gradient-circle.left-bottom
-  .gradient-circle.right-bottom
-  .gradient-circle.top-first
-  .gradient-circle.top-second 
-  .white-line
 .container#container
   .container_index
     .logo#logo_holder
@@ -18,10 +10,9 @@
         .inner#inner
           = inline_svg 'index/logo.svg', class: 'img__logo', id: 'logo'
       br
-      a.btn_work  href='#about_us' 
+      a.btn_work href='#about_us' 
         b= t('about_us.about')
-  .about_us_container
-    a#about_us
+  .about_us_container#about_us
     .description_container
       .description_img
         = inline_svg 'index/home_page_1.svg', class: 'home_page'
@@ -41,7 +32,7 @@
         = inline_svg 'index/home_page_3.svg', class: 'home_page'
         = inline_svg 'index/home_page_3_pink.svg', class: 'home_page home_page_pink'
       .description_text=t('about_us.information.third')
-  .solutions_and_benefits#solutions_and_benefits 
+  .solutions_and_benefits#solutions_and_benefits
     .solutions#solutions
       .header_2= t('about_us.solutions_and_benefits.solutions_title')
       .tetris_container.higher
@@ -50,14 +41,14 @@
             span
               a href='##{id_name(el[:title])}'= el[:title]
             a href='##{id_name(el[:title])}'
-              = inline_svg(('index/tetris'+ (index+1).to_s + '.svg'), class: 'tetris')   
+              = inline_svg(('index/tetris'+ (index+1).to_s + '.svg'), class: 'tetris')
       .tetris_container.lower#lower
         - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, index|
           div class='#{el[:id]}_element tetris_holder' id='#{el[:id]}_lower'
             span
               a href='##{id_name(el[:title])}'= el[:title]
-            a href='##{id_name(el[:title])}'  
-              = inline_svg(('index/tetris'+ (index+1).to_s + '.svg'), class: 'tetris')  
+            a href='##{id_name(el[:title])}'
+              = inline_svg(('index/tetris'+ (index+1).to_s + '.svg'), class: 'tetris')
     .benefits#benefits
       .header_2= t('about_us.solutions_and_benefits.benefits_title')
     .solutions_and_benefits_desc
@@ -68,17 +59,14 @@
               .title= el[:title]
               hr
             .description= el[:desc]
-      = link_to '', '#solutions', class: 'close_description', id: 'solutions'   
+      = link_to '', '#solutions', class: 'close_description', id: 'solutions'
       - I18n.t('about_us.solutions_and_benefits.benefits').each do |el|
         .informational_container id='#{id_name(el[:title])}'
           .about_item
             .title_holder
               .title= el[:title]
               hr
-            .description= el[:desc]   
-      = link_to '', '#benefits', class: 'close_description', id: 'benefits'  
+            .description= el[:desc]
+      = link_to '', '#benefits', class: 'close_description', id: 'benefits'
 
 
-
-  
-  

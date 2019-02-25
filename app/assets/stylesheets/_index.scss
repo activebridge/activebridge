@@ -1,17 +1,17 @@
 $solutions:(
-  full_stack_expertise_where_you_need_it,
-  project_staffing_and_recruiting,
-  a_motivated_workforce,
-  timely_delivery,
-  team_extending
+  full-stack-expertise-where-you-need-it,
+  project-staffing-and-recruiting,
+  a-motivated-workforce,
+  timely-delivery,
+  team-extending
 );
 
 $benefits:(
-  dedicated_web_developers,
-  teamwork_and_expert_integration,
-  transparency_and_face_to_face_communication,
+  dedicated-web-developers,
+  teamwork-and-expert-integration,
+  transparency-and-face-to-face-communication,
   flexibility,
-  fluent_english_communication
+  fluent-english-communication
 );
 
 body {
@@ -24,79 +24,13 @@ body {
   width: calc(100% - 15vw);
   height: 100vh;
   z-index: 1;
-
-  .gradient-circle-1 {
-    height: 28vw;
-    width: 28vw;
-    opacity: 0.4;
-    background: radial-gradient(14vw 14vw, circle contain #5f52ca, rgba(white, 0));
-    background: radial-gradient(14vw 14vw, circle contain, #5f52ca, rgba(white, 0));
-    position: absolute;
-    top: 34%;
-    left: 2%;
-    z-index: 1;
-  }
-  
-  .gradient-circle-2 {
-    height: 38vw;
-    width: 38vw;
-    opacity: 0.4;
-    background: radial-gradient(19vw 19vw, circle contain #5f52ca, #b64e96 5%, rgba(white, 0));
-    background: -moz-radial-gradient(19vw 19vw, circle contain, #5f52ca, #b64e96 5%, rgba(white, 0));
-    position: absolute;
-    top: 15%;
-    right: 0;
-    z-index: 1;
-  }
-  
-  .gradient-circle-3 {
-    position: absolute;
-    left: -6vw;
-    height: 12vw;
-    width: 12vw;
-    opacity: 0.5;
-    background: radial-gradient(6vw 6vw, circle contain #5f52ca, rgba(white, 0));
-    background: -moz-radial-gradient(6vw 6vw, circle contain, #5f52ca, rgba(white, 0));
-  }
-
-  .gradient-circle {
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    opacity: .5;
-    background: radial-gradient(10vw 10vw, circle contain #5f52ca, rgba(white, 0));
-    background: -moz-radial-gradient(10vw 10vw, circle contain, #5f52ca, rgba(white, 0));
-
-    &.left-bottom {
-      left: -8vw;
-      bottom: -10vw;
-    }
-
-    &.right-bottom {
-      right: -10vw;
-      bottom: -10vw;
-    }
-
-    &.top-first {
-      top: -10vw;
-      left: calc(40% - 20vw);
-      background: radial-gradient(10vw 10vw, circle contain #b64e96, rgba(white, 0));
-      background: -moz-radial-gradient(10vw 10vw, circle contain, #b64e96, rgba(white, 0));
-    }
-
-    &.top-second {
-      top: -10vw;
-      right: 0;
-    }
-  }
-
-  .white-line {
-    position: absolute;
-    top: 100vh;
-    width: 100%;
-    height: 10vw;
-    background: white;
-  }
+  background: radial-gradient(10vw at left 15%, rgba(#5f52ca, 0.35) -15%, rgba(white, 0) 90%),
+              radial-gradient(15vw at 25% top, rgba(#5f52ca, 0.35), rgba(#b64e96, 0.35) -5%, rgba(white, 0)),
+              radial-gradient(13vw at 85% top, rgba(#5f52ca, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(13vw at 25% 60%, rgba(#5f52ca, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(19vw at 75% center,rgba(#5f52ca, 0.35), rgba(#b64e96, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(16vw at left bottom, rgba(#5f52ca, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(14vw at right bottom, rgba(#5f52ca, 0.35) -15%, rgba(white, 0));
 }
 .container_index {
   height: 100vh;
@@ -129,7 +63,7 @@ body {
   }
 
   .img__logo {
-    height: 45vh;
+    max-height: 45vh;
   }
 
   .btn_work {
@@ -141,7 +75,7 @@ body {
     transition: all .3s ease;
 
     &:hover {
-      box-shadow: 0px 0px 100px rgba(#5f52ca, 0.5);
+      box-shadow: 0px 0px 50px rgba(145, 146, 210, 0.5);
     }
   }
 

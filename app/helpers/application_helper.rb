@@ -35,7 +35,11 @@ module ApplicationHelper
   end
 
   def id_name(str)
-    str.downcase.gsub(/[ -]/, '_')
+    str.downcase.gsub(' ', '-')
+  end
+
+  def id_member(member)
+    member.downcase.gsub(/[ -]/, '_')
   end
 
   def item_name(name)

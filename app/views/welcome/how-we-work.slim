@@ -6,11 +6,10 @@
       = t('how_we_work.description')
     .holder_key
       .keyboard_container
-        .get_dedicated
-          b=t('how_we_work.get_dedicated')
+        h1.get_dedicated=t('how_we_work.get_dedicated')
         = inline_svg 'how_we_work/keyboard_hover.svg', class: 'keyboard key_hover'
         = inline_svg 'how_we_work/keyboard.svg', class: 'keyboard'
-        .cooperation_models= t('how_we_work.models_title')
+        .cooperation-models= t('how_we_work.models_title')
     .cooperation_models_cards#cooperation_models
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
         .model_card
@@ -25,31 +24,31 @@
                 'For:
                 = who
           .spacer
-          a.learn_more href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '_')}' 
+          a.learn_more href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
             'Learn more
     .models_information
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
-        .informational_container id='#{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '_')}'
+        .informational_container id='#{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
           .desc_container
-            .header_2
+            h2.header_2
               =cooperation[:title]
-            p 
-              span= t('how_we_work.model_questions.definition') 
+            p
+              span= t('how_we_work.model_questions.definition')
               =cooperation[:definition]
-            p 
-              span= t('how_we_work.model_questions.for_who') 
+            p
+              span= t('how_we_work.model_questions.for_who')
             ul
               - cooperation[:for_who].each do |f|
                 li=f
             p
-              span= t('how_we_work.model_questions.scope_of_work')   
+              span= t('how_we_work.model_questions.scope_of_work')
               p=cooperation[:scope_of_work]
             p
               span= t('how_we_work.model_questions.cost')
               p=cooperation[:cost]
-            p 
+            p
               span= t('how_we_work.model_questions.advantages')
-            ul 
+            ul
               -cooperation[:advantages].each do |a|
                 li=a
-        a#close_model href='#cooperation_models'
+        a#close_model href='#cooperation-models'
