@@ -1,4 +1,4 @@
-.container onmouseover='transformForm()'
+.container
   .main_header
     .header_2.contact_header_2= t('.title')
     .header_3.contact_header_3
@@ -59,10 +59,3 @@
         span= entity[:address]
         span= entity[:post]
         span= entity[:country]
-    
-javascript:
-  let transformForm = () =>{
-    document.getElementById('contact_form_holder').style.top = '35%';
-  }
-
-
