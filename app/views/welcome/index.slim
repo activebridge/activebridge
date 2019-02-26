@@ -5,8 +5,6 @@
       .index_header= t('about_us.active_bridge')
       .index_header_2= t('about_us.slogan')
       .logo_container#logo_container
-        - (1..100).each do |cell|
-          = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
         .inner#inner
           = inline_svg 'index/logo.svg', class: 'img__logo', id: 'logo'
       br
@@ -68,5 +66,4 @@
               hr
             .description= el[:desc]
       = link_to '', '#benefits', class: 'close_description', id: 'benefits'
-
-
+      
