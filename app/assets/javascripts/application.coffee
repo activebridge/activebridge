@@ -19,13 +19,10 @@ header = document.getElementById('header')
 hire_us_container = document.getElementById('hire_us_container')
 transformTetris = (first, second, third, fourth, fifth, lower) ->
   first.style.transform = 'rotate(90deg)'
-  second.style.transform = 'translate(56.6%, 167%)'
-  second.style.MozTransform = 'translate(55.5%, 159%)'
+  second.style.transform = 'translate(57%, 165%)'
   third.style.transform = 'rotate(180deg) translate(-56.5%, 77.5%)'
-  fourth.style.transform = 'rotate(90deg) translate(17.5%, -81%)'
-  fourth.style.MozTransform = 'rotate(90deg) translate(17.5%, -78%)'
-  fifth.style.transform = 'rotate(90deg) translate(32%, 217.5%)'
-  fifth.style.MozTransform = 'rotate(90deg) translate(32%, 201%)'
+  fourth.style.transform = 'rotate(90deg) translate(17.8%, -79.5%)'
+  fifth.style.transform = 'rotate(90deg) translate(31.5%, 213.5%)'
   lower.style.visibility = 'visible'
   lower.style.transform = 'translateY(100%) translateX(-7%)'
 
