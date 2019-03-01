@@ -641,14 +641,17 @@ en:
             desc:
               Ruby on Rails is a fast, reliable framework that includes everything needed to build
               complex database-backed applications.
+            icon: 'services/ruby_on_rails.svg'
           - title: Angular JS
             desc:
               Angular JS is a front-end web application framework used for single-page web apps that
               allow processing of data on the user-side.
+            icon: 'services/angular.svg'
           - title: React
             desc:
               React is a JavaScript library for developing user interfaces ideal for solving performance
               project issues and increasing delivery speed.
+            icon: 'services/react.svg'
       - title: Mobile application development services
         id: mobile-application-development
         logo: services/mobile_icon.svg
@@ -662,10 +665,12 @@ en:
             desc:
               React Native is a JavaScript framework used for developing native apps using React. It’s ideal
               for building fast, easily scalable apps for both iOS and Android.
+            icon: 'services/react.svg'
           - title: Ionic
             desc:
               Ionic is a software development kit (SDK) used for hybrid mobile applications and cross-platform
               mobile development.
+            icon: 'services/ionic.svg'
     technologies:
       title: Technologies
       desc:

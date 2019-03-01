@@ -109,31 +109,31 @@
 
           .technology {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             flex-wrap: nowrap;
 
             .tech_desc {
               flex: 1;
-              padding: 1vw;
               text-align: justify;
-              margin-left: 2vw;
-              opacity: 0;
-              transition: visibility 1s linear .3s, opacity .3s linear;
-              box-shadow: 0px 3px 20px rgba(136, 136, 136, 0.85);
+              margin: 10px 0 10px 45px;
             }
 
-            span {
+            .tech-title {
+              display: flex;
+              align-items: center;
               white-space: nowrap;
               text-transform: uppercase;
 
+              .tech-icon {
+                height: 40px;
+              }
+
+              b {
+                margin-left: 5px;
+              }
+
               &:hover {
                 color: #b64e96;
-                cursor: pointer;
-              }
-              &:hover ~ .tech_desc {
-                color: #b64e96;
-                opacity: 1;
-                z-index: 3;
               }
             }
           }
