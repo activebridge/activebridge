@@ -263,13 +263,6 @@ en:
             Combine that with great communication skills and a background in psychology, and you’ve got a developer uniquely suited to understand the customer’s needs and
             build great end-products to meet them.
           projects: include.io, GOJI, Mediprocity, Total Adventure, eTutorCloud
-        - name: Kovtun Volodymyr
-          avatar: Kovtun Volodymyr.png
-          position: Full - stack developer
-          description:
-            Vladimir is highly experienced in application development using Angular. His love of front-end development and passion for seeing the results of his work in action mean
-            clients won’t want to limit him to just the backend!
-          projects: Example
         - name: Voloshyn Oleg
           avatar: Voloshyn.png
           position: Ruby on Rails engineer
