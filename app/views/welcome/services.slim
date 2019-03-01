@@ -1,17 +1,14 @@
 .container
-  .header_2 
-    b= t('services.title')
-  a#web_dev
-  a#moblile_dev
+  h1.header_2 = t('services.title')
   .services
     - I18n.t('services.development').each_with_index do |service, i|
       .development
-        .logo_container
+        .logo_container id="#{service[:id]}"
           - (1..100).each do |cell|
             = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
           .inner
             = inline_svg(service[:logo], class: 'service_icon')
-        .header_3
+        h2.header_3
           b= service[:title]
         .description= service[:description]
         - unless i != 0
@@ -32,13 +29,13 @@
                 - service[:bdd][:advantages][:items].each do |a|
                   li= a
   .header_2 Core technologies we specialize in
-  a#core_tech
   .services.tech
     - I18n.t('services.development').each_with_index do |service, i|
       .development.tech
-        .technologies
+        .technologies#core-technologies
           - service[:technologies].each do |t|
             .technology
-              span
+              .tech-title
+                = inline_svg t[:icon], class: 'tech-icon'
                 b= t[:title]
               .tech_desc= t[:desc]

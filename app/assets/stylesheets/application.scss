@@ -93,48 +93,6 @@ header {
   transition: width .5s;
 }
 
-.hire_us_container{
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  z-index: -1;
-  height: 45px;
-  width: 220px;
-  position: fixed;
-  top: 75px;
-  right: 19vw;
-  background-color: white;
-  border-radius: 0px 0px 10px 10px;
-  box-shadow: 0px 0px 20px #DAD7D7;
-  opacity: 0;
-  font-size: 1.25em;
-  transition: all 1s linear;
-  span{
-    width: 70%;
-    color: #5f52ca;
-    margin-left: 1vw;
-    transition: all .3s linear;
-  }
-
-  .chat_button{
-    width: 30%;
-    height: 33px;
-    transition: all .3s linear;
-  }
-
-  &:hover{
-    span{
-      margin-left: 0;
-      transform: translateX(20%);
-    }
-
-    .chat_button{
-      transform: translateX(-20%);
-    }
-
-  }
-}
-
 .logo_container{
   width: 100%;
   display: inline-block;
@@ -190,7 +148,15 @@ input#menu {
   position: fixed;
 
   &:checked ~ .container {
-    width: calc(100% - 200px);
+    width: calc(100% - 20vw);
+
+    @media screen and (max-width: 900px) {
+      width: calc(100% - 25vw);
+    }
+
+    @media screen and (min-width: 1400px) {
+      width: calc(100% - 15vw);
+    }
   }
 
   &:checked + .nav-toggler {
@@ -379,7 +345,7 @@ nav.navbar {
   visibility: hidden;
   opacity: 0;
   top: 15%;
-  left: 41%;
+  left: 47%;
   transform: translateX(-50%);
   transition: visibility 1s linear .3s, opacity .3s linear;
   box-shadow: 0px 3px 20px rgba(136, 136, 136, 0.85);
