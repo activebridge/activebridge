@@ -1,5 +1,4 @@
 .container {
-  margin-left: 1.5vw;
   display: flex;
   flex-direction: column;
 
@@ -24,7 +23,7 @@
       .description {
         text-align: justify;
       }
-      
+
       .bdd_show:hover ~ #bdd {
         visibility: visible;
         opacity: 1;
@@ -62,7 +61,7 @@
             border: 1px solid white;
             color: white;
             background: linear-gradient(to right, #b64e96, #5f52ca);
-          }  
+          }
         }
         }
 
@@ -90,14 +89,14 @@
               line-height: 2px;
               margin: 3vh 0;
             }
-  
+
             .ruby {
               width: 12%;
               position: absolute;
               top: 6vh;
               right: 5px;
             }
-  
+
             ul {
               padding-left: 17px;
             }
@@ -110,7 +109,7 @@
 
           .technology {
             display: flex;
-            align-items: center;    
+            align-items: center;
             flex-wrap: nowrap;
 
             .tech_desc {
@@ -122,11 +121,11 @@
               transition: visibility 1s linear .3s, opacity .3s linear;
               box-shadow: 0px 3px 20px rgba(136, 136, 136, 0.85);
             }
-            
+
             span {
               white-space: nowrap;
               text-transform: uppercase;
-              
+
               &:hover {
                 color: #b64e96;
                 cursor: pointer;

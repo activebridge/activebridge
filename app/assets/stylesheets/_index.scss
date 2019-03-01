@@ -21,8 +21,8 @@ body {
 
 .gradient_container {
   position: absolute;
-  width: calc(100% - 15vw);
   height: 100vh;
+  width: 100%;
   z-index: 1;
   background: radial-gradient(10vw at left 15%, rgba(#5f52ca, 0.35) -15%, rgba(white, 0) 90%),
               radial-gradient(15vw at 25% top, rgba(#5f52ca, 0.35), rgba(#b64e96, 0.35) -5%, rgba(white, 0)),

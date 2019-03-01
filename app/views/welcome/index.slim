@@ -1,5 +1,5 @@
-.gradient_container
 .container#container
+  .gradient_container
   .container_index
     .logo#logo_holder
       .index_header= t('about_us.active_bridge')
@@ -8,7 +8,7 @@
         .inner#inner
           = inline_svg 'index/logo.svg', class: 'img__logo', id: 'logo'
       br
-      a.btn_work href='#about_us' 
+      a.btn_work href='#about_us'
         b= t('about_us.about')
   .about_us_container#about_us
     .description_container
@@ -66,4 +66,4 @@
               hr
             .description= el[:desc]
       = link_to '', '#benefits', class: 'close_description', id: 'benefits'
-      
+
