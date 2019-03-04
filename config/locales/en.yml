@@ -114,7 +114,7 @@ en:
       find_us:
         - link: contact@active-bridge.com
           logo: contact/email.svg
-        - link: +380636086045
+        - link: '+380636086045'
           logo: contact/phone.svg
         - link: https://www.facebook.com/ActiveBridgeTeam
           logo: contact/fb.svg

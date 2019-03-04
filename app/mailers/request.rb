@@ -1,5 +1,6 @@
 class Request < ApplicationMailer
   def notify(attrs)
+    @reason = attrs['reason']
     @body = attrs['message']
     mail(
       from: "#{attrs['name']} <#{attrs['email']}>",
