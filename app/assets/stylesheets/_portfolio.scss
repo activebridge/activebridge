@@ -14,11 +14,6 @@ $projects: (
   modean_apps
 );
 
-hr{
-  border: none;
-  border-top: 2px solid #5f52ca;
-}
-
 .subtitle{
   margin-top: 2vh;
   color: #5f52ca;
@@ -57,7 +52,7 @@ hr{
     @each $project in $projects {
       a[href="##{$project}"] {
         path, polygon, rect, circle{
-          transition: all .6s ease;
+          transition: all .3s ease;
         }
         &:hover{
           path, polygon, rect, circle{
@@ -65,10 +60,14 @@ hr{
             fill: #b64e96;
           }
           .bg{
-            stroke-width: 3px;
+            stroke-width: 2px;
           }
         }
       }
+    }
+
+    @media screen and (min-width: 1400px) {
+      width: 70%;
     }
   }
 
@@ -76,21 +75,21 @@ hr{
     ##{$project}:target {
       visibility: visible;
       opacity: 1;
-      z-index: 4;
+      z-index: 5;
     }
 
     ##{$project}:target ~ #close_project {
-      position: fixed;
-      z-index: 3;
+      z-index: 4;
     }
   }
 
   #close_project {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
   }
 
   .informational_container {
@@ -159,52 +158,67 @@ hr{
 
 .portfolio_testimonials {
   z-index: 3;
-  height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
 
   .testimonial {
     height: 10vh;
-    margin: 1vh;
+    max-height: 90px;
+    margin: 5px;
     width: 90%;
     align-self: center;
+
     a {
       text-decoration: none;
       color: #5f52ca;
       height: 100%;
-    .description_wrapper{
-      display: flex;
-      align-items: center;
-      height: 100%;
 
-      .like{
+      .description_wrapper{
+        display: flex;
+        align-items: center;
         height: 100%;
-        min-width: 75px;
-        transition: all .3s ease-in-out;
-      }
 
-      span {
-        margin-left: 2vw;
-      }
-
-      .spacer {
-        flex: 1;
-      }
-
-      &:hover{
         .like{
-          transform: rotate(45deg);
+          height: 100%;
+          transition: all .3s ease-in-out;
+        }
+
+        span {
+          margin-left: 2vw;
         }
 
         .read_more{
-          border: none;
-          color: white;
-          background: linear-gradient(to right, #b64e96, #5f52ca);
+          border: 1px solid  #5f52ca;
+          font-size: 1rem;
+          background: white;
+          color: #5f52ca;
+          text-decoration: none;
+          transition: all .5s ease-in-out;
+          height: 60%;
+          cursor: pointer;
+          padding: 0 10px;
+        }
+
+        &:hover{
+          .like{
+            transform: rotate(45deg);
+          }
+
+          .read_more{
+            border: 1px solid white;
+            color: white;
+            background: linear-gradient(to right, #b64e96, #5f52ca);
+          }
         }
       }
     }
   }
+
+  @media screen and (min-width: 1400px) {
+    .portfolio_testimonial {
+      width: 80%;
+    }
   }
 }
 
@@ -254,8 +268,10 @@ hr{
 
         hr {
           margin: 0;
-          height: 1px;
+          height: 2px;
           width: 100%;
+          background-color: #5f52ca;
+          border: none;
         }
 
         .author_info {
@@ -305,7 +321,6 @@ hr{
     #testimonial_#{$project}:target ~ #close_testimonial {
       z-index: 3;
       position: fixed;
-
     }
   }
 }

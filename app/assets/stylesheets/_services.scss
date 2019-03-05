@@ -46,24 +46,13 @@
           font-weight: bold;
         }
 
-        .read_more {
-          display: none;
-          width: 20%;
-          height: 100%;
-        }
-
         &:hover {
           span {
             transform: translateX(10%);
           }
 
-          .read_more {
-            border: 1px solid white;
-            color: white;
-            background: linear-gradient(to right, #b64e96, #5f52ca);
-          }
         }
-        }
+      }
 
         .informational_container {
           height: auto;

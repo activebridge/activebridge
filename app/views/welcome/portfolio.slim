@@ -1,6 +1,5 @@
 .container
-  a#projects
-  .content.projects
+  .content.projects#projects
     .header_2
       b= t('portfolio.title')
     .subtitle
@@ -40,9 +39,8 @@
               b= t('portfolio.project_info.team_size')
               = project[:team_size]
 
-    = link_to '', '#', id: 'close_project'
-  a#testimonials
-  .portfolio_testimonials
+    = link_to '', '#portfolio', id: 'close_project'
+  .portfolio_testimonials#testimonials
     - I18n.t('testimonials.all').each_with_index do |testimonial, index|
       .testimonial class="portfolio_testimonial"
         a href="#testimonial_#{item_name(testimonial[:company])}"
@@ -73,7 +71,4 @@
             = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             .description= testimonial[:description]
             = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
-    = link_to '', '#testimonials', id: 'close_testimonial'
-
-
-
+    = link_to '', '#portfolio', id: 'close_testimonial'
