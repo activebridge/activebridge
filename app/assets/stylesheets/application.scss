@@ -38,7 +38,7 @@ body {
   background-size: cover;
 }
 
-header {
+.header {
   display: flex;
   opacity: 0;
   align-items: center;
@@ -53,7 +53,8 @@ header {
   background-color: white;
   box-shadow: 0px 0px 20px #DAD7D7;
   transition: all 1s linear;
-  .logotype{
+
+  .logotype {
     margin: 0 25px 0 10px;
     width: 80px;
   }
@@ -63,8 +64,10 @@ header {
     z-index: 3;
     box-shadow: none;
     background: none;
+
     .logotype {
       opacity: .7;
+      
       &:hover {
         opacity: 1;
       }
