@@ -16,14 +16,14 @@ $projects: (
 
 .subtitle{
   margin-top: 2vh;
-  color: #5f52ca;
+  color: $main-blue;
   font-size: 1.35rem;
   text-transform: uppercase;
 }
 
 .subsubtitle{
   margin-top: 1vh;
-  color: #5f52ca;
+  color: $main-blue;
   font-size: 1.3rem;
 }
 
@@ -56,8 +56,8 @@ $projects: (
         }
         &:hover{
           path, polygon, rect, circle{
-            stroke: #b64e96;
-            fill: #b64e96;
+            stroke: $main-violet;
+            fill: $main-violet;
           }
           .bg{
             stroke-width: 2px;
@@ -120,14 +120,14 @@ $projects: (
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-radius: 30px;
-            background: linear-gradient(to right, #b64e96, #5f52ca);
+            background: linear-gradient(to right, $main-violet, $main-blue);
             color: #FFF;
             padding: 12px 40px;
             text-decoration: none;
             transition: all .3s;
 
             &:hover {
-              background: linear-gradient(to right, #5f52ca, #b64e96);
+              background: linear-gradient(to right, $main-blue, $main-violet);
               box-shadow: 0px 3px 6px rgba(136, 136, 136, 0.85);
             }
           }
@@ -171,7 +171,7 @@ $projects: (
 
     a {
       text-decoration: none;
-      color: #5f52ca;
+      color: $main-blue;
       height: 100%;
 
       .description_wrapper{
@@ -189,10 +189,10 @@ $projects: (
         }
 
         .read_more{
-          border: 1px solid  #5f52ca;
+          border: 1px solid  $main-blue;
           font-size: 1rem;
           background: white;
-          color: #5f52ca;
+          color: $main-blue;
           text-decoration: none;
           transition: all .5s ease-in-out;
           height: 60%;
@@ -208,7 +208,7 @@ $projects: (
           .read_more{
             border: 1px solid white;
             color: white;
-            background: linear-gradient(to right, #b64e96, #5f52ca);
+            background: linear-gradient(to right, $main-violet, $main-blue);
           }
         }
       }
@@ -270,7 +270,7 @@ $projects: (
           margin: 0;
           height: 2px;
           width: 100%;
-          background-color: #5f52ca;
+          background-color: $main-blue;
           border: none;
         }
 

@@ -43,7 +43,7 @@ body {
   opacity: 0;
   align-items: center;
   z-index: -1;
-  color: #5f52ca;
+  color: $main-blue;
   top: 0;
   left: 0;
   position: fixed;
@@ -76,14 +76,14 @@ body {
 }
 
 .header_2 {
-  color: #5f52ca;
+  color: $main-blue;
   text-transform: uppercase;
   font-size: 1.5rem;
   margin-top: 7vh;
 }
 
 .header_3{
-  color: #5f52ca;
+  color: $main-blue;
   text-transform: uppercase;
   text-align: center;
   margin: 3vh;
@@ -228,7 +228,7 @@ input#menu {
 
 .link-title {
   font-size: 1.2em;
-  background-color: #b64e96;
+  background-color: $main-violet;
   border-radius: 25px;
   visibility: hidden;
   opacity: 0;
@@ -257,7 +257,7 @@ nav.navbar {
   width: 70px;
   height: 100vh;
   z-index: 6;
-  background-image: linear-gradient(to top, #5f52ca, #b64e96);
+  background-image: linear-gradient(to top, $main-blue, $main-violet);
 
   .items {
     display: flex;
@@ -326,7 +326,7 @@ nav.navbar {
 }
 
 .informational_container {
-  color: #5f52ca;
+  color: $main-blue;
   text-align: center;
   width: 40%;
   height: 70%;

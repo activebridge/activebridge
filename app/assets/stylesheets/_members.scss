@@ -78,7 +78,7 @@ $members:(
       height: 30%;
       align-self: flex-end;
       span {
-        color: #5f52ca;
+        color: $main-blue;
         transition: all .3s linear;
 
         &.name {
@@ -95,7 +95,7 @@ $members:(
     &:hover {
       .descr {
         span {
-          color: #b64e96;
+          color: $main-violet;
           }
         }
 

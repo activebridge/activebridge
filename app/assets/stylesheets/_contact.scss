@@ -41,10 +41,10 @@ $initial-margin: 5;
           background-color: #F9F9F9;
           border: none;
           width: 100%;
-          box-shadow: 0px 0px 10px 3px rgba($color: #5f52ca, $alpha: 0.1) inset;
+          box-shadow: 0px 0px 10px 3px rgba($color: $main-blue, $alpha: 0.1) inset;
           outline: none;
           font-size: 1.15rem;
-          color: #5f52ca;
+          color: $main-blue;
           height: 50%;
           padding: 0 8px;
           box-sizing: border-box;
@@ -68,9 +68,9 @@ $initial-margin: 5;
         text-transform: uppercase;
         border: none;
         color: white;
-        background-color: #5f52ca;
+        background-color: $main-blue;
         border-radius: 5px;
-        box-shadow: 0px 0px 10px 1px rgba($color: #5f52ca, $alpha: 0.4);
+        box-shadow: 0px 0px 10px 1px rgba($color: $main-blue, $alpha: 0.4);
         cursor: pointer;
       }
     }
@@ -88,7 +88,7 @@ $initial-margin: 5;
     margin-left: 5%;
 
     .find_item {
-      color: #5f52ca;
+      color: $main-blue;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -123,7 +123,7 @@ $initial-margin: 5;
     align-self: center;
     justify-content: space-around;
     text-align: left;
-    color: #5f52ca;
+    color: $main-blue;
     margin: 5vh 0;
 
     .entity {
@@ -133,7 +133,7 @@ $initial-margin: 5;
       flex-wrap: wrap;
 
       .entity_holder {
-        background: linear-gradient(to right, #b64e96, #5f52ca);
+        background: linear-gradient(to right, $main-violet, $main-blue);
         color: white;
         display: flex;
         align-items: center;
@@ -149,7 +149,7 @@ $initial-margin: 5;
         }
 
         &:hover {
-          background: linear-gradient(to right, #5f52ca, #b64e96);
+          background: linear-gradient(to right, $main-blue, $main-violet);
           box-shadow: 0px 0px 50px #666;
         }
       }

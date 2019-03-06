@@ -24,13 +24,13 @@ body {
   height: 100vh;
   width: 100%;
   z-index: 1;
-  background: radial-gradient(10vw at left 15%, rgba(#5f52ca, 0.35) -15%, rgba(white, 0) 90%),
-              radial-gradient(15vw at 25% top, rgba(#5f52ca, 0.35), rgba(#b64e96, 0.35) -5%, rgba(white, 0)),
-              radial-gradient(13vw at 85% top, rgba(#5f52ca, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(13vw at 25% 60%, rgba(#5f52ca, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(19vw at 75% center,rgba(#5f52ca, 0.35), rgba(#b64e96, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(16vw at left bottom, rgba(#5f52ca, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(14vw at right bottom, rgba(#5f52ca, 0.35) -15%, rgba(white, 0));
+  background: radial-gradient(10vw at left 15%, rgba($main-blue, 0.35) -15%, rgba(white, 0) 90%),
+              radial-gradient(15vw at 25% top, rgba($main-blue, 0.35), rgba($main-violet, 0.35) -5%, rgba(white, 0)),
+              radial-gradient(13vw at 85% top, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(13vw at 25% 60%, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(19vw at 75% center,rgba($main-blue, 0.35), rgba($main-violet, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(16vw at left bottom, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(14vw at right bottom, rgba($main-blue, 0.35) -15%, rgba(white, 0));
 }
 .container_index {
   height: 100vh;
@@ -52,7 +52,7 @@ body {
   }
 
   .index_header_2 {
-    color: #5f52ca;
+    color: $main-blue;
     text-transform: uppercase;
     font-size: 1.75em;
   }
@@ -68,7 +68,7 @@ body {
 
   .btn_work {
     border-radius: 30px;
-    background: linear-gradient(to right, #b64e96, #5f52ca);
+    background: linear-gradient(to right, $main-violet, $main-blue);
     color: #FFF;
     padding: 18px 35px;
     text-decoration: none;
@@ -315,7 +315,7 @@ body {
 
           .title {
             font-size: 1.5rem;
-            color: #5f52ca;
+            color: $main-blue;
             text-transform: uppercase;
           }
         }
