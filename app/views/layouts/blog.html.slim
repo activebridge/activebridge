@@ -2,7 +2,6 @@ doctype 5
 html
   = render 'layouts/head', type: :blog, media: :all
   body
-    .blog-background= inline_svg 'blog/stripe.svg', class: 'stripes'
     = render 'shared/blog/header'
     main.main
       .yield

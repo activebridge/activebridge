@@ -24,5 +24,3 @@
     h3= t('blog.recommended')
     .articles
       = render partial: 'recommended_article', collection: recommended_articles, as: :recommended_article
-- unless article.pending?
-  .disqus-block= render 'disqus'

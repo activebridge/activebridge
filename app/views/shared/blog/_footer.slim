@@ -1,18 +1,20 @@
 footer.footer
   .footer-title
     p= t('blog.footer.title')
-  .footer-pages
-    h4= t('blog.footer.company')
-    ul.footer-page-list
-      - I18n.t('blog.footer.pages').each_pair do |key, value|
-        li= link_to value, page_url(key), target: '_blank'
-  .footer-contacts
-    h4= t('blog.footer.contacts')
-    p= t('blog.footer.mobile')
-    p= t('blog.footer.email')
-    = link_to t('blog.footer.contact_us'), page_url(:contact), target: '_blank'
-  .footer-right
-    h4= t('blog.footer.follow')
-    = render 'social_icons', klass: :xl
+  .footer-links
+    .footer-pages
+      h4= t('blog.footer.company')
+      ul.footer-page-list
+        - I18n.t('blog.footer.pages').each_pair do |key, value|
+          li= link_to value, page_url(key), target: '_blank'
+    .footer-contacts
+      h4= t('blog.footer.contacts')
+      a href="tel:#{t('blog.footer.mobile')}"= t('blog.footer.mobile')
+      a href="mailto:#{t('blog.footer.email')}"= t('blog.footer.email')
+      = link_to t('blog.footer.contact_us'), page_url(:contact), target: '_blank', class: 'contact'
+    .spacer
+    .footer-right
+      h4= t('blog.footer.follow')
+      = render 'social_icons', klass: :xl
   .footer-bottom
     p= t('blog.footer.copyright')
