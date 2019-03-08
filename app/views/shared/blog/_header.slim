@@ -11,3 +11,4 @@ header.blog
         => link_to_unless_current 'All Posts', articles_path, class: 'menu-item articles'
         - Article.categories.keys.each do |c|
           => link_to_unless_current t("blog.categories.#{c}"), category_articles_path(c), class: 'menu-item'
+        = link_to t('blog.footer.contact_us'), page_url(:contact, anchor: :contact), target: '_blank', class: 'menu-item contact-us'

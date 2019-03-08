@@ -1,6 +1,18 @@
-= link_to article_path(article), style: "background-image: url(#{article.picture_url})", class: 'article', remote: true do
-  .article-rollover
-    .meta
-      h4.article-title = article.title
+.article
+  h4.article-title = article.title
+  .article-body
+    .article-info
+      .article-about
+        span
+          b
+            'Author:
+          = article.member.name
+        span
+          b
+            'Published: 
+          = article.created_at.to_formatted_s(:long)
       = image_tag article.member.avatar.url, class: 'author-avatar'
-      span = article.member.name
+    = image_tag article.picture_url, class: 'article-picture'
+    .description = clean_truncate(article.body)
+    .spacer
+    = link_to 'Read more', article_path(article), class: 'learn_more'

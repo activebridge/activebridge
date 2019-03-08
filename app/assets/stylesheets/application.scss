@@ -128,6 +128,25 @@ body {
   }
 }
 
+.learn_more {
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(to right, $main-violet, $main-blue);
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all .2s linear;
+  white-space: nowrap;
+
+  &:hover {
+    box-shadow: 0px 0px 20px $main-blue;
+    background: linear-gradient(to right, $main-blue, $main-violet);
+  }
+}
+
 .spacer {
   flex: 1;
 }
