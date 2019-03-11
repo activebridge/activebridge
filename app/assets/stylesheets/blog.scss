@@ -199,10 +199,6 @@ a.article {
       padding: 5px 7px;
       transition: .2s all ease-in-out;
     }
-
-    &.contact-us:hover {
-      color: $main-violet;
-    }
   }
 }
 
@@ -269,7 +265,7 @@ a.article {
         .article-about {
           display: flex;
           flex-direction: column;
-          
+
           span {
             margin-top: 5px;
             font-size: 0.9em;
@@ -281,7 +277,7 @@ a.article {
           border-radius: 50%;
         }
       }
-      
+
       .article-picture {
         width: 100%;
         margin: 10px 0;
@@ -290,7 +286,7 @@ a.article {
       .description {
         text-align: justify;
       }
-      
+
       .learn_more {
         margin: auto;
         margin-top: 15px;
@@ -298,7 +294,7 @@ a.article {
         font-size: 0.8em;
         font-weight: 600;
         text-align: center;
-        padding: 10px 40px; 
+        padding: 10px 40px;
       }
     }
   }
@@ -599,6 +595,12 @@ a.article {
   }
   .main {
     padding: 20px 40px 20px 40px;
+
+    .posts {
+      .article {
+        width: 100%;
+      }
+    }
   }
   .article-rollover {
     padding: 20px 1.8vmax 1.8vmax;
@@ -633,9 +635,10 @@ a.article {
   }
   .menu-items {
     position: absolute;
+    color: white;
     width: 100vw;
     height: 0;
-    background: rgba(99, 56, 123, 0.98);
+    background: linear-gradient(to bottom, $main-blue, $main-violet);
     top: 0;
     left: 0;
     z-index: 1;
@@ -648,6 +651,10 @@ a.article {
     transition: height .3s .1s;
     a:hover {
       opacity: .7;
+    }
+
+    .contact-us {
+      opacity: .5;
     }
   }
 
@@ -757,17 +764,20 @@ a.article {
       padding: 5px 10%;
     }
 
-    &-pages {
-      width: 25%;
+    &-links {
+      flex-wrap: wrap;
     }
 
-    &-contacts {
-      width: 25%;
+    &-pages, &-contacts {
+      width: 50%;
     }
 
     &-right {
-      width: 30%;
-      margin-right: 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
     }
   }
 }
@@ -778,7 +788,7 @@ a.article {
   }
 
   nav {
-    padding: 10px 15px 0px 10px;
+    padding: 10px 15px 10px 10px;
   }
 
   .nav-left {
@@ -795,26 +805,5 @@ a.article {
 
   a.article:hover .article-rollover {
     padding: 25px 20px;
-  }
-
-  .footer {
-    &-title {
-      padding: 5px 3%;
-    }
-
-    &-pages {
-      width: 35%;
-    }
-
-    &-contacts {
-      width: 45%;
-    }
-
-    &-right {
-      width: 100%;
-      margin-right: 0;
-      text-align: center;
-      margin-bottom: 10px;
-    }
   }
 }
