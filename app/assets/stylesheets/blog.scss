@@ -241,7 +241,7 @@ a.article {
     margin-top: 25px;
 
     h4.article-title {
-      background: linear-gradient(to right, $main-violet, $main-blue);
+      background: linear-gradient(to bottom right, $main-violet, $main-blue);
       color: white;
       text-transform: uppercase;
       text-align: center;
@@ -274,7 +274,6 @@ a.article {
 
         .author-avatar {
           width: 7vmax;
-          border-radius: 50%;
         }
       }
 
@@ -359,7 +358,6 @@ a.article {
   .author-info {
     margin-right: 2vmax;
     float: left;
-    border-radius: 50%;
     width: 5vmax;
   }
   .post-info {
@@ -455,7 +453,7 @@ a.article {
       width: 30%;
       height: 100px;
       font-weight: bold;
-      background: linear-gradient(to right, $main-violet, $main-blue);
+      background: linear-gradient(to bottom right, $main-violet, $main-blue);
       margin: 0 15px;
       padding: 15px 50px;
       align-items: center;
@@ -641,7 +639,7 @@ a.article {
     background: linear-gradient(to bottom, $main-blue, $main-violet);
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 11;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -3,13 +3,33 @@
   flex-direction: column;
 
   .services {
+    width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: center;
+    color: $main-blue;
 
-    .development {
-      color: $main-blue;
+    .additional_info {
+      margin: 3vh 0;
+    }
+
+    .text-center {
+      text-align: center;
+      width: 100%;
+    }
+
+    .technology {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
       width: 45%;
-      margin: 3vw;
+      margin-top: 10px;
+
+      &.development {
+        color: $main-blue;
+        width: 45%;
+      }
 
       .service_icon {
         width: 75%;
@@ -41,18 +61,18 @@
         justify-content: space-between;
         text-transform: uppercase;
 
-        span {
-          transition: transform .5s ease;
-          font-weight: bold;
-        }
-
-        &:hover {
           span {
-            transform: translateX(10%);
+            transition: transform .5s ease;
+            font-weight: bold;
           }
 
+          &:hover {
+            span {
+              transform: translateX(10%);
+            }
+
+          }
         }
-      }
 
         .informational_container {
           height: auto;
@@ -91,50 +111,31 @@
             }
           }
         }
-        .technologies {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
 
-          .technology {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-
-            .tech_desc {
-              flex: 1;
-              text-align: justify;
-              margin: 10px 0 10px 45px;
-            }
-
-            .tech-title {
-              display: flex;
-              align-items: center;
-              white-space: nowrap;
-              text-transform: uppercase;
-
-              .tech-icon {
-                height: 40px;
-              }
-
-              b {
-                margin-left: 5px;
-              }
-
-              &:hover {
-                color: $main-violet;
-              }
-            }
-          }
-        }
-
-        &.tech{
-          margin: 3vh 1vw;;
-        }
+      .tech_desc {
+        flex: 1;
+        text-align: justify;
+        margin: 10px 0 10px 45px;
       }
 
-    .additional_info {
-      margin: 3vh 0;
+      .tech-title {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        .tech-icon {
+          height: 40px;
+        }
+
+        b {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          color: $main-violet;
+        }
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   h1.header_2 = t('services.title')
   .services
     - I18n.t('services.development').each_with_index do |service, i|
-      .development
+      .technology.development
         .logo_container id="#{service[:id]}"
           - (1..100).each do |cell|
             = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
@@ -28,14 +28,11 @@
               ul
                 - service[:bdd][:advantages][:items].each do |a|
                   li= a
-  .header_2 Core technologies we specialize in
-  .services.tech
+    .header_2.text-center Core technologies we specialize in
     - I18n.t('services.development').each_with_index do |service, i|
-      .development.tech
-        .technologies#core-technologies
-          - service[:technologies].each do |t|
-            .technology
-              .tech-title
-                = inline_svg t[:icon], class: 'tech-icon'
-                b= t[:title]
-              .tech_desc= t[:desc]
+      - service[:technologies].each do |t|
+        .technology
+          .tech-title
+            = inline_svg t[:icon], class: 'tech-icon'
+            b= t[:title]
+          .tech_desc= t[:desc]
