@@ -67,7 +67,7 @@ body {
 
     .logotype {
       opacity: .7;
-      
+
       &:hover {
         opacity: 1;
       }
@@ -192,6 +192,10 @@ input#menu {
       .item {
         .icon-link {
           padding: 0 15px;
+
+          .item-title {
+            display: none;
+          }
         }
 
         span {
@@ -301,8 +305,34 @@ nav.navbar {
         align-items: center;
 
         .icon-link {
+          position: relative;
           .nav-icon {
             width: 30px;
+          }
+
+          .item-title {
+            font-size: 1.2em;
+            background: $main-violet;
+            border-radius: 25px;
+            visibility: hidden;
+            opacity: 0;
+            color: white;
+            transition: all .3s;
+            position: absolute;
+            right: 115%;
+            text-align: center;
+            padding: 0px 14px;
+            z-index: 5;
+            top: calc(50% - 1px);
+            transform: translateY(-50%);
+            white-space: nowrap;
+          }
+
+          &:hover {
+            .item-title {
+              visibility: visible;
+              opacity: 1;
+            }
           }
         }
 
@@ -320,7 +350,11 @@ nav.navbar {
         }
 
         &:hover {
-          filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, .9));
+          .icon-link {
+            .nav-icon {
+              filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, .9));
+            }
+          }
         }
       }
 
