@@ -92,6 +92,27 @@ window.submit = (form) ->
   , 3500
   return false
 
-document.body.onscroll = (toggleHeader)
+scrollToTop = ->
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+  
+showBackToTopButton = ->
+  scroll = window.pageYOffset
+  backToTop = document.querySelector('#back-to-top')
+  if scroll > 50 
+    if !backToTop.classList.contains('show')
+      backToTop.classList += 'show'  
+  else
+    backToTop.classList.remove('show')
+
+handleScroll = ->
+  toggleHeader()
+  showBackToTopButton()
+  return
+
+document.body.onscroll = handleScroll
+document.querySelector('#back-to-top').onclick = scrollToTop
 document.querySelector(".container_index").onmousemove = rotateLogo if document.querySelector(".container_index")
 document.querySelector(".container_index").onmouseout = zeroizeLogoTransform if document.querySelector(".container_index")
