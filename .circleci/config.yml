@@ -1,19 +1,22 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/activebridge/activebridge
+    working_directory: ~/activebridge
     parallelism: 1
     shell: /bin/bash --login
     environment:
       CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
     docker:
-    - image: circleci/ruby:2.5-node
-      environment:
-        PGHOST: 127.0.0.1
-        PGUSER: postgres
-        POSTGRES_USER: postgres
-        POSTGRES_DB: ab_test
+      - image: circleci/ruby:2.5-node
+        environment:
+          RAILS_ENV: test
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+      - image: circleci/postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: ab_test
     steps:
       - checkout
       # Restore bundle cache
@@ -29,20 +32,19 @@ jobs:
       - run:
           working_directory: ~/activebridge/activebridge
           command: sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
-          
+
       - run: echo -e "export RAILS_ENV=test\nexport RACK_ENV=test" >> $BASH_ENV
       - run: 'bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
           --jobs=4 --retry=3 '
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:migrate
       - run:
-          command: bundle exec rake db:create db:schema:load --trace
-          environment:
-            RAILS_ENV: test
-            RACK_ENV: test
-      - run:
-          command: bundle exec rspec --color --require spec_helper --format progress spec
-          environment:
-            RAILS_ENV: test
-            RACK_ENV: test
+          command: |
+            mkdir /tmp/test-results
+            bundle exec rspec --profile 10 \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
       - store_test_results:
           path: /tmp/circleci-test-results
       - store_artifacts:
