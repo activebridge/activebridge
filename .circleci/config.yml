@@ -8,8 +8,7 @@ jobs:
       CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
     docker:
-    - image: circleci/build-image:ubuntu-14.04-XXL-upstart-1189-5614f37
-      command: /sbin/init
+    - image: circleci/ruby:2.5
       environment:
         PGHOST: 127.0.0.1
         PGUSER: postgres
@@ -20,9 +19,6 @@ jobs:
     - run:
         working_directory: ~/activebridge/activebridge
         command: sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
-    # Restore bundle cache
-    - type: cache-restore
-      key: rails-activebridge-{{ checksum "Gemfile.lock" }}
 
     # Bundle install dependencies
     - run: bundle install --path vendor/bundle
