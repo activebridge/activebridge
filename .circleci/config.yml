@@ -1,0 +1,41 @@
+version: 2
+jobs:
+  build:
+    parallelism: 1
+    working_directory: ~/activebridge/activebridge
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install docker-compose
+          command: |
+            apk --update add py2-pip
+            /usr/bin/pip2 install docker-compose
+            docker-compose --version
+      - run:
+          name: Start Container
+          command: |
+            docker-compose up -d
+            docker-compose ps
+        - run: 
+            command: |
+              sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout 
+      - run: bundle exec cap production deploy
+workflows:
+  version: 2
+  build-deploy:
+   jobs:
+     - build
+     - deploy:
+         requires:
+           - build
+         filters:
+           branches:
+             only: master
