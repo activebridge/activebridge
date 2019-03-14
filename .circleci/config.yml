@@ -1,9 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/activebridge
     parallelism: 1
-    shell: /bin/bash --login
     environment:
       CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
@@ -17,6 +15,8 @@ jobs:
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: ab_test
+          POSTGRES_PASSWORD: ''
+    working_directory: ~/activebridge/activebridge
     steps:
       - checkout
       # Restore bundle cache
