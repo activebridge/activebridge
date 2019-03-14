@@ -38,6 +38,7 @@
             p
               b= t('portfolio.project_info.team_size')
               = project[:team_size]
+        a.close-button href="#portfolio" ×
 
     = link_to '', '#portfolio', id: 'close_project'
   .portfolio_testimonials#testimonials
@@ -71,4 +72,5 @@
             = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             .description= testimonial[:description]
             = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
+        a.close-button href="#portfolio" ×
     = link_to '', '#portfolio', id: 'close_testimonial'

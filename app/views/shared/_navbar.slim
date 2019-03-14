@@ -22,21 +22,6 @@
               - item[:links].each do |link|
                 = link_to link[:name], link[:link], class: 'anchor'
 javascript:
-  function showTitle(el) {
-    if (document.querySelector("#menu")["checked"] == false) {
-      title = document.querySelector("#" + el.id)
-      position = el.getBoundingClientRect()
-      title.style.left = position.left - 145 + "px"
-      title.style.top = position.top + 2.5 + "px"
-      title.className += " show"
-    }
-  }
-
-  function hideTitle(el) {
-    title = document.querySelector("#" + el.id)
-    title.classList.remove("show")
-  }
-
   function toggleAnchors(el) {
     anchors = document.getElementsByClassName(el.classList[0])[1]
     if (anchors) {

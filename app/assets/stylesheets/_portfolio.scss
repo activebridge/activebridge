@@ -158,15 +158,16 @@ $projects: (
 
 .portfolio_testimonials {
   z-index: 3;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
+  align-self: center;
 
   .testimonial {
     height: 10vh;
     max-height: 90px;
     margin: 5px;
-    width: 90%;
+    width: 100%;
     align-self: center;
 
     a {
@@ -206,7 +207,6 @@ $projects: (
           }
 
           .read_more{
-            border: 1px solid white;
             color: white;
             background: linear-gradient(to right, $main-violet, $main-blue);
           }

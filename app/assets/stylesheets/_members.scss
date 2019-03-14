@@ -202,16 +202,6 @@ $members:(
       height: 50%;
       width: 30%;
     }
-
-    &:after {
-      position: fixed;
-      content: "×";
-      font-size: 2.5em;
-      right: 15px;
-      top: 2px;
-      z-index: 7;
-      cursor: pointer;
-    }
   }
   @each $member in $members {
     ##{$member}:focus ~ ##{$member}_card {

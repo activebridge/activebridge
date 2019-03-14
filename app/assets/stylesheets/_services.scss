@@ -17,6 +17,7 @@
     .text-center {
       text-align: center;
       width: 100%;
+      margin-bottom: 40px;
     }
 
     .technology {
@@ -24,7 +25,6 @@
       flex-direction: column;
       flex-wrap: nowrap;
       width: 45%;
-      margin-top: 10px;
 
       &.development {
         color: $main-blue;
