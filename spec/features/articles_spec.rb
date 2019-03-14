@@ -6,7 +6,7 @@ RSpec.feature 'Articles page', type: :feature do
 
   scenario do
     visit articles_path
-    expect(page).to have_content('Active::Bridge')
+    expect(page).to have_content('Active Bridge')
     expect(page).to have_content('All Posts')
     expect(page).to have_content('1 item')
     expect(page).to have_content('Alex')
