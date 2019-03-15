@@ -412,18 +412,19 @@ nav.navbar {
 #back-to-top {
   display: block;
   z-index: 10;
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   font-size: 20px;
   position: fixed;
   bottom: -34px;
   right: 90px;
-  line-height: 38px;
-  background-color: rgba(27, 28, 31, 0.5);
+  line-height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, $main-violet, $main-blue);
+  opacity: .5;
   -webkit-box-shadow: 1px 1.732px 12px 0px rgba(0, 0, 0, 0.03);
   box-shadow: 1px 1.732px 12px 0px rgba(0, 0, 0, 0.03);
-  border-radius: 2px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -444,8 +445,9 @@ nav.navbar {
   &:hover {
     background-color: $main-blue;
     border-color: transparent;
+    opacity: 1;
     animation: swing 0.6s ease;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
   }
 }
 
@@ -509,4 +511,3 @@ nav.navbar {
     height: 65%;
   }
 }
-
