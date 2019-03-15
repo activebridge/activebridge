@@ -6,7 +6,7 @@ jobs:
       CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
     docker:
-      - image: circleci/ruby:2.5-node
+      - image: circleci/ruby:2.5.3-node
         environment:
           RAILS_ENV: test
           PGHOST: 127.0.0.1
@@ -56,7 +56,7 @@ jobs:
     docker:
       - image: buildpack-deps:trusty
     steps:
-      - checkout 
+      - checkout
       - run: bundle exec cap production deploy
 workflows:
   version: 2
