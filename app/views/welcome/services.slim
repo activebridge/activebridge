@@ -2,7 +2,7 @@
   h1.header_2 = t('services.title')
   .services
     - I18n.t('services.development').each_with_index do |service, i|
-      .technology.development
+      .technology
         .logo_container id="#{service[:id]}"
           - (1..100).each do |cell|
             = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"

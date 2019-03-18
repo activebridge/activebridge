@@ -1,6 +1,5 @@
 #= require _analytics
 #= require _smartlook
-
 if navigator.appVersion.toUpperCase().indexOf('MSIE') != -1 or
     navigator.appVersion.toUpperCase().indexOf('TRIDENT') != -1 or
       navigator.appVersion.toUpperCase().indexOf('EDGE') != -1
@@ -16,6 +15,7 @@ ajax = (method, href, async = true) ->
 currentEl = 0
 prevEl = 0
 header = document.getElementById('header')
+backToTopButton = document.getElementById('back-to-top')
 transformTetris = (first, second, third, fourth, fifth, lower) ->
   first.style.transform = 'rotate(90deg)'
   second.style.transform = 'translate(57%, 165%)'
@@ -97,22 +97,21 @@ scrollToTop = ->
     top: 0,
     behavior: 'smooth'
   })
-  
+
 showBackToTopButton = ->
   scroll = window.pageYOffset
-  backToTop = document.querySelector('#back-to-top')
-  if scroll > 50 
-    if !backToTop.classList.contains('show')
-      backToTop.classList += 'show'  
+  if scroll > 50
+    if !backToTopButton.classList.contains('show')
+      backToTopButton.classList += 'show'
   else
-    backToTop.classList.remove('show')
+    backToTopButton.classList.remove('show')
 
 handleScroll = ->
   toggleHeader()
-  showBackToTopButton()
+  showBackToTopButton() if document.querySelector('#back-to-top')
   return
 
 document.body.onscroll = handleScroll
-document.querySelector('#back-to-top').onclick = scrollToTop
+backToTopButton.onclick = scrollToTop if backToTopButton
 document.querySelector(".container_index").onmousemove = rotateLogo if document.querySelector(".container_index")
 document.querySelector(".container_index").onmouseout = zeroizeLogoTransform if document.querySelector(".container_index")

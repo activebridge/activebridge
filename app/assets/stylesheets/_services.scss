@@ -3,7 +3,7 @@
   flex-direction: column;
 
   .services {
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -25,15 +25,13 @@
       flex-direction: column;
       flex-wrap: nowrap;
       width: 45%;
+      color: $main-blue;
 
-      &.development {
-        color: $main-blue;
-        width: 45%;
+      .logo_container {
+        perspective: 500px;
       }
 
       .service_icon {
-        width: 75%;
-
         .svg_center {
           z-index: 3;
           position: absolute;
@@ -141,13 +139,23 @@
 }
 
 @media screen and (max-width: 900px){
-  .services.tech{
-    flex-direction: column;
-    margin-top: 1vh;
+  .services {
+    &.tech {
+      flex-direction: column;
+      margin-top: 1vh;
 
-    .development.tech{
-      margin: 0 3vh;
-      width: 95%;
+      .development.tech {
+        margin: 0 3vh;
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    .services {
+      width: 70%;
     }
   }
 }
