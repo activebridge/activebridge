@@ -108,7 +108,7 @@ showBackToTopButton = ->
 
 handleScroll = ->
   toggleHeader()
-  showBackToTopButton() if document.querySelector('#back-to-top')
+  showBackToTopButton() if backToTopButton
   return
 
 document.body.onscroll = handleScroll
