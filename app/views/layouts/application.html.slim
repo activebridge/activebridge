@@ -17,6 +17,7 @@ html lang='en'
     = yield
     #back-to-top aria-label="Go to top"
       span.ui-arrow-up
+    = javascript_include_tag 'application', async: true
     javascript:
       var head = document.head,
           link = document.createElement('link');
