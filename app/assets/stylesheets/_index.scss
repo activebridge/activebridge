@@ -155,144 +155,31 @@ body {
 }
 
 .solutions_and_benefits {
-  height: 100vh;
-  width: 80%;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  .item-container {
+    margin-top: 6vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 
-  .solutions {
-    height: 50%;
-
-    .higher {
-      z-index: 3;
-    }
-
-    .tetris_container {
-      margin-top: 6vh;
-      height: 80%;
-      width: 700px;
+    .item-holder {
       display: flex;
-      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 16%;
+      margin: 0 1%;
 
-      .tetris_holder {
-        display: flex;
-        flex-direction: column;
-        span {
-          z-index: 3;
-          color: white;
-          text-transform: uppercase;
-          font-size: 1em;
+      span {
+        z-index: 3;
+        color: $main-violet;
+        text-transform: uppercase;
+        font-size: 1em;
 
-          a {
-            text-decoration: none;
-            color: white;
-          }
+        a {
+          text-decoration: none;
+          color: $main-blue;
         }
-
-        .tetris {
-          z-index: 2;
-        }
-      }
-
-      .first_element, .fourth_element {
-        align-self: flex-end;
-        width: 340.5px;
-      }
-      .second_element, .third_element, .fifth_element {
-        align-self: flex-end;
-        width: 226px;
-      }
-
-      .fourth_element, .fifth_element {
-        margin-left: -10.25%;
-      }
-
-      .fifth_element {
-        span {
-          margin-bottom: -130%;
-        }
-      }
-
-      .fourth_element {
-        margin-right: -2.25%;
-        span {
-          margin-right: -30%;
-          margin-bottom: -20%;
-        }
-      }
-
-      .third_element {
-        margin-right: -2.5%;
-        span {
-          margin-bottom: -80%;
-        }
-      }
-
-      .second_element {
-        margin-bottom: 12.5%;
-        span {
-          margin-bottom: -60%;
-        }
-      }
-
-      .first_element {
-        margin-right: -25%;
-        span {
-          margin-bottom: -55%;
-        }
-      }
-
-      @media (min-width: 1400px) {
       }
     }
-
-    .lower {
-      margin-top: -29.5%;
-      transition: transform 2.3s ease-in;
-      z-index: 2;
-      visibility: hidden;
-
-      #first_lower {
-        span {
-          width: 50%;
-          transform: rotate(-90deg) translateY(-50%) translateX(20%);
-        }
-        transition: all 1.5s linear;
-      }
-
-      #second_lower {
-        transition: all 1.3s linear;
-      }
-
-      #third_lower {
-        span {
-          transform: rotate(180deg);
-        }
-        transition: all 1.9s linear;
-      }
-
-      #fourth_lower {
-        span {
-          width: 50%;
-          transform: rotate(-90deg) translateY(140%) translateX(-45%);
-        }
-        transition: all 2.1s linear;
-      }
-
-      #fifth_lower {
-        span {
-          transform: rotate(-90deg) translateY(60%) translateX(30%);
-        }
-        transition: all 1.7s linear;
-      }
-    }
-  }
-
-  .benefits {
-    margin-top: 5vh;
-    height: 50%;
   }
 
   .solutions_and_benefits_desc {
