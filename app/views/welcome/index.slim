@@ -52,24 +52,26 @@
               - (1..100).each do |cell|
                 = link_to '', "##{id_name(el[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
               .inner
-                = inline_svg(('index/solutions'+ (index+1).to_s + '.svg'), class: 'tetris')
+                = inline_svg(('index/benefits'+ (index+1).to_s + '.svg'), class: 'tetris')
             span
               a href="##{id_name(el[:title])}"= el[:title]
     .solutions_and_benefits_desc
-      - I18n.t('about_us.solutions_and_benefits.solutions').each do |el|
+      - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, i|
         .informational_container id='#{id_name(el[:title])}'
-          .about_item
-            .title_holder
-              .title= el[:title]
-              hr
+          = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.solutions')[i-1][:title])}", class: 'prev'
+          = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.solutions'), i)[:title])}", class: 'next'
+          .about-item
+            .title= el[:title]
+            hr
             .description= el[:desc]
       = link_to '', '#index', class: 'close_description', id: 'solutions'
-      - I18n.t('about_us.solutions_and_benefits.benefits').each do |el|
+      - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, i|
         .informational_container id='#{id_name(el[:title])}'
-          .about_item
-            .title_holder
-              .title= el[:title]
-              hr
+          = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.benefits')[i-1][:title])}", class: 'prev'
+          = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.benefits'), i)[:title])}", class: 'next'
+          .about-item
+            .title= el[:title]
+            hr
             .description= el[:desc]
       = link_to '', '#index', class: 'close_description', id: 'benefits'
 

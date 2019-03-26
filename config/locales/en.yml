@@ -834,16 +834,16 @@ en:
           title: Flexibility
           desc: Our offshore web developers join your project as in-house employees. We adhere to Agile methodologies, like Scrum and Kanban, and use behavior-driven
                 development (BDD) methods. We give you the flexibility to add experienced staff when you need it on a project-by-project basis.
-        - id: fourth
-          title: Fluent English communication
-          desc: Our full-stack developers are all excellent English speakers, meaning we can integrate easily into your teams and meetings without any worry of language
-                barriers getting in the way.
         - id: fifth
           title: Transparency and face-to-face communication
           desc: As an offshore IT contractor, it’s absolutely crucial that we make workflow easy and transparent. That’s why our team is committed to providing constant
                 information about project progress. We’ll participate in meetings as often as you require, send daily, weekly, or monthly status reports depending on your
                 needs, and maintain a 24/7 customer support channel. We always guarantee that our developers are assigned to only a single project, meaning you’ll always
                 have their full dedication to your team’s goals.
+        - id: fourth
+          title: Fluent English communication
+          desc: Our full-stack developers are all excellent English speakers, meaning we can integrate easily into your teams and meetings without any worry of language
+                barriers getting in the way.
   blog:
     categories:
       ror-development: RoR Development

@@ -8,10 +8,10 @@ $projects: (
   invoyis,
   split,
   mediprocity,
-  lifelinker_inc,
-  joseph_carpenter,
-  def_method,
-  modean_apps
+  lifelinker-inc,
+  joseph-carpenter,
+  def-method,
+  modean-apps
 );
 
 .subtitle{
@@ -312,7 +312,7 @@ $projects: (
     }
   }
   @each $project in $projects {
-    #testimonial_#{$project}:target {
+    #testimonial-#{$project}:target {
       visibility: visible;
       opacity: 1;
       z-index: 4;

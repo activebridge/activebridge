@@ -43,7 +43,7 @@ module ApplicationHelper
   end
 
   def item_name(name)
-    name.downcase.gsub(/[,.]/, '').tr(' ', '_')
+    name.downcase.gsub(/[,.]/, '').tr(' ', '-')
   end
 
   def next_item(items, i)

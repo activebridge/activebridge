@@ -44,7 +44,7 @@
   .portfolio_testimonials#testimonials
     - I18n.t('testimonials.all').each_with_index do |testimonial, index|
       .testimonial class="portfolio_testimonial"
-        a href="#testimonial_#{item_name(testimonial[:company])}"
+        a href="#testimonial-#{item_name(testimonial[:company])}"
           .description_wrapper
             = inline_svg 'testimonials/like.svg', class: 'like'
             span
@@ -52,14 +52,14 @@
               = testimonial[:description].slice(0..90) + '...'
               = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
             .spacer
-            button.read_more href="#testimonial_#{item_name(testimonial[:company])}" Read more
+            button.read_more href="#testimonial-#{item_name(testimonial[:company])}" Read more
 
   .testimonials_cards
     - I18n.t('testimonials.all').each_with_index do |testimonial, i|
-      .informational_container id='testimonial_#{item_name(testimonial[:company])}'
+      .informational_container id='testimonial-#{item_name(testimonial[:company])}'
         .testimonial_container
-          = link_to '', "##{'testimonial_' + item_name(I18n.t('testimonials.all')[i-1][:company])}", class: 'prev'
-          = link_to '', "##{'testimonial_' + item_name(next_item(I18n.t('testimonials.all'), i)[:company])}", class: 'next'
+          = link_to '', "##{'testimonial-' + item_name(I18n.t('testimonials.all')[i-1][:company])}", class: 'prev'
+          = link_to '', "##{'testimonial-' + item_name(next_item(I18n.t('testimonials.all'), i)[:company])}", class: 'next'
           .testimonial_logo_container
             = image_tag(testimonial[:logo], class: 'company_logo')
           .testimonial_author
