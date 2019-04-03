@@ -11,25 +11,22 @@
       a.btn_work href='#about_us'
         b= t('about_us.about')
   .about_us_container#about_us
-    .description_container
-      .description_img
-        = inline_svg 'index/home_page_1.svg', class: 'home_page'
-        = inline_svg 'index/home_page_1_pink.svg', class: 'home_page home_page_pink'
-      .description_text
+    .description-container
+      .description-img
+        = inline_svg 'index/coding.svg', class: 'index-icon left'
+      .description-text
         =t('about_us.information.first')
         = inline_svg 'index/home_page_line_1.svg', class: 'home_page_line'
-    .description_container
-      .description_text
-        =t('about_us.information.second')
+    .description-container
+      .description-text
+        = t('about_us.information.second')
         = inline_svg 'index/home_page_line_2.svg', class: 'home_page_line'
-      .description_img
-        = inline_svg 'index/home_page_2.svg', class: 'home_page'
-        = inline_svg 'index/home_page_2_pink.svg', class: 'home_page home_page_pink home_page_pink_2'
-    .description_container
-      .description_img
-        = inline_svg 'index/home_page_3.svg', class: 'home_page'
-        = inline_svg 'index/home_page_3_pink.svg', class: 'home_page home_page_pink'
-      .description_text=t('about_us.information.third')
+      .description-img
+        = inline_svg 'index/globe.svg', class: 'index-icon right'
+    .description-container
+      .description-img
+        = image_tag 'index/awards.png', class: 'index-icon left'
+      .description-text=t('about_us.information.third')
   .solutions_and_benefits#solutions_and_benefits
     .solutions
       .header_2= t('about_us.solutions_and_benefits.solutions_title')
