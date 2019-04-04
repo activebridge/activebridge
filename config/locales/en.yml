@@ -48,6 +48,11 @@ en:
         links:
         icon: 'navbar/team.svg'
       - title:
+          name: Blog
+          link: '/blog'
+        links:
+        icon: 'navbar/blog.svg'
+      - title:
           name: Contact Us
           link: '/contact'
         links:
