@@ -8,14 +8,14 @@
         .inner#inner
           = inline_svg 'index/logo.svg', class: 'img__logo', id: 'logo'
       br
-      a.btn_work href='#about_us'
+      a.btn-work href='#about_us'
         b= t('about_us.about')
   .about_us_container#about_us
     .description-container
       .description-img
         = inline_svg 'index/coding.svg', class: 'index-icon left'
       .description-text
-        =t('about_us.information.first')
+        div=t('about_us.information.first')
         = inline_svg 'index/home_page_line_1.svg', class: 'home_page_line'
     .description-container
       .description-text
@@ -26,7 +26,7 @@
     .description-container
       .description-img
         = image_tag 'index/awards.png', class: 'index-icon left'
-      .description-text=t('about_us.information.third')
+      .description-text.d-block=t('about_us.information.third').html_safe
   .solutions_and_benefits#solutions_and_benefits
     .solutions
       .header_2= t('about_us.solutions_and_benefits.solutions_title')
@@ -60,7 +60,7 @@
           .about-item
             .title= el[:title]
             hr
-            .description= el[:desc]
+            .description= el[:desc].html_safe
       = link_to '', '#index', class: 'close_description', id: 'solutions'
       - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, i|
         .informational_container id='#{id_name(el[:title])}'

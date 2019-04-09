@@ -1,6 +1,5 @@
 .container
-  .header_2
-    b=t('welcome.team.title')
+  h1.header_2.bold=t('welcome.team.title')
   .cartoon_cards
     - I18n.t('welcome.team.members').each_with_index do |member, i|
       .cartoon_container id='#{id_member(member[:name])}' tabindex='0'

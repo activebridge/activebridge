@@ -49,12 +49,28 @@
   }
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
 
 body {
   padding: 0;
   margin: 0;
   background: #FCFCFC;
   background-size: cover;
+
+  &.blog {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.d-block {
+  display: block !important;
 }
 
 .header {
@@ -232,12 +248,6 @@ input#menu {
         span {
           display: block;
         }
-
-        &:hover {
-          .link-title {
-            display: none;
-          }
-        }
       }
     }
 
@@ -280,20 +290,23 @@ input#menu {
   background-color: rgba(gray, 0.2);
 }
 
-.link-title {
-  font-size: 1.2em;
-  background-color: $main-violet;
-  border-radius: 25px;
+.item-title {
+  font-size: 1em;
+  font-weight: bold;
+  background-color: white;
+  letter-spacing: 1px;
+  border-radius: 25px 0 0 25px;
   visibility: hidden;
   opacity: 0;
-  color: white;
+  color: #5f52ca;
   transition: all .3s;
   position: fixed;
-  right: -100px;
+  right: 63px;
   text-align: center;
-  padding: 2px 8px;
-  z-index: 5;
+  padding: 12px 8px;
+  z-index: 6;
   width: 120px;
+  box-shadow: 0px 0px 10px 1px rgba(205, 159, 228, 0.3);
 
   &.show {
     visibility: visible;
@@ -312,6 +325,7 @@ nav.navbar {
   height: 100vh;
   z-index: 6;
   background-image: linear-gradient(to top, $main-blue, $main-violet);
+  box-shadow: -9px 0px 7px 0px rgba(0,0,0,0.05);
 
   .items {
     display: flex;
@@ -339,31 +353,7 @@ nav.navbar {
           position: relative;
           .nav-icon {
             width: 30px;
-          }
-
-          .item-title {
-            font-size: 1.2em;
-            background: $main-violet;
-            border-radius: 25px;
-            visibility: hidden;
-            opacity: 0;
-            color: white;
-            transition: all .3s;
-            position: absolute;
-            right: 115%;
-            text-align: center;
-            padding: 0px 14px;
-            z-index: 5;
-            top: calc(50% - 1px);
-            transform: translateY(-50%);
-            white-space: nowrap;
-          }
-
-          &:hover {
-            .item-title {
-              visibility: visible;
-              opacity: 1;
-            }
+            height: 30px;
           }
         }
 

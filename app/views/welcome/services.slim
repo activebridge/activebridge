@@ -8,8 +8,8 @@
             = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
           .inner
             = inline_svg(service[:logo], class: 'service_icon')
-        h2.header_3
-          b= service[:title]
+        h2.header_3.bold
+          = service[:title]
         .description= service[:description]
         - unless i != 0
           span.bdd_show

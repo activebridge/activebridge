@@ -60,15 +60,14 @@ en:
   meta:
     pages:
       /:
-        title: Offshore IT Contracting Company || Active Bridge
+        title: Offshore IT Contractor Company  | Active Bridge
         description:
           Active Bridge is your IT contracting partner providing full-stack developers and responsible for
           development & maintaining web/mobile applications.
       how-we-work:
-        title: Dedicated Software Development Team || Active Bridge
+        title: Staff Augmentation Services, Developers on Demand | Active Bridge
         description:
-          Active Bridge is your full-stack development partner. Located in Ukraine we
-          provide dedicated developments team and full-stack developers for rent
+          Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale your in-house team with our technical talents
       services:
         title: Web and Mobile Application Development Services || Active Bridge,LLC
         description:
@@ -80,14 +79,14 @@ en:
           Active Bridge is a successful provider of Ruby on Rails development services on the US market.
           All our ruby on rails projects examples see here
       team:
-        title: Full-stack Web Developers in one place || Active Bridge
+        title: Full-stack Web Developers on demand | Active Bridge
         description:
           Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
           mobile developers for your in-house teams. Learn more
       contact:
-        title: Hire App Developers in 48 hours || Active Bridge
+        title: Hire Full-Stack Developers in 48 hours | Active Bridge
         description:
-          Active Bridge is your full-stack development partner, providing IT consulting services and helping hire app developers
+          Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
   welcome:
     about:
       title: About
@@ -497,7 +496,7 @@ en:
       - client: DAISYBILL
         image: daisybill.svg
         link: https://www.daisybill.com/
-        industry: IT & Services
+        industry:  IT & Services, Insurance
         technologies: Ruby on Rails / PostgreSQL / TFA / Silenium / REDIS
         challenge:
           DaisyBill needed a full-stack provider to renovate their existing project structure and develop a revenue cycle management
@@ -570,9 +569,9 @@ en:
         challenge:
           Mediprocity required full-stack developers to build and support a platform for securing patient health information that could be fully integrated into their existing customer portal.
         solution:
-          Active Bridge provided team members to build a fully HIPAA-compliant platform designed to secure patient data and allow synchronization across multiple devices, including desktop
-          computers and smartphones. The new platform can be used in a web browser or through iOS and Android apps, can be fully integrated into any existing portal, and provides features
-          including a fully access controlled admin panel, groups, distribution lists, emergency alerts, secure form processing, and more.
+          Active Bridge provided developers which built a fully HIPAA-compliant software for Windows, MacOS, Linux designed to secure patient data and allow synchronization across multiple
+          devices, including desktop computers and smartphones. The new platform can be used in a web browser or through iOS and Android apps can be fully integrated into any existing portal
+          and provides features including a fully access controlled admin panel, groups, distribution lists, emergency alerts, secure form processing, and more.
         project_length: 24
         team_size: 3
   services:
@@ -785,19 +784,20 @@ en:
     slogan: Your ideas. Our talents. Great result.
     about: Information about us
     information:
-      first: Active Bridge is an IT contracting company that specializes in providing dedicated full-stack developers
-             to help our clients and augment their in-house teams. Since 2013, our offshore IT staffing agency has been
-             assisting clients in the development and maintenance of websites and web-based systems, mobile applications,
+      first: Active Bridge is an IT company that specializes in providing dedicated full-stack developers on demand to help
+             our clients and augment their in-house teams. Since 2013, our agency based on IT staffing augment services has
+             been assisting clients in the development and maintenance of websites and web-based systems, mobile applications,
              and software products.
       second: Active Bridge started out as a small team of Ukrainian developers passionate about Ruby on Rails programming
               and providing effective web solutions for our clients in the United States and Europe. Today, our company has
               grown to include a staff of talented and experienced tech professionals with over 20 successful major projects
               under our belt.
-      third: Our team has worked with startups, small and medium-sized enterprises (SMEs), and large corporations in both
-             North America and Eastern Europe. Our goal is always to prioritize the needs of our customers, and we strive to
-             build and maintain trust and productive relationships with all of our partners. That customer-centered focus is
-             why Active Bridge was named one of the “Top B2B Service Providers, 2017” by Clutch.co., and why we’re consistently
-             rated as one of the top web and software developers in Eastern Europe.
+      third: Our team has worked with startups, small and medium-sized enterprises (SMEs), and large corporations in both North
+             America and Eastern Europe. Our goal is always to prioritize the needs of our customers, and we strive to build and
+             maintain trust and productive relationships with all of our partners. That customer-centered focus is why Active Bridge
+             was named one of the <strong>“Leading Clutch Agency 2017”</strong>,  <span class="bold">“Top B2B Service Providers, 2017”</span>, <span class="bold">“TOP B2B Company Ukraine, 2018”</span>,
+             <span class="bold">“Leading Eastern Europe B2B Company, 2018”</span> by Clutch.co., and why we’re consistently rated as one of the top web and
+             software developers in Eastern Europe
     solutions_and_benefits:
       solutions_title: Solutions for business
       benefits_title: The benefits of collaboration with Active Bridge
@@ -811,7 +811,7 @@ en:
           title: Project staffing and recruiting
           desc: Recruiting talent for complex IT projects can be difficult, but we’re here to help. When you partner with Active Bridge, we take
                 care of the sourcing and selection of qualified candidates with the needed skills and experience level for your job. Click here
-                for more information on our process.
+                for more information on our process. <a href="/how-we-work">How we work</a>
         - id: third
           title: A motivated workforce
           desc: Companies can sometimes be wary about bringing in an IT contractor to work on new projects, but at Active Bridge, our senior
@@ -837,7 +837,7 @@ en:
                 environment, making your team’s values, goals, ideas, and expectations their own.
         - id: third
           title: Flexibility
-          desc: Our offshore web developers join your project as in-house employees. We adhere to Agile methodologies, like Scrum and Kanban, and use behavior-driven
+          desc: Our offshore web developers on demand join your project as in-house employees. We adhere to Agile methodologies, like Scrum and Kanban, and use behavior-driven
                 development (BDD) methods. We give you the flexibility to add experienced staff when you need it on a project-by-project basis.
         - id: fifth
           title: Transparency and face-to-face communication

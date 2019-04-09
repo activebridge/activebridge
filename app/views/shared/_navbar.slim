@@ -5,16 +5,17 @@
     span.second
     span.third
   label.nav-close for='menu'
+  - I18n.t('navbar.links').each_with_index do |item, index|
+    .item-title id="icon-#{index}"= item[:title][:name]
   nav.navbar
     .items
       - I18n.t('navbar.links').each_with_index do |item, index|
         - if index == I18n.t('navbar.links').size - 1
           .spacer
         .item
-          .page-link id="icon-#{index}"
+          .page-link id="icon-#{index}" onmouseover="showTitle(this)" onmouseout="hideTitle(this)"
             = link_to item[:title][:link], class: 'icon-link'
               = inline_svg item[:icon], class: 'nav-icon'
-              .item-title= item[:title][:name]
             span class="item-#{index}" onmouseenter="toggleAnchors(this)"
               = link_to item[:title][:name], item[:title][:link], class: 'page'
           - if item[:links]
@@ -43,5 +44,23 @@ javascript:
       if(anchors[i].classList.contains("show")) {
         anchors[i].classList.remove("show")
       }
+    }
+  }
+
+  function showTitle(el) {
+    isMenuToggled = document.getElementById("menu")
+    if (!isMenuToggled["checked"]) {
+      var top = el.getBoundingClientRect().top
+      var title = document.querySelector(`#${ el.id }`)
+      title.style.cssText = `top: ${ top - 6 }px;`
+      title.className += " show"
+    }
+  }
+
+  function hideTitle(el) {
+    isMenuToggled = document.getElementById("menu")
+    if (!isMenuToggled["checked"]) {
+      title = document.getElementById(`${ el.id }`)
+      title.classList.remove("show")
     }
   }

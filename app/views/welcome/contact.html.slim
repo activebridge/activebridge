@@ -51,8 +51,8 @@
   .entities#headquarters
     - I18n.t('welcome.contact.entities').each do |entity|
       .entity
-        .entity_holder
-          = inline_svg entity[:logo], class: 'entity_logo'
+        .entity-holder
+          = inline_svg entity[:logo], class: 'entity-logo'
           = entity[:entity]
         span= entity[:name]
         span= entity[:address]
