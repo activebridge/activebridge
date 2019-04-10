@@ -444,7 +444,7 @@ en:
   portfolio:
     title: Remarkable
     project: Ruby on rails Projects
-    applications: Ruby on Rails Applications
+    applications: Web, Mobile and Software Applications
     project_info:
       technology: 'technology: '
       project_length: 'project length: '
@@ -565,7 +565,7 @@ en:
         image: mediprocity.svg
         link: https://mediprocity.com
         industry: Services, Encryption, HIPAA
-        technologies: Ruby on Rails / Grape/ MySQL/CouchDB/Datamapper/Electron/Angular6/ionic3 / IOS / Android / windows / MacOS / docker / hapi.js / sails / AWS/ Aptible
+        technologies: Ruby on Rails / Grape/ MySQL / CouchDB / Datamapper / Electron / Angular6 / ionic3 / IOS / Android / windows / MacOS / docker / hapi.js / sails / AWS/ Aptible
         challenge:
           Mediprocity required full-stack developers to build and support a platform for securing patient health information that could be fully integrated into their existing customer portal.
         solution:
