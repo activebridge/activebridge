@@ -7,7 +7,7 @@
       = t('.help')
     p= t('.complete_fields')
   = inline_svg 'contact/background.svg', class: 'bg'
-  .informational_container#contact_form_holder
+  .informational_container.contact-form-holder
     = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this);',
                             id: 'contact_form', class: 'contact-form' do
       .material-input

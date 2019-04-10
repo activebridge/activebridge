@@ -15,11 +15,13 @@
       .description-img
         = inline_svg 'index/coding.svg', class: 'index-icon left'
       .description-text
-        div=t('about_us.information.first')
+        .text=t('about_us.information.first')
+        .spacer
         = inline_svg 'index/home_page_line_1.svg', class: 'home_page_line'
     .description-container
       .description-text
-        = t('about_us.information.second')
+        .text= t('about_us.information.second')
+        .spacer
         = inline_svg 'index/home_page_line_2.svg', class: 'home_page_line'
       .description-img
         = inline_svg 'index/globe.svg', class: 'index-icon right'
