@@ -26,32 +26,6 @@ toggleHeader = () ->
     else
       header.style.cssText = 'opacity: 0'
 
-rotateLogo = (e) ->
-  elementX = 0
-  elementY = 0
-  elementW = 0
-  elementH = 0
-  mouseX = 0
-  mouseY = 0
-  position = document.querySelector(".inner").getBoundingClientRect()
-  obj = document.querySelector(".inner")
-  elementX = position.left
-  elementY = position.top
-
-  elementW = obj.offsetWidth
-  elementH = obj.offsetHeight
-
-  halfW = elementW/2
-  halfH = elementH/2
-
-  mouseX = (e.pageX - elementX - halfW)/halfW
-  mouseY = (e.pageY - elementY - halfH)/halfH
-
-  mouseX = Math.round(mouseX * 100)/100
-  mouseY = Math.round(mouseY * 100)/100
-  obj.style.transform = "rotateX(" + (-mouseY*10) + "deg) rotateY(" + mouseX*10 + "deg)"
-zeroizeLogoTransform = -> document.querySelector(".inner").style.transform = "rotateX(0deg) rotateY(0deg)"
-
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
   xhr = ajax('POST', form.action)
@@ -94,5 +68,3 @@ handleScroll = ->
 window.onload = () ->
   document.body.onscroll = handleScroll
   backToTopButton.onclick = scrollToTop if backToTopButton
-  document.querySelector(".container_index").onmousemove = rotateLogo if document.querySelector(".container_index")
-  document.querySelector(".container_index").onmouseout = zeroizeLogoTransform if document.querySelector(".container_index")
