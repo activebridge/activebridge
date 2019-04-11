@@ -16,6 +16,6 @@ class ImageUploader < BaseUploader
 
   version :logo do
     process convert: :png
-    process resize_to_fit: [200, 100]
+    process resize_to_fit: [125, 100]
   end
 end

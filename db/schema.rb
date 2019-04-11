@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617134817) do
+ActiveRecord::Schema.define(version: 20181109094519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,18 +46,15 @@ ActiveRecord::Schema.define(version: 20160617134817) do
     t.string   "name"
     t.string   "position"
     t.string   "avatar"
-    t.string   "careers"
-    t.string   "github"
-    t.string   "linkedin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "cartoon"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "priority"
+    t.string   "description"
+    t.string   "projects"
     t.index ["name"], name: "index_members_on_name", using: :btree
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "description"
     t.string   "logo"
     t.string   "technology"
     t.integer  "duration"
@@ -65,10 +62,12 @@ ActiveRecord::Schema.define(version: 20160617134817) do
     t.string   "client"
     t.string   "industry"
     t.string   "link"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "priority"
     t.string   "image"
+    t.string   "challenge"
+    t.string   "solution"
   end
 
   add_foreign_key "articles", "members"

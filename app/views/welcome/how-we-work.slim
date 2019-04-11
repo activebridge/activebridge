@@ -1,0 +1,54 @@
+.container
+  .how_we_work_container
+    .header_2
+      b= t('how_we_work.title')
+    .work_desc
+      = t('how_we_work.description')
+    .holder_key
+      .keyboard_container
+        h1.get_dedicated=t('how_we_work.get_dedicated')
+        = inline_svg 'how_we_work/keyboard_hover.svg', class: 'keyboard key_hover'
+        = inline_svg 'how_we_work/keyboard.svg', class: 'keyboard'
+        .cooperation-models= t('how_we_work.models_title')
+    .cooperation_models_cards#cooperation_models
+      - I18n.t('how_we_work.cooperation_models').each do |cooperation|
+        .model_card
+          .logo_container
+            - (1..100).each do |cell|
+              = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+            .inner
+              = inline_svg cooperation[:logo], class: 'inner'
+          .descr
+            - cooperation[:for_who].each do |who|
+              p
+                'For:
+                = who
+          .spacer
+          a.learn_more href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
+            'Learn more
+    .models_information
+      - I18n.t('how_we_work.cooperation_models').each do |cooperation|
+        .informational_container id='#{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
+          .desc_container
+            h2.header_2
+              =cooperation[:title]
+            p
+              span= t('how_we_work.model_questions.definition')
+              =cooperation[:definition]
+            p
+              span= t('how_we_work.model_questions.for_who')
+            ul
+              - cooperation[:for_who].each do |f|
+                li=f
+            p
+              span= t('how_we_work.model_questions.scope_of_work')
+              p=cooperation[:scope_of_work]
+            p
+              span= t('how_we_work.model_questions.cost')
+              p=cooperation[:cost]
+            p
+              span= t('how_we_work.model_questions.advantages')
+            ul
+              -cooperation[:advantages].each do |a|
+                li=a
+        a#close_model href='#cooperation-models'

@@ -1,215 +1,161 @@
-input#toggle-terminal { position: absolute; opacity: 0;}
-.services-cont {
-  position: relative;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 450px;
-  height: 100%;
-  max-height: 512px;
-  transform: translateY(-50%) scale(.9);
-  transition: .3s;
-  z-index: 2;
-  &:hover {
-    transform: translateY(-50%) scale(1);
-  }
-  @media (max-width: 1000px) {
-    transform: translateY(-50%) scale(.8);
-  }
-  label {
-    cursor: pointer;
-  }
-  label, svg {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 90vw;
-    max-width: 450px;
-  }
-  .skills {
-    $skills: 5;
-    $time_per_skill: 3;
-    $total_animation_time: $time_per_skill * $skills;
+.container {
+  display: flex;
+  flex-direction: column;
 
-    svg {
-      width: 19%;
-      margin-top: 8%;
-      margin-left: 0;
-      left: 41.5%;
-      opacity: 0;
-      animation: round #{$total_animation_time}s infinite;
-      path {
-        fill: #ffffff;
-        stroke: rgba(192, 192, 193, 0.64);
-        stroke-dashoffset: 500;
-        animation: stroke #{$total_animation_time / $time_per_skill}s infinite;
-      }
+  .services {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: center;
+    color: $main-blue;
+
+    .additional_info {
+      margin: 3vh 0;
     }
 
-    @for $i from 1 to $skills {
-      svg:nth-of-type(#{$i}) {
-        animation-delay: #{$total_animation_time - $time_per_skill * $i}s;
-        path {
-          animation-delay: #{$total_animation_time - $time_per_skill * $i}s;
+    .text-center {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .technology {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 45%;
+      color: $main-blue;
+
+      .logo_container {
+        perspective: 500px;
+      }
+
+      .service_icon {
+        .svg_center {
+          z-index: 3;
+          position: absolute;
+        }
+      }
+
+      .description {
+        text-align: justify;
+      }
+
+      .bdd_show:hover ~ #bdd {
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+      }
+
+      .bdd_show {
+        cursor: pointer;
+        margin-top: 3vh;
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content: space-between;
+        text-transform: uppercase;
+
+          span {
+            transition: transform .5s ease;
+            font-weight: bold;
+          }
+
+          &:hover {
+            span {
+              transform: translateX(10%);
+            }
+
+          }
+        }
+
+        .informational_container {
+          height: auto;
+          text-align: justify;
+          padding: 3vw;
+          display: flex;
+          flex-direction: column;
+
+          .bdd_desc {
+            .bdd_title {
+              font-size: 1.25em;
+              text-align: center;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+          }
+
+          .advantages {
+            position: relative;
+
+            hr {
+              width: 100%;
+              line-height: 2px;
+              margin: 3vh 0;
+            }
+
+            .ruby {
+              width: 12%;
+              position: absolute;
+              top: 6vh;
+              right: 5px;
+            }
+
+            ul {
+              padding-left: 17px;
+            }
+          }
+        }
+
+      .tech_desc {
+        flex: 1;
+        text-align: justify;
+        margin: 10px 0 10px 45px;
+      }
+
+      .tech-title {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        .tech-icon {
+          height: 40px;
+        }
+
+        b {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          color: $main-violet;
         }
       }
     }
   }
 }
 
-$main-terminal-color: #00ABDF;
+@media screen and (max-width: 900px){
+  .services {
+    &.tech {
+      flex-direction: column;
+      margin-top: 1vh;
 
-.terminal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity .3s, z-index 0s 1s;
-  .info {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    max-width: 800px;
-    width: 80vw;
-    padding: 10px;
-    font-family: monospace, sans-serif;
-    border: 2px solid $main-terminal-color;
-    color: white;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    ::selection {
-      color: white;
-      background: white;
-    }
-    &:before {
-      position: absolute;
-      font-size: 24px;
-      top: -70px;
-      left: 50%;
-      transform: translateX(-50%);
-      content: 'Extended skills info';
-      text-transform: uppercase;
-      padding: 0 13px;
-      border-left: 2px solid orange;
-      border-right: 2px solid orange;
-    }
-    .text-block {
-      padding-right: 10px;
-      max-height: 300px;
-      overflow-y: auto;
-      h4 {
-        display: inline;
-        font-weight: normal;
-      }
-      .title {
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-      }
-      pre {
-        font-size: 10px;
-        color: #1d1d1e;
-      }
-      &::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-        background: rgba(white, .05);
-      }
-      &::-webkit-scrollbar-thumb{
-        background-color: orange;
-      }
-    }
-    span {
-      &:before, &:after {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-      }
-      &.top:before {
-        top: -12px;
-        left: -12px;
-        border-top: 3px solid $main-terminal-color;
-        border-left: 3px solid $main-terminal-color;
-      }
-      &.top:after {
-        top: -12px;
-        right: -12px;
-        border-top: 3px solid $main-terminal-color;
-        border-right: 3px solid $main-terminal-color;
-      }
-      &.bottom:before {
-        bottom: -12px;
-        left: -12px;
-        border-bottom: 3px solid $main-terminal-color;
-        border-left: 3px solid $main-terminal-color;
-      }
-      &.bottom:after {
-        bottom: -12px;
-        right: -12px;
-        border-bottom: 3px solid $main-terminal-color;
-        border-right: 3px solid $main-terminal-color;
-      }
-    }
-  }
-  label {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(black, .88);
-  }
-  .waves {
-    margin-top: 20px;
-    overflow: hidden;
-    position: relative;
-    height: 70px;
-    svg {
-      position: absolute;
-      &:last-of-type {
-        top: 28px;
-        animation: play 10s infinite cubic-bezier(0, 0.17, 1, 0.78);
+      .development.tech {
+        margin: 0 3vh;
+        width: 95%;
       }
     }
   }
 }
 
-#toggle-terminal:checked  + .services-cont{
-  transform: translateY(-50%) scale(5);
-}
-#toggle-terminal:checked ~ .terminal-container {
-  opacity: 1;
-  z-index: 3;
-  transition-delay: 0s;
-}
-@keyframes play {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-75.5%);
+@media screen and (min-width: 1400px) {
+  .container {
+    .services {
+      width: 70%;
+    }
   }
 }
-@keyframes type {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes round {
-  5% { opacity:1; }
-  20% { opacity:1; }
-  25% { opacity:0; }
- }
-@keyframes stroke {
-  0% { stroke-dasharray: 500; }
-  80% { stroke-dasharray: 870; }
-}
-@keyframes blink { to { opacity: .0; } }
-@keyframes show { to { opacity: 1; } }

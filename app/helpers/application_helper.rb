@@ -34,11 +34,19 @@ module ApplicationHelper
     end
   end
 
-  def project_name(project)
-    project.downcase.gsub(/[,.]/, '').tr(' ', '_')
+  def id_name(str)
+    str.downcase.gsub(' ', '-')
   end
 
-  def next_project(projects, i)
-    projects.length.pred == i ? project_name(projects[0].client) : project_name(projects[i.next].client)
+  def id_member(member)
+    member.downcase.gsub(/[ -]/, '_')
+  end
+
+  def item_name(name)
+    name.downcase.gsub(/[,.]/, '').tr(' ', '-')
+  end
+
+  def next_item(items, i)
+    items.length.pred == i ? items[0] : items[i.next]
   end
 end

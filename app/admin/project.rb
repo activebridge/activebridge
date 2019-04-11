@@ -1,6 +1,7 @@
 ActiveAdmin.register Project do
   permit_params(
-    :description,
+    :challenge,
+    :solution,
     :logo,
     :logo_cache,
     :technology,
@@ -19,7 +20,6 @@ ActiveAdmin.register Project do
   index do
     selectable_column
     column :client
-    column :description
     column 'Logo' do |project|
       cl_image_tag(project.logo.url, width: 150, crop: :thumb)
     end
@@ -32,13 +32,14 @@ ActiveAdmin.register Project do
 
   form do |f|
     f.inputs 'Project Editing' do
-      f.input :description
+      f.input :client
+      f.input :challenge, as: :text
+      f.input :solution, as: :text
       f.input :logo, as: :file, hint: image_tag(f.object.logo.url(:logo))
       f.input :logo_cache, as: :hidden
       f.input :technology
       f.input :duration
       f.input :team_size
-      f.input :client
       f.input :industry
       f.input :link
       f.input :priority

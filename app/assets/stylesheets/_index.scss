@@ -1,0 +1,280 @@
+$solutions:(
+  full-stack-expertise-where-you-need-it,
+  project-staffing-and-recruiting,
+  a-motivated-workforce,
+  timely-delivery,
+  team-extending
+);
+
+$benefits:(
+  dedicated-web-developers,
+  teamwork-and-expert-integration,
+  transparency-and-face-to-face-communication,
+  flexibility,
+  fluent-english-communication
+);
+
+@keyframes slide-top {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -15px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.gradient_container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background: radial-gradient(10vw at left 15%, rgba($main-blue, 0.35) -15%, rgba(white, 0) 90%),
+              radial-gradient(15vw at 25% top, rgba($main-blue, 0.35), rgba($main-violet, 0.35) -5%, rgba(white, 0)),
+              radial-gradient(13vw at 85% top, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(13vw at 25% 60%, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(19vw at 75% center,rgba($main-blue, 0.35), rgba($main-violet, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(16vw at left bottom, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
+              radial-gradient(14vw at right bottom, rgba($main-blue, 0.35) -15%, rgba(white, 0));
+}
+.container_index {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.logo {
+  position: relative;
+  margin-top: 8vh;
+  text-align: center;
+  width: 50vw;
+  z-index: 2;
+
+  .index_header {
+    font-size: 2em;
+  }
+
+  .index_header_2 {
+    color: $main-blue;
+    text-transform: uppercase;
+    font-size: 1.75em;
+  }
+
+  .index_header, .index_header_2 {
+    margin-bottom: 3vh;
+    font-weight: bold;
+  }
+
+  .img__logo {
+    max-height: 45vh;
+  }
+
+  .btn-work {
+    border-radius: 30px;
+    background: linear-gradient(to right, $main-violet, $main-blue);
+    color: #FFF;
+    padding: 18px 35px;
+    text-decoration: none;
+    transition: all .3s ease;
+
+    &:hover {
+      box-shadow: 0px 0px 25px 1px rgb(205, 159, 228);
+    }
+  }
+
+  .logo_container {
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+  }
+}
+
+.about_us_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: 5vw;
+  line-height: 35px;
+  z-index: 2;
+
+  .description-container {
+    margin-top: 5vh;
+    text-align: left;
+    display: flex;
+    font-size: 1.1em;
+    width: 90%;
+    height: auto;
+
+    .description-img {
+      height: 30vh;
+      display: flex;
+      align-items: center;
+
+      .index-icon {
+        height: 100%;
+
+        &.left {
+          margin-right: 10px;
+
+          &:hover {
+            animation: slide-top 0.6s ease;
+            animation-iteration-count: 1;
+          }
+        }
+
+        &.right {
+          margin-left: 10px;
+
+          &:hover {
+            animation: slide-top 0.6s ease;
+            animation-iteration-count: 1;
+          }
+        }
+      }
+    }
+
+    .description-text {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      line-height: 1.4;
+
+      .home_page_line {
+        bottom: 0;
+        width: 107%;
+      }
+    }
+  }
+}
+
+.solutions_and_benefits {
+  .item-container {
+    margin: 6vh auto;
+    width: 85%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;;
+
+    .item-holder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 13%;
+
+      .logo_container {
+        width: 80%;
+      }
+
+      span {
+        z-index: 3;
+        color: $main-violet;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 600;
+        margin-top: 20px;
+
+        a {
+          text-decoration: none;
+          color: $main-blue;
+        }
+      }
+    }
+  }
+
+  .solutions_and_benefits_desc {
+    .informational_container {
+      top: 20%;
+      width: 35%;
+      height: 60%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .about-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        width: 85%;
+        height: 90%;
+        margin: 5% 0;
+
+        .title {
+          margin-top: 10%;
+          font-size: 1.5rem;
+          color: $main-blue;
+          text-transform: uppercase;
+        }
+
+        hr {
+          height: 2px;
+          background-color: #d0c5c5;
+          border: none;
+          margin: 0;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .description {
+          overflow-y: auto;
+        }
+      }
+
+      @media screen and (min-width: 1450px) {
+        width: 30%;
+      }
+
+      @media screen and (min-height: 850px) {
+        height: 50%;
+      }
+    }
+
+    @each $element in $solutions {
+      ##{$element}:target {
+        z-index:4;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      ##{$element}:target ~ #solutions {
+        position: fixed;
+        z-index: 3;
+        visibility: visible;
+      }
+    }
+
+    @each $element in $benefits {
+      ##{$element}:target {
+        z-index:4;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      ##{$element}:target ~ #benefits {
+        position: fixed;
+        z-index: 3;
+        visibility: visible;
+      }
+    }
+  }
+
+  .close_description {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}

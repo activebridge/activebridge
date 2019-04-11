@@ -1,0 +1,66 @@
+- cache 'navbar' do
+  input#menu type='checkbox' onclick="hideAnchors()"
+  label.nav-toggler for='menu'
+    span.first
+    span.second
+    span.third
+  label.nav-close for='menu'
+  - I18n.t('navbar.links').each_with_index do |item, index|
+    .item-title id="icon-#{index}"= item[:title][:name]
+  nav.navbar
+    .items
+      - I18n.t('navbar.links').each_with_index do |item, index|
+        - if index == I18n.t('navbar.links').size - 1
+          .spacer
+        .item
+          .page-link id="icon-#{index}" onmouseover="showTitle(this)" onmouseout="hideTitle(this)"
+            = link_to item[:title][:link], class: 'icon-link'
+              = inline_svg item[:icon], class: 'nav-icon'
+            span class="item-#{index}" onmouseenter="toggleAnchors(this)"
+              = link_to item[:title][:name], item[:title][:link], class: 'page'
+          - if item[:links]
+            .anchors class="item-#{index}"
+              - item[:links].each do |link|
+                = link_to link[:name], link[:link], class: 'anchor'
+javascript:
+  function toggleAnchors(el) {
+    anchors = document.getElementsByClassName(el.classList[0])[1]
+    if (anchors) {
+      if (anchors.classList.contains("show")) {
+        setTimeout(function (){
+          anchors.classList.remove("show")
+        }, 200)
+      } else {
+        setTimeout(function (){
+          anchors.className += " show"
+        }, 200)
+      }
+    }
+  }
+
+  function hideAnchors() {
+    anchors = document.getElementsByClassName('anchors')
+    for(i = 0; i < anchors.length; i++) {
+      if(anchors[i].classList.contains("show")) {
+        anchors[i].classList.remove("show")
+      }
+    }
+  }
+
+  function showTitle(el) {
+    isMenuToggled = document.getElementById("menu")
+    if (!isMenuToggled["checked"]) {
+      var top = el.getBoundingClientRect().top
+      var title = document.querySelector(`#${ el.id }`)
+      title.style.cssText = `top: ${ top - 6 }px;`
+      title.className += " show"
+    }
+  }
+
+  function hideTitle(el) {
+    isMenuToggled = document.getElementById("menu")
+    if (!isMenuToggled["checked"]) {
+      title = document.getElementById(`${ el.id }`)
+      title.classList.remove("show")
+    }
+  }

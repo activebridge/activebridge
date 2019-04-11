@@ -1,0 +1,130 @@
+$models: dedicated-team, team-extension, project-model;
+
+.how_we_work_container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+
+  .work_desc {
+    margin-top: 5vh;
+    text-align: justify;
+    line-height: 35px;
+    font-size: 1.1em;
+  }
+
+  .holder_key{
+    height: 25vh;
+    width: 100%;
+    margin: 5vh 0;
+
+    .keyboard_container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        .key_hover {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      .keyboard {
+        height: 80%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .key_hover {
+        bottom: 4px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s linear;
+      }
+
+      .get_dedicated{
+        color: $main-blue;
+        text-transform: uppercase;;
+        height: 20%;
+        font-size: 2.7vh;
+      }
+
+      .cooperation-models{
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        font-size: 1.75vw;
+        color: $main-blue;
+      }
+    }
+  }
+  .cooperation_models_cards {
+    width: 100%;
+    height: 85vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-between;
+
+    .model_card {
+      width: 30%;
+      max-width: 350px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .descr {
+        color: $main-blue;
+        text-align: justify;
+      }
+    }
+    @media (min-height: 800px) {
+      height: 65vh;
+    }
+  }
+  .models_information {
+    .informational_container {
+      text-align: justify;
+      display: flex;
+      overflow-y: auto;
+      justify-content: center;
+      .desc_container {
+        width: 85%;
+
+        .header_2 {
+          text-align: center;
+        }
+        p {
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  @each $model in $models {
+    ##{$model}:target {
+      visibility: visible;
+      opacity: 1;
+      z-index: 4;
+    }
+
+    ##{$model}:target ~ #close_model {
+      position: fixed;
+      z-index: 3;
+      visibility: visible;
+    }
+  }
+  #close_model {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,60 @@
+.container
+  .contact_header
+    .header_2.contact_header_2= t('.title')
+    .header_3.contact_header_3
+      = t('.discuss')
+      br
+      = t('.help')
+    p= t('.complete_fields')
+  = inline_svg 'contact/background.svg', class: 'bg'
+  .informational_container.contact-form-holder
+    = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this);',
+                            id: 'contact_form', class: 'contact-form' do
+      .material-input
+        label for='reason' =t('.reason_placeholder') + ' *'
+        = select('contact', 'reason', t('.reasons').each {|r| [r] }, { include_blank: true }, required: true, class: 'reason')
+      .material-input
+        label.label for='name' =t('.name_placeholder') + ' *'
+        input#name name='contact[name]' type='text' minlength='2' placeholder=' ' required='true'
+
+      .material-input
+        label for='email' =t('.email_placeholder') + ' *'
+        input#email name='contact[email]' type='email' placeholder=' ' required='true'
+
+      .material-input
+        label for='country' =t('.your_country') + ' *'
+        = select('contact', 'country', ISO3166::Country.all.sort.each {|el| [el]}, { include_blank: true }, required: true)
+      .material-input.textarea
+        label for='body' =t('.message_placeholder') + ' *'
+        textarea#body name='contact[message]' placeholder=' ' minlength='10' maxlength='500' required='true'
+      input#submit form='contact_form' type='submit' value='#{t('.send')}' class='contact-button'
+
+  .find_us
+    - I18n.t('welcome.contact.find_us').each_with_index do |item, index|
+      - class_name = 'find_item item_' + (index+1).to_s
+      - logo = inline_svg item[:logo], class: 'find_us_logo'
+      - link = item[:link]
+      - if index > 1
+        a href='#{link}' class='#{class_name}'
+          = logo
+          span
+            '/
+            = link.split('/').last
+      - elsif index == 0
+        a href='email: #{link}' class='#{class_name}'
+          = logo
+          span= link
+      - else
+        a href='tel: #{link}' class='#{class_name}'
+          = logo
+          span= link
+  .entities#headquarters
+    - I18n.t('welcome.contact.entities').each do |entity|
+      .entity
+        .entity-holder
+          = inline_svg entity[:logo], class: 'entity-logo'
+          = entity[:entity]
+        span= entity[:name]
+        span= entity[:address]
+        span= entity[:post]
+        span= entity[:country]

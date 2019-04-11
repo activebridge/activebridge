@@ -9,11 +9,84 @@ en:
     Hello! We are Active Bridge - a Ruby on Rails web development agency.
     Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
+  navbar:
+    links:
+      - title:
+          name: How we work
+          link: '/how-we-work'
+        links:
+          - name: Dedicated Team
+            link: '/how-we-work#dedicated-team'
+          - name: Team Extension
+            link: '/how-we-work#team-extension'
+          - name: Project Model
+            link: '/how-we-work#project-model'
+        icon: 'navbar/how-we-work.svg'
+      - title:
+          name: Services
+          link: '/services'
+        links:
+          - name: Web Application Development
+            link: '/services#web-application-development'
+          - name: Mobile Application Development
+            link: '/services#mobile-application-development'
+          - name: Core Technologies
+            link: '/services#core-technologies'
+        icon: 'navbar/services.svg'
+      - title:
+          name: Portfolio
+          link: '/portfolio'
+        links:
+          - name: Projects
+            link: '/portfolio#projects'
+          - name: Testimonials
+            link: '/portfolio#testimonials'
+        icon: 'navbar/portfolio.svg'
+      - title:
+          name: Team
+          link: '/team'
+        links:
+        icon: 'navbar/team.svg'
+      - title:
+          name: Blog
+          link: '/blog'
+        links:
+        icon: 'navbar/blog.svg'
+      - title:
+          name: Contact Us
+          link: '/contact'
+        links:
+        icon: 'navbar/contact.svg'
   meta:
-    desription:
-       Ruby on Rails development company, web application development & custom software solution provider.
-       Huge work experience with markets of USA, Canada and Europe.
-    keywords:
+    pages:
+      /:
+        title: Offshore IT Contractor Company  | Active Bridge
+        description:
+          Active Bridge is your IT contracting partner providing full-stack developers and responsible for
+          development & maintaining web/mobile applications.
+      how-we-work:
+        title: Staff Augmentation Services, Developers on Demand | Active Bridge
+        description:
+          Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale your in-house team with our technical talents
+      services:
+        title: Web and Mobile Application Development Services || Active Bridge,LLC
+        description:
+          More than 5 years Active Bridge has been successful provider
+          web & mobile application development solutions. Learn more
+      portfolio:
+        title: Ruby on Rails Project Examples || Active Bridge
+        description:
+          Active Bridge is a successful provider of Ruby on Rails development services on the US market.
+          All our ruby on rails projects examples see here
+      team:
+        title: Full-stack Web Developers on demand | Active Bridge
+        description:
+          Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
+          mobile developers for your in-house teams. Learn more
+      contact:
+        title: Hire Full-Stack Developers in 48 hours | Active Bridge
+        description:
+          Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
   welcome:
     about:
       title: About
@@ -40,57 +113,469 @@ en:
         many years’ experience of cooperation with other <h4>web development companies</h4>
         in USA, Canada, and Europe.
     contact:
-      title: Contact us
+      title: Hire web & mobile developers in 48 hours
+      discuss: Want to discuss your project or partnership?
+      find_us:
+        - link: contact@active-bridge.com
+          logo: contact/email.svg
+        - link: '+380636086045'
+          logo: contact/phone.svg
+        - link: https://www.facebook.com/ActiveBridgeTeam
+          logo: contact/fb.svg
+        - link: https://www.linkedin.com/company/active-bridge
+          logo: contact/linkedin.svg
+        - link: https://github.com/activebridge
+          logo: contact/github.svg
+      entities:
+        - entity: Ukraine Entity
+          logo: contact/address.svg
+          name: Active Bridge, LLC
+          address: Marshala Krasovskogo, 8 Street
+          post: Cherkasy 18000
+          country: Ukraine
+        - entity: US Entity
+          logo: contact/address.svg
+          name: Active Bridge, LLC
+          address: 4644 North 22nd Street
+          post: Phoenix, AZ 85016
+          country: United States
+      help: We are ready to help
+      complete_fields: Please complete all the form fields so we can provide a better solution for you
       name_placeholder: Your name
       name_error: Please, input real name
-      email_placeholder: Your email
+      email_placeholder: Your business email
       email_error: Please, input valid email
-      message_placeholder: Text message
+      message_placeholder: About the project
+      your_country: Your country
+      send: Send
+      reason_placeholder: Contact reason
       message_error: Body have to contain at least 10 characters
       send: Send
       info: 'Contact info:'
       site: https://activebridge.org
-      organization: Active Bridge, LLC
       email: contact@active-bridge.com
-      location: Cherkasy
-      country: Ukraine
-      postal_code: 18000
+      postal_code: 1800
       phone_number: '+380636086045'
+      location: Cherkassy
+      country: Ukraine
       success_message: "Thank you! Your message has been successfully sent.\n Please check your email."
+      reasons:
+        - I’m looking for a full-stack developer
+        - I need an estimate
+        - I want to join your team
+        - I want to sell you something
+        - Just have a talks
     testimonials:
       title: Testimonials
-  team:
-    title: Team
-    photos:
-      - https://i.imgur.com/6awlwXJ.jpg
-      - https://i.imgur.com/5CTZocf.jpg
-      - https://i.imgur.com/HtFZC6N.jpg
-      - https://i.imgur.com/ZDR1DIO.jpg
-      - https://i.imgur.com/kCiaXk9.jpg
-      - https://i.imgur.com/Ql8Eo3N.jpg
-      - https://i.imgur.com/yoKklSZ.jpg
-      - https://i.imgur.com/2GHy49B.jpg
-      - https://i.imgur.com/E5PmNoE.jpg
-      - https://i.imgur.com/70H6PiO.jpg
-      - https://i.imgur.com/yOVqprF.jpg
-      - https://i.imgur.com/p2YP1sw.jpg
-      - https://i.imgur.com/5hKoTvY.jpg
-      - https://i.imgur.com/hV1TvMD.jpg
-      - https://i.imgur.com/9Depv3p.jpg
-      - https://i.imgur.com/AKrs0eK.jpg
-      - https://i.imgur.com/EX4M7rY.jpg
-      - https://i.imgur.com/zM8lLWt.jpg
+    team:
+      members:
+        - name: Galushka Alex
+          avatar: Galushka.png
+          position: CEO / Tech lead and backend developer
+          description:
+            Alex is the CEO of Active Bridge and an experienced developer. He started his career as a full-stack engineer and quickly
+            developed a deep knowledge of ruby development. A lifelong idea man, Alex is a dedicated contributor to the rails community.
+            His extraordinary mind and wide knowledge base mean Alex is capable of developing effective solutions to just about any problem,
+            from object-oriented programming to the many challenges of running a successful company. But thanks to his experience in planning,
+            organization, and leadership, Active Bridge was crowned “Best IT Employer in Ukraine, 2016”, and consistently sits among the top employers in the IT field.
+          projects: ProjectR, Split Payments, PreeLine, ZOZI, ZOZI Advance, Wingsplay, Cisco Services Marketplace
+        - name: Marchenko Alex
+          avatar: Marchenko.png
+          position: CFO
+          description:
+            Alex, our brilliant CFO, knows Active Bridge’s financials inside and out.  In addition to his expansive general financial
+            expertise, Alex has an incredibly deep understanding of the economic and financial aspects specific to the IT industry. His
+            attention to detail and proactive approach to financial management ensures that Active Bridge’s cooperation with clients and
+            partners runs smoothly and efficiently at all times.
+          projects:
+        - name: Milevskyi Ruslan
+          avatar: Milevskyi.png
+          position: Tech lead / Full - stack engineer
+          description:
+            Ruslan is an expert at developing apps based on customer specifications. When Ruslan approaches a project, he gets deep into both
+            the overall concept and the mind of the project owner to come up with the right solution for the customer’s needs every time.
+          projects: Example
+        - name: Zimin Anton
+          avatar:  Zimin.png
+          position: Tech lead / Full - stack engineer
+          description:
+            Self-organization and the ability to quickly master new technologies in record time are the hallmarks of what make Anton a great
+            tech lead and engineer. Thanks to his deep understanding of all phases of the software development lifecycle, Anton can always be
+            counted on to deliver highly optimized solutions for the most challenging tech projects.
+          projects: Daisybill, ZOZI, LC Laboratories, Ooma, Beanstock Media
+        - name: Lukin Alexey
+          avatar: Lukin.png
+          position: Tech lead / Full - stack engineer
+          description:
+            The phrase “it works on my machine” won’t cut it with Alexey. As an experienced full-stack developer and project manager,
+            Alexey expects the same patience and clear coding from the development teams he manages that he himself brings to all the projects he works on.
+          projects: Quick Quack, Eyes-on, It's borrowed, eTutorCloud
+        - name: Mihailovskiy Pavel
+          avatar: Mihailovskiy.png
+          position: Tech lead / Full - stack engineer
+          description:
+            If you’re looking for a highly responsible, hard-working engineer, Pavel is your man. As a team lead and dedicated full-stack developer,
+            Pavel knows everything there is to know about object-oriented programming and agile team management.
+          projects: Daisybill, ZOZI, TotalAdventure, BETEGY, NUMA Lab, My Ooma, Wingspaly, Meditalente
+        - name: Verbivskyi Alexey
+          avatar: Verbivskyi.png
+          position: Lead Ruby on Rails developer / Dev Ops
+          description:
+            Alexey is indispensable when it comes to dev ops. His talents combine senior Ruby engineering with expert server configuration,
+            and he’s one of the best in the business at both.
+          projects: Lab NUMA, Nuvi, MyStandby, Locol, Total Adventure, My Ooma, Beanstock Media
+        - name: Shmigol Victor
+          avatar: Shmigol.png
+          position: Lead Ruby on Rails developer
+          description:
+            Victor has a deep expertise in database design and web architecture. He’s a hardworking, reliable developer that can always be
+            counted on to make the right project decisions at the right time.
+          projects: Classly, Naprok, Mediprocity, Freestak
+        - name: Bondarenko Vitaliy
+          avatar: Bondarenko.png
+          position: Ruby on Rails engineer
+          description:
+            It’s hard to believe anyone could love SQL queries as much as Vitaliy, and few are better at designing and implementing them as
+            efficiently. An incredibly hardworking developer, Vitaliy has a true passion for learning new features and then passing that knowledge on to others.
+          projects: Example
+        - name: Surzhko Eugene
+          avatar: Surzhko.png
+          position: Lead Ruby on Rails engineer / DB architect
+          description:
+            Eugene is an engineer that knows what it takes to make databases perform better than most people would think possible. His backend programming skills
+            are exceptional, and his insights and suggestions always bring great performance benefits to every project he works on.
+          projects: Example
+        - name: Domotenko Eugene
+          avatar: Domotenko.png
+          position: Web / Android developer
+          description:
+            Eugene is a backend developer with extensive Android expertise. A big fan of friendly UI design, Eugene applies UX best practices to create mobile apps
+            that look and function at a level that always exceeds client expectations.
+          projects: Cablook
+        - name: Makodzeba Dima
+          avatar: Makodzeba.png
+          position: Ruby on Rails engineer
+          description:
+            Dima’s specialty is carefully listening to a client’s problems and using outside-the-box thinking to come up with solutions that haven’t even been considered yet.
+            Regardless of the project, the difficulty level, or the technology, Dima has the skills and experience to handle it all.
+          projects: InclideIO, Split Payments, Total Adventure, Lanehoney, Chrome Tracker, CabLook, ProjectR, KnockKnock
+        - name: Kovtun Vitaliy
+          avatar: Kovtun Vitaliy.png
+          position: Full - stack developer
+          description:
+            Vitaliy is an outgoing guy with a true passion for Rails. His huge range of interests across multiple fields makes Vitality a highly successful problem solver.
+            Combine that with great communication skills and a background in psychology, and you’ve got a developer uniquely suited to understand the customer’s needs and
+            build great end-products to meet them.
+          projects: include.io, GOJI, Mediprocity, Total Adventure, eTutorCloud
+        - name: Voloshyn Oleg
+          avatar: Voloshyn.png
+          position: Ruby on Rails engineer
+          description:
+            Oleg is a 24/7 kind of guy that never shuts down. Day and night, you’ll find him hard at work, and that tenacity means that Oleg often finds solutions where other developers
+            fail to. Oleg’s skill as a developer and unmatched work ethic make him the kind of person that any team would be thrilled to work with.
+          projects: Freestak, BeatThread, DaisyBill, Better Finance, Easygiant Inc, Vivint, My Ooma
+        - name: Tsibulko Alex
+          avatar: Tsibulko.png
+          position: Ruby on Rails engineer
+          description:
+            Patience and precision are the hallmarks of Alex’s work, making his coding cleaner than a surgical room. Alex is committed not only to accuracy and clean design, but also to
+            thorough testing. That makes his software solutions both reliable and effective.
+          projects: Zype, eTutorCloud, BETEGY, Better Finance
+        - name: Naumenko Sergii
+          avatar: Naumenko.png
+          position: Ruby on Rails engineer
+          description:
+            Sergii treats every client’s project as his own. The deep care and personal responsibility he feels for the work he does drives his desire for successful releases. He is a
+            goal-oriented, highly dedicated developer, and a significant benefit to every team he works with.
+          projects: Freestak, Myschool, Sleepy Giant, Vivint, Ooma, Lifelinker
+        - name: Motuzko Nastya
+          avatar: Motuzko Nastya.png
+          position: Full-stack developer
+          description:
+            Anastasia is a true standout among our development team. Originally starting out as a frontend developer, Anastasia is now also one of our best backend developers, building
+            databases and designing backend code with exceptional skill. Her excellent communication skills and interpersonal abilities make her an easy fit with any team, and she has
+            a knack for uncovering and understanding the client’s needs.
+          projects: Example
+        - name: Motuzko Alex
+          avatar: Motuzko Alex.png
+          position: Ruby on rails developer
+          description:
+            Alex is one of the rising stars of our ruby team. He understands RoR at a level that might lead you to think he’d created it, and his hard work and client-centric focus make
+            him a truly fantastic developer.
+          projects: Example
+        - name: Tupickiy Vlad
+          avatar: Tupickiy Vlad.png
+          position: Ruby on Rails developer
+          description:
+            Vlad prides himself on his ability to keep up to date with the cutting edge of new technologies, and that drive to stay ahead of the pack enables his outstanding vision for
+            problem-solving and feature building. Vlad is an active member of the global RoR community and regularly taps community events to fuel his constant learning.
+          projects: Example
+        - name: Tupickiy Yarik
+          avatar: Tupickiy Yarik.png
+          position: Ruby on Rails developer
+          description:
+            Yarik is a results-oriented, highly communicative, fast-learning, and responsible developer. As a full stack developer, he has deep experience in object-oriented programming,
+            design patterns, TDD, and BDD.
+          projects: Example
+        - name: Pedan Andriy
+          avatar: Pedan.png
+          position: Ruby on Rails developer
+          description:
+            Planning, planning, planning! If there’s one thing you can say about Andrew, it’s that his commitment to careful planning and ability to do so are second to none. Andrew uses his
+            sharp mind to quickly generate ideas for feature implementation, and then carefully weighs the pros and cons of each. The end result is that Andrew’s work is always extremely well
+            thought out and expertly executed.
+          projects: Example
+        - name: Serebryansky Maxim
+          avatar: Serebryansky.png
+          position: Ruby on Rails developer
+          description:
+            No matter how complex a feature may be, Max can implement it. No matter how new a framework may be, Max can build on it. He prides himself on his ability to understand even the newest
+            technologies and to apply them to come up with creative solutions to difficult problems in his development.
+          projects: Example
+        - name: Savenko Serhii
+          avatar: Savenko.png
+          position: Full-stack / IOS developer
+          description:
+            Sergey is a strong believer that great code should be backed up by a strong mind and a strong body to boot! He doesn’t just see development as a job – he truly loves the fun of tackling
+            complex ruby problems that would break most other developers’ brains.
+          projects: Example
+        - name: Bilan Igor
+          avatar: Bilan.png
+          position: Tech lead / Ruby on Rails engineer
+          description:
+            Igor is a highly knowledgeable Ruby on Rails developer with deep experience in building and integrating highly complex APIs. Igor has also built several chatbots and integrated these
+            applications with third-party systems. His experience and knowledge make him a strong addition to any team.
+          projects: Quick Quack, Verifeed, VMware, Avaya DevConnect Marketplace, Citrix Ready Xchange Marketplace, Beanstock Media, Calendarscribe
+        - name: Novitskyi Dmitryi
+          avatar: Novitskyi.png
+          position: Ruby on Rails developer
+          description:
+            Dmitrii is a skilled RoR developer who has a great deal of experience working with a number of large, successful startups in the marketing, e-commerce, health, and financial industries.
+          projects: Example
+        - name: Dzyoma Artem
+          avatar: Dzyoma.png
+          position: Ruby on Rails developer
+          description:
+            Artem is an expert frontend developer with solid experience in backend development as well. While his skillset allows him to do a wide variety of development work, he specializes in working
+            with payment systems – like Stripe and PayPal – and in messenger APIs.
+          projects: Example
+        - name: Zubritskiy Denis
+          avatar: Zubritskiy.png
+          position: Ruby on Rails developer
+          description:
+            Den is an experienced developer with a personal commitment to constant self-improvement and a creative approach to crafting innovative solutions. He’s an active member and contributor in the
+            Rails community, and he also works with Vue.js.
+          projects: Example
+        - name: Borodai Alex
+          avatar: Borodai.png
+          position: Full-stack developer
+          description:
+            Alex uses imagination and a creative approach to rails development to come up with the right solutions for his clients’ web projects. He particularly likes working with startups, as they offer
+            a chance for him to utilize that creativity, as well as his knowledge and outstanding development skills, to their full potential.
+          projects: Example
+        - name: Karpenko Alex
+          avatar: Karpenko.png
+          position: Ruby on Rails developer
+          description:
+            Alex is a full stack developer, capable of handling both back-end development as well as front-end. Passion for web development. He uses best practices in programming, always trying to write
+            maintainable and clean code
+          projects: Fixpal
+        - name: Bidochka Alex
+          avatar: Bidochka.png
+          position: Ruby on Rails developer
+          description:
+            Alex is a full-stack developer with a passion for mastering new technologies and building and integrating APIs. He’s a responsible, self-driven developer who displays exceptional initiative,
+            and he has the ability to work on both frontend and backend development, making him a versatile addition as a team member.
+          projects: Cablook, Fixpal
+        - name: Oleynikov Oleg
+          avatar: Oleynikov.png
+          position: Ruby on Rails developer
+          description:
+            Oleg enjoys studying new technologies, programming and implementing solutions based on TDD. Development of Web apps for business and startups in the area where he is intensively working.
+            He's an opportunity to work with a variety of technologies so Oleg wants to master VUE.js
+          projects: Cablook, Fixpal
+        - name: Okunieva Lena
+          avatar: Okunieva.png
+          position: Web Designer
+          description:
+            Lena is a real catch for Active Bridge. The designer who loves to conceptualize
+            and design mobile applications and web platforms with an exceptional user experience. The greatest inspiration for Lena
+            includes imagination, talented people, and traveling.
+          projects:
+        - name: Andrieieva Nastya
+          avatar: Andrieieva.png
+          position: Office Manager
+          description:
+            Nastya is everywhere. She can do 100 things at the same time. Teambuildings, company events, and gifts are Nastya's merit
+          projects:
+        - name: Misan Misha
+          avatar: Misan.png
+          position: Office Manager
+          description:
+            The most responsible of all responsible. Misha's keeping our comfort and security.
+          projects:
+        - name: Kuritsyna Dasha
+          avatar: Kuritsyna.png
+          position: Digital Marketing Manager
+          description:
+            Dasha is passionate about search engine optimization and digital marketing. She likes to be on top with the latest industry
+            trends and technologies, reading her favorite MOZ.com authors.
+          projects:
+      title: Meet our team of full-stack developers
+      photos:
+        - https://i.imgur.com/6awlwXJ.jpg
+        - https://i.imgur.com/5CTZocf.jpg
+        - https://i.imgur.com/HtFZC6N.jpg
+        - https://i.imgur.com/ZDR1DIO.jpg
+        - https://i.imgur.com/kCiaXk9.jpg
+        - https://i.imgur.com/Ql8Eo3N.jpg
+        - https://i.imgur.com/yoKklSZ.jpg
+        - https://i.imgur.com/2GHy49B.jpg
+        - https://i.imgur.com/E5PmNoE.jpg
+        - https://i.imgur.com/70H6PiO.jpg
+        - https://i.imgur.com/yOVqprF.jpg
+        - https://i.imgur.com/p2YP1sw.jpg
+        - https://i.imgur.com/5hKoTvY.jpg
+        - https://i.imgur.com/hV1TvMD.jpg
+        - https://i.imgur.com/9Depv3p.jpg
+        - https://i.imgur.com/AKrs0eK.jpg
+        - https://i.imgur.com/EX4M7rY.jpg
+        - https://i.imgur.com/zM8lLWt.jpg
   portfolio:
-    title: Portfolio
+    title: Remarkable
+    project: Ruby on rails Projects
+    applications: Web, Mobile and Software Applications
     project_info:
-      technology: technology
-      project_length: project length
-      team_size: team size
-      client: client
-      industry: industry
+      technology: 'technology: '
+      project_length: 'project length: '
+      team_size: 'team size: '
+      challenge: 'challenge: '
+      solution: 'solution: '
+      client: 'client: '
+      industry: 'industry: '
     button: View Project
+    projects:
+      - client: Upstack
+        image: upstack.svg
+        link: https://marketplace.upstack.io/
+        industry: IT /  Marketing
+        technologies: Ruby on Rails / React / Sidekiq / Puma / Devise / PostgreSQL / Heroku
+        challenge:
+          UpStack required a deployed IT team to be co-located with their in-house staff to aid in frontend and backend web development.
+          They also required enterprise-grade analysis of their existing project issues
+        solution:
+           A dedicated Active Bridge development team has been working with UpStack on scalable backend and frontend web solutions.
+           The delivered solutions provide companies and individuals with access to all agency data and statistical information.
+        project_length: 16
+        team_size: 7
+      - client: Preeline
+        image: preeline.svg
+        link: https://preeline.com/
+        industry: Fashion, Internet, E-commerce
+        technologies: Ruby on Rails / PostgreSQL / SELENIUM
+        challenge:
+          PreeLine needed a development team to build an e-commerce platform from scratch for their U.S. based fashion business.
+        solution:
+          Active Bridge provided two full-stack developers under the team-extension model of cooperation. They designed and
+          executed a rapid build of a fully scalable ecommerce platform integrated with PreeLine’s social networking. The new
+          ecommerce solution also included functionality to allow PreeLine to utilize it for business analysis.
+        project_length: 1
+        team_size: 2
+      - client: EVERSEAT
+        image: everseat.svg
+        link: https://www.everseat.com/
+        industry: Healthcare
+        technologies: Ruby on Rails / Backbone JS / PostgreSQL / EngineYard
+        challenge:
+          Everseat needed to upgrade its online presence and move it to a more powerful and scalable platform to accommodate future growth.
+        solution:
+          Active Bridge provided an easily scalable web solution utilizing Ruby on Rails technology. The delivered application provides a
+          web portal for appointment scheduling based on a user supply and demand equation.
+        project_length: 5
+        team_size: 1
+      - client: DAISYBILL
+        image: daisybill.svg
+        link: https://www.daisybill.com/
+        industry:  IT & Services, Insurance
+        technologies: Ruby on Rails / PostgreSQL / TFA / Silenium / REDIS
+        challenge:
+          DaisyBill needed a full-stack provider to renovate their existing project structure and develop a revenue cycle management
+          software application for the U.S. market.
+        solution:
+          Active Bridge provided a dedicated full-stack team, integrated directly into DaisyBill’s in-house development team. Responsible
+          for frontend and backend development, our developers built a user-friendly, scalable software solution based on a PostgreSQL
+          database. The delivered project represents one of the most robust full-service data integration solutions on the market to date,
+          and Active Bridge has been retained on an ongoing basis to provide project maintenance.
+        project_length: 38
+        team_size: 4
+      - client: FREESTAK
+        image: freestak.svg
+        link: https://my.freestak.com/
+        industry: Sport
+        technologies: Ruby on Rails / PostgreSQL
+        challenge:
+          Freestack needed a dedicated full-stack development team to set up their server and integrate their project with social media.
+        solution:
+          Active Bridge provided full-stack development services to manage the backend coding on the project. A DigitalOcean server was
+          set up and integrated with a number of popular social media network
+        project_length: 5
+        team_size: 3
+      - client: BEATTHREAD
+        image: beatthread.svg
+        link: https://beatthread.com/
+        industry: Music, Entertainment
+        technologies: Ruby on Rails / React / PostgreSQL
+        challenge:
+          BeatThread is a startup that needed to organize their development process and build a web application similar to SoundCloud.
+        solution:
+          A dedicated team of Active Bridge developers successfully implemented audio processing technology, worked out the database
+          architecture, and designed the front and backend of BeatThread’s new platform.
+        project_length: 8
+        team_size: 3
+      - client: INVOYIS
+        image: invoyis.svg
+        link: https://play.google.com/store/apps/details?id=com.invoyis.app&hl=ru
+        industry: IT & Services
+        technologies: Ruby on Rails / Angular JS / IOS / Android
+        challenge:
+          nvoyis is a company that works with large market players to sell different products to a wide variety of clients. They needed
+          software that could automatically generate and send invoices, but there was nothing on the market that met their needs. They
+          turned to us looking for a team of developers to design and create invoicing software integrated with both PayPal and Stripe.
+        solution:
+          Active Bridge came up with a powerful solution designed specifically to cater to the client’s unique business expertise.
+          Several existing third-party solutions had to be integrated to work together to ensure the correct analysis of data from a
+          number of sources. Active Bridge’s developers successfully executed that integration, including PayPal, Stripe, social media
+          modules, and an analytics API.
+        project_length: 3
+        team_size: 3
+      - client: Split
+        image: split.svg
+        link: https://www.splitpayments.com.au/
+        industry: Banking, Finance
+        technologies: Ruby on Rails/ Postgresql
+        challenge:
+          Split Payments, Australia’s first open banking platform, needed a development team to build an API with unmatched security,
+          payment collection, disbursement, and management systems.
+        solution:
+          Active Bridge’s full-stack development team provided backend support, Xero integration, event sourcing technology, and
+          successfully implemented the automation of payment and cross-bank processes.
+        project_length: 36
+        team_size: 2
+      - client: Mediprocity
+        image: mediprocity.svg
+        link: https://mediprocity.com
+        industry: Services, Encryption, HIPAA
+        technologies: Ruby on Rails / Grape/ MySQL / CouchDB / Datamapper / Electron / Angular6 / ionic3 / IOS / Android / windows / MacOS / docker / hapi.js / sails / AWS/ Aptible
+        challenge:
+          Mediprocity required full-stack developers to build and support a platform for securing patient health information that could be fully integrated into their existing customer portal.
+        solution:
+          Active Bridge provided developers which built a fully HIPAA-compliant software for Windows, MacOS, Linux designed to secure patient data and allow synchronization across multiple
+          devices, including desktop computers and smartphones. The new platform can be used in a web browser or through iOS and Android apps can be fully integrated into any existing portal
+          and provides features including a fully access controlled admin panel, groups, distribution lists, emergency alerts, secure form processing, and more.
+        project_length: 24
+        team_size: 3
   services:
-    title: Services
+    title: Full-Stack Development Services
     we_do: We can help you on every stage of web development process
     agile_programming: Ruby on Rails web development
     full_stack_development:
@@ -129,6 +614,67 @@ en:
         Extreme programming like test-driven development, daily meetings, fine-scale feedbacks, continuous
         integration, refactoring and small releases we provide effectiveness and productivity across all
         programming process
+    development:
+      - title: Web application development services
+        id: web-application-development
+        logo: services/web_icon.svg
+        description:
+          At Active Bridge, our number one goal is to find effective web
+          solutions to meet the needs and goals of our clients’ businesses.
+          To cover all aspects of our clients’ web programming needs, we employ a full-stack
+          web development process, meaning our developers are experienced in both back-end
+          development (server-side) and front-end development (user-side). As a result, we
+          can offer our clients elegant and professional web solutions, whatever their needs
+          may be.
+        bdd:
+          title: Behavior-Driven Development (BDD)
+          desc:
+            To ensure successful achievement of the goals of our clients’ projects we utilize
+            behavior-driven development, or BDD. Simply put, BDD is a software development
+            process based on user behavior, ensuring that the finished product provides the best
+            possible experience for the end users it’s intended for.
+          advantages:
+            title: Advantages
+            items:
+              - Tests are easy to understand for non-tech managers
+              - Tests are easily changed as needed
+              - Tests can be written by product-owners
+              - Tests focus on description and implementation without unnecessary complication
+        technologies:
+          - title: Ruby on Rails
+            desc:
+              Ruby on Rails is a fast, reliable framework that includes everything needed to build
+              complex database-backed applications.
+            icon: 'services/ruby_on_rails.svg'
+          - title: Angular JS
+            desc:
+              Angular JS is a front-end web application framework used for single-page web apps that
+              allow processing of data on the user-side.
+            icon: 'services/angular.svg'
+          - title: React
+            desc:
+              React is a JavaScript library for developing user interfaces ideal for solving performance
+              project issues and increasing delivery speed.
+            icon: 'services/react.svg'
+      - title: Mobile application development services
+        id: mobile-application-development
+        logo: services/mobile_icon.svg
+        description:
+          At Active Bridge we bring our mobile development expertise together with your ideas to
+          create incredible apps. We’re experienced in building mobile applications for both specific
+          mobile operating systems as well as hybrid applications, so whether you want your app to run
+          on iOS, Android, or an embedded web browser, we can help.
+        technologies:
+          - title: React Native
+            desc:
+              React Native is a JavaScript framework used for developing native apps using React. It’s ideal
+              for building fast, easily scalable apps for both iOS and Android.
+            icon: 'services/react.svg'
+          - title: Ionic
+            desc:
+              Ionic is a software development kit (SDK) used for hybrid mobile applications and cross-platform
+              mobile development.
+            icon: 'services/ionic.svg'
     technologies:
       title: Technologies
       desc:
@@ -154,10 +700,10 @@ en:
     title: Testimonials
     all:
       - company: DaisyBill
-        logo: testimonials/daisy_bill.svg
+        logo: portfolio/projects/daisybill.svg
         author: Ben Liscio
         image: https://i.imgur.com/eEQ7YxW.jpg
-        title: Co-Founder DaisyBill
+        post: Co-Founder
         description:
           We initially engaged with Active Bridge in 2014 while re-structuring our product and engineering team.
           More than two years later, we're still engaged to augment our engineering team.
@@ -166,27 +712,27 @@ en:
           We consider the engineers assigned to our company a core part of the team.
           Thanks guys!
       - company: Def Method
-        logo: testimonials/def_method.svg
+        logo: portfolio/projects/def_method.svg
         author: Joseph Leo
         image: https://i.imgur.com/orRlQpS.jpg
-        title: President/Partnership Director at Def Method
+        post: President / Partnership Director
         description:
           Active Bridge drives our remote engineering team at Def Method.
           Collaborating with their engineers has kept us delivering running,
           tested features in an Agile fashion across multiple countries and time zones.
           Their commitment to quality and efficiency is outstanding.
       - company: Modean Apps
-        logo: testimonials/modean_apps.svg
+        logo: portfolio/projects/modean_apps.svg
         author: Benjamin Sigidi
         image: https://i.imgur.com/YlApFGd.jpg
-        title: Software Developer at MODEAN APPS
+        post: Software Developer
         description:
           Awesome team. Full stack development. Happy to work with these guys any day.
       - company: Preeline
-        logo: testimonials/preeline.svg
+        logo: portfolio/projects/preeline.svg
         author: Julia Macalaster
         image: https://res.cloudinary.com/active-bridge/image/upload/c_fit,g_center,h_200,q_85,r_0,w_200/v1477382138/julia_xibee4.jpg
-        title: COO, Co-Founder at PreeLine
+        post: COO, Co-Founder
         description:
           We worked with Active Bridge as a young startup to build out our first MVP and subsequent updated products.
           Not only did their teams execute on the assigned tasks ahead of schedule, but they also contributed to our thinking around UX,
@@ -194,10 +740,10 @@ en:
           Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
           We feel so incredibly lucky to be working with them
       - company: Freestak
-        logo: testimonials/freestak.svg
+        logo: portfolio/projects/freestak.svg
         author: Julie Freeman Kummer
         image: https://res.cloudinary.com/active-bridge/image/upload/c_crop,g_face,h_200,w_200/v1477380297/Julie_z78plm.jpg
-        title: Co-founder and COO at freestak Ltd
+        post: Co-founder and COO
         description:
           We’ve been working with Active Bridge since August 2015.
           In the first six months, our application (marketplace in the sports industry)
@@ -208,10 +754,10 @@ en:
           After the active development phase, we’ve retained Active Bridge for the ongoing development and maintenance
           of our platform and I couldn’t recommend them enough.
       - company: LifeLinker Inc
-        logo: testimonials/life_linker.svg
+        logo: portfolio/projects/life_linker.svg
         author: David Rowell
         image: https://i.imgur.com/vlvxXxn.jpg
-        title: Founder/CEO at LifeLinker Inc
+        post: Founder/CEO
         description:
           After previously hiring contract developers in countries ranging from the US and Canada, to Vietnam and India,
           and after having paid variously three times more and three times less per hour, we finally got it right when
@@ -220,10 +766,10 @@ en:
           There’s no better source for best quality, best practice and best value development services than
           Active-Bridge. We’re delighted and most appreciative. Thank you.
       - company: Joseph_Carpenter
-        logo: testimonials/my_school.svg
+        logo: portfolio/projects/myschool.svg
         author: Joseph Carpenter
         image: https://i.imgur.com/oMUiO6J.jpg
-        title: Founder at MyScool411
+        post: Founder
         description:
           If anyone needs a kickass website company, these are your guys! I have used many other companies with nothing
           but issues and have nothing but good results from Eugene and Active Bridge. You will not find a better company
@@ -232,11 +778,82 @@ en:
     linkedin: 'https://www.linkedin.com/company/active-bridge'
     twitter: 'https://twitter.com/activebridge'
     facebook: 'https://facebook.com/ActiveBridgeTeam'
-    google: 'https://plus.google.com/+ActiveBridgeTeam'
-    instagram: 'https://www.instagram.com/active.bridge'
-    pinterest: 'https://ru.pinterest.com/activebridg0459'
     github: 'https://github.com/activebridge'
-    blog: 'https://activebridge.org'
+  about_us:
+    active_bridge: Active Bridge
+    slogan: Your ideas. Our talents. Great result.
+    about: Information about us
+    information:
+      first: Active Bridge is an IT company that specializes in providing dedicated full-stack developers on demand to help
+             our clients and augment their in-house teams. Since 2013, our agency based on IT staff augmentation services
+             has been assisting clients in the development and maintenance of websites and web-based systems, mobile
+             applications, and software products.
+      second: Active Bridge started out as a small team of Ukrainian developers passionate about Ruby on Rails programming
+              and providing effective web solutions for our clients in the United States and Europe. Today, our company has
+              grown to include a staff of talented and experienced tech professionals with over 20 successful major projects
+              under our belt.
+      third: 'Our team has worked with startups, small and medium-sized enterprises (SMEs), and large corporations in both North
+             America and Eastern Europe. Our goal is always to prioritize the needs of our customers, and we strive to build and
+             maintain trust and productive relationships with all of our partners. That customer-centered focus is why Active Bridge was named one of the:
+             <ul>
+               <li class="bold">“Leading Clutch Agency 2017”</li>
+               <li class="bold">“Top B2B Service Providers, 2017”</li>
+               <li class="bold">“TOP B2B Company Ukraine, 2018”</li>
+               <li class="bold">“Leading Eastern Europe B2B Company, 2018”</li>
+             </ul>
+             by Clutch.co., and why we’re consistently rated as one of the top web and
+             software developers in Eastern Europe'
+    solutions_and_benefits:
+      solutions_title: Solutions for business
+      benefits_title: The benefits of collaboration with Active Bridge
+      solutions:
+        - id: first
+          title: Full-stack expertise where you need it
+          desc: When you hire web programmers through Active Bridge, you get access to the full breadth of skills and experience
+                that our team has to offer. Our dedicated full-stack developers are experienced in both server-side development and client-side
+                project building, meaning whatever the details of your project may be, we’re ready to help
+        - id: second
+          title: Project staffing and recruiting
+          desc: Recruiting talent for complex IT projects can be difficult, but we’re here to help. When you partner with Active Bridge, we take
+                care of the sourcing and selection of qualified candidates with the needed skills and experience level for your job. Click here
+                for more information on our process. <a href="/how-we-work">How we work</a>
+        - id: third
+          title: A motivated workforce
+          desc: Companies can sometimes be wary about bringing in an IT contractor to work on new projects, but at Active Bridge, our senior
+                developers are experts at integrating with our clients’ in-house teams and treating every project as if it was our own.
+                Our developers get fired up by emerging technologies, challenging tasks, interesting ideas, and Rails collaboration, making
+                them enthusiastic and productive team members.
+        - id: fourth
+          title: Timely delivery
+          desc: Whether you choose to bring Active Bridge talent into your organization to augment an in-house team or engage our full team of
+                talented web developers, we always ensure your project is delivered on-time and inline with the expectations of your stakeholders.
+        - id: fifth
+          title: Team extending
+          desc: Whether your business is growing or just taking on a larger-than-normal project, Active Bridge is always ready to meet your staffing
+                needs. Our experienced developers are ready to augment your in-house teams to ensure you’ve got the staffing and flexibility you need to succeed.
+      benefits:
+        - id: first
+          title: Dedicated web developers
+          desc: Our staff isn’t big, but all of our team members are senior/middle-level developers with extensive experience in full-stack web development and
+                widely-ranging backgrounds.
+        - id: second
+          title: Teamwork and expert integration
+          desc: Our staff aren’t just expert full-stack developers, they’re also expert team-players. They’ll seamlessly integrate into your existing team and work
+                environment, making your team’s values, goals, ideas, and expectations their own.
+        - id: third
+          title: Flexibility
+          desc: Our offshore web developers on demand join your project as in-house employees. We adhere to Agile methodologies, like Scrum and Kanban, and use behavior-driven
+                development (BDD) methods. We give you the flexibility to add experienced staff when you need it on a project-by-project basis.
+        - id: fifth
+          title: Transparency and face-to-face communication
+          desc: As an offshore IT contractor, it’s absolutely crucial that we make workflow easy and transparent. That’s why our team is committed to providing constant
+                information about project progress. We’ll participate in meetings as often as you require, send daily, weekly, or monthly status reports depending on your
+                needs, and maintain a 24/7 customer support channel. We always guarantee that our developers are assigned to only a single project, meaning you’ll always
+                have their full dedication to your team’s goals.
+        - id: fourth
+          title: Fluent English communication
+          desc: Our full-stack developers are all excellent English speakers, meaning we can integrate easily into your teams and meetings without any worry of language
+                barriers getting in the way.
   blog:
     categories:
       ror-development: RoR Development
@@ -246,7 +863,6 @@ en:
     recommended: RECOMMENDED POSTS
     footer:
       pages:
-        about: About
         services: Services
         team: Team
         portfolio: Portfolio
@@ -258,3 +874,82 @@ en:
       contact_us: Contact Us
       follow: Stay tuned
       copyright: '© 2018 Active Bridge, LLC'
+  how_we_work:
+    title: How we work
+    description:
+      Active Bridge provides senior-level developers to help companies augment
+      their in-house teams and scale up their development processes. Our talented developers
+      integrate seamlessly with your engineering team, giving you flexible staffing solutions
+      to meet your project’s needs. We offer solutions for multiple types of collaboration,
+      including team extensions, dedicated developer teams, and project-model contracts.
+      Whatever way you choose to engage our team, we always offer unrivaled customer support
+      to ensure your satisfaction.
+    models_title: Cooperation Models
+    get_dedicated: How to get dedicated developers in your in-house team
+    model_questions:
+      definition: 'Definition:'
+      for_who: Who is this model best for?
+      scope_of_work: How is the scope of work defined?
+      cost: How is the cost of work defined?
+      advantages: 'Customer Advantages:'
+    cooperation_models:
+      - title: Dedicated Team
+        logo: how_we_work/dedicated_team.svg
+        definition:
+          We provide a team of dedicated developers on a long-term basis in
+          accordance with your estimates. You may choose to manage the team from your side
+          or assign one of our Active Bridge project managers to the job..
+        for_who:
+          - Experienced managers that have a deep knowledge of the project field
+          - Mid-sized companies with clear future plans for the project
+          - Corporations with strong internal management capabilities
+        scope_of_work:
+          The scope of work will be laid out in the agreement based on your needs.
+          Usually, tasks are defined as user stories that can be determined during the development
+          process. Estimations are used as a guideline
+        cost:
+          Daily rates for hired developers are always agreed upon beforehand. At the end of each month,
+          we will send an invoice based on the agreed-upon rates and billable hours of the dedicated team.
+          Weekly reports are provided to ensure you and Active Bridge are always on the same page
+        advantages:
+          - Flexible budgets
+          - No additional overhead or tax burden required to bring on our developers in place of in-house staff
+          - No recruitment risks, or requirement to bring on extra management for expansion
+          - Clients completely control the development process
+      - title: Team Extension
+        logo: how_we_work/team_extension.svg
+        definition:
+          Our developers become an integrated part of your existing in-house development team for the duration
+          of the project. Our talented staff will immerse themselves in your project, adopt and maintain your
+          company culture, and make your team’s goals their own, ensuring a seamless integration.
+        for_who:
+          - Small and medium-sized businesses developing new modules or applications
+          - Companies with in-house teams in temporary need of a few extra coders
+          - Any business that already has a core development team
+        scope_of_work:
+          The scope of work will be laid out in the agreement based on your needs. Developers can be engaged
+          wither full or part-time and will fully integrate with your existing tracking systems.
+        cost: Developers are billed out at an hourly rate based on the stack and experience level required for the project.
+        advantages:
+          - Engage flexible, qualified, experienced help when needed for a limited time
+          - More cost-efficient than hiring full-time employees or bringing in local contractors
+          - No additional overhead or tax burden required to bring on our developers in place of in-house staff
+          - No requirement for HR managers or recruiters to engage in costly and time-consuming interviewing
+          - No added management requirement to handle new staffing
+      - title: Project Model
+        logo: how_we_work/project_model.svg
+        definition:
+          Under this model, we’ll provide the full-force of our development team to cost out and implement your project.
+        for_who:
+          - Start-ups without development teams
+          - Businesses with a clear idea of the end product they’re looking for, but without the in-house expertise or staff to implement it
+        scope_of_work:
+          The scope of work will be laid out in the agreement based on your needs. We’ll provide expert estimates on the resources and developer
+          experience levels required for the job.
+        cost:
+          Developers are billed out at hourly rates agreed upon beforehand. We’ll provide tracking statistics detailing billable hours and completed tasks.
+        advantages:
+          - No recruitment costs
+          - Fixed deadlines
+          - No additional management costs
+          - Clear understanding of project goals and expert implementation by our seasoned developers

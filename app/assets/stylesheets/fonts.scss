@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@font-face{
+  font-family: 'Panton Regular';
+  src: font-url('Panton.otf') format('truetype');
+}
 
 body {
-  font-family: 'Roboto', arial, sans-serif;
+  font-family: 'Panton Regular', serif;
 }

@@ -1,0 +1,13 @@
+header.header.visible
+  .logotype
+    a href='/'
+      = inline_svg 'index/logo.svg', class: 'logotype'
+header.header#header
+  .logotype
+    a href='/'
+      = inline_svg 'index/logo.svg', class: 'logotype'
+  .path
+    'Home
+    - if !@page.eql? '/'
+      '\
+      = @page.gsub('_', ' ').capitalize

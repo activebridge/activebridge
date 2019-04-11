@@ -5,8 +5,8 @@ class WelcomeController < ApplicationController
                 cache_path: proc { request.variant&.first&.to_s || "#{params[:page] || :index}/#{request.format}" }
 
   def index
-    @members = Member.order(priority: :asc)
-    @projects = Project.order(priority: :asc)
+    @page = params[:page] || '/'
+    render params[:page]
   end
 
   def bing_site_auth

@@ -5,7 +5,6 @@ FactoryGirl.define do
     name 'Alex'
     position 'RoR Developer'
     avatar File.open(File.join(Rails.root, '/spec/fixtures/image.jpg'))
-    cartoon File.open(File.join(Rails.root, '/spec/fixtures/image.jpg'))
     priority
   end
 end

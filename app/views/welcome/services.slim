@@ -1,0 +1,38 @@
+.container
+  h1.header_2 = t('services.title')
+  .services
+    - I18n.t('services.development').each_with_index do |service, i|
+      .technology
+        .logo_container id="#{service[:id]}"
+          - (1..100).each do |cell|
+            = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+          .inner
+            = inline_svg(service[:logo], class: 'service_icon')
+        h2.header_3.bold
+          = service[:title]
+        .description= service[:description]
+        - unless i != 0
+          span.bdd_show
+            span
+              '+
+              = service[:bdd][:title]
+          .informational_container#bdd
+            .bdd_desc
+              p.bdd_title= service[:bdd][:title]
+              = service[:bdd][:desc]
+            .advantages
+              hr
+              = inline_svg 'services/ruby.svg', class: 'ruby'
+              span
+                b= service[:bdd][:advantages][:title]
+              ul
+                - service[:bdd][:advantages][:items].each do |a|
+                  li= a
+    .header_2.text-center Core technologies we specialize in
+    - I18n.t('services.development').each_with_index do |service, i|
+      - service[:technologies].each do |t|
+        .technology
+          .tech-title
+            = inline_svg t[:icon], class: 'tech-icon'
+            b= t[:title]
+          .tech_desc= t[:desc]

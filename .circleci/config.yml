@@ -1,0 +1,71 @@
+version: 2
+jobs:
+  build:
+    parallelism: 1
+    environment:
+      CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
+      CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
+    docker:
+      - image: circleci/ruby:2.5.3-node
+        environment:
+          RAILS_ENV: test
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+      - image: circleci/postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: ab_test
+          POSTGRES_PASSWORD: ''
+    working_directory: ~/activebridge/activebridge
+    steps:
+      - checkout
+      # Restore bundle cache
+      - type: cache-restore
+        key: activebridge-{{ checksum "Gemfile.lock" }}
+      # Bundle install dependencies
+      - run: bundle install --path vendor/bundle
+      # Store bundle cache
+      - type: cache-save
+        key: activebridge-{{ checksum "Gemfile.lock" }}
+        paths:
+          - vendor/bundle
+      - run:
+          working_directory: ~/activebridge/activebridge
+          command: sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
+
+      - run: echo -e "export RAILS_ENV=test\nexport RACK_ENV=test" >> $BASH_ENV
+      - run: 'bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
+          --jobs=4 --retry=3 '
+      - run: cp config/database.yml.example config/database.yml
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:migrate
+      - run:
+          command: |
+            mkdir /tmp/test-results
+            bundle exec rspec --profile 10 \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+      - store_test_results:
+          path: /tmp/circleci-test-results
+      - store_artifacts:
+          path: /tmp/circleci-artifacts
+      - store_artifacts:
+          path: /tmp/circleci-test-results
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run: bundle exec cap production deploy
+workflows:
+  version: 2
+  build-deploy:
+   jobs:
+     - build
+     - deploy:
+         requires:
+           - build
+         filters:
+           branches:
+             only: master

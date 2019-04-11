@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'lazybox'
 gem 'pg'
+gem 'countries', require: 'countries/global'
 gem 'rails', '5.0.1'
 gem 'redcarpet'
 gem 'roadie-rails'
@@ -32,6 +33,7 @@ gem 'turbolinks'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier'
 gem 'whenever', require: false
+gem 'rest-client', '2.0.2'
 
 group :development, :test do
   gem 'capistrano-passenger'

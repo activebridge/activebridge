@@ -1,162 +1,213 @@
-.camera {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
-  height: 740px;
-  z-index: 2;
-  transition: opacity .3s;
-  @media (max-width: 1118px) {
-    height: 66vw;
-  }
-  @media
-  only screen and (max-height: 900px) and (max-width: 1400px),
-  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1500px),
-  only screen and (min-resolution: 120dpi) and (min-width: 1024px) and (max-width: 1500px)
-  {
-    transform: translateY(-50%) scale(.7);
-  }
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 90vw;
-    max-width: 1000px;
-  }
-}
+$members:(
+  andrieieva_nastya,
+  bidochka_alex,
+  bilan_igor,
+  bondarenko_vitaliy,
+  borodai_alex,
+  domotenko_eugene,
+  dzyoma_artem,
+  galushka_alex,
+  karpenko_alex,
+  kovtun_vitaliy,
+  kuritsyna_dasha,
+  lukin_alexey,
+  makodzeba_dima,
+  marchenko_alex,
+  mihailovskiy_pavel,
+  milevskyi_ruslan,
+  motuzko_alex,
+  motuzko_nastya,
+  misan_misha,
+  naumenko_sergii,
+  novitskyi_dmitryi,
+  okunieva_lena,
+  oleynikov_oleg,
+  pedan_andriy,
+  savenko_serhii,
+  serebryansky_maxim,
+  shmigol_victor,
+  surzhko_eugene,
+  tsibulko_alex,
+  tupickiy_vlad,
+  tupickiy_yarik,
+  verbivskyi_alexey,
+  voloshyn_oleg,
+  zimin_anton,
+  zubritskiy_denis
+);
 
-.team-photos {
-  position: absolute;
-  max-height: 477px;
-  min-height: 100%;
-  width: 100%;
-  object-fit: cover;
-  @media (max-width: 1118px) {
-    height: 44vw;
-  }
-}
+.cartoon_cards {
+  margin-top: 3vh;
+  height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 
-.photos-container {
-  width: 100%;
-  max-width: 1000px;
-}
-
-.photo {
-  position: absolute;
-  top: 16.7%;
-  left: 10vw;
-  width: 62vw;
-  height: 64.2%;
-  border-radius: calc(100vw / 53.23);
-  overflow: hidden;
-  background: #70447f;
-  opacity: 0;
-  visibility: hidden;
-  @media (min-width: 1001px) and (max-width: 1117px) {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    margin-right: calc(50% - 22vw);
-  }
-  @media (min-width: 1118px) {
-    top: 120px;
-    left: 57px;
-    width: 686px;
-    height: 473px;
-    border-radius: 21px;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.65);
-    border-radius: calc(100vw / 53.23);
-    width: 100%;
-    height: 100%;
-    @media (min-width: 1118px) {
-      border-radius: 19px;
-    }
-  }
-}
-
-input[name='team-photos'] {
-  position: absolute;
-  &:checked + .photo,
-  &:checked + .photo + .team-photo-controls{
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.team-photo-controls {
-  position: absolute;
-  right: 9.8vw;
-  top: 45.3vw;
-  width: 12%;
-  opacity: 0;
-  visibility: hidden;
-  @media (min-width: 1001px) and (max-width: 1117px) {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 11.7vw;
-    margin-left: calc(50% + 28.4vw);
-  }
-  @media (min-width: 1118px) {
-    right: 5.3%;
-    top: 68%;
-    width: 13.5%;
-  }
-  label {
-    position: absolute;
-    z-index: 100;
-    visibility: visible;
-    display: block;
-    width: 0;
-    height: 0;
+  .cartoon_container {
     cursor: pointer;
-    transition: border .2s;
-    &.next {
-      right: 0;
-      border-top: 16px solid transparent;
-      border-left: 10px solid #d2c0e5;
-      border-bottom: 16px solid transparent;
-      &:hover {
-        border-left: 10px solid darken(#d2c0e5, 10%);
+    width: 25%;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+
+    .cartoon_logo_container {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 80%;
+
+      .cartoon_logo {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
-      @media (max-width: 1118px) {
-        border-top: 1.5vw solid transparent;
-        border-left: 1vw solid #d2c0e5;
-        border-bottom: 1.5vw solid transparent;
-        &:hover {
-          border-left: 1vw solid darken(#d2c0e5, 10%);
+
+      .hover {
+        top: -2px;
+        left: 2px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s linear;
+      }
+    }
+    .descr {
+      width: 100%;
+      height: 30%;
+      align-self: flex-end;
+      span {
+        color: $main-blue;
+        transition: all .3s linear;
+
+        &.name {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        &.position {
+          font-size: .75rem;
         }
       }
     }
-    &.prev {
-      left: 0;
-      border-top: 16px solid transparent;
-      border-right: 10px solid #d2c0e5;
-      border-bottom: 16px solid transparent;
-      &:hover {
-        border-right: 10px solid darken(#d2c0e5, 10%);
-      }
-      @media (max-width: 1118px) {
-        border-top: 1.5vw solid transparent;
-        border-right: 1vw solid #d2c0e5;
-        border-bottom: 1.5vw solid transparent;
-        &:hover {
-          border-right: 1vw solid darken(#d2c0e5, 10%);
+
+    &:hover {
+      .descr {
+        span {
+          color: $main-violet;
+          }
+        }
+
+      .cartoon_logo_container {
+        .hover {
+          visibility: visible;
+          opacity: 1;
         }
       }
+    }
+
+    &:focus{
+      outline: none;
+    }
+  }
+  .informational_container {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+
+    .member_information {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      height: 100%;
+
+      .member {
+        display: flex;
+        height: 35%;
+        margin-bottom: 5%;
+
+        img {
+          height: 85%;
+          max-width: 35%;
+          align-self: flex-end;
+        }
+        .name_and_post {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          width: 75%;
+
+          .info {
+            text-align: left;
+            width: 75%;
+            .name {
+              text-transform: uppercase;
+              font-size: 1.5em;
+              margin-bottom: 15px;
+            }
+            .position {
+              color: black;
+            }
+          }
+          hr {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          }
+        }
+      }
+      .description {
+        height: 35%;
+        overflow-y: auto;
+        margin-bottom: 15px;
+
+        &.high{
+          height: 60%;
+        }
+      }
+      .title_projects {
+        height: 7%;
+        text-align: center;
+        font-size: 1.5em;
+        hr {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .projects {
+        overflow-y: auto;
+        display: flex;
+        height: 20%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+          width: 45%;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      top: 15%;
+      width: 50%;
+      height: 65%;
+    }
+
+    @media screen and (min-height: 900px) {
+      top: 25%;
+      height: 50%;
+      width: 30%;
+    }
+  }
+  @each $member in $members {
+    ##{$member}:focus ~ ##{$member}_card {
+      z-index: 5;
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
