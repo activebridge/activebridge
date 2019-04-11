@@ -5,17 +5,17 @@
     .work_desc
       = t('how_we_work.description')
     .holder_key
-      .keyboard_container
+      .keyboard
         h1.get_dedicated=t('how_we_work.get_dedicated')
-        = inline_svg 'how_we_work/keyboard_hover.svg', class: 'keyboard key_hover'
-        = inline_svg 'how_we_work/keyboard.svg', class: 'keyboard'
+        .keyboard-container
+          = inline_svg 'how_we_work/keyboard.svg', class: 'keyboard-continer__img'
         .cooperation-models= t('how_we_work.models_title')
     .cooperation_models_cards#cooperation_models
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
         .model_card
           .logo_container
             - (1..100).each do |cell|
-              = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+              = link_to '', "##{id_name(cooperation[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
             .inner
               = inline_svg cooperation[:logo], class: 'inner'
           .descr

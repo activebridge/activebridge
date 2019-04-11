@@ -15,36 +15,39 @@ $models: dedicated-team, team-extension, project-model;
   }
 
   .holder_key{
-    height: 25vh;
     width: 100%;
     margin: 5vh 0;
 
-    .keyboard_container {
+    .keyboard {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 100%;
       height: 100%;
 
-      &:hover {
+      &-container {
+        width: 80%;
+
+        .keyboard {
+          width: 80%;
+        }
+
         .key_hover {
+          bottom: 4px;
+          visibility: hidden;
+          opacity: 0;
+          transition: all .3s linear;
+        }
+      }
+
+      &:hover {
+        .key-hover {
           visibility: visible;
           opacity: 1;
         }
       }
 
-      .keyboard {
-        height: 80%;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-
-      .key_hover {
-        bottom: 4px;
-        visibility: hidden;
-        opacity: 0;
-        transition: all .3s linear;
-      }
 
       .get_dedicated{
         color: $main-blue;
@@ -55,8 +58,6 @@ $models: dedicated-team, team-extension, project-model;
 
       .cooperation-models{
         width: 100%;
-        position: absolute;
-        bottom: 2px;
         font-size: 1.75vw;
         color: $main-blue;
       }
@@ -64,7 +65,7 @@ $models: dedicated-team, team-extension, project-model;
   }
   .cooperation_models_cards {
     width: 100%;
-    height: 85vh;
+    height: auto;
     margin-bottom: 2vh;
     display: flex;
     justify-content: space-between;
@@ -72,7 +73,7 @@ $models: dedicated-team, team-extension, project-model;
     .model_card {
       width: 30%;
       max-width: 350px;
-      height: 100%;
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -81,9 +82,10 @@ $models: dedicated-team, team-extension, project-model;
         color: $main-blue;
         text-align: justify;
       }
-    }
-    @media (min-height: 800px) {
-      height: 65vh;
+
+      .learn_more {
+        margin-top: 10px;
+      }
     }
   }
   .models_information {
@@ -110,7 +112,7 @@ $models: dedicated-team, team-extension, project-model;
     ##{$model}:target {
       visibility: visible;
       opacity: 1;
-      z-index: 4;
+      z-index: 6;
     }
 
     ##{$model}:target ~ #close_model {

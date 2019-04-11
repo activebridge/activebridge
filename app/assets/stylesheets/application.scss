@@ -177,7 +177,7 @@ body {
   white-space: nowrap;
 
   &:hover {
-    box-shadow: 0px 0px 20px $main-blue;
+    box-shadow: 0px 0px 10px 1px rgba(95, 82, 202, 0.4);
     background: linear-gradient(to right, $main-blue, $main-violet);
   }
 }
@@ -370,13 +370,6 @@ nav.navbar {
           }
         }
 
-        &:hover {
-          .icon-link {
-            .nav-icon {
-              filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, .9));
-            }
-          }
-        }
       }
 
       .anchors {
@@ -395,13 +388,18 @@ nav.navbar {
           display: flex;
         }
       }
+      &:hover {
+        .page-link {
+          filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, .9));
+        }
+      }
     }
   }
 }
 
 #back-to-top {
   display: block;
-  z-index: 10;
+  z-index: 5;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -454,7 +452,7 @@ nav.navbar {
   left: 47%;
   transform: translateX(-50%);
   transition: visibility 1s linear .3s, opacity .3s linear;
-  box-shadow: 0px 3px 20px rgba(136, 136, 136, 0.85);
+  box-shadow: 00px 0px 10px 1px rgba(95, 82, 202, 0.4);
 
   .prev, .next {
     transition: all .2s linear;

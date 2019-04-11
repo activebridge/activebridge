@@ -12,11 +12,11 @@
       - I18n.t('navbar.links').each_with_index do |item, index|
         - if index == I18n.t('navbar.links').size - 1
           .spacer
-        .item
+        .item class="item-#{index}" onmouseenter="toggleAnchors(this)"
           .page-link id="icon-#{index}" onmouseover="showTitle(this)" onmouseout="hideTitle(this)"
             = link_to item[:title][:link], class: 'icon-link'
               = inline_svg item[:icon], class: 'nav-icon'
-            span class="item-#{index}" onmouseenter="toggleAnchors(this)"
+            span
               = link_to item[:title][:name], item[:title][:link], class: 'page'
           - if item[:links]
             .anchors class="item-#{index}"
@@ -24,8 +24,9 @@
                 = link_to link[:name], link[:link], class: 'anchor'
 javascript:
   function toggleAnchors(el) {
-    anchors = document.getElementsByClassName(el.classList[0])[1]
-    if (anchors) {
+    anchors = document.getElementsByClassName(el.classList[1])[1]
+    isMenuToggled = document.getElementById("menu")
+    if (anchors && isMenuToggled['checked']) {
       if (anchors.classList.contains("show")) {
         setTimeout(function (){
           anchors.classList.remove("show")
