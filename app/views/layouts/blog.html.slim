@@ -2,6 +2,7 @@ doctype 5
 html
   = render 'layouts/head', type: :blog, media: :all
   body.blog
+    = render 'shared/gtag_iframe'
     = render 'shared/blog/header'
     main.main
       .yield

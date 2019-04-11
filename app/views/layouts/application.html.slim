@@ -12,6 +12,7 @@ html lang='en'
   = render 'layouts/head', type: :application, media: :all
 
   body
+    = render 'shared/gtag_iframe'
     = render 'shared/navbar'
     = render 'shared/header'
     = yield
