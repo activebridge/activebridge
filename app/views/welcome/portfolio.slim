@@ -45,11 +45,11 @@
         a href="#testimonial-#{item_name(testimonial[:company])}"
           .description_wrapper
             = inline_svg 'testimonials/like.svg', class: 'like'
+            = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             span
-              = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
-              = testimonial[:description].slice(0..90) + '...'
-              = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
+              = testimonial[:description].split(" ").slice(0..10).join(" ") + '...'
             .spacer
+            = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
             button.read_more href="#testimonial-#{item_name(testimonial[:company])}" Read more
 
   .testimonials_cards
