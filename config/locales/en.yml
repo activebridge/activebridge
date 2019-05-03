@@ -87,6 +87,176 @@ en:
         title: Hire Full-Stack Developers in 48 hours | Active Bridge
         description:
           Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
+    open_graph:
+      /:
+        title: IT Contractor Company, Developers on Demand | Active Bridge, LLC
+        description:
+          Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale your in-house team with our technical talents
+      how-we-work:
+        title: Staff Augmentation Services, Developers on Demand | Active Bridge, LLC
+        description:
+          Active Bridge is your IT contractor partner providing full-stack developers and responsible for development & maintaining web/mobile applications
+      services:
+        title: Web and Mobile Application Development Services | Active Bridge,LLC
+        description:
+          More than 5 years Active Bridge has been a successful provider web & mobile application development solutions. Learn more
+      portfolio:
+        title: Ruby on Rails Project Examples | Active Bridge, LLC
+        description:
+          Active Bridge is a successful provider of Ruby on Rails development services on the US market.
+          All our ruby on rails projects examples see here
+      team:
+        title: Full-stack Web Developers on demand | Active Bridge, LLC
+        description:
+          Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
+          mobile developers for your in-house teams. Learn more
+      contact:
+        title: Hire Full-Stack Developers in 48 hours | Active Bridge, LLC
+        description:
+          Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
+    schema:
+      /:
+        '{
+          {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Active Bridge",
+            "legalName": "Active Bridge, LLC",
+            "description": "Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale your in-house team with our technical talents",
+            "foundingDate": "2013",
+            "logo": "http://www.w3.org/2000/svg",
+            "award": ["Leading Clutch Agency 2017",
+              "Top B2B Service Providers, 2017",
+              "TOP B2B Company Ukraine, 2018",
+              "Leading Eastern Europe B2B Company, 2018"],
+            "telephone": "+38-063-608-6045",
+            "email": "contact@avtive-bridge.com",
+            "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Phoenix",
+            "addressRegion": "AZ",
+            "streetAddress": "4644 North 22nd Street"
+            },
+            "areaServed": ["US","CA"],
+            "url": "https://activebridge.org/",
+              "sameAs" : [ "https://www.facebook.com/ActiveBridgeTeam",
+              "https://www.linkedin.com/company/activebridge",
+              "https://github.com/activebridge"
+              ]
+          },
+          {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "Active Bridge",
+            "url": "https://activebridge.org/",
+            "mainContentOfPage": "Active Bridge is an IT company that specializes in providing dedicated
+              full-stack developers on demand to help our clients and augment their in-house teams.
+              Since 2013, our agency based on IT staff augmentation services has been assisting clients
+              in the development and maintenance of websites and web-based systems, mobile applications,
+              and software products.",
+            "relatedLink": ["https://activebridge.org/how-we-work",
+              "https://activebridge.org/portfolio",
+              "https://activebridge.org/team",
+              "https://activebridge.org/services",
+              "https://activebridge.org/contact"]
+          }
+        }'
+      how-we-work:
+        '{
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "name": "Active Bridge How We Work",
+          "url": "https://activebridge.org/how-we-work",
+          "mainContentOfPage": "Active Bridge provides senior-level developers to help companies augment 
+            their in-house teams and scale up their development processes. Our talented developers integrate 
+            seamlessly with your engineering team, giving you flexible staffing solutions to meet your project’s needs. 
+            We offer solutions for multiple types of collaboration, including team extensions, dedicated developer teams, 
+            and project-model contracts. Whatever way you choose to engage our team, we always offer unrivaled customer 
+            support to ensure your satisfaction.",
+          "relatedLink": ["https://activebridge.org/",
+            "https://activebridge.org/services",
+            "https://activebridge.org/portfolio",
+            "https://activebridge.org/team",
+            "https://activebridge.org/contact"]
+        }'
+      services:
+        '{
+          {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "Active Bridge Services",
+            "url": "https://activebridge.org/services",
+            "mainContentOfPage": "At Active Bridge, our number one goal is to find effective 
+              web solutions to meet the needs and goals of our clients’ businesses. To cover all aspects
+              of our clients’ web programming needs, we employ a full-stack web development process, 
+              meaning our developers are experienced in both back-end development (server-side) and
+              front-end development (user-side). As a result, we can offer our clients elegant and 
+              professional web solutions, whatever their needs may be. At Active Bridge we bring our
+              mobile development expertise together with your ideas to create incredible apps. We’re
+              experienced in building mobile applications for both specific mobile operating systems
+              as well as hybrid applications, so whether you want your app to run on iOS, Android, or
+              an embedded web browser, we can help.",
+            "relatedLink": ["https://activebridge.org/",
+              "https://activebridge.org/how-we-work",
+              "https://activebridge.org/portfolio", 
+              "https://activebridge.org/team",
+              "https://activebridge.org/contact"]           
+          },
+          {
+            "@context": "http://schema.org",
+            "@type": "Service",
+            "serviceType": "Web & Mobile Application Development",
+            "areaServed": ["US", "CA"]
+          }
+         }'
+      portfolio:
+        '{
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "name": "Active Bridge Portfolio",
+          "url": "https://activebridge.org/portfolio",
+          "mainContentOfPage": "Active Bridge is a successful provider of Ruby on Rails development services on the US market. 
+            All our ruby on rails projects examples see here",
+          "relatedLink": ["https://activebridge.org/",
+             "https://activebridge.org/services", 
+             "https://activebridge.org/team", 
+             "https://activebridge.org/how-we-work"]
+        }'
+      team:
+        '{
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "name": "Active Bridge Team",
+          "url": "https://activebridge.org/team",
+          "mainContentOfPage": "Located in Ukraine Active Bridge company successfully provides dedicated full-stack 
+            engineers, mobile developers for your in-house teams. Learn more",
+          "relatedLink": ["https://activebridge.org/",
+            "https://activebridge.org/services", 
+            "https://activebridge.org/portfolio", 
+            "https://activebridge.org/how-we-work",
+            "https://activebridge.org/contact"]
+        }'
+      contact:
+        '{
+          "@context": "http://schema.org",
+          "@type": "ContactPage",
+          "name": "Active Bridge Contacts",
+          "url": "https://activebridge.org/contact",
+            "sameAs" : [ "https://www.facebook.com/ActiveBridgeTeam",
+            "https://www.linkedin.com/company/activebridge",
+            "https://github.com/activebridge"
+            ],
+          "description": "Active Bridge is your full-stack development partner, providing IT staff augmentation services 
+            and helping to scale your team",
+          "primaryImageOfPage": "http://www.w3.org/2000/svg",
+          "relatedLink": ["https://activebridge.org/how-we-work",
+            "https://activebridge.org/portfolio",
+            "https://activebridge.org/team",
+            "https://activebridge.org/services",
+            "https://activebridge.org"]
+        }'
+
+
   welcome:
     about:
       title: About

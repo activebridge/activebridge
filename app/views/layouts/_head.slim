@@ -12,43 +12,7 @@ head
   = yield :head
 
   script type = 'application/ld+json'
-    |
-     {
-     "@context" : "http://schema.org",
-     "@type" : "Organization",
-     "name" : "Active Bridge ruby on rails web development company",
-     "url" : "https://activebridge.org",
-     "logo" : "https://activebridge.org/icon-4x.png",
-     "founder" : "Active Bridge",
-     "foundingDate" : "11102013",
-     "sameAs" : "http://plus.google.com/u/0/b/113539394867918366992/+ActivebridgeTeam/",
-     "contactPoint" : {
-         "@type" : "ContactPoint",
-         "contactType" : "Customer Service",
-         "telephone" : "+380636086045",
-         "contactOption" : "TollFree",
-         "areaServed" : "US",
-         "availableLanguage" : "English",
-         "email" : "contact@active-bridge.com"
-     },
-     "hasPos" : {
-         "@type" : "Place",
-         "name" : "Avtive Bridge web development company",
-         "photo" : "https://activebridge.org/icon-4x.png",
-         "hasMap" : {
-             "@type" : "Map",
-             "url" : "https://maps.google.com/maps?q=feed_me_a_map"
-       },
-        "address" : {
-             "@type" : "PostalAddress",
-             "name" : "Active Bridge,LLC",
-             "streetAddress" : "Mangels",
-             "addressLocality" : "San Francisco",
-             "addressRegion" : "California",
-             "postalCode" : "94127",
-             "addressCountry" : "United States"
-         }
-     }}
+    = t("meta.schema.#{params[:page].blank? ? "/" : params[:page]}").html_safe
   css:
     .informational_container {
       visibility: hidden;
