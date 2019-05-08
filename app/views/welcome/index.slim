@@ -26,8 +26,9 @@
       .description-img
         = inline_svg 'index/globe.svg', class: 'index-icon right'
     .description-container
-      .description-img
+      .description-img.with_clutch_widget
         = image_tag 'index/awards.png', class: 'index-icon left'
+        .clutch-widget data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
       .description-text.d-block=t('about_us.information.third').html_safe
   .solutions_and_benefits#solutions_and_benefits
     .solutions
@@ -73,4 +74,5 @@
             hr
             .description= el[:desc]
       = link_to '', '#index', class: 'close_description', id: 'benefits'
+script src="https://widget.clutch.co/static/js/widget.js" type="text/javascript"
 
