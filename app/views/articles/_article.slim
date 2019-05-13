@@ -9,7 +9,7 @@
           = article.member.name
         span
           b
-            'Published: 
+            'Published:
           = article.created_at.to_formatted_s(:long)
       = image_tag article.member.avatar.url, class: 'author-avatar'
     = image_tag article.picture_url, class: 'article-picture'

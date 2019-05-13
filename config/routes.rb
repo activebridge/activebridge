@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'expire_cache', to: 'welcome#expire_cache'
   get 'BingSiteAuth.xml' => 'welcome#bing_site_auth', format: 'xml', as: :BingSiteAuth
 
+  get '/about', to: 'welcome#index'
+
   resources :articles, defaults: { format: :html }, path: 'blog' do
     collection do
       get 'category(/:category)', action: :index,
