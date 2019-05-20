@@ -11,6 +11,9 @@ html lang='en'
   meta property='og:image'       content='https://i.imgur.com/yHecdkg.jpg'
   meta name = 'description'      content=t("meta.pages.#{@page}.description")
 
+  = content_for :title do
+    = meta_title
+
   = render 'layouts/head', type: :application, media: :all
 
   body

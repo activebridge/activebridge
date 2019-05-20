@@ -49,4 +49,13 @@ module ApplicationHelper
   def next_item(items, i)
     items.length.pred == i ? items[0] : items[i.next]
   end
+
+
+  def meta_title
+    t("meta.pages.#{params[:page].blank? ? "/" : params[:page]}.title", default: 'Ruby on Rails Development Company')
+  end
+
+  def show_schema
+    t("meta.schema.#{params[:page].blank? ? "/" : params[:page]}").html_safe
+  end
 end
