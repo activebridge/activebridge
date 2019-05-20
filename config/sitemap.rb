@@ -10,7 +10,7 @@ SitemapGenerator::Sitemap.create do
     add p, changefreq: :never
   end
   add articles_path,
-      host: 'http://activebridge.org/blog',
+      host: 'http://activebridge.org',
       changefreq: 'daily',
       priority: 0.9
   Article.done.find_each do |article|
