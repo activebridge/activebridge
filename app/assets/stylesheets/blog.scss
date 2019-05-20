@@ -250,11 +250,10 @@ a.article {
     }
 
     .article-body {
-      height: calc(100% - 50px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 5px 50px;
+      padding: 5px 50px 25px 50px;
 
       .article-info {
         display: flex;
@@ -294,6 +293,10 @@ a.article {
         font-weight: 600;
         text-align: center;
         padding: 10px 40px;
+      }
+
+      a {
+        margin-bottom: 0 !important;
       }
     }
   }

@@ -6,10 +6,8 @@
   meta property='og:description' content=clean_truncate(article.body)
   meta property='og:updated_time' content=article.updated_at.to_i
   meta property='fb:app_id' content=639665256206886
-  meta property='title' content=article.title
   meta property='description' content=clean_truncate(article.body)
-  = content_for :title do
-    = article.title
+  title= article.title
 
 .title = "Home › Blog › #{t("blog.categories.#{article.category}")}"
 #post.article-box
