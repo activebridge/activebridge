@@ -15,7 +15,7 @@ SitemapGenerator::Sitemap.create do
       priority: 0.9
   Article.done.find_each do |article|
     add article_path(article),
-        host: 'http://activebridge.org/blog',
+        host: 'http://activebridge.org',
         changefreq: 'never'
   end
 end
