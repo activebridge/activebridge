@@ -60,10 +60,15 @@ en:
   meta:
     pages:
       /:
-        title: Offshore IT Contractor Company  | Active Bridge
+        title: IT Staff Augmentation Company, US/UA | Active Bridge LLC
         description:
           Active Bridge is your IT contracting partner providing full-stack developers and responsible for
           development & maintaining web/mobile applications.
+      blog:
+        title: Active Bridge Blog - IT Staffing Insights, Web|Software|Mobile Development
+        description: Browse our blog for advanced staff augmentation insights,
+                    web and software development tips, mobile design
+                    and development features, learn more
       how-we-work:
         title: Staff Augmentation Services, Developers on Demand | Active Bridge
         description:
@@ -167,11 +172,11 @@ en:
           "@type": "WebPage",
           "name": "Active Bridge How We Work",
           "url": "https://activebridge.org/how-we-work",
-          "mainContentOfPage": "Active Bridge provides senior-level developers to help companies augment 
-            their in-house teams and scale up their development processes. Our talented developers integrate 
-            seamlessly with your engineering team, giving you flexible staffing solutions to meet your project’s needs. 
-            We offer solutions for multiple types of collaboration, including team extensions, dedicated developer teams, 
-            and project-model contracts. Whatever way you choose to engage our team, we always offer unrivaled customer 
+          "mainContentOfPage": "Active Bridge provides senior-level developers to help companies augment
+            their in-house teams and scale up their development processes. Our talented developers integrate
+            seamlessly with your engineering team, giving you flexible staffing solutions to meet your project’s needs.
+            We offer solutions for multiple types of collaboration, including team extensions, dedicated developer teams,
+            and project-model contracts. Whatever way you choose to engage our team, we always offer unrivaled customer
             support to ensure your satisfaction.",
           "relatedLink": ["https://activebridge.org/",
             "https://activebridge.org/services",
@@ -186,11 +191,11 @@ en:
             "@type": "WebPage",
             "name": "Active Bridge Services",
             "url": "https://activebridge.org/services",
-            "mainContentOfPage": "At Active Bridge, our number one goal is to find effective 
+            "mainContentOfPage": "At Active Bridge, our number one goal is to find effective
               web solutions to meet the needs and goals of our clients’ businesses. To cover all aspects
-              of our clients’ web programming needs, we employ a full-stack web development process, 
+              of our clients’ web programming needs, we employ a full-stack web development process,
               meaning our developers are experienced in both back-end development (server-side) and
-              front-end development (user-side). As a result, we can offer our clients elegant and 
+              front-end development (user-side). As a result, we can offer our clients elegant and
               professional web solutions, whatever their needs may be. At Active Bridge we bring our
               mobile development expertise together with your ideas to create incredible apps. We’re
               experienced in building mobile applications for both specific mobile operating systems
@@ -198,9 +203,9 @@ en:
               an embedded web browser, we can help.",
             "relatedLink": ["https://activebridge.org/",
               "https://activebridge.org/how-we-work",
-              "https://activebridge.org/portfolio", 
+              "https://activebridge.org/portfolio",
               "https://activebridge.org/team",
-              "https://activebridge.org/contact"]           
+              "https://activebridge.org/contact"]
           },
           {
             "@context": "http://schema.org",
@@ -215,11 +220,11 @@ en:
           "@type": "WebPage",
           "name": "Active Bridge Portfolio",
           "url": "https://activebridge.org/portfolio",
-          "mainContentOfPage": "Active Bridge is a successful provider of Ruby on Rails development services on the US market. 
+          "mainContentOfPage": "Active Bridge is a successful provider of Ruby on Rails development services on the US market.
             All our ruby on rails projects examples see here",
           "relatedLink": ["https://activebridge.org/",
-             "https://activebridge.org/services", 
-             "https://activebridge.org/team", 
+             "https://activebridge.org/services",
+             "https://activebridge.org/team",
              "https://activebridge.org/how-we-work"]
         }'
       team:
@@ -228,11 +233,11 @@ en:
           "@type": "WebPage",
           "name": "Active Bridge Team",
           "url": "https://activebridge.org/team",
-          "mainContentOfPage": "Located in Ukraine Active Bridge company successfully provides dedicated full-stack 
+          "mainContentOfPage": "Located in Ukraine Active Bridge company successfully provides dedicated full-stack
             engineers, mobile developers for your in-house teams. Learn more",
           "relatedLink": ["https://activebridge.org/",
-            "https://activebridge.org/services", 
-            "https://activebridge.org/portfolio", 
+            "https://activebridge.org/services",
+            "https://activebridge.org/portfolio",
             "https://activebridge.org/how-we-work",
             "https://activebridge.org/contact"]
         }'
@@ -246,7 +251,7 @@ en:
             "https://www.linkedin.com/company/activebridge",
             "https://github.com/activebridge"
             ],
-          "description": "Active Bridge is your full-stack development partner, providing IT staff augmentation services 
+          "description": "Active Bridge is your full-stack development partner, providing IT staff augmentation services
             and helping to scale your team",
           "primaryImageOfPage": "http://www.w3.org/2000/svg",
           "relatedLink": ["https://activebridge.org/how-we-work",

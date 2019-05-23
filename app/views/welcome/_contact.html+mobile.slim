@@ -3,6 +3,7 @@ h6=t('.title')
   input#name name='contact[name]' type='text' placeholder="#{ t('.name_placeholder') }"
   input#email name='contact[email]' type='email' placeholder="#{ t('.email_placeholder') }" required=true
   textarea#text name='contact[message]' placeholder="#{ t('.message_placeholder') }" rows=4 required=true minlength=10
+  = select('contact', 'reason', t('.reasons').each {|r| [r] }, include_blank: false, required: true, class: 'reason')
   button= t('.send')
   address.vcard
     a.url.fn.n href='https://activebridge.org'

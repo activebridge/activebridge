@@ -1,5 +1,5 @@
 head
-  title=t("meta.pages.#{params[:page].blank? ? "/" : params[:page]}.title", default: 'Ruby on Rails Development Company')
+  title= yield :title
   meta charset='utf-8'
   meta name = 'viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no'
   meta name='google-site-verification' content='1AeEQ7FZFB4K7URidlmD2UP6z9pzq5HMUACZOhVRbpA'
@@ -12,7 +12,7 @@ head
   = yield :head
 
   script type = 'application/ld+json'
-    = t("meta.schema.#{params[:page].blank? ? "/" : params[:page]}").html_safe
+    = show_schema
   css:
     .informational_container {
       visibility: hidden;
