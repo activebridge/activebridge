@@ -116,51 +116,38 @@ en:
           Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
     schema:
       /:
-        '{
-          {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Active Bridge",
-            "legalName": "Active Bridge, LLC",
-            "description": "Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale your in-house team with our technical talents",
-            "foundingDate": "2013",
-            "logo": "http://www.w3.org/2000/svg",
-            "award": ["Leading Clutch Agency 2017",
-              "Top B2B Service Providers, 2017",
-              "TOP B2B Company Ukraine, 2018",
-              "Leading Eastern Europe B2B Company, 2018"],
-            "telephone": "+38-063-608-6045",
-            "email": "contact@avtive-bridge.com",
-            "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Phoenix",
-            "addressRegion": "AZ",
-            "streetAddress": "4644 North 22nd Street"
-            },
-            "areaServed": ["US","CA"],
-            "url": "https://activebridge.org/",
-              "sameAs" : [ "https://www.facebook.com/ActiveBridgeTeam",
-              "https://www.linkedin.com/company/activebridge",
-              "https://github.com/activebridge"
-              ]
+        '[{
+             "@context": "http://schema.org",
+             "@type": "Organization",
+             "name": "Active Bridge",
+             "legalName": "Active Bridge, LLC",
+             "description": "Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale your in-house team with our technical talents",
+             "foundingDate": "2013",
+             "logo": "http://www.w3.org/2000/svg",
+             "award": ["Leading Clutch Agency 2017", "Top B2B Service Providers, 2017", "TOP B2B Company Ukraine, 2018", "Leading Eastern Europe B2B Company, 2018"],
+               "telephone": "+38-063-608-6045",
+             "email": "contact@avtive-bridge.com",
+             "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Phoenix",
+             "addressRegion": "AZ",
+             "streetAddress": "4644 North 22nd Street"
+             },
+             "areaServed": ["US","CA"],
+             "url": "https://activebridge.org/",
+                 "sameAs" : [ "https://www.facebook.com/ActiveBridgeTeam",
+               "https://www.linkedin.com/company/activebridge",
+               "https://github.com/activebridge"
+               ]
           },
           {
-            "@context": "http://schema.org",
-            "@type": "WebPage",
-            "name": "Active Bridge",
-            "url": "https://activebridge.org/",
-            "mainContentOfPage": "Active Bridge is an IT company that specializes in providing dedicated
-              full-stack developers on demand to help our clients and augment their in-house teams.
-              Since 2013, our agency based on IT staff augmentation services has been assisting clients
-              in the development and maintenance of websites and web-based systems, mobile applications,
-              and software products.",
-            "relatedLink": ["https://activebridge.org/how-we-work",
-              "https://activebridge.org/portfolio",
-              "https://activebridge.org/team",
-              "https://activebridge.org/services",
-              "https://activebridge.org/contact"]
-          }
-        }'
+             "@context": "http://schema.org",
+             "@type": "WebPage",
+             "name": "Active Bridge",
+             "url": "https://activebridge.org/",
+             "mainContentOfPage": "Active Bridge is an IT company that specializes in providing dedicated full-stack developers on demand to help our clients and augment their in-house teams. Since 2013, our agency based on IT staff augmentation services has been assisting clients in the development and maintenance of websites and web-based systems, mobile applications, and software products.",
+          "relatedLink": ["https://activebridge.org/how-we-work", "https://activebridge.org/portfolio", "https://activebridge.org/team", "https://activebridge.org/services", "https://activebridge.org/contact"]
+          }]'
       how-we-work:
         '{
           "@context": "http://schema.org",
@@ -180,7 +167,7 @@ en:
             "https://activebridge.org/contact"]
         }'
       services:
-        '{
+        '[
           {
             "@context": "http://schema.org",
             "@type": "WebPage",
@@ -208,7 +195,7 @@ en:
             "serviceType": "Web & Mobile Application Development",
             "areaServed": ["US", "CA"]
           }
-         }'
+          ]'
       portfolio:
         '{
           "@context": "http://schema.org",
