@@ -1,6 +1,6 @@
-meta name="description" content= t('meta.pages.blog.description')
-= content_for :title do
-  = t("meta.pages.blog.title")
+= content_for :head do
+  meta property='description' content=meta_blog_tags('description', params[:category], params[:page])
+  title= meta_blog_tags('title', params[:category], params[:page])
 #posts
   .posts-headerposts
     .link-group

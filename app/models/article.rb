@@ -4,7 +4,7 @@ class Article < ActiveRecord::Base
   belongs_to :member
 
   enum review_status: %i[pending done]
-  enum category: %i[ror-development product-manegement entrepreneurship insights]
+  enum category: %i[web-development staff-augmentation business-analytics insights]
   validates :title, :body, :category, :picture, presence: true
   validates :body, length: { minimum: 100 }
 
