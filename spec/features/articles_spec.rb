@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Articles page', type: :feature do
-  let!(:ror_article) { create(:article, title: 'ror-development-article', category: :'ror-development') }
+  let!(:ror_article) { create(:article, title: 'ror-development-article', category: :'web-development') }
   let!(:insights_article) { create(:article, title: 'insights-article', category: :insights) }
 
   scenario do

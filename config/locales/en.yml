@@ -92,6 +92,22 @@ en:
         title: Hire Full-Stack Developers in 48 hours | Active Bridge
         description:
           Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
+      blog:
+        title: IT Staffing Insights, Web, Software, Mobile Development Cases|Active Bridge Blog
+        description: Browse our blog for advanced staff augmentation insights, web and software development tips, mobile design and development features, learn more
+        categories:
+          web-development:
+            title: Learn About APIs, OOP, Browsers, Encryption & More | Active Bridge Blog
+            description: Web system and web application development blog that has articles and tutorials about the latest web technics and possibilities
+          staff-augmentation:
+            title: Learn About IT Staff Augmentation Solutions to Achieve Your Business Goals | Active Bridge Blog
+            description: Staff Augmentation services enables you to find qualified and experienced people who can seamlessly work as your team. Learn more
+          business-analytics:
+            title: Learn about business analytics methods to make better decisions | Active Bridge Blog
+            description: This business analytics blog introduces quantitative methods to analyze data and make better decisions. Learn more
+          insights:
+            title: Learn about Company Events, Programs and Achievements | Active Bridge
+            description: Latest information about company events, programs, achievements and much more. Keep in touch
     open_graph:
       /:
         title: IT Contractor Company, Developers on Demand | Active Bridge, LLC
@@ -1031,9 +1047,9 @@ en:
                 barriers getting in the way.
   blog:
     categories:
-      ror-development: RoR Development
-      product-manegement: Product Management
-      entrepreneurship: Entrepreneurship
+      web-development: Web Development
+      staff-augmentation: Staff Augmentation
+      business-analytics: Business Analytics
       insights: Insights
     recommended: RECOMMENDED POSTS
     footer:

@@ -3,6 +3,7 @@
 doctype 5
 
 html lang='en'
+  title=t("meta.pages.#{params[:page].blank? ? "/" : params[:page]}.title", default: 'Ruby on Rails Development Company')
   meta property="og:type"        content="company"
   meta property="og:url"         content="https://activebridge.org/"
   meta property="og:site_name"   content="activebridge.org"
