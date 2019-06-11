@@ -1,5 +1,6 @@
 = content_for :head do
   title= article.title
+  meta name='description' content=clean_truncate(article.body)
   meta name='og:type' content='website'
   meta property='og:title' content=article.title
   meta property='og:url' content=request.original_url
@@ -7,7 +8,6 @@
   meta property='og:description' content=clean_truncate(article.body)
   meta property='og:updated_time' content=article.updated_at.to_i
   meta property='fb:app_id' content=639665256206886
-  meta property='description' content=clean_truncate(article.body)
 
 .title = "Home › Blog › #{t("blog.categories.#{article.category}")}"
 #post.article-box
