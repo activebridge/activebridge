@@ -1,4 +1,5 @@
 head
+  = yield :head
   meta charset='utf-8'
   meta name = 'viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no'
   meta name='google-site-verification' content='1AeEQ7FZFB4K7URidlmD2UP6z9pzq5HMUACZOhVRbpA'
@@ -8,7 +9,6 @@ head
   meta name="msvalidate.01" content="A484A7672177506CA8F6FA11A7463867"
   = csrf_meta_tags
   = stylesheet_link_tag :application, 'https://fonts.googleapis.com/css?family=Raleway', media: :all
-  = yield :head
 
   script type = 'application/ld+json'
     = show_schema
