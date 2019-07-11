@@ -499,3 +499,30 @@ nav.navbar {
     height: 65%;
   }
 }
+
+
+
+.mobile-only {
+  @media (max-width: 600px){
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  nav.navbar {
+    left: 0;
+    right: unset;
+  }
+
+  label.nav-toggler {
+    left: 22px;
+  }
+
+  .container {
+    float: right;
+  }
+
+  input#menu:checked ~ .navbar {
+    width: 50vw;
+  }
+}
