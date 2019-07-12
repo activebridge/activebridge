@@ -288,3 +288,40 @@ body {
     left: 0;
   }
 }
+
+@media (max-width: 600px){
+  .gradient_container {
+    background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
+  }
+  .about_us_container .description-container {
+
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+
+    &:nth-child(odd) {
+      flex-direction: column;
+    }
+
+    .description-img {
+      margin: 0 auto;
+
+      svg {
+        width: 100%;
+      }
+    }
+  }
+
+  .solutions_and_benefits {
+
+    .item-container {
+      flex-wrap: wrap-reverse;
+
+      .item-holder {
+        margin-top: 10px;
+        width: 30%;
+      }
+    }
+  }
+
+}
