@@ -349,3 +349,10 @@ $projects: (
     }
   }
 }
+
+@media (max-width: 600px){
+  .portfolio_testimonials {
+    background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
+    width: 100%;
+  }
+}
