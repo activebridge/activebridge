@@ -58,6 +58,7 @@ en:
         links:
         icon: 'navbar/contact.svg'
   meta:
+    origin_url: https://activebridge.org
     pages:
       /:
         title: IT Staff Augmentation Company, US/UA | Active Bridge LLC
