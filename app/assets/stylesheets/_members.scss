@@ -211,3 +211,14 @@ $members:(
     }
   }
 }
+
+@media (max-width: 600px) {
+  .cartoon_container {
+    width: 27%;
+    padding: 3%;
+  }
+
+  .cartoon_cards .informational_container {
+    width: calc(100% - 70px);
+  }
+}
