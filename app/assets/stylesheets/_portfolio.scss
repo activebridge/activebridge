@@ -354,5 +354,14 @@ $projects: (
   .portfolio_testimonials {
     background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
     width: 100%;
+
+    .testimonial {
+      height: 30vh;
+      max-height: 200px;
+
+      .description_wrapper {
+        flex-direction: column;
+      }
+    }
   }
 }
