@@ -512,8 +512,14 @@ nav.navbar {
 
 
 
+.desktop-only  {
+  @media (max-width: 601px){
+    display: none;
+  }
+}
+
 .mobile-only {
-  @media (max-width: 600px){
+  @media (min-width: 600px){
     display: none;
   }
 }

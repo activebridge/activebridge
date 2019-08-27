@@ -3,7 +3,10 @@
     .header_2= t('portfolio.title')
     h1.subtitle= t('portfolio.project')
     h2.subsubtitle= t('portfolio.applications')
-    = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
+    .mobile-only
+      = inline_svg 'portfolio/bg-mobile.svg', class: 'portfolio-background'
+    .desktop-only
+      = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
     - I18n.t('portfolio.projects').each_with_index do |project, i|
       .informational_container id=item_name(project[:client])
         = link_to '', "##{item_name(I18n.t('portfolio.projects')[i-1][:client])}", class: 'prev'
