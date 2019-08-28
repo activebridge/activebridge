@@ -161,4 +161,27 @@ $initial-margin: 5;
       }
     }
   }
+
+  @media (max-width: 600px){
+    .bg {
+      position: absolute;
+      z-index: -1;
+      margin-top: 40vh;
+    }
+
+    .informational_container.contact-form-holder {
+      position: unset;
+      width: 90%;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+
+    .find_us .find_item {
+      margin-left: 0 !important;
+
+      .find_us_logo {
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
