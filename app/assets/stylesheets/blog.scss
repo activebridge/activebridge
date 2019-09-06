@@ -237,12 +237,12 @@ a.article {
   .article {
     width: 23%;
     color: $main-blue;
-    border: 1px solid gray;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.23);
     margin-top: 33px;
 
     h4.article-title {
-      background: linear-gradient(to bottom right, $main-violet, $main-blue);
-      color: white;
+      background: #eaeaea;
+      color: $main-blue;
       text-transform: uppercase;
       text-align: center;
       padding: 10px 10px;

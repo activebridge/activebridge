@@ -7,11 +7,11 @@
           span
             b
               'Author:
-            = article.member.name
+            = article.member.name.capitalize
           span
             b
               'Published:
-            = article.created_at.to_formatted_s(:long)
+            = article.created_at.strftime('%d %b %Y')
         = image_tag article.member.avatar.url, class: 'author-avatar'
       .article-picture
         = image_tag article.picture_url
