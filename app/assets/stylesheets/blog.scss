@@ -28,9 +28,6 @@ body {
   margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 2px;
-}
 
 a {
   color: rgba($white, .5);
@@ -237,11 +234,11 @@ a.article {
   .article {
     width: 23%;
     color: $main-blue;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0 10px rgba(49, 37, 120, 0.1);
     margin-top: 33px;
 
     h4.article-title {
-      background: #eaeaea;
+      background: #f7f6ff;
       color: $main-blue;
       text-transform: uppercase;
       text-align: center;
@@ -288,6 +285,8 @@ a.article {
 
         img {
           width: 100%;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
         }
       }
 
@@ -311,7 +310,6 @@ a.article {
     }
 
     .article-picture {
-      background: linear-gradient(to right, $main-blue, $main-violet);
       position: relative;
 
       .text-center {
@@ -325,10 +323,11 @@ a.article {
         font-size: 22px;
         font-weight: bolder;
         color: white;
+        text-shadow: 1px 1px 5px black;
       }
 
       img {
-        transition: opacity 0.9s;
+        transition: filter 0.9s;
       }
     }
     &:hover {
@@ -338,7 +337,8 @@ a.article {
         }
 
         img {
-          opacity: 0.2;
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
         }
       }
     }
@@ -412,8 +412,6 @@ a.article {
       margin: 0;
       padding-right: 5vmax;
       font-size: 1.7vmax;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       overflow: hidden;
       text-align: left;
       font-weight: bold;
@@ -441,8 +439,7 @@ a.article {
       letter-spacing: 2px;
     }
     .CodeRay, blockquote {
-      background: rgba(143, 89, 185, 0.45);
-      transition: background .3s;
+      border: solid rgba(143, 89, 185, 0.45);
     }
     .CodeRay {
       font-size: 1vmax;
@@ -458,17 +455,22 @@ a.article {
     blockquote {
       position: relative;
       font-style: italic;
-      padding: 0.2vmax 1.7vmax;
+      padding: 0.2vmax 2.6vmax;
       display: inline-block;
       margin-right: 0;
       border-radius: 10px;
       margin-left: 1vmax;
       &:before {
         content: '“';
-        left: -1.2vmax;
+        left: 0;
+        top: -1vmax;
         font-size: 5vmax;
         position: absolute;
       }
+    }
+
+    a {
+      text-decoration: underline;
     }
   }
 }
