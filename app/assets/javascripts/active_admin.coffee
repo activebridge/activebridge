@@ -3,6 +3,6 @@
 #= require simplemde.min
 #= require turbolinks
 
-$(document).on 'page:load ready', ->
+$(document).on 'turbolinks:load', ->
   simplemde = document.getElementById('simplemde')
   new SimpleMDE({ element: simplemde[0] }) if simplemde

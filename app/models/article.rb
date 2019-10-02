@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  paginates_per 4
+  paginates_per 12
 
   belongs_to :member
 
