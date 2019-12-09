@@ -87,6 +87,7 @@ body {
     padding: 18px 35px;
     text-decoration: none;
     transition: all .3s ease;
+    white-space: nowrap;
 
     &:hover {
       box-shadow: 0px 0px 10px 1px rgba(95, 82, 202, 0.4);
@@ -174,15 +175,17 @@ body {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;;
+    flex-wrap: wrap;
 
     .item-holder {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 13%;
+      min-width: 150px;
+      width: 18%;
 
       .logo_container {
-        width: 80%;
+        width: 150px;
       }
 
       span {
@@ -287,3 +290,47 @@ body {
     left: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container_index {
+    align-items: center;
+  }
+
+  .description-container {
+    flex-direction: column;
+    align-items: center;
+
+    &.reverse {
+      flex-direction: column-reverse;
+    }
+
+    .description {
+      &-img {
+        width: 80%;
+        justify-content: center;
+        margin-bottom: 25px;
+
+        svg, img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .about_us_container {
+    margin-top: -100px;
+  }
+
+  .solutions_and_benefits {
+    .item-container {
+      .item-holder {
+        width: 33%;
+
+        .logo_container {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+

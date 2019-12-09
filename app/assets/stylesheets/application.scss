@@ -108,6 +108,14 @@ body {
       }
     }
   }
+
+  .content {
+    &__container {
+      margin-left: 70px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .header_2 {
@@ -127,8 +135,9 @@ body {
 
 .container{
   width: calc(100% - 70px);
+  margin-left: 70px;
   text-align: center;
-  transition: width .5s;
+  transition: all .5s ease;
 }
 
 .logo_container{
@@ -191,30 +200,6 @@ input#menu {
   z-index: -1;
   position: fixed;
 
-  &:checked ~ .container {
-    width: calc(100% - 20vw);
-
-    @media screen and (max-width: 900px) {
-      width: calc(100% - 25vw);
-    }
-
-    @media screen and (min-width: 1400px) {
-      width: calc(100% - 15vw);
-    }
-  }
-
-  &:checked + .nav-toggler {
-    .first {
-      transform: rotate(-45deg) translate(-6px, 6px);
-    }
-    .second {
-      opacity: 0;
-    }
-    .third {
-      transform: rotate(45deg) translate(-6px, -6px);
-    }
-  }
-
   &:checked ~ .nav-close {
     display: block;
   }
@@ -232,7 +217,7 @@ input#menu {
   }
 
   &:checked ~ .navbar {
-    width: 20vw;
+    width: 222px;
     .items {
       align-items: flex-start;
 
@@ -252,18 +237,16 @@ input#menu {
     }
 
     @media screen and (min-width: 1400px){
-      width: 15vw;
     }
 
     @media screen and (max-width: 900px) {
-      width: 25vw;
     }
   }
 }
 
 .nav-toggler {
   position: fixed;
-  right: 22px;
+  left: 22px;
   top: 25px;
   transition: left .3s;
   cursor: pointer;
@@ -287,7 +270,7 @@ input#menu {
   height: 100%;
   position: fixed;
   z-index: 5;
-  background-color: rgba(gray, 0.2);
+  background-color: rgba(gray, 0.4);
 }
 
 .item-title {
@@ -295,13 +278,13 @@ input#menu {
   font-weight: bold;
   background-color: white;
   letter-spacing: 1px;
-  border-radius: 25px 0 0 25px;
+  border-radius: 0 25px 25px 0;
   visibility: hidden;
   opacity: 0;
   color: #5f52ca;
   transition: all .3s;
   position: fixed;
-  right: 63px;
+  left: 63px;
   text-align: center;
   padding: 12px 8px;
   z-index: 6;
@@ -319,7 +302,7 @@ nav.navbar {
   flex-direction: column;
   position: fixed;
   transition: width .5s;
-  right: 0;
+  left: 0;
   top: 0;
   width: 70px;
   height: 100vh;
@@ -406,7 +389,7 @@ nav.navbar {
   font-size: 20px;
   position: fixed;
   bottom: -40px;
-  right: 90px;
+  right: 10px;
   line-height: 45px;
   border-radius: 50%;
   background: linear-gradient(to bottom right, $main-violet, $main-blue);
