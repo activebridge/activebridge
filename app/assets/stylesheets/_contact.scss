@@ -8,73 +8,89 @@ $initial-margin: 5;
     font-weight: bold;
   }
 
-  .contact-form-holder {
-    position: absolute;
-    left: 47%;
-    top: 35%;
-    width: 30%;
-    visibility: visible;
-    opacity: 1;
-    transition: all 1s linear;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    padding: 15px 0 25px 0;
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 85%;
-      height: 95%;
-      color: black;
-
-      .material-input {
-        text-align: left;
-        height: 12%;
-        label {
-          font-weight: bold;
-          width: 100%;
-          line-height: 35px;
-        }
-
-        input, textarea, select {
-          border-radius: 5px;
-          background-color: #F9F9F9;
-          border: none;
-          width: 100%;
-          box-shadow: 0px 0px 10px 3px rgba($color: $main-blue, $alpha: 0.1) inset;
-          outline: none;
-          font-size: 1.15rem;
-          color: $main-blue;
-          height: 50%;
-          padding: 0 8px;
-          box-sizing: border-box;
-        }
-
-        textarea{
-          height: 90px;
-          resize: none;
-        }
-
-        &.textarea{
-          height: 20%;
-        }
-      }
-
-      .contact-button{
-        margin-top: 25px;
-        height: 35px;
-        font-size: 1.25rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border: none;
-        color: white;
-        background-color: $main-blue;
-        border-radius: 5px;
+  .contact {
+    &__form {
+      &-container {
+        background-color: rgba(255, 255, 255, 0.9);
         box-shadow: 0px 0px 10px 1px rgba(95, 82, 202, 0.4);
-        cursor: pointer;
+        width: 50%;
+        max-width: 500px;
+        visibility: visible;
+        opacity: 1;
+        transition: all 1s linear;
+        display: flex;
+        justify-content: center;
+        height: auto;
+        padding: 15px 0 25px 0;
       }
+
+      &-holder {
+        background-image: url(asset_path('contact/background.svg'));
+        background-position: 50% 50%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        min-height: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 85%;
+    height: 95%;
+    color: black;
+
+    .material-input {
+      text-align: left;
+      height: 12%;
+      label {
+        font-weight: bold;
+        width: 100%;
+        line-height: 35px;
+      }
+
+      input, textarea, select {
+        border-radius: 5px;
+        background-color: #F9F9F9;
+        border: none;
+        width: 100%;
+        box-shadow: 0px 0px 10px 3px rgba($color: $main-blue, $alpha: 0.1) inset;
+        outline: none;
+        font-size: 1.15rem;
+        color: $main-blue;
+        height: 50%;
+        padding: 0 8px;
+        box-sizing: border-box;
+      }
+
+      textarea{
+        height: 90px;
+        resize: none;
+      }
+
+      &.textarea{
+        height: 20%;
+      }
+    }
+
+    .contact-button{
+      margin-top: 25px;
+      height: 35px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      color: white;
+      background-color: $main-blue;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 1px rgba(95, 82, 202, 0.4);
+      cursor: pointer;
     }
   }
 
@@ -124,6 +140,7 @@ $initial-margin: 5;
     width: 80%;
     align-self: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     text-align: left;
     color: $main-blue;
     margin: 5vh 0;
@@ -158,6 +175,44 @@ $initial-margin: 5;
 
       span {
         margin: 2px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .contact-form-holder {
+      width: 80%;
+      min-width: 300px;
+    }
+
+    .contact {
+      &__form {
+        &-container {
+          width: 80%;
+        }
+      }
+    }
+
+    .find_us {
+      a.find_item {
+        margin-left: 0 !important;
+
+        .find_us_logo {
+          height: 8vh;
+          transform: rotate(45deg);
+        }
+
+        &:hover {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .entities {
+      .entity {
+        width: 230px;
       }
     }
   }
