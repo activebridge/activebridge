@@ -138,6 +138,7 @@ body {
   margin-left: 70px;
   text-align: center;
   transition: all .5s ease;
+  padding-top: 20px;
 }
 
 .logo_container{
@@ -204,18 +205,6 @@ input#menu {
     display: block;
   }
 
-  &:checked ~ #back-to-top {
-    right: calc(20vw + 20px);
-
-    @media screen and (min-width: 1400px){
-      right: calc(15vw + 20px);
-    }
-
-    @media screen and (max-width: 900px) {
-      right: calc(25vw + 20px);
-    }
-  }
-
   &:checked ~ .navbar {
     width: 222px;
     .items {
@@ -271,6 +260,7 @@ input#menu {
   position: fixed;
   z-index: 5;
   background-color: rgba(gray, 0.4);
+  cursor: pointer;
 }
 
 .item-title {

@@ -69,6 +69,7 @@ $models: dedicated-team, team-extension, project-model;
     margin-bottom: 2vh;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .model_card {
       width: 30%;
@@ -77,6 +78,7 @@ $models: dedicated-team, team-extension, project-model;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 15px;
 
       .descr {
         color: $main-blue;
@@ -94,6 +96,8 @@ $models: dedicated-team, team-extension, project-model;
       display: flex;
       overflow-y: auto;
       justify-content: center;
+      min-width: 300px;
+
       .desc_container {
         width: 85%;
 
@@ -128,5 +132,30 @@ $models: dedicated-team, team-extension, project-model;
     height: 100%;
     top: 0;
     left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .how_we_work_container {
+    .work_desc {
+      line-height: 25px;
+    }
+
+    .cooperation_models_cards {
+      jutify-content: center;
+
+      .model_card {
+        width: 100%;
+
+        .logo_container {
+          width: 70%;
+          min-width: 200px;
+        }
+
+        .learn_more {
+          font-size: .8em;
+        }
+      }
+    }
   }
 }

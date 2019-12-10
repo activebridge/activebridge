@@ -24,11 +24,11 @@
                 'For:
                 = who
           .spacer
-          a.learn_more href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
+          a.learn_more href='##{item_name(cooperation[:title])}'
             'Learn more
     .models_information
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
-        .informational_container id='#{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
+        .informational_container id='#{item_name(cooperation[:title])}'
           .desc_container
             h2.header_2
               =cooperation[:title]
