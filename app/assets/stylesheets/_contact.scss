@@ -169,19 +169,55 @@ $initial-margin: 5;
       margin-top: 40vh;
     }
 
+    .material-input {
+      input, textarea, select {
+        background: linear-gradient(to right, $mediumpurple 25%, $white 50%, $mediumpurple 75%);
+      }
+    }
+
     .informational_container.contact-form-holder {
       position: unset;
       width: 90%;
       margin: 0 auto;
       opacity: 0.8;
+      border: 1px solid $main-blue;
+      box-shadow: none;
     }
 
     .find_us .find_item {
-      margin-left: 0 !important;
+      margin-left: -10px !important;
 
       .find_us_logo {
         transform: rotate(45deg);
+        height: 8vh;
       }
     }
+
+    .entities {
+      width: 90%;
+      margin: 5vh auto;
+
+      .entity:first-child {
+        margin-right: 10px;
+      }
+
+      .entity {
+        width: unset;
+
+        span {
+          font-size: 0.8em;
+        }
+
+        .entity-holder {
+          font-size: 0.9em;
+
+          .entity-logo {
+            margin-right: 5px;
+            width: 15%;
+            height: 2vh;
+          }
+        }
+      }
+   }
   }
 }

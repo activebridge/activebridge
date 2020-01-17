@@ -541,4 +541,9 @@ nav.navbar {
   input#menu:checked ~ .navbar {
     width: 50vw;
   }
+
+  #back-to-top.show{
+    bottom: 5px;
+    right: 5px;
+  }
 }
