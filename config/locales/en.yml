@@ -58,6 +58,7 @@ en:
         links:
         icon: 'navbar/contact.svg'
   meta:
+    origin_url: https://activebridge.org
     pages:
       /:
         title: IT Staff Augmentation Company, US/UA | Active Bridge LLC
@@ -385,7 +386,7 @@ en:
           description:
             Ruslan is an expert at developing apps based on customer specifications. When Ruslan approaches a project, he gets deep into both
             the overall concept and the mind of the project owner to come up with the right solution for the customer’s needs every time.
-          projects: Example
+          projects: DaisyBill, Who2Try, ZOZI, BikeRoar, BeanStock, Partnerpedia, Scout OnDemand
         - name: Zimin Anton
           avatar:  Zimin.png
           position: Tech lead / Full - stack engineer
@@ -393,14 +394,14 @@ en:
             Self-organization and the ability to quickly master new technologies in record time are the hallmarks of what make Anton a great
             tech lead and engineer. Thanks to his deep understanding of all phases of the software development lifecycle, Anton can always be
             counted on to deliver highly optimized solutions for the most challenging tech projects.
-          projects: Daisybill, ZOZI, LC Laboratories, Ooma, Beanstock Media
+          projects: Daisybill, ZOZI, LC Laboratories, Ooma, Beanstock Media, Big Tickit, Partnerpedia, Scout OnDemand
         - name: Lukin Alexey
           avatar: Lukin.png
           position: Tech lead / Full - stack engineer
           description:
             The phrase “it works on my machine” won’t cut it with Alexey. As an experienced full-stack developer and project manager,
             Alexey expects the same patience and clear coding from the development teams he manages that he himself brings to all the projects he works on.
-          projects: Quick Quack, Eyes-on, It's borrowed, eTutorCloud
+          projects: Quick Quack, Eyes-on, It's borrowed, eTutorCloud, UpStack, PHL, Opus, Yaystack, Wavelength, ZOZI
         - name: Mihailovskiy Pavel
           avatar: Mihailovskiy.png
           position: Tech lead / Full - stack engineer
@@ -428,21 +429,21 @@ en:
           description:
             It’s hard to believe anyone could love SQL queries as much as Vitaliy, and few are better at designing and implementing them as
             efficiently. An incredibly hardworking developer, Vitaliy has a true passion for learning new features and then passing that knowledge on to others.
-          projects: Example
+          projects: UpStack, LifeLinker, Invoyis, BeatThread
         - name: Surzhko Eugene
           avatar: Surzhko.png
           position: Lead Ruby on Rails engineer / DB architect
           description:
             Eugene is an engineer that knows what it takes to make databases perform better than most people would think possible. His backend programming skills
             are exceptional, and his insights and suggestions always bring great performance benefits to every project he works on.
-          projects: Example
+          projects: DaisyBill, Easy Giant, Bike Roar, SmarBiz SBA Loans, BeanStock, Petition Online, SAPA Systems
         - name: Domotenko Eugene
           avatar: Domotenko.png
           position: Web / Android developer
           description:
             Eugene is a backend developer with extensive Android expertise. A big fan of friendly UI design, Eugene applies UX best practices to create mobile apps
             that look and function at a level that always exceeds client expectations.
-          projects: Cablook
+          projects: CabLook, Twadlock, Pricey, Taggd, Nvent 
         - name: Makodzeba Dima
           avatar: Makodzeba.png
           position: Ruby on Rails engineer
@@ -457,7 +458,7 @@ en:
             Vitaliy is an outgoing guy with a true passion for Rails. His huge range of interests across multiple fields makes Vitality a highly successful problem solver.
             Combine that with great communication skills and a background in psychology, and you’ve got a developer uniquely suited to understand the customer’s needs and
             build great end-products to meet them.
-          projects: include.io, GOJI, Mediprocity, Total Adventure, eTutorCloud
+          projects: Include.io, GOJI, Mediprocity, Total Adventure, eTutorCloud
         - name: Voloshyn Oleg
           avatar: Voloshyn.png
           position: Ruby on Rails engineer
@@ -486,28 +487,28 @@ en:
             Anastasia is a true standout among our development team. Originally starting out as a frontend developer, Anastasia is now also one of our best backend developers, building
             databases and designing backend code with exceptional skill. Her excellent communication skills and interpersonal abilities make her an easy fit with any team, and she has
             a knack for uncovering and understanding the client’s needs.
-          projects: Example
+          projects: Include, DeliveryHippo
         - name: Motuzko Alex
           avatar: Motuzko Alex.png
           position: Ruby on rails developer
           description:
             Alex is one of the rising stars of our ruby team. He understands RoR at a level that might lead you to think he’d created it, and his hard work and client-centric focus make
             him a truly fantastic developer.
-          projects: Example
+          projects: DeliveryHippo, Taggd, Pricey
         - name: Tupickiy Vlad
           avatar: Tupickiy Vlad.png
           position: Ruby on Rails developer
           description:
             Vlad prides himself on his ability to keep up to date with the cutting edge of new technologies, and that drive to stay ahead of the pack enables his outstanding vision for
             problem-solving and feature building. Vlad is an active member of the global RoR community and regularly taps community events to fuel his constant learning.
-          projects: Example
+          projects: BuyBay, Meditalente, Temed Consult, CabLook Taxi, PathGather
         - name: Tupickiy Yarik
           avatar: Tupickiy Yarik.png
           position: Ruby on Rails developer
           description:
             Yarik is a results-oriented, highly communicative, fast-learning, and responsible developer. As a full stack developer, he has deep experience in object-oriented programming,
             design patterns, TDD, and BDD.
-          projects: Example
+          projects: ProjectR, Taggd, CabLook
         - name: Pedan Andriy
           avatar: Pedan.png
           position: Ruby on Rails developer
@@ -515,21 +516,21 @@ en:
             Planning, planning, planning! If there’s one thing you can say about Andrew, it’s that his commitment to careful planning and ability to do so are second to none. Andrew uses his
             sharp mind to quickly generate ideas for feature implementation, and then carefully weighs the pros and cons of each. The end result is that Andrew’s work is always extremely well
             thought out and expertly executed.
-          projects: Example
+          projects: CrossAva, BeatThread, YouFeed, Best Reviews Guide, She Knows BR, Comparaboo, CityMove, CabLook Taxi, Taggd
         - name: Serebryansky Maxim
           avatar: Serebryansky.png
           position: Ruby on Rails developer
           description:
             No matter how complex a feature may be, Max can implement it. No matter how new a framework may be, Max can build on it. He prides himself on his ability to understand even the newest
             technologies and to apply them to come up with creative solutions to difficult problems in his development.
-          projects: Example
+          projects: UpStack, BeatThread, Mediprocity, SDxCentral, Nvent
         - name: Savenko Serhii
           avatar: Savenko.png
           position: Full-stack / IOS developer
           description:
             Sergey is a strong believer that great code should be backed up by a strong mind and a strong body to boot! He doesn’t just see development as a job – he truly loves the fun of tackling
             complex ruby problems that would break most other developers’ brains.
-          projects: Example
+          projects: CabLook Taxi, DaisyBill, BeatThread, onApp
         - name: Bilan Igor
           avatar: Bilan.png
           position: Tech lead / Ruby on Rails engineer
@@ -542,35 +543,35 @@ en:
           position: Ruby on Rails developer
           description:
             Dmitrii is a skilled RoR developer who has a great deal of experience working with a number of large, successful startups in the marketing, e-commerce, health, and financial industries.
-          projects: Example
+          projects: FixPal, CrossAva, Dropified Chrome Extention, Influenceschain, ArtsPool, CabLook Taxi
         - name: Dzyoma Artem
           avatar: Dzyoma.png
           position: Ruby on Rails developer
           description:
             Artem is an expert frontend developer with solid experience in backend development as well. While his skillset allows him to do a wide variety of development work, he specializes in working
             with payment systems – like Stripe and PayPal – and in messenger APIs.
-          projects: Example
+          projects: Knock Knock City,TwentyEightHealth, CabLook Taxi
         - name: Zubritskiy Denis
           avatar: Zubritskiy.png
           position: Ruby on Rails developer
           description:
             Den is an experienced developer with a personal commitment to constant self-improvement and a creative approach to crafting innovative solutions. He’s an active member and contributor in the
             Rails community, and he also works with Vue.js.
-          projects: Example
+          projects: Knock Knock City, Twadlock
         - name: Borodai Alex
           avatar: Borodai.png
           position: Full-stack developer
           description:
             Alex uses imagination and a creative approach to rails development to come up with the right solutions for his clients’ web projects. He particularly likes working with startups, as they offer
             a chance for him to utilize that creativity, as well as his knowledge and outstanding development skills, to their full potential.
-          projects: Example
+          projects: Knock Knock City, Dropified Chrome Extention
         - name: Karpenko Alex
           avatar: Karpenko.png
           position: Ruby on Rails developer
           description:
             Alex is a full stack developer, capable of handling both back-end development as well as front-end. Passion for web development. He uses best practices in programming, always trying to write
             maintainable and clean code
-          projects: Fixpal
+          projects: Fixpal, SewSewYou
         - name: Bidochka Alex
           avatar: Bidochka.png
           position: Ruby on Rails developer
@@ -592,7 +593,7 @@ en:
             Lena is a real catch for Active Bridge. The designer who loves to conceptualize
             and design mobile applications and web platforms with an exceptional user experience. The greatest inspiration for Lena
             includes imagination, talented people, and traveling.
-          projects:
+          projects: Active Bridge, CabLook Taxi
         - name: Andrieieva Nastya
           avatar: Andrieieva.png
           position: Office Manager
@@ -611,7 +612,7 @@ en:
           description:
             Dasha is passionate about search engine optimization and digital marketing. She likes to be on top with the latest industry
             trends and technologies, reading her favorite MOZ.com authors.
-          projects:
+          projects: Active Bridge, CabLook Taxi, Knock Knock City
       title: Meet our team of full-stack developers
       photos:
         - https://i.imgur.com/6awlwXJ.jpg

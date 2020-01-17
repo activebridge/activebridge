@@ -28,9 +28,6 @@ body {
   margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 2px;
-}
 
 a {
   color: rgba($white, .5);
@@ -235,31 +232,35 @@ a.article {
   justify-content: space-between;
 
   .article {
-    width: 45%;
+    width: 23%;
     color: $main-blue;
-    border: 1px solid gray;
-    margin-top: 25px;
+    box-shadow: 0 0 10px rgba(49, 37, 120, 0.1);
+    margin-top: 33px;
 
     h4.article-title {
-      background: linear-gradient(to bottom right, $main-violet, $main-blue);
-      color: white;
+      background: #f7f6ff;
+      color: $main-blue;
       text-transform: uppercase;
       text-align: center;
-      padding: 15px 25px;
+      padding: 10px 10px;
       margin: 0;
+      min-height: 100px;
+      line-height: 20px;
+      font-size: 13px;
     }
 
     .article-body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 5px 50px 25px 50px;
 
       .article-info {
+        color: $main-blue;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 10px 0;
+        padding: 0px 20px 0 20px;
 
         .article-about {
           display: flex;
@@ -272,13 +273,21 @@ a.article {
         }
 
         .author-avatar {
-          width: 7vmax;
+          width: 4vmax;
         }
       }
 
       .article-picture {
+        height: 24vh;
+        overflow: hidden;
         width: 100%;
-        margin: 10px 0;
+        margin: 0 auto;
+
+        img {
+          width: 100%;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
       }
 
       .description {
@@ -297,6 +306,40 @@ a.article {
 
       a {
         margin-bottom: 0 !important;
+      }
+    }
+
+    .article-picture {
+      position: relative;
+
+      .text-center {
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 22px;
+        font-weight: bolder;
+        color: white;
+        text-shadow: 1px 1px 5px black;
+      }
+
+      img {
+        transition: filter 0.9s;
+      }
+    }
+    &:hover {
+      .article-picture {
+        .text-center {
+          opacity: 1;
+        }
+
+        img {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
       }
     }
   }
@@ -369,8 +412,6 @@ a.article {
       margin: 0;
       padding-right: 5vmax;
       font-size: 1.7vmax;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       overflow: hidden;
       text-align: left;
       font-weight: bold;
@@ -398,8 +439,7 @@ a.article {
       letter-spacing: 2px;
     }
     .CodeRay, blockquote {
-      background: rgba(143, 89, 185, 0.45);
-      transition: background .3s;
+      border: solid rgba(143, 89, 185, 0.45);
     }
     .CodeRay {
       font-size: 1vmax;
@@ -415,17 +455,22 @@ a.article {
     blockquote {
       position: relative;
       font-style: italic;
-      padding: 0.2vmax 1.7vmax;
+      padding: 0.2vmax 2.6vmax;
       display: inline-block;
       margin-right: 0;
       border-radius: 10px;
       margin-left: 1vmax;
       &:before {
         content: '“';
-        left: -1.2vmax;
+        left: 0;
+        top: -1vmax;
         font-size: 5vmax;
         position: absolute;
       }
+    }
+
+    a {
+      text-decoration: underline;
     }
   }
 }

@@ -5,6 +5,7 @@ head
   meta name='mobile-web-app-capable' content='yes'
   link rel='manifest' href='/manifest.json'
   link rel='icon' sizes='192x192' href='/icon-4x.png'
+  link rel="alternate" href="#{t ('meta.origin_url')}#{request.env['PATH_INFO']}" hreflang="en-us"
   meta name="msvalidate.01" content="A484A7672177506CA8F6FA11A7463867"
   = csrf_meta_tags
   = stylesheet_link_tag :application, 'https://fonts.googleapis.com/css?family=Raleway', media: :all
