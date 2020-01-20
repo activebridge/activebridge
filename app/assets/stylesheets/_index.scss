@@ -304,7 +304,8 @@ body {
     }
 
     .description-img {
-      margin: 0 auto;
+      margin: 0 auto 5vh auto;
+      height: 20vh;
 
       svg {
         width: 100%;
@@ -320,7 +321,16 @@ body {
       .item-holder {
         margin-top: 10px;
         width: 30%;
+
+        span {
+          font-size: 0.6em;
+        }
       }
+    }
+
+    .solutions_and_benefits_desc .informational_container {
+      left: 26%;
+      width: 65%;
     }
   }
 
