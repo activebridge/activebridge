@@ -129,29 +129,55 @@ $models: dedicated-team, team-extension, project-model;
     top: 0;
     left: 0;
   }
-}
 
-@media (max-width: 600px) {
-  .how_we_work_container .cooperation_models_cards {
-    flex-direction: column;
 
-    .model_card {
-      width: unset;
-      max-width: unset;
+  @media (max-width: 600px) {
+    .holder_key .keyboard {
 
-      &:not(:last-child)::after {
-        content: '';
+      .keyboard-container {
+        position: relative;
         width: 100%;
-        height: 2px;
-        background: linear-gradient(to right, #5f52ca, #b64e96);
-        margin: 40px 0;
       }
 
-      .learn_more {
-        background: black;
+      .cooperation-models {
+        width: 100%;
+        font-size: 0.7em;
+        position: absolute;
+        color: #5f52ca;
+        bottom: 5px;
+      }
+    }
+
+    .logo_container {
+      width: 40%;
+    }
+
+    .work_desc {
+      line-height: normal;
+      font-size: 1em;
+    }
+
+
+    .cooperation_models_cards {
+      flex-direction: column;
+
+      .model_card {
+        width: unset;
+        max-width: unset;
+
+        &:not(:last-child)::after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(to right, #5f52ca, #b64e96);
+          margin: 40px 0;
+        }
+
+        .learn_more {
+          background: black;
+        }
       }
     }
   }
-
 }
 
