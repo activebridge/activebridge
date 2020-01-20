@@ -6,7 +6,7 @@
     span.third
   label.nav-close for='menu'
   - I18n.t('navbar.links').each_with_index do |item, index|
-    .item-title id="icon-#{index}"= item[:title][:name]
+    .item-title.desktop-only id="icon-#{index}"= item[:title][:name]
   nav.navbar
     .items
       - I18n.t('navbar.links').each_with_index do |item, index|
