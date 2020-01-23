@@ -351,17 +351,58 @@ $projects: (
 }
 
 @media (max-width: 600px){
+
   .portfolio_testimonials {
     background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
     width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-left: 15vw;
 
     .testimonial {
-      height: 30vh;
-      max-height: 200px;
+      height: 40vh;
+      max-height: 240px;
+      scroll-snap-align: center;
 
-      .description_wrapper {
+
+      a .description_wrapper {
         flex-direction: column;
+        position: relative;
+
+        .read_more {
+          width: 60vw;
+          height: unset;
+        }
+
+        .like {
+          height: auto;
+          position: absolute;
+          width: 15vw;
+          right: 12%;
+          top: 36%;
+        }
+
+        .image-wrapper {
+          width: 50%;
+
+          img {
+            width: 100%;
+            border: 1px solid;
+
+          }
+        }
+
+        span {
+          margin: 20px 10px 0;
+        }
       }
     }
+  }
+
+  .testimonials_cards .informational_container {
+    top: 0;
+    width: unset;
+    height: 60vh;
   }
 }

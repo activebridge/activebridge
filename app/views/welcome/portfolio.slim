@@ -47,6 +47,8 @@
       .testimonial class="portfolio_testimonial"
         a href="#testimonial-#{item_name(testimonial[:company])}"
           .description_wrapper
+            .mobile-only.image-wrapper
+              = image_tag testimonial[:image]
             = inline_svg 'testimonials/like.svg', class: 'like'
             = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             span
