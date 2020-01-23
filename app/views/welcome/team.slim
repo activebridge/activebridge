@@ -21,7 +21,7 @@
               .info
                 .name= member[:name]
                 span.position= member[:position]
-              .spacer
+              .spacer.desktop-only
               hr
           - if ['designer', 'cfo', 'manager'].include? member[:position].split(' ').last.downcase
             .description.high

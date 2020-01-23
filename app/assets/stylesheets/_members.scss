@@ -96,8 +96,8 @@ $members:(
       .descr {
         span {
           color: $main-violet;
-          }
         }
+      }
 
       .cartoon_logo_container {
         .hover {
@@ -213,12 +213,36 @@ $members:(
 }
 
 @media (max-width: 600px) {
-  .cartoon_container {
-    width: 27%;
-    padding: 3%;
-  }
 
-  .cartoon_cards .informational_container {
-    width: calc(100% - 70px);
+  .cartoon_cards {
+
+    .informational_container {
+      width: calc(100% - 70px);
+      top: 0;
+      height: 100%;
+
+      .member_information .member img {
+        height: unset;
+      }
+    }
+
+    .cartoon_container {
+      width: 27%;
+      padding: 3%;
+      height: 25vh;
+
+      .descr {
+
+        line-height: 1;
+
+        span.name {
+          font-size: 0.6rem;
+        }
+
+        span.position {
+          font-size: 0.5rem;
+        }
+      }
+    }
   }
 }
