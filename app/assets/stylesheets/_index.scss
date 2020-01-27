@@ -313,6 +313,14 @@ body {
     }
   }
 
+  .logo {
+    width: 60vw;
+
+    .btn-work {
+      padding: 18px;
+    }
+  }
+
   .solutions_and_benefits {
 
     .item-container {
@@ -333,5 +341,4 @@ body {
       width: 65%;
     }
   }
-
 }

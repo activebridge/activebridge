@@ -8,7 +8,9 @@
         .inner#inner
           = inline_svg 'index/logo.svg', class: 'img__logo', id: 'logo'
       br
-      a.btn-work href='#about_us'
+      a.desktop-only.btn-work href='#about_us'
+        b= t('about_us.about')
+      a.mobile-only.btn-work href='contact'
         b= t('about_us.about')
   .about_us_container#about_us
     .description-container

@@ -353,7 +353,6 @@ $projects: (
 @media (max-width: 600px){
 
   .portfolio_testimonials {
-    background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
     width: 100%;
     flex-direction: row;
     overflow-x: auto;
@@ -364,6 +363,7 @@ $projects: (
       height: 40vh;
       max-height: 240px;
       scroll-snap-align: center;
+      background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
 
 
       a .description_wrapper {
@@ -389,7 +389,7 @@ $projects: (
           img {
             width: 100%;
             border: 1px solid;
-
+            margin: 5px;
           }
         }
 
@@ -404,5 +404,12 @@ $projects: (
     top: 0;
     width: unset;
     height: 60vh;
+
+    .testimonial_container .testimonial_author .author_info .info {
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
