@@ -314,10 +314,26 @@ body {
   }
 
   .logo {
-    width: 60vw;
+    width: 80vw;
+
+    .logo_container {
+      margin: 2vh 0;
+
+      svg {
+        height: 20vh;
+      }
+    }
 
     .btn-work {
       padding: 18px;
+    }
+
+    .index_header {
+      font-size: 1.5em;
+
+      &_2 {
+        font-size: 1em;
+      }
     }
   }
 
