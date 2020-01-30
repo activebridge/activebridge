@@ -766,6 +766,16 @@ en:
           and provides features including a fully access controlled admin panel, groups, distribution lists, emergency alerts, secure form processing, and more.
         project_length: 24
         team_size: 3
+      - client: Knock Knock City
+        image: knockknock_city.svg
+        link: https://knockknock.city
+        industry: Tourism
+        technologies: Ruby on Rails, React, PostgreSQL
+        challenge:
+          Designe and develop luggage storage network from scratch, that lets travelers securely store their bags and luggage in local shops all around New York City, San Francisco, Boston.
+        solution: " the team of Active Bridge developers designed and launched online luggage storage platform to drop off bags or suitcases all around New York City. Main features: simply view listings through the map and search function, online booking to secure a storage, receiving a booking confirmation email to show the booked host, stripe payments, payment security and information encrypting."
+        project_length: 24
+        team_size: 3
   services:
     title: Full-Stack Development Services
     we_do: We can help you on every stage of web development process

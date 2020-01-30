@@ -11,7 +11,8 @@ $projects: (
   lifelinker-inc,
   joseph-carpenter,
   def-method,
-  modean-apps
+  modean-apps,
+  knock-knock-city
 );
 
 .subtitle{
@@ -351,6 +352,20 @@ $projects: (
 }
 
 @media (max-width: 600px){
+
+  .content.projects {
+
+    .portfolio_logo {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 10px;
+
+      a {
+        width: 48%;
+        margin: 1%;
+      }
+    }
+  }
 
   .portfolio_testimonials {
     width: 100%;
