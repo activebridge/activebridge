@@ -443,7 +443,7 @@ en:
           description:
             Eugene is a backend developer with extensive Android expertise. A big fan of friendly UI design, Eugene applies UX best practices to create mobile apps
             that look and function at a level that always exceeds client expectations.
-          projects: CabLook, Twadlock, Pricey, Taggd, Nvent 
+          projects: CabLook, Twadlock, Pricey, Taggd, Nvent
         - name: Makodzeba Dima
           avatar: Makodzeba.png
           position: Ruby on Rails engineer
@@ -550,7 +550,7 @@ en:
           description:
             Artem is an expert frontend developer with solid experience in backend development as well. While his skillset allows him to do a wide variety of development work, he specializes in working
             with payment systems – like Stripe and PayPal – and in messenger APIs.
-          projects: Knock Knock City,TwentyEightHealth, CabLook Taxi
+          projects: Knock Knock City, TwentyEightHealth, CabLook Taxi
         - name: Zubritskiy Denis
           avatar: Zubritskiy.png
           position: Ruby on Rails developer
