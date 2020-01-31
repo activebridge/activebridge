@@ -376,7 +376,7 @@ $projects: (
 
     .testimonial {
       height: 40vh;
-      max-height: 240px;
+      max-height: 250px;
       scroll-snap-align: center;
       background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
 
@@ -384,6 +384,7 @@ $projects: (
       a .description_wrapper {
         flex-direction: column;
         position: relative;
+        justify-content: space-between;
 
         .read_more {
           width: 60vw;
