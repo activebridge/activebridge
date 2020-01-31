@@ -29,7 +29,7 @@
         textarea#body name='contact[message]' placeholder=' ' minlength='10' maxlength='500' required='true'
       input#submit form='contact_form' type='submit' value='#{t('.send')}' class='contact-button'
 
-  .find_us
+  .find_us.desktop-only
     - I18n.t('welcome.contact.find_us').each_with_index do |item, index|
       - class_name = 'find_item item_' + (index+1).to_s
       - logo = inline_svg item[:logo], class: 'find_us_logo'

@@ -3,7 +3,7 @@
   .services
     - I18n.t('services.development').each_with_index do |service, i|
       .technology
-        .logo_container id="#{service[:id]}"
+        .logo_container.desktop-only id="#{service[:id]}"
           - (1..100).each do |cell|
             = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
           .inner
@@ -35,4 +35,4 @@
           .tech-title
             = inline_svg t[:icon], class: 'tech-icon'
             b= t[:title]
-          .tech_desc= t[:desc]
+          .tech_desc.desktop-only= t[:desc]
