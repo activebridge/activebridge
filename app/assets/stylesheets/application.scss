@@ -333,8 +333,8 @@ nav.navbar {
     align-items: center;
     flex-wrap: nowrap;
     color: white;
-    height: inherit;
-    margin-top: 70px;
+    height: -webkit-fill-available;
+    padding-top: 70px;
 
     .item {
       padding: 10px 0;
