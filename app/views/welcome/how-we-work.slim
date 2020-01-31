@@ -55,9 +55,10 @@
               -cooperation[:advantages].each do |a|
                 li=a
         a#close_model href='#cooperation-models'
-    .header_2
-      b= t('how_we_work.awards.title')
-    .awards
-      - I18n.t('how_we_work.awards.logo').each do |award|
-        .award
-          = image_tag(award)
+    .mobile-only
+      .header_2
+        b= t('how_we_work.awards.title')
+      .awards
+        - I18n.t('how_we_work.awards.logo').each do |award|
+          .award
+            = image_tag(award)
