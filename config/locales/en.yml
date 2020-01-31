@@ -1155,3 +1155,12 @@ en:
           - Fixed deadlines
           - No additional management costs
           - Clear understanding of project goals and expert implementation by our seasoned developers
+    awards:
+      title: Our awards
+      logo:
+        - mobile/awards/B2B_Companies_Ukraine_2018.png
+        - mobile/awards/DOU_2016.png
+        - mobile/awards/IT_Services_Arizona_2019.png
+        - mobile/awards/B2B_Companies_Arizona_2019.png
+        - mobile/awards/Developers_Arizona_2019.png
+        - mobile/awards/Ukraine_B2B_Companies_2019.png

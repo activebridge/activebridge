@@ -159,23 +159,33 @@ $models: dedicated-team, team-extension, project-model;
 
 
     .cooperation_models_cards {
-      flex-direction: column;
+      flex-direction: row;
 
       .model_card {
-        width: unset;
-        max-width: unset;
+        width: 100%;
+        padding: 1%;
 
-        &:not(:last-child)::after {
-          content: '';
+        .logo_container {
           width: 100%;
-          height: 2px;
-          background: linear-gradient(to right, #5f52ca, #b64e96);
-          margin: 40px 0;
         }
 
         .learn_more {
           background: black;
         }
+      }
+    }
+  }
+  .awards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .award {
+      width: 30%;
+
+      img {
+        width: 100%;
       }
     }
   }
