@@ -323,6 +323,7 @@ nav.navbar {
   top: 0;
   width: 70px;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 6;
   background-image: linear-gradient(to top, $main-blue, $main-violet);
   box-shadow: -9px 0px 7px 0px rgba(0,0,0,0.05);

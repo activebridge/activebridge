@@ -416,10 +416,10 @@ $projects: (
     }
   }
 
-  .testimonials_cards .informational_container {
-    top: 0;
-    width: unset;
-    height: 60vh;
+  .testimonial_container, .informational_container {
+    top: 0!important;
+    width: unset!important;
+    height: 100vh!important;
 
     .testimonial_container .testimonial_author .author_info .info {
 
