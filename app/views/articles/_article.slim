@@ -14,5 +14,5 @@
             = article.created_at.strftime('%d %b %Y')
         = image_tag article.member.avatar.url, class: 'author-avatar'
       .article-picture
-        = image_tag article.picture_url
+        = image_tag article.picture_url, alt: (article.img_alt_text.present? ? article.img_alt_text : t('meta.pages.blog.image_alt_tag'))
         .text-center Read more
