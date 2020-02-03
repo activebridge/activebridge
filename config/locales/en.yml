@@ -109,6 +109,7 @@ en:
           insights:
             title: Learn about Company Events, Programs and Achievements | Active Bridge
             description: Latest information about company events, programs, achievements and much more. Keep in touch
+        image_alt_tag: IT staffing services, dedicated development teams | Active Bridge LLC
     open_graph:
       /:
         title: IT Contractor Company, Developers on Demand | Active Bridge, LLC
@@ -443,7 +444,7 @@ en:
           description:
             Eugene is a backend developer with extensive Android expertise. A big fan of friendly UI design, Eugene applies UX best practices to create mobile apps
             that look and function at a level that always exceeds client expectations.
-          projects: CabLook, Twadlock, Pricey, Taggd, Nvent 
+          projects: CabLook, Twadlock, Pricey, Taggd, Nvent
         - name: Makodzeba Dima
           avatar: Makodzeba.png
           position: Ruby on Rails engineer
