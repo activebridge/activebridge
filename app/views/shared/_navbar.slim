@@ -1,4 +1,6 @@
 - cache 'navbar' do
+  a.home-logo.mobile-only href='/'
+    = inline_svg 'navbar/menu_home.svg'
   input#menu type='checkbox' onclick="hideAnchors()"
   label.nav-toggler for='menu'
     span.first

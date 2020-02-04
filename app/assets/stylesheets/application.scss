@@ -534,10 +534,15 @@ nav.navbar {
   nav.navbar {
     left: 0;
     right: unset;
+
+    .items {
+      padding-top: 120px;
+    }
   }
 
   label.nav-toggler {
     left: 22px;
+    top: 80px;
   }
 
   .container {
@@ -551,5 +556,18 @@ nav.navbar {
   #back-to-top.show{
     bottom: 5px;
     right: 5px;
+  }
+
+  .home-logo {
+    z-index: 10;
+    position: fixed;
+    width: 60px;
+    display: flex;
+    left: 5px;
+    top: 20px;
+
+    svg {
+      width: 100%;
+    }
   }
 }
