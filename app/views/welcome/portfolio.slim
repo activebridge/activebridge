@@ -55,10 +55,10 @@
             = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             span
               = testimonial[:description].split(" ").slice(0..10).join(" ") + '...'
-            .spacer
+            .spacer.desktop-only
             = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
             button.read_more href="#testimonial-#{item_name(testimonial[:company])}" Read more
-    .spacer-10
+    .spacer-15
 
   .testimonials_cards
     - I18n.t('testimonials.all').each_with_index do |testimonial, i|

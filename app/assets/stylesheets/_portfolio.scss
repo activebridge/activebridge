@@ -367,6 +367,19 @@ $projects: (
     }
   }
 
+  .open-quotes, .close-quotes {
+    width: 3.5vw;
+    max-width: 10px;
+  }
+
+  .open-quotes {
+    margin-left: 5px;
+  }
+
+  .close-quotes {
+    margin-right: 5px;
+  }
+
   .portfolio_testimonials {
     width: 100%;
     flex-direction: row;
@@ -379,6 +392,8 @@ $projects: (
       max-height: 250px;
       scroll-snap-align: center;
       background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
+      margin: 2vh 2vw;
+      padding: 4vh 2vw;
 
 
       a .description_wrapper {
@@ -387,30 +402,36 @@ $projects: (
         justify-content: space-between;
 
         .read_more {
-          width: 60vw;
-          height: unset;
+          width: 30vw;
+          height: fit-content;
+          padding: 1vh 0;
+          background: none;
+          margin: 0 12vw;
+          font-weight: bold;
+          border-image: linear-gradient( to right, #b64e96, #5f52ca) 1;
+
         }
 
         .like {
           height: auto;
           position: absolute;
-          width: 15vw;
-          right: 12%;
-          top: 36%;
+          width: 10vw;
+          right: 24%;
+          top: 18%;
         }
 
         .image-wrapper {
-          width: 50%;
+          width: 31%;
 
           img {
             width: 100%;
             border: 1px solid;
-            margin: 5px;
           }
         }
 
         span {
-          margin: 20px 10px 0;
+          margin: 0 10px 0;
+          font-size: .8em;
         }
       }
     }
@@ -431,5 +452,6 @@ $projects: (
 
   .testimonials_cards .informational_container .testimonial_description .description {
     padding: 15px;
+    height: fit-content;
   }
 }
