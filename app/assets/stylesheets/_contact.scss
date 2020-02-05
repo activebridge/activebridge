@@ -178,18 +178,25 @@ $initial-margin: 5;
     .informational_container.contact-form-holder {
       position: unset;
       width: 90%;
-      margin: 0 auto;
+      margin: 2vh 5%;
       opacity: 0.8;
       border: 1px solid $main-blue;
       box-shadow: none;
     }
 
-    .find_us .find_item {
-      margin-left: -10px !important;
+    .find_us {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-left: 0 !important;
+      order: 1;
 
-      .find_us_logo {
-        transform: rotate(45deg);
-        height: 8vh;
+      .find_item {
+        margin-left: 0 !important;
+
+        .find_us_logo {
+          transform: rotate(45deg);
+          height: 8vh;
+        }
       }
     }
 

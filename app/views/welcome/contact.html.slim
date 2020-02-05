@@ -1,11 +1,11 @@
 .container
   .contact_header
     .header_2.contact_header_2= t('.title')
-    .header_3.contact_header_3
+    .header_3.contact_header_3.desktop-only
       = t('.discuss')
       br
       = t('.help')
-    p= t('.complete_fields')
+    p.desktop-only= t('.complete_fields')
   = inline_svg 'contact/background.svg', class: 'bg'
   .informational_container.contact-form-holder
     = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this);',
@@ -29,7 +29,7 @@
         textarea#body name='contact[message]' placeholder=' ' minlength='10' maxlength='500' required='true'
       input#submit form='contact_form' type='submit' value='#{t('.send')}' class='contact-button'
 
-  .find_us.desktop-only
+  .find_us
     - I18n.t('welcome.contact.find_us').each_with_index do |item, index|
       - class_name = 'find_item item_' + (index+1).to_s
       - logo = inline_svg item[:logo], class: 'find_us_logo'
@@ -37,17 +37,17 @@
       - if index > 1
         a href='#{link}' class='#{class_name}'
           = logo
-          span
+          span.desktop-only
             '/
             = link.split('/').last
       - elsif index == 0
         a href='email: #{link}' class='#{class_name}'
           = logo
-          span= link
+          span.desktop-only= link
       - else
         a href='tel: #{link}' class='#{class_name}'
           = logo
-          span= link
+          span.desktop-only= link
   .entities#headquarters
     - I18n.t('welcome.contact.entities').each do |entity|
       .entity
