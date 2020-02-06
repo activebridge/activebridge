@@ -614,6 +614,36 @@ en:
             Dasha is passionate about search engine optimization and digital marketing. She likes to be on top with the latest industry
             trends and technologies, reading her favorite MOZ.com authors.
           projects: Active Bridge, CabLook Taxi, Knock Knock City
+        - name: Oleg Chernetskiy
+          avatar: Chernetskiy.png
+          position: Back-end, Front-end developer
+          description:
+            Oleg is a highly responsible person. He has experience in the development and maintenance of web applications using HTML, CSS, Javascript, Bootstrap, jQuery.
+          projects: Nexgenconcierge, Twadlock, Kleverc, BloomPin
+        - name:  Dima Sivoglaz
+          avatar: Syvoglaz.png
+          position: Back-end, Front-end developer
+          description:
+            Dima has an interest in software development, he has experience of Ruby, JavaScript, both front-end and back-end
+          projects: CabLook Taxi, Bugno.io
+        - name: Arutin Slavik
+          avatar: Arutin.png
+          position: Back-end, Front-end developer
+          description:
+            Slavik is a passionate hands-on Ruby on Rails Developer with a background in a transaction and event-driven web services
+          projects: DaisyBill
+        - name: Vitaliy Drobot
+          avatar: Drobot.png
+          position: Back-end, Front-end developer
+          description:
+            Vitaliy is an outgoing person. He has deep knowledge of HTML, CSS, JavaScript, Bootstrap, jQuery, experience with Git version control and familiarity with server-side and browser scripting.
+          projects: Active Bridge
+        - name: Naumenko Kate
+          avatar: KateN.png
+          position: Ruby on Rails trainee
+          description:
+            Kate is a creative, passionate, and talented intern in our team. She leverages the skills and works directly alongside our development team in a pair programming environment to help design, build, and scale our proprietary projects
+          projects: ' '
       title: Meet our team of full-stack developers
       photos:
         - https://i.imgur.com/6awlwXJ.jpg
