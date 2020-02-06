@@ -3,8 +3,11 @@
     .header_2
       b= t('how_we_work.title')
     .work_desc
-      = t('how_we_work.description')
-    .holder_key
+      .mobile-only
+        = t('how_we_work.description').split('.')[0]
+      .desktop-only
+        = t('how_we_work.description')
+    .holder_key.desktop-only
       .keyboard
         h1.get_dedicated=t('how_we_work.get_dedicated')
         .keyboard-container
@@ -18,13 +21,13 @@
               = link_to '', "##{id_name(cooperation[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
             .inner
               = inline_svg cooperation[:logo], class: 'inner'
-          .descr
+          .descr.desktop-only
             - cooperation[:for_who].each do |who|
               p
                 'For:
                 = who
           .spacer
-          a.learn_more href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
+          a.learn_more.desktop-only href='##{cooperation[:title].downcase.gsub(/[,.]/, '').gsub(' ', '-')}'
             'Learn more
     .models_information
       - I18n.t('how_we_work.cooperation_models').each do |cooperation|
@@ -51,4 +54,12 @@
             ul
               -cooperation[:advantages].each do |a|
                 li=a
+          a.close-button href="#cooperation-models" ×
         a#close_model href='#cooperation-models'
+    .mobile-only
+      .header_2
+        b= t('how_we_work.awards.title')
+      .awards
+        - I18n.t('how_we_work.awards.logo').each do |award|
+          .award
+            = image_tag(award)

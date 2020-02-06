@@ -3,7 +3,12 @@
     .header_2= t('portfolio.title')
     h1.subtitle= t('portfolio.project')
     h2.subsubtitle= t('portfolio.applications')
-    = inline_svg 'portfolio/bg.svg', class: 'portfolio-background'
+    = inline_svg 'portfolio/bg.svg', class: 'portfolio-background desktop-only'
+    .mobile-only.portfolio_logo
+      - I18n.t('portfolio.projects').each_with_index do |project, i|
+        a href="##{item_name(project[:client])}"
+          = inline_svg "mobile/logo/#{item_name(project[:client])}.svg"
+
     - I18n.t('portfolio.projects').each_with_index do |project, i|
       .informational_container id=item_name(project[:client])
         = link_to '', "##{item_name(I18n.t('portfolio.projects')[i-1][:client])}", class: 'prev'
@@ -44,13 +49,16 @@
       .testimonial class="portfolio_testimonial"
         a href="#testimonial-#{item_name(testimonial[:company])}"
           .description_wrapper
+            .mobile-only.image-wrapper
+              = image_tag testimonial[:image]
             = inline_svg 'testimonials/like.svg', class: 'like'
             = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             span
               = testimonial[:description].split(" ").slice(0..10).join(" ") + '...'
-            .spacer
+            .spacer.desktop-only
             = inline_svg 'testimonials/small_quotes.svg', class: 'close-quotes'
             button.read_more href="#testimonial-#{item_name(testimonial[:company])}" Read more
+    .spacer-15
 
   .testimonials_cards
     - I18n.t('testimonials.all').each_with_index do |testimonial, i|
@@ -63,7 +71,7 @@
           .testimonial_author
             hr
             .author_info
-              = image_tag(testimonial[:image], class: 'author', alt: nil)
+              = image_tag(testimonial[:image], class: 'author desktop-only', alt: nil)
               .info
                 span= testimonial[:author]
                 = testimonial[:post]

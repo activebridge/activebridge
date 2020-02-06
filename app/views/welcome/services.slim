@@ -3,7 +3,7 @@
   .services
     - I18n.t('services.development').each_with_index do |service, i|
       .technology
-        .logo_container id="#{service[:id]}"
+        .logo_container.desktop-only id="#{service[:id]}"
           - (1..100).each do |cell|
             = link_to '', '#', class: "reflection-grid-cell reflection-grid-cell-#{cell}"
           .inner
@@ -28,6 +28,7 @@
               ul
                 - service[:bdd][:advantages][:items].each do |a|
                   li= a
+            .close-button ×
     .header_2.text-center Core technologies we specialize in
     - I18n.t('services.development').each_with_index do |service, i|
       - service[:technologies].each do |t|
@@ -35,4 +36,4 @@
           .tech-title
             = inline_svg t[:icon], class: 'tech-icon'
             b= t[:title]
-          .tech_desc= t[:desc]
+          .tech_desc.desktop-only= t[:desc]

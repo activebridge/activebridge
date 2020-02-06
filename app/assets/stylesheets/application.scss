@@ -12,21 +12,21 @@
 
 @keyframes display {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
 
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes fade {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
 
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
@@ -186,6 +186,12 @@ body {
   flex: 1;
 }
 
+.spacer-15 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 15%;
+}
+
 input#menu {
   opacity: 0;
   z-index: -1;
@@ -322,7 +328,7 @@ nav.navbar {
   right: 0;
   top: 0;
   width: 70px;
-  height: 100vh;
+  height: 100%;
   z-index: 6;
   background-image: linear-gradient(to top, $main-blue, $main-violet);
   box-shadow: -9px 0px 7px 0px rgba(0,0,0,0.05);
@@ -333,8 +339,8 @@ nav.navbar {
     align-items: center;
     flex-wrap: nowrap;
     color: white;
-    height: inherit;
-    margin-top: 70px;
+    height: -webkit-fill-available;
+    padding-top: 70px;
 
     .item {
       padding: 10px 0;
@@ -454,6 +460,16 @@ nav.navbar {
   transition: visibility 1s linear .3s, opacity .3s linear;
   box-shadow: 00px 0px 10px 1px rgba(95, 82, 202, 0.4);
 
+  @media (max-width: 600px) {
+    width: calc(100% - 70px);
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+    transform: unset;
+    left: 70px;
+  }
+
   .prev, .next {
     transition: all .2s linear;
     position: absolute;
@@ -497,5 +513,61 @@ nav.navbar {
   @media (min-width: 1380px){
     width: 35%;
     height: 65%;
+  }
+}
+
+
+
+.desktop-only  {
+  @media (max-width: 601px){
+    display: none!important;
+  }
+}
+
+.mobile-only {
+  @media (min-width: 600px){
+    display: none!important;
+  }
+}
+
+@media (max-width: 600px) {
+  nav.navbar {
+    left: 0;
+    right: unset;
+
+    .items {
+      padding-top: 120px;
+    }
+  }
+
+  label.nav-toggler {
+    left: 22px;
+    top: 80px;
+  }
+
+  .container {
+    float: right;
+  }
+
+  input#menu:checked ~ .navbar {
+    width: 50vw;
+  }
+
+  #back-to-top.show{
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .home-logo {
+    z-index: 10;
+    position: fixed;
+    width: 60px;
+    display: flex;
+    left: 5px;
+    top: 20px;
+
+    svg {
+      width: 100%;
+    }
   }
 }

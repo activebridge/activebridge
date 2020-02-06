@@ -6,73 +6,80 @@
       .index_header_2= t('about_us.slogan')
       .logo_container#logo_container
         .inner#inner
-          = inline_svg 'index/logo.svg', class: 'img__logo', id: 'logo'
-      br
-      a.btn-work href='#about_us'
-        b= t('about_us.about')
-  .about_us_container#about_us
-    .description-container
-      .description-img
-        = inline_svg 'index/coding.svg', class: 'index-icon left'
-      .description-text
-        .text=t('about_us.information.first')
+        = inline_svg 'index/welcome-logo.svg', class: 'img__logo', id: 'logo'
+      .description-text.mobile-only
+        .text= t('about_us.information.first')
         .spacer
         = inline_svg 'index/home_page_line_1.svg', class: 'home_page_line'
-    .description-container
-      .description-text
-        .text= t('about_us.information.second')
-        .spacer
-        = inline_svg 'index/home_page_line_2.svg', class: 'home_page_line'
-      .description-img
-        = inline_svg 'index/globe.svg', class: 'index-icon right'
-    .description-container
-      .description-img.with_clutch_widget
-        = image_tag 'index/awards.png', class: 'index-icon left'
-        .clutch-widget data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
-      .description-text.d-block=t('about_us.information.third').html_safe
-  .solutions_and_benefits#solutions_and_benefits
-    .solutions
-      .header_2= t('about_us.solutions_and_benefits.solutions_title')
-      .item-container
-        - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, index|
-          .item-holder
-            .logo_container
-              - (1..100).each do |cell|
-                = link_to '', "##{id_name(el[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
-              .inner
-                = inline_svg(('index/solutions'+ (index+1).to_s + '.svg'), class: 'tetris')
-            span
-              a href="##{id_name(el[:title])}"= el[:title]
-    .benefits
-      .header_2= t('about_us.solutions_and_benefits.benefits_title')
-      .item-container
-        - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, index|
-          .item-holder
-            .logo_container
-              - (1..100).each do |cell|
-                = link_to '', "##{id_name(el[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
-              .inner
-                = inline_svg(('index/benefits'+ (index+1).to_s + '.svg'), class: 'tetris')
-            span
-              a href="##{id_name(el[:title])}"= el[:title]
-    .solutions_and_benefits_desc
-      - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, i|
-        .informational_container id='#{id_name(el[:title])}'
-          = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.solutions')[i-1][:title])}", class: 'prev'
-          = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.solutions'), i)[:title])}", class: 'next'
-          .about-item
-            .title= el[:title]
-            hr
-            .description= el[:desc].html_safe
-      = link_to '', '#index', class: 'close_description', id: 'solutions'
-      - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, i|
-        .informational_container id='#{id_name(el[:title])}'
-          = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.benefits')[i-1][:title])}", class: 'prev'
-          = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.benefits'), i)[:title])}", class: 'next'
-          .about-item
-            .title= el[:title]
-            hr
-            .description= el[:desc]
-      = link_to '', '#index', class: 'close_description', id: 'benefits'
-script src="https://widget.clutch.co/static/js/widget.js" type="text/javascript"
+      a.mobile-only.btn-work href='contact'
+        b= t('blog.footer.contact_us')
+      br
+      a.desktop-only.btn-work href='#about_us'
+        b= t('about_us.about')
+  .desktop-only
+    .about_us_container#about_us
+      .description-container
+        .description-img
+          = inline_svg 'index/coding.svg', class: 'index-icon left'
+        .description-text
+          .text=t('about_us.information.first')
+          .spacer
+          = inline_svg 'index/home_page_line_1.svg', class: 'home_page_line'
+      .description-container
+        .description-text
+          .text= t('about_us.information.second')
+          .spacer
+          = inline_svg 'index/home_page_line_2.svg', class: 'home_page_line'
+        .description-img
+          = inline_svg 'index/globe.svg', class: 'index-icon right'
+      .description-container
+        .description-img.with_clutch_widget
+          = image_tag 'index/awards.png', class: 'index-icon left'
+          .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
+        .description-text.d-block=t('about_us.information.third').html_safe
+    .solutions_and_benefits#solutions_and_benefits
+      .solutions
+        .header_2= t('about_us.solutions_and_benefits.solutions_title')
+        .item-container
+          - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, index|
+            .item-holder
+              .logo_container
+                - (1..100).each do |cell|
+                  = link_to '', "##{id_name(el[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+                .inner
+                  = inline_svg(('index/solutions'+ (index+1).to_s + '.svg'), class: 'tetris')
+              span
+                a href="##{id_name(el[:title])}"= el[:title]
+      .benefits
+        .header_2= t('about_us.solutions_and_benefits.benefits_title')
+        .item-container
+          - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, index|
+            .item-holder
+              .logo_container
+                - (1..100).each do |cell|
+                  = link_to '', "##{id_name(el[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
+                .inner
+                  = inline_svg(('index/benefits'+ (index+1).to_s + '.svg'), class: 'tetris')
+              span
+                a href="##{id_name(el[:title])}"= el[:title]
+      .solutions_and_benefits_desc
+        - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, i|
+          .informational_container id='#{id_name(el[:title])}'
+            = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.solutions')[i-1][:title])}", class: 'prev'
+            = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.solutions'), i)[:title])}", class: 'next'
+            .about-item
+              .title= el[:title]
+              hr
+              .description= el[:desc].html_safe
+        = link_to '', '#index', class: 'close_description', id: 'solutions'
+        - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, i|
+          .informational_container id='#{id_name(el[:title])}'
+            = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.benefits')[i-1][:title])}", class: 'prev'
+            = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.benefits'), i)[:title])}", class: 'next'
+            .about-item
+              .title= el[:title]
+              hr
+              .description= el[:desc]
+        = link_to '', '#index', class: 'close_description', id: 'benefits'
+  script src="https://widget.clutch.co/static/js/widget.js" type="text/javascript"
 

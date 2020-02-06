@@ -12,6 +12,8 @@ $models: dedicated-team, team-extension, project-model;
     text-align: justify;
     line-height: 35px;
     font-size: 1.1em;
+    font-weight: 100;
+    padding: 12px;
   }
 
   .holder_key{
@@ -129,4 +131,65 @@ $models: dedicated-team, team-extension, project-model;
     top: 0;
     left: 0;
   }
+
+
+  @media (max-width: 600px) {
+    .holder_key .keyboard {
+
+      .keyboard-container {
+        position: relative;
+        width: 100%;
+      }
+
+      .cooperation-models {
+        width: 100%;
+        font-size: 0.7em;
+        position: absolute;
+        color: #5f52ca;
+        bottom: 5px;
+      }
+    }
+
+    .logo_container {
+      width: 40%;
+    }
+
+    .work_desc {
+      line-height: normal;
+      font-size: 1em;
+    }
+
+
+    .cooperation_models_cards {
+      flex-direction: row;
+
+      .model_card {
+        width: 100%;
+        padding: 1%;
+
+        .logo_container {
+          width: 100%;
+        }
+
+        .learn_more {
+          background: black;
+        }
+      }
+    }
+  }
+  .awards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .award {
+      width: 30%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
+

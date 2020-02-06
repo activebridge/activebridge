@@ -160,3 +160,14 @@
     }
   }
 }
+
+@media (max-width: 600px){
+  .container .services {
+    flex-direction: column;
+    width: 90%;
+
+    .technology {
+      width: 100%;
+    }
+  }
+}

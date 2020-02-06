@@ -87,6 +87,7 @@ body {
     padding: 18px 35px;
     text-decoration: none;
     transition: all .3s ease;
+    white-space: nowrap;
 
     &:hover {
       box-shadow: 0px 0px 10px 1px rgba(95, 82, 202, 0.4);
@@ -285,5 +286,81 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+  }
+}
+
+@media (max-width: 600px){
+  .gradient_container {
+    background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
+  }
+  .about_us_container .description-container {
+
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+
+    &:nth-child(odd) {
+      flex-direction: column;
+    }
+
+    .description-img {
+      margin: 0 auto 5vh auto;
+      height: 20vh;
+
+      svg {
+        width: 100%;
+      }
+    }
+  }
+
+  .logo {
+    width: 80vw;
+
+    .logo_container {
+      margin: 2vh 0;
+
+      svg {
+        height: 20vh;
+      }
+    }
+
+    .btn-work {
+      padding: 18px;
+    }
+
+    .index_header {
+      font-size: 1.5em;
+
+      &_2 {
+        font-size: 1em;
+      }
+    }
+
+    .description-text .text {
+      font-weight: 100;
+      text-align: justify;
+      padding: 12px;
+    }
+  }
+
+  .solutions_and_benefits {
+
+    .item-container {
+      flex-wrap: wrap-reverse;
+
+      .item-holder {
+        margin-top: 10px;
+        width: 30%;
+
+        span {
+          font-size: 0.6em;
+        }
+      }
+    }
+
+    .solutions_and_benefits_desc .informational_container {
+      left: 26%;
+      width: 65%;
+    }
   }
 }
