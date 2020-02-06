@@ -26,6 +26,10 @@ body {
   font-family: Raleway;
   overflow-x: hidden;
   margin: 0px;
+
+  &.blog {
+    overflow-y: auto;
+  }
 }
 
 

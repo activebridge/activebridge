@@ -547,6 +547,13 @@ nav.navbar {
 
   .container {
     float: right;
+    position: relative;
+  }
+
+  .scroll-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
   }
 
   input#menu:checked ~ .navbar {
@@ -568,6 +575,7 @@ nav.navbar {
 
     svg {
       width: 100%;
+      height: 40px;
     }
   }
 }

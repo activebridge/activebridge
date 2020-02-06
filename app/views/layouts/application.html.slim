@@ -21,7 +21,8 @@ html lang='en'
     = render 'shared/gtag_iframe'
     = render 'shared/navbar'
     = render 'shared/header'
-    = yield
+    #scroll-container.scroll-container
+      = yield
     #back-to-top aria-label="Go to top"
       span.ui-arrow-up
     = javascript_include_tag 'application', async: true

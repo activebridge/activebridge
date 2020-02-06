@@ -68,3 +68,8 @@ handleScroll = ->
 window.onload = () ->
   document.body.onscroll = handleScroll
   backToTopButton.onclick = scrollToTop if backToTopButton
+
+
+window.onload = ->
+  document.getElementById('scroll-container').style.height = window.innerHeight + 'px'
+  return
