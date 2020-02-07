@@ -552,8 +552,11 @@ nav.navbar {
 
   .scroll-container {
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     height: 100vh;
+    position: absolute;
+    width: 100%;
   }
 
   input#menu:checked ~ .navbar {

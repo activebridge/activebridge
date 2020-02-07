@@ -69,7 +69,9 @@ window.onload = () ->
   document.body.onscroll = handleScroll
   backToTopButton.onclick = scrollToTop if backToTopButton
 
+viewportHeight = window.innerHeight - 1 + 'px'
 
-window.onload = ->
-  document.getElementById('scroll-container').style.height = window.innerHeight + 'px'
-  return
+window.load = ->
+  document.getElementById('scroll-container').style.height = viewportHeight
+  document.body.style.height = viewportHeight
+window.load()

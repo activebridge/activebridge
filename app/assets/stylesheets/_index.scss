@@ -293,6 +293,7 @@ body {
 
   body {
     overflow-y: hidden;
+    height: calc(100vh - 1px);
   }
 
   .gradient_container {
