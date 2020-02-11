@@ -1,5 +1,7 @@
 #= require _analytics
 #= require _smartlook
+#= require _navigation
+
 if navigator.appVersion.toUpperCase().indexOf('MSIE') != -1 or
     navigator.appVersion.toUpperCase().indexOf('TRIDENT') != -1 or
       navigator.appVersion.toUpperCase().indexOf('EDGE') != -1

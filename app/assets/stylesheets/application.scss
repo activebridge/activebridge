@@ -531,12 +531,69 @@ nav.navbar {
 }
 
 @media (max-width: 600px) {
+
+  html {
+    overflow-x: hidden;
+  }
+
+  .trigger {
+    position: absolute;
+    top: 80px;
+    left: 18px;
+    font-size: 30px;
+    color: white;
+
+    &.close {
+      z-index: 10;
+    }
+
+    &.open {
+      z-index: 5;
+      position: fixed;
+    }
+  }
+
   nav.navbar {
     left: 0;
     right: unset;
+    width: 50vw;
+    z-index: 5;
+    flex: 0 0 auto;
+    position: relative;
+    scroll-snap-align: start;
 
     .items {
       padding-top: 120px;
+      align-items: flex-start;
+
+      .item {
+        .icon-link {
+          padding: 0 15px;
+        }
+
+        .page-link span {
+          display: block;
+        }
+      }
+    }
+
+    .draggable-zone {
+      position: absolute;
+      height: 10vh;
+      width: 10px;
+      right: -10px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 0 20px 20px 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .5s;
+
+      &.touch {
+          height: 50vh;
+          width: 20px;
+          transition: all .5s;
+          right: -20px;
+      }
     }
   }
 
@@ -548,6 +605,7 @@ nav.navbar {
   .container {
     float: right;
     position: relative;
+    width: 100vw;
   }
 
   .scroll-container {
@@ -555,8 +613,12 @@ nav.navbar {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     height: 100vh;
-    position: absolute;
     width: 100%;
+    flex: 0 0 auto;
+    flex-grow: 10;
+    position: relative;
+    scroll-snap-align: start;
+    direction: ltr;
   }
 
   input#menu:checked ~ .navbar {
