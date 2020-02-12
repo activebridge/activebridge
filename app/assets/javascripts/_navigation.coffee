@@ -22,7 +22,6 @@ window.onscroll = navigate
 startX = startY = swipeX = swipeY = 0
 
 body.addEventListener 'touchstart', ((event) ->
-  console.log(event)
   swipeX = 0;
   startX = event.changedTouches[0].pageX;
   startY = event.changedTouches[0].pageY;
@@ -32,7 +31,7 @@ body.addEventListener 'touchmove', ((event) ->
   swipeX = (Math.abs(event.changedTouches[0].pageX - startX) / (window.outerWidth || window.innerWidth) * 100)
   swipeY = (Math.abs(event.changedTouches[0].pageY - startY) / (window.outerHeight || window.innerHeight) * 100)
   horizontal = horizontal || swipeX > swipeY
-  if horizontal
+  if horizontal && !Object.values(event.path).includes(document.getElementById('testimonials'))
     drag.classList.add('touch')
 )
 
