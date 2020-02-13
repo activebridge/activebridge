@@ -30,7 +30,10 @@ body.addEventListener 'touchend', ((event) ->
 
 scrollContainer.addEventListener 'click', ((event) ->
   if container.scrollLeft <= 0
-    container.scrollTo(1000, 0);
+    container.scrollTo({
+      left: 1000,
+      behavior: "smooth"
+    })
 )
 
 document.getElementById('trigger').addEventListener 'click', ((event) ->
