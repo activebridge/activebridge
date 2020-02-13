@@ -319,6 +319,10 @@ body {
     }
   }
 
+  .container.index {
+    width: 100vw;
+  }
+
   .gradient_container {
     background: linear-gradient(135deg, rgb(242,225,238), rgb(228,226,246));
   }

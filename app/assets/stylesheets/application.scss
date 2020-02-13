@@ -577,23 +577,30 @@ nav.navbar {
       }
     }
 
-    .draggable-zone {
+    svg.bulb {
       position: absolute;
-      height: 10vh;
-      width: 10px;
-      right: -10px;
-      background: rgba(0, 0, 0, 0.1);
-      border-radius: 0 20px 20px 0;
+      height: 100%;
       top: 50%;
       transform: translateY(-50%);
       transition: all .5s;
+      left: 99%;
 
-      &.touch {
-          height: 50vh;
-          width: 20px;
-          transition: all .5s;
-          right: -20px;
-      }
+    }
+  }
+
+  svg.bulbik {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 95%;
+    top: 50%;
+    height: 100%;
+    transition: all .2s;
+
+
+    &.touch {
+        //height: 25vh;
+        transition: all .2s;
+        left: 100%;
     }
   }
 
@@ -603,9 +610,9 @@ nav.navbar {
   }
 
   .container {
-    float: right;
     position: relative;
-    width: 100vw;
+    width: 82vw;
+    margin: 0 auto;
   }
 
   .scroll-container {
