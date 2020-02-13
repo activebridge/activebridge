@@ -618,6 +618,7 @@ nav.navbar {
     flex-grow: 10;
     position: relative;
     scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
     direction: ltr;
   }
 
