@@ -355,6 +355,8 @@ $projects: (
 
   .content.projects {
 
+    scroll-snap-align: start;
+
     .portfolio_logo {
       display: flex;
       flex-wrap: wrap;
@@ -385,6 +387,7 @@ $projects: (
     flex-direction: row;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-snap-align: end;
     padding-left: 15vw;
 
     .testimonial {

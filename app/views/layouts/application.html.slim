@@ -18,23 +18,26 @@ html lang='en'
   = render 'layouts/head', type: :application, media: :all
 
   body
-    = render 'shared/gtag_iframe'
-    = render 'shared/navbar'
-    = render 'shared/header'
-    #scroll-container.scroll-container
-      = yield
-    #back-to-top aria-label="Go to top"
-      span.ui-arrow-up
-    = javascript_include_tag 'application', async: true
-    javascript:
-      var head = document.head,
-          link = document.createElement('link');
+    #main-container.main-container
+      = render 'shared/gtag_iframe'
+      = render 'shared/header'
+      #scroll-container.scroll-container
+        a.home-logo.mobile-only href='/'
+          = inline_svg 'navbar/menu_home.svg'
+        = yield
+      = render 'shared/navbar'
+      #back-to-top aria-label="Go to top"
+        span.ui-arrow-up
+      = javascript_include_tag 'application', async: true
+      javascript:
+        var head = document.head,
+            link = document.createElement('link');
 
-      link.type = 'text/css';
-      link.rel = 'stylesheet';
-      link.href = "#{ asset_path('fonts.css')}";
-      head.appendChild(link);
+        link.type = 'text/css';
+        link.rel = 'stylesheet';
+        link.href = "#{ asset_path('fonts.css')}";
+        head.appendChild(link);
 
-      let changeItem = (item) => {
-        item.focus()
-      }
+        let changeItem = (item) => {
+          item.focus()
+        }

@@ -531,12 +531,88 @@ nav.navbar {
 }
 
 @media (max-width: 600px) {
+
+  html {
+    overflow-x: hidden;
+  }
+
+  .trigger {
+    position: absolute;
+    top: 6%;
+    left: 99%;
+    font-size: 1.5em;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    width: min-content;
+  }
+
+  body {
+    .main-container {
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      direction: rtl;
+      overflow: auto;
+      scroll-snap-type: x mandatory;
+    }
+  }
+
+
   nav.navbar {
     left: 0;
     right: unset;
+    width: 50vw;
+    z-index: 5;
+    flex: 0 0 auto;
+    position: relative;
+    scroll-snap-align: start;
 
     .items {
-      padding-top: 120px;
+      padding-top: 20px;
+      align-items: flex-start;
+
+      .item {
+        .icon-link {
+          padding: 0 15px;
+        }
+
+        .page-link span {
+          display: block;
+        }
+      }
+    }
+
+    svg.bulb {
+      position: absolute;
+      height: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .5s;
+      left: 99%;
+
+    }
+  }
+
+  svg.bulbik {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 95%;
+    top: 50%;
+    height: 100%;
+    transition: all .2s;
+
+
+    &.touch-right {
+        transition: all .2s;
+        left: 100%;
+    }
+
+    &.touch-left {
+        transition: all .2s;
+        left: 90%;
     }
   }
 
@@ -546,14 +622,23 @@ nav.navbar {
   }
 
   .container {
-    float: right;
     position: relative;
+    width: 82vw;
+    margin: 0 auto;
   }
 
   .scroll-container {
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     height: 100vh;
+    width: 100%;
+    flex: 0 0 auto;
+    flex-grow: 10;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    direction: ltr;
   }
 
   input#menu:checked ~ .navbar {
@@ -566,16 +651,32 @@ nav.navbar {
   }
 
   .home-logo {
-    z-index: 10;
-    position: fixed;
+    z-index: 5;
+    position: absolute;
     width: 60px;
     display: flex;
-    left: 5px;
+    right: 5px;
     top: 20px;
 
     svg {
       width: 100%;
       height: 40px;
     }
+
+    &::before {
+      content: '';
+      background: radial-gradient(18vw 50%, rgba(182, 78, 150, 0.35) 15%, rgba(255, 255, 255, 0) 90%);
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+      scroll-snap-align: start;
+    }
+  }
+
+  .informational_container {
+    left: 0;
   }
 }

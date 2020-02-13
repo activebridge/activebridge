@@ -1,8 +1,6 @@
 - cache 'navbar' do
-  a.home-logo.mobile-only href='/'
-    = inline_svg 'navbar/menu_home.svg'
   input#menu type='checkbox' onclick="hideAnchors()"
-  label.nav-toggler for='menu'
+  label.nav-toggler.desktop-only for='menu'
     span.first
     span.second
     span.third
@@ -10,6 +8,9 @@
   - I18n.t('navbar.links').each_with_index do |item, index|
     .item-title.desktop-only id="icon-#{index}"= item[:title][:name]
   nav.navbar
+    = inline_svg 'move-bulb.svg', class: 'mobile-only bulbik', id:'draggable-zone'
+    = inline_svg 'bulb.svg', class: 'mobile-only bulb'
+    button#trigger.mobile-only class='trigger' ☰
     .items
       - I18n.t('navbar.links').each_with_index do |item, index|
         - if index == I18n.t('navbar.links').size - 1

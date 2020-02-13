@@ -293,6 +293,34 @@ body {
 
   body {
     overflow-y: hidden;
+    height: calc(100vh - 1px);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+    overflow-x: auto;
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    direction: rtl;
+
+    input[type='radio'].nav-button {
+      position: absolute;
+      opacity: 0;
+      z-index: -5;
+
+      &.close {
+        right: 0;
+      }
+    }
+  }
+
+  .container.index {
+    width: 100vw;
   }
 
   .gradient_container {
