@@ -1,23 +1,7 @@
-slides = document.querySelectorAll('main section')
-links = document.querySelectorAll('nav a')
 drag = document.getElementById('draggable-zone')
 scrollContainer = document.getElementById('scroll-container')
 body = document.body
-
-navigate = ->
-  trigered = false
-  i = 0
-  while i < slides.length
-    slide = slides[i]
-    links[i].classList.remove 'active'
-    if slide.offsetTop + slide.offsetHeight > window.scrollY + window.outerHeight * 0.3
-      if !trigered
-        links[i].className = 'active'
-        history.replaceState {}, '', '#' + slide.id
-      trigered = true
-    i++
-
-window.onscroll = navigate
+container = document.getElementById('main-container')
 
 startX = startY = swipeX = swipeY = 0
 
@@ -31,15 +15,34 @@ body.addEventListener 'touchmove', ((event) ->
   swipeX = (Math.abs(event.changedTouches[0].pageX - startX) / (window.outerWidth || window.innerWidth) * 100)
   swipeY = (Math.abs(event.changedTouches[0].pageY - startY) / (window.outerHeight || window.innerHeight) * 100)
   horizontal = horizontal || swipeX > swipeY
-  if horizontal && !Object.values(event.path).includes(document.getElementById('testimonials'))
-    drag.classList.add('touch')
+  if horizontal
+    if (startX > event.changedTouches[0].pageX)
+      drag.classList.add('touch-left')
+    else
+      drag.classList.add('touch-right')
+
 )
 
 body.addEventListener 'touchend', ((event) ->
-  drag.classList.remove('touch')
+  drag.classList.remove('touch-right')
+  drag.classList.remove('touch-left')
 )
 
 scrollContainer.addEventListener 'click', ((event) ->
-  if body.scrollLeft == 0
-    body.scrollTo(100, 0);
+  if container.scrollLeft <= 0
+    container.scrollTo(1000, 0);
+)
+
+document.getElementById('trigger').addEventListener 'click', ((event) ->
+  triggerPosition = document.getElementById('trigger').getBoundingClientRect()
+  if triggerPosition.x < 0
+    container.scrollTo({
+      left: -500,
+      behavior: "smooth"
+    });
+  else
+    container.scrollTo({
+      left: 1000,
+      behavior: "smooth"
+    });
 )

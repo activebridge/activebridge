@@ -538,20 +538,28 @@ nav.navbar {
 
   .trigger {
     position: absolute;
-    top: 80px;
-    left: 18px;
-    font-size: 30px;
+    top: 6%;
+    left: 99%;
+    font-size: 1.5em;
     color: white;
+    background: none;
+    border: none;
+    outline: none;
+    width: min-content;
+  }
 
-    &.close {
-      z-index: 10;
-    }
-
-    &.open {
-      z-index: 5;
-      position: fixed;
+  body {
+    .main-container {
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      direction: rtl;
+      overflow: auto;
+      scroll-snap-type: x mandatory;
     }
   }
+
 
   nav.navbar {
     left: 0;
@@ -563,7 +571,7 @@ nav.navbar {
     scroll-snap-align: start;
 
     .items {
-      padding-top: 120px;
+      padding-top: 20px;
       align-items: flex-start;
 
       .item {
@@ -597,10 +605,14 @@ nav.navbar {
     transition: all .2s;
 
 
-    &.touch {
-        //height: 25vh;
+    &.touch-right {
         transition: all .2s;
         left: 100%;
+    }
+
+    &.touch-left {
+        transition: all .2s;
+        left: 90%;
     }
   }
 
@@ -639,16 +651,32 @@ nav.navbar {
   }
 
   .home-logo {
-    z-index: 10;
-    position: fixed;
+    z-index: 5;
+    position: absolute;
     width: 60px;
     display: flex;
-    left: 5px;
+    right: 5px;
     top: 20px;
 
     svg {
       width: 100%;
       height: 40px;
     }
+
+    &::before {
+      content: '';
+      background: radial-gradient(18vw 50%, rgba(182, 78, 150, 0.35) 15%, rgba(255, 255, 255, 0) 90%);
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+      scroll-snap-align: start;
+    }
+  }
+
+  .informational_container {
+    left: 0;
   }
 }

@@ -8,11 +8,9 @@
   - I18n.t('navbar.links').each_with_index do |item, index|
     .item-title.desktop-only id="icon-#{index}"= item[:title][:name]
   nav.navbar
-    a.home-logo.mobile-only href='/'
-      = inline_svg 'navbar/menu_home.svg'
-    label class='trigger close mobile-only' for='close' ⬅
-    input.nav-button.mobile-only id='open' class='open' name='nav' type='radio'
-    #draggable-zone.draggable-zone
+    = inline_svg 'move-bulb.svg', class: 'mobile-only bulbik', id:'draggable-zone'
+    = inline_svg 'bulb.svg', class: 'mobile-only bulb'
+    button#trigger.mobile-only class='trigger' ☰
     .items
       - I18n.t('navbar.links').each_with_index do |item, index|
         - if index == I18n.t('navbar.links').size - 1
