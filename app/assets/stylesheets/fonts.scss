@@ -1,13 +1,15 @@
 @font-face{
   font-family: 'Helvetica Regular';
   src: font-url('Helvetica.otf') format('truetype');
-  font-weight: normal
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face{
   font-family: 'Helvetica Regular';
   src: font-url('Helvetica-Light.otf') format('truetype');
   font-weight: 100;
+  font-display: swap;
 }
 
 body {
