@@ -8,7 +8,7 @@ head
   link rel="alternate" href="#{t ('meta.origin_url')}#{request.env['PATH_INFO']}" hreflang="en-us"
   meta name="msvalidate.01" content="A484A7672177506CA8F6FA11A7463867"
   = csrf_meta_tags
-  = stylesheet_link_tag :application, 'https://fonts.googleapis.com/css?family=Raleway', media: :all
+  link#stylesheets href=asset_path('application.css') media='all' data-turbolinks-track=true rel='preload' as='style'
   = yield :head
 
   script type = 'application/ld+json'
