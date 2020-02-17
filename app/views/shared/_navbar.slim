@@ -6,7 +6,7 @@
     span.third
   label.nav-close for='menu'
   - I18n.t('navbar.links').each_with_index do |item, index|
-    .item-title.desktop-only id="icon-#{index}"= item[:title][:name]
+    .item-title.desktop-only id="title-icon-#{index}"= item[:title][:name]
   nav.navbar
     = inline_svg 'move-bulb.svg', class: 'mobile-only bulbik', id:'draggable-zone'
     = inline_svg 'bulb.svg', class: 'mobile-only bulb'
@@ -55,7 +55,7 @@ javascript:
     isMenuToggled = document.getElementById("menu")
     if (!isMenuToggled["checked"]) {
       var top = el.getBoundingClientRect().top
-      var title = document.querySelector(`#${ el.id }`)
+      var title = document.querySelector(`#title-${ el.id }`)
       title.style.cssText = `top: ${ top - 6 }px;`
       title.className += " show"
     }
@@ -64,7 +64,7 @@ javascript:
   function hideTitle(el) {
     isMenuToggled = document.getElementById("menu")
     if (!isMenuToggled["checked"]) {
-      title = document.getElementById(`${ el.id }`)
+      title = document.getElementById(`title-${ el.id }`)
       title.classList.remove("show")
     }
   }
