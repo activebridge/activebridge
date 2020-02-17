@@ -17,7 +17,7 @@
           .spacer
         .item class="item-#{index}" onmouseenter="toggleAnchors(this)"
           .page-link id="icon-#{index}" onmouseover="showTitle(this)" onmouseout="hideTitle(this)"
-            = link_to item[:title][:link], class: 'icon-link'
+            = link_to item[:title][:link], class: 'icon-link', 'aria-label': item[:title][:name]
               = inline_svg item[:icon], class: 'nav-icon'
             span
               = link_to item[:title][:name], item[:title][:link], class: 'page'

@@ -22,7 +22,7 @@ html lang='en'
       = render 'shared/gtag_iframe'
       = render 'shared/header'
       #scroll-container.scroll-container
-        a.home-logo.mobile-only href='/'
+        a.home-logo.mobile-only href='/' aria-label='Home'
           = inline_svg 'navbar/menu_home.svg'
         = yield
       = render 'shared/navbar'
