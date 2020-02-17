@@ -76,4 +76,5 @@ viewportHeight = window.innerHeight - 1 + 'px'
 window.load = ->
   document.getElementById('scroll-container').style.height = viewportHeight
   document.body.style.height = viewportHeight
+  document.getElementById('stylesheets').setAttribute('rel', 'stylesheet');
 window.load()

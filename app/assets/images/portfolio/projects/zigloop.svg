@@ -1,18 +1,1 @@
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-168.6 129.1 25.4 25.4" enable-background="new -168.6 129.1 25.4 25.4" xml:space="preserve">
-<g>
-	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-168.5731" y1="141.7466" x2="-143.2" y2="141.7466">
-		<stop  offset="0" style="stop-color:#D3145A"/>
-		<stop  offset="1" style="stop-color:#F8921F"/>
-	</linearGradient>
-	<path fill="url(#SVGID_1_)" d="M-145.3,146.8l-5.5,5.5c-2.8,2.8-7.4,2.8-10.1,0l-5.5-5.5c-2.8-2.8-2.8-7.4,0-10.1l5.5-5.5
-		c2.8-2.8,7.4-2.8,10.1,0l5.5,5.5C-142.5,139.5-142.5,144-145.3,146.8z"/>
-	<g>
-		<circle fill="#FEFEFE" cx="-152.7" cy="145.6" r="2.4"/>
-
-			<line fill="none" stroke="#FFFFFF" stroke-width="4.9857" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-153.5" y1="137.8" x2="-160" y2="145.4"/>
-
-			<line fill="none" stroke="#FFFFFF" stroke-width="4.6477" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-160.2" y1="137.6" x2="-153.3" y2="137.6"/>
-	</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-168.6 129.1 25.4 25.4"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-168.573" y1="141.747" x2="-143.2" y2="141.747"><stop offset="0" stop-color="#d3145a"/><stop offset="1" stop-color="#f8921f"/></linearGradient><path fill="url(#a)" d="M-145.3 146.8l-5.5 5.5c-2.8 2.8-7.4 2.8-10.1 0l-5.5-5.5c-2.8-2.8-2.8-7.4 0-10.1l5.5-5.5c2.8-2.8 7.4-2.8 10.1 0l5.5 5.5c2.8 2.8 2.8 7.3 0 10.1z"/><circle fill="#FEFEFE" cx="-152.7" cy="145.6" r="2.4"/><path fill="none" stroke="#FFF" stroke-width="4.986" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M-153.5 137.8l-6.5 7.6"/><path fill="none" stroke="#FFF" stroke-width="4.648" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M-160.2 137.6h6.9"/></svg>
