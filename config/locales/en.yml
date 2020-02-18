@@ -525,26 +525,6 @@ en:
             No matter how complex a feature may be, Max can implement it. No matter how new a framework may be, Max can build on it. He prides himself on his ability to understand even the newest
             technologies and to apply them to come up with creative solutions to difficult problems in his development.
           projects: UpStack, BeatThread, Mediprocity, SDxCentral, Nvent
-        - name: Savenko Serhii
-          avatar: Savenko.png
-          position: Full-stack / IOS developer
-          description:
-            Sergey is a strong believer that great code should be backed up by a strong mind and a strong body to boot! He doesn’t just see development as a job – he truly loves the fun of tackling
-            complex ruby problems that would break most other developers’ brains.
-          projects: CabLook Taxi, DaisyBill, BeatThread, onApp
-        - name: Bilan Igor
-          avatar: Bilan.png
-          position: Tech lead / Ruby on Rails engineer
-          description:
-            Igor is a highly knowledgeable Ruby on Rails developer with deep experience in building and integrating highly complex APIs. Igor has also built several chatbots and integrated these
-            applications with third-party systems. His experience and knowledge make him a strong addition to any team.
-          projects: Quick Quack, Verifeed, VMware, Avaya DevConnect Marketplace, Citrix Ready Xchange Marketplace, Beanstock Media, Calendarscribe
-        - name: Novitskyi Dmitryi
-          avatar: Novitskyi.png
-          position: Ruby on Rails developer
-          description:
-            Dmitrii is a skilled RoR developer who has a great deal of experience working with a number of large, successful startups in the marketing, e-commerce, health, and financial industries.
-          projects: FixPal, CrossAva, Dropified Chrome Extention, Influenceschain, ArtsPool, CabLook Taxi
         - name: Dzyoma Artem
           avatar: Dzyoma.png
           position: Ruby on Rails developer
@@ -595,12 +575,6 @@ en:
             and design mobile applications and web platforms with an exceptional user experience. The greatest inspiration for Lena
             includes imagination, talented people, and traveling.
           projects: Active Bridge, CabLook Taxi
-        - name: Andrieieva Nastya
-          avatar: Andrieieva.png
-          position: Office Manager
-          description:
-            Nastya is everywhere. She can do 100 things at the same time. Teambuildings, company events, and gifts are Nastya's merit
-          projects:
         - name: Misan Misha
           avatar: Misan.png
           position: Office Manager
