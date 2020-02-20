@@ -46,7 +46,7 @@
       .bdd_show:hover ~ #bdd {
         visibility: visible;
         opacity: 1;
-        z-index: 2;
+        z-index: 5;
       }
 
       .bdd_show {
@@ -67,7 +67,9 @@
 
           &:hover {
             span {
-              transform: translateX(10%);
+              @media (min-width: 600px) {
+                transform: translateX(10%);
+              }
             }
 
           }
@@ -169,6 +171,10 @@
     .technology {
       width: 100%;
       scroll-snap-align: start;
+
+      #bdd.informational_container {
+        padding: 10vw;
+      }
     }
   }
 }

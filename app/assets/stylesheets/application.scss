@@ -557,6 +557,7 @@ nav.navbar {
       direction: rtl;
       overflow: auto;
       scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
     }
   }
 
@@ -678,5 +679,6 @@ nav.navbar {
 
   .informational_container {
     left: 0;
+    z-index: 5!important;
   }
 }

@@ -221,10 +221,25 @@ $members:(
       width: calc(100% - 70px);
       top: 0;
       height: 100%;
+      padding: 8vw!important;
 
-      .member_information .member img {
-        height: unset;
+      .member_information {
+
+        .description {
+          height: 40%;
+        }
+
+        .member {
+
+          margin: 10% 0 5%;
+          height: unset;
+
+          img {
+            height: unset;
+          }
+        }
       }
+
     }
 
     .cartoon_container {
