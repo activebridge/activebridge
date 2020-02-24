@@ -8,7 +8,7 @@ ActiveAdmin.register Article do
     end
   end
 
-  permit_params :body, :review_status, :title, :picture, :picture_cache, :category, :member_id, :member, :img_alt_text
+  permit_params :body, :review_status, :title, :picture, :picture_cache, :category, :member_id, :member, :img_alt_text, :meta_title
   menu priority: 4
   index do
     selectable_column
@@ -31,6 +31,7 @@ ActiveAdmin.register Article do
       f.input :category, as: :select, collection: Article.categories.keys
       f.input :picture, as: :file, hint: image_tag(f.object.picture.url(:logo))
       f.input :img_alt_text
+      f.input :meta_title
       f.input :picture_cache, as: :hidden
       f.input :review_status, as: :select, collection: Article.review_statuses.keys, include_blank: false
     end
