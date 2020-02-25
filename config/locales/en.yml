@@ -139,7 +139,7 @@ en:
           Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
     schema:
       /:
-        '{
+        '[
           {
             "@context": "http://schema.org",
             "@type": "Organization",
@@ -183,7 +183,7 @@ en:
               "https://activebridge.org/services",
               "https://activebridge.org/contact"]
           }
-        }'
+        ]'
       how-we-work:
         '{
           "@context": "http://schema.org",
@@ -203,7 +203,7 @@ en:
             "https://activebridge.org/contact"]
         }'
       services:
-        '{
+        '[
           {
             "@context": "http://schema.org",
             "@type": "WebPage",
@@ -231,7 +231,7 @@ en:
             "serviceType": "Web & Mobile Application Development",
             "areaServed": ["US", "CA"]
           }
-         }'
+         ]'
       portfolio:
         '{
           "@context": "http://schema.org",
