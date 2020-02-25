@@ -50,7 +50,7 @@
         a href="#testimonial-#{item_name(testimonial[:company])}"
           .description_wrapper
             .mobile-only.image-wrapper
-              = image_tag testimonial[:image]
+              = image_tag testimonial[:image], alt: testimonial[:author]
             = inline_svg 'testimonials/like.svg', class: 'like'
             = inline_svg 'testimonials/small_quotes.svg', class: 'open-quotes'
             span
@@ -71,7 +71,7 @@
           .testimonial_author
             hr
             .author_info
-              = image_tag(testimonial[:image], class: 'author desktop-only', alt: nil)
+              = image_tag(testimonial[:image], class: 'author desktop-only', alt: testimonial[:author])
               .info
                 span= testimonial[:author]
                 = testimonial[:post]
