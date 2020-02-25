@@ -1,8 +1,8 @@
 = content_for :head do
-  title= article.title
+  title= article.meta_title
   meta name='description' content=clean_truncate(article.body)
   meta name='og:type' content='website'
-  meta property='og:title' content=article.title
+  meta property='og:title' content=article.meta_title
   meta property='og:url' content=request.original_url
   meta property='og:image' content=article.picture_url
   meta property='og:description' content=clean_truncate(article.body)
