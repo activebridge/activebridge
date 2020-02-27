@@ -278,6 +278,33 @@ en:
             "https://activebridge.org/services",
             "https://activebridge.org"]
         }'
+      article:
+        '{
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": ""
+              },
+              "headline": "Article headline",
+              "image": [
+              ],
+              "datePublished": "",
+              "dateModified": "",
+              "author": {
+                "@type": "Person",
+                "name": ""
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Active Bridge",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://activebridge.org/logo.jpg"
+                }
+              },
+              "description": ""
+            }'
 
 
   welcome:
