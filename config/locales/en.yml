@@ -523,15 +523,15 @@ en:
             Alex is one of the rising stars of our ruby team. He understands RoR at a level that might lead you to think he’d created it, and his hard work and client-centric focus make
             him a truly fantastic developer.
           projects: DeliveryHippo, Taggd, Pricey
-        - name: Tupickiy Vlad
-          avatar: Tupickiy Vlad.png
+        - name: Tupytskyi Vlad
+          avatar: Tupytskyi Vlad.png
           position: Ruby on Rails developer
           description:
             Vlad prides himself on his ability to keep up to date with the cutting edge of new technologies, and that drive to stay ahead of the pack enables his outstanding vision for
             problem-solving and feature building. Vlad is an active member of the global RoR community and regularly taps community events to fuel his constant learning.
           projects: BuyBay, Meditalente, Temed Consult, CabLook Taxi, PathGather
-        - name: Tupickiy Yarik
-          avatar: Tupickiy Yarik.png
+        - name: Tupytskyi Yarik
+          avatar: Tupytskyi Yarik.png
           position: Ruby on Rails developer
           description:
             Yarik is a results-oriented, highly communicative, fast-learning, and responsible developer. As a full stack developer, he has deep experience in object-oriented programming,
