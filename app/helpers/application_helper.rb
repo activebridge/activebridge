@@ -55,6 +55,18 @@ module ApplicationHelper
     t("meta.pages.#{params[:page].blank? ? "/" : params[:page]}.title", default: 'Ruby on Rails Development Company')
   end
 
+  def article_schema
+    schema = eval(t('meta.schema.article'))
+    schema[:image].push(article.picture.url)
+    schema[:headline] = article.title
+    schema[:description] = article.body.split('.')[1]
+    schema[:author][:name] = article.member.name
+    schema[:datePublished] = article.created_at
+    schema[:dateModified] = article.updated_at
+    schema[:mainEntityOfPage] = "https://activebridge.org/blog/article/#{article.slug}"
+    schema.to_json.html_safe
+  end
+
   def show_schema
     t("meta.schema.#{params[:page].blank? ? "/" : params[:page]}").html_safe
   end
