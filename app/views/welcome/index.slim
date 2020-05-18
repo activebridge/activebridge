@@ -33,8 +33,14 @@
         .description-img
           = inline_svg 'index/globe.svg', class: 'index-icon right'
       .description-container
-        .description-img.with_clutch_widget
-          = image_tag 'index/awards.png', class: 'index-icon left'
+        .description-img-awards
+          .awards-img
+            = link_to 'https://www.topdevelopers.co/directory/web-development-companies'
+              = image_tag 'index/award-1.png', class: 'index-icon left'
+            = link_to 'https://clutch.co/profile/active-bridge#reviews'
+              = image_tag 'index/award-2.png', class: 'index-icon left'
+            = link_to 'https://jobs.dou.ua/companies/active-bridge/'
+              = image_tag 'index/award-3.png', class: 'index-icon left'
           .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
         .description-text.d-block=t('about_us.information.third').html_safe
     .solutions_and_benefits#solutions_and_benefits
