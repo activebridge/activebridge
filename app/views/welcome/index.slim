@@ -35,12 +35,12 @@
       .description-container
         .description-img-awards
           .awards-img
-            = link_to 'https://www.topdevelopers.co/directory/web-development-companies'
-              = image_tag 'index/award-1.png', class: 'index-icon left'
-            = link_to 'https://clutch.co/profile/active-bridge#reviews'
-              = image_tag 'index/award-2.png', class: 'index-icon left'
-            = link_to 'https://jobs.dou.ua/companies/active-bridge/'
-              = image_tag 'index/award-3.png', class: 'index-icon left'
+            = link_to 'https://www.topdevelopers.co/directory/web-development-companies', target: :_blank
+              = image_tag 'index/award-1.png', class: 'index-icon left', alt: "Top Web Developers on TopDevelopers.co"
+            = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
+              = image_tag 'index/award-2.png', class: 'index-icon left', alt:  "Top IT Service Company. Arizona, US"
+            = link_to 'https://jobs.dou.ua/companies/active-bridge/', target: :_blank
+              = image_tag 'index/award-3.png', class: 'index-icon left', alt: "Top IT Employer, Ukraine"
           .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
         .description-text.d-block=t('about_us.information.third').html_safe
     .solutions_and_benefits#solutions_and_benefits
