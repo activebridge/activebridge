@@ -150,13 +150,16 @@ body {
       }
     }
     .description-img-awards {
-      display: flex;
+      display: block;
       flex-direction: column;
+      margin-top: 1vw;
+      text-align: center;
+      text-align: -moz-center;
+      text-align: -webkit-center;
 
       .awards-img {
         display: flex;
-        flex-wrap: wrap-reverse;
-        width: 20vw;
+        width: 75vw;
         justify-content: space-around;
 
         a {
