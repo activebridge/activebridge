@@ -60,6 +60,15 @@
       .header_2
         b= t('how_we_work.awards.title')
       .awards
-        - I18n.t('how_we_work.awards.logo').each do |award|
-          .award
-            = image_tag(award)
+        = link_to 'https://www.topdevelopers.co/directory/web-development-companies', class: 'award', target: :_blank
+          = image_tag 'index/award-1.png', alt: "Top Web Developers on TopDevelopers.co"
+        = link_to 'https://clutch.co/profile/active-bridge#reviews', class: 'award', target: :_blank
+          = image_tag 'index/award-2.png', alt:  "Top IT Service Company. Arizona, US"
+        = link_to 'https://jobs.dou.ua/companies/active-bridge/', class: 'award', target: :_blank
+          = image_tag 'index/award-3.png', alt: "Top IT Employer, Ukraine"
+        = link_to 'https://www.expertise.com/az/phoenix/web-developers', class: 'award', target: :_blank
+          = image_tag 'index/award-4.png', alt: "Best Web Developers in Phoenix, 2020"
+        = link_to 'https://selectedfirms.co/companies/web-development/usa', class: 'award', target: :_blank
+          = image_tag 'index/award-5.png', alt: "Top Web Development Companies of USA"
+        = link_to 'https://topfirms.co/companies/web-development/usa', class: 'award', target: :_blank
+          = image_tag 'index/award-6.png', alt: "Top 30+ Web Development Companies in USA"
