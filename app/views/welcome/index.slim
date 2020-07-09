@@ -32,7 +32,8 @@
           = inline_svg 'index/home_page_line_2.svg', class: 'home_page_line'
         .description-img
           = inline_svg 'index/globe.svg', class: 'index-icon right'
-      .description-container
+      .description-container.d-block
+        .description-text.d-block=t('about_us.information.third').html_safe
         .description-img-awards
           .awards-img
             = link_to 'https://www.topdevelopers.co/directory/web-development-companies', target: :_blank
@@ -43,8 +44,11 @@
               = image_tag 'index/award-3.png', class: 'index-icon left', alt: "Top IT Employer, Ukraine"
             = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
               = image_tag 'index/award-4.png', class: 'index-icon left', alt: "Best Web Developers in Phoenix, 2020"
+            = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
+              = image_tag 'index/award-5.png', class: 'index-icon left', alt: "Top Web Development Companies of USA"
+            = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+              = image_tag 'index/award-6.png', class: 'index-icon left', alt: "Top 30+ Web Development Companies in USA"
           .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
-        .description-text.d-block=t('about_us.information.third').html_safe
     .solutions_and_benefits#solutions_and_benefits
       .solutions
         .header_2= t('about_us.solutions_and_benefits.solutions_title')
@@ -90,4 +94,3 @@
               .description= el[:desc]
         = link_to '', '#index', class: 'close_description', id: 'benefits'
   script src="https://widget.clutch.co/static/js/widget.js" type="text/javascript"
-
