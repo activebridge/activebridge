@@ -176,7 +176,12 @@ $models: dedicated-team, team-extension, project-model;
         }
       }
     }
+
+    .awards {
+      scroll-snap-align: end;
+    }
   }
+
   .awards {
     width: 100%;
     display: flex;

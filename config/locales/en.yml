@@ -4,7 +4,7 @@ en:
       message:
         Thanks for contacting us! This email is checked  during business hours (9-6 EEST).
         We’ll look over your message and get back to you as soon as possible, usually within a few hours.
-        If your inquiry is urgent, feel free to call us  +380636086045.
+        If your inquiry is urgent, feel free to call us  +18888053503.
   hello:
     Hello! We are Active Bridge - a Ruby on Rails web development agency.
     Our team provides modern web methods for building high-quality
@@ -338,7 +338,7 @@ en:
       find_us:
         - link: contact@active-bridge.com
           logo: contact/email.svg
-        - link: '+380636086045'
+        - link: '+18888053503'
           logo: contact/phone.svg
         - link: https://www.facebook.com/ActiveBridgeTeam
           logo: contact/fb.svg
@@ -375,7 +375,7 @@ en:
       site: https://activebridge.org
       email: contact@active-bridge.com
       postal_code: 1800
-      phone_number: '+380636086045'
+      phone_number: '+18888053503'
       location: Cherkassy
       country: Ukraine
       success_message: "Thank you! Your message has been successfully sent.\n Please check your email."
@@ -1097,7 +1097,7 @@ en:
       company: Company
       contacts: Contacts
       email: contact@active-bridge.com
-      mobile: '+380636086045'
+      mobile: '+18888053503'
       contact_us: Contact Us
       follow: Stay tuned
       copyright: '© 2018 Active Bridge, LLC'
