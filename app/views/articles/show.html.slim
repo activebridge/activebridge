@@ -13,6 +13,8 @@
 
 .title = "Home › Blog › #{t("blog.categories.#{article.category}")}"
 #post.article-box
+  #navigation
+
   = link_to '➦', back_path, remote: true, class: 'back-link'
 
   = image_tag article.member.avatar.url, class: 'author-info'

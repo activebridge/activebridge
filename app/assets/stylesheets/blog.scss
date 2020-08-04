@@ -860,3 +860,31 @@ a.article {
     padding: 25px 20px;
   }
 }
+
+.blog #navigation {
+  position: fixed;
+  border: 1px solid $main-blue;
+  top: 20vh;
+  width: 30vw;
+  right: 0vw;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 20;
+  padding: 12px;
+  transition: all 1s;
+
+  p {
+    cursor: pointer;
+  }
+
+  p:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px 3px #80808063;
+  }
+
+  p:active {
+    font-weight: bold;
+  }
+}
+
