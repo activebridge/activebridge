@@ -14,11 +14,6 @@ $dark-font: #443848;
   box-sizing: border-box;
 }
 
-html {
-  background-color: $white;
-  background-image: asset_data_url('blog/desqus_background.png');
-}
-
 body {
   position: relative;
   min-height: 100vh;
@@ -387,10 +382,22 @@ a.article {
   position: relative;
   padding: 2vmax;
   font-size: 1.1vmax;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
   background: white;
   color: $dark-font;
-  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  overflow-y: scroll;
+  height: 90vh;
+  justify-content: space-between;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .article {
+    width: 70%;
+  }
+
   a {
     color: $dark-font;
   }
@@ -861,30 +868,54 @@ a.article {
   }
 }
 
-.blog #navigation {
-  position: fixed;
-  border: 1px solid $main-blue;
-  top: 20vh;
-  width: 30vw;
-  right: 0vw;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  font-size: 16px;
+.article-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  height: calc(100% - 80px);
+  width: 20%;
+  right: 40px;
+  background: #efeefa;
   z-index: 20;
   padding: 12px;
   transition: all 1s;
 
-  p {
-    cursor: pointer;
-  }
-
-  p:hover {
+  h3 {
     text-decoration: underline;
-    text-shadow: 1px 1px 3px #80808063;
+    text-transform: uppercase;
   }
 
-  p:active {
-    font-weight: bold;
+  #navigation {
+
+    p {
+      position: relative;
+      cursor: pointer;
+      color: silver;
+      font-weight: bold;
+      margin: 0;
+      padding: 15px 0;
+
+    }
+
+    p:hover {
+      color: $main-blue;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -14px;
+        background: $main-blue;
+        height: 42px;
+        width: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    p:active {
+      text-shadow: 1px 1px 3px #80808063;
+
+    }
   }
 }
 

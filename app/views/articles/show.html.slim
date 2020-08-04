@@ -13,16 +13,17 @@
 
 .title = "Home › Blog › #{t("blog.categories.#{article.category}")}"
 #post.article-box
-  #navigation
-
-  = link_to '➦', back_path, remote: true, class: 'back-link'
-
-  = image_tag article.member.avatar.url, class: 'author-info'
-  .post-info
-    h1.title = article.title
-    span.created_date = article.created_at.strftime('%B %d, %Y')
-  article.post-body-show
-    = md(article.body)
+  .article
+    = link_to '➦', back_path, remote: true, class: 'back-link'
+    = image_tag article.member.avatar.url, class: 'author-info'
+    .post-info
+      h1.title = article.title
+      span.created_date = article.created_at.strftime('%B %d, %Y')
+    article.post-body-show
+      = md(article.body)
+  .article-sidebar
+    h3 Contents
+    #navigation
 - if recommended_articles.any?
   .recommended
     h3= t('blog.recommended')

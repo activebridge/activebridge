@@ -6,7 +6,7 @@ titles = [];
 titles.push.apply(titles, document.getElementById('post').getElementsByTagName('h2'));
 
 scrollToTitle = (param) ->
-  titles[this.dataset.index].scrollIntoView({block: "start", behavior: "smooth"});
+  titles[this.dataset.index].scrollIntoView({behavior: "smooth", block: "center"});
 
 titles.forEach((element, index) =>
   navTitle = document. createElement("p");
