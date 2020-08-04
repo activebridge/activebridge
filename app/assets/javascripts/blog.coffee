@@ -1,12 +1,16 @@
 #= require _analytics
 
 navigation = document.getElementById('navigation')
+post = document.getElementById('post');
 titles = [];
 
-titles.push.apply(titles, document.getElementById('post').getElementsByTagName('h2'));
+titles.push.apply(titles, post.getElementsByTagName('h2'));
 
-scrollToTitle = (param) ->
-  titles[this.dataset.index].scrollIntoView({behavior: "smooth", block: "center"});
+scrollToTitle = () ->
+  post.scrollTo({
+    top: titles[this.dataset.index].offsetTop,
+    behavior: "smooth"
+  })
 
 titles.forEach((element, index) =>
   navTitle = document. createElement("p");
