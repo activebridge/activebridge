@@ -19,8 +19,98 @@
   .post-info
     h1.title = article.title
     span.created_date = article.created_at.strftime('%B %d, %Y')
-  article.post-body-show
+  article.post-body-show#article-body
     = md(article.body)
+  .content-table#headers
+    div#div-table-content
+      p#contents = 'CONTENTS'
+    div#share-article
+      hr
+      div
+        = svg('share-alt-solid')
+        = link_to 'https://www.facebook.com/sharer/sharer.php?u=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
+          = svg('facebook', local_assigns[:klass])
+        = link_to 'https://www.linkedin.com/shareArticle?mini=true&url=https://' + request.domain + request.fullpath, target: '_blank', title: 'linkedin', rel: :noopener do
+          = svg('linkedin', local_assigns[:klass])
+        = link_to 'https://twitter.com/intent/tweet?url=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
+          = svg('twitter', local_assigns[:klass])
+    javascript:
+      var selectedHeader = undefined;
+      var allTags = document.getElementById('article-body').children;
+      let allTagsArr = [].slice.call(allTags);
+      allTagsArr.forEach((node) => {
+        if (!document.getElementById('article-body').lastChild || /^h2$/i.test(node.nodeName)) {
+          var spanElement = document.createElement('span');
+          spanElement.id = node.innerHTML;
+          spanElement.style.display = 'inherit';
+          document.getElementById('article-body').appendChild(spanElement);
+        }
+        if (document.getElementById('article-body').lastChild.tagName == 'SPAN') {
+          document.getElementById('article-body').lastChild.appendChild(node);
+        }
+      })
+      var articlesSpan = document.getElementById('article-body').getElementsByTagName('SPAN');
+      var articlesSpanArr = [].slice.call(articlesSpan);
+      articlesSpanArr.forEach((span) => {
+        var spanChildrens = [].slice.call(span.children);
+        spanChildrens.forEach((childrenTags) => {
+          if (!span.lastChild || /^h3$/i.test(childrenTags.nodeName)) {
+            var spanElement = document.createElement('span');
+            spanElement.id = childrenTags.innerHTML;
+            span.appendChild(spanElement);
+          }
+          if (span.lastChild.tagName == 'SPAN') {
+            span.lastChild.appendChild(childrenTags);
+          }
+        })
+      })
+      var headersArr = document.querySelectorAll("H2, H3");
+      let arr = [].slice.call(headersArr);
+      arr.forEach((header, index) => {
+        if (header.tagName == 'H3') {
+          header.id = header.innerHTML;
+        }
+        var qwe = document.createTextNode(header.innerHTML);
+        var newParag = document.createElement('a');
+        newParag.appendChild(qwe);
+        newParag.href = '#' + header.innerHTML;
+        if (header.tagName == 'H3') {
+          newParag.className = 'article-header-h3'
+        } else {
+          newParag.className = 'article-header-h2'
+        }
+        document.getElementById("div-table-content").appendChild(newParag);
+      })
+      window.addEventListener('load', () => {
+        resizeContentTable();
+      });
+      window.addEventListener('resize', () => {
+        resizeContentTable();
+      });
+      window.addEventListener('scroll', () => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            if (entry.intersectionRatio > 0) {
+              document.querySelector(`a[href="#${id}"]`).classList.add('active');
+            } else {
+              document.querySelector(`a[href="#${id}"]`).classList.remove('active');
+            }
+          });
+        });
+        document.querySelectorAll('span[id]').forEach((link) => {
+          observer.observe(link);
+        });
+      });
+      function resizeContentTable() {
+        setTimeout(() => {
+          let height = document.getElementById('article-body').getBoundingClientRect().height;
+          document.getElementById("headers").style.height = height + 'px';
+        }, 100)
+      }
+  .contact-experts
+    p = 'Have a question?'
+    = link_to 'Contact experts', contact_path, remote: true, class: 'contact-experts-btn'
 - if recommended_articles.any?
   .recommended
     h3= t('blog.recommended')
