@@ -18,6 +18,10 @@ currentEl = 0
 prevEl = 0
 header = document.getElementById('header')
 backToTopButton = document.getElementById('back-to-top')
+error = "Couldn't verify reCAPTCHA, please try again"
+success = "Your request was successfully submitted, please check your email"
+alert = document.querySelector('div.alert');
+alertMessage = document.querySelector('span.msg');
 
 toggleHeader = () ->
   if header
@@ -34,20 +38,27 @@ window.submit = (form) ->
   xhr.onreadystatechange = ->
     return if xhr.readyState != 4
     if xhr.status == 200
+      alertShow(success)
       form = document.getElementById('contact_form')
       form.reset()
     else
+      alertShow(error)
       document.getElementById('submit').disabled = false
 
   data = new FormData(document.querySelector('form'))
   xhr.send(data)
   dataLayer.push({'event':'formSubmitted', 'formName':'ContactUs'})
-  document.getElementById('toggle-envelop-checkbox').checked = false
-  document.getElementById('envelop_success_message').style.opacity = '0.8'
-  setTimeout ->
-    closeWindow()
-  , 3500
   return false
+
+alertShow = (message) -> 
+  alertMessage.innerText = message
+  alert.classList.add("showAlert");
+  setTimeout ->
+    alert.classList.remove("showAlert");
+  , 1000000
+
+window.alertHide = -> 
+  alert.classList.remove("showAlert");
 
 scrollToTop = ->
   window.scrollTo({

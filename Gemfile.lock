@@ -272,6 +272,8 @@ GEM
       i18n
       polyamorous (~> 1.3)
     rb-readline (0.5.4)
+    recaptcha (5.6.0)
+      json
     redcarpet (3.4.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
@@ -414,6 +416,7 @@ DEPENDENCIES
   pry
   rails (= 5.0.1)
   rb-readline
+  recaptcha
   redcarpet
   rest-client (= 2.0.2)
   roadie-rails
@@ -438,4 +441,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.6
+   1.17.3
