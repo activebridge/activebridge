@@ -55,7 +55,7 @@ alertShow = (message) ->
   alert.classList.add("showAlert");
   setTimeout ->
     alert.classList.remove("showAlert");
-  , 1000000
+  , 10000
 
 window.alertHide = -> 
   alert.classList.remove("showAlert");
