@@ -6,6 +6,9 @@
       br
       = t('.help')
     p.desktop-only= t('.complete_fields')
+    .alert
+      span.msg= ''
+      .close-btn onclick="alertHide()" ×
   = inline_svg 'contact/background.svg', class: 'bg'
   .informational_container.contact-form-holder
     = form_tag '/contact', onsubmit: 'event.preventDefault(); window.submit(this);',
@@ -27,6 +30,7 @@
       .material-input.textarea
         label for='body' =t('.message_placeholder') + ' *'
         textarea#body name='contact[message]' placeholder=' ' minlength='10' maxlength='500' required='true'
+        = recaptcha_v3(action: 'submit', site_key: Rails.application.secrets[:recaptcha_site_key])
       input#submit form='contact_form' type='submit' value='#{t('.send')}' class='contact-button'
 
   .find_us

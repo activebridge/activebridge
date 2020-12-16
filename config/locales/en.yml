@@ -2,9 +2,9 @@ en:
   request:
     confirm:
       message:
-        Thanks for contacting us! This email is checked  during business hours (9-6 EEST).
-        We’ll look over your message and get back to you as soon as possible, usually within a few hours.
-        If your inquiry is urgent, feel free to call us  +18888053503.
+        Thanks for reaching out! We look over your request and get back to you
+        as soon as possible, usually within a few hours. 
+        If your inquiry is urgent, feel free to call us +18888053503.
   hello:
     Hello! We are Active Bridge - a Ruby on Rails web development agency.
     Our team provides modern web methods for building high-quality

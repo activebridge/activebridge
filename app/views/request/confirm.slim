@@ -1,3 +1,16 @@
 h1= "Hi, #{@name}"
 p= t('.message')
-span The Active Bridge Team
+span.link The Active Bridge Team
+p.link 
+  | Website: 
+  = link_to nil ,t('meta.origin_url'), target: '_blank'
+p.link 
+  | Facebook: 
+  = link_to nil, t('social.facebook'), target: '_blank'
+p.link 
+  | Linkedin: 
+  = link_to nil, t('social.linkedin'), target: '_blank'
+p.link
+  | Github: 
+  = link_to nil, t('social.github'), target: '_blank'
+
