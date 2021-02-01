@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   skip_before_action :verify_authenticity_token
+  before_action :filter_bots
   caches_action :index,
                 cache_path: proc { request.variant&.first&.to_s || "#{params[:page] || :index}/#{request.format}" }
 
@@ -17,5 +18,11 @@ class WelcomeController < ApplicationController
   def expire_cache
     Rails.cache.clear
     redirect_to '/admin'
+  end
+
+  private
+
+  def filter_bots
+    redirect_to 'https://www.google.com/' if request.is_crawler? 
   end
 end

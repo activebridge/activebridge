@@ -136,6 +136,7 @@ GEM
       sixarm_ruby_unaccent (~> 1.1)
       unicode_utils (~> 1.4)
     crass (1.0.4)
+    crawler_detect (0.1.12)
     css_parser (1.6.0)
       addressable
     daemons (1.2.4)
@@ -401,6 +402,7 @@ DEPENDENCIES
   coderay
   coffee-rails
   countries
+  crawler_detect
   database_cleaner
   factory_girl_rails
   friendly_id
