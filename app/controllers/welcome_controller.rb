@@ -23,6 +23,6 @@ class WelcomeController < ApplicationController
   private
 
   def filter_bots
-    redirect_to 'https://www.google.com/' if request.is_crawler? 
+    redirect_to 'https://www.google.com/' if request.is_crawler? && request.user_agent.exclude?("SemrushBot")
   end
 end
