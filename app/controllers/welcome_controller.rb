@@ -1,4 +1,17 @@
 class WelcomeController < ApplicationController
+  WHITELISTED_BOTS = ['Googlebot-Image',
+    'Googlebot',
+    'APIs-Google',
+    'Googlebot-Video',
+    'Google-Read-Aloud',
+    'googleweblight',	
+    'Storebot-Google',
+    'Google Favicon',
+    'SemrushBot',
+    'Bingbot',
+    'Slurp',
+    'ia_archiver'] 
+  GOOGLE = 'https://www.google.com/'
   skip_before_action :verify_authenticity_token
   before_action :filter_bots
   caches_action :index,
@@ -23,6 +36,6 @@ class WelcomeController < ApplicationController
   private
 
   def filter_bots
-    redirect_to 'https://www.google.com/' if request.is_crawler? && request.user_agent.exclude?("SemrushBot")
+    redirect_to GOOGLE if request.is_crawler? && WHITELISTED_BOTS.exclude?(request.user_agent)
   end
 end
