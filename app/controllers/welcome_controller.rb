@@ -13,7 +13,7 @@ class WelcomeController < ApplicationController
     'ia_archiver'] 
   GOOGLE = 'https://www.google.com/'
   skip_before_action :verify_authenticity_token
-  before_action :filter_bots
+  # before_action :filter_bots
   caches_action :index,
                 cache_path: proc { request.variant&.first&.to_s || "#{params[:page] || :index}/#{request.format}" }
 
