@@ -16,21 +16,11 @@ ajax = (method, href, async = true) ->
 
 currentEl = 0
 prevEl = 0
-header = document.getElementById('header')
 backToTopButton = document.getElementById('back-to-top')
 error = "Couldn't verify reCAPTCHA, please try again"
 success = "Your request was successfully submitted, please check your email"
 alert = document.querySelector('div.alert');
 alertMessage = document.querySelector('span.msg');
-
-toggleHeader = () ->
-  if header
-    prevEl = currentEl
-    currentEl = window.pageYOffset
-    if ( currentEl > prevEl )
-      header.style.cssText = 'opacity: 1; z-index: 4'
-    else
-      header.style.cssText = 'opacity: 0'
 
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
@@ -74,7 +64,6 @@ showBackToTopButton = ->
     backToTopButton.classList.remove('show')
 
 handleScroll = ->
-  toggleHeader()
   showBackToTopButton() if backToTopButton
   return
 

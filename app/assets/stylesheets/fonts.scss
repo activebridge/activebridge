@@ -12,6 +12,20 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Cera Regular';
+  src: font-url('Cera.otf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inria Bold';
+  src: font-url('InriaSerif-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: swap;
+}
+
 body {
-  font-family: 'Helvetica Regular', serif;
+  font-family: 'Cera Regular', serif;
 }

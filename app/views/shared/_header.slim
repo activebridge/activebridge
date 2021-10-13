@@ -1,13 +1,12 @@
-header.header.visible.desktop-only
-  .logotype
-    a href='/'
-      = inline_svg 'index/header-logo.svg', class: 'logotype'
-header.header.desktop-only#header
-  .logotype
-    a href='/'
-      = inline_svg 'index/header-logo-visible.svg', class: 'logotype'
-  .path
-    'Home
-    - if !@page.eql? '/'
-      '\
-      = @page.gsub('_', ' ').capitalize
+header.home.desktop-only
+  a.logotype href='/'
+    = inline_svg 'index/logo.svg'
+/ header.header.desktop-only#header
+/   .logotype
+/     a href='/'
+/       = inline_svg 'index/header-logo-visible.svg', class: 'logotype'
+/   .path
+/     'Home
+/     - if !@page.eql? '/'
+/       '\
+/       = @page.gsub('_', ' ').capitalize

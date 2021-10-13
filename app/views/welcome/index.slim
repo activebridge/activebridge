@@ -1,22 +1,39 @@
 .container.index#container
-  .gradient_container
-  .container_index
-    .logo#logo_holder
-      .index_header= t('about_us.active_bridge')
-      .index_header_2= t('about_us.slogan')
-      .logo_container#logo_container
-        .inner#inner
-        = inline_svg 'index/welcome-logo.svg', class: 'img__logo', id: 'logo'
-      .description-text.mobile-only
-        .text= t('about_us.information.first')
-        .spacer
-        = inline_svg 'index/mobile_home_page_line_1.svg', class: 'home_page_line'
-      a.mobile-only.btn-work href='contact'
-        b= t('blog.footer.contact_us')
-      br
-      a.desktop-only.btn-work href='#about_us'
-        b= t('about_us.about')
-  .desktop-only
+  = image_tag 'index/background.png', class: 'index-background'
+  .home-page-container
+    = inline_svg 'index/simple-logo.svg', class: 'index-logo'
+    .header-1.index-header= t('index.active_bridge')
+    h1.header-2= t('index.professional_team')
+    p.description= t('index.teams_expertise')
+    a.button href=''= t('index.free_consultation')
+    .awards-img
+      = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
+        = image_tag 'index/award-2.png', class: 'index-icon left', alt:  "Top IT Service Company. Arizona, US"
+      = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
+        = image_tag 'index/award-4.png', class: 'index-icon left', alt: "Best Web Developers in Phoenix, 2020"
+      = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
+        = image_tag 'index/award-5.png', class: 'index-icon left', alt: "Top Web Development Companies of USA"
+      = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+        = image_tag 'index/award-6.png', class: 'index-icon left', alt: "Top 30+ Web Development Companies in USA"
+      .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
+  / .container_index
+  /   .logo#logo_holder
+  /     .index_header= t('about_us.active_bridge')
+  /     .index_header_2= t('about_us.slogan')
+  /     .logo_container#logo_container
+  /       .inner#inner
+  /       = inline_svg 'index/welcome-logo.svg', class: 'img__logo', id: 'logo'
+  /     .description-text.mobile-only
+  /       .text= t('about_us.information.first')
+  /       .spacer
+  /       = inline_svg 'index/mobile_home_page_line_1.svg', class: 'home_page_line'
+  /     a.mobile-only.btn-work href='contact'
+  /       b= t('blog.footer.contact_us')
+  /     br
+  /     a.desktop-only.btn-work href='#about_us'
+  /       b= t('about_us.about')
+  .info-container
+  .desktop-only.info-container
     .about_us_container#about_us
       .description-container
         .description-img
@@ -35,20 +52,6 @@
       .description-container.d-block
         .description-text.d-block=t('about_us.information.third').html_safe
         .description-img-awards
-          .awards-img
-            = link_to 'https://www.topdevelopers.co/directory/web-development-companies', target: :_blank
-              = image_tag 'index/award-1.png', class: 'index-icon left', alt: "Top Web Developers on TopDevelopers.co"
-            = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
-              = image_tag 'index/award-2.png', class: 'index-icon left', alt:  "Top IT Service Company. Arizona, US"
-            = link_to 'https://jobs.dou.ua/companies/active-bridge/', target: :_blank
-              = image_tag 'index/award-3.png', class: 'index-icon left', alt: "Top IT Employer, Ukraine"
-            = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
-              = image_tag 'index/award-4.png', class: 'index-icon left', alt: "Best Web Developers in Phoenix, 2020"
-            = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
-              = image_tag 'index/award-5.png', class: 'index-icon left', alt: "Top Web Development Companies of USA"
-            = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
-              = image_tag 'index/award-6.png', class: 'index-icon left', alt: "Top 30+ Web Development Companies in USA"
-          .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
     .solutions_and_benefits#solutions_and_benefits
       .solutions
         .header_2= t('about_us.solutions_and_benefits.solutions_title')

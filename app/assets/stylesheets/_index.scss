@@ -34,19 +34,48 @@ body {
   overflow-y: auto;
 }
 
-.gradient_container {
-  position: absolute;
-  height: 100vh;
+
+.home-page-container {
   width: 100%;
-  z-index: 1;
-  background: radial-gradient(10vw at left 15%, rgba($main-blue, 0.35) -15%, rgba(white, 0) 90%),
-              radial-gradient(15vw at 25% top, rgba($main-blue, 0.35), rgba($main-violet, 0.35) -5%, rgba(white, 0)),
-              radial-gradient(13vw at 85% top, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(13vw at 25% 60%, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(19vw at 75% center,rgba($main-blue, 0.35), rgba($main-violet, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(16vw at left bottom, rgba($main-blue, 0.35) -15%, rgba(white, 0)),
-              radial-gradient(14vw at right bottom, rgba($main-blue, 0.35) -15%, rgba(white, 0));
+  height: 100vh;
+  z-index: 2;
+
+  .index-logo {
+    width: 150px;
+    margin-top: 70px;
+  }
+
+  .index-header {
+    font-size: 2.5em;
+  }
 }
+
+.awards-img {
+  position: absolute;
+  top: 50vh;
+  right: 15px;
+  width: 10%;
+  min-width: 135px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-50%);
+
+  a {
+    width: 100%;
+
+    &:hover {
+      animation: slide-top 0.6s ease;
+      animation-iteration-count: 1;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .container_index {
   height: 100vh;
   width: 100%;
@@ -156,25 +185,6 @@ body {
       text-align: center;
       text-align: -moz-center;
       text-align: -webkit-center;
-
-      .awards-img {
-        display: flex;
-        width: 75vw;
-        justify-content: space-around;
-
-        a {
-          width: 45%;
-
-          &:hover {
-            animation: slide-top 0.6s ease;
-            animation-iteration-count: 1;
-          }
-
-          img {
-            width: 100%;
-          }
-        }
-      }
 
       .clutch-widget {
         margin: 35px auto;

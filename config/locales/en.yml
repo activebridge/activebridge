@@ -305,8 +305,12 @@ en:
               },
               "description": ""
             }'
-
-
+  index:
+    active_bridge: Active Bridge
+    professional_team: Professional team as a service
+    teams_expertise: With Active Bridge team's expertise, you can build scalable and robust applications
+                     easier, enter the market faster, and transform into digital enterprise smoother
+    free_consultation: Get a free consultation
   welcome:
     about:
       title: About
