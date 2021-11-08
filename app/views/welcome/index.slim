@@ -1,5 +1,6 @@
 .container.index#container
   = image_tag 'index/background.png', class: 'index-background'
+  = inline_svg 'index/bridge-stripe.svg', class: 'bridge-stripe'
   .home-page-container
     = inline_svg 'index/simple-logo.svg', class: 'index-logo'
     .header-1.index-header= t('index.active_bridge')
@@ -32,7 +33,66 @@
   /     br
   /     a.desktop-only.btn-work href='#about_us'
   /       b= t('about_us.about')
-  .info-container
+  .info-container.index-home
+    .index-testimonials__header= t('index.help_startups')
+    .description.white-text= t('index.testimonials_description')
+    .index-testimonials__container.cards-carousel
+      .card.index-testimonials__item
+      .card.index-testimonials__item
+      .card.index-testimonials__item
+    a.button.white-text href=''= t('index.read_testimonials')
+  .index-technologies__container
+    .index-technologies
+      h2.header-3= t('index.our_vision')
+      h3.header-4= t('index.care_about_your_projects')
+      .index-technologies__description= t('index.dedicated_developers')
+      h2.header-4= t('index.core_technology')
+      .index-technologies__description= t('index.technologies_knowledge')
+      .header-3= t('index.featured_technologies')
+    .index-technologies__holder
+      .index-technologies__photo
+        = image_tag 'index/technologies_photo.jpeg'
+      .index-technologies__items
+        table 
+          - (0..I18n.t('technologies').length).step(3) do |index|
+            tr
+              td= inline_svg "index/technologies/#{I18n.t('technologies')[index]}.svg", class: 'index-technologies__icon'
+              td= inline_svg "index/technologies/#{I18n.t('technologies')[index + 1]}.svg", class: 'index-technologies__icon'
+              td= inline_svg "index/technologies/#{I18n.t('technologies')[index + 2]}.svg", class: 'index-technologies__icon'
+        .show-all-technologies
+          button.technologies-toggle#show-all-technologies= t('index.learn_more')
+  .index-services
+    h2.header-2= t('index.expert_web_services')
+    .description.index-services__description= t('index.embedded_teams')
+    .header-3= t('index.our_services')
+    .index-services__container
+      - I18n.t('index.services').each do |service|
+        .card.index-services__item
+          .index-services__item-title= service[:title]
+          .index-services__item-description= service[:description].html_safe
+    a.button.index-services__button href="#"= t('index.view_services')
+  .info-container.index-about-us
+    .header-3.white-text= t('index.our_company')
+    .index-about-us__description= t('index.about_us_description')
+    .index-about-us__items
+      .index-about-us__container
+        - I18n.t('index.about_us_items').each do |item|
+          .index-about-us__item
+            = inline_svg item[:logo]
+            = item[:text]
+      .index-about-us__photo
+        = image_tag 'index/about_us_photo.jpg'
+    a.button.white-text href='#'= t('index.more_about_us')
+  .index-solutions
+    = image_tag 'index/solutions-photo.jpg', class: 'index-solutions__photo'
+    .index-solutions__holder
+      h2.header-2= t('index.build_great_product')
+      .description= t('index.help_businesses')
+      .index-solutions__items.cards-carousel
+        .card.index-solutions__item
+        .card.index-solutions__item
+        .card.index-solutions__item    
+      a.index-solutions__button.button= t('index.view_all_solutions')    
   .desktop-only.info-container
     .about_us_container#about_us
       .description-container

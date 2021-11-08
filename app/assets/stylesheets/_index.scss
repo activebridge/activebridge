@@ -29,11 +29,38 @@ $benefits:(
   }
 }
 
+@keyframes draw {
+  from {
+    stroke-dashoffset: 450;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 body {
   overflow-x: hidden;
   overflow-y: auto;
 }
 
+.index-background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.bridge-stripe {
+  position: absolute;
+  top: 60vh;
+  transform: translateY(-50%);
+  width: 80%;
+
+  path {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: draw 2s linear forwards;
+  }
+}
 
 .home-page-container {
   width: 100%;
@@ -73,6 +100,255 @@ body {
     img {
       width: 100%;
     }
+  }
+}
+
+.index {
+  &-testimonials {
+    &__header {
+      margin-bottom: 5vh;
+      padding: 0 25%;
+      font-size: 1.7em;
+      font-family: 'Inria Bold', serif;
+      line-height: 1.8em;
+      color: $white;
+    }
+
+    &__item {
+      position: relative;
+      display: inline-block;
+      margin-right: 5px;
+
+      &:first-child {
+        transform: translateX(50%);
+      }
+    }
+  }
+
+  &-technologies {
+    padding: 0 20%;
+
+    &__container {
+      background: linear-gradient(135deg, $white, $main-lilac);
+
+      .header-4  {
+        margin: 3vh 0;
+        padding: 0 5%;
+      }
+    }
+
+    &__holder {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      margin-top: 4vh;
+    }
+
+    &__photo {
+      width: 50%;
+      height: 100%;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__description {
+      margin: 3vh 0 3vh 0;
+      text-align: justify;
+      font-size: 1.15em;
+      font-family: 'Inria Bold', serif;
+      line-height: 2em;
+    }
+
+    &__items {
+      position: relative;
+      width: 50%;
+      padding: 5vw;
+      overflow: hidden;
+
+      table {
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 0;
+
+        tbody {
+          tr {
+            width: 100%;
+
+            td {
+              width: 33%;
+              border-top: 1px solid black;
+              border-bottom: 1px solid black;
+              border-right: 1px solid black;  
+              padding: 3vh 1vw;
+
+              svg {
+                width: auto;
+                height: 4vh;
+                max-width: 140px;
+              }
+              // &:first-child, &:second-child,
+              // &:nth-child(3) {
+              //   border: 1px solid black;
+              // }
+              &:first-child {
+                border: 1px solid black;
+              }
+
+            }
+
+            &:first-of-type {
+              td {
+                border: 1px solid black;
+              }
+            }
+          }
+        }
+      }
+
+      .show-all-technologies {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        height: 40%;
+        width: 100%;
+        margin-left: -5vw;
+        background: linear-gradient(to top, $main-lilac 34%, transparent 100%);
+
+        .technologies-toggle {
+          border: 3px solid;
+          border-image-slice: 1;
+          border-width: 3px;
+          border-image-source: linear-gradient(135deg, $main-violet, $main-blue);
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &-services {
+    padding: 7vh 0;
+    background: $main-lilac;
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      margin: 5vh 0;
+    }
+
+    &__item {
+      margin: 0 2vw;
+
+      &-title {
+        font-family: 'Inria Bold', serif;
+        font-size: 1.8em;
+        color: #5723B5;
+        line-height: 1.6em;
+      }
+
+      &-description {
+        text-align: justify;
+        font-size: 1.2em;
+        line-height: 1.8em;
+        margin-top: 3vh;
+      }
+    }
+
+    &__description {
+      margin: 3vh 0;
+    }
+
+    &__button {
+      width: 35%;
+    }
+  }
+
+  &-about-us {
+    padding: 10vh 15vw;
+
+    &__description {
+      margin-top: 4.5vh;
+      font-family: 'Inria Bold', serif;
+      font-size: 1.2em;
+      line-height: 2em;
+      text-align: justify;
+      color: $white;
+    }
+
+    &__container {
+      width: 50%;
+    }
+    
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3vh;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: $white;
+
+      svg {
+        height: 10vh;
+      }
+    }
+
+    &__photo {
+      width: 75%;
+      margin-right: -15vw;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__items {
+      display: flex;
+      margin-top: 5vh;
+    }
+  }
+
+  &-solutions {
+    position: relative;
+    height: 100vh;
+
+    &__photo {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    &__holder {
+      position: relative;
+      z-index: 2; 
+    }
+
+    &__items {
+
+    }
+
+    &__item {
+
+    }
+  }
+}
+
+.index-solutions__holder {
+  .index-solutions__button {
+    background: linear-gradient(135deg, $main-violet, $main-blue);
   }
 }
 
