@@ -337,7 +337,7 @@ body {
     }
 
     &__items {
-
+      margin: 7vh auto 0 auto;
     }
 
     &__item {
@@ -347,6 +347,10 @@ body {
 }
 
 .index-solutions__holder {
+  .index-solutions__items {
+    margin: 7vh auto 0 auto;
+  }
+
   .index-solutions__button {
     background: linear-gradient(135deg, $main-violet, $main-blue);
   }

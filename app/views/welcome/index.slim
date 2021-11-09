@@ -92,7 +92,23 @@
         .card.index-solutions__item
         .card.index-solutions__item
         .card.index-solutions__item    
-      a.index-solutions__button.button= t('index.view_all_solutions')    
+      a.index-solutions__button.button.white-text href=''= t('index.view_all_solutions')
+  footer
+    .navigation
+      - I18n.t('footer.navigation.links').each do |n|
+        .navigation__container
+          a.navigation__link.page= n[:page]
+          - if n[:items]
+            - n[:items].each do |item|
+              a.navigation__link= item
+      .navigation__container
+        a.navigation__link.page= t('footer.navigation.reviews')
+        a.navigation__link.page= t('footer.navigation.blog')
+        .navigation__social-icons
+          - I18n.t('footer.navigation.social_icons').each do |item|
+            a href=item[:link]
+              = inline_svg "social_icons/#{item[:icon]}.svg"
+    .contact-info  
   .desktop-only.info-container
     .about_us_container#about_us
       .description-container

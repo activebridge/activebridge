@@ -367,6 +367,42 @@ en:
     help_businesses: We help businesses from healthcare, finance, retail, education, transportation and other industries seize new opportunities,
                      overcome technological business challenges, and gain higher operational efficiency.
     view_all_solutions: View all solutions
+  footer:
+    navigation:
+      links:
+        - page: About
+          items:
+            - Team
+        - page: Expertise 
+          items:
+        - page: Services
+          items:
+            - Web Development
+            - RoR development
+            - Mobile App Development
+            - Staff Augmentation
+            - Project Development
+        - page: Solutions
+          items: 
+            - Healthcase
+            - SaaS
+            - Marketplace
+            - E-commerce
+            - Logistic / Travel
+            - Education / Fintech
+      reviews: Reviews
+      blog: Blog
+      social_icons:
+        - link: https://www.linkedin.com/company/active-bridge
+          icon: linkedin
+        - link: https://github.com/activebridge
+          icon: github
+        - link: https://www.facebook.com/ActiveBridgeTeam
+          icon: facebook
+        - link: https://www.instagram.com/active.bridge
+          icon: instagram
+        - link: https://twitter.com/activebridge
+          icon: twitter
   technologies:
     - angular
     - aws
