@@ -154,26 +154,54 @@ footer {
       a {
         svg {
           width: 35px;
-          margin: 0 6px 6px 0;
+          margin: 0 6px 10px 0;
         }
-      }
-    }
-
-    &__link {
-      margin-bottom: 2vh;
-      font-size: 1.1em;
-      color: #5c5c5c;
-      white-space: nowrap;
-
-      &.page {
-        color: $black;
-        font-weight: 600;
       }
     }
   }
 
   .contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 7vh 20% 4vh 20%;
+    background: $silver;
 
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 30%;
+
+      &:first-child {
+        justify-content: space-between;
+      }
+    }
+
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .footer {
+    &__item {
+      margin-bottom: 1.5vh;
+      font-size: 1.1em;
+      color: $scorpion;
+      white-space: nowrap;
+      text-decoration: none;
+
+      &.bold {
+        color: $black;
+        font-weight: 600;
+      }
+    }
+
+    &__copyright {
+      font-size: 0.9em;
+      color: $scorpion;
+    }
   }
 }
 

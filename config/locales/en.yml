@@ -403,6 +403,20 @@ en:
           icon: instagram
         - link: https://twitter.com/activebridge
           icon: twitter
+    contact_info:
+      email: contact@active-bridge.com
+      phone_number: '+18888053503'
+      copyright: © 2013-2021, Active Bridge LLC
+      entities:
+        - entity: USA
+          name: Active Bridge, LLC
+          address: 4644 North 22nd Street
+          post: Phoenix, AZ 85016
+          country: United States
+        - entity: Ukraine
+          name: Active Bridge, LLC
+          address: Marshala Krasovskogo, 8 Street
+          post: Cherkasy 18000
   technologies:
     - angular
     - aws
