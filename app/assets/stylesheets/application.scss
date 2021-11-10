@@ -100,10 +100,12 @@ footer {
   width: 100%;
   
   .navigation {
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 10vh 10% 5vh 10%;
     background: $alto;
+    box-shadow: 0 0px 8px 2px $dusty-gray;
 
     &__container {
       position: relative;
