@@ -132,7 +132,7 @@ body {
       background: linear-gradient(135deg, $white, $main-lilac);
 
       .header-4  {
-        margin: 3vh 0;
+        margin: 7vh 0 3vh 0;
         padding: 0 5%;
       }
     }
@@ -156,11 +156,15 @@ body {
     }
 
     &__description {
-      margin: 3vh 0 3vh 0;
+      margin-top: 3vh;
       text-align: justify;
       font-size: 1.15em;
       font-family: 'Inria Bold', serif;
       line-height: 2em;
+    }
+
+    &__title {
+      margin: 6vh 0 3vh 0;
     }
 
     &__items {
@@ -244,6 +248,14 @@ body {
     &__icon {
       width: 40px;
       height: 40px;
+    }
+
+    h2.header-3 {
+      margin-top: 12vh;
+    }
+
+    .header-3:last-child {
+      margin-top: 7vh;
     }
   }
 
