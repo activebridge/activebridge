@@ -212,7 +212,9 @@ body {
       }
 
       .show-all-technologies {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         position: absolute;
         bottom: 0;
         height: 40%;
@@ -221,10 +223,16 @@ body {
         background: linear-gradient(to top, $main-lilac 34%, transparent 100%);
 
         .technologies-toggle {
-          border: 3px solid;
-          border-image-slice: 1;
-          border-width: 3px;
-          border-image-source: linear-gradient(135deg, $main-violet, $main-blue);
+          max-height: 10vh;
+          margin-bottom: 3vh;
+          border: 2px solid transparent;
+          background: linear-gradient($main-lilac, $main-lilac) padding-box,
+                      linear-gradient(135deg, $main-violet, $main-blue)  border-box;
+          
+          &:hover {
+            background: linear-gradient(135deg, $main-violet, $main-blue) padding-box,
+                        linear-gradient(135deg, $main-violet, $main-blue)  border-box;
+          }
         }
       }
 
