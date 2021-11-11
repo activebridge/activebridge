@@ -169,11 +169,12 @@ body {
 
     &__items {
       position: relative;
-      width: 50%;
+      width: 40%;
       padding: 5vw;
       overflow: hidden;
       border-top: 1px solid $black;
       border-bottom: 1px solid $black;
+      background: linear-gradient(135deg, #EBDEF5, $main-lilac);
 
       table {
         width: 100%;
@@ -232,11 +233,40 @@ body {
           border: 2px solid transparent;
           background: linear-gradient($main-lilac, $main-lilac) padding-box,
                       linear-gradient(135deg, $main-violet, $main-blue)  border-box;
+          cursor: pointer;
           
           &:hover {
             background: linear-gradient(135deg, $main-violet, $main-blue) padding-box,
                         linear-gradient(135deg, $main-violet, $main-blue)  border-box;
           }
+        }
+      }
+
+      .technologies-close {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        svg {
+          width: 50px;
+        }
+      }
+
+      &.open {
+        position: absolute;
+        left: 50%;
+        width: 40%;
+
+        .show-all-technologies {
+          display: none;
+        }
+
+        .technologies-close {
+          display: block;
         }
       }
 

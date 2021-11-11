@@ -21,6 +21,7 @@ error = "Couldn't verify reCAPTCHA, please try again"
 success = "Your request was successfully submitted, please check your email"
 alert = document.querySelector('div.alert');
 alertMessage = document.querySelector('span.msg');
+technologies = document.querySelector('.index-technologies__items')
 
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
@@ -49,6 +50,9 @@ alertShow = (message) ->
 
 window.alertHide = -> 
   alert.classList.remove("showAlert");
+
+window.toggleTechnologies = ->
+  if technologies.classList.contains('open') then technologies.classList.remove('open') else technologies.classList.add('open')
 
 scrollToTop = ->
   window.scrollTo({
