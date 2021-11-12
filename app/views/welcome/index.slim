@@ -37,9 +37,13 @@
     .index-testimonials__header= t('index.help_startups')
     .description.white-text= t('index.testimonials_description')
     .index-testimonials__container.cards-carousel
-      .card.index-testimonials__item
-      .card.index-testimonials__item
-      .card.index-testimonials__item
+      - I18n.t('testimonials.all').each do |t|
+        .card.index-testimonials__item
+          .index-testimonial__image
+            = image_tag t[:image]
+          .index-testimonial__logo
+            = image_tag t[:logo]
+          .index-testimonial__description= t[:description]
     a.button.white-text href=''= t('index.read_testimonials')
   .index-technologies__container
     .index-technologies
