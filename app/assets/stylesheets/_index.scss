@@ -419,6 +419,38 @@ body {
     &__item {
 
     }
+
+    &__title {
+      font-size: 1.6em;
+      letter-spacing: 0.3em;
+      line-height: 1.7em;
+      text-transform: uppercase;
+    }
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      width: 15vh;
+      height: 15vh;
+      margin: 3vh auto;
+      border-radius: 7.5vh;
+      box-shadow: inset -3px -3px 7px -4px grey, 1px 1px 14px -2px grey;
+
+      svg {
+        width: 9vh;
+      }
+    }
+
+    &__description {
+      font-size: 1.3em;
+      line-height: 1.5em;
+      text-align: justify;
+    }
+
+    .blue-text {
+      display: inline;
+      color: $main-blue;
+    }
   }
 }
 

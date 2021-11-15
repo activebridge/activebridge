@@ -95,9 +95,14 @@
       h2.header-2= t('index.build_great_product')
       .description= t('index.help_businesses')
       .index-solutions__items.cards-carousel
-        .card.index-solutions__item
-        .card.index-solutions__item
-        .card.index-solutions__item    
+        - I18n.t('index.solutions').each do |s|
+          .card.index-solutions__item
+            .index-solutions__title
+              = s[:title]
+            .index-solutions__logo
+              = inline_svg "index/solutions/#{s[:logo]}"
+            .index-solutions__description
+              = s[:description].html_safe   
       a.index-solutions__button.button.white-text href=''= t('index.view_all_solutions')
   footer.footer
     .navigation
