@@ -26,8 +26,6 @@ html lang='en'
           = inline_svg 'navbar/menu_home.svg'
         = yield
       = render 'shared/navbar'
-      #back-to-top aria-label="Go to top"
-        span.ui-arrow-up
       = javascript_include_tag 'application', async: true
       javascript:
         var head = document.head,

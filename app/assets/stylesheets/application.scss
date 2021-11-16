@@ -417,18 +417,6 @@ input#menu {
     display: block;
   }
 
-  &:checked ~ #back-to-top {
-    right: calc(20vw + 20px);
-
-    @media screen and (min-width: 1400px){
-      right: calc(15vw + 20px);
-    }
-
-    @media screen and (max-width: 900px) {
-      right: calc(25vw + 20px);
-    }
-  }
-
   &:checked ~ .navbar {
     width: 20vw;
     .items {
@@ -592,48 +580,6 @@ nav.navbar {
         }
       }
     }
-  }
-}
-
-#back-to-top {
-  display: block;
-  z-index: 5;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 20px;
-  position: fixed;
-  bottom: -40px;
-  right: 90px;
-  line-height: 45px;
-  border-radius: 50%;
-  background: linear-gradient(to bottom right, $main-violet, $main-blue);
-  opacity: .5;
-  -webkit-box-shadow: 1px 1.732px 12px 0px rgba(0, 0, 0, 0.03);
-  box-shadow: 1px 1.732px 12px 0px rgba(0, 0, 0, 0.03);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  cursor: pointer;
-
-  .ui-arrow-up:before {
-    content: '↑';
-    color: #fff;
-  }
-
-  &.show {
-    bottom: 20px;
-  }
-
-  &:hover {
-    background-color: $main-blue;
-    border-color: transparent;
-    opacity: 1;
-    animation: swing 0.6s ease;
-    animation-iteration-count: 1;
   }
 }
 
@@ -836,11 +782,6 @@ nav.navbar {
 
   input#menu:checked ~ .navbar {
     width: 50vw;
-  }
-
-  #back-to-top.show{
-    bottom: 5px;
-    right: 5px;
   }
 
   .home-logo {

@@ -16,7 +16,6 @@ ajax = (method, href, async = true) ->
 
 currentEl = 0
 prevEl = 0
-backToTopButton = document.getElementById('back-to-top')
 error = "Couldn't verify reCAPTCHA, please try again"
 success = "Your request was successfully submitted, please check your email"
 alert = document.querySelector('div.alert');
