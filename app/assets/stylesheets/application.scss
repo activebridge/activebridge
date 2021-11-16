@@ -246,6 +246,11 @@ footer {
   border-radius: 40px;
   background: transparent;
   box-shadow: $main-shadow;
+  transition: box-shadow .2s ease-in-out;
+
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
 }
 
 .info-container {
@@ -273,7 +278,7 @@ footer {
   display: flex;
   height: 55vh;
   margin: 10vh auto 10vh auto;
-  padding: 0 40vh 6vh 40vw;
+  padding: 0 40vw 6vh 40vw;
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
