@@ -20,7 +20,7 @@
   .info-container.index-home
     .index-testimonials__header= t('index.help_startups')
     .description.white-text= t('index.testimonials_description')
-    .index-testimonials__container.cards-carousel
+    .index-testimonials__container.cards-carousel data-current='0'
       - I18n.t('testimonials.all').each do |t|
         .card.index-testimonials__item
           .index-testimonial__image
@@ -41,7 +41,7 @@
       .index-technologies__photo
         = image_tag 'index/technologies_photo.jpeg'
       .index-technologies__items
-        table 
+        table
           - (0..I18n.t('technologies').length).step(3) do |index|
             tr
               td= inline_svg "index/technologies/#{I18n.t('technologies')[index]}.svg", class: 'index-technologies__icon'
@@ -78,7 +78,7 @@
     .index-solutions__holder
       h2.header-2= t('index.build_great_product')
       .description= t('index.help_businesses')
-      .index-solutions__items.cards-carousel
+      .index-solutions__items.cards-carousel data-current='0'
         - I18n.t('index.solutions').each do |s|
           .card.index-solutions__item
             .index-solutions__title
@@ -86,19 +86,19 @@
             .index-solutions__logo
               = inline_svg "index/solutions/#{s[:logo]}"
             .index-solutions__description
-              = s[:description].html_safe   
+              = s[:description].html_safe
       a.index-solutions__button.button.white-text href=''= t('index.view_all_solutions')
   footer.footer
     .navigation
       - I18n.t('footer.navigation.links').each do |n|
         .navigation__container
-          a.footer__item.bold= n[:page]
+          a.footer__item.bold href=n[:link] = n[:page]
           - if n[:items]
             - n[:items].each do |item|
-              a.footer__item= item
+              a.footer__item href=item[:link] = item[:section]
       .navigation__container
         a.footer__item.bold= t('footer.navigation.reviews')
-        a.footer__item.bold= t('footer.navigation.blog')
+        a.footer__item.bold href="#{t('footer.navigation.blog').downcase}" = t('footer.navigation.blog')
         .navigation__social-icons
           - I18n.t('footer.navigation.social_icons').each do |item|
             a href=item[:link]

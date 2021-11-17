@@ -384,25 +384,41 @@ en:
     navigation:
       links:
         - page: About
+          link: /
           items:
-            - Team
+            - section: Team
+              link: /team
         - page: Expertise 
+          link: /
           items:
         - page: Services
+          link: /services
           items:
-            - Web Development
-            - RoR development
-            - Mobile App Development
-            - Staff Augmentation
-            - Project Development
+            - section: Web Development
+              link: /services#web_development
+            - section: RoR development
+              link: /services#ror_development
+            - section: Mobile App Development
+              link: /services#mobile_app_development
+            - section: Staff Augmentation
+              link: /services#staff_augmentation
+            - section: Project Development
+              link: /services#project_development
         - page: Solutions
+          link: /
           items: 
-            - Healthcase
-            - SaaS
-            - Marketplace
-            - E-commerce
-            - Logistic / Travel
-            - Education / Fintech
+            - section: Healthcase
+              link: /
+            - section: SaaS
+              link: /
+            - section: Marketplace
+              link: /
+            - section: E-commerce
+              link: /
+            - section: Logistic / Travel
+              link: /
+            - section: Education / Fintech
+              link: /
       reviews: Reviews
       blog: Blog
       social_icons:
