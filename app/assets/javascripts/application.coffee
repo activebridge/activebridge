@@ -47,7 +47,7 @@ alertShow = (message) ->
     alert.classList.remove("showAlert");
   , 10000
 
-window.alertHide = -> 
+window.alertHide = ->
   alert.classList.remove("showAlert");
 
 window.toggleTechnologies = ->
@@ -58,21 +58,11 @@ scrollToTop = ->
     top: 0
   })
 
-showBackToTopButton = ->
-  scroll = window.pageYOffset
-  if scroll > 50
-    if !backToTopButton.classList.contains('show')
-      backToTopButton.classList += 'show'
-  else
-    backToTopButton.classList.remove('show')
-
 handleScroll = ->
-  showBackToTopButton() if backToTopButton
   return
 
 window.onload = () ->
   document.body.onscroll = handleScroll
-  backToTopButton.onclick = scrollToTop if backToTopButton
 
 viewportHeight = window.innerHeight - 1 + 'px'
 
