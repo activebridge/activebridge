@@ -98,7 +98,7 @@ header {
 
 footer {
   width: 100%;
-  
+
   .navigation {
     position: relative;
     display: flex;
@@ -250,6 +250,10 @@ footer {
 
   &:hover {
     box-shadow: $hover-shadow;
+  }
+
+  &:active {
+    box-shadow: $active-shadow;
   }
 }
 
