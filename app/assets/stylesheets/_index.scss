@@ -195,7 +195,6 @@ body {
 
             td {
               width: 33%;
-              border-top: 1px solid black;
               border-bottom: 1px solid black;
               border-right: 1px solid black;  
               padding: 3vh 1vw;
@@ -210,14 +209,22 @@ body {
               //   border: 1px solid black;
               // }
               &:first-child {
-                border: 1px solid black;
+                border-left: 1px solid black;
+                border-bottom: 1px solid black;
+                border-right: 1px solid black;
               }
 
             }
 
             &:first-of-type {
               td {
-                border: 1px solid black;
+                border-top: 1px solid black;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                
+                &:first-child {
+                  border: 1px solid black;
+                }
               }
             }
           }
