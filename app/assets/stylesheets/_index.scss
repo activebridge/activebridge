@@ -176,13 +176,16 @@ body {
     }
 
     &__items {
-      position: relative;
+      position: absolute;
+      left: 50%;
       width: 40%;
+      height: calc(100% - 10vw);
       padding: 5vw;
       overflow: hidden;
       border-top: 1px solid $black;
       border-bottom: 1px solid $black;
       background: linear-gradient(135deg, #EBDEF5, $main-lilac);
+      transition: height .3s ease;
 
       table {
         width: 100%;
@@ -236,11 +239,15 @@ body {
         justify-content: center;
         align-items: flex-end;
         position: absolute;
+        z-index: 1;
         bottom: 0;
         height: 40%;
         width: 100%;
         margin-left: -5vw;
         background: linear-gradient(to top, $main-lilac 34%, transparent 100%);
+        transition: visibility, opacity .3s ease;
+        visibility: visible;
+        opacity: 1;
 
         .technologies-toggle {
           max-height: 10vh;
@@ -272,12 +279,12 @@ body {
       }
 
       &.open {
-        position: absolute;
-        left: 50%;
-        width: 40%;
+        height: auto;
 
         .show-all-technologies {
-          display: none;
+          visibility: hidden;
+          opacity: 0;
+          z-index: -1;
         }
 
         .technologies-close {
