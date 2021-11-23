@@ -10,6 +10,13 @@ en:
     Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
   navbar:
+    items:
+      - about
+      - expertise
+      - services
+      - solutions
+      - faq
+      - contacts
     links:
       - title:
           name: How we work

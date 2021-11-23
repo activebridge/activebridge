@@ -1,12 +1,11 @@
-header.home.desktop-only
-  a.logotype href='/'
-    = inline_svg 'index/logo.svg'
-/ header.header.desktop-only#header
-/   .logotype
-/     a href='/'
-/       = inline_svg 'index/header-logo-visible.svg', class: 'logotype'
-/   .path
-/     'Home
-/     - if !@page.eql? '/'
-/       '\
-/       = @page.gsub('_', ' ').capitalize
+- if current_page?('/')
+  header.home.desktop-only
+    a.logotype href='/'
+      = inline_svg 'index/logo.svg'
+- else
+  header.deskop-only 
+    a.logotype href='/'
+      = inline_svg 'index/logo.svg'
+    .header-navbar
+      - I18n.t('navbar.items').each do |i|
+        a.header-navbar__link href='#'= i
