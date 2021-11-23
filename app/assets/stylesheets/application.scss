@@ -108,6 +108,10 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.4em;
+
+    &:hover {
+      color: $main-violet;
+    }
   }
 }
 
