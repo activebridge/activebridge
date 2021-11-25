@@ -993,6 +993,14 @@ en:
         project_length: 24
         team_size: 3
   services:
+    services: Services
+    pick_right_stack: Picking the right tech stack, we help startups and SMEs looking to solve their technical business challenges, complex or routine
+    learn_and_grow: The insatiable need to learn and grow is part of the fundamental nature of all human beings. Our team
+                    accomplishes both by continually seeking out new and more efficient ways to provide custom application
+                    development services at Active Bridge. We encourage our developers to constantly pursue new knowledge,
+                    whether it be taking educational courses, attending conferences, or just sharing their knowledge around
+                    the office, or contributing to open source. We believe that where there is growth, there is innovation,
+                    and that belief drives us forward.
   testimonials:
     title: Testimonials
     all:

@@ -8,4 +8,4 @@
       = inline_svg 'index/logo.svg'
     .header-navbar
       - I18n.t('navbar.items').each do |i|
-        a.header-navbar__link href='#'= i
+        = link_to i, "/#{i}", class: "header-navbar__link #{current_page?('/' + i) ? 'active' : ''}"
