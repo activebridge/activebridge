@@ -1,7 +1,7 @@
 .services {
   &-container {
     display: flex;
-    height: 80vh;
+    height: 60vh;
 
     .description {
       height: 100%;
@@ -13,13 +13,13 @@
 
     img {
       width: 50%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
 
-.container {
+.container.services {
   .info-container {
-    padding: 5vh 10% 10vh 10%;
+    padding: 5vh 20% 10vh 20%;
   }
 }
