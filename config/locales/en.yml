@@ -1001,6 +1001,21 @@ en:
                     whether it be taking educational courses, attending conferences, or just sharing their knowledge around
                     the office, or contributing to open source. We believe that where there is growth, there is innovation,
                     and that belief drives us forward.
+    web_dev_services: Web application development services
+    scale_your_business: We’re motivated to scale your business, as we are more than just a web development service provider.
+                        We strive to be your on-demand partner who’s ready to cover all your technology needs bringing our
+                        experience in the development of technically complex, ergonomic, and user-friendly applications.
+    web_services:
+      - title: Full-stack expertise
+        icon: full-stack.svg
+        description: We are all set to assist you with needed expertise in front-end and back-end technologies, put together as a solo solution.
+      - title: Application development and integration 
+        icon: web-dev.svg
+        description: We have the experience, knowledge, and ability to perform enterprise application development and APIs integration
+      - title: Scalability and flexibility
+        icon: scalability.svg
+        description: Using a microservice architecture, we provide easily expandable and scalable development solutions
+    learn_more: Learn more
   testimonials:
     title: Testimonials
     all:
