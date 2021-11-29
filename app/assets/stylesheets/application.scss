@@ -279,6 +279,10 @@ footer {
   box-shadow: $main-shadow;
   transition: box-shadow .2s ease-in-out;
 
+  &.main-gradient {
+    background: linear-gradient(135deg, $main-violet, $main-blue);
+  }
+
   &:hover {
     box-shadow: $hover-shadow;
   }
@@ -292,9 +296,17 @@ footer {
   background: linear-gradient(135deg, $main-violet, $main-blue);
   padding-bottom: 7vh;
 
+  .content {
+    padding: 5vh 20% 0 20%;
+  }
+
   &.index-home {
     padding-top: 14vh;
     margin-top: -6vh;
+  }
+
+  &.alabaster {
+    background: $alabaster;
   }
 }
 
@@ -314,7 +326,7 @@ footer {
   justify-content: center;
   height: 55vh;
   margin: 10vh auto 10vh auto;
-  padding: 0 40vw 6vh 40vw;
+  padding: 1vh 40vw 6vh 40vw;
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -325,6 +337,50 @@ footer {
   .card {
     scroll-snap-align: center;
     display: none;
+
+    &__title {
+      color: $white;
+      &-1 {
+        font-size: 1.6em;
+        letter-spacing: 0.3em;
+        line-height: 1.7em;
+        text-transform: uppercase;
+      }
+
+      &-2 {
+        font-family: 'Inria Bold', serif;
+        font-size: 1.8em;
+        color: $black;
+        line-height: 1.6em;
+
+        &.purple-heart {
+          color: $purple-heart
+        }
+      }
+    }
+
+    &__icon {
+      &.circled {
+        display: flex;
+        justify-content: center;
+        width: 15vh;
+        height: 15vh;
+        margin: 3vh auto;
+        border-radius: 7.5vh;
+        box-shadow: inset -3px -3px 7px -4px grey, 1px 1px 14px -2px grey;
+  
+        svg {
+          width: 9vh;
+        }
+      }
+    }
+
+    &__description {
+      margin-top: 3vh;
+      text-align: justify;
+      font-size: 1.2em;
+      line-height: 2em;
+    }
 
     &:first-child,
     &:nth-child(2),

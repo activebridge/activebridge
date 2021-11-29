@@ -27,15 +27,15 @@
             = image_tag t[:image]
           .index-testimonial__logo
             = image_tag t[:logo]
-          .index-testimonial__description= t[:description]
+          .card__description.index-testimonial__description= t[:description]
     a.button.white-text href=''= t('index.read_testimonials')
   .index-technologies__container
     .index-technologies
       h2.header-3= t('index.our_vision')
       h3.header-4= t('index.care_about_your_projects')
-      .index-technologies__description= t('index.dedicated_developers')
+      .description.index-technologies__description= t('index.dedicated_developers')
       h2.header-4= t('index.core_technology')
-      .index-technologies__description= t('index.technologies_knowledge')
+      .description.index-technologies__description= t('index.technologies_knowledge')
       .header-3= t('index.featured_technologies')
     .index-technologies__holder
       .index-technologies__photo
@@ -58,8 +58,8 @@
     .index-services__container
       - I18n.t('index.services').each do |service|
         .card.index-services__item
-          .index-services__item-title= service[:title]
-          .index-services__item-description= service[:description].html_safe
+          .card__title-2.purple-heart= service[:title]
+          .card__description.index-services__item-description= service[:description].html_safe
     a.button.index-services__button href="#"= t('index.view_services')
   .info-container.index-about-us
     .header-3.white-text= t('index.our_company')

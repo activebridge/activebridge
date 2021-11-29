@@ -19,7 +19,40 @@
 }
 
 .container.services {
+  .description {
+    padding: 0;
+  }
   .info-container {
-    padding: 5vh 20% 10vh 20%;
+    &.web-dev {
+      .content {
+        .description {
+          font-size: 1.4em;
+        }
+      }
+      
+      .button {
+        width: 15%;
+        min-width: 350px;
+      }
+    }
+
+    .header-3 {
+      padding: 0 20%;
+    }
+
+    .web-app-services {
+      display: flex;
+      align-items: center;
+      background-image: url(asset_path('services/web_dev/web-dev-bg.svg'));
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 90vh;
+
+      .cards-carousel {
+        .card {
+          background: $white;
+        }
+      }
+    }
   }
 }

@@ -123,14 +123,10 @@ body {
 
     &__description {
       display: -webkit-box;
-      font-size: 1.2em;
-      text-align: justify;
-      margin-top: 3vh;
-      line-height: 1.6em;
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 9;
+      -webkit-line-clamp: 7;
     }
   }
 
@@ -165,11 +161,9 @@ body {
     }
 
     &__description {
-      margin-top: 3vh;
       text-align: justify;
-      font-size: 1.15em;
       font-family: 'Inria Bold', serif;
-      line-height: 2em;
+      padding: 0 !important;
     }
 
     &__title {

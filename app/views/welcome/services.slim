@@ -1,7 +1,22 @@
 .container.services
   .info-container
-    .header-3.white-text= t('services.services')
-    h2.header-5.white-text= t('services.pick_right_stack')
-    .services-container
-      .description.white-text= t('services.learn_and_grow')
-      = image_tag 'services/flower.jpg'
+    .content
+      .header-3.white-text= t('services.services')
+      h2.header-5.white-text= t('services.pick_right_stack')
+      .services-container
+        .description.white-text= t('services.learn_and_grow')
+        = image_tag 'services/flower.jpg'
+  .info-container.web-dev.alabaster
+    .content
+      h2.header-3= t('services.web_dev_services')
+      .description= t('services.scale_your_business')
+    .web-app-services
+      .cards-carousel
+        - I18n.t('services.web_services').each do |s|
+          .card
+            .card__title-2= s[:title]
+            .card__icon.circled
+              = inline_svg "services/web_dev/#{s[:icon]}"
+            .card__description= s[:description]
+    a.button.main-gradient.white-text href='#'= t('services.learn_more')
+      
