@@ -249,12 +249,12 @@ body {
           margin-bottom: 3vh;
           border: 2px solid transparent;
           background: linear-gradient($main-lilac, $main-lilac) padding-box,
-                      linear-gradient(135deg, $main-violet, $main-blue)  border-box;
+                      $main-gradient  border-box;
           cursor: pointer;
           
           &:hover {
-            background: linear-gradient(135deg, $main-violet, $main-blue) padding-box,
-                        linear-gradient(135deg, $main-violet, $main-blue)  border-box;
+            background: $main-gradient padding-box,
+                        $main-gradient  border-box;
           }
         }
       }
@@ -456,6 +456,6 @@ body {
 
   .index-solutions__button {
     margin-top: 1vh;
-    background: linear-gradient(135deg, $main-violet, $main-blue);
+    background: $main-gradient;
   }
 }

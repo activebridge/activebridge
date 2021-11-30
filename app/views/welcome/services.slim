@@ -19,4 +19,15 @@
               = inline_svg "services/web_dev/#{s[:icon]}"
             .card__description= s[:description]
     a.button.main-gradient.white-text href='#'= t('services.learn_more')
-      
+  .info-container.custom-ror-dev
+    .content
+      h2.header-3.white-text= t('services.custom_ror_services')
+      .description.white-text= t('services.come_with_xp')
+    .cards-carousel 
+      - I18n.t('services.custom_ror_dev_services').each do |r|
+        .card
+          .card__title-2= r[:title]
+          .card__icon.circled
+            = inline_svg "services/custom_ror_dev/#{r[:icon]}"
+          .card__description= r[:description]
+    a.button.main-gradient.white-text href='#'= t('services.learn_more')

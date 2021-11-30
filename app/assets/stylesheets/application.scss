@@ -280,7 +280,7 @@ footer {
   transition: box-shadow .2s ease-in-out;
 
   &.main-gradient {
-    background: linear-gradient(135deg, $main-violet, $main-blue);
+    background: $main-gradient;
   }
 
   &:hover {
@@ -293,7 +293,7 @@ footer {
 }
 
 .info-container {
-  background: linear-gradient(135deg, $main-violet, $main-blue);
+  background: $main-gradient;
   padding-bottom: 7vh;
 
   .content {
