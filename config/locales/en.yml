@@ -1016,6 +1016,22 @@ en:
         icon: scalability.svg
         description: Using a microservice architecture, we provide easily expandable and scalable development solutions
     learn_more: Learn more
+    custom_ror_services: Custom Ruby on Rails services
+    come_with_xp: We come to you with 10+ years of Ruby on Rails experience. Ruby is a dynamic, interpretable, high-level programming language.
+                  Rails is a framework created for rapid web application development and deployment. We're able to create websites of any complexity.
+    custom_ror_dev_services:
+      - title: Ruby on Rails Migrations
+        icon: ror-migration.svg
+        description: We help you migrate legacy projects to the cloud and mobile-ready solutions, transform your organization with
+                     custom solutions that run quickly and smoothly on Ruby on Rails.
+      - title: Custom Ruby on Rails development
+        icon: ror.svg
+        description: We have a team of Senior/Middle RoR developers providing complete and effective web solutions built on reliable, robust,
+                     portable, and maintainable code for startups as well as enterprises.
+      - title: Ruby on Rails application delivery and support
+        icon: delivery-and-support.svg
+        description: We maintain the integrity of our code and provide regular technology updates, website speed optimization, backups,
+                     user experience improvements, security improvements, and more.     
   testimonials:
     title: Testimonials
     all:
