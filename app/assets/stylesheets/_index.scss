@@ -325,13 +325,6 @@ body {
         color: #5723B5;
         line-height: 1.6em;
       }
-
-      &-description {
-        text-align: justify;
-        font-size: 1.2em;
-        line-height: 1.8em;
-        margin-top: 3vh;
-      }
     }
 
     &__description {
@@ -391,15 +384,8 @@ body {
   }
 
   &-solutions {
-    position: relative;
-    height: 100vh;
-
-    &__photo {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-    }
+    background-image: url(asset_path('index/solutions-photo.jpg'));
+    background-size: cover;
 
     &__holder {
       position: relative;
@@ -446,7 +432,19 @@ body {
       display: inline;
       color: $main-blue;
     }
+
+    .button {
+      margin-bottom: 5vh;
+    }
   }
+}
+
+.index-services {
+  .index-services__item-description {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    margin-top: 3vh;
+  }  
 }
 
 .index-solutions__holder {

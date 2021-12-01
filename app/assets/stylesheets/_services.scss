@@ -61,7 +61,7 @@
       z-index: 1;
       background-image: url(asset_path('services/custom_ror_dev/custom-ror-dev-bg.jpg'));
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
 
       &:after {
         content: '';
@@ -72,6 +72,41 @@
         width: 100%;
         height: 100%;
         background: rgba($main-blue, 0.3);
+      }
+    }
+
+    &.mobile-dev {
+      background: radial-gradient(circle, rgba(212,184,234,1) 0%, rgba(255,255,255,1) 100%);
+
+      .content {
+        .cards-container {
+          .card {
+            background: rgba($white, 0.6);
+
+            .card__icon {
+              svg {
+                height: 12vh;
+              }
+            }
+
+            .card__description {
+              line-height: 1.8em;
+            }
+  
+            &:first-child {
+              .card__icon {
+                svg {
+                  height: 15vh;  
+                }  
+              }
+            }
+          }
+        }
+      }
+
+      .button {
+        width: 25%;
+        min-width: 350px;
       }
     }
   }

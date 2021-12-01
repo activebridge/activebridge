@@ -31,3 +31,15 @@
             = inline_svg "services/custom_ror_dev/#{r[:icon]}"
           .card__description= r[:description]
     a.button.main-gradient.white-text href='#'= t('services.learn_more')
+  .info-container.mobile-dev
+    .content
+      h2.header-3= t('services.mobile_dev_title')
+      .description= t('services.mobile_dev_description')
+      .cards-container
+        - I18n.t('services.mobile_dev_services').each do |m|
+          .card
+            .card__title-2.purple-heart= m[:title]
+            .card__icon
+              = inline_svg "services/mobile_dev_services/#{m[:icon]}"
+            .card__description= m[:description]
+    a.button href='#'= t('services.learn_more')
