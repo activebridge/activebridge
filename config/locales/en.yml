@@ -1031,7 +1031,21 @@ en:
       - title: Ruby on Rails application delivery and support
         icon: delivery-and-support.svg
         description: We maintain the integrity of our code and provide regular technology updates, website speed optimization, backups,
-                     user experience improvements, security improvements, and more.     
+                     user experience improvements, security improvements, and more.
+    mobile_dev_title: Mobile application development services
+    mobile_dev_description: We provide cross-platform mobile application development services so you can reach your customers on their
+                            favorite devices. There is no need to build separate apps for IOS, Android, and Windows, cross-platform apps
+                            run smoothly on multiple devices and platforms. We help your business to reduce upgrade costs, time-to-market,
+                            and to reach more users without loss of quali
+    mobile_dev_services:
+      - title: Launching an application on various platforms
+        icon: cross-platform.svg
+        description: Our developers write one source code for all platforms. You don’t need to hire separate tech teams for each platform,
+                     as it’s possible to launch and update an application by using a variety of cross-platform development tools.
+      - title: Flutter, Ionic & React Native for mobile app development
+        icon: flutter-ionic-react.svg
+        description: We use technologies that significantly speed up development time and cut time to market, which benefits everyone,
+                     from the dev team all the way to sales and marketing.
   testimonials:
     title: Testimonials
     all:
