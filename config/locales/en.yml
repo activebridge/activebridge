@@ -1046,6 +1046,18 @@ en:
         icon: flutter-ionic-react.svg
         description: We use technologies that significantly speed up development time and cut time to market, which benefits everyone,
                      from the dev team all the way to sales and marketing.
+    engagement_models_title: Flexible and client-oriented engagement models
+    engagement_models_description: No matter what engagement model you choose to cooperate with Active Bridge, you get an effective
+                                   and productive application development process either way.
+    engagement_models:
+      - title: Project Outsourcing (+Workflow)
+        description: Do you have an idea, but your development resource is limit? We're here to help. From MVP to scalable web applications,
+                     we provide full-cycle development and a transparent process including project planning, application development, QA,
+                     and others, depending on the agreement.
+      - title: Staff Augmentation (+Workflow)
+        description: Do you need web developers with a specific skillset for short-term tasks? Staff augmentation is a remote engagement
+                     model that allows you to extend your in-house team with professionals that work on your project full-time at the
+                     vendor's office.
   testimonials:
     title: Testimonials
     all:
