@@ -5,7 +5,7 @@
     = inline_svg 'index/simple-logo.svg', class: 'index-logo'
     .header-1.index-header= t('index.active_bridge')
     h1.header-2= t('index.professional_team')
-    p.description= t('index.teams_expertise')
+    p.description.with-padding= t('index.teams_expertise')
     a.button href=''= t('index.free_consultation')
     .awards-img
       = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
@@ -19,7 +19,7 @@
       .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
   .info-container.index-home
     .header-5.index-testimonials__header.white-text= t('index.help_startups')
-    .description.white-text= t('index.testimonials_description')
+    .description.white-text.with-padding= t('index.testimonials_description')
     .index-testimonials__container.cards-carousel data-current='0'
       - I18n.t('testimonials.all').each do |t|
         .card.index-testimonials__item
@@ -33,9 +33,9 @@
     .index-technologies
       h2.header-3= t('index.our_vision')
       h3.header-4= t('index.care_about_your_projects')
-      .description.index-technologies__description= t('index.dedicated_developers')
+      .description.justify-center.index-technologies__description= t('index.dedicated_developers')
       h2.header-4= t('index.core_technology')
-      .description.index-technologies__description= t('index.technologies_knowledge')
+      .description.justify-center.index-technologies__description= t('index.technologies_knowledge')
       .header-3= t('index.featured_technologies')
     .index-technologies__holder
       .index-technologies__photo
@@ -53,7 +53,7 @@
           = inline_svg 'icons/cross.svg'
   .index-services
     h2.header-2= t('index.expert_web_services')
-    .description.index-services__description= t('index.embedded_teams')
+    .description.with-padding.index-services__description= t('index.embedded_teams')
     .header-3= t('index.our_services')
     .index-services__container
       - I18n.t('index.services').each do |service|
@@ -76,7 +76,7 @@
   .index-solutions
     .index-solutions__holder
       h2.header-2= t('index.build_great_product')
-      .description= t('index.help_businesses')
+      .description.with-padding= t('index.help_businesses')
       .index-solutions__items.cards-carousel data-current='0'
         - I18n.t('index.solutions').each do |s|
           .card.index-solutions__item

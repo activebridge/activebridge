@@ -109,5 +109,37 @@
         min-width: 350px;
       }
     }
+
+    &.engagement-models {
+      position: relative;
+
+      .cards-container {
+        position: relative;
+        z-index: 2;
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: auto;
+          background: rgba($main-lilac, 0.3);
+
+          .button {
+            background: $main-lilac;
+            width: calc(100% - 7vw);
+          }
+        }
+      }
+
+      .engagement-models__image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 40%;
+        height: auto;
+        transform: translateY(15%);
+      }
+    }
   }
 }

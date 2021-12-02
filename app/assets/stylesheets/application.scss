@@ -477,9 +477,19 @@ footer {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.8em;
-  padding: 0 20%;
-  text-align: justify;
-  text-align-last: center;
+
+  &.justify-center {
+    text-align: justify;
+    text-align-last: center;
+  }
+
+  &.with-padding {
+    padding: 0 20%;
+  }
+
+  &.inria {
+    font-family: 'Inria Bold', serif;
+  }
 }
 
 .header_2 {

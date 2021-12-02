@@ -43,3 +43,16 @@
               = inline_svg "services/mobile_dev_services/#{m[:icon]}"
             .card__description= m[:description]
     a.button href='#'= t('services.learn_more')
+  .info-container.engagement-models
+    .content
+      .header-3.white-text= t('services.engagement_models_title')
+      .description.white-text.inria= t('services.engagement_models_description')
+      .cards-container
+        - I18n.t('services.engagement_models').each do |em|
+          .card
+            .card-content
+              .card__title-2.white-text= em[:title]
+              .card__description.white-text= em[:description]
+            .spacer
+            a.button href='#'= t('services.learn_more')
+    = image_tag 'services/laptop-backpack.png', class: 'engagement-models__image'
