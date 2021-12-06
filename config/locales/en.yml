@@ -1058,6 +1058,28 @@ en:
         description: Do you need web developers with a specific skillset for short-term tasks? Staff augmentation is a remote engagement
                      model that allows you to extend your in-house team with professionals that work on your project full-time at the
                      vendor's office.
+    ab_success: Active Bridge’s success is not only due to the quality of our developers’ work; it's down to attitude, team approach,
+               and the way we treat our clients.
+    negotiation_approach: Negotiation Approach
+    approaches:
+      - title: Initial Negotiations
+        description: Our development company starts with the initial brief you give to us. During the introductory call, we discuss your
+                     project goal in detail. This is where you need to clearly communicate your background, priorities, goals, and limitations.
+      - title: Analyzing inquiries and preparing a proposal
+        description: After the initial discussion, our remote developers prepare follow-up questions to clarify our understanding of your
+                     project needs. Also, our dedicated team prepares a proposal, describing prospective technology, budget, and time frames.
+                     If you request, we can negotiate an NDA.
+      - title: Estimating and scheduling
+        description: It’s the right moment for sharing all the related documentation, such as technical specifications, business use cases,
+                     wireframes, designer materials, and preliminary sketches that could be of use to the development team. Having come to
+                     understand your requirements we provide a Statement of Work or some other document that clearly describes prospective
+                     technology, budget, time frames, the tools that the full-stack developers use, the roles and responsibilities of the
+                     team members involved.
+      - title: Sign the agreement and start the development process
+        description: Our remote development teams follow the Agile project management methodology. For most projects, we use Scrum and
+                     can cover all development roles. We divide the routine development tasks into 2-week long sprints. Also, we provide
+                     daily stand-up meetings talking about the progress of the tasks, report roadblocks. You and your in-house team can also
+                     take an active part in the discussion and be fully involved in the development process.
   testimonials:
     title: Testimonials
     all:
