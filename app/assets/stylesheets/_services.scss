@@ -27,6 +27,79 @@
       .description {
         font-size: 1.4em;
       }
+
+      .approaches {
+        .approach {
+          display: flex;
+          min-height: 20vh;
+
+          .approach__image {
+            position: relative;
+            width: 50%;
+  
+            svg {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              max-height: 25vh;
+              z-index: 2;
+            }
+  
+            img {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              // width: 100%;
+              // max-height: 200%;
+            }
+          }
+  
+          .approach__content {
+            width: 50%;
+          }
+
+          &:first-child {
+            .approach__image {
+              img {
+                width: 100%;
+                transform: translateY(23%);
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .approach__image {
+              img {
+                width: 100%;
+                transform: translateY(10%);
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .approach__image {
+              img {
+                width: 110%;
+                transform: translate(-5%, 20%);
+              }
+            }
+          }
+        
+          &:nth-child(4) {
+            .approach__image {
+              img {
+                width: 80%;
+                transform: translate(9%, 21%);
+              }
+            }
+          }
+
+          &:nth-child(2n) {
+            flex-direction: row-reverse;
+          }
+        }
+      }
     }
 
     &.web-dev,

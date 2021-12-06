@@ -56,3 +56,16 @@
             .spacer
             a.button href='#'= t('services.learn_more')
     = image_tag 'services/laptop-backpack.png', class: 'engagement-models__image'
+  .info-container.alabaster
+    .content
+      .header-2= t('services.ab_success')
+      .header-3= t('services.negotiation_approach')
+      .approaches
+        - I18n.t('services.approaches').each_with_index do |a, i|
+          .approach
+            .approach__image
+              = inline_svg "services/approach/approach-#{i + 1}.svg"
+              = image_tag "services/approach/approach-#{i + 1}-bg.png"
+            .approach__content
+              .approach__title= a[:title]
+              .approach__description= a[:description]
