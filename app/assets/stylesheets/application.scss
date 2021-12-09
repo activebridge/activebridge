@@ -264,6 +264,10 @@ footer {
   line-height: 1.8em;
 }
 
+.inria {
+  font-family: 'Inria Bold', serif;
+}
+
 .button {
   display: inline-block;
   padding: 3vh 3.5vw;
@@ -485,10 +489,6 @@ footer {
 
   &.with-padding {
     padding: 0 20%;
-  }
-
-  &.inria {
-    font-family: 'Inria Bold', serif;
   }
 }
 

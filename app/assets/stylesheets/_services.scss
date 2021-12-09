@@ -22,7 +22,7 @@
   .description {
     padding: 0;
   }
-  
+
   .info-container {
     .content {
       .description {
@@ -34,7 +34,8 @@
 
         .approach {
           display: flex;
-          min-height: 25vh;
+          height: auto;
+          min-height: 20vh;
           margin-bottom: 5vh;
 
           .approach__image {
@@ -61,13 +62,15 @@
             width: 50%;
 
             .approach__title {
-              font-size: 1.5em;
+              font-size: 1.6em;
               text-align: left;
+              margin-bottom: 2vh;
             }
 
             .approach__description {
               font-size: 1.1em;
               text-align: left;
+              text-align: justify;
             }
           }
 
@@ -75,16 +78,42 @@
             .approach__image {
               img {
                 width: 100%;
-                transform: translateY(23%);
+              }
+
+              svg {
+                width: 85%;
+                left: 50%;
+                transform: translateX(-50%);
               }
             }
           }
 
           &:nth-child(2) {
             .approach__image {
+              width: 45%;
+              height: 30vh;
+
               img {
-                width: 100%;
-                transform: translateY(10%);
+                left: 0;
+                top: -8vh;
+                max-height: 30vh;
+              }
+
+              svg {
+                max-height: 30vh;
+                width: auto;
+                left: 20%;
+              }
+            }
+
+            .approach__content {
+              width: 55%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              .approach__description {
+                width: 85%;
               }
             }
           }
@@ -92,23 +121,41 @@
           &:nth-child(3) {
             .approach__image {
               img {
-                width: 110%;
-                transform: translate(-5%, 20%);
+                width: 100%;
+                transform: translateY(5%);
               }
             }
           }
         
           &:nth-child(4) {
+            height: 35vh;
+
             .approach__image {
               img {
-                width: 80%;
-                transform: translate(9%, 21%);
+                right: 0;
+                left: unset;
+                top: 0;
+                max-height: 35vh;
+                // width: 80%;
+                // transform: translate(9%, 21%);
+              }
+
+              svg {
+                right: 2vh;
+                left: unset;
+                top: 0;
+                max-height: 35vh;
+                width: auto;
               }
             }
           }
 
           &:nth-child(2n) {
             flex-direction: row-reverse;
+
+            .approach__description {
+              width: 90%;
+            }
           }
         }
       }
@@ -224,6 +271,18 @@
         width: 40%;
         height: auto;
         transform: translateY(15%);
+      }
+    }
+
+    &.approaches-section {
+      padding-top: 10vh;
+
+      .header-2 {
+        margin-bottom: 3vh;
+      }
+
+      .header-3 {
+        margin-bottom: 2vh;
       }
     }
   }
