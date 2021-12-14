@@ -100,6 +100,8 @@ en:
         title: Hire Full-Stack Developers in 48 hours | Active Bridge
         description:
           Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
+      expertise:
+        description: Enhancing Ruby on Rails with cutting edge technologies, for 9+ years we've been providing web development solutions that help businesses succeed.
       blog:
         title: IT Staffing Insights, Web, Software, Mobile Development Cases|Active Bridge Blog
         description: Browse our blog for advanced staff augmentation insights, web and software development tips, mobile design and development features, learn more
@@ -144,6 +146,9 @@ en:
         title: Hire Full-Stack Developers in 48 hours | Active Bridge, LLC
         description:
           Active Bridge is your full-stack development partner, providing IT staff augmentation services and helping to scale your team
+      expertise:
+        title: RoR App Development & Cloud Software Expertise | Active Bridge 
+        description: Enhancing Ruby on Rails with cutting edge technologies, for 9+ years we've been providing web development solutions that help businesses succeed.
     schema:
       /:
         '[
@@ -396,7 +401,7 @@ en:
             - section: Team
               link: /team
         - page: Expertise 
-          link: /
+          link: /expertise
           items:
         - page: Services
           link: /services
@@ -1080,6 +1085,8 @@ en:
                      can cover all development roles. We divide the routine development tasks into 2-week long sprints. Also, we provide
                      daily stand-up meetings talking about the progress of the tasks, report roadblocks. You and your in-house team can also
                      take an active part in the discussion and be fully involved in the development process.
+  expertise:
+    expertise: Expertise
   testimonials:
     title: Testimonials
     all:
