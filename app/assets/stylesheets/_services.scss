@@ -13,7 +13,9 @@
 
     img {
       width: 50%;
+      max-height: 60vh;
       object-fit: contain;
+      object-position: top;
     }
   }
 }
@@ -36,7 +38,7 @@
           display: flex;
           height: auto;
           min-height: 20vh;
-          margin-bottom: 5vh;
+          margin-bottom: 10vh;
 
           .approach__image {
             position: relative;
@@ -153,6 +155,16 @@
           &:nth-child(2n) {
             flex-direction: row-reverse;
 
+            .approach__content {
+              margin-left: 2%;
+            }
+
+            .approach__description {
+              width: 98%;
+            }
+          }
+
+          &:nth-child(2n - 1) {
             .approach__description {
               width: 90%;
             }

@@ -1,0 +1,31 @@
+.container {
+  .info-container {
+    .content {
+      .chart-container {
+        width: 100%;
+        padding: 6vh 3vw;
+        border-radius: 30px;
+        background: $white;
+        box-shadow: $main-shadow;
+
+        .chart-bar {
+          display: flex;
+          padding: 3vw;
+
+          &__item {
+            padding: 3vh 3vw;
+            font-size: 1.3em;
+
+            &:first-child {
+              border-radius: 15px 0 0 15px;
+            }
+
+            &:last-child {
+              border-radius: 0 15px 15px 0; 
+            }
+          }
+        }
+      }
+    }
+  }
+}

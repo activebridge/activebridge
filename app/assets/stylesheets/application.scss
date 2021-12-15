@@ -9,6 +9,7 @@
 @import 'about';
 @import 'index';
 @import 'how_we_work';
+@import 'expertise';
 
 @keyframes display {
   0% {
@@ -485,6 +486,10 @@ footer {
   &.justify-center {
     text-align: justify;
     text-align-last: center;
+  }
+
+  &.justify {
+    text-align: justify;
   }
 
   &.with-padding {

@@ -2,3 +2,18 @@
   .info-container.alabaster
     .content
       .header-3= t('expertise.expertise')
+      h2.header-2= t('expertise.expertise_in_ror')
+      .description.justify= t('expertise.main_description_1')
+      .chart-container
+        .chart-bar
+          - I18n.t('expertise.dev_levels').each do |e|
+            .chart-bar__item.inria style="background-color: #{e[:color]}; width: #{e[:percentage]};"
+              = e[:percentage]
+        .chart__items
+          - I18n.t('expertise.dev_levels').each do |ex|
+            .chart__item
+              .chart__item-color style="background-color: #{ex[:color]}"
+              .chart__item-asterisk
+                .chart__item-title= ex[:title]
+                .chart__item-description= ex[:description]
+      .description.justify= t('expertise.main_description_2')
