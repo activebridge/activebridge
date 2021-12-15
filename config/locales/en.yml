@@ -1087,6 +1087,31 @@ en:
                      take an active part in the discussion and be fully involved in the development process.
   expertise:
     expertise: Expertise
+    expertise_in_ror: Thanks to ten years of expertise in Ruby on Rails development, we can offer input when it comes to delivering a
+                      quality app from early stages to a successful product.
+    main_description_1: Innovation is at the heart of all success in the technology sector, and it’s essential that we constantly look
+                        for new ways to keep our web application and cloud software development solutions, operations, and services at
+                        the cutting edge. Our team maintains ongoing processes that foster innovation and keep our skills and expertise
+                        at the forefront of the industry, both internally and on the client-side.
+    dev_levels:
+      - title: Architect Developers
+        description: 8+ years of experience
+        color: '#84EA9E'
+        percentage: 20%
+      - title: Senior Developers
+        description: 5+ years of experience
+        color: '#F8E9A4'
+        percentage: 30%
+      - title: Middle Developers
+        description: 3+ years of experience
+        color: '#BD9CE1'
+        percentage: 40%
+      - title: Junior Developers
+        description: 1+ years of experience
+        color: '#AACEF2'
+        percentage: 10%
+    main_description_2: Our teams’ great advantage is 90% of the skillful full-stack developers have an in-depth knowledge of object-oriented
+                      programming and working background with projects based on complicated database systems like CRMs, data-centers, marketplaces, and analytical platforms. 
   testimonials:
     title: Testimonials
     all:
