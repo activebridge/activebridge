@@ -2,15 +2,15 @@
   .info-container {
     .content {
       .chart-container {
-        width: 100%;
-        padding: 6vh 3vw;
+        width: calc(100% - 12vw);
+        margin: 6vh 0;
+        padding: 6vh 6vw;
         border-radius: 30px;
         background: $white;
         box-shadow: $main-shadow;
 
         .chart-bar {
           display: flex;
-          padding: 3vw;
 
           &__item {
             padding: 3vh 3vw;
@@ -24,6 +24,52 @@
               border-radius: 0 15px 15px 0; 
             }
           }
+        }
+
+        .chart {
+          &__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 4vh;
+          }
+
+          &__item {
+            display: flex;
+            width: 45%;
+
+            &-color {
+              width: 45px;
+              height: 45px;
+              border-radius: 15px;
+            }
+
+            &-asterisk {
+              margin-left: 2vw;
+              display: flex;
+              align-items: baseline;
+              flex-direction: column;
+            }
+
+            &-title {
+              font-family: 'Inria Bold';
+              font-size: 1.6em;
+              margin-bottom: 2vh;
+            }
+
+            &-description {
+              font-size: 1.2em; 
+            }
+
+            &:first-child,
+            &:nth-child(2) {
+              margin-bottom: 2vh;
+            }
+            
+            &:nth-child(2n) {
+              justify-content: flex-end;
+            }
+          }   
         }
       }
     }
