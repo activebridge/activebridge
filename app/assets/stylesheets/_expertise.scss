@@ -5,9 +5,9 @@
         width: calc(100% - 12vw);
         margin: 6vh 0;
         padding: 6vh 6vw;
-        border-radius: 30px;
+        border-radius: 20px;
         background: $white;
-        box-shadow: $main-shadow;
+        box-shadow: 2px 1px 11px 0px #b7b7b7;
 
         .chart-bar {
           display: flex;
@@ -15,6 +15,7 @@
           &__item {
             padding: 3vh 3vw;
             font-size: 1.3em;
+            box-shadow: inset -7px -7px 11px -6px #8f8f8f;
 
             &:first-child {
               border-radius: 15px 0 0 15px;
@@ -42,6 +43,7 @@
               width: 45px;
               height: 45px;
               border-radius: 15px;
+              box-shadow: inset -7px -7px 11px -6px #8f8f8f;
             }
 
             &-asterisk {
