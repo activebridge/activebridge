@@ -459,43 +459,78 @@ en:
           address: Marshala Krasovskogo, 8 Street
           post: Cherkasy 18000
   technologies:
-    - angular
-    - aws
-    - backbone
-    - bootstrap
-    - coffeescript
-    - css
-    - digital_ocean
-    - elasticsearch
-    - engine_yard
-    - engine_yard_seeklogo
-    - font_awesome
-    - foundation
-    - git
-    - github
-    - haml
-    - heroku
-    - html5
-    - ionic
-    - jquery
-    - js
-    - mongodb
-    - mysql
-    - postgresql
-    - puma
-    - react
-    - ror
-    - rspec
-    - ruby
-    - rubygems
-    - sass
-    - shopify
-    - sidekiq
-    - slim
-    - sql
-    - svg
-    - typescript
-    - xml
+    - name: Angular JS
+      icon: angular
+    - name: AWS 
+      icon: aws
+    - name: BackboneJs 
+      icon: backbone
+    - name: Bootstrap 
+      icon: bootstrap
+    - name: Coffeescript 
+      icon: coffeescript
+    - name: CSS/CSS3 
+      icon: css
+    - name: DigitalOcean
+      icon: digital_ocean
+    - name: Elasticsearch
+      icon: elasticsearch
+    - name: Engine Yarn
+      icon: engine_yard
+    - name: Font awesome 
+      icon: font_awesome
+    - name: Foundation
+      icon: foundation
+    - name: Gitk
+      icon: git
+    - name: Github 
+      icon: github
+    - name: Haml
+      icon: haml
+    - name: Heroku
+      icon: heroku
+    - name: HTML/HTML5
+      icon: html5
+    - name: IONIC
+      icon: ionic
+    - name: jQuery
+      icon: jquery
+    - name: JS
+      icon: js
+    - name: MongoDB 
+      icon: mongodb
+    - name: MySQL
+      icon: mysql
+    - name: PostgreSQL
+      icon: postgresql
+    - name: PUMA
+      icon: puma
+    - name: React Native
+      icon: react
+    - name: Ruby on Rails
+      icon: ror
+    - name: Rspec
+      icon: rspec
+    - name: Ruby
+      icon: ruby
+    - name: RubyGems
+      icon: rubygems
+    - name: Sass
+      icon: sass
+    - name: Shopify
+      icon: shopify
+    - name: Sidekiq
+      icon: sidekiq
+    - name: Slim
+      icon: slim
+    - name: SQL
+      icon: sql
+    - name: SVG 
+      icon: svg
+    - name: TypeScript 
+      icon: typescript
+    - name: XML
+      icon: xml
   welcome:
     about:
       title: About
@@ -1111,7 +1146,12 @@ en:
         color: '#AACEF2'
         percentage: 10%
     main_description_2: Our teams’ great advantage is 90% of the skillful full-stack developers have an in-depth knowledge of object-oriented
-                      programming and working background with projects based on complicated database systems like CRMs, data-centers, marketplaces, and analytical platforms. 
+                      programming and working background with projects based on complicated database systems like CRMs, data-centers, marketplaces, and analytical platforms.
+    core_technology: Our core technology is Ruby on Rails, we see a lot of potential in it, especially mixing ROR with React, Angular, and other add-ons. 
+    technologies: Technologies
+    technologies_description: We’ve been providing startups, small and medium-sized enterprises (SMEs) in both North America and Eastern Europe
+                              with custom web application development services for 8+ years. We are used to working remotely, so we know that
+                              the key to making things happen is good communication and an industry-focused development approach.
   testimonials:
     title: Testimonials
     all:
