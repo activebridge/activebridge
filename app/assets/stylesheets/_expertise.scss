@@ -1,4 +1,4 @@
-.container {
+.container.expertise {
   .info-container {
     .content {
       .chart-container {
@@ -13,7 +13,7 @@
           display: flex;
 
           &__item {
-            padding: 3vh 3vw;
+            padding: 3vh 1vw;
             font-size: 1.3em;
             box-shadow: inset -7px -7px 11px -6px #8f8f8f;
 
@@ -72,6 +72,32 @@
               justify-content: flex-end;
             }
           }   
+        }
+      }
+
+      .description {
+        font-size: 1.1em;
+      }
+    }
+
+    &.technologies {
+      background-image: url(asset_path('expertise/technologies-bg.jpg'));
+      background-size: cover;
+
+      .content {
+        .header-3 {
+          margin-top: 5vh;
+          font-size: 1.5em;
+        }
+        
+        table.technologies {
+          margin: 5vh 0;
+
+          tr {
+            td {
+              width: 16.6%;
+            }
+          }
         }
       }
     }

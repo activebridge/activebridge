@@ -497,6 +497,49 @@ footer {
   }
 }
 
+table.technologies {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+
+  tbody {
+    tr {
+      width: 100%;
+
+      td {
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;  
+        padding: 3vh 1vw;
+
+        svg {
+          width: auto;
+          height: 4vh;
+          max-width: 140px;
+        }
+
+        &:first-child {
+          border-left: 1px solid black;
+          border-bottom: 1px solid black;
+          border-right: 1px solid black;
+        }
+
+      }
+
+      &:first-of-type {
+        td {
+          border-top: 1px solid black;
+          border-right: 1px solid black;
+          border-bottom: 1px solid black;
+          
+          &:first-child {
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}
+
 .header_2 {
   color: $main-blue;
   text-transform: uppercase;
