@@ -89,13 +89,21 @@
           margin-top: 5vh;
           font-size: 1.5em;
         }
-        
+
         table.technologies {
           margin: 5vh 0;
 
           tr {
             td {
+              position: relative;
               width: 16.6%;
+
+              .technology-name {
+                position: absolute;
+                left: 5px;
+                bottom: 0;
+                font-size: 0.8em;
+              }
             }
           }
         }
