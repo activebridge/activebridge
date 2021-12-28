@@ -20,6 +20,21 @@
   .info-container.technologies
     .content
       h2.header-2= t('expertise.core_technology')
-      .header-3= t('expertise.technologies')
+      .header-3.small-text= t('expertise.technologies')
       = render 'shared/technologies', step: 6, name: true
       .description.justify= t('expertise.technologies_description')
+  .info-container.alabaster.industries
+    .content
+      .header-3= t('expertise.projects').html_safe
+      .header-2= t('expertise.custom_dev_expertise')
+      .header-3.small-text= t('expertise.industries_title')
+    .cards-carousel 
+      - I18n.t('expertise.industries').each do |e|
+        .card
+          .card__title-2= e[:title]
+          .card__icon.circled.circled-small
+            = inline_svg "#{e[:icon]}.svg"
+          .card__subtitle= t('expertise.devs_work_on')
+          ul
+            - e[:items].each do |i|
+              li= i

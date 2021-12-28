@@ -422,6 +422,11 @@ footer {
         }
       }
 
+      &__subtitle {
+        font-size: 1.2em;
+        font-style: italic;
+      }
+
       &__icon {
         height: 15vh;
         
@@ -437,6 +442,16 @@ footer {
           svg {
             width: 9vh;
           }
+
+          &-small {
+            width: 12vh;
+            height: 12vh;
+            border-radius: 6vh;
+
+            svg {
+              width: 6vh;
+            }
+          }
         }
       }
 
@@ -445,6 +460,13 @@ footer {
         text-align: justify;
         font-size: 1.2em;
         line-height: 2em;
+      }
+
+      ul {
+        li {
+          text-align: left;
+          font-size: 1.2em;
+        }
       }
 
       &:first-child,
