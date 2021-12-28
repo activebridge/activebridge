@@ -1128,6 +1128,77 @@ en:
                         for new ways to keep our web application and cloud software development solutions, operations, and services at
                         the cutting edge. Our team maintains ongoing processes that foster innovation and keep our skills and expertise
                         at the forefront of the industry, both internally and on the client-side.
+    projects: "<b>40+</b> Projects"
+    custom_dev_expertise: Custom application development expertise in specific industries
+    industries_title: Industries
+    devs_work_on: What our developers worked on
+    industries:
+      - title: InsurTech
+        icon: 'index/solutions/health-insurance'
+        items: 
+          - Cloud-based data storage
+          - Customizable dashboards
+          - Integrations with third-party services, including wearable tech
+          - Identity verification pattern
+          - Fast-responding system for processing users’ claims
+      - title: Finance and Banking
+        icon: 'index/solutions/bank'
+        items: 
+          - Fraud-prevention tools
+          - Personalization tools
+          - In-built support tools
+          - Multi-currency operations support
+          - Advanced payment processing
+          - Management and processes automation
+          - Tools for reporting and analytics
+          - Customizable dashboards
+      - title: Healthcare
+        icon: 'index/solutions/caduceus'
+        items: 
+          - Cloud-based data storage
+          - HIPAA-compliant secure messaging, forms, and mobile Rx orders
+          - Order controls, including C2s
+          - Integrations
+          - Multi-device synchronization
+      - title: Logistic & Transportation
+        icon: 'index/solutions/caduceus'
+        items: 
+          - Live status tracking
+          - A CRM system
+          - The payment gateway
+          - Alerts & notifications
+          - Process automation
+          - Route optimization systems
+          - Reporting & Analytics tools
+      - title: E-commerce & Marketplaces
+        icon: 'index/solutions/caduceus'
+        items: 
+          - Cloud-based data storage
+          - CRM development & integrations
+          - Verification and security systems
+          - Communication tools
+          - An order management system
+          - Delivery tracking tools
+          - Payment processors
+          - Rating & review APIs
+      - title: EdTech
+        icon: 'index/solutions/caduceus'
+        items: 
+          - Cloud-based data storage
+          - Data migration
+          - User management and CRM
+          - Analytics and QoE/QoS monitoring
+          - Payment and billing
+          - Video streaming
+      - title: FoodTech
+        icon: 'index/solutions/caduceus'
+        items: 
+          - Delivery tracking
+          - Scheduling tools
+          - Personalization tools
+          - The payment gateway
+          - Intuitive UX design
+          - Alerts & notifications
     dev_levels:
       - title: Architect Developers
         description: 8+ years of experience
