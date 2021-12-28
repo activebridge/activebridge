@@ -1,0 +1,12 @@
+- name = name || false
+- technologies = I18n.t('technologies')
+table.technologies
+  - (0..technologies.length).step(step) do |index|
+    tr
+      - (0..step - 1).each do |el|
+        - if index + el <= technologies.length - 1
+          td
+            = inline_svg "technologies/#{technologies[index + el]&.dig(:icon)}.svg", class: 'index-technologies__icon'
+            - if name
+              .technology-name= I18n.t('technologies')[index + el]&.dig(:name)
+          

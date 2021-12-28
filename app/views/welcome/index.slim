@@ -41,12 +41,7 @@
       .index-technologies__photo
         = image_tag 'index/technologies_photo.jpeg'
       .index-technologies__items
-        table.technologies
-          - (0..I18n.t('technologies').length).step(3) do |index|
-            tr
-              td= inline_svg "index/technologies/#{I18n.t('technologies')[index]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              td= inline_svg "index/technologies/#{I18n.t('technologies')[index + 1]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              td= inline_svg "index/technologies/#{I18n.t('technologies')[index + 2]&.dig(:icon)}.svg", class: 'index-technologies__icon'
+        = render 'shared/technologies', step: 3
         .show-all-technologies
           button.button.technologies-toggle#show-all-technologies onclick="toggleTechnologies()"= t('index.learn_more')
         button.technologies-close#close-technologies onclick="toggleTechnologies()"

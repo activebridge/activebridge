@@ -21,26 +21,5 @@
     .content
       h2.header-2= t('expertise.core_technology')
       .header-3= t('expertise.technologies')
-      table.technologies
-        - (0..I18n.t('technologies').length).step(6) do |index|
-          tr
-            td
-              = inline_svg "index/technologies/#{I18n.t('technologies')[index]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              .technology-name= I18n.t('technologies')[index]&.dig(:name)
-            td
-              = inline_svg "index/technologies/#{I18n.t('technologies')[index + 1]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              .technology-name= I18n.t('technologies')[index + 1]&.dig(:name)
-            td
-              = inline_svg "index/technologies/#{I18n.t('technologies')[index + 2]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              .technology-name= I18n.t('technologies')[index + 2]&.dig(:name)              
-            td
-              = inline_svg "index/technologies/#{I18n.t('technologies')[index + 3]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              .technology-name= I18n.t('technologies')[index + 3]&.dig(:name)            
-            td
-              = inline_svg "index/technologies/#{I18n.t('technologies')[index + 4]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              .technology-name= I18n.t('technologies')[index + 4]&.dig(:name)            
-            td
-              = inline_svg "index/technologies/#{I18n.t('technologies')[index + 5]&.dig(:icon)}.svg", class: 'index-technologies__icon'
-              .technology-name= I18n.t('technologies')[index + 5]&.dig(:name)
-
+      = render 'shared/technologies', step: 6, name: true
       .description.justify= t('expertise.technologies_description')
