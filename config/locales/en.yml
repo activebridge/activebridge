@@ -1097,19 +1097,72 @@ en:
       business-analytics: Business Analytics
       insights: Insights
     recommended: RECOMMENDED POSTS
-    footer:
-      pages:
-        services: Services
-        team: Team
-        portfolio: Portfolio
-      title: Active Bridge is a premium web development company, providing Ruby on Rails technology and integrating design and search optimization practice to deliver rapid, cost-effective results in an iterative manner.
-      company: Company
-      contacts: Contacts
+  footer:
+    navigation:
+      links:
+        - page: About
+          link: /
+          items:
+            - section: Team
+              link: /team
+        - page: Expertise 
+          link: /expertise
+          items:
+        - page: Services
+          link: /services
+          items:
+            - section: Web Development
+              link: /services#web_development
+            - section: RoR development
+              link: /services#ror_development
+            - section: Mobile App Development
+              link: /services#mobile_app_development
+            - section: Staff Augmentation
+              link: /services#staff_augmentation
+            - section: Project Development
+              link: /services#project_development
+        - page: Solutions
+          link: /
+          items: 
+            - section: Healthcase
+              link: /
+            - section: SaaS
+              link: /
+            - section: Marketplace
+              link: /
+            - section: E-commerce
+              link: /
+            - section: Logistic / Travel
+              link: /
+            - section: Education / Fintech
+              link: /
+      reviews: Reviews
+      blog: Blog
+      social_icons:
+        - link: https://www.linkedin.com/company/active-bridge
+          icon: linkedin
+        - link: https://github.com/activebridge
+          icon: github
+        - link: https://www.facebook.com/ActiveBridgeTeam
+          icon: facebook
+        - link: https://www.instagram.com/active.bridge
+          icon: instagram
+        - link: https://twitter.com/activebridge
+          icon: twitter
+    contact_info:
       email: contact@active-bridge.com
-      mobile: '+18888053503'
-      contact_us: Contact Us
-      follow: Stay tuned
-      copyright: '© 2018 Active Bridge, LLC'
+      phone_number: '+18888053503'
+      copyright: © 2013-2021, Active Bridge LLC
+      entities:
+        - entity: USA
+          name: Active Bridge, LLC
+          address: 4644 North 22nd Street
+          post: Phoenix, AZ 85016
+          country: United States
+        - entity: Ukraine
+          name: Active Bridge, LLC
+          address: Marshala Krasovskogo, 8 Street
+          post: Cherkasy 18000
   how_we_work:
     title: How we work
     description:

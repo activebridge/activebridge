@@ -1,20 +1,28 @@
 footer.footer
-  .footer-title
-    p= t('blog.footer.title')
-  .footer-links
-    .footer-pages
-      h4= t('blog.footer.company')
-      ul.footer-page-list
-        - I18n.t('blog.footer.pages').each_pair do |key, value|
-          li= link_to value, page_url(key), target: '_blank'
-    .footer-contacts
-      h4= t('blog.footer.contacts')
-      a href="tel:#{t('blog.footer.mobile')}"= t('blog.footer.mobile')
-      a href="mailto:#{t('blog.footer.email')}"= t('blog.footer.email')
-      = link_to t('blog.footer.contact_us'), page_url(:contact), target: '_blank', class: 'contact'
-    .spacer
-    .footer-right
-      h4= t('blog.footer.follow')
-      = render 'social_icons', klass: :xl
-  .footer-bottom
-    p= t('blog.footer.copyright')
+  .navigation
+    - I18n.t('footer.navigation.links').each do |n|
+      .navigation__container
+        a.footer__item.bold href=n[:link] = n[:page]
+        - if n[:items]
+          - n[:items].each do |item|
+            a.footer__item href=item[:link] = item[:section]
+    .navigation__container
+      a.footer__item.bold= t('footer.navigation.reviews')
+      a.footer__item.bold href="#{t('footer.navigation.blog').downcase}" = t('footer.navigation.blog')
+      .navigation__social-icons
+        - I18n.t('footer.navigation.social_icons').each do |item|
+          a href=item[:link]
+            = inline_svg "social_icons/#{item[:icon]}.svg"
+  .contact-info
+    .contact-info__container
+      .contact-info__contacts
+        a.footer__item.bold href='email: #{t("footer.contact_info.email")}'= t('footer.contact_info.email')
+        a.footer__item.bold href='tel: #{t("footer.contact_info.phone_number")}'= t('footer.contact_info.phone_number')
+      .footer__copyright= t('footer.contact_info.copyright')
+    - I18n.t('footer.contact_info.entities').each do |e|
+      .contact-info__container
+        .footer__item.bold= e[:entity]
+        .footer__item= e[:name]
+        .footer__item= e[:address]
+        .footer__item= e[:post]
+        .footer__item= e[:country] if e[:country]
