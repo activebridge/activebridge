@@ -1,14 +1,6 @@
-header.blog
-  nav
-    .nav-left
-      = link_to root_url, class: 'main-site-link' do
-        = inline_svg 'index/logo.svg', class: 'blog-logo'
-      span Blog
-    .nav-right
-      .menu-button tabindex='-1'
-        = inline_svg 'icons/hamburger.svg'
-      .menu-items
-        => link_to_unless_current 'All Posts', articles_path, class: 'menu-item articles'
-        - Article.categories.keys.each do |c|
-          => link_to_unless_current t("blog.categories.#{c}"), category_articles_path(c), class: 'menu-item'
-        = link_to t('blog.footer.contact_us'), page_url(:contact, anchor: :contact), target: '_blank', class: 'menu-item contact-us'
+header.deskop-only 
+  a.logotype href='/'
+    = inline_svg 'logo.svg'
+  .header-navbar
+    - I18n.t('navbar.items').each do |i|
+      = link_to i, "/#{i}", class: "header-navbar__link #{current_page?('/' + i) ? 'active' : ''}"
