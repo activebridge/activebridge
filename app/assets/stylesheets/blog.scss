@@ -32,7 +32,7 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  color: $white;
+  color: $black;
   font-family: 'Cera Regular', serif;
   overflow-x: hidden;
   margin: 0px;
@@ -237,46 +237,86 @@ footer {
       line-height: 1.5em;
     }
 
-    .articles-themes {
-      display: flex;
-      margin-top: 8vh;
+    .articles {
+      &-themes {
+        display: flex;
+        margin-top: 8vh;
 
-      .themes {
-        &-container,
-        &-image {
-          width: 50%;
-        }
+        .themes {
+          &-container,
+          &-image {
+            width: 50%;
+          }
 
-        &-title {
-          margin-bottom: 3vh;
-          color: $black;
-          font-size: 1.2vmax;
-          text-transform: uppercase;
-          font-weight: bold;
-        }
+          &-title {
+            margin-bottom: 3vh;
+            color: $black;
+            font-size: 1.2vmax;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
 
-        &-container {
-          ul.themes {
+          &-container {
+            ul.themes {
+              display: flex;
+              flex-direction: column;
+              padding: 0;
+              list-style-position: inside;
+
+              .theme {
+                margin-bottom: 2vh;
+                color: $black;
+                font-size: 1.1vmax;
+              }
+            }
+          }
+
+          &-image {
             display: flex;
-            flex-direction: column;
-            padding: 0;
-            list-style-position: inside;
+            align-items: center;
+            justify-content: flex-end;
 
-            .theme {
-              margin-bottom: 2vh;
-              color: $black;
-              font-size: 1.1vmax;
+            svg {
+              width: 65%;
             }
           }
         }
+      }
 
-        &-image {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
+      &-categories {
+        position: sticky;
+        top: 70px;
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        margin-top: 5vh;
+        padding: 15px 0;
+        background: transparent;
 
-          svg {
-            width: 65%;
+        .categories {
+          margin-left: 3vw;
+
+          &-title {
+            font-size: 0.9vmax;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          
+          a {
+            margin-left: 15px;
+            padding: 5px 20px;
+            border: 1px solid $black;
+            border-radius: 30px;
+            font-size: 0.65vmax;
+            color: $black;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color, border, .2s ease;
+
+            &:active, &.selected {
+              color: $main-blue;
+              border: 1px solid $main-blue;
+            }
           }
         }
       }
