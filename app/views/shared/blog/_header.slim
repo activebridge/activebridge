@@ -4,3 +4,4 @@ header.deskop-only
   .header-navbar
     - I18n.t('navbar.items').each do |i|
       = link_to i, "/#{i}", class: "header-navbar__link #{current_page?('/' + i) ? 'active' : ''}"
+    a.header-navbar__link.contact-us= t('navbar.contact_us')

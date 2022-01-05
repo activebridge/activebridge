@@ -12,6 +12,10 @@ $dark-font: #443848;
 $content-table-bg: #efeefa;
 $content-table-color: #a5a5a5;
 $active-header: #7723cf;
+$main-violet: #aa30be;
+$main-blue: #5723b5;
+$main-gradient: linear-gradient(135deg, $main-violet, $main-blue);
+
 
 * {
   box-sizing: border-box;
@@ -49,6 +53,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 5;
+  height: 70px;
   width: 100%;
   background-color: $white;
   box-shadow: 0 0px 8px 2px #979797;
@@ -61,6 +66,8 @@ header {
 
   a.logotype {
     padding: 10px;
+    height: 100%;
+    
     svg {
       width: 50px;
     }
@@ -71,7 +78,7 @@ header {
   &__link {
     margin: 0 1.5vw;
     color: $black;
-    font-size: 0.9em;
+    font-size: 0.9vmax;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.4em;
@@ -84,6 +91,17 @@ header {
     &:hover {
       color: $main-violet;
     }
+  }
+
+  .contact-us {
+    color: $main-violet;
+    padding: 10px 35px;
+    // background: $main-gradient  border-box,
+                // transparent padding-box;
+    border: 2px solid $main-violet;
+    border-radius: 40px;
+    font-size: 0.7vmax;
+    box-shadow: 0 0 10px -2px $main-violet;
   }
 }
 
@@ -200,6 +218,7 @@ footer {
 
 .main {
   position: relative;
+  padding: 70px 15% 35px 15%;
   scroll-behavior: smooth;
   .title {
     margin: 0vmax 0 0.6vmax;
@@ -448,10 +467,6 @@ a.article {
       }
     }
   }
-}
-
-.main {
-  padding: 0px 103px 25px 103px;
 }
 
 .link-group {
@@ -771,7 +786,7 @@ a.article {
     padding: 20px 40px;
   }
   .main {
-    padding: 20px 40px 20px 40px;
+    padding: 70px 40px 20px 40px;
 
     .posts {
       .article {
@@ -1002,7 +1017,7 @@ a.article {
   }
 
   .main {
-    padding: 20px 20px 50px 20px;
+    padding: 70px 20px 50px 20px;
   }
 
   a.article:hover .article-rollover {

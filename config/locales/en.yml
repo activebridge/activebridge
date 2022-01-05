@@ -10,7 +10,6 @@ en:
     Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
   navbar:
-    navbar:
     items:
       - about
       - expertise
@@ -18,7 +17,6 @@ en:
       - solutions
       - faq
       - blog
-      - contacts
     links:
       - title:
           name: How we work
@@ -66,6 +64,7 @@ en:
           link: '/contact'
         links:
         icon: 'navbar/contact.svg'
+    contact_us: Contact us
   meta:
     origin_url: https://activebridge.org
     pages:
@@ -1092,7 +1091,7 @@ en:
                 barriers getting in the way.
   blog:
     categories:
-      web-development: Web Development
+      engineering: Engineering
       staff-augmentation: Staff Augmentation
       business-analytics: Business Analytics
       insights: Insights
