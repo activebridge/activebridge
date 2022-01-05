@@ -1096,6 +1096,14 @@ en:
       business-analytics: Business Analytics
       insights: Insights
     recommended: RECOMMENDED POSTS
+    blog: Blog
+    blog_launch: We launched this blog as a repository of helpful content shared by our experts and partners.
+    collection_of_articles: A collection of articles on
+    articles_themes:
+      - Ruby on Rails and add-on technologies,
+      - Agile management methodology,
+      - UX/UI,
+      - Web development best practises.
   footer:
     navigation:
       links:
