@@ -5,8 +5,7 @@ html
     = render 'shared/gtag_iframe'
     = render 'shared/blog/header'
     main.main
-      .yield
-        = yield
+      = yield
     .spacer
     = render 'shared/blog/footer'
     = javascript_include_tag :blog

@@ -15,6 +15,8 @@ $active-header: #7723cf;
 $main-violet: #aa30be;
 $main-blue: #5723b5;
 $main-gradient: linear-gradient(135deg, $main-violet, $main-blue);
+$alabaster: #F7F7F7;
+$mauve: #D6BCFF;
 
 
 * {
@@ -106,7 +108,7 @@ header {
 }
 
 footer {
-    width: 100%;
+  width: 100%;
 
   .navigation {
     position: relative;
@@ -218,8 +220,69 @@ footer {
 
 .main {
   position: relative;
-  padding: 70px 15% 35px 15%;
+  padding: 70px 0 35px 0;
   scroll-behavior: smooth;
+  background: linear-gradient(to bottom, $main-blue, 5%, $alabaster);
+
+  .content-holder {
+    padding: 0 20%;
+
+    .header-1, .header-2 {
+      margin-top: 5vh;
+      text-align: center;
+    }
+    
+    .header-2 {
+      padding: 0 20%;
+      line-height: 1.5em;
+    }
+
+    .articles-themes {
+      display: flex;
+      margin-top: 8vh;
+
+      .themes {
+        &-container,
+        &-image {
+          width: 50%;
+        }
+
+        &-title {
+          margin-bottom: 3vh;
+          color: $black;
+          font-size: 1.2vmax;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        &-container {
+          ul.themes {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            list-style-position: inside;
+
+            .theme {
+              margin-bottom: 2vh;
+              color: $black;
+              font-size: 1.1vmax;
+            }
+          }
+        }
+
+        &-image {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          svg {
+            width: 65%;
+          }
+        }
+      }
+    }
+  }
+
   .title {
     margin: 0vmax 0 0.6vmax;
     font-size: 1.5vmax;
@@ -237,6 +300,20 @@ footer {
     color: $main-blue;
   }
 }
+
+.header-1 {
+  color: $black;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 0.6em;
+}
+
+.header-2 {
+  color: $black;
+  font-size: 1.8em;
+  font-family: 'Inria Bold', serif;
+}
+
 .popular {
   display: flex;
   justify-content: space-between;
@@ -786,8 +863,6 @@ a.article {
     padding: 20px 40px;
   }
   .main {
-    padding: 70px 40px 20px 40px;
-
     .posts {
       .article {
         width: 100%;
@@ -1010,14 +1085,6 @@ a.article {
 
   .nav-left {
     font-size: 14px;
-  }
-
-  main {
-    padding: 10px 25px 50px 25px;
-  }
-
-  .main {
-    padding: 70px 20px 50px 20px;
   }
 
   a.article:hover .article-rollover {
