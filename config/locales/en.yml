@@ -105,16 +105,16 @@ en:
         title: IT Staffing Insights, Web, Software, Mobile Development Cases|Active Bridge Blog
         description: Browse our blog for advanced staff augmentation insights, web and software development tips, mobile design and development features, learn more
         categories:
-          web-development:
+          engineering:
             title: Learn About APIs, OOP, Browsers, Encryption & More | Active Bridge Blog
             description: Web system and web application development blog that has articles and tutorials about the latest web technics and possibilities
-          staff-augmentation:
+          pm-and-team-management:
             title: Learn About IT Staff Augmentation Solutions to Achieve Your Business Goals | Active Bridge Blog
             description: Staff Augmentation services enables you to find qualified and experienced people who can seamlessly work as your team. Learn more
-          business-analytics:
+          business-and-growth:
             title: Learn about business analytics methods to make better decisions | Active Bridge Blog
             description: This business analytics blog introduces quantitative methods to analyze data and make better decisions. Learn more
-          insights:
+          inside-ab:
             title: Learn about Company Events, Programs and Achievements | Active Bridge
             description: Latest information about company events, programs, achievements and much more. Keep in touch
         image_alt_tag: IT staffing services, dedicated development teams | Active Bridge LLC
@@ -1092,9 +1092,9 @@ en:
   blog:
     categories:
       engineering: Engineering
-      staff-augmentation: Staff Augmentation
-      business-analytics: Business Analytics
-      insights: Insights
+      pm-and-team-management: Pm & Team management
+      business-and-growth: Business & Growth
+      inside-ab: Inside AB
     recommended: RECOMMENDED POSTS
     blog: Blog
     blog_launch: We launched this blog as a repository of helpful content shared by our experts and partners.

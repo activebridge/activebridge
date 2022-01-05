@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Articles page', type: :feature do
-  let!(:ror_article) { create(:article, title: 'ror-development-article', category: :'web-development') }
-  let!(:insights_article) { create(:article, title: 'insights-article', category: :insights) }
+  let!(:ror_article) { create(:article, title: 'ror-development-article', category: :engineering) }
+  let!(:insights_article) { create(:article, title: 'insights-article', category: :'inside-ab') }
 
   scenario do
     visit articles_path
@@ -15,7 +15,7 @@ RSpec.feature 'Articles page', type: :feature do
   end
 
   scenario do
-    visit category_articles_path(category: :insights)
+    visit category_articles_path(category: :'inside-ab')
     expect(page).to have_content(insights_article.title)
   end
 end
