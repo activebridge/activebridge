@@ -17,7 +17,7 @@ $main-blue: #5723b5;
 $main-gradient: linear-gradient(135deg, $main-violet, $main-blue);
 $alabaster: #F7F7F7;
 $mauve: #D6BCFF;
-
+$dusty-gray: #979797;
 
 * {
   box-sizing: border-box;
@@ -58,7 +58,7 @@ header {
   height: 70px;
   width: 100%;
   background-color: $white;
-  box-shadow: 0 0px 8px 2px #979797;
+  box-shadow: 0 0px 8px 2px $dusty-gray;
 
   &.home {
     display: flex;
@@ -236,87 +236,92 @@ footer {
       padding: 0 20%;
       line-height: 1.5em;
     }
+  }
 
-    .articles {
-      &-themes {
-        display: flex;
-        margin-top: 8vh;
+  .articles {
+    &-themes {
+      display: flex;
+      margin-top: 8vh;
 
-        .themes {
-          &-container,
-          &-image {
-            width: 50%;
-          }
+      .themes {
+        &-container,
+        &-image {
+          width: 50%;
+        }
 
-          &-title {
-            margin-bottom: 3vh;
-            color: $black;
-            font-size: 1.2vmax;
-            text-transform: uppercase;
-            font-weight: bold;
-          }
+        &-title {
+          margin-bottom: 3vh;
+          color: $black;
+          font-size: 1.2vmax;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
 
-          &-container {
-            ul.themes {
-              display: flex;
-              flex-direction: column;
-              padding: 0;
-              list-style-position: inside;
-
-              .theme {
-                margin-bottom: 2vh;
-                color: $black;
-                font-size: 1.1vmax;
-              }
-            }
-          }
-
-          &-image {
+        &-container {
+          ul.themes {
             display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            flex-direction: column;
+            padding: 0;
+            list-style-position: inside;
 
-            svg {
-              width: 65%;
+            .theme {
+              margin-bottom: 2vh;
+              color: $black;
+              font-size: 1.1vmax;
             }
           }
         }
+
+        &-image {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          svg {
+            width: 65%;
+          }
+        }
+      }
+    }
+
+    &-categories {
+      position: sticky;
+      top: 70px;
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      margin-top: 5vh;
+      padding: 15px 20%;
+      background: transparent;
+
+      &.sticked {
+        background: $alabaster;
+        box-shadow: 0 0px 8px 2px $dusty-gray;
       }
 
-      &-categories {
-        position: sticky;
-        top: 70px;
-        display: flex;
-        align-items: baseline;
-        width: 100%;
-        margin-top: 5vh;
-        padding: 15px 0;
-        background: transparent;
+      .categories {
+        margin-left: 3vw;
 
-        .categories {
-          margin-left: 3vw;
+        &-title {
+          font-size: 0.9vmax;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        
+        a {
+          margin-left: 15px;
+          padding: 5px 20px;
+          border: 1px solid $black;
+          border-radius: 30px;
+          font-size: 0.65vmax;
+          color: $black;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: color, border, .2s ease;
 
-          &-title {
-            font-size: 0.9vmax;
-            font-weight: bold;
-            text-transform: uppercase;
-          }
-          
-          a {
-            margin-left: 15px;
-            padding: 5px 20px;
-            border: 1px solid $black;
-            border-radius: 30px;
-            font-size: 0.65vmax;
-            color: $black;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: color, border, .2s ease;
-
-            &:active, &.selected {
-              color: $main-blue;
-              border: 1px solid $main-blue;
-            }
+          &:active, &.selected {
+            color: $main-blue;
+            border: 1px solid $main-blue;
           }
         }
       }
