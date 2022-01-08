@@ -8,6 +8,7 @@ module ApplicationHelper
     superscript
     tables
   ].each_with_object({}) { |e, o| o[e] = true }.freeze
+  AVG_READING_SPEED = 225
 
   def svg(path, klass = nil)
     inline_svg("icons/#{path}.svg", class: "icon #{klass}")
@@ -50,6 +51,9 @@ module ApplicationHelper
     items.length.pred == i ? items[0] : items[i.next]
   end
 
+  def time_to_read(text)
+    text.split.size / AVG_READING_SPEED
+  end
 
   def meta_title
     t("meta.pages.#{params[:page].blank? ? "/" : params[:page]}.title", default: 'Ruby on Rails Development Company')
