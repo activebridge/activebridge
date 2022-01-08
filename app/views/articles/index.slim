@@ -15,19 +15,11 @@
 = render 'shared/blog/categories'
 .content-holder
   #posts
-    .posts-headerposts
-      .link-group
-        .pagination-holder
-          = link_to_previous_page articles, '‹'
-          = link_to_next_page articles, '›'
-      .title = params[:category] ? t("blog.categories.#{params[:category]}") : 'All Posts'
-      span.items_counter = pluralize(articles.total_count, 'item')
     .posts
       = render partial: 'article', collection: articles, as: :article
     .link-group.bottom-group
       .pagination-holder
-        = link_to_previous_page articles, '‹- Back'
-        = link_to_next_page articles, 'Next -›'
+        = paginate articles, window: 2
 javascript:
   window.addEventListener('scroll', () => {
     const stickyElem = document.querySelector('.articles-categories');

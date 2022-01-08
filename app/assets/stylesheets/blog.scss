@@ -559,22 +559,33 @@ a.article {
   }
 }
 
+#posts {
+  .posts {
+    margin-top: 2.5vmax;
+  }
+}
+
 .link-group {
   position: relative;
-  margin-top: 3.4vmax;
+  margin: 2.5vmax 0;
   display: flex;
   justify-content: flex-end;
 
   .pagination-holder {
-    a {
-      font-size: 1.3vmax;
-      font-weight: bold;
-      color: white;
-      background-color: $main-blue;
-      padding: 10px 35px;
+    margin: 0 auto;
 
-      &:last-child {
-        margin-left: 5px;
+    nav.pagination {
+      span {
+        a {
+          font-size: 1.1vmax;
+          font-weight: bold;
+          color: $black;
+        }
+
+        &.current {
+          font-size: 1.7vmax;
+          font-weight: bold;
+        }
       }
     }
   }
