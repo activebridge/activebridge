@@ -1110,6 +1110,7 @@ en:
       published: 'Published:'
       time_to_read: 'Time to read:'
       mins_to_read: '%{minutes} min.'
+      most_popular_articles: Most popular on the blog
   footer:
     navigation:
       links:

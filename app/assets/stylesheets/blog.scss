@@ -220,7 +220,7 @@ footer {
 
 .main {
   position: relative;
-  padding: 70px 0 35px 0;
+  padding-top: 70px;
   scroll-behavior: smooth;
   background: linear-gradient(to bottom, $main-blue -15%, $alabaster 30%);
 
@@ -591,9 +591,25 @@ a.article {
   }
 }
 
-.bottom-group {
-  position: relative;
-  margin-top: 25px;
+.most-popular {
+  padding: 3.5vmax 20%;
+  background: $mauve;
+
+  &-title {
+    margin-bottom: 1.5vmax;
+    font-family: 'Inria Bold', serif;
+    font-size: 2vmax;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .posts {
+    .article {
+      &:hover {
+        box-shadow: inset -6px -5px 10px -8px grey, 0px 0px 10px 0px grey;
+      }
+    }
+  }
 }
 
 .contact-experts {

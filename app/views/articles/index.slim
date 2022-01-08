@@ -20,6 +20,10 @@
     .link-group.bottom-group
       .pagination-holder
         = paginate articles, window: 2
+.most-popular
+  .most-popular-title= t('blog.article.most_popular_articles')
+  .posts
+    = render partial: 'article', collection: most_popular_articles, as: :article
 javascript:
   window.addEventListener('scroll', () => {
     const stickyElem = document.querySelector('.articles-categories');
