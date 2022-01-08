@@ -287,16 +287,19 @@ footer {
     &-categories {
       position: sticky;
       top: 70px;
+      z-index: 4;
       display: flex;
-      align-items: baseline;
+      align-items: center;
+      height: 70px;
       width: 100%;
       margin-top: 5vh;
-      padding: 15px 20%;
+      padding: 0 20%;
       background: transparent;
+      transition: .3s background, box-shadow ease;
 
       &.sticked {
         background: $alabaster;
-        box-shadow: 0 0px 8px 2px $dusty-gray;
+        box-shadow: 0px 0px 8px 2px $dusty-gray;
       }
 
       .categories {
@@ -306,11 +309,13 @@ footer {
           font-size: 0.9vmax;
           font-weight: bold;
           text-transform: uppercase;
+          letter-spacing: 0.3vmax;
         }
         
         a {
+          display: inline-block;
           margin-left: 15px;
-          padding: 5px 20px;
+          padding: 0.5vmax 1.5vmax;
           border: 1px solid $black;
           border-radius: 30px;
           font-size: 0.65vmax;

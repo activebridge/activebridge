@@ -12,7 +12,8 @@
           li.theme= t
     .themes-image
       = inline_svg 'blog/sticker-pad.svg'
-  = render 'shared/blog/categories'
+= render 'shared/blog/categories'
+.content-holder
   #posts
     .posts-headerposts
       .link-group
@@ -27,3 +28,8 @@
       .pagination-holder
         = link_to_previous_page articles, '‹- Back'
         = link_to_next_page articles, 'Next -›'
+javascript:
+  window.addEventListener('scroll', () => {
+    const stickyElem = document.querySelector('.articles-categories');
+    stickyElem.classList.toggle('sticked', stickyElem.getBoundingClientRect().top == 70);
+  });
