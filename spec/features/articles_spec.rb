@@ -7,11 +7,11 @@ RSpec.feature 'Articles page', type: :feature do
   scenario do
     visit articles_path
     expect(page).to have_content('Active Bridge')
-    expect(page).to have_content('All Posts')
-    expect(page).to have_content('1 item')
+    expect(page).to have_content('Most popular on the blog')
+    expect(page).to have_content('Blog')
     expect(page).to have_content('Alex')
     expect(page).to have_content(ror_article.title)
-    expect(page).to_not have_content(insights_article.title)
+    # expect(page).to_not have_content(insights_article.title)
   end
 
   scenario do
