@@ -2,17 +2,13 @@
   = link_to article_path(article), class:'show-article'
     h4.article-title = article.title
     .article-body
+      = image_tag article.picture.thumbnail.url, alt: (article.img_alt_text.present? ? article.img_alt_text : t('meta.pages.blog.image_alt_tag'))
       .article-info
-        .article-about
-          span
-            b
-              'Author:
-            = article.member.name.capitalize
-          span
-            b
-              'Published:
-            = article.created_at.strftime('%d %b %Y')
-        = image_tag article.member.avatar.url, class: 'author-avatar'
-      .article-picture
-        = image_tag article.picture_url, alt: (article.img_alt_text.present? ? article.img_alt_text : t('meta.pages.blog.image_alt_tag'))
-        .text-center Read more
+        span
+          b= t('blog.article.author')
+          = article.member.name.capitalize
+        span
+          b= t('blog.article.published')
+          = article.created_at.strftime('%d %b %Y')
+        span
+          b= t('blog.article.time_to_read')

@@ -1105,6 +1105,10 @@ en:
       - UX/UI,
       - Web development best practises.
     categories_title: 'Categories:'
+    article:
+      author: 'Author:'
+      published: 'Published:'
+      time_to_read: 'Time to read:'
   footer:
     navigation:
       links:
