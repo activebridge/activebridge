@@ -485,6 +485,8 @@ a.article {
     margin-bottom: 3vw;
     box-shadow: inset -6px -5px 14px -8px grey, 0px 0px 10px -2px grey;
     border-radius: 20px;
+    transform: scale(0.9);
+    transition: .5s transform, box-shadow ease;
 
     &-title {
       height: 35%;
@@ -548,6 +550,11 @@ a.article {
         box-shadow: inset 0 -30px 20px 0 $black;
         border-radius: 0 0 20px 20px;
       }
+    }
+
+    &:hover {
+      transform: scale(1);
+      box-shadow: inset -6px -5px 14px -8px grey, 0px 0px 15px 1px $mauve;
     }
   }
 }

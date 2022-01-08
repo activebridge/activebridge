@@ -6,7 +6,7 @@ RSpec.feature 'View article', type: :feature do
 
   scenario do
     visit articles_path
-    click_link 'Read more', match: :first
+    click_link 'Author:', match: :first
     expect(page).to have_content('Random title')
     expect(page).to have_content(article.body)
     expect(current_path).to eq('/blog/random-title')
