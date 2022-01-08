@@ -484,7 +484,7 @@ a.article {
     width: 18vw;
     margin-bottom: 3vw;
     box-shadow: inset -6px -5px 14px -8px grey, 0px 0px 10px -2px grey;
-    border-radius: 10px;
+    border-radius: 20px;
 
     &-title {
       height: 35%;
@@ -502,17 +502,52 @@ a.article {
     }
 
     &-info {
-      display: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
       position: absolute;
-      left: 20px;
-      bottom: 5px;
+      left: 10px;
+      bottom: 10px;
+      width: 90%;
     }
 
-    img {
+    &-main-info {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 11px;
+        color: $white;
+      }
+    }
+
+    &-category {
+      text-align: right;
+      font-size: 10px;
+      color: $mauve;
+    }
+
+    &-picture {
+      position: relative;
       height: 100%;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 0 0 10px 10px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0 0 20px 20px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: inset 0 -30px 20px 0 $black;
+        border-radius: 0 0 20px 20px;
+      }
     }
   }
 }

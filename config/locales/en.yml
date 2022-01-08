@@ -1109,6 +1109,7 @@ en:
       author: 'Author:'
       published: 'Published:'
       time_to_read: 'Time to read:'
+      mins_to_read: '%{minutes} min.'
   footer:
     navigation:
       links:
