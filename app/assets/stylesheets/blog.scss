@@ -224,6 +224,10 @@ footer {
   scroll-behavior: smooth;
   background: linear-gradient(to bottom, $main-blue -15%, $alabaster 30%);
 
+  &.show {
+    padding-top: 220px;
+  }
+
   .content-holder {
     padding: 0 20%;
 
@@ -643,6 +647,7 @@ a.article {
     z-index: 4;
     width: 100%;
     background: $alabaster;
+    box-shadow: 0px 0px 8px 2px $dusty-gray;
     
     .articles-categories {
       position: relative;
@@ -711,14 +716,22 @@ a.article {
 }
 
 .article-box {
-  margin-top: 1%;
   position: relative;
   padding: 2vmax;
   font-size: 1.1vmax;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
-  background: white;
+  background: transparent;
   color: $dark-font;
   overflow: visible;
+  
+  h1.title {
+    margin-right: 25%;
+    font-size: 2vmax;
+    text-align: center;
+    letter-spacing: 0.6vmax;
+    text-transform: uppercase;
+    color: $black;
+  }
+
   a {
     margin: 3px;
     color: $dark-font;
@@ -824,31 +837,7 @@ a.article {
       opacity: .6;
     }
   }
-  .author-info {
-    margin-right: 2vmax;
-    float: left;
-    width: 5vmax;
-  }
-  .post-info {
-    h1.title {
-      text-transform: uppercase;
-      margin: 0;
-      padding-right: 5vmax;
-      font-size: 1.7vmax;
-      overflow: hidden;
-      text-align: left;
-      font-weight: bold;
-      background-image: -webkit-gradient( linear, left top, right top, color-stop(0, $main-violet), color-stop(0.5, $main-blue));
-      background-image: gradient( linear, left top, right top, color-stop(0, $main-violet), color-stop(0.5, $main-blue));
-      color:transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
-    .created_date {
-      display: block;
-      opacity: .5;
-    }
-  }
+
   article {
     clear: both;
     margin-top: 3vmax;

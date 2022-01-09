@@ -25,10 +25,8 @@
 #post.article-box
   = link_to '➦', back_path, remote: true, class: 'back-link'
 
-  = image_tag article.member.avatar.url, class: 'author-info'
-  .post-info
-    h1.title = article.title
-    span.created_date = article.created_at.strftime('%B %d, %Y')
+  h1.title= article.title
+
   article.post-body-show#article-body
     = md(article.body)
   .content-table#headers
