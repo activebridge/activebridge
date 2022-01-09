@@ -300,6 +300,11 @@ footer {
       &.sticked {
         background: $alabaster;
         box-shadow: 0px 0px 8px 2px $dusty-gray;
+
+        &:before,
+        &:after {
+          display: none;
+        }
       }
 
       .categories {
@@ -329,6 +334,24 @@ footer {
             border: 1px solid $main-blue;
           }
         }
+      }
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 60%;
+        background-color: $mauve;
+        left: 20%;
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
       }
     }
   }
