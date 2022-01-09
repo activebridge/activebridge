@@ -13,8 +13,15 @@
 
 .article-show-subheader
   = render partial: 'shared/blog/categories'
+  .breadcrumbs
+    => link_to t('blog.article.home'), root_path
+    .angle-bracket >
+    => link_to t('blog.blog'), articles_path
+    .angle-bracket >
+    => link_to t("blog.categories.#{article.category}"), category_articles_path(article.category)
+    .angle-bracket >
+    span= article.title
 
-.title = "Home › Blog › #{t("blog.categories.#{article.category}")}"
 #post.article-box
   = link_to '➦', back_path, remote: true, class: 'back-link'
 

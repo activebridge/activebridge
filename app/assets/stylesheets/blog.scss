@@ -324,7 +324,7 @@ footer {
           padding: 0.5vmax 1.5vmax;
           border: 1px solid $black;
           border-radius: 30px;
-          font-size: 0.65vmax;
+          font-size: 0.75vmax;
           color: $black;
           text-decoration: none;
           text-transform: uppercase;
@@ -642,15 +642,46 @@ a.article {
     top: 70px;
     z-index: 4;
     width: 100%;
+    background: $alabaster;
     
     .articles-categories {
       position: relative;
       top: 0;
       margin-top: 0;
-      background: $alabaster;
 
       &:before {
         display: none;
+      }
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      padding: 0 20%;
+      color: $black;
+
+      a, span {
+        font-size: 1.1vmax;
+        font-style: italic;
+      }
+      
+      a {
+        color: $black;
+        text-decoration: underline;
+        transition: .1s color ease-in-out;
+
+        &:hover {
+          color: $main-blue;
+        }
+      }
+
+      span {
+        color: $main-blue;
+      }
+      
+      .angle-bracket {
+        margin: 0 0.2vmax;
       }
     }
   }

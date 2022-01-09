@@ -1111,6 +1111,7 @@ en:
       time_to_read: 'Time to read:'
       mins_to_read: '%{minutes} min.'
       most_popular_articles: Most popular on the blog
+      home: Home
   footer:
     navigation:
       links:
