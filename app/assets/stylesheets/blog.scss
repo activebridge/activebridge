@@ -720,7 +720,7 @@ a.article {
   }
   .content-table {
     width: 25%;
-    color: $content-table-color;
+    color: $black;
     display: inline-block;
     position: relative;
     border-left: 1px solid $main-blue;
@@ -728,7 +728,7 @@ a.article {
     .article-info {
       display: flex;
       flex-direction: column;
-      padding: 1vmax;
+      padding: 10px;
       color: $black;
       border-bottom: 1px solid $main-blue;
 
@@ -811,32 +811,32 @@ a.article {
       padding-bottom: 150px;
       position: sticky;
       top: 220px;
-      #contents {
-        color: #3f274a;
+      .contents {
         padding-left: 10px;
-        text-decoration: underline;
+        font-family: 'Inria Bold', serif;
+        font-size: 1.7vmax;
+        text-transform: uppercase;
       }
-      .article-header-h2 {
-        color: #bab8bc;
-        display: block;
-        margin: 10px 0;
-        padding: 0 10px 0 10px;
-        transition: all 50ms ease-in-out;
-      }
+      .article-header-h2,
       .article-header-h3 {
-        color: #bab8bc;
         display: block;
         margin: 10px 0;
-        margin-left: 8px;
         padding: 0 10px 0 10px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
         transition: all 50ms ease-in-out;
       }
-      .article-header-h2.active, .article-header-h3.active {
-        color: $active-header;
-        box-shadow: -2px 0px 0px 0px;
+      
+      .article-header-h3 {
+        margin-left: 8px;
       }
+
+      .article-header-h2.active, .article-header-h3.active,
       .article-header-h2:hover, .article-header-h3:hover {
-        color: $active-header;
+        color: $blue-gem;
+        font-weight: bold;
+        border-top: 1px solid $blue-gem;
+        border-bottom: 1px solid $blue-gem;
         box-shadow: -2px 0px 0px 0px;
       }
     }
