@@ -295,6 +295,7 @@ footer {
       margin-top: 5vh;
       padding: 0 20%;
       background: transparent;
+      box-shadow: none;
       transition: .3s background, box-shadow ease;
 
       &.sticked {
@@ -342,7 +343,7 @@ footer {
         position: absolute;
         height: 1px;
         width: 60%;
-        background-color: $mauve;
+        background-color: $main-blue;
         left: 20%;
       }
 
@@ -630,6 +631,26 @@ a.article {
     .article {
       &:hover {
         box-shadow: inset -6px -5px 10px -8px grey, 0px 0px 10px 0px grey;
+      }
+    }
+  }
+}
+
+.article-show {
+  &-subheader {
+    position: fixed;
+    top: 70px;
+    z-index: 4;
+    width: 100%;
+    
+    .articles-categories {
+      position: relative;
+      top: 0;
+      margin-top: 0;
+      background: $alabaster;
+
+      &:before {
+        display: none;
       }
     }
   }

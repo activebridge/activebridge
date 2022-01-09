@@ -11,6 +11,9 @@
   script type = 'application/ld+json'
     = article_schema
 
+.article-show-subheader
+  = render partial: 'shared/blog/categories'
+
 .title = "Home › Blog › #{t("blog.categories.#{article.category}")}"
 #post.article-box
   = link_to '➦', back_path, remote: true, class: 'back-link'
