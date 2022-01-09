@@ -692,29 +692,6 @@ a.article {
   }
 }
 
-.contact-experts {
-  border-bottom: 1px solid #91839b;
-  border-top: 1px solid #91839b;
-  font-size: 1.5vmax;
-  padding: 7px 0 40px 0;
-  text-transform: uppercase;
-  text-align: center;
-  p {
-    margin-bottom: 25px;
-  }
-  .contact-experts-btn {
-    transition: .3s all ease-in-out;
-    color: white !important;
-    width: 60%;
-    height: 100px;
-    font-weight: bold;
-    background: -webkit-linear-gradient(top left, #b64e96, #5f52ca);
-    background: linear-gradient(to bottom right, #b64e96, #5f52ca);
-    margin: 5px 15px;
-    padding: 15px 50px;
-  }
-}
-
 .article-box {
   position: relative;
   padding: 2vmax;
@@ -730,6 +707,10 @@ a.article {
     letter-spacing: 0.6vmax;
     text-transform: uppercase;
     color: $black;
+  }
+
+  .article-content {
+    display: flex;
   }
 
   a {
@@ -824,7 +805,7 @@ a.article {
     }
   }
   .back-link {
-    z-index: 10;
+    z-index: 3;
     display: inline-block;
     color: $dark-font;
     transform: scale(-1, 1);

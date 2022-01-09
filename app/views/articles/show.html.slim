@@ -14,11 +14,11 @@
 .article-show-subheader
   = render partial: 'shared/blog/categories'
   .breadcrumbs
-    => link_to t('blog.article.home'), root_path
+    = link_to t('blog.article.home'), root_path
     .angle-bracket >
-    => link_to t('blog.blog'), articles_path
+    = link_to t('blog.blog'), articles_path
     .angle-bracket >
-    => link_to t("blog.categories.#{article.category}"), category_articles_path(article.category)
+    = link_to t("blog.categories.#{article.category}"), category_articles_path(article.category)
     .angle-bracket >
     span= article.title
 
@@ -27,21 +27,22 @@
 
   h1.title= article.title
 
-  article.post-body-show#article-body
-    = md(article.body)
-  .content-table#headers
-    div#div-table-content
-      p#contents = 'CONTENTS'
-    div#share-article
-      hr
-      div
-        = svg('share-alt-solid')
-        = link_to 'https://www.facebook.com/sharer/sharer.php?u=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
-          = svg('facebook', local_assigns[:klass])
-        = link_to 'https://www.linkedin.com/shareArticle?mini=true&url=https://' + request.domain + request.fullpath, target: '_blank', title: 'linkedin', rel: :noopener do
-          = svg('linkedin', local_assigns[:klass])
-        = link_to 'https://twitter.com/intent/tweet?url=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
-          = svg('twitter', local_assigns[:klass])
+  .article-content
+    article.post-body-show#article-body
+      = md(article.body)
+    .content-table#headers
+      div#div-table-content
+        p#contents = 'CONTENTS'
+      div#share-article
+        hr
+        div
+          = svg('share-alt-solid')
+          = link_to 'https://www.facebook.com/sharer/sharer.php?u=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
+            = svg('facebook', local_assigns[:klass])
+          = link_to 'https://www.linkedin.com/shareArticle?mini=true&url=https://' + request.domain + request.fullpath, target: '_blank', title: 'linkedin', rel: :noopener do
+            = svg('linkedin', local_assigns[:klass])
+          = link_to 'https://twitter.com/intent/tweet?url=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
+            = svg('twitter', local_assigns[:klass])
     javascript:
       var selectedHeader = undefined;
       var allTags = document.getElementById('article-body').children;
@@ -89,12 +90,6 @@
         }
         document.getElementById("div-table-content").appendChild(newParag);
       })
-      window.addEventListener('load', () => {
-        resizeContentTable();
-      });
-      window.addEventListener('resize', () => {
-        resizeContentTable();
-      });
       window.addEventListener('scroll', () => {
         const observer = new IntersectionObserver(entries => {
           entries.forEach(entry => {
@@ -110,15 +105,6 @@
           observer.observe(link);
         });
       });
-      function resizeContentTable() {
-        setTimeout(() => {
-          let height = document.getElementById('article-body').getBoundingClientRect().height;
-          document.getElementById("headers").style.height = height + 'px';
-        }, 100)
-      }
-  .contact-experts
-    p = 'Have a question?'
-    = link_to 'Contact experts', contact_path, remote: true, class: 'contact-experts-btn'
 - if recommended_articles.any?
   .recommended
     h3= t('blog.recommended')
