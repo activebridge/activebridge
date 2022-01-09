@@ -18,6 +18,7 @@ $main-gradient: linear-gradient(135deg, $main-violet, $main-blue);
 $alabaster: #F7F7F7;
 $mauve: #D6BCFF;
 $dusty-gray: #979797;
+$blue-gem: #3C149F;
 
 * {
   box-sizing: border-box;
@@ -719,11 +720,47 @@ a.article {
   }
   .content-table {
     width: 25%;
-    background-color: $content-table-bg;
     color: $content-table-color;
     display: inline-block;
     position: relative;
-    margin-top: 4vmax;
+    border-left: 1px solid $main-blue;
+
+    .article-info {
+      display: flex;
+      flex-direction: column;
+      padding: 1vmax;
+      color: $black;
+      border-bottom: 1px solid $main-blue;
+
+      .info-item {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 1.3vmax;
+
+        span {
+          margin-right: 0.4vmax;
+
+          &:first-child {
+            font-weight: bold;
+            font-style: italic;
+          }
+
+          &.author {
+            margin-right: 0;
+            font-size: 1.3vmax;
+            text-decoration: underline;
+          }
+          
+          &.position {
+            margin-left: 0.4vmax;
+            font-size: 0.9vmax;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
     #share-article {
       bottom: 0;
       position: absolute;
@@ -773,7 +810,7 @@ a.article {
     #div-table-content {
       padding-bottom: 150px;
       position: sticky;
-      top: 10px;
+      top: 220px;
       #contents {
         color: #3f274a;
         padding-left: 10px;

@@ -31,6 +31,18 @@
     article.post-body-show#article-body
       = md(article.body)
     .content-table#headers
+      .article-info
+        .info-item
+          span= t('blog.article.author')
+          span.author= article.member.name
+          ',
+          span.position= article.member.position
+        .info-item
+          span= t('blog.article.published')
+          span= article.created_at.strftime('%d %b %Y')
+        .info-item
+          span= t('blog.article.time_to_read')
+          span= t('blog.article.mins_to_read', minutes: time_to_read(article.body))
       div#div-table-content
         p#contents = 'CONTENTS'
       div#share-article
