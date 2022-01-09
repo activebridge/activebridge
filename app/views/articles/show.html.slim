@@ -46,9 +46,9 @@
       div#div-table-content
         p.contents#contents= t('blog.article.contents')
       div#share-article
-        hr
+        p= t('blog.article.share')
         div
-          = svg('share-alt-solid')
+          = svg('copy', local_assigns[:klass])
           = link_to 'https://www.facebook.com/sharer/sharer.php?u=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
             = svg('facebook', local_assigns[:klass])
           = link_to 'https://www.linkedin.com/shareArticle?mini=true&url=https://' + request.domain + request.fullpath, target: '_blank', title: 'linkedin', rel: :noopener do

@@ -19,6 +19,7 @@ $alabaster: #F7F7F7;
 $mauve: #D6BCFF;
 $dusty-gray: #979797;
 $blue-gem: #3C149F;
+$mine-shart: #393939;
 
 * {
   box-sizing: border-box;
@@ -766,37 +767,30 @@ a.article {
       position: absolute;
       text-align: center;
       width: 100%;
+      border-top: 1px solid $blue-gem;
+
       div {
-        align-items: center;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
         padding: 15px 0;
         svg {
-          border: 1px solid #91839b87;
-          padding: 2px 20px;
-          width: 60px;
+          height: 2vmax;
           margin: 3px;
           path {
             border-color: $main-violet;
-            fill: #83738d;
-          }
-        }
-        .fa-share-alt {
-          border: none;
-          bottom: 50%;
-          position: absolute;
-          transform: translate(50%, 50%);
-          left: 0;
-          path {
-            fill: #83738d;
+            fill: $mine-shart;
           }
         }
       }
-      hr {
-        color: #91839b;
-        margin: 0;
-        width: 100%;
+
+      p {
+        margin-bottom: 0.4vmax;
+        font-family: 'Inria Bold', serif;
+        font-size: 1.7vmax;
+        font-style: italic;
       }
+
       div svg:hover {
         path {
           fill: $main-blue;
