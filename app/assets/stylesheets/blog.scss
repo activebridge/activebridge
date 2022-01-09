@@ -696,14 +696,14 @@ a.article {
 
 .article-box {
   position: relative;
-  padding: 2vmax;
   font-size: 1.1vmax;
   background: transparent;
   color: $dark-font;
   overflow: visible;
   
   h1.title {
-    margin-right: 25%;
+    margin: 2vmax 25% 2vmax 0;
+    padding: 0 10%;
     font-size: 2vmax;
     text-align: center;
     letter-spacing: 0.6vmax;
@@ -851,13 +851,10 @@ a.article {
   }
 
   article {
-    clear: both;
-    margin-top: 3vmax;
+    padding: 0 10%;
     line-height: 1.4;
     letter-spacing: 1px;
-    padding-right: 15px;
     width: 75%;
-    float: left;
     img {
       max-width: 100%;
       height: auto;
