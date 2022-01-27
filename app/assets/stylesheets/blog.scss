@@ -44,6 +44,16 @@ body {
   }
 }
 
+header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  background-color: $white;
+}
 
 a {
   text-decoration: none;
@@ -774,9 +784,25 @@ a.article {
         align-items: center;
         justify-content: space-around;
         padding: 15px 0;
+
+        a:hover, button:hover {
+            svg {
+            path {
+              fill: $main-blue;
+            }
+          }
+        }
+
+        button.copy-current-url {
+          border: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
+
         svg {
           height: 2vmax;
           margin: 3px;
+
           path {
             border-color: $main-violet;
             fill: $mine-shart;
@@ -789,12 +815,6 @@ a.article {
         font-family: 'Inria Bold', serif;
         font-size: 1.7vmax;
         font-style: italic;
-      }
-
-      div svg:hover {
-        path {
-          fill: $main-blue;
-        }
       }
     }
     #header:after {

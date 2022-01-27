@@ -48,7 +48,8 @@
       div#share-article
         p= t('blog.article.share')
         div
-          = svg('copy', local_assigns[:klass])
+          button.copy-current-url#copy_current_url
+            = svg('copy', local_assigns[:klass])
           = link_to 'https://www.facebook.com/sharer/sharer.php?u=https://' + request.domain + request.fullpath, target: '_blank', title: 'twitter', rel: :noopener do
             = svg('facebook', local_assigns[:klass])
           = link_to 'https://www.linkedin.com/shareArticle?mini=true&url=https://' + request.domain + request.fullpath, target: '_blank', title: 'linkedin', rel: :noopener do
@@ -117,6 +118,10 @@
           observer.observe(link);
         });
       });
+      var copyCurrentUrlButton = document.getElementById('copy_current_url')
+      copyCurrentUrlButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location).then().catch()
+      })
 - if recommended_articles.any?
   .recommended
     h3= t('blog.recommended')
