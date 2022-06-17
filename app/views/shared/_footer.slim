@@ -18,7 +18,7 @@ footer.footer
       .contact-info__contacts
         a.footer__item.bold href='email: #{t("footer.contact_info.email")}'= t('footer.contact_info.email')
         a.footer__item.bold href='tel: #{t("footer.contact_info.phone_number")}'= t('footer.contact_info.phone_number')
-      .footer__copyright= t('footer.contact_info.copyright')
+      .footer__copyright =t('footer.contact_info.copyright', year: Date.today.year)
     - I18n.t('footer.contact_info.entities').each do |e|
       .contact-info__container
         .footer__item.bold= e[:entity]

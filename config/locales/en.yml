@@ -447,7 +447,7 @@ en:
     contact_info:
       email: contact@active-bridge.com
       phone_number: '+18888053503'
-      copyright: © 2013-2021, Active Bridge LLC
+      copyright: © 2013-%{year}, Active Bridge LLC
       entities:
         - entity: USA
           name: Active Bridge, LLC
