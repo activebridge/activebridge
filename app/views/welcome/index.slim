@@ -1,11 +1,9 @@
 .container.index#container
-  = image_tag 'index/background.png', class: 'index-background'
-  = inline_svg 'index/bridge-stripe.svg', class: 'bridge-stripe'
   .home-page-container
     = inline_svg 'index/simple-logo.svg', class: 'index-logo'
     .header-1.index-header= t('index.active_bridge')
     h1.header-2= t('index.professional_team')
-    p.description.with-padding= t('index.teams_expertise')
+    p.description.with-padding.with-margin= t('index.teams_expertise')
     a.button href=''= t('index.free_consultation')
     .awards-img
       = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank

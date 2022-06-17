@@ -96,20 +96,24 @@ header {
   a.logotype {
     padding: 10px;
     svg {
-      width: 50px;
+      width: 40px;
     }
   }
 }
 
 .header-navbar {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
   &__link {
     margin: 0 1.5vw;
     color: $black;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.4em;
-    pointer-events: none;
+    cursor: pointer;
 
     &.active {
       font-weight: bold;
@@ -117,6 +121,26 @@ header {
 
     &:hover {
       color: $main-violet;
+    }
+  }
+
+  &__link-contact {
+    margin: 0;
+    padding: 0.6em 2.2em;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(to right, $main-violet, $main-blue) border-box;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 15px 1px rgba($main-violet, 0.3);
+    }
+
+    &.active {
+      box-shadow: inset 0px 0px 15px 1px rgba($main-violet, 0.3);
+      background: transparent;
+      border: none;
     }
   }
 }
@@ -307,7 +331,6 @@ footer {
 
   &.index-home {
     padding-top: 14vh;
-    margin-top: -6vh;
   }
 
   &.alabaster {
@@ -327,7 +350,7 @@ footer {
 
   &__title {
     color: $white;
-    
+
     &-1 {
       font-size: 1.6em;
       letter-spacing: 0.3em;
@@ -349,7 +372,7 @@ footer {
 
   &__icon {
     height: 15vh;
-    
+
     &.circled {
       display: flex;
       justify-content: center;
@@ -429,7 +452,7 @@ footer {
 
       &__icon {
         height: 15vh;
-        
+
         &.circled {
           display: flex;
           justify-content: center;
@@ -438,7 +461,7 @@ footer {
           margin: 3vh auto;
           border-radius: 7.5vh;
           box-shadow: inset -3px -3px 7px -4px grey, 1px 1px 14px -2px grey;
-    
+
           svg {
             width: 9vh;
           }
@@ -517,6 +540,8 @@ footer {
   &.with-padding {
     padding: 0 20%;
   }
+
+  &.with-margin { margin: 2.5em 0; }
 }
 
 table.technologies {
@@ -530,7 +555,7 @@ table.technologies {
 
       td {
         border-bottom: 1px solid black;
-        border-right: 1px solid black;  
+        border-right: 1px solid black;
         padding: 3vh 1vw;
 
         svg {
@@ -552,7 +577,7 @@ table.technologies {
           border-top: 1px solid black;
           border-right: 1px solid black;
           border-bottom: 1px solid black;
-          
+
           &:first-child {
             border: 1px solid black;
           }

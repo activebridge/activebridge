@@ -1,11 +1,8 @@
-- if current_page?('/')
-  header.home.desktop-only
-    a.logotype href='/'
-      = inline_svg 'index/logo.svg'
-- else
-  header.deskop-only 
-    a.logotype href='/'
-      = inline_svg 'index/logo.svg'
-    .header-navbar
-      - I18n.t('navbar.items').each do |i|
-        = link_to i, "/#{i}", class: "header-navbar__link #{current_page?('/' + i) ? 'active' : ''}"
+header.deskop-only
+  a.logotype href='/'
+    = inline_svg 'index/logo.svg'
+  .header-navbar
+    - I18n.t('navbar.items').each do |i|
+      = link_to i, "/#{i}", class: "header-navbar__link #{current_page?('/' + i) ? 'active' : ''}"
+
+    = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact #{current_page?('/contact') ? 'active' : ''}"
