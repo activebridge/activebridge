@@ -456,7 +456,7 @@ en:
           country: United States
         - entity: Ukraine
           name: Active Bridge, LLC
-          address: Marshala Krasovskogo, 8 Street
+          address: Yevhena Kukhartsia, 8 Street
           post: Cherkasy 18000
   technologies:
     - name: Angular JS
