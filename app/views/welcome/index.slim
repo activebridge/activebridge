@@ -18,14 +18,21 @@
   .info-container.index-home
     .header-5.index-testimonials__header.white-text= t('index.help_startups')
     .description.white-text.with-padding= t('index.testimonials_description')
-    .index-testimonials__container.cards-carousel data-current='0'
-      - I18n.t('testimonials.all').each do |t|
-        .card.index-testimonials__item
-          .index-testimonial__image
-            = image_tag t[:image]
-          .index-testimonial__logo
-            = image_tag t[:logo]
-          .card__description.index-testimonial__description= t[:description]
+
+    .carousel
+      .carousel__prev
+      ul.carousel__list
+        - I18n.t('testimonials.all').each_with_index do |t, index|
+          li.carousel__item data-index="#{index-(I18n.t('testimonials.all').length / 2)}"
+            .carousel__image
+              = image_tag t[:image]
+            .carousel__logo
+              = image_tag t[:logo]
+            .carousel__description
+              = t[:description]
+      .carousel__next
+
+
     a.button.white-text href=''= t('index.read_testimonials')
   .index-technologies__container
     .index-technologies

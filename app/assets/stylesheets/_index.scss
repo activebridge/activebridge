@@ -81,36 +81,6 @@ body {
       padding: 0 25%;
       font-size: 1.7em;
     }
-
-    &__item {
-      position: relative;
-      display: inline-block;
-      margin-right: 5px;
-    }
-  }
-
-  &-testimonial {
-    &__image {
-      img {
-        width: 25%;
-      }
-      margin-bottom: 2vh;
-    }
-
-    &__logo {
-      img {
-        height: 5vh;
-        width: 45%;
-      }
-    }
-
-    &__description {
-      display: -webkit-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 7;
-    }
   }
 
   &-technologies {
