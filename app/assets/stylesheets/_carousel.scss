@@ -108,4 +108,26 @@
     left: 0;
     transform: rotate(45deg);
   }
+
+  .solutions {
+    &__title {
+      margin: 5vh 5vh 3vh;
+      font-size: 1.4em;
+      letter-spacing: 0.3em;
+      line-height: 1.7em;
+      text-transform: uppercase;
+    }
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      width: 13vh;
+      height: 13vh;
+      margin: 0 auto 3vh;
+      border-radius: 6.5vh;
+      box-shadow: inset -3px -3px 7px -4px grey, 1px 1px 14px -2px grey;
+
+      svg { width: 8vh; }
+    }
+  }
 }

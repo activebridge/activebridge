@@ -15,10 +15,10 @@
       = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
         = image_tag 'index/award-6.png', class: 'index-icon left', alt: "Top 30+ Web Development Companies in USA"
       .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
+
   .info-container.index-home
     .header-5.index-testimonials__header.white-text= t('index.help_startups')
     .description.white-text.with-padding= t('index.testimonials_description')
-
     .carousel
       .carousel__prev
       ul.carousel__list
@@ -31,9 +31,8 @@
             .carousel__description
               = t[:description]
       .carousel__next
-
-
     a.button.white-text href=''= t('index.read_testimonials')
+
   .index-technologies__container
     .index-technologies
       h2.header-3= t('index.our_vision')
@@ -51,6 +50,7 @@
           button.button.technologies-toggle#show-all-technologies onclick="toggleTechnologies()"= t('index.learn_more')
         button.technologies-close#close-technologies onclick="toggleTechnologies()"
           = inline_svg 'icons/cross.svg'
+
   .index-services
     h2.header-2= t('index.expert_web_services')
     .description.with-padding.index-services__description= t('index.embedded_teams')
@@ -61,6 +61,7 @@
           .card__title-2.purple-heart= service[:title]
           .card__description.index-services__item-description= service[:description].html_safe
     a.button.index-services__button href="#"= t('index.view_services')
+
   .info-container.index-about-us
     .header-3.white-text= t('index.our_company')
     .index-about-us__description= t('index.about_us_description')
@@ -73,18 +74,21 @@
       .index-about-us__photo
         = image_tag 'index/about_us_photo.jpg'
     a.button.white-text href='#'= t('index.more_about_us')
+
   .index-solutions
     .index-solutions__holder
       h2.header-2= t('index.build_great_product')
       .description.with-padding= t('index.help_businesses')
-      .index-solutions__items.cards-carousel data-current='0'
-        - I18n.t('index.solutions').each do |s|
-          .card.index-solutions__item
-            .index-solutions__title
-              = s[:title]
-            .index-solutions__logo
-              = inline_svg "index/solutions/#{s[:logo]}"
-            .index-solutions__description
-              = s[:description].html_safe
+      .carousel
+        ul.carousel__list.solutions
+          - I18n.t('index.solutions').each_with_index do |s, index|
+            li.carousel__item data-index="#{index-(I18n.t('index.solutions').length / 2)}"
+              .carousel__title.solutions__title
+                = s[:title]
+              .carousel__logo.solutions__logo
+                = inline_svg "index/solutions/#{s[:logo]}"
+              .carousel__description.solutions__description
+                = s[:description].html_safe
       a.index-solutions__button.button.white-text href=''= t('index.view_all_solutions')
+
   script src="https://widget.clutch.co/static/js/widget.js" type="text/javascript"

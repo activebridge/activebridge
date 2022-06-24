@@ -380,14 +380,14 @@ en:
                      overcome technological business challenges, and gain higher operational efficiency.
     view_all_solutions: View all solutions
     solutions:
-      - logo: bank.svg
-        title: Finance & Banking
-        description: 'Active Bridge provides end-to-end <div class="blue-text">custom web development solutions</div> for non-financial businesses, fintech organizations,
-                     and banks.'
       - logo: caduceus.svg
         title: Healthcare & HIPPA HealthTech
         description: Active Bridge provides end-to-end custom <div class="blue-text">web development solutions</div> for non-financial businesses, fintech organizations,
                      and banks.
+      - logo: bank.svg
+        title: Finance & Banking
+        description: 'Active Bridge provides end-to-end <div class="blue-text">custom web development solutions</div> for non-financial businesses, fintech organizations,
+                     and banks.'
       - logo: health-insurance.svg
         title: InsurTech
         description: Active Bridge’s industry-specific <div class="blue-text">Ruby on Rails development solutions</div> are powered by expertise gained during 10 years

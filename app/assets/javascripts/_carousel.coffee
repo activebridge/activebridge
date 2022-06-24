@@ -1,27 +1,31 @@
-carouselList = document.querySelector('.carousel__list')
-carouselItems = document.querySelectorAll('.carousel__item')
-elems = Array.from(carouselItems)
-carouselNext = document.querySelector('.carousel__next')
-carouselPrev = document.querySelector('.carousel__prev')
+carouselLists = document.querySelectorAll('.carousel__list')
 
-carouselPrev.addEventListener 'click', (event) ->
-  event.preventDefault
-  el = document.querySelector("[data-index='-1']")
-  update el
+carouselLists.forEach (carousel) ->
+  carouselNext = carousel.parentElement.querySelector('.carousel__next')
+  carouselPrev = carousel.parentElement.querySelector('.carousel__prev')
+  if carouselPrev
+    carouselPrev.addEventListener 'click', (event) ->
+      event.preventDefault
+      el = carousel.querySelector("[data-index='-1']")
+      update el, carousel
 
-carouselNext.addEventListener 'click', (event) ->
-  event.preventDefault
-  el = document.querySelector("[data-index='1']")
-  update el
+  if carouselNext
+    carouselNext.addEventListener 'click', (event) ->
+      event.preventDefault
+      el = carousel.querySelector("[data-index='1']")
+      update el, carousel
 
-carouselList.addEventListener 'click', (event) ->
-  newActive = event.target
-  isItem = newActive.parentElement
-  if !isItem or newActive.classList.contains('carousel__item_active')
-    return
-  update(if isItem.classList.contains('carousel__item') then isItem else newActive)
+  carousel.addEventListener 'click', (event) ->
+    newActive = event.target
+    isItem = newActive.parentElement
 
-update = (newActive) ->
+    if !isItem or newActive.classList.contains('carousel__item_active')
+      return
+    update((if isItem.classList.contains('carousel__item') then isItem else newActive), carousel)
+
+update = (newActive, carousel) ->
+  carouselItems = carousel.querySelectorAll('.carousel__item')
+  elems = Array.from(carouselItems)
   newActiveIndex = newActive.dataset.index
   current = elems.find((elem) ->
     elem.dataset.index == '0'
@@ -47,11 +51,12 @@ update = (newActive) ->
 
   current.classList.remove 'carousel__item_active'
   [current, prev, next, second, second_last, first, last].forEach (item) ->
-    itemIndex = item.dataset.index
-    item.dataset.index = getIndex(itemIndex, newActiveIndex)
+    if item
+      itemIndex = item.dataset.index
+      item.dataset.index = getIndex(itemIndex, newActiveIndex, elems)
 
-getIndex = (current, active = 0) ->
+getIndex = (current, active = 0, elems) ->
   diff = current - active
-  if Math.abs(current - active) > 3
+  if Math.abs(current - active) > (if elems.length > 3 then 3 else 1)
     return -current
   diff
