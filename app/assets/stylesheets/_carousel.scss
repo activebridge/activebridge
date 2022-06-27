@@ -3,6 +3,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  padding-top: 6vh;
 
   &__list {
     position: relative;
@@ -69,6 +70,7 @@
     text-align: justify;
     font-size: .9em;
     line-height: 1.8em;
+    display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
