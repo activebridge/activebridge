@@ -459,10 +459,28 @@ en:
           address: Yevhena Kukhartsia, 8 Street
           post: Cherkasy 18000
   technologies:
+    - name: Ruby on Rails
+      icon: ror
     - name: Angular JS
       icon: angular
+    - name: Ruby
+      icon: ruby
+    - name: IONIC
+      icon: ionic
+    - name: React Native
+      icon: react
+    - name: Heroku
+      icon: heroku
+    - name: Github
+      icon: github
     - name: AWS
       icon: aws
+    - name: PostgreSQL
+      icon: postgresql
+    - name: jQuery
+      icon: jquery
+    - name: JS
+      icon: js
     - name: BackboneJs
       icon: backbone
     - name: Bootstrap
@@ -483,36 +501,18 @@ en:
       icon: foundation
     - name: Gitk
       icon: git
-    - name: Github
-      icon: github
     - name: Haml
       icon: haml
-    - name: Heroku
-      icon: heroku
     - name: HTML/HTML5
       icon: html5
-    - name: IONIC
-      icon: ionic
-    - name: jQuery
-      icon: jquery
-    - name: JS
-      icon: js
     - name: MongoDB
       icon: mongodb
     - name: MySQL
       icon: mysql
-    - name: PostgreSQL
-      icon: postgresql
     - name: PUMA
       icon: puma
-    - name: React Native
-      icon: react
-    - name: Ruby on Rails
-      icon: ror
     - name: Rspec
       icon: rspec
-    - name: Ruby
-      icon: ruby
     - name: RubyGems
       icon: rubygems
     - name: Sass
