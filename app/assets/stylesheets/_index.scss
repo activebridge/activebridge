@@ -44,7 +44,12 @@ body {
 
   .index-header {
     font-size: 2.5em;
-    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .description {
+    max-width: 520px;
+    width: 100%;
   }
 }
 
@@ -52,11 +57,11 @@ body {
   position: absolute;
   top: 50vh;
   right: 15px;
-  width: 10%;
-  min-width: 110px;
-  max-width: 130px;
-  max-height: 70%;
-  min-height: 550px;
+  width: 7%;
+  min-width: 90px;
+  max-width: 110px;
+  max-height: 60%;
+  min-height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,7 +177,7 @@ body {
                 height: 4vh;
                 max-width: 140px;
               }
-              
+
               &:first-child {
                 border-left: 1px solid black;
                 border-bottom: 1px solid black;

@@ -154,8 +154,8 @@ footer {
     display: flex;
     justify-content: center;
     padding: 10vh 10% 5vh 10%;
-    background: $alto;
-    box-shadow: 0 0px 8px 2px $dusty-gray;
+    background: rgba($azovstal, 0.6);
+    box-shadow: 0 0px 30px 2px $dusty-gray;
 
     &__container {
       position: relative;
@@ -216,7 +216,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 7vh 20% 4vh 20%;
-    background: $silver;
+    background: $azovstal;
 
     &__container {
       display: flex;
@@ -582,10 +582,10 @@ footer {
   }
 
   &.with-padding {
-    padding: 0 20%;
+    padding: 0 25%;
   }
 
-  &.with-margin { margin: 2.5em 0; }
+  &.with-margin { margin: 2.5em auto; }
 }
 
 table.technologies {
