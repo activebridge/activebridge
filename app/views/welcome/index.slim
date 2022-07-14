@@ -14,7 +14,9 @@
         = image_tag 'index/award-5.png', class: 'index-icon left', alt: "Top Web Development Companies of USA"
       = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
         = image_tag 'index/award-6.png', class: 'index-icon left', alt: "Top 30+ Web Development Companies in USA"
-      .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
+      .clutch-widget data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
+      = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+        = image_tag 'index/award-1.png', class: "index-icon left #{mobile? ? '' : 'mobile-only'}", alt: "Top 30+ Web Development Companies in USA"
 
   .info-container.index-home
     .header-5.index-testimonials__header.white-text= t('index.help_startups')
