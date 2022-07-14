@@ -133,3 +133,40 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .carousel {
+    &__prev, &__next{ display: none; }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      height: 50vh;
+    }
+
+    &__item {
+      width: 60vw;
+      height: 42vh;
+
+      &[data-index="1"] { transform: translateX(30%) scale(.9); }
+
+      &[data-index="-1"] { transform: translateX(-30%) scale(.9); }
+    }
+
+    &__description {
+      font-size: 0.7em;
+      -webkit-line-clamp: 6;
+    }
+
+    .solutions__title {
+      font-size: 1em;
+    }
+
+    .solutions__logo {
+      width: 8vh;
+      height: 8vh;
+
+      svg { width: 4vh; }
+    }
+  }
+}
