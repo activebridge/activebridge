@@ -9,16 +9,20 @@ footer.footer
     .navigation__container
       a.footer__item.bold= t('footer.navigation.reviews')
       a.footer__item.bold href="#{t('footer.navigation.blog').downcase}" = t('footer.navigation.blog')
-      .navigation__social-icons
+      .navigation__social-icons.desktop-only
         - I18n.t('footer.navigation.social_icons').each do |item|
           a href=item[:link]
             = inline_svg "social_icons/#{item[:icon]}.svg"
+    .navigation__social-icons.mobile-only
+      - I18n.t('footer.navigation.social_icons').each do |item|
+        a href=item[:link]
+          = inline_svg "social_icons/#{item[:icon]}.svg"
   .contact-info
     .contact-info__container
       .contact-info__contacts
         a.footer__item.bold href='email: #{t("footer.contact_info.email")}'= t('footer.contact_info.email')
         a.footer__item.bold href='tel: #{t("footer.contact_info.phone_number")}'= t('footer.contact_info.phone_number')
-      .footer__copyright =t('footer.contact_info.copyright', year: Date.today.year)
+      .footer__copyright.desktop-only =t('footer.contact_info.copyright', year: Date.today.year)
     - I18n.t('footer.contact_info.entities').each do |e|
       .contact-info__container
         .footer__item.bold= e[:entity]
@@ -26,3 +30,4 @@ footer.footer
         .footer__item= e[:address]
         .footer__item= e[:post]
         .footer__item= e[:country] if e[:country]
+    .footer__copyright.mobile-only =t('footer.contact_info.copyright', year: Date.today.year)
