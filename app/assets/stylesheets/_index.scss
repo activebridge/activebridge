@@ -226,7 +226,7 @@ body {
       height: 40px;
     }
 
-    h2.header-3 {
+    .header-3 {
       margin-top: 12vh;
     }
 
@@ -245,6 +245,7 @@ body {
       display: flex;
       justify-content: center;
       margin: 5vh 0;
+      flex-wrap: wrap;
     }
 
     &__item {
@@ -334,7 +335,7 @@ body {
 }
 
 .index-services {
-  .index-services__item-description {
+  &__item-description {
     font-size: 1.2em;
     line-height: 1.8em;
     margin-top: 3vh;
@@ -349,5 +350,246 @@ body {
   .index-solutions__button {
     margin-top: 1vh;
     background: $main-gradient;
+  }
+}
+
+@media (max-width: 600px) {
+  .trigger {
+    position: absolute;
+    top: 6%;
+    left: 99%;
+    font-size: 1.5em;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    width: min-content;
+  }
+
+  .home-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+    padding-top: 10vh;
+    top: 0;
+
+    .index-header {
+      margin: 0 0 1em .5em;
+      font-size: 1.5em;
+      order: 2;
+    }
+
+    .index-logo {
+      width: 8em;
+      margin: 1.5em 2.5em;
+      order: 1;
+    }
+
+    .header-2 {
+      font-size: 1em;
+      order: 3;
+      margin: 0;
+    }
+
+    .description { display: none; }
+
+    .awards-img {
+      position: static;
+      width: inherit;
+      max-width: 85%;
+      min-height: auto;
+      margin-top: 4em;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      order: 4;
+      transform: none;
+
+      a, .clutch-widget { width: 26%; }
+    }
+
+    .button { order: 5; }
+  }
+
+  .index {
+    &-home {
+      .index-testimonials__header { padding: 0 10%; }
+
+      .description.with-padding {
+        font-size: .75em;
+        text-align: justify;
+        text-align-last: center;
+      }
+    }
+
+    &-technologies {
+      padding: 1vh 5% 0 5%;
+
+      &__holder { height: 75vh; }
+
+      .header-3 {
+        margin-top: 8vh;
+        line-height: 1.8;
+      }
+
+      .header-4 {
+        margin-top: 3vh;
+        font-size: .9em;
+        line-height: 1.8;
+      }
+
+      &__photo {
+        position: relative;
+        width: 100%;
+      }
+
+      &__items {
+        width: calc(100% - 20vw);
+        left: 0;
+        padding: 10vw 10vw 0 10vw;
+        background: transparent;
+
+        .technologies {
+          background: linear-gradient(180deg, rgba(255,255,255,0.6), transparent);
+          -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,2), rgba(0,0,0,1), rgba(0,0,0,0));
+
+          td {
+            border-color: rgba($white, .7);
+            padding: 1vh 1vw;
+
+            &:first-child {
+              border-left-color: rgba($white, .7);
+              border-bottom-color: rgba($white, .7);
+              border-right-color: rgba($white, .7);
+            }
+          }
+
+          tr:first-of-type {
+            td {
+              border-top-color: rgba($white, .7);
+              border-right-color: rgba($white, .7);
+              border-bottom-color: rgba($white, .7);
+
+              &:first-child {
+                border-color: rgba($white, .7);
+              }
+            }
+          }
+
+          tr:nth-last-child(2) {
+            display: none;
+          }
+        }
+
+        .index-technologies__more {
+          height: 70%;
+          top: 0;
+          left: 0;
+          margin: 0;
+          background: transparent;
+
+          .button {
+            margin: 0;
+            background: $main-gradient;
+            border-color: transparent;
+            box-shadow: $violet-shadow;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &-services {
+      padding: 1vh 0 5vh;
+
+      &__container { margin-bottom: 0; }
+
+      .description {
+        text-align: justify;
+        text-align-last: center;
+      }
+
+      &__container {
+        .card {
+          min-width: 300px;
+          height: auto;
+          margin: 0 10vw;
+          padding: 4vh 2vw;
+
+          &:not(:last-child) { margin-bottom: 5vh; }
+
+          &__title-2 {
+            font-size: 1.2em;
+            padding-right: 7vw;
+            padding-left: 7vw;
+          }
+
+          &__description {
+            font-size: 0.9em;
+            line-height: 1.8em;
+          }
+        }
+      }
+
+      &__button { width: 100%; }
+
+    }
+
+    &-solutions {
+      padding: 1vh 5% 0 5%;
+
+      .description {
+        text-align: justify;
+        text-align-last: center;
+      }
+    }
+
+    &-about-us {
+      padding-right: 0;
+      padding-left: 0;
+
+      &__description {
+        padding-right: 10vw;
+        padding-left: 10vw;
+        font-size: 0.9em;
+        line-height: 1.8em;
+      }
+
+      &__items { position: relative; }
+
+      &__photo {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,.25);
+          top: 0;
+          left: 0;
+
+        }
+
+        img {
+          filter: blur(8px);
+          -webkit-filter: blur(2px);
+        }
+      }
+
+      &__container {
+        position: absolute;
+        bottom: 50%;
+        width: 100%;
+        margin: 0 10%;
+        transform: translateY(50%);
+        z-index: 1;
+      }
+
+      &__item { font-size: 0.9em; }
+    }
   }
 }
