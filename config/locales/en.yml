@@ -11,52 +11,43 @@ en:
     custom web applications in a short amount of time
   navbar:
     links:
-      - title:
-          name: How we work
-          link: '/how-we-work'
-        links:
-          - name: Dedicated Team
-            link: '/how-we-work#dedicated-team'
-          - name: Team Extension
-            link: '/how-we-work#team-extension'
-          - name: Project Model
-            link: '/how-we-work#project-model'
-        icon: 'navbar/how-we-work.svg'
-      - title:
-          name: Services
-          link: '/services'
-        links:
-          - name: Web Application Development
-            link: '/services#web-application-development'
-          - name: Mobile Application Development
-            link: '/services#mobile-application-development'
-          - name: Core Technologies
-            link: '/services#core-technologies'
-        icon: 'navbar/services.svg'
-      - title:
-          name: Portfolio
-          link: '/portfolio'
-        links:
-          - name: Projects
-            link: '/portfolio#projects'
-          - name: Testimonials
-            link: '/portfolio#testimonials'
-        icon: 'navbar/portfolio.svg'
-      - title:
-          name: Team
-          link: '/team'
-        links:
-        icon: 'navbar/team.svg'
-      - title:
-          name: Blog
-          link: '/blog'
-        links:
-        icon: 'navbar/blog.svg'
-      - title:
-          name: Contact Us
-          link: '/contact'
-        links:
-        icon: 'navbar/contact.svg'
+      - page: About
+        link: /
+        items:
+          - section: Team
+            link: /team
+      - page: Expertise
+        link: /expertise
+        items:
+      - page: Services
+        link: /services
+        items:
+          - section: Web Development
+            link: /services#web_development
+          - section: RoR development
+            link: /services#ror_development
+          - section: Mobile App Development
+            link: /services#mobile_app_development
+          - section: Staff Augmentation
+            link: /services#staff_augmentation
+          - section: Project Development
+            link: /services#project_development
+      - page: Solutions
+        link: /
+        items:
+          - section: HealthTech/HIPAA-compliant
+            link: /
+          - section: InsurTech/Cloud Software
+            link: /
+          - section: B2C Marketplace / SaaS
+            link: /
+          - section: E-commerce / CRM
+            link: /
+          - section: Travel / Logistic
+            link: /
+    reviews: Reviews
+    faq: FAQ
+    blog: Blog
   meta:
     origin_url: https://activebridge.org
     pages:
