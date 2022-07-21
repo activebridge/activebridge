@@ -25,8 +25,9 @@
     background-color: $white;
     border-radius: 24px;
     transition: all .3s ease-in;
+    box-shadow: inset -4px -6px 10px grey, 2px 1px 12px 0px grey;
 
-    &[data-index="0"] { z-index: 3; }
+    &[data-index="0"] { z-index: 2; }
 
     &[data-index="-1"],
     &[data-index="1"] {
@@ -35,12 +36,12 @@
 
     &[data-index="-1"] {
       transform: translateX(-40%) scale(.9);
-      z-index: 2;
+      z-index: 1;
     }
 
     &[data-index="1"] {
       transform: translateX(40%) scale(.9);
-      z-index: 2;
+      z-index: 1;
     }
 
     &[data-index="-2"],

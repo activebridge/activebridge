@@ -4,16 +4,22 @@ header class="#{mobile? ? 'mobile-only' : 'deskop-only'}"
     = inline_svg 'index/logo.svg'
 
   input#menu-btn.menu-btn type='checkbox'
+  .overlay
   label.menu-icon for="menu-btn"
     span.navicon
 
   .header-navbar
-    - I18n.t('navbar.items').each do |i|
-      = link_to i, "/#{i}", class: "header-navbar__link #{current_page?('/' + i) ? 'active' : ''}"
+    - I18n.t('navbar.links').each do |link|
+      = link_to link[:page], "/#{link[:link]}", class: "header-navbar__link #{current_page?('/' + link[:link]) ? 'active' : ''}"
+
+      - if link[:items]
+        - link[:items].each do |item|
+          = link_to item[:section], "/#{item[:link]}", class: 'header-navbar__sub-link'
+
+
     = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact desktop-only #{current_page?('/contact') ? 'active' : ''}"
 
     .mobile-only
       = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact #{current_page?('/contact') ? 'active' : ''}"
       .header-navbar__close
-        input#menu-close.menu-close type='checkbox'
-        label.menu-close-icon for="menu-close" ⟶
+        label.menu-close-icon for="menu-btn" ⟶

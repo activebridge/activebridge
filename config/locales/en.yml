@@ -10,13 +10,6 @@ en:
     Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
   navbar:
-    items:
-      - about
-      - expertise
-      - services
-      - solutions
-      - faq
-      - blog
     links:
       - title:
           name: How we work
@@ -432,6 +425,7 @@ en:
             - section: Education / Fintech
               link: /
       reviews: Reviews
+      faq: FAQ
       blog: Blog
       social_icons:
         - link: https://www.linkedin.com/company/active-bridge
