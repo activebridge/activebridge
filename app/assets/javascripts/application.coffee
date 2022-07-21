@@ -1,6 +1,7 @@
 #= require _analytics
 #= require _smartlook
 #= require _navigation
+#= require _carousel
 
 if navigator.appVersion.toUpperCase().indexOf('MSIE') != -1 or
     navigator.appVersion.toUpperCase().indexOf('TRIDENT') != -1 or
