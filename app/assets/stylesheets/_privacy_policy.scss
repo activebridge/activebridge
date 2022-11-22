@@ -1,0 +1,127 @@
+.privacy_policy {
+  &__second,
+  &__third,
+  &__fourth { padding: 10vh 18vw; }
+
+  .header-2 {
+    max-width: 100%;
+    font-size: 1.4em;
+  }
+
+  ul { list-style: none; }
+
+  &__main {
+    background: linear-gradient(132.47deg, $palianytsia 8.4%, $buzok 52.42%, $purple-heart 93.77%);
+    position: relative;
+    padding: 13vh 18vw 10vh;
+
+    .header-3 { font-size: 1.8em; }
+
+    .header-2 { margin-bottom: 6vh; }
+
+    .description { margin: 6vh 0; }
+  }
+
+  .list-with-images__item { align-items: flex-start; }
+
+  .absolute-icon {
+    position: absolute;
+    max-width: 22vh;
+    mix-blend-mode: luminosity;
+
+    &:first-child {
+      top: 10vh;
+      left: 3vh;
+    }
+
+    &:last-child {
+      bottom: 2vh;
+      right: 4vh;
+    }
+  }
+
+  &__second {
+    background: linear-gradient(135deg, $buzok, $white);
+
+    .header-2 { margin-bottom: 6vh; }
+
+    .privacy_policy__info-item span { background: center/cover no-repeat url('privacy_policy/ruby.png'); }
+  }
+
+  &__info {
+    &-item {
+      position: relative;
+      margin-top: 3vh;
+      font-size: 1.1em;
+      line-height: 1.7em;
+      text-align: justify;
+
+      span {
+        position: absolute;
+        left: -2.5em;
+        top: .5em;
+        bottom: 0;
+        width: 1.25em;
+        height: 1.25em;
+        mix-blend-mode: luminosity;
+
+      }
+    }
+  }
+
+  &__third {
+    background: linear-gradient(135deg, $palianytsia, $white);
+
+    .description {
+      margin: 6vh 0;
+      text-align: justify;
+    }
+
+    .privacy_policy__info-title {
+      margin: 10vh 0 5vh;
+      font-size: 1.2em;
+    }
+
+    .privacy_policy__info-item span { background: center/cover no-repeat url('privacy_policy/sun.png'); }
+  }
+
+  &__fourth {
+    background-color: $titan_white;
+
+    img {
+      max-width: 20vw;
+      width: 100%;
+      mix-blend-mode: luminosity;
+    }
+
+    .header-2 { margin: 7vh 0 3vh; }
+
+    .description { text-align: justify; }
+
+    ul { padding-inline-start: 0; }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .privacy_policy {
+    &__main,
+    &__second,
+    &__third,
+    &__fourth { padding: 5vh; }
+
+    .header-2 { font-size: 1em; }
+
+    .absolute-icon {
+      position: static;
+      max-width: 17vh;
+    }
+
+    &__main .description { text-align: justify; }
+
+    &__info-item {
+      font-size: .9em;
+    }
+
+    &_fourth img { max-width: 33vw; }
+  }
+}
