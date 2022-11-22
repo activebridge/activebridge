@@ -1,0 +1,102 @@
+.container.staff_augmentation_services.development
+  .staff_augmentation_services__main
+    .header-3.white-text = t('team_extension.title')
+    .header-2.with-margin = t('team_extension.subtitle')
+    .list-with-images.horizontal
+      - I18n.t('team_extension.specialists').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "team_extension/#{item[:icon]}"
+          .list-with-images__item-text
+            .description = item[:description].html_safe
+
+  .staff_augmentation_services__team_as_service
+    h1.header-3 = t('team_extension.team_as_service.title')
+    .header-2.with-margin = t('team_extension.team_as_service.subtitle')
+    .header-3.blue = t('team_extension.team_as_service.list_title')
+    ul.web_dev_services__full_stack-list
+      - I18n.t('team_extension.team_as_service.all').each do |item|
+        li.web_dev_services__full_stack-list-item
+          span
+          = item[:item].html_safe
+    .description = t('team_extension.team_as_service.description')
+
+  .staff_augmentation_services__extension.wrap
+    h2.header-3 = t('team_extension.extension.title')
+    .description.with-margin = t('team_extension.extension.description')
+    .header-2.with-margin = t('team_extension.extension.subtitle')
+    .list-with-images.horizontal
+      - I18n.t('team_extension.extension.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "team_extension/#{item[:icon]}"
+          .list-with-images__item-text
+            .description = item[:description].html_safe
+
+  .staff_augmentation_services__advantages.wrap
+    h2.header-3 = t('team_extension.advantages.title')
+    .header-2.with-margin = t('team_extension.advantages.subtitle')
+    .list-with-images.horizontal
+      - I18n.t('team_extension.advantages.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "team_extension/#{item[:icon]}"
+          .list-with-images__item-text
+            .description = item[:description].html_safe
+    .header-2 = t('team_extension.advantages.description')
+
+  .staff_augmentation_services__dedicated_model
+    h2.header-3 = t('team_extension.dedicated_model.title')
+    .header-2.with-margin = t('team_extension.dedicated_model.subtitle_1')
+    .staff_augmentation_services__dedicated_model_description
+      .staff_augmentation_services__dedicated_model_description_icon
+        =image_tag "team_extension/magic_trick.png"
+      .description = t('team_extension.dedicated_model.description')
+    .header-2.with-margin = t('team_extension.dedicated_model.subtitle_2')
+    .list-with-images.horizontal
+      - I18n.t('team_extension.dedicated_model.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "team_extension/#{item[:icon]}"
+          .list-with-images__item-text
+            .description = item[:description].html_safe
+
+  .staff_augmentation_services__benefits.wrap
+    = image_tag 'team_extension/key.png', class: 'absolute-img'
+    .header-3 = t('team_extension.benefits.title')
+    .header-2.with-margin = t('team_extension.benefits.subtitle')
+    ul.web_dev_services__full_stack-list
+      - I18n.t('team_extension.team_as_service.all').each do |item|
+        li.web_dev_services__full_stack-list-item
+          span
+          = item[:item].html_safe
+
+  .staff_augmentation_services__transparency
+    .header-2.white-text = t('team_extension.transparency')
+
+  .staff_augmentation_services__process.wrap
+    .header-3 = t('team_extension.process.title')
+    .timeline
+      - I18n.t('team_extension.process.all').each do |a|
+        .timeline-item
+          .timeline-item__icon
+            = image_tag "team_extension/#{a[:icon]}"
+          .timeline-item__content
+            .timeline-item__content-title.inria = a[:title]
+            .timeline-item__content-description = a[:description]
+
+  .staff_augmentation_services__services.wrap.development__cards
+    .header-2 = t('team_extension.services.title')
+    .cards-container.cards-container-2
+      - I18n.t('team_extension.services.all').each do |item|
+        .card
+          .card__title-2
+            = item[:title]
+          .card__icon
+            = image_tag "team_extension/#{item[:icon]}"
+          .card__description= item[:description].html_safe
+    = link_to "#{t('team_extension.services.button')}", page_path(:services), id: 'team_extension_services_button', class: 'button white-text violet-button', target: :_blank
+
+  .faq__bottom
+    = image_tag 'faq/gift.png'
+    = link_to "#{t('faq.button')}", page_path(:contact), id: 'faq_button', class: 'button white-text violet-button', target: :_blank
