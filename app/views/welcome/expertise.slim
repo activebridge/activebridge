@@ -1,40 +1,54 @@
 .container.expertise
-  .info-container.alabaster
-    .content
-      .header-3= t('expertise.expertise')
-      h2.header-2= t('expertise.expertise_in_ror')
-      .description.justify= t('expertise.main_description_1')
-      .chart-container
-        .chart-bar
-          - I18n.t('expertise.dev_levels').each do |e|
-            .chart-bar__item.inria style="background-color: #{e[:color]}; width: #{e[:percentage]};"
-              = e[:percentage]
-        .chart__items
-          - I18n.t('expertise.dev_levels').each do |ex|
-            .chart__item
-              .chart__item-color style="background-color: #{ex[:color]}"
-              .chart__item-asterisk
-                .chart__item-title= ex[:title]
-                .chart__item-description= ex[:description]
-      .description.justify= t('expertise.main_description_2')
-  .info-container.technologies
-    .content
-      h2.header-2= t('expertise.core_technology')
-      .header-3.small-text= t('expertise.technologies')
-      = render 'shared/technologies', step: 6, name: true
-      .description.justify= t('expertise.technologies_description')
-  .info-container.alabaster.industries
-    .content
-      .header-3= t('expertise.projects').html_safe
-      .header-2= t('expertise.custom_dev_expertise')
-      .header-3.small-text= t('expertise.industries_title')
-    .cards-carousel 
-      - I18n.t('expertise.industries').each do |e|
-        .card
-          .card__title-2= e[:title]
-          .card__icon.circled.circled-small
-            = inline_svg "#{e[:icon]}.svg"
-          .card__subtitle= t('expertise.devs_work_on')
-          ul
-            - e[:items].each do |i|
-              li= i
+  .alabaster.expertise__main
+    .header-3 = t('expertise.main.title')
+    h2.header-2 = t('expertise.main.subtitle')
+    .description.justify = t('expertise.main.description_1')
+    .chart-container
+      = render 'shared/expertise_chart'
+    .description.justify = t('expertise.main.description_2')
+
+  .expertise__technologies
+    h2.header-2= t('expertise.technologies.subtitle')
+    .header-3 = t('expertise.technologies.title')
+    = render 'shared/technologies', step: 6, name: true
+    .description.justify = t('expertise.technologies.description')
+
+  .alabaster.expertise__industries
+    .header-3 = t('expertise.industries.projects').html_safe
+    .header-2 = t('expertise.industries.subtitle')
+    .header-3.small-text = t('expertise.industries.title')
+    .carousel.industries
+      ul.carousel__list
+        - I18n.t('expertise.industries.all').each_with_index do |i, index|
+          li.carousel__item data-index="#{index-(I18n.t('expertise.industries.all').length / 2)}"
+            .carousel__title.industries__title
+              = i[:title]
+            .carousel__logo.industries__logo
+              = inline_svg "#{i[:icon]}.svg"
+            .carousel__subtitle = t('expertise.industries.devs_work_on')
+            ul.carousel__description
+              - i[:items].each do |item|
+                li.carousel__description-item
+                  = item
+
+  .expertise__solutions.info-container
+    .header-2.white-text = t('expertise.solutions.title')
+    = link_to t('expertise.solutions.button'), page_path(:solutions), class: "button white-text violet-button", id:"expertise-all-solutions"
+
+  .expertise__testimonials
+    .header-2 = t('expertise.testimonials.title')
+    .carousel
+      ul.carousel__list
+        - I18n.t('testimonials.all').each_with_index do |t, index|
+          li.carousel__item data-index="#{index-(I18n.t('testimonials.all').length / 2)}"
+            .carousel__image
+              = image_tag t[:image]
+            .carousel__logo
+              = image_tag t[:logo]
+            .carousel__description
+              = t[:description]
+    = link_to t('testimonials.button'), page_path(:testimonials), class: "button", id:"expertise-read-testimonials"
+
+  .expertise__tell-us
+    .header-2.white-text = t('expertise.tell-us.title')
+    = link_to t('expertise.tell-us.button'), contact_path, class: "button white-text violet-button", id:"expertise-tell-us"
