@@ -1,0 +1,11 @@
+.about_us_info__items
+  .about_us_info__container
+    - I18n.t('index.about_us_items').each do |item|
+      .about_us_info__item.white-text
+        = inline_svg item[:logo]
+        = item[:text]
+  .about_us_info__photo.desktop-only
+    - if params[:page] == 'about'
+      = image_tag 'about/about-bg-2.jpeg'
+    - else
+      = image_tag 'index/about_us_photo.jpg'
