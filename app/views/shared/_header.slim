@@ -1,4 +1,4 @@
-header class="#{mobile? ? 'mobile-only' : 'deskop-only'}"
+header class="#{mobile? ? 'mobile-only' : 'desktop-only'}"
 
   a.logotype href='/'
     = inline_svg 'index/logo.svg'
@@ -8,14 +8,18 @@ header class="#{mobile? ? 'mobile-only' : 'deskop-only'}"
   label.menu-icon for="menu-btn"
     span.navicon
 
-  .header-navbar
+  ul.header-navbar
     - I18n.t('navbar.links').each do |link|
-      = link_to link[:page], "/#{link[:link]}", class: "header-navbar__link #{current_page?('/' + link[:link]) ? 'active' : ''}"
 
-      - if link[:items]
-        - link[:items].each do |item|
-          = link_to item[:section], "/#{item[:link]}", class: 'header-navbar__sub-link'
+      li.header-navbar__item
+        - if link[:items]
+          = link_to link[:page], "#{link[:link]}", class: "header-navbar__link #{current_page?(link[:link]) ? 'active' : ''}"
 
+          ul.header-navbar__subitems
+            - link[:items].each do |item|
+              li = link_to item[:section], "#{item[:link]}", class: 'header-navbar__sub-link'
+        - else
+          = link_to link[:page], "#{link[:link]}", class: "header-navbar__link #{current_page?(link[:link]) ? 'active' : ''}"
 
     = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact desktop-only #{current_page?('/contact') ? 'active' : ''}"
 
