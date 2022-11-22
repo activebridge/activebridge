@@ -4,13 +4,13 @@ class WelcomeController < ApplicationController
     'APIs-Google',
     'Googlebot-Video',
     'Google-Read-Aloud',
-    'googleweblight',	
+    'googleweblight',
     'Storebot-Google',
     'Google Favicon',
     'SemrushBot',
     'Bingbot',
     'Slurp',
-    'ia_archiver'] 
+    'ia_archiver']
   GOOGLE = 'https://www.google.com/'
   skip_before_action :verify_authenticity_token
   # before_action :filter_bots
@@ -19,7 +19,11 @@ class WelcomeController < ApplicationController
 
   def index
     @page = params[:page] || '/'
-    render params[:page]
+    if params[:subitem]
+      render ['welcome', params[:page], params[:subitem]].join('/')
+    else
+      render params[:page]
+    end
   end
 
   def bing_site_auth
