@@ -1,0 +1,110 @@
+.container.mob_dev_services.development
+  .mob_dev_services__main.wrap
+    .header-3.white-text = t('mob_dev_services.title')
+    .header-2.with-margin = t('mob_dev_services.subtitle')
+    .description.white-text = t('mob_dev_services.description').html_safe
+
+    .header-3 = t('mob_dev_services.industries_title')
+    .list-with-images.horizontal
+      - I18n.t('mob_dev_services.industries').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "mob_development_services/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2.white-text = item[:title]
+
+  .mob_dev_services__cross_platform.wrap.development__cards
+    h1.header-3 = t('mob_dev_services.cross_platform.title')
+    .header-2 = t('mob_dev_services.cross_platform.description')
+    .cards-container.cards-container-2
+      - I18n.t('mob_dev_services.cross_platform.all').each do |item|
+        .card
+          .card__title-2
+            = item[:title]
+          .card__icon
+            = image_tag "mob_development_services/#{item[:icon]}"
+          .card__description= item[:description].html_safe
+    .header-2.with-margin = t('mob_dev_services.cross_platform.subtitle')
+
+  .mob_dev_services__react_native.wrap
+    h2.header-3 = t('mob_dev_services.react_native.title')
+    .description.with_margin = t('mob_dev_services.react_native.description').html_safe
+    .list-with-images
+      - I18n.t('mob_dev_services.react_native.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "mob_development_services/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            .description = item[:description].html_safe
+
+  .mob_dev_services__flutter.wrap
+    h2.header-3 = t('mob_dev_services.flutter.title')
+    .description.with_margin = t('mob_dev_services.flutter.description_1').html_safe
+    .description.with_margin-2 = t('mob_dev_services.flutter.description_2').html_safe
+    .list-with-images
+      - I18n.t('mob_dev_services.flutter.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "mob_development_services/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            .description = item[:description].html_safe
+  .mob_dev_services__ionic.wrap
+    h2.header-3.white-text = t('mob_dev_services.ionic.title').html_safe
+    .description.with_margin.white-text = t('mob_dev_services.ionic.description').html_safe
+    .list-with-images
+      - I18n.t('mob_dev_services.ionic.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "mob_development_services/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2.white-text = item[:title]
+            .description.white-text = item[:description].html_safe
+
+  .mob_dev_services__approaches.wrap
+    .header-3 = t('mob_dev_services.approaches.title')
+    .header-2 = t('mob_dev_services.approaches.subtitle')
+    .timeline
+      - I18n.t('mob_dev_services.approaches.all').each do |a|
+        .timeline-item
+          .timeline-item__icon
+            = image_tag "mob_development_services/#{a[:icon]}"
+          .timeline-item__content
+            .timeline-item__content-title.inria = a[:title]
+            .timeline-item__content-description = a[:description]
+            - if a[:output]
+              .timeline-item__content-output
+                .timeline-item__content-output-title
+                  = t('mob_dev_services.approaches.output')
+                ul.timeline-item__content-output-list
+                  - a[:output].each do |item|
+                    li.timeline-item__content-output-item = item[:text]
+
+  .development__cards.wrap
+    .header-3 = t('ror_dev_services.engagement_models.title')
+    .header-2 = t('ror_dev_services.engagement_models.subtitle')
+    .cards-container
+      - I18n.t('ror_dev_services.engagement_models.all').each do |a|
+        .card
+          .card__title-2
+            = a[:title]
+          .card__description= a[:description].html_safe
+          //change links
+          = link_to t('web_dev_services.button'), page_path(:expertise), class: "button"
+
+  .development__offer
+    .header-2.white-text = t('web_dev_services.offer_text')
+
+  .development__carousel.wrap
+    .carousel
+      ul.carousel__list
+        - I18n.t('web_dev_services.industries.all').each_with_index do |i, index|
+          li.carousel__item data-index="#{index-(I18n.t('web_dev_services.industries.all').length / 2)}" data-type="industries"
+            h2.carousel__title.inria
+              = i[:title]
+            .carousel__description
+              = i[:description].html_safe
+            //each item's button linked to different page
+            = link_to t('web_dev_services.button'), page_path(:expertise), class: "button white-text"
+    = link_to t('services.approaches.button'), page_path(:contact), class: "button dev_services__carousel-btn"
