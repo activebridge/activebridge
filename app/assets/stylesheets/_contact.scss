@@ -1,283 +1,203 @@
-$font-size: 16px;
-$main-color: $gradient;
-$textarea-height: 120px;
-$initial-margin: 5;
+.contact {
+  background: left 100% / 100% 100% no-repeat url('contact/contact_bg.png');
+  box-sizing: border-box;
+  padding: 7vh 18vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.container{
-  .contact_header_2, .contact_header_3 {
-    font-weight: bold;
+  .header-3 {
+    margin: 12vh 0 4vh;
+    font-size: 1.8em;
   }
 
-  .contact_header {
-    position: relative;
+  .header-2 {
+    max-width: 100%;
+    font-size: 1.5em;
+    text-align: center;
   }
 
-  .contact-form-holder {
-    position: absolute;
-    left: 47%;
-    top: 35%;
-    width: 30%;
-    visibility: visible;
-    opacity: 1;
-    transition: all 1s linear;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    padding: 15px 0 25px 0;
+  .description {
+    margin: 6vh 0;
+    letter-spacing: 0.02em;
+  }
 
-    .contact-form {
+  &__form {
+    &-container { width: 90%; }
+
+    &-item,
+    &-more {
+      position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      width: 85%;
-      height: 95%;
-      color: black;
+      margin: 3vh;
+    }
 
-      .material-input {
-        text-align: left;
-        height: 12%;
-        label {
-          font-weight: bold;
-          width: 100%;
-          line-height: 35px;
-        }
+    &-item::before {
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 1px;
+      left: 2vw;
+      bottom: 2vh;
+      background-color: $azovstal;
+    }
 
-        input, textarea, select {
-          border-radius: 5px;
-          background-color: #F9F9F9;
-          border: none;
-          width: 100%;
-          box-shadow: 0px 0px 10px 3px rgba($color: $main-blue, $alpha: 0.1) inset;
-          outline: none;
-          font-size: 1.15rem;
-          color: $main-blue;
-          height: 50%;
-          padding: 0 8px;
-          box-sizing: border-box;
-        }
+    &-label {
+      padding-bottom: 1vh;
+      padding-left: 2vw;
+      line-height: 1.4em;
+    }
 
-        textarea{
-          height: 90px;
-          resize: none;
-        }
+    &-input {
+      min-height: 5vh;
+      max-height: 60px;
+      padding: 1vh 2vw;
+      background-color: transparent;
+      border: none;
+      border-radius: 5vh;
+      box-shadow: $form-shadow;
 
-        &.textarea{
-          height: 20%;
-        }
-      }
+      &:focus { outline: none; }
 
-      .contact-button{
-        margin-top: 25px;
-        height: 35px;
-        font-size: 1.25rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border: none;
-        color: white;
-        background-color: $main-blue;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px 1px rgba(95, 82, 202, 0.4);
-        cursor: pointer;
+      &::placeholder {
+        font-size: 1.1em;
+        color: $azovstal;
       }
     }
-  }
 
-  .visible{
-    visibility: visible;
-    opacity: 1;
-  }
+    &-link {
+      margin-top: 1vh;
+      padding: 1vh;
+      min-height: 2.5vh;
+      max-height: 30px;
+      background-color: transparent;
+      border: none;
+      border-radius: 5vh;
+      box-shadow: $form-shadow;
+      font-family: 'Cera Regular', serif;
+      font-style: italic;
+      font-size: 1em;
+      font-weight: 100;
+      text-align: center;
 
-  .find_us {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 5%;
+      &:link,
+      &:active,
+      &:visited,
+      &:focus {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
 
-    .find_item {
-      color: $main-blue;
-      text-decoration: none;
+    textarea { resize: none; }
+
+    &-upload {
+      position: relative;
+
+      &-wrap {
+        position: absolute;
+        right: 0;
+        bottom: 2.3vh;
+        z-index: 1;
+      }
+
+      &-input { display: none; }
+
+      &-label {
+        padding: 2.3vh;
+        background: rgba($white, .5);
+        border-radius: 50%;
+        cursor: pointer;
+        max-height: 60px;
+        min-height: 5vh;
+      }
+    }
+
+    &-description {
+      .header-2 { margin: 6vh 0 5vh; }
+
+      &-list {
+        li {
+          font-size: 1.1em;
+          line-height: 1.8em;
+        }
+      }
+    }
+
+    &-button.button {
       display: flex;
       align-items: center;
-
-      .find_us_logo {
-        height: 12vh;
-        transition: all .3s linear;
-      }
-
-      span {
-        margin-left: 2vw;
-      }
-
-      &:hover {
-        .find_us_logo {
-          transform: rotate(45deg);
-        }
-      }
-    }
-
-    @for $i from 1 through 5 {
-      $initial-margin: $initial-margin + 6;
-      .item_#{$i} {
-        margin-left: $initial-margin + vw;
-      }
+      justify-content: center;
+      width: 65%;
+      margin: 6vh auto 0;
+      font-weight: 100;
+      background: rgba($white, .8);
     }
   }
+}
 
-  .entities {
-    display: flex;
-    width: 80%;
-    align-self: center;
-    justify-content: space-around;
-    text-align: left;
-    color: $main-blue;
-    margin: 5vh 0;
+@media (max-width: 600px) {
+  .contact {
+    padding: 8vw;
 
-    .entity {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+    .header-3 { font-size: 1.4em; }
 
-      .entity-holder {
-        background: linear-gradient(to right, $main-violet, $main-blue);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 0;
-        font-size: 1.25rem;
-        margin-bottom: 20px;
-        transition: all .3s linear;
+    .header-2 {
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      font-size: .9em;
+    }
 
-        .entity-logo {
-          height: 5vh;
-          margin-right: 15px;
-        }
+    .description {
+      margin-bottom: 4vh;
+      font-size: .75em;
+      letter-spacing: normal;
+      text-align: left;
+    }
 
-        &:hover {
-          background: linear-gradient(to right, $main-blue, $main-violet);
-          box-shadow: 0px 0px 10px 1px rgba($color: $main-blue, $alpha: 0.4);
+    &__form {
+      &-container {
+        width: 100%;
+      }
+
+      &-item,
+      &-more {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      &-item {
+        &::placeholder { font-size: .7em; }
+
+        &::before {
+          width: 80%;
+          left: 8vw;
         }
       }
 
-      span {
-        margin: 2px 0;
+      &-input {
+        padding-right: 8vw;
+        padding-left: 8vw;
       }
-    }
-  }
-  .alert{
-    z-index: 6;
-    background: $transparent-main-violet;
-    color: $white;
-    padding: 20px 60px 20px 15px;
-    position: absolute;
-    right: 2%;
-    top: 20px;
-    border-radius: 4px;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.2s ease-in-out 0s;
-    pointer-events: none;
-  }
-  .alert.showAlert{
-    opacity: 1;
-    pointer-events: auto;
-  }
 
-  .alert .close-btn{
-    position: absolute;
-    right: 0px;
-    font-size: 25px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 7% 3%;
-    cursor: pointer;
-    background: $light-violet;
-  }
-  .alert .close-btn:hover{
-    background: $gradient;
-  }
-  
-  @media (max-width: 600px){
-  
-    .alert {
-      padding: 20px 55px 20px 20px;
-      right: -5%;
-      left: 2%;
-      top: 25px;
+      &-label { padding-left: 8vw; }
 
-      .close-btn {
-        padding: 7% 6%;
-      }
-    }
+      &-label,
+      &-link { font-size: .9em; }
 
-    .bg {
-      position: absolute;
-      z-index: -1;
-      margin-top: 40vh;
-    }
-
-    .material-input {
-      input, textarea, select {
-        background: linear-gradient(to right, $mediumpurple 25%, $white 50%, $mediumpurple 75%);
-      }
-    }
-
-    .informational_container.contact-form-holder {
-      position: unset;
-      width: 90%;
-      margin: 2vh 5%;
-      opacity: 0.8;
-      border: 1px solid $main-blue;
-      box-shadow: none;
-      scroll-snap-align: start;
-    }
-
-    .find_us {
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin-left: 0 !important;
-      order: 1;
-      margin-bottom: 5vh;
-      scroll-snap-align: start;
-
-      .find_item {
-        margin-left: 0 !important;
-
-        .find_us_logo {
-          transform: rotate(45deg);
-          height: 8vh;
+      &-description {
+        .header-2 {
+          margin-top: 6vh;
+          margin-bottom: 6vh;
         }
       }
+
+      &-description-list {
+        padding-left: 4vw;
+
+        li { font-size: .75em; } 
+      }
     }
-
-    .entities {
-      width: 90%;
-      margin: 5vh auto;
-      scroll-snap-align: end;
-
-      .entity:first-child {
-        margin-right: 10px;
-      }
-
-      .entity {
-        width: unset;
-
-        span {
-          font-size: 0.8em;
-        }
-
-        .entity-holder {
-          font-size: 0.9em;
-
-          .entity-logo {
-            margin-right: 5px;
-            width: 15%;
-            height: 2vh;
-          }
-        }
-      }
-   }
   }
 }
