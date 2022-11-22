@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   get ':page', to: 'welcome#index',
                constraints: { page: /(services|reviews|contact|expertise|about|solutions|testimonials|faq|privacy-policy)/ },
                as: :page
+  get '/:page/:subitem', to: 'welcome#index', as: :page_subitem
   get 'expire_cache', to: 'welcome#expire_cache'
   get 'BingSiteAuth.xml' => 'welcome#bing_site_auth', format: 'xml', as: :BingSiteAuth
-
-  get '/about', to: 'welcome#index'
 
   resources :articles, defaults: { format: :html }, path: 'blog' do
     collection do
