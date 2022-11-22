@@ -1,0 +1,65 @@
+.container.project_dev_services.development
+  .project_dev_services__main
+    .header-3 = t('project_development.title')
+    .header-2.with-margin = t('project_development.subtitle_1')
+    .description = t('project_development.description_1').html_safe
+    .header-2.with-margin = t('project_development.subtitle_2')
+    .list-with-images.horizontal
+      - I18n.t('project_development.level').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "project_development/#{item[:icon]}", class: 'w-100'
+          .list-with-images__item-text
+            .description = item[:title]
+    .description = t('project_development.description_2')
+    .header-2.with-margin = t('project_development.subtitle_3')
+    .list-with-images.horizontal
+      - I18n.t('project_development.contract').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "project_development/#{item[:icon]}"
+          .list-with-images__item-text
+            .description = item[:description]
+
+  .project_dev_services__key_benefits.wrap
+    h1.header-3 = t('project_development.key_benefits.title')
+    .list-with-images.horizontal
+      - I18n.t('project_development.key_benefits.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "project_development/#{item[:icon]}"
+          .list-with-images__item-text
+            .description = item[:description]
+    .header-2.with-margin = t('project_development.key_benefits.subtitle')
+
+  .project_dev_services__workflow.wrap
+    h2.header-3.white-text = t('project_development.workflow.title')
+    .timeline
+      - I18n.t('project_development.workflow.all').each do |item|
+        .timeline-item
+          .timeline-item__icon
+            = image_tag "project_development/#{item[:icon]}"
+          .timeline-item__content
+            .timeline-item__content-title.inria.white-text = item[:title]
+            .timeline-item__content-description.white-text= item[:description]
+            .timeline-item__content-output
+              .timeline-item__content-output-title
+                = t('project_development.workflow.client_gets_title')
+              ul.timeline-item__content-output-list
+                - item[:client_gets].each do |el|
+                  li.timeline-item__content-output-item = el[:item]
+              .timeline-item__content-bottom.white-text
+                span.inria = t('project_development.workflow.tools')
+                = item[:tools]
+
+  .wrap.development__cards
+    .header-2 = t('team_extension.services.title')
+    .cards-container.cards-container-2
+      - I18n.t('team_extension.services.all').each do |item|
+        .card
+          .card__title-2
+            = item[:title]
+          .card__icon
+            = image_tag "team_extension/#{item[:icon]}"
+          .card__description= item[:description].html_safe
+    = link_to "#{t('team_extension.services.button')}", page_path(:services), id: 'team_extension_services_button', class: 'button', target: :_blank
