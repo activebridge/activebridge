@@ -1,71 +1,75 @@
 .container.services
-  .info-container
-    .content
-      .header-3.white-text= t('services.services')
-      h2.header-5.white-text= t('services.pick_right_stack')
-      .services-container
-        .description.white-text= t('services.learn_and_grow')
-        = image_tag 'services/flower.jpg'
-  .info-container.web-dev.alabaster
-    .content
-      h2.header-3= t('services.web_dev_services')
-      .description= t('services.scale_your_business')
-    .web-app-services
-      .cards-carousel
-        - I18n.t('services.web_services').each do |s|
-          .card
-            .card__title-2= s[:title]
-            .card__icon.circled
+  .info-container.services__main-container
+    .header-3.white-text = t('services.services')
+    h2.header-5.white-text = t('services.pick_right_stack')
+    .services__description-wrap
+      .description.white-text = t('services.learn_and_grow')
+      = image_tag 'services/flower.jpg'
+
+  .alabaster.services__web-dev
+    h2.header-3 = t('services.web_services.title')
+    .description = t('services.web_services.description')
+    .carousel
+      ul.carousel__list.services
+        - I18n.t('services.web_services.all').each_with_index do |s, index|
+          li.carousel__item data-index="#{index-(I18n.t('services.web_services.all').length / 2)}"
+            .carousel__title.services__title
+              = s[:title]
+            .carousel__logo.services__logo
               = inline_svg "services/web_dev/#{s[:icon]}"
-            .card__description= s[:description]
-    a.button.main-gradient.white-text href='#'= t('services.learn_more')
-  .info-container.custom-ror-dev
-    .content
-      h2.header-3.white-text= t('services.custom_ror_services')
-      .description.white-text= t('services.come_with_xp')
-    .cards-carousel 
-      - I18n.t('services.custom_ror_dev_services').each do |r|
+            .carousel__description.solutions__description
+              = s[:description].html_safe
+    a#more-web-services.button.white-text.violet-button href='' = t('services.learn_more')
+
+  .services__custom-ror-dev
+    h2.header-3.white-text = t('services.custom_ror_dev_services.title')
+    .description.white-text = t('services.custom_ror_dev_services.description')
+    .carousel
+      ul.carousel__list.services
+        - I18n.t('services.custom_ror_dev_services.all').each_with_index do |r, index|
+          li.carousel__item data-index="#{index-(I18n.t('services.custom_ror_dev_services.all').length / 2)}"
+            .carousel__title.services__title
+              = r[:title]
+            .carousel__logo.services__logo
+              = inline_svg "services/custom_ror_dev/#{r[:icon]}"
+            .carousel__description.solutions__description
+              = r[:description].html_safe
+    a#more-ror-services.button.white-text.violet-button href='#' = t('services.learn_more')
+
+  .services__mobile-dev
+    h2.header-3 = t('services.mobile_dev_services.title')
+    .description = t('services.mobile_dev_services.description')
+    .cards-container
+      - I18n.t('services.mobile_dev_services.all').each do |m|
         .card
-          .card__title-2= r[:title]
-          .card__icon.circled
-            = inline_svg "services/custom_ror_dev/#{r[:icon]}"
-          .card__description= r[:description]
-    a.button.main-gradient.white-text href='#'= t('services.learn_more')
-  .info-container.mobile-dev
-    .content
-      h2.header-3= t('services.mobile_dev_title')
-      .description= t('services.mobile_dev_description')
-      .cards-container
-        - I18n.t('services.mobile_dev_services').each do |m|
-          .card
-            .card__title-2.purple-heart= m[:title]
-            .card__icon
-              = inline_svg "services/mobile_dev_services/#{m[:icon]}"
-            .card__description= m[:description]
-    a.button href='#'= t('services.learn_more')
-  .info-container.engagement-models
-    .content
-      .header-3.white-text= t('services.engagement_models_title')
-      .description.white-text.inria= t('services.engagement_models_description')
-      .cards-container
-        - I18n.t('services.engagement_models').each do |em|
-          .card
-            .card-content
-              .card__title-2.white-text= em[:title]
-              .card__description.white-text= em[:description]
-            .spacer
-            a.button href='#'= t('services.learn_more')
-    = image_tag 'services/laptop-backpack.png', class: 'engagement-models__image'
-  .info-container.alabaster.approaches-section
-    .content
-      .header-2= t('services.ab_success')
-      .header-3= t('services.negotiation_approach')
-      .approaches
-        - I18n.t('services.approaches').each_with_index do |a, i|
-          .approach
-            .approach__image
-              = inline_svg "services/approach/approach-#{i + 1}.svg"
-              = image_tag "services/approach/approach-#{i + 1}-bg.png"
-            .approach__content
-              .approach__title.inria= a[:title]
-              .approach__description= a[:description]
+          .card__title-2.purple-heart
+            = m[:title]
+          .card__icon
+            = inline_svg "services/mobile_dev_services/#{m[:icon]}"
+          .card__description= m[:description]
+    a#more-dev-services.button.white-text.violet-button href='#' = t('services.learn_more')
+
+  .info-container.services__engagement-models
+    .header-3.white-text = t('services.engagement_models.title')
+    .description.white-text.inria = t('services.engagement_models.description')
+    .cards-container
+      - I18n.t('services.engagement_models.all').each_with_index do |em, index|
+        .card
+          .card-content
+            .card__title-2.white-text = em[:title]
+            .card__description.white-text = em[:description]
+          a.button.violet-button id="engagement_model_#{index + 1}" href='#' = t('services.learn_more')
+    = image_tag 'services/laptop-backpack.png', class: 'services__engagement-models-img'
+
+  .alabaster.services__approaches
+    .header-2 = t('services.approaches.subtitle')
+    .header-3 = t('services.approaches.title')
+    .timeline
+      - I18n.t('services.approaches.all').each_with_index do |a, index|
+        .timeline-item
+          .timeline-item__icon
+            = image_tag "services/approach/approach_#{index + 1}.png"
+          .timeline-item__content
+            .timeline-item__content-title.inria = a[:title]
+            .timeline-item__content-description = a[:description]
+    a#services-free-consultation.button href='#' = t('services.approaches.button')
