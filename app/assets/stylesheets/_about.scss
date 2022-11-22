@@ -1,234 +1,322 @@
 .about {
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
-  height: 100%;
-  color: $dark-violet;
-  position: relative;
-  font-family: Raleway bold;
+  .info-container,
+  &__vision,
+  &__benefits { padding: 5vh 18vw 0; }
 
-  &-background-svg {
-    position: absolute;
-    width: 90%;
-    height: 100vh;
-    min-height: 740px;
-    opacity: 0.2;
-    z-index: -1;
+  &__header,
+  &__description {
+    font-family: 'Inria', serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 1.7em;
+    text-align: center;
+    color: #fff;
   }
 
-  &-desc {
-    position: relative;
-    background: #eff0f1;
-    background: linear-gradient(0deg, #eff0f1, #dfcace);
-    padding: 30px 40px;
-    left: 1%;
-    width: 65%;
-    min-height: 301px;
-    height: 35%;
-    font-size: 1.2rem;
-    transform: rotate(-5deg);
-    -webkit-backface-visibility: hidden;
-    transition: transform .3s;
-    position: relative;
-    top: 10%;
-    z-index: 10;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      bottom: 10px;
-      left: 10px;
-      right: 10px;
-      background: $white;
-      z-index: -1;
+  &__header {
+    margin-top: 4.5vh;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    margin-bottom: 4.5vh;
+
+    &-cera {
+      font-family: 'Cera Regular', serif;
+      font-size: 1em;
     }
-    &-text {
-      height: 100%;
-      overflow-y: auto;
+  }
+
+  &__vision {
+    &-description {
+      color: $black;
+      text-align: justify;
+    }
+  }
+
+  &__vision,
+  &__benefits,
+  &__key-facts {
+    h2.header-2 {
+      margin-bottom: 5vh;
+      font-size: 1.5em;
+      max-width: 100%;
+    }
+  }
+
+  &__crew {
+    padding: 5vh 18vw;
+    background: center/cover no-repeat url('about/crew.jpeg');
+
+    .about__description {
+      padding: 5vh 0;
+      text-align: justify;
+      margin-bottom: 0;
     }
 
-    &-mark {
-      position: absolute;
-      top: 65%;
-      right: 60%;
-      z-index: 100;
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 4.5vh 0 3vh;
     }
 
-    &-square-mark {
-      width: 190px;
-      height: 190px;
-      right: 50%;
-      top: 90%;
-      background-color: $light-grey;
-      position: absolute;
-      z-index: 99;
-      transform: rotate(27deg);
-      border: 15px solid $white;
-      box-shadow: 10px 5px 10px 2px rgba(43, 43, 43, 0.28);
+    &-item {
+      padding: 4vw 1vw;
+      max-width: 270px;
+      width: 100%;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: inset -1px 4px 13px -5px white, inset -1px -5px 5px grey, 2px 1px 12px 0px grey;
+      box-sizing: border-box;
 
-      &:after {
-        right: 0;
-        background-color: rgb(234, 234, 234);
-        content: '';
-        position: absolute;
-        width: 160px;
-        height: 27px;
-        display: inline-block;
-        top: 75%;
+      &-photo img {
+        width: 8em;
+        border-radius: 50%;
+      }
+
+      &-name {
+        margin: 2vw 0 1vw;
+        font: 1.5em 'Inria Bold', serif;
+      }
+
+      &-post { font-size: 1.1em; }
+    }
+
+    &-button { background-color: $white !important; }
+  }
+
+  &__benefits,
+  &__testimonials,
+  &__culture { padding: 10vh 18vw; }
+
+  &__benefits {
+     background: left 100% / 100% 75% no-repeat url("about/benefits.svg");
+
+    h2.header-2 { margin-top: 5vh; }
+
+    .accordion {
+      &__item {
+        &-top {
+          letter-spacing: normal;
+          text-transform: inherit;
+        }
+        &-text {
+          padding: 7vh 7vh 5vh;
+          line-height: 1.7;
+          text-align: justify;
+        }
+      }
+
+      label {
+        font-family: 'Inria', serif;
+
+        &::before,
+        &::after { top: 0; }
       }
     }
   }
 
-  h3, h4 {
-    font-size: inherit;
-    font-weight: normal;
-    display: inline;
-  }
+  &__key-facts {
+    h2.header-2 { margin-top: 5vh; }
 
-  &-title {
-    position: absolute;
-    font-size: 2rem;
-    color: $white;
-    display: inline-block;
-    font-weight: bold;
-    text-shadow: 1px 3px rgba($black, .9);
-    transform: rotate(5deg);
-    -webkit-backface-visibility: hidden;
-    right: 0;
-    top: 4%;
-    z-index: 1;
-  }
-
-  &-desc:hover, &-items:hover {
-    z-index: 100;
-  }
-
-  &-items {
-    padding: 20px;
-    background: $white;
-    border: 20px solid $white;
-    box-shadow: inset 0 0 0px 5px #fafafa;
-    border-radius: 5px;
-    width: 35%;
-    height: 65vh;
-    font-size: 1rem;
-    top: 30%;
-    position: absolute;
-    right: 3%;
-    transform: rotate(5deg);
-    -webkit-backface-visibility: hidden;
-    z-index: 1;
-
-    div {
-      overflow-y: scroll;
-      height: 100%;
+    &-list {
+      margin: 0;
+      padding: 5vh 0;
+      list-style-type: none;
     }
 
-    dt {
-      text-align: center;
-      font-weight: bold;
-    }
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5vh;
 
-    dd {
-      margin: 0 30px;
-      line-height: 20px;
-    }
+      &-img { margin-right: 2vw; }
 
-    &:before, &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 50%;
-      top: -50px;
-      left: 25%;
-      background: #eff0f1;
-      background: linear-gradient(to bottom, $white, $light-grey);
-      border-radius: 2px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      height: 60px;
-    }
+      svg { width: 16vh; }
 
-    &:after {
-      z-index: -1;;
-      background: linear-gradient(to bottom, $white, $white, $light-grey);
-      top: -75px;
-      width: 36%;
-      left: 32%;
-    }
+      &-text { text-align: justify; }
 
-    &-wrapper {
-      height: 100%;
-      overflow-y: auto;
-    }
+      &-title {
+        margin-bottom: 3vh;
+        font-size: 1.2em;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
 
-    &-circle {
-      border-radius: 50%;
-      width: 185px;
-      height: 185px;
-      background-color: $light-grey;
-      border: 13px solid $white;
-      position: absolute;
-      top: 38%;
-      right: 90%;
-      box-shadow: 3px 4px rgba(158, 155, 155, 0.14);
+        span { font-weight: bold;}
+      }
+
+      &-description { line-height: 1.6; }
     }
   }
-}
 
-@media screen and (max-width: 1050px) {
-  .about-desc {
-    min-height: 325px;
+  &__testimonials {
+    background: center/cover no-repeat url('about/about-bg.jpeg');
+
+    &-title { margin-bottom: 5vh; }
   }
-}
 
-@media screen and (max-width: 978px) {
-  .about {
-    position: relative;
+  &__culture {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: center/cover no-repeat url('about/team.jpeg');
+
+    &-text { line-height: 1.6; }
 
     &-title {
-      transform: none;
-      position: absolute;
-      width: 40%;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      text-transform: uppercase;
+      font-size: 1.6em;
+      letter-spacing: 0.4em;
+      margin: 0 5vh;
     }
 
-    &-desc {
-      width: 90%;
-      margin-left: 4vw;
-      height: auto;
-      min-height: auto;
-      transform: none;
+    &-description {
+      margin: 8vh 0 6vh;
+      font-size: 1.3em;
+      font-family: 'Inria Bold', serif;
+      text-align: justify;
+    }
 
-      &-mark {
-        display: none;
-      }
+    &-button {
+      max-width: 25em;
+      background-color: $white !important;;
+    }
+  }
+}
 
-      &-square-mark {
-        display: none;
+.about_us_info {
+  &__container { width: 50%; }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vh;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    svg {
+      height: 10vh;
+      margin-right: 10px;
+    }
+  }
+
+  &__photo {
+    width: 75%;
+    margin-right: -15vw;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__items { display: flex; }
+}
+
+
+@media (max-width: 600px) {
+  .about {
+    .button { width: 65vw; }
+
+    h2.header-2 { font-size: 1em; }
+
+    &__header,
+    &__description {
+      font-size: .9em;
+      line-height: 1.4;
+    }
+
+    &__header {
+      margin: 4.5vh auto 3vh;
+      max-width: 70vw;
+    }
+
+    .info-container,
+    &__vision,
+    &__benefits,
+    &__crew,
+    &__testimonials,
+    &__culture { padding: 8vw; }
+
+    .info-container:first-child { background: left 0%/250% 100% no-repeat url('about/about-bg-2.jpeg'); }
+
+    .about_us_info {
+      &__container { width: 100%; }
+
+      &__item { font-size: 0.9em; }
+    }
+
+    &__crew {
+      &-container { justify-content: center; }
+
+      &-item {
+        max-width: 55vw;
+        margin-bottom: 5vh;
+        padding: 10vw 5vw;
       }
     }
 
-    &-items {
-      transform: translateX(-50%);
-      top: 17%;
-      width: 85%;
-      left: 50%;
-      right: auto;
-      height: 35vh;
-      position: relative;
-      font-size: 1.2rem;
+    &__benefits {
+      .accordion__item-text {
+        padding: 5vh 4vh 4vh;
+        font-size: .8em;
+      }
+    }
 
-      dd {
-        margin-left: 0;
+    &__key-facts {
+      h2.header-2 {
+        margin-right: 3vw;
+        margin-left: 3vw;
       }
 
-      &-circle {
-        display: none;
+      &-list { padding-top: 0; }
+
+      &-item {
+        flex-wrap: wrap;
+
+        &-img { margin: auto; }
+
+        svg { width: 18vh; }
+
+        &-title {
+          margin-bottom: 2vh;
+          font-size: 1em;
+          line-height: 1.6;
+          text-align: center;
+
+          span {
+            display: block;
+            font-size: 1.5em;
+          }
+        }
+
+        &-description {
+          font-size: .9em;
+        }
+      }
+    }
+
+    &__testimonials {
+      .description {
+        text-align: justify;
+        text-align-last: center;
+      }
+    }
+
+    &__culture {
+      &-title {
+        margin: 0;
+        font-size: 1em;
+      }
+
+      &-description {
+        margin-top: 5vh;
+        font-size: .9em;
+        line-height: 1.4;
       }
     }
   }
