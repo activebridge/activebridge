@@ -1,0 +1,96 @@
+.container.web_dev_services.development
+  .web_dev_services__main.wrap
+    .header-2 = t('web_dev_services.title')
+    .description = t('web_dev_services.description').html_safe
+
+    .web_dev_services__list
+      .header-3 = t('web_dev_services.expertise.title')
+
+      .web_dev_services__list-wrap
+        = image_tag 'web_development_services/star.png'
+        ul.web_dev_services__list-text
+          - I18n.t('web_dev_services.expertise.all').each do |item|
+            li.web_dev_services__list-item = item[:item]
+
+  .web_dev_services__web_solutions.wrap
+    .header-2 = t('web_dev_services.web_solutions.title')
+    .web_dev_services__list
+      .header-3 = t('web_dev_services.web_solutions.subtitle_1')
+      .web_dev_services__list-wrap
+        = image_tag 'web_development_services/branded_cloud.png'
+        ul.web_dev_services__list-text.list_with_columns
+          - I18n.t('web_dev_services.web_solutions.all').each do |item|
+            li.web_dev_services__list-item = item[:item]
+    .header-2 = t('web_dev_services.web_solutions.subtitle_2')
+
+  .web_dev_services__full_stack.wrap
+    h1.header-3.white-text = t('web_dev_services.full_stack.title').html_safe
+    .description = t('web_dev_services.full_stack.description_1').html_safe
+    .description = t('web_dev_services.full_stack.description_2').html_safe
+    ul.web_dev_services__full_stack-list
+      - I18n.t('web_dev_services.full_stack.all').each do |item|
+        li.web_dev_services__full_stack-list-item.inria
+          span
+          = item[:item]
+    .description = t('web_dev_services.full_stack.description_3').html_safe
+
+  .web_dev_services__customized_approach.wrap
+    h2.header-2 = t('web_dev_services.customized_approach.title').html_safe
+    .list-with-images
+      - I18n.t('web_dev_services.customized_approach.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "web_development_services/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            .description = item[:description]
+
+  .web_dev_services__technologies.wrap
+    h2.header-2 = t('web_dev_services.technologies.title')
+    = inline_svg 'web_development_services/technologies_d_table.svg', class: 'desktop-only'
+    = inline_svg 'web_development_services/technologies_m_table.svg', class: 'mobile-only'
+    = link_to t('web_dev_services.technologies.button'), page_path(:expertise), class: "button violet-button white-text"
+
+  .web_dev_services__our_approach.wrap
+    h2.header-2.white-text = t('web_dev_services.our_approach.title')
+    .description.white-text = t('web_dev_services.our_approach.description_1')
+    .description.white-text = t('web_dev_services.our_approach.description_2')
+
+  .web_dev_services__solutions.wrap
+    .header-2 = t('web_dev_services.solutions.title')
+    .about_us_info__items
+      .about_us_info__container
+        - I18n.t('web_dev_services.solutions.all').each do |item|
+          .about_us_info__item
+            = inline_svg item[:logo]
+            = item[:text]
+      .web_dev_services__solutions-awards.development__awards
+        - I18n.t('web_dev_services.solutions.awards').each do |item|
+          = image_tag item[:logo]
+
+  .web_dev_services__contract_approaches.development__cards.wrap
+    .header-3 = t('web_dev_services.contract_approaches.title')
+    .header-2 = t('web_dev_services.contract_approaches.description')
+    .cards-container
+      - I18n.t('web_dev_services.contract_approaches.all').each do |a|
+        .card
+          .card__title-2
+            = a[:title]
+          .card__description= a[:description]
+          = link_to t('web_dev_services.button'), page_path(:expertise), class: "button"
+
+  .development__offer
+    .header-2.white-text = t('web_dev_services.offer_text')
+
+  .web_dev_services__industries.development__carousel.wrap
+    .carousel
+      ul.carousel__list
+        - I18n.t('web_dev_services.industries.all').each_with_index do |i, index|
+          li.carousel__item data-index="#{index-(I18n.t('web_dev_services.industries.all').length / 2)}" data-type="industries"
+            h2.carousel__title.inria
+              = i[:title]
+            .carousel__description
+              = i[:description].html_safe
+            //each item's button linked to different page
+            = link_to t('web_dev_services.button'), page_path(:expertise), class: "button white-text"
+    = link_to t('services.approaches.button'), page_path(:contact), class: "button dev_services__carousel-btn"
