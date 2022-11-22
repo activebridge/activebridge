@@ -1,0 +1,89 @@
+.container.ror_dev_services.development
+  .ror_dev_services__main.wrap
+    .header-2 = t('ror_dev_services.title')
+    .description = t('ror_dev_services.description')
+    = image_tag 'ror_development_services/diamond.png'
+    .header-2 = t('ror_dev_services.subtitle')
+
+  .ror_dev_services__ror.wrap
+    h1.header-3 = t('ror_dev_services.ror.title')
+    .list-with-images
+      - I18n.t('ror_dev_services.ror.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "ror_development_services/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            .description = item[:description].html_safe
+
+  .ror_dev_services__reasons.wrap
+    .header-2 = t('ror_dev_services.reasons.title')
+    .description = t('ror_dev_services.reasons.description').html_safe
+    .extendable_cards
+      - I18n.t('ror_dev_services.reasons.all').each do |card|
+        .extendable_card.transition
+          = image_tag "ror_development_services/#{card[:icon]}"
+          .header-2 = card[:title]
+          .description = card[:description].html_safe
+
+  .ror_dev_services__quality.wrap
+    .header-3 = t('ror_dev_services.quality.title')
+    .header-2 = t('ror_dev_services.quality.subtitle')
+    .description.with_margin = t('ror_dev_services.quality.description_1').html_safe
+    .header-2.white-text.with-bg = t('ror_dev_services.quality.description_2').html_safe
+    .development__awards
+      - I18n.t('web_dev_services.solutions.awards').each do |item|
+        = image_tag item[:logo]
+
+  .ror_dev_services__approaches.wrap
+    .header-3 = t('ror_dev_services.approaches.title')
+    .description.with_margin = t('ror_dev_services.approaches.description')
+    .list-with-images
+      - I18n.t('ror_dev_services.approaches.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "ror_development_services/#{item[:icon]}", class: 'ror_dev_services__approaches-img'
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            - if item[:description].present?
+              .description = item[:description].html_safe
+
+  .ror_dev_services__tools.wrap
+    .header-3 = t('ror_dev_services.tools.title')
+    .list-with-images.horizontal
+      - I18n.t('ror_dev_services.tools.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "ror_development_services/#{item[:icon]}", class: 'ror_dev_services__approaches-img'
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            - if item[:description].present?
+              .description = item[:description].html_safe
+
+  .ror_dev_services__engagement.development__cards.wrap
+    .header-3 = t('ror_dev_services.engagement_models.title')
+    .header-2 = t('ror_dev_services.engagement_models.subtitle')
+    .cards-container
+      - I18n.t('ror_dev_services.engagement_models.all').each do |a|
+        .card
+          .card__title-2
+            = a[:title]
+          .card__description= a[:description].html_safe
+          //change links
+          = link_to t('web_dev_services.button'), page_path(:expertise), class: "button"
+
+  .development__offer
+    .header-2.white-text = t('web_dev_services.offer_text')
+
+  .development__carousel.wrap
+    .carousel
+      ul.carousel__list
+        - I18n.t('web_dev_services.industries.all').each_with_index do |i, index|
+          li.carousel__item data-index="#{index-(I18n.t('web_dev_services.industries.all').length / 2)}" data-type="industries"
+            h2.carousel__title.inria
+              = i[:title]
+            .carousel__description
+              = i[:description].html_safe
+            //each item's button linked to different page
+            = link_to t('web_dev_services.button'), page_path(:expertise), class: "button white-text"
+    = link_to t('services.approaches.button'), page_path(:contact), class: "button dev_services__carousel-btn"
