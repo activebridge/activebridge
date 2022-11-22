@@ -2,6 +2,8 @@ class Request < ApplicationMailer
   def notify(attrs)
     @reason = attrs['reason']
     @body = attrs['message']
+    # @attachments= File.read(File.absolute_path(attrs[:attachments].tempfile))
+    binding.pry
     mail(
       from: "#{attrs['name']} <#{attrs['email']}>",
       to: 'contact@active-bridge.com',
@@ -14,7 +16,7 @@ class Request < ApplicationMailer
     mail(
       from: 'contact@active-bridge.com',
       to: attrs['email'],
-      subject: 'Active Bridge ' + attrs['reason'],
+      subject: 'Active Bridge ' + attrs['reason']
     )
   end
 end
