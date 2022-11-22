@@ -16,10 +16,22 @@ header {
   }
 }
 
+header.desktop-only { box-shadow: 2px 1px 12px 0px grey; }
+
 .header-navbar {
-  display: block;
   align-items: center;
   margin-right: 10px;
+  display: inline-flex;
+  list-style: none;
+
+  &__item { position: relative; }
+
+  &__subitems {
+    position: absolute;
+    list-style: none;
+    visibility: hidden;
+  }
+
 
   &__link {
     margin: 0 1.5vw;
@@ -29,20 +41,8 @@ header {
     text-decoration: none;
     letter-spacing: 0.4em;
     cursor: pointer;
-    position: relative;
 
     &.active { font-weight: bold; }
-
-    &:hover { color: $main-violet; }
-
-    &:hover ~ .header-navbar__sub-link {
-      // opacity: 1;
-      display: block;
-      position: absolute;
-      bottom: -55px;
-      background-color: white;
-      padding: 20px;
-    }
   }
 
   &__link-contact {
@@ -54,27 +54,46 @@ header {
     border-radius: 50px;
     transition: 0.3s;
 
-    &:hover {
-      box-shadow: 0px 0px 15px 1px rgba($main-violet, 0.3);
-    }
-
     &.active {
       box-shadow: inset 0px 0px 15px 1px rgba($main-violet, 0.3);
       background: transparent;
       border: none;
     }
   }
+}
 
-  &__sub-link {
+@media (hover: hover) {
+  .header-navbar {
+    &__item:hover .header-navbar__subitems {
+      min-width: 100%;
+      padding: 20px 0;
+      background-color: $white;
+      border-radius: 1em;
+      visibility: visible;
+      padding-inline-start: 0;
 
-    // opacity: 0;
-    display: none;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+      .header-navbar__sub-link {
+        display: block;
+        padding: 10px 20px;
+        color: $black;
+        font-size: 0.7em;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover { color: $main-violet; }
+      }
+    }
+
+    &__link:hover { color: $main-violet; }
+
+    &__link-contact:hover {
+      box-shadow: 0px 0px 15px 1px rgba($main-violet, 0.3);
+    }
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 748px) {
   header {
     position: fixed;
     width: 100%;
@@ -85,11 +104,12 @@ header {
     .header-navbar {
       position: fixed;
       top: 0;
-      right: -70vw;
-      width: 70vw;
+      right: -90vw;
+      width: 90vw;
       min-height: calc(100% + 60px);
       margin: 0;
-      padding: 10vh 10vw;
+      padding: 6vw;
+      justify-content: space-between;
       background: $main-gradient;
       box-sizing: border-box;
       opacity: 0;
@@ -97,9 +117,42 @@ header {
       transition: all .2s ease-in-out;
       z-index: 2;
 
+      &__subitems {
+        visibility: visible;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 3vh;
+        color: $white;
+
+        li {
+          position: relative;
+          margin: 0 5vw 3vw 0;
+        }
+
+        .header-navbar__sub-link {
+          position: relative;
+          color: $white;
+          font-size: .65em;
+          letter-spacing: 0.1em;
+          text-decoration: none;
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0.35em;
+            left: -0.6em;
+            width: 3px;
+            height: 3px;
+            background-color: $white;
+            border-radius: 50%;
+          }
+        }
+      }
+
       &__link {
         display: block;
-        padding: 3vw 1vh;
+        padding: 2.5vw 1vw;
         color: $white;
       }
 
@@ -111,13 +164,13 @@ header {
       }
 
       .mobile-only {
-        margin-top: 65vw;
+        margin-top: 10vw;
         padding-bottom: 5vh;
       }
     }
 
     .header-navbar__close {
-      padding: 5vh 0;
+      padding-top: 2vw;
       color: $white;
       font-size: 1.5em;
     }
