@@ -1,0 +1,48 @@
+.container.privacy_policy
+  .privacy_policy__main
+    = image_tag 'privacy_policy/shield.png', class: 'absolute-icon desktop-only'
+    h1.header-3 = t('privacy_policy.title')
+    .description = t('privacy_policy.description')
+    = image_tag 'privacy_policy/shield.png', class: 'absolute-icon mobile-only'
+    h2.header-2.white-text = t('privacy_policy.first_section.title')
+    .list-with-images
+      - I18n.t('privacy_policy.first_section.ways').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "privacy_policy/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            .white-text.description = item[:description]
+    = image_tag 'privacy_policy/lock.png', class: 'absolute-icon'
+
+  .privacy_policy__second
+    h2.header-2 = t('privacy_policy.second_section.title')
+    ul.privacy_policy__info
+      - I18n.t('privacy_policy.second_section.user_info').each do |item|
+        li.privacy_policy__info-item
+          span
+          = item[:item]
+
+  .privacy_policy__third
+    h2.header-2 = t('privacy_policy.third_section.title')
+    .description = t('privacy_policy.third_section.description')
+    .privacy_policy__info-title = t('privacy_policy.third_section.list_1.title')
+    ul.privacy_policy__info
+      - I18n.t('privacy_policy.third_section.list_1.list').each do |item|
+        li.privacy_policy__info-item
+          span
+          = item[:item]
+    .privacy_policy__info-title = t('privacy_policy.third_section.list_2.title')
+    ul.privacy_policy__info
+      - I18n.t('privacy_policy.third_section.list_2.list').each do |item|
+        li.privacy_policy__info-item
+          span
+          = item[:item]
+
+  .privacy_policy__fourth
+    = image_tag 'privacy_policy/locker.png', class: ''
+    ul
+      - I18n.t('privacy_policy.fourth_section.list').each do |item|
+        li.privacy_policy__way-text
+          .header-2 = item[:title]
+          .description = item[:description]
