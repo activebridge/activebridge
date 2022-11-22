@@ -1,118 +1,333 @@
-.container.expertise {
-  .info-container {
-    .content {
-      .header-3.small-text {
-        margin-top: 5vh;
-        font-size: 1.5em;
-      }
+.expertise {
+  .header-3 { margin-top: 2vh; }
 
-      .chart-container {
-        width: calc(100% - 12vw);
-        margin: 6vh 0;
-        padding: 6vh 6vw;
-        border-radius: 20px;
-        background: $white;
-        box-shadow: 2px 1px 11px 0px #b7b7b7;
+  .header-2 {
+    max-width: 85%;
+    margin: 5vh auto;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
 
-        .chart-bar {
-          display: flex;
+  .description { margin-bottom: 10vh; }
 
-          &__item {
-            padding: 3vh 1vw;
-            font-size: 1.3em;
-            box-shadow: inset -7px -7px 11px -6px #8f8f8f;
+  &__main,
+  &__technologies,
+  &__industries,
+  &__solutions,
+  &__testimonials,
+  &__tell-us {
+    padding: 5vh 18vw;
+  }
 
-            &:first-child {
-              border-radius: 15px 0 0 15px;
-            }
+  &__main {
+    .description {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+  }
 
-            &:last-child {
-              border-radius: 0 15px 15px 0; 
-            }
-          }
-        }
+  &__technologies {
+    background: center/cover no-repeat url('expertise/technologies-bg.jpg');
+    box-shadow: 0px 0px 20px -3px grey;;
 
-        .chart {
-          &__items {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 4vh;
-          }
+    .header-3 { font-size: 1.3em; }
 
-          &__item {
-            display: flex;
-            width: 45%;
+    .header-2 { margin-top: 1vh; }
 
-            &-color {
-              width: 45px;
-              height: 45px;
-              border-radius: 15px;
-              box-shadow: inset -7px -7px 11px -6px #8f8f8f;
-            }
+    table.technologies {
+      margin: 5vh 0;
 
-            &-asterisk {
-              margin-left: 2vw;
-              display: flex;
-              align-items: baseline;
-              flex-direction: column;
-            }
+      tr td {
+        position: relative;
+        width: 16.6%;
 
-            &-title {
-              font-family: 'Inria Bold';
-              font-size: 1.6em;
-              margin-bottom: 2vh;
-            }
+        svg { height: 8vh; }
 
-            &-description {
-              font-size: 1.2em; 
-            }
-
-            &:first-child,
-            &:nth-child(2) {
-              margin-bottom: 2vh;
-            }
-            
-            &:nth-child(2n) {
-              justify-content: flex-end;
-            }
-          }
+        .technology-name {
+          position: absolute;
+          left: 5px;
+          bottom: 0;
+          font-size: 0.7em;
         }
       }
+    }
 
-      .description {
+    .description { margin-bottom: 3vh; }
+  }
+
+  &__industries {
+    .header-3:first-child { font-size: 1.8em; }
+
+    .header-3 { font-size: 1.3em; }
+
+    .carousel {
+      padding-bottom: 6vh;
+
+      &__item {
+        width: 35vw;
+        max-width: 430px;
+        height: 70vh;
+        max-height: 530px;
+        align-items: baseline;
+        padding: 4vh 3vh;
+        box-sizing: border-box;
+
+        &[data-index="-1"] { transform: translateX(-50%) scale(0.9); }
+
+        &[data-index="1"] { transform: translateX(50%) scale(0.9); }
+
+        &[data-index="-1"],
+        &[data-index="1"] { opacity: .9; }
+      }
+
+      .industries {
+        &__title {
+          margin: 0 auto;
+          font-family: 'Inria Bold', serif;
+          font-size: 1.7em;
+          text-transform: capitalize;
+          letter-spacing: normal;
+        }
+
+        &__logo {
+          width: 12vh;
+          height: 12vh;
+          margin: 2.5vh auto;
+          border-radius: 6vh;
+          box-shadow: inset -3px -3px 7px -4px grey, 1px 1px 14px -2px grey;
+
+          svg { padding: 2vh; }
+        }
+      }
+
+      &__subtitle {
+        margin: 0 auto;
+        font-family: 'Inria', serif;
+        font-style: italic;
+        font-size: 1.3em;
+      }
+
+      &__description {
+        margin: 2.5vh 0 0;
         font-size: 1.1em;
-      }
-    }
+        line-height: 1.5em;
+        list-style: inside;
+        text-align: left;
+        -webkit-line-clamp: inherit;
 
-    &.technologies {
-      background-image: url(asset_path('expertise/technologies-bg.jpg'));
-      background-size: cover;
-
-      .content {
-        table.technologies {
-          margin: 5vh 0;
-
-          tr {
-            td {
-              position: relative;
-              width: 16.6%;
-
-              .technology-name {
-                position: absolute;
-                left: 5px;
-                bottom: 0;
-                font-size: 0.8em;
-              }
-            }
-          }
+        .blue-text {
+          display: inline;
+          color: $purple-heart;
         }
       }
     }
+  }
 
-    &.industries {
-      .header-2 {
-        margin-top: 5vh;
+  &__main,
+  &__solutions,
+  &__testimonials {
+    .header-2 { max-width: 100%; }
+  }
+
+  &__testimonials {
+    background: center/cover no-repeat url('expertise/testimonials-bg.jpg');
+
+    .carousel {
+      padding-top: 2vh;
+      padding-bottom: 8vh;
+
+      &__item {
+        width: 35vw;
+        max-width: 430px;
+        height: 70vh;
+        max-height: 530px;
+        padding: 4vh 3vh;
+        box-sizing: border-box;
+
+        &[data-index="-1"] { transform: translateX(-50%) scale(0.9); }
+
+        &[data-index="1"] { transform: translateX(50%) scale(0.9); }
+
+        &[data-index="-1"],
+        &[data-index="1"] { opacity: .9; }
+      }
+
+      &__description {
+        font-size: 1.1em;
+        -webkit-line-clamp: 6;
+      }
+    }
+
+    .button { margin-bottom: 5vh; }
+  }
+
+  &__tell-us {
+    min-height: 85vh;
+    background: center/cover no-repeat url('expertise/tell-us.jpg');
+
+    .header-2 {
+      font-family: 'Cera Regular', serif;
+      font-size: 1.8em;
+      letter-spacing: 0.5em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.chart-container {
+  width: calc(100% - 12vw);
+  margin: 6vh 0;
+  padding: 6vh 6vw;
+  border-radius: 20px;
+  background: $white;
+  box-shadow: $main-shadow;
+
+  .chart-bar {
+    display: flex;
+
+    &__item {
+      padding: 3vh 1vw;
+      font-size: 1.3em;
+      box-shadow: inset -7px -7px 11px -6px #8f8f8f;
+
+      &:first-child { border-radius: 1.2em 0 0 1.2em; }
+
+      &:last-child { border-radius: 0 1.2em 1.2em 0; }
+    }
+  }
+
+  .chart {
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 4vh;
+    }
+
+    &__item {
+      display: flex;
+      width: 45%;
+
+      &-color {
+        width: 45px;
+        height: 45px;
+        margin-top: 2vh;
+        border-radius: 15px;
+        box-shadow: inset -7px -7px 11px -6px #8f8f8f;
+      }
+
+      &-asterisk {
+        margin-left: 2vw;
+        margin-top: 2vh;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+      }
+
+      &-title {
+        font-family: 'Inria Bold';
+        font-size: 1.3em;
+        margin-bottom: 1vh;
+      }
+
+      &-description { font-size: 1.2em; }
+
+      &:first-child,
+      &:nth-child(2) { margin-bottom: 2vh; }
+
+      &:nth-child(2n) { justify-content: flex-end; }
+    }
+  }
+
+  .button {
+    margin-top: 6vh;
+    background: linear-gradient($white, $white) padding-box,
+                linear-gradient(to right, $main-violet, $main-blue) border-box;
+  }
+
+  .pie-chart {
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    background: conic-gradient($sky-ua 0.00% 20.00%, $palianytsia 20.00% 50.00%, $kviten 50.00% 90.00%, $azovstal 90.00%);
+    border-radius: 50%;
+    box-shadow: $main-shadow;
+  }
+}
+
+.expertise-cards {
+  display: flex;
+  justify-content: center;
+  margin: 5vh 0;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 0 2vw;
+
+    &-title {
+      font-family: 'Inria Bold', serif;
+      font-size: 1.6em;
+      line-height: 1.6em;
+    }
+
+    &-description {
+      margin: 2vh;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .card__description { line-height: 1.6em; }
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    width: calc(100% - 10vw);
+    margin: 4vh 0;
+    padding: 8vh 5vw;
+
+    .chart__item {
+      width: 100%;
+      justify-content: center;
+
+      &:nth-child(2n) {
+        justify-content: center;
+      }
+
+      &-color {
+        width: 35px;
+        height: 35px;
+      }
+
+      &-title { font-size: 1em; }
+
+      &-description { font-size: .9em; }
+    }
+  }
+
+  .expertise-cards {
+    margin-bottom: 0;
+
+    .card {
+      min-width: 300px;
+      height: auto;
+      margin: 0 10vw;
+      padding: 4vh 2vw;
+
+      &:not(:last-child) { margin-bottom: 5vh; }
+
+      &__title-2 {
+        font-size: 1.2em;
+        padding-right: 7vw;
+        padding-left: 7vw;
+      }
+
+      &__description {
+        font-size: 0.9em;
+        line-height: 1.8em;
       }
     }
   }
