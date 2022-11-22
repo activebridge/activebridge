@@ -1,0 +1,376 @@
+.solutions {
+  &__main,
+  &__industries,
+  &__services { padding: 5vh 18vw; }
+
+  .header-2 {
+    max-width: 100%;
+    font-size: 1.3em;
+    line-height: 1.5;
+  }
+
+  .header-3 { margin: 6vh 0; }
+
+  &__text {
+    background: $main-gradient;
+    padding: 10vh 18vw;;
+  }
+
+  .timeline-item {
+    padding-bottom: 10vh;
+
+    &:first-child::before,
+    &:nth-child(odd)::before { left: 5vw; }
+
+    &:nth-child(even)::before { right: 5vw; }
+
+    &::before { width: 45%; }
+  }
+
+  &__main {
+    background: linear-gradient(0deg, $white 50%, $azovstal 100%);
+    min-height: 100vh;
+
+    .header-2 { max-width: 75%; }
+
+    .description { margin: 6vh 0; }
+
+    .about_us_info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &__container { width: 100%; }
+
+      &__items { width: 45%}
+
+      &__item {
+        margin-bottom: 5vh;
+        color: $main-blue;
+        text-align: left;
+      }
+
+      .solutions__awards {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        img {
+          min-width: 45%;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
+  .timeline { margin-top: 5vh; }
+
+  .timeline-item {
+    // padding-bottom: 10vh;
+
+    // &::before { width: 45%; }
+
+    &:nth-child(even) {
+      // &::before { right: 5vw; }
+
+      .timeline__processes { padding-right: 11vh; }
+    }
+
+    &:nth-child(odd) {
+      // &::before { left: 5vw; }
+
+      .timeline__processes { padding-left: 11vh; }
+    }
+  }
+
+  .timeline__processes {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: unset;
+    justify-content: center;
+    padding-bottom: 2vh;
+    box-sizing: border-box;
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $main-blue;
+      font-size: .8em;
+      font-style: italic;
+
+      .arrow {
+        padding: 0 1vh;
+        font-size: 1.1em;
+      }
+
+      &:first-child::before {
+        width: 50%;
+        right: 0;
+      }
+
+      &:last-child  {
+        &::before {
+          width: 50%;
+          left: 0;
+        }
+
+        .arrow { display: none; }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -1em;
+        width: 100%;
+        height: 1px;
+        background-color: $main-blue;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -1.5em;
+        right: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: $white;
+        border: 1px solid $main-blue;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__industries {
+    .header-3 {
+      margin-bottom: 0vh;
+      margin-top: 3vh;
+    }
+
+    .blue-text { color: $main-blue; }
+
+    .header-2 {
+      margin: 10vh 0 5vh;
+
+      &:last-child {
+        margin-bottom: 3vh;
+        margin-top: 9vh;
+      }
+    }
+
+    .applications .carousel__item {
+      box-sizing: border-box;
+      justify-content: space-between;
+      padding: 3vh 1vh 6vh;
+
+      .carousel__title { padding: 0 4vh; }
+
+      .carousel__button {
+        .button {
+          background: $main-gradient;
+
+          &:hover { background: $white; }
+        }
+      }
+    }
+  }
+
+  &__project-development {
+    padding: 0 18vw 5vh;
+
+    .header-3 { margin: 3vh 0 6vh; }
+  }
+
+  &__staff-augmentation {
+    padding: 0 18vw 5vh;
+
+    .timeline__processes {
+      &-item {
+        color: $main-violet;
+
+        &::before { background-color: $main-violet; }
+
+        &::after { border-color: $main-violet; }
+      }
+    }
+
+    .timeline-item {
+      &:last-child::before { bottom: 10vh; }
+
+      &::before,
+      &::after { border-color: $kviten; }
+    }
+
+    .button { margin-top: 0; }
+  }
+
+  .carousel {
+    &__list { height: 50vh; }
+
+    &__description {
+      margin-bottom: 3vh;
+      line-height: 1.5em;
+      -webkit-line-clamp: 10;
+    }
+
+    &__title {
+      margin-right: 1vh;
+      margin-left: 1vh;
+    }
+
+    .solutions__logo {
+      width: 10vh;
+      height: 10vh;
+      margin-bottom: 1vh;
+
+      svg { width: 10vh; }
+    }
+  }
+
+  &__services {
+    background: $main-gradient;
+
+    .header-3 { margin: 2vh 0 0; }
+
+    .header-2 {
+      color: rgba($white, .7);
+      font-family: 'Cera Regular', serif;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      font-weight: 100;
+      letter-spacing: 0.4em;
+    }
+
+    .carousel__title {
+      padding: 0 4vh;
+      font-size: 1.5em;
+    }
+
+    .carousel__description { text-align: justify;}
+
+    .carousel__list { height: 60vh; }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .solutions {
+    &__main,
+    &__text,
+    &__industries,
+    &__project-development,
+    &__staff-augmentation { padding: 7vh 5vh; }
+
+    .header-2 { font-size: .9em; }
+
+    .description {
+      font-size: .8em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    &__main {
+      .header-2 {
+        max-width: 100%;
+        text-align: justify;
+      }
+
+      .about_us_info {
+        &__items,
+        .solutions__awards.mobile-only { width: 100%; }
+      }
+
+      .solutions__awards { padding-top: 5vh; }
+    }
+
+    &__text .header-2 { text-align: justify; }
+
+    &__industries {
+      .carousel {
+        &__title { font-size: 1em; }
+
+        &__description { -webkit-line-clamp: initial; }
+
+        &__item {
+          width: 66vw;
+          height: 53vh;
+
+          &[data-index="1"] { transform: translateX(25%) scale(0.9); }
+
+          &[data-index="-1"] { transform: translateX(-25%) scale(0.9); }
+        }
+      }
+    }
+
+    .timeline-item {
+      &:nth-child(even),
+      &:nth-child(odd) {
+        .timeline__processes {
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      .timeline__processes {
+        position: inherit;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5vh 0 0;
+
+        &-item {
+          margin: 1vh 0;
+          padding-left: 5vh;
+          color: $black;
+
+          &::before {
+            top: 5px;
+            width: 1px;
+            height: 5vh;
+            left: 5px;
+            background-color: $azovstal;
+          }
+
+          &:first-child::before { width: 1px; }
+
+          &:last-child::before { height: 0; }
+
+          &::after {
+            top: 3px;
+            left: 0;
+            border-color: $azovstal;
+          }
+
+          &:first-child { margin-top: 0; }
+          &:last-child { margin-bottom: 0; }
+
+          .arrow { display: none; }
+        }
+      }
+    }
+
+    &__staff-augmentation {
+      .timeline-item:nth-child(even),
+      .timeline-item:nth-child(odd) {
+        &::before { background-color: $kviten; }
+      }
+    }
+
+    &__services {
+      .carousel {
+        &__title { font-size: 1em; }
+
+        .services__logo {
+          width: 12vh;
+          height: 12vh;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
