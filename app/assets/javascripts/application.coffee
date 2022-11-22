@@ -30,7 +30,7 @@ window.submit = (form) ->
     return if xhr.readyState != 4
     if xhr.status == 200
       alertShow(success)
-      form = document.getElementById('contact_form')
+      form = document.getElementById('contact__form')
       form.reset()
     else
       alertShow(error)
@@ -41,7 +41,7 @@ window.submit = (form) ->
   dataLayer.push({'event':'formSubmitted', 'formName':'ContactUs'})
   return false
 
-alertShow = (message) -> 
+alertShow = (message) ->
   alertMessage.innerText = message
   alert.classList.add("showAlert");
   setTimeout ->
