@@ -1,0 +1,27 @@
+.container.faq
+  .faq__main
+    = image_tag 'faq/cloud.png', class: 'cloud faq__main-cloud'
+    .header-3 = t('faq.title')
+    h1.header-2 = t('faq.subtitle')
+    .accordion.accordion-transparent
+      - I18n.t('faq.all').each_with_index do |q, index|
+        .accordion__item
+          input.accordion__input id="item-#{index + 1}" type="checkbox"
+          h2.accordion__item-top
+            label for="item-#{index + 1}"
+              = q[:question].html_safe
+          .accordion__item-bottom
+            - if q[:answer_list_ol]
+              ol.accordion__item-text
+                - q[:answer_list_ol].each do |a|
+                  li = a[:item].html_safe
+            - elsif q[:answer_list_ul]
+              ul.accordion__item-text
+                - q[:answer_list_ul].each do |a|
+                  li = a[:item].html_safe
+            - else
+              .accordion__item-text = q[:answer].html_safe
+      = image_tag 'faq/cloud.png', class: 'cloud accordion__cloud'
+  .faq__bottom
+    = image_tag 'faq/gift.png'
+    = link_to "#{t('faq.button')}", page_path(:contact), id: "faq_button", class: 'button white-text violet-button', target: :_blank
