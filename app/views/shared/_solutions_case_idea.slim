@@ -1,0 +1,7 @@
+.solutions_cases__idea
+  .solutions_cases__idea_img
+    = image_tag 'taxi_and_transportation/chat.png'
+  .solutions_cases__idea_text
+    = link_to "#{t('taxi_and_transportation.idea.button')}", page_path(:contact), id: 'taxi_and_transportation_contact_button', class: 'button white-text', target: :_blank
+    p.white-text = t('taxi_and_transportation.idea.text_1')
+    p.white-text = t('taxi_and_transportation.idea.text_2')

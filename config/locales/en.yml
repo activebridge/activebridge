@@ -35,7 +35,7 @@ en:
         link: /solutions
         items:
           - section: HealthTech/HIPAA-compliant
-            link: /
+            link: /solutions/healthcare-hipaa-case
           - section: InsurTech/Cloud Software
             link: /
           - section: B2C Marketplace / SaaS
@@ -1506,7 +1506,7 @@ en:
       subtitle: Our core technology is Ruby on Rails, we see a lot of potential in it, especially mixing ROR with React, Angular, and other add-ons.
       title: Technologies
       description: We’ve been providing startups, small and medium-sized enterprises (SMEs) in both North America and Eastern Europe with custom
-                   web application development services for 8+ years. We are used to working remotely, so we know that the key to making things
+                   web application development services for 9+ years. We are used to working remotely, so we know that the key to making things
                    happen is good communication and an industry-focused development approach.
     industries:
       projects: "<b>40+</b> Projects"
@@ -1582,7 +1582,7 @@ en:
             - Alerts & notifications
     dev_levels:
       - title: Architect Developers
-        description: 8+ years of experience
+        description: 9+ years of experience
         color: '#8cc9fc'
         percentage: 20%
       - title: Senior Developers
@@ -1757,7 +1757,7 @@ en:
       subtitle: Professional team as a service
       description: We effort to provide our customers with the most effective development solutions
                    possible. Each client’s business, problems, and ideas require a customized approach.
-                   It is possible due to our 8 years of experience working remotely, our passion for
+                   It is possible due to our 9 years of experience working remotely, our passion for
                    sustainable technologies, driven staff, and our worked-out practice of creating the
                    conditions for efficient collaboration.
       button: Discover our expertise
@@ -1818,7 +1818,7 @@ en:
       subtitle: about Active Bridge as team of dedicated Ruby on Rails developers
       all:
         - image: about/key_facts_1.svg
-          title: <span>8+</span> years of remote development experience
+          title: <span>9+</span> years of remote development experience
           description: "Since 2013 we’ve grown to a staff of 40+ talented development professionals who thrive on the cutting-edge of technology and embrace our clients’ mindsets to seamlessly integrate with their teams."
         - image: about/key_facts_2.svg
           title: Huge dev stack
@@ -1947,7 +1947,7 @@ en:
           link: /
       subtitle_1: These are just a few selected case studies.
       subtitle_2: Our high-performance team uses a collaborative approach to deliver measurable results.
-      description: Through 8+ years we've been assisting in developing a variety of SaaS, Fintech, InsurTech, HIPPA compliance
+      description: Through 9+ years we've been assisting in developing a variety of SaaS, Fintech, InsurTech, HIPPA compliance
                    applications, booking platforms, logistic systems, and CRMs for different types of businesses.
       applications:
         - title: HealthTech HIPPA Solution
@@ -2802,6 +2802,100 @@ en:
             - item: Technical consulting and implementing changes
             - item: An agile project update process
           tools:  AWS, Kubernetes, Docker
+  healthcare_hipaa:
+    title: Healthcare web application development solutions
+    description_1: For more than 5 years, we've been delivering custom application development solutions and programming
+                   services for healthcare organizations, HealthTech startups, care providers, and medical ISVs.
+    subtitle_1: Healthcare products we’ve been delivering
+    description_2: We create functional healthcare applications in compliance with HIPAA and regulatory standards. Our
+                   portfolio has complex SaaS healthcare platforms, patient and doctor scalable web/mobile apps, e-prescribing
+                   modules, enterprise applications, billing systems, and more.
+    subtitle_2: How we can help with custom healthcare app development
+    help:
+      - title: Full-cycle assistance
+        icon: help_1.png
+        description: of medical project development, from cloud hosting and UX/UI design, through app development and QA,
+                     to technical delivery, security compliance, maintenance, and support.
+      - title: Rapid development
+        icon: help_2.png
+        description: based on the agile practice that facilitates getting MVP in a short period of time and transforming
+                     it into a solid, scalable, and reliable product
+      - title: Cross-platform solutions
+        icon: help_3.png
+        description: of custom healthcare apps development based on wide experience in complying with industry and market
+                     regulations
+    case_study:
+      title: Case Study
+      subtitle: A HIPAA-compliant communication and clinical collaboration platform
+      top_info:
+        - item: "Contract type: <b>development team augmentation</b>"
+        - item: "Team size: <b>4</b>"
+        - item: "Period of collaboration: <b>2015 - ongoing</b>"
+        - item: "Client’s location: <b>Missouri, United States</b>"
+      bottom_info:
+        - title: "About the client:"
+          description: <b>Mediprocity</b> is a leading American HIPAA-compliant encryption platform protecting patients,
+                       healthcare providers, prescribers, pharmacists, and vendors by securing clinical communications and
+                       electronic patient health information (ePHI).
+        - title: "Challenge:"
+          description: The challenge was to build a software system that encrypted data transactions between entities and
+                       business associates licensed to practice or transfer sensitive patient health information within the
+                       United States. The core target was a fully reliable medical application and secure HIPAA-compliant
+                       cloud hosting environment available 24/7. One of the tasks was developing assets for healthcare
+                       professionals to manage and resolve prescription orders from mobile devices.
+        - title: "Technologies:"
+          description: Ruby on Rails, Grape, MySQL, Anycable, Redis, ActiveRecord, Sidekiq, Elasticsearch, Electron, Angular 11,
+                       Ionic 3, IOS, Android, Windows, MacOS, Docker, AWS
+    solutions:
+      title: Solutions
+      all:
+        - title: User identification
+          description: When users create an account profile on Mediprocity’s new system, they generate an encryption key
+                       protecting all patient health information. That key can be updated using the “Super Admin” user-account
+                       feature. The admin panel is configured for both organizations and private individuals.
+          icon: solution_1.png
+          elements:
+            - item: an encrypted communication layer (SSL)
+            - item: role-based authentication and permissions management
+            - item: bruteforce application login detection and blocking of access for suspicious users
+        - title: Security message system
+          description: All-in-one secure messaging, forms, and RX Orders. Any transfer of text, documents, images, graphics,
+                       or any other type of information is encrypted and available only to the sender and the intended recipient
+                       on the Mediprocity system.
+          icon: solution_2.png
+          elements:
+            - item: secure SSL-based connection protocols for exchanging data between users and the server a strict password policy
+            - item: suspicious activity detection and prevention
+            - item: isolated database access that allows connections with role-based authentication
+        - title: Multi-platform compatibility
+          description: The system was developed as cloud-based software and mobile applications that can be installed on multiple
+                       operating systems, including Windows, Linux, MacOS, Android, and iOS.
+          icon: solution_3.png
+          elements:
+            - item: browser-based, iOS or Android app, the operating system installation
+            - item: notifications allow users to be alerted by email, SMS text, or the mobile push notifications
+            - item: fully integrated API or Widget into any portal or software
+
+
+        - title: Complex project architecture
+          description: The system is designed to handle scale user databases, transactions, and messages and store this information
+                       for ten years. The architecture is multifaceted not only in terms of technology, but also in terms of its
+                       use case, roles, development, and deployment.
+          icon: solution_4.png
+          elements:
+            - item: building a consistent architecture that’s scalable enough to allow for further project development
+            - item: making the system convenient for people with disabilities
+        - title: HIPAA system integration
+          description: The system is designed under the Health Insurance Portability and Accountability Act (HIPAA) which requires
+                       secure forms to be easily converted to PDF or loaded into a database. The system also provides the end client
+                        with a custom legal box, which allows the end client’s legal team to add custom terms and conditions for
+                        acceptance by their patients.
+          icon: solution_5.png
+          elements:
+            - item: securely sharing HL7 messages
+            - item: limiting the scope of data visibility for sensitive PII/PHI data
+            - item: implementing AWS as a 100% HIPAA-compliant infrastructure provider
+      button: See more projects
   blog:
     categories:
       web-development: Web Development
