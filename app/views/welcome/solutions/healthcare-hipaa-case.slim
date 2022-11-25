@@ -1,0 +1,50 @@
+.container.healthcare_hipaa.development.solutions_cases
+  .healthcare_hipaa__main.wrap
+    h1.header-3 = t('healthcare_hipaa.title')
+    .description.with-margin.text-center  = t('healthcare_hipaa.description_1')
+    h2.header-2 = t('healthcare_hipaa.subtitle_1')
+    .description.with-margin.text-center = t('healthcare_hipaa.description_2')
+    .header-3.small-text = t('healthcare_hipaa.subtitle_2')
+    .list-with-images
+      - I18n.t('healthcare_hipaa.help').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "hipaa/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2 = item[:title]
+            .description = item[:description].html_safe
+
+  .wrap.solutions_cases__case_study
+    .header-3 = t('healthcare_hipaa.case_study.title')
+    h2.header-2.with-margin = t('healthcare_hipaa.case_study.subtitle')
+    .solutions_cases__case_study_top
+      ul.solutions_cases__case_study_list
+        - I18n.t('healthcare_hipaa.case_study.top_info').each do |el|
+          li.solutions_cases__case_study_list_item
+            = el[:item].html_safe
+      .solutions_cases__case_study_image
+        = image_tag 'hipaa/healthcare.png'
+    .solutions_cases__case_study_bottom
+      ul.solutions_cases__case_study_bottom_list
+        - I18n.t('healthcare_hipaa.case_study.bottom_info').each do |item|
+          li
+            .header-2.with-margin = item[:title]
+            .description = item[:description].html_safe
+
+  .healthcare_hipaa__solutions.wrap
+    .header-3.with-margin.white-text = t('healthcare_hipaa.solutions.title')
+    .list-with-images
+      - I18n.t('healthcare_hipaa.solutions.all').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "hipaa/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2.without-margin.white-text = item[:title]
+            .description.without-margin.white-text = item[:description].html_safe
+            ul.list-with-images__item_elements
+              - item[:elements].each do |element|
+                li.list-with-images__item_element
+                  = element[:item]
+    = link_to "#{t('healthcare_hipaa.solutions.button')}", page_path(:solutions), id: 'healthcare_hipaa_solutions_button', class: 'button white-text', target: :_blank
+
+  = render 'shared/solutions_case_idea'

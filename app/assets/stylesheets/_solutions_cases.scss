@@ -1,0 +1,112 @@
+.solutions_cases {
+  .header-2 { font-size: 1.25em; }
+
+  .text-center { text-align: center; }
+
+  .list-with-images {
+    margin: 5vh 0 0;
+
+    &__item {
+      align-items: flex-start;
+
+      .header-2.without-margin { margin: 0 0 1vh; }
+
+      .description.without-margin { margin-top: 0; }
+
+      &-icon img {
+        max-width: 200px;
+        border-radius: 30px;
+      }
+
+      &_elements {
+        margin-top: 0;
+        padding-left: 2vw;
+        list-style-type: circle;
+        text-align: left;
+      }
+
+      &_element {
+        font-style: italic;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .header-3.small-text {
+    margin: 3vh 0 5vh;
+    font-size: 1.25em;
+    letter-spacing: .1em;
+
+    &.with-margin { margin-top: 5vh; }
+  }
+
+  .description.text-center { margin-top: 5vh; }
+
+  &__case_study {
+    background-image: linear-gradient($palianytsia, transparent);
+
+    .header-2.with-margin { margin: 5vh 0; }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      text-align: left;
+    }
+
+    &_top {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &_list_item { margin: 2vh 0; }
+
+    &_image img {
+      max-width: 200px;
+      width: 100%;
+      mix-blend-mode: luminosity;
+    }
+
+    &_bottom_list {
+      .header-2.with-margin { margin-bottom: 2vh; }
+    }
+  }
+
+  &__idea {
+    background-image: linear-gradient(135deg, $purple-heart, $sky-ua);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 18vw;
+
+    &_img {
+      width: 35%;
+
+      img {
+        max-width: 300px;
+        width: 100%;
+        mix-blend-mode: luminosity;
+      }
+    }
+    &_text {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .button {
+      margin-bottom: 5vh;
+      max-width: 70%;
+      border-color: transparent;
+      box-shadow: 2px 2px 18px 2px rgba($black, .15), inset 0px 4px 15px rgba($black, .15);
+    }
+  }
+}
