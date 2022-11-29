@@ -1,0 +1,113 @@
+.container.taxi_and_transportation.development.solutions_cases
+  .taxi_and_transportation__main.wrap
+    h1.header-3.white-text = t('taxi_and_transportation.title')
+    .header-2.white-text = t('taxi_and_transportation.subtitle_1')
+    .description.with-margin.white-text = t('taxi_and_transportation.description_1')
+    .description.white-text = t('taxi_and_transportation.description_2')
+    .header-2.white-text = t('taxi_and_transportation.subtitle_2')
+    .list-with-images
+      - I18n.t('taxi_and_transportation.help').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon
+            = image_tag "taxi_and_transportation/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2.white-text = item[:title]
+            .description.white-text = item[:description].html_safe
+
+  .taxi_and_transportation__expertise.wrap.development__cards
+    .header-3.white-text = t('taxi_and_transportation.expertise.title')
+    .cards-container.cards-container-2
+      - I18n.t('taxi_and_transportation.expertise.all').each do |item|
+        .card
+          h2.card__title-2.white-text
+            = item[:title]
+          .card__icon
+            = image_tag "taxi_and_transportation/#{item[:icon]}"
+          .card__description.white-text = item[:description].html_safe
+
+  .wrap.solutions_cases__case_study
+    .header-3 = t('taxi_and_transportation.case_study.title')
+    .header-2.with-margin = t('taxi_and_transportation.case_study.subtitle')
+    .solutions_cases__case_study_top
+      ul.solutions_cases__case_study_list
+        - I18n.t('taxi_and_transportation.case_study.top_info').each do |el|
+          li.solutions_cases__case_study_list_item
+            = el[:item].html_safe
+      .solutions_cases__case_study_image
+        = image_tag 'taxi_and_transportation/cablook_logo.png'
+    .solutions_cases__case_study_bottom
+      ul.solutions_cases__case_study_bottom_list
+        - I18n.t('taxi_and_transportation.case_study.bottom_info').each do |item|
+          li
+            .header-2.with-margin = item[:title]
+            .description = item[:description].html_safe
+
+  .taxi_and_transportation__solutions.wrap
+    .header-3 = t('taxi_and_transportation.solutions.title')
+    .header-3.small-text = t('taxi_and_transportation.solutions.subtitle_1')
+    .header-2.with-margin = t('taxi_and_transportation.solutions.subtitle_2')
+    .horizontal_timeline
+      - I18n.t('taxi_and_transportation.solutions.line').each do |el|
+        .horizontal_timeline__item
+          .horizontal_timeline__item_icon.big-img
+            = image_tag "taxi_and_transportation/#{el[:icon]}"
+          .horizontal_timeline__item_text
+            = el[:description].html_safe
+    .description = t('taxi_and_transportation.solutions.description').html_safe
+    .header-3.small-text.with-margin = t('taxi_and_transportation.features')
+    .list-with-images
+      - I18n.t('taxi_and_transportation.solutions.features').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon.big-img
+            = image_tag "taxi_and_transportation/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2.without-margin = item[:title]
+            .description.without-margin = item[:description].html_safe
+            .header-2.purple-text = t('taxi_and_transportation.features_title')
+            ul.list-with-images__item_elements
+              - item[:elements].each do |element|
+                li.list-with-images__item_element.purple-text
+                  = element[:item]
+
+  .taxi_and_transportation__security
+    .header-2.white-text = t('taxi_and_transportation.app_security.title')
+    .description.white-text = t('taxi_and_transportation.app_security.description').html_safe
+
+  .taxi_and_transportation__cross_platform_app.wrap
+    .header-2.with-margin = t('taxi_and_transportation.cross_platform_app.title')
+    .description.text-center = t('taxi_and_transportation.cross_platform_app.description')
+    .header-3.small-text.with-margin = t('taxi_and_transportation.features')
+    .list-with-images
+      - I18n.t('taxi_and_transportation.cross_platform_app.features').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon.big-img
+            = image_tag "taxi_and_transportation/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2.without-margin = item[:title]
+            .description.without-margin = item[:description].html_safe
+            .header-2.purple-text = t('taxi_and_transportation.features_title')
+            ul.list-with-images__item_elements
+              - item[:elements].each do |element|
+                li.list-with-images__item_element.purple-text
+                  = element[:item]
+
+  .taxi_and_transportation__admin_panel.wrap
+    .header-2.with-margin = t('taxi_and_transportation.admin_panel.title')
+    .description.text-center = t('taxi_and_transportation.admin_panel.description')
+    .header-3.small-text.with-margin = t('taxi_and_transportation.features')
+    .list-with-images
+      - I18n.t('taxi_and_transportation.admin_panel.features').each do |item|
+        .list-with-images__item
+          .list-with-images__item-icon.big-img
+            = image_tag "taxi_and_transportation/#{item[:icon]}"
+          .list-with-images__item-text
+            .header-2.without-margin = item[:title]
+            .description.without-margin = item[:description].html_safe
+            .header-2.white-text = t('taxi_and_transportation.features_title')
+            ul.list-with-images__item_elements
+              - item[:elements].each do |element|
+                li.list-with-images__item_element.white-text
+                  = element[:item]
+    = link_to "#{t('taxi_and_transportation.admin_panel.button')}", page_path(:solutions), id: 'taxi_and_transportation_admin_panel_button', class: 'button', target: :_blank
+
+  = render 'shared/solutions_case_idea'

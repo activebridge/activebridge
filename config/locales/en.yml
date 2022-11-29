@@ -2802,6 +2802,223 @@ en:
             - item: Technical consulting and implementing changes
             - item: An agile project update process
           tools:  AWS, Kubernetes, Docker
+  taxi_and_transportation:
+    title: Taxi and transportation
+    subtitle_1:  application development solutions
+    description_1: Active Bridge team has strong industry expertise in developing fully-functional cross-platform logistics,
+                   food delivery applications, and taxi booking applications with route optimization, real-time fleet
+                   management, and advanced administrative features.
+    description_2: The key to the success of all applications with booking features is their simplicity. We have experience
+                   in developing app features, modules, and UI/UX design to book a taxi or order food. Our remote developers
+                   design and develop online booking solutions that are fast and easy to use, ready for further scaling and
+                   ensure high data security.
+    subtitle_2: How we can help with taxi booking and transportation app development
+    features: Features
+    features_title: Extended features
+    help:
+      - icon: help_1.png
+        title: Full-cycle assistance
+        description: of transportation project development, from cloud hosting and UX/UI design, through app development
+                     and QA, to technical delivery, security compliance, maintenance, and support.
+      - icon: help_2.png
+        title: Rapid development
+        description: based on the agile practice that facilitates getting MVP in a short period of time and transforming
+                     it into a solid, scalable, and reliable product
+      - icon: help_2.png
+        title: Cross-platform solutions
+        description: of custom taxi and transportation apps development based on experience in complying with industry
+                     and market regulations
+    expertise:
+      title: Expertise
+      all:
+        - title: Food delivery app development solutions
+          icon: expertise_1.png
+          description: Our team of tech talents design UI/UX delivery app solutions that provide couriers and administrators with
+                       broad functionalities for order and customer management. These solutions are cross-platform food delivery
+                       applications consisting of a food ordering app, food seller/restaurant admin app, and delivery agent app.
+        - title: Taxi booking app development solutions
+          icon: expertise_2.png
+          description: Our dedicated development teams offer a personalized approach for every taxi business, from requirement
+                       gathering to the taxi company app launch. We build entirely customized and tested taxi booking solutions
+                       that are fast and easy to use, are ready for further scaling, and ensure high data security.
+        - title: Mapping and logistic solutions
+          icon: expertise_3.png
+          description: We develop custom supply chain management applications or embedded functions for each step of the process,
+                       from inventory management to order fulfillment. We empower applications with precise maps, navigation
+                       features, and GPS capabilities.
+    case_study:
+      title: Case Study
+      subtitle: Custom taxi app development solution for the local market
+      top_info:
+        - item: "Contract type: <b>dedicated development team</b>"
+        - item: "Team size: <b>6</b>"
+        - item: "Period of collaboration: <b>2017 - 2020</b>"
+        - item: "Client’s location: <b>Ukraine</b>"
+      bottom_info:
+        - title: "About the client:"
+          description: Electrotaxi company, CabLook Taxi, initiated the project aiming to contribute to the improvement
+                       of a local on-demand transportation system. The product is a complete web and mobile-based solution
+                       covering all the modern features passengers, drivers, and managers need.
+        - title: "Challenge:"
+          description: <p>It became clear that the local market needed a taxi service provider which bases its service on
+                       a fundamentally new technological approach with an emphasis on the eco component of the business.
+                       Developing a taxi service was a part of the solution.</p><p>The app’s primary goal is booking secure
+                       individual and carpooling rides of taxi company's vehicles. CabLook Taxi aimed at building a cross-platform
+                       application for the tech-friendly public. By developing applications for drivers and passengers,
+                       the company planned to expand it with add-ons such as food delivery features, corporate travel, and
+                       shuttle service. The app is a powerful web-based management system and a functional taxi booking solution.</p>
+        - title: "Technologies:"
+          description: Ruby on Rails / PostgreSQL / React Native / IOS / Android
+    solutions:
+      title: Solutions
+      subtitle_1: Passenger App | Driver App | Admin Pannel
+      subtitle_2: Passenger App
+      line:
+        - icon: passenger_app_line_1.png
+          description: Trip Request
+        - icon: passenger_app_line_2.png
+          description: Trip Confirmation
+        - icon: passenger_app_line_3.png
+          description: Matching Process
+        - icon: passenger_app_line_4.png
+          description: Ride
+        - icon: passenger_app_line_5.png
+          description: Payment Procedure
+        - icon: passenger_app_line_6.png
+          description: Rating and Review
+      description: Part of our taxi booking app development services was designing and building an on-demand passenger
+                   app with all the key features and an intuitive UI to make seamless cab bookings.We are concerned about
+                   <b>full data security development and testing to meet GDPR compliance standards.</b>
+      features:
+        - title: Easy registration
+          description: Sign in via SMS, by submitting your mobile number.
+          icon: passenger_app_features_1.png
+          elements:
+            - item: Profile settings
+            - item: Mobile number verification
+            - item: Payment cards validation
+        - title: Quick booking system
+          description: Users can pick from the saved ride options, choose a destination, get fare estimates, ETA and
+                       book a ride in a few taps.
+          icon: passenger_app_features_2.png
+          elements:
+            - item: Start and end location pins
+            - item: Planing a ride with several locations
+            - item: Scheduling of a ride for a specific date and time
+            - item: Possibility to observe all the taxi cabs on the map in real-time
+            - item: Checking the price for a ride beforehand
+            - item: Easy trip cancellations with applicable charges
+            - item: View all past trip requests and ability to repeat the trips
+        - title: Real-time cab tracking
+          description: Users are able to track the driver’s movement in real-time on a map, get alerts when their cab is
+                       found when the car arrives, and when the ride ends via push notifications.
+          icon: passenger_app_features_3.png
+          elements:
+            - item: Real-time cab location tracking
+            - item: Cab arrival tracker and push notifications
+            - item: Other timely app-related updates via push notifications
+            - item: Contact the driver via cell option
+        - title: Payment processing
+          description: Users have just one payment option - credit card - and can easily pay for their rides from the app
+                       receiving digital invoices via mail and transaction history section.
+          icon: passenger_app_features_4.png
+          elements:
+            - item: Secure in-app payments using a credit card option
+            - item: Option to pay a ride for others
+            - item: Applying applicable discount codes when booking a ride
+            - item: Cashback savings
+        - title: Feedback collection
+          description: Users can rate their ride experience by providing star ratings, tips, and comments to the service
+                       evaluation (driver, vehicle, trip, etc.) at the end of each trip.
+          icon: passenger_app_features_5.png
+          elements:
+            - item: Post-trip prompts for users to rate and review their trip experience
+            - item: In-app FAQ and contact support section
+    app_security:
+      title: Application Security
+      description: The app’s security includes application hardening to obscure code, network security, server protection
+                   from cyber-attacks, two-factor authentication, and implementation of PCI DSS requirements.
+    cross_platform_app:
+      title: Cross-platform apps for drivers
+      description: Drivers as taxi company employees can receive and accept ride requests from the users through the taxi
+                   driver app, edit further trips or help users to edit a current trip.
+      features:
+        - title: Easy registration and verification process
+          description: Driver registration is similar to user registration. The verification process of a driver is done
+                       from the administrator side of things (license, vehicle insurance, etc). Current car status informs
+                       as to the availability of a driver.
+          icon: cross-platform_apps_for_drivers_features_1.png
+          elements:
+            - item: Drivers can add the necessary details and request a signup
+            - item: Driver’s profile management
+        - title: Processing real-time request
+          description: Drivers get the app with a simple interface to receive trip orders to accept or deny, including information
+                       regarding passengers’ location, route, and travel history.
+          icon: cross-platform_apps_for_drivers_features_2.png
+          elements:
+            - item: Drivers can mark themselves online or offline
+            - item: Drivers get notified of new requests with pickup details
+            - item: Drivers get push notifications about trip changes and completion
+            - item: Intuitive interface to accept rides in the limited time frame
+        - title: Trip management and built-in navigation
+          description: Drivers are notified about the user’s trip details and get built-in navigation to make a flawless trip route
+                       using MapBox.
+          icon: cross-platform_apps_for_drivers_features_3.png
+          elements:
+              - item: Getting details about their customer for a seamless pickup and drop
+              - item: The ability for a driver to select a ride with a preferred destination
+              - item: Built-in navigation with MapBox
+              - item: "Tracking additional taxi services requests: bulk luggage, baby seat, pet carrier, etc."
+              - item: Ability to call passengers for any clarification on pickup location or scheduled trips
+              - item: Status confirmation of arriving, starting and ending a trip to get automated bills
+        - title: Delivery reports and Payment confirmation
+          description: Drivers can track their daily earnings, tip, view pending payments, and get notifications about their
+                       performance.
+          icon: cross-platform_apps_for_drivers_features_4.png
+          elements:
+            - item: Tracking entire job history and daily earnings
+            - item: Getting useful stats and insights on their trips and feedback
+            - item: Canceling a trip from a driver’s end when required
+    admin_panel:
+      title: Admin panel. Management tool.
+      description: A central management tool for managers and taxi business owners. Using browser-based admin platform
+                   managers can track and run all aspects of the taxi booking operations.
+      features:
+        - title: Employee Management
+          description: Admins can check and approve requests for new driver signups and add new drivers manually when required.
+          icon: employee_management_features_1.png
+          elements:
+            - item: Adding drivers, reviewing signup requests, setting commission rates
+            - item: Viewing and tracking real-time fleet availability and current location on a map
+            - item: Adding vehicles information, sorting it with management filters
+        - title: Clients management
+          description: Managers have the opportunity to track new and return users, view their ride history and feedback.
+          icon: employee_management_features_2.png
+          elements:
+            - item: Tracking all registered users on cross-platform taxi app and managing their details
+            - item: Admins can create new bookings for some purposes and use auto-assignment
+            - item: Adding and managing bonuses that will show in the app
+        - title: Payment processing
+          description: Managers and admins have the opportunity to set up billing processes for employees, also track detailed
+                       trip history and keep transaction records
+          icon: employee_management_features_3.png
+          elements:
+            - item: Admins can manage rate/unit distance, base fare and waiting and cancellation charges
+            - item: Admin can process payments to refund money to passengers
+            - item: Setting up country and currency from the admin panel
+
+        - title: Data management and analytics
+          description: A great tool to get useful insights on how the taxi business is performing with KPI so that managers and
+                       taxi owners can improve and grow faster.
+          icon: employee_management_features_4.png
+          elements:
+            - item: Tracking bookings over a heat map to analyze demand
+            - item: Getting actionable insights on taxi booking business operations for better decision making
+      button: See more projects
+    idea:
+      button: Let’s discuss your project idea
+      text_1: In case you don’t know where to start your project, you can get in touch with our CTO.
+      text_2: We’ll set up a quick call to discuss how to make your project work.
   healthcare_hipaa:
     title: Healthcare web application development solutions
     description_1: For more than 5 years, we've been delivering custom application development solutions and programming
