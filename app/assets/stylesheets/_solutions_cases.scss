@@ -3,6 +3,11 @@
 
   .text-center { text-align: center; }
 
+  .list-with-images.horizontal {
+    .list-with-images__item { align-items: center; }
+  }
+
+
   .list-with-images {
     margin: 5vh 0 0;
 
@@ -13,10 +18,9 @@
 
       .description.without-margin { margin-top: 0; }
 
-      &-icon img {
-        max-width: 200px;
-        border-radius: 30px;
-      }
+      &-icon img { border-radius: 30px; }
+
+      &-icon.big-img img { max-width: 200px; }
 
       &_elements {
         margin-top: 0;

@@ -36,7 +36,7 @@
     .list-with-images
       - I18n.t('healthcare_hipaa.solutions.all').each do |item|
         .list-with-images__item
-          .list-with-images__item-icon
+          .list-with-images__item-icon.big-img
             = image_tag "hipaa/#{item[:icon]}"
           .list-with-images__item-text
             .header-2.without-margin.white-text = item[:title]

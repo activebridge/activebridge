@@ -1,0 +1,103 @@
+.taxi_and_transportation {
+  &__main {
+    background-image: linear-gradient(-30deg, $purple-heart, $black_sea);
+
+    .description { margin-bottom: 5vh; }
+
+    .description.with-margin { margin-bottom: 2vh; }
+
+    .list-with-images { margin: 5vh 0 0; }
+  }
+
+  &__expertise {
+    background-image: linear-gradient(135deg, $buzok, $purple-heart);
+
+    .cards-container-2 {
+      margin-top: 6vh;
+
+      .card {
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: inset -1px 4px 13px -5px rgba($purple-heart, .5), inset -1px -5px 5px rgba($purple-heart, .5), 2px 1px 12px 0px rgba($purple-heart, .5);
+      }
+    }
+  }
+
+  &__solutions {
+    background-image: linear-gradient(-67deg, $buzok, $white, $white);
+    box-shadow: 0px 0px 25px 4px rgba($moon_raker, .35);
+
+    .purple-text { color: $purple-heart; }
+  }
+
+  &__security {
+    padding: 4vh 18vw;
+    background-color: rgba($purple-heart, .4);
+    box-shadow: 0px 0px 25px 4px rgba($black, .2);
+
+    .description {
+      margin-top: 1vh;
+      text-align: center;
+    }
+  }
+
+  &__cross_platform_app {
+    background-image: linear-gradient(35deg, $kviten, $titan_white, $titan_white);
+    box-shadow: 0px 0px 25px 4px rgba($moon_raker, .35);
+
+    .purple-text { color: $main-violet; }
+  }
+
+  &__admin_panel {
+    background-image: linear-gradient(35deg, $buzok, $kviten);
+    box-shadow: inset 0px 0px 25px 4px rgba($purple-heart, .4);
+
+    .button { background-color: $white; }
+  }
+}
+
+.horizontal_timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 10vh 0;
+
+  &__item {
+    max-width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_icon {
+      position: relative;
+      width: 6em;
+      height: 6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: radial-gradient(circle, $white, $titan_white);
+      border-radius: 50%;
+      box-shadow: 0px 0px 12px 0px rgba($purple-heart, .15);
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 15vw;
+        height: 2px;
+        background: $purple-heart;
+      }
+
+      img {
+        max-width: 55px;
+        width: 100%;
+        mix-blend-mode: luminosity;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .taxi_and_transportation {
+    &__main {
+      .header-2 { font-size: .9em; }
+    }
+  }
+}
