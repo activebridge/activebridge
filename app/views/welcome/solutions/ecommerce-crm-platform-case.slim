@@ -1,0 +1,72 @@
+.container.ecommerce.development.solutions_cases
+  .ecommerce__main.wrap.development__cards
+    .row
+      h1.header-3.white-text = t('e-commerce.title')
+      .description.with-margin.white-text  = t('e-commerce.description').html_safe
+      .cards-container.cards-container-2
+        - I18n.t('e-commerce.cards').each do |item|
+          .card
+            h2.card__title-2.white-text
+              = item[:title]
+            .card__icon
+              = image_tag "team_extension/#{item[:icon]}"
+            .card__description.white-text
+              = item[:description]
+      .header-3.small-text.white-text = t('e-commerce.expertise_title')
+      .list-with-images.horizontal
+        - I18n.t('e-commerce.expertise').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "ecommerce/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2.white-text = item[:title]
+
+  .ecommerce__help.wrap
+    .row
+      .header-3.small-text = t('e-commerce.help_title')
+      .list-with-images
+        - I18n.t('e-commerce.help').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "insurtech/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2 = item[:title]
+              .description = item[:description].html_safe
+
+  .wrap.solutions_cases__case_study
+    .row
+      .header-3 = t('e-commerce.case_study.title')
+      h2.header-2.with-margin.mobile-margin = t('e-commerce.case_study.subtitle')
+      .solutions_cases__case_study_top
+        ul.solutions_cases__case_study_list
+          - I18n.t('e-commerce.case_study.top_info').each do |el|
+            li.solutions_cases__case_study_list_item
+              = el[:item].html_safe
+        .solutions_cases__case_study_image
+          = image_tag 'ecommerce/ecommerce.png'
+      .solutions_cases__case_study_bottom
+        ul.solutions_cases__case_study_bottom_list
+          - I18n.t('e-commerce.case_study.bottom_info').each do |item|
+            li
+              .header-2.with-margin = item[:title]
+              .description = item[:description].html_safe
+
+  .ecommerce__project.wrap
+    .row
+      .header-3.small-text.white-text = t('e-commerce.project.title')
+      .list-with-images
+        - I18n.t('e-commerce.project.info').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon.big-img
+              = image_tag "ecommerce/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2.without-margin.white-text = item[:title]
+              .description.without-margin.white-text = item[:description].html_safe
+              .header-2.purple-text = t('e-commerce.project.features')
+              ul.list-with-images__item_elements
+                - item[:elements].each do |element|
+                  li.list-with-images__item_element.purple-text
+                    = element[:item]
+      = link_to "#{t('e-commerce.project.button')}", page_path(:solutions), id: 'e-commerce_project_button', class: 'button white-text', target: :_blank
+
+  = render 'shared/solutions_case_idea'
