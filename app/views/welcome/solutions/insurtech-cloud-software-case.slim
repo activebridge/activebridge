@@ -1,0 +1,79 @@
+.container.insurtech.development.solutions_cases
+  .insurtech__main.wrap
+    .row
+      h1.header-3 = t('insurtech.title')
+      .description.with-margin = t('insurtech.description').html_safe
+      .list-with-images.horizontal
+        - I18n.t('insurtech.solutions').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "insurtech/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2 = item[:title]
+              .description = item[:description].html_safe
+
+  .insurtech__design_and_development.wrap
+    .row
+      h2.header-2 = t('insurtech.design_and_development.title')
+      .description = t('insurtech.design_and_development.description').html_safe
+      ul.insurtech__design_and_development-list
+        - I18n.t('insurtech.design_and_development.all').each do |item|
+          li.insurtech__design_and_development-list-item
+            span
+            = item[:item]
+      .header-3.small-text = t('insurtech.design_and_development.help_title')
+      .list-with-images
+        - I18n.t('insurtech.design_and_development.help').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "insurtech/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2 = item[:title]
+              .description = item[:description].html_safe
+
+  .wrap.solutions_cases__case_study
+    .row
+      .header-3 = t('insurtech.case_study.title')
+      h2.header-2.with-margin = t('insurtech.case_study.subtitle')
+      .solutions_cases__case_study_top
+        ul.solutions_cases__case_study_list
+          - I18n.t('insurtech.case_study.top_info').each do |el|
+            li.solutions_cases__case_study_list_item
+              = el[:item].html_safe
+        .solutions_cases__case_study_image
+          = image_tag 'insurtech/card-cloud.png'
+      .solutions_cases__case_study_bottom
+        ul.solutions_cases__case_study_bottom_list
+          - I18n.t('insurtech.case_study.bottom_info').each do |item|
+            li
+              .header-2.with-margin = item[:title]
+              .description = item[:description].html_safe
+
+  .insurtech__features.wrap
+    .row
+      = image_tag 'insurtech/cloud.png', class: 'absolute-icon desktop-only'
+      .header-3.small-text = t('insurtech.features.title')
+      .list-with-images.horizontal
+        - I18n.t('insurtech.features.all').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "insurtech/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2 = item[:title]
+              .description = item[:description].html_safe
+      = image_tag 'insurtech/cloud.png', class: 'absolute-icon desktop-only'
+
+  .insurtech__full_circle.wrap
+    .row
+      .header-2.with-margin.white-text = t('insurtech.full_circle.title')
+      .list-with-images
+        - I18n.t('insurtech.full_circle.all').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "insurtech/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2.without-margin.white-text = item[:title]
+              .description.without-margin.white-text = item[:description].html_safe
+      = link_to "#{t('insurtech.full_circle.button')}", page_path(:solutions), id: 'insurtech_full_circle_button', class: 'button', target: :_blank
+
+  = render 'shared/solutions_case_idea'
