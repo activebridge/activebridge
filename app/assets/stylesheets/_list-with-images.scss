@@ -66,8 +66,9 @@
   .list-with-images.horizontal {
     .list-with-images__item {
       max-width: 100%;
+      width: 100%;
 
-      .description { font-size: .85em; }
+      .description { font-size: .8em; }
     }
   }
 }
