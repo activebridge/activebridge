@@ -1,0 +1,166 @@
+.ecommerce {
+  .header-3.small-text { font-weight: 900; }
+
+  &__main {
+    background-image: linear-gradient(135deg, $black_sea, $main-violet);
+
+    .list-with-images.horizontal .list-with-images__item {
+      margin-top: 3vh;
+
+      &:nth-child(-n+2) {
+        max-width: 37%;
+        width: 37%;
+      }
+
+      &:first-child { margin-left: 13%; }
+
+      &:nth-child(2) {margin-right: 13%; }
+    }
+  }
+
+  .development__cards {
+    box-shadow: none;
+
+    .cards-container-2 {
+      justify-content: space-around;
+
+      .card {
+        max-width: 40%;
+        min-width: 40%;
+        background: rgba($white, .05);
+        box-shadow: inset -2px -2px 12px 0px rgba(black, .25), 0px 4px 20px 0 rgba(black, .2);
+
+        &__description { margin: auto 0; }
+
+        &__title-2 {
+          height: 100%;
+          min-height: 75px;
+          max-height: 11vh;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .development__cards .cards-container { margin: 8vh 0; }
+
+  &__help {
+    background: $titan_white;
+
+    .header-3.small-text { margin-top: 0; }
+  }
+
+  .solutions_cases__case_study {
+    box-shadow: inset 0px 4px 25px 0px rgba($purple-heart, .25);
+
+    .description {
+      ul {
+        padding-left: 4vh;
+
+        li {
+          position: relative;
+          margin-top: 2vh;
+          text-align: justify;
+
+          span {
+            position: absolute;
+            left: -2.5em;
+            top: 0.5em;
+            bottom: 0;
+            width: .8em;
+            height: .8em;
+            background: center/cover no-repeat url('privacy_policy/sun.png');
+            mix-blend-mode: luminosity;
+          }
+        }
+      }
+    }
+  }
+
+  &__project {
+    background-image: linear-gradient(to top left, $purple-heart, $black_sea);
+    box-shadow: inset 3px -4px 20px 0px  rgba(black, .25);
+
+
+    .purple-text { color: $buzok; }
+
+    .button {
+      background-color: rgba($white, .05);
+      border-color: rgba(black, .15);
+      box-shadow: inset 0px 4px 15px 0px rgba(black, .15), 2px 2px 18px 2px rgba(black, .15);
+    }
+  }
+}
+
+
+@media screen and (min-width: 1550px) {
+  .ecommerce {
+    .development__cards .cards-container-2 {
+      .card {
+        max-width: 35%;
+        min-width: 35%;
+
+        &__icon img { max-width: 130px; }
+
+        &__title-2 {
+          max-height: 5vh;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .ecommerce {
+    .development__cards .cards-container-2 {
+      .card {
+        max-width: 33%;
+        min-width: 33%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ecommerce {
+    .development__cards .cards-container-2 {
+      flex-wrap: wrap;
+
+      .card {
+        min-width: 100%;
+        padding: 3vh 7vw;
+
+        &:not(:last-child) { margin-bottom: 3vh; }
+
+        &__description { margin-bottom: 3vh; }
+
+        &__icon { margin: 0 auto 3vh; }
+
+        &__title-2 { height: 100%; }
+      }
+    }
+
+    .list-with-images.horizontal .list-with-images__item {
+      &:nth-child(-n+2) {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      &:first-child { margin-left: 0; }
+
+      &:nth-child(2) {margin-right: 0; }
+    }
+
+    .solutions_cases__case_study { box-shadow: inset 0px 14px 25px -15px rgba($purple-heart, .25); }
+
+    &__main {
+      .list-with-images.horizontal .list-with-images__item { margin-top: 1vh; }
+    }
+
+    &__help,
+    &__project {
+      .header-3.small-text { margin-bottom: 4vh; }
+    }
+  }
+}
