@@ -37,9 +37,7 @@ en:
           - section: HealthTech/HIPAA-compliant
             link: /solutions/healthcare-hipaa-case
           - section: InsurTech/Cloud Software
-            link: /
-          - section: B2C Marketplace / SaaS
-            link: /
+            link: /solutions/insurtech-cloud-software-case
           - section: E-commerce/CRM
             link: /
           - section: Travel/Logistic
@@ -136,6 +134,10 @@ en:
             description: We create effective healthcare applications in compliance with HIPAA and regulatory standards.
                          In our portfolio, there are complex SaaS healthcare platforms, patient and doctor scalable
                          web/mobile/desktop apps, and more.
+          insurtech-cloud-software-case:
+            title: InsurTech cloud software development solutions | Active Bridge
+            description: Active Bridge team has 10 years of expertise in health insurance product development. We build
+                         reliable, secure, scalable e-Billing management cloud-software
       faq:
         title: FAQ | Active Bridge
         description: Check our FAQ, if you can't find the right one, feel free to contact us
@@ -261,6 +263,10 @@ en:
         description: We create effective healthcare applications in compliance with HIPAA and regulatory standards. In our
                      portfolio, there are complex SaaS healthcare platforms, patient and doctor scalable web/mobile/desktop
                      apps, and more.
+      insurtech-cloud-software-case:
+        title: InsurTech cloud software development solutions | Active Bridge
+        description: Active Bridge team has 10 years of expertise in health insurance product development. We build
+                     reliable, secure, scalable e-Billing management cloud-software
     schema:
       /:
         '[
@@ -667,7 +673,8 @@ en:
           "@type": "Offer",
           "name": "Web Application Development Services",
           "category": "Tech Services",
-          "description": "Our experts build robust native applications or equally functional cross-platform apps that users love.",
+          "description": "Our experts build robust native applications or equally functional cross-platform
+                          apps that users love.",
           "areaServed": [
                          "US",
                          "UK",
@@ -691,7 +698,8 @@ en:
                          "AU"
           ],
           "serviceType": "Tech Staff Augmentation",
-          "description": "TFeel the flexibility of management by augmenting your in-house team with our experts at the cost of offshore specialists"
+          "description": "TFeel the flexibility of management by augmenting your in-house team with our experts
+                          at the cost of offshore specialists"
         }'
       project-development-cooperation:
         '{
@@ -706,7 +714,8 @@ en:
                          "AU"
           ],
           "serviceType": "Project Outsoursing Services",
-          "description": "Our neatly organized project development process allows us to deliver scalable reliable applications faster"
+          "description": "Our neatly organized project development process allows us to deliver scalable reliable
+                          applications faster"
         }'
       taxi-booking-platform-case:
         '{
@@ -727,8 +736,20 @@ en:
           "author": "Active Bridge",
           "contributor": "Mediprocity",
           "significantLink": "activebridge.org/solutions/healthcare-hipaa-case",
-          "description": "Cross-platform development project example of a HIPAA-compliant communication and clinical collaboration platform.",
+          "description": "Cross-platform development project example of a HIPAA-compliant communication and clinical
+                          collaboration platform.",
           "datePublished": "2009-10-10"
+        }'
+      insurtech-cloud-software-case:
+        '{
+          "@context": "http://schema.org",
+          "@type": "ItemPage",
+          "name": "InsurTech Cloud Software Project Exapmle",
+          "author": "Active Bridge",
+          "contributor": "DaisyBill",
+          "significantLink": "activebridge.org/solutions/insurtech-development-solutions",
+          "description": "Cloud-software project example of a workers compensation e-Billing management cloud-software",
+          "datePublished": "2011-10-11"
         }'
   index:
     active_bridge: Active Bridge
@@ -809,13 +830,12 @@ en:
     navigation:
       links:
         - page: About
-          link: /
+          link: /about
           items:
             - section: Team
-              link: /team
+              link: /about/team
         - page: Expertise
           link: /expertise
-          items:
         - page: Services
           link: /services
           items:
@@ -839,7 +859,7 @@ en:
             - section: Marketplace
               link: /
             - section: E-commerce
-              link: /
+              link: /solutions/ecommerce-crm-platform-case
             - section: Logistic / Travel
               link: /solutions/taxi-booking-platform-case
             - section: Education / Fintech
@@ -1506,7 +1526,7 @@ en:
       subtitle: Our core technology is Ruby on Rails, we see a lot of potential in it, especially mixing ROR with React, Angular, and other add-ons.
       title: Technologies
       description: We’ve been providing startups, small and medium-sized enterprises (SMEs) in both North America and Eastern Europe with custom
-                   web application development services for 9+ years. We are used to working remotely, so we know that the key to making things
+                   web application development services for 8+ years. We are used to working remotely, so we know that the key to making things
                    happen is good communication and an industry-focused development approach.
     industries:
       projects: "<b>40+</b> Projects"
@@ -3112,6 +3132,143 @@ en:
             - item: securely sharing HL7 messages
             - item: limiting the scope of data visibility for sensitive PII/PHI data
             - item: implementing AWS as a 100% HIPAA-compliant infrastructure provider
+      button: See more projects
+  insurtech:
+    title:  Insurance application development solutions
+    description: <p>The emerging sector of InsurTech products enables customers to handle insurance issues in a more holistic
+                 and user-friendly way than ever before</p><p>Active Bridge dedicated developers create efficient solutions
+                 for the insurance services industry based on security and the highest level of data integrity. Our remote
+                 tech experts help companies automate manual operations and claim verification, reduce human errors, ensure
+                 smooth customer experiences.</p>
+    solutions:
+      - icon: solution_1.png
+        title: Insurance industry expertise
+        description: Developing cloud software and applications for the insurance niche requires a certain level of experience
+                     from creators. Our team has 6 years of practice in this field, and we successfully launched InsurTech
+                     projects.
+      - icon: solution_2.png
+        title: Industry-relevant tech stack
+        description: We are tracking the changing InsurTech market dynamics and constantly replenishing our solutions with
+                     innovative technologies.
+      - icon: solution_3.png
+        title: Guarantees and confidentiality
+        description: We guarantee a high level of confidence, competitiveness, reliability, and scalability of our solutions.
+                     We always sign an NDA and assign specialists of various profiles, including those responsible for
+                     compliance with the project quality indicators.
+    design_and_development:
+      title:  Insurance product design and development
+      description: "<p>Our dedicated development teams successfully resolve security and compliance challenges of Insurtech
+                   product development as well as scalability, high load, smooth integration with third-party services,
+                   and more.</p>
+                   <p class='bold'>InsurTech product development services are handy for insurance companies,
+                   agencies, brokerages, and reinsurers that:</p>"
+      all:
+        - item: provide life and health, property and casualty insurance services;
+        - item: provide workers claim compensation solutions;
+        - item: need to optimize internal workflows by automating routine tasks and enhancing them with data analytics;
+        - item: strive to provide an excellent customer experience.
+      help_title: How we can help with insurance product development process
+      help:
+        - icon: process_1.png
+          title: Full-cycle assistance
+          description: of InsurTeach project development, from cloud hosting and UX/UI design, through app development and
+                       QA, to technical delivery, security compliance, maintenance, and support.
+        - icon: process_2.png
+          title: Rapid development
+          description: based on the agile practice that facilitates getting MVP in a short period of time and transforming
+                       it into a solid, scalable, and reliable product
+        - icon: process_3.png
+          title: Cross-platform solutions
+          description: of custom insurance product development based on wide experience in complying with industry and market
+                       regulations
+    case_study:
+      title: Featured Case Study
+      subtitle: Workers’ compensation e-Billing management cloud-software
+      top_info:
+        - item: "Contract type: <b>development team augmentation</b>"
+        - item: "Team size: <b>6</b>"
+        - item: "Period of collaboration: <b>2015 - ongoing</b>"
+        - item: "Client’s location: <b>New York, United States</b>"
+      bottom_info:
+        - title: "About the client:"
+          description: DaisyBill is a mission-focused company serving healthcare service providers who digitally manage
+                       and dispatch workers’ compensation bills to employers. The company pioneered an innovative, data-driven
+                       service to help transform the complex workers’ compensation process. DaisyBill offers a range of Software
+                       as a Service (SaaS) subscriptions to help those who care for injured workers to get paid accurately,
+                       quickly, and without administrative burdens.
+        - title: "Challenge:"
+          description: To carry mentioned goal, DaisyBill was about building revenue cycle management (RCM) software to help
+                       healthcare service providers digitally manage and dispatch workers’ compensation bills to employers.
+                       More than any other kind of medical billing, workers’ compensation is complicated, time-consuming, and
+                       incredibly headache-inducing. So the main goal was to develop software that cut through the tangle of
+                       workers’ comp requirements and regulations and simplifies this process.
+        - title: "Solutions:"
+          description: A cloud-based insurance management platform that helps automate and facilitate a wide range of regular
+                       manual insurance tasks to make the life of healthcare service providers, employers and employees much
+                       easier. It is a feature-rich modular platform focused on insurance processes such as paperwork and document
+                       storing, billing workflows, billing statistics, verified bill delivery tracking, and more.
+        - title: "Technologies:"
+          description: Ruby on Rails, PostgreSQL, TFA, Selenium, REDIS
+    features:
+      title: Features
+      all:
+        - title: Billing workflow automation
+          description: DaisyBill workers’ comp technology provides a workflow solution that makes it easy for an employer’s
+                       team to systematically manage bill submission and payer responses.
+          icon: feature_1.png
+        - title: Document management and verifying
+          description: Revenue cycle management cloud software also helps to store all sensitive documents securely in one
+                       place. This feature allows import and export functionality to simplify the user’s data handling
+                       process. The feature provides a comprehensive bill history, including an electronic receipt verifying
+                       the payer received both your bill and attached supporting medical records.
+          icon: feature_2.png
+        - title: Billing statistics and reports
+          description: The platform also provides inbuilt analytics capability, which generates custom reports on employers’
+                       information, patient records, procedure, and claims administration to comply with workers’ compensation
+                       guidelines.
+          icon: feature_3.png
+        - title: Validation of bills for compliance
+          description: Workers’ compensation bills software scrubs every bill and alerts users to any errors prior to
+                       submitting the bill.
+          icon: feature_4.png
+        - title: RFA delivery verification
+          description: RFA that was faxed from DaisyBill cloud-based insurance management software is retained and can
+                       be provided for the proof that proof the payer received the RFA.
+          icon: feature_5.png
+        - title: Tasks and friendly reminder emails
+          description: Task Dashboard replaces spreadsheets and sticky notes with organized, automated, tasks and
+                       friendly reminder emails. The Task Dashboard alerts the user’s team of what to do and when
+                       to do it.
+          icon: feature_6.png
+        - title: Free schedule calculator
+          description: DaisyBill’s Calculator is comprised of six separate Fee Schedules and five separate Calculators.
+                       Each Calculator references a specific Fee Schedule or Fee Schedules
+          icon: feature_7.png
+
+
+        - title: Built API
+          description: The software offers an API that lets businesses integrate DaisyBill with existing revenue cycle
+                       management software and export data into CSV and ANSI formats.
+          icon: feature_8.png
+    full_circle:
+      title: What’s important in a full-circle insurance product development
+      all:
+        - icon: full_circle_1.png
+          title: User experience
+          description: InsurTech applications must look and feel friendly, unobtrusive, and reliable. Creating a user
+                       experience and interface that fulfills these demands requires both domain knowledge and software
+                       design artistry.
+        - icon: full_circle_2.png
+          title: Legal compliance
+          description: Each InsurTech product must be fully compliant with the existing laws and frequently updated in
+                       accordance with the new regulations.
+        - icon: full_circle_3.png
+          title: Cybersecurity
+          description: InsurTech product provides secure and reliable data storage, as well as infallible payment solutions.
+        - icon: full_circle_4.png
+          title: Cloud computing
+          description: Processing vast amounts of sensitive information requires robust technological solutions, such as
+                       the cloud. It has proven vital in InsurTech software development.
       button: See more projects
   blog:
     categories:
