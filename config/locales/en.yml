@@ -39,7 +39,7 @@ en:
           - section: InsurTech/Cloud Software
             link: /solutions/insurtech-cloud-software-case
           - section: E-commerce/CRM
-            link: /
+            link: /solutions/ecommerce-crm-platform-case
           - section: Travel/Logistic
             link: /solutions/taxi-booking-platform-case
       - page: Reviews
@@ -138,6 +138,10 @@ en:
             title: InsurTech cloud software development solutions | Active Bridge
             description: Active Bridge team has 10 years of expertise in health insurance product development. We build
                          reliable, secure, scalable e-Billing management cloud-software
+          ecommerce-crm-platform-case:
+            title: Retails & eCommerce Development Solutions | Active Bridge
+            description: We help you to reach your customers on the go with a cross-platform eCommerce app design and
+                         development solutions. Have a project idea? Let's talk
       faq:
         title: FAQ | Active Bridge
         description: Check our FAQ, if you can't find the right one, feel free to contact us
@@ -267,6 +271,10 @@ en:
         title: InsurTech cloud software development solutions | Active Bridge
         description: Active Bridge team has 10 years of expertise in health insurance product development. We build
                      reliable, secure, scalable e-Billing management cloud-software
+      ecommerce-crm-platform-case:
+        title: Retails & eCommerce Development Solutions | Active Bridge
+        description: We help you to reach your customers on the go with a cross-platform eCommerce app design and
+                     development solutions. Have a project idea? Let's talk
     schema:
       /:
         '[
@@ -750,6 +758,18 @@ en:
           "significantLink": "activebridge.org/solutions/insurtech-development-solutions",
           "description": "Cloud-software project example of a workers compensation e-Billing management cloud-software",
           "datePublished": "2011-10-11"
+        }'
+      ecommerce-crm-platform-case:
+        '{
+          "@context": "http://schema.org",
+          "@type": "ItemPage",
+          "name": "eCommerce Website Project",
+          "author": "Active Bridge",
+          "contributor": "SewSew You ltd",
+          "significantLink": "activebridge.org/solutions/custom-ecommerce-web-development",
+          "description": "Web development project example of a B2C eCommerce platform with optimized supply chain management
+                          and logistics for sustainable clothes brands.",
+          "datePublished": "2018-12-10"
         }'
   index:
     active_bridge: Active Bridge
@@ -3269,6 +3289,141 @@ en:
           title: Cloud computing
           description: Processing vast amounts of sensitive information requires robust technological solutions, such as
                        the cloud. It has proven vital in InsurTech software development.
+      button: See more projects
+  e-commerce:
+    title: Custom e-commerce web development solutions
+    description: <p>With more than 9 years of eCommerce development experience and extensive expertise in building online
+                 software solutions that connect all parts of the E-commerce value chain, Active Bridge’s dedicated development
+                 teams help clients grow businesses and sell online.</p><p>We assist retail businesses that embrace digital
+                 transformation to succeed in the competitive eCommerce market. Capitalizing on our solid grasp of Ruby on Rails
+                 and other cutting-edge technologies, we provide scalable custom eCommerce websites with integrated CRM & ERP
+                 systems, complex databases, and cloud-based architecture.</p>
+    cards:
+      - title: eCommerce web application development and retail software
+        icon: service_1.png
+        description: Our eCommerce web development company can assist you whether you are launching a new eCommerce platform
+                     or revamping your existing one. We manage all issues related to secure networks, remote server
+                     configuration, infrastructure solutions, and database management. Active Bridge’s cloud configuration
+                     experts help you take full advantage of flexible and highly scalable product deployment so you can focus
+                     on growing and featuring your platform.
+      - title: eCommerce mobile application solutions
+        icon: service_3.png
+        description: We help you reach your customers on the go with a cross-platform eCommerce app. Our e-commerce web
+                     developers have already delivered many mobile online store solutions enhanced with rich functionality
+                     and a user-friendly interface.
+    expertise_title: Expertise
+    expertise:
+      - icon: expertise_1.png
+        title: Online store development
+      - icon: expertise_2.png
+        title: Retails software development
+      - icon: expertise_3.png
+        title: CRM and ERP system integration
+      - icon: expertise_4.png
+        title: Cloud and database management
+      - icon: expertise_5.png
+        title: API and payment systems integration
+    help_title: How we can help with eCommerce web app development
+    help:
+      - icon: process_1.png
+        title: Full-cycle assistance
+        description: of Ecommerce project development, from cloud hosting and UX/UI design, through app development
+                     and QA, to technical delivery, security compliance, maintenance, and support.
+      - icon: process_2.png
+        title: Rapid development
+        description: based on the agile practice that facilitates getting MVP in a short period of time and transforming
+                     it into a solid, scalable, and reliable product
+      - icon: process_3.png
+        title: Cross-platform solutions
+        description: of custom retail software development based on strong experience in complying with industry and
+                     market regulations.
+    case_study:
+      title: Case Study
+      subtitle: A B2C eCommerce platform with optimized supply chain management and logistics for sustainable clothes
+                brands
+      top_info:
+        - item: "Contract type: <b>team augmentation contract type</b>"
+        - item: "Team size: <b>5</b>"
+        - item: "Period of collaboration: <b>2018 - ongoing</b>"
+        - item: "Client’s location: <b>Hong Kong, Hong Kong</b>"
+      bottom_info:
+        - title: "About the client:"
+          description: SewSewYou is an innovative company advocating sustainable consumption and sustainable fashion
+                       principles. SewSewYou connects influencers designing sustainable activewear, suppliers, and
+                       factories sewing clothes with the end consumer.
+        - title: "Challenge:"
+          description: SewSewYou founder conducted fashion market research and discovered issues related to pollution
+                       and overconsumption. SewSewYou team believes that on-demand clothing doesn’t need to be expensive.
+                       And, fabrics and dyes don’t need to be toxic. By discovering these two fundamental truths and
+                       deploying them in the business idea, they aimed to build a platform that connected all clothes
+                       life-cycle participants and put a stop to waste and fashion overproduction.
+        - title: "Our full-stack team was responsible for:"
+          description: <ul><li><span></span>crafting a unified system to manage customer relations and the supply chain.</li>
+                       <li><span></span>building CRM and B2C frameworks that could be installed and customized by admins,
+                       influencers, and factories</li><li><span></span>building the tool to help suppliers optimize
+                       logistics and supply chain management, reduce documentation processes, speed up the workflow,
+                       and maximize service efficiency.</li></ul>
+    project:
+      title: SewSewYou e-commerce platform comes with a great set of features and super power-packed add-ons.
+      features: Extended features
+      info:
+        - title: Customizing brands’ products pages
+          description: 'The most visited place in the marketplace is a brand’s product pages. They give buyers detailed
+                       information about the item they searched for. Our development team made it easy to add influencers’
+                       marketplace custom branding: logos, product features, brand snapshots, and product pages.'
+          icon: features_1.png
+          elements:
+            - item: Built-in brand layout editor, a comprehensive tool for customizing product pages
+            - item: Product images and video uploading
+            - item: Influencers can easily curate their very own product collection
+            - item: Vendors can also customize their own individual pages or micro-site with their own branding
+            - item: Consistent User Experience (UX) across every device and screen size
+        - title: Complex e-commerce platform search engine with dynamically changing filters
+          description: We designed and developed advanced filtering and search logic, based on multiple dynamically
+                       changed rules.
+          icon: features_2.png
+          elements:
+            - item: Autosuggestions that appear as consumers type their inquiries in the search bar
+            - item: Consumers can browse brands' products by size, category, and price., check their availability in
+                    stocks, and view prices, specifications, codes of spare parts, etc.
+        - title: Affiliate subsystem with its own custom-built CRM
+          description: The main goal of the customized vendors' CRM solution was to maintain relationships with both
+                       customers and factories (suppliers) for long periods of time. CRM should be enabled on multiple
+                       devices both stationary and mobile.
+          icon: features_3.png
+          elements:
+            - item: Vendors can streamline order management, create shipments, accept refunds, and more.
+            - item: The order management feature provides vendors and suppliers with a convenient one-window multi-tab
+                    workspace where all the necessary customer data and working tools are gathered.
+            - item: Sellers have a complete dashboard for their respective statistics.
+            - item: The software allows vendors to perform mass email campaigns, retaining the necessary level of
+                    personalization.
+            - item: CRM store and process an extensive amount of data about customer interactions.
+        - title: A custom shopping mechanism
+          description: Our development team builds a custom shopping mechanism to cover all aspects of online booking.
+                       This mechanism provides the support of payments by milestones, the option to add additional
+                       services and different cards for payment at any point, and includes a complex discount generation
+                       system.
+          icon: features_4.png
+          elements:
+            - item: Customers save brands’ products for later as favorites, accessing their favorites list when logged in.
+            - item: Customers can track their orders online.
+            - item: Each vendor gets an instant email or text about new orders.
+            - item: The platform keeps track of every dollar that goes through the system, including individual vendor
+                    sales, taxes, and more.
+            - item: 'The eCommerce platform supports multiple payment options: debit or credit card, e-wallet, bank transfer,
+                    or even cash on delivery.'
+            - item: Automated accounting to help suppliers keep records of financial transactions.
+            - item: Connected payment gateway through open APIs.
+        - title: Retail software reporting and analytics features
+          description: The developed E-commerce reporting feature helps influencers to measure their ROI and make
+                       data-backed business decisions.
+          icon: features_5.png
+          elements:
+            - item: Helpful insights on sales and product details that reveal customers’ buying habits.
+            - item: Sales-by-product reports help vendors identify their best-selling products by season or time period.
+            - item: The financial summary report shows an overview of your sales, payments, liabilities, and gross
+                    profit data for the selected timeframe.
       button: See more projects
   blog:
     categories:
