@@ -1,7 +1,5 @@
 .about {
-  .info-container,
-  &__vision,
-  &__benefits { padding: 5vh 18vw 0; }
+  .info-container { padding: 5vh 18vw 0; }
 
   &__header,
   &__description {
@@ -45,7 +43,6 @@
   }
 
   &__crew {
-    padding: 5vh 18vw;
     background: center/cover no-repeat url('about/crew.jpeg');
 
     .about__description {
@@ -86,12 +83,8 @@
     &-button { background-color: $white !important; }
   }
 
-  &__benefits,
-  &__testimonials,
-  &__culture { padding: 10vh 18vw; }
-
   &__benefits {
-     background: left 100% / 100% 75% no-repeat url("about/benefits.svg");
+    background: left 100% / 100% 75% no-repeat url("about/benefits.svg");
 
     h2.header-2 { margin-top: 5vh; }
 
@@ -118,11 +111,12 @@
   }
 
   &__key-facts {
+    background: $main-gradient;
+
     h2.header-2 { margin-top: 5vh; }
 
     &-list {
       margin: 0;
-      padding: 5vh 0;
       list-style-type: none;
     }
 
@@ -158,11 +152,15 @@
 
   &__culture {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     background: center/cover no-repeat url('about/team.jpeg');
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100vh;
+    }
 
     &-text { line-height: 1.6; }
 
@@ -204,8 +202,8 @@
   }
 
   &__photo {
-    width: 75%;
-    margin-right: -15vw;
+    width: 85%;
+    margin-right: -20vw;
 
     img {
       width: 100%;
@@ -234,13 +232,6 @@
       margin: 4.5vh auto 3vh;
       max-width: 70vw;
     }
-
-    .info-container,
-    &__vision,
-    &__benefits,
-    &__crew,
-    &__testimonials,
-    &__culture { padding: 8vw; }
 
     .info-container:first-child { background: left 0%/250% 100% no-repeat url('about/about-bg-2.jpeg'); }
 
@@ -273,7 +264,10 @@
         margin-left: 3vw;
       }
 
-      &-list { padding-top: 0; }
+      &-list {
+        padding-top: 0;
+        padding-inline-start: 0;
+      }
 
       &-item {
         flex-wrap: wrap;
@@ -318,6 +312,40 @@
         font-size: .9em;
         line-height: 1.4;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .about {
+    &__benefits {
+      .accordion__item {
+        &-text { padding: 4vh 9vh 4vh; }
+
+        &-top { padding: 1em; }
+      }
+    }
+
+    &__key-facts {
+      &-item {
+        margin-bottom: 2vh;
+
+        &-img svg { width: 13vh; }
+
+        &-title { margin-bottom: 2vh; }
+      }
+
+      h2.header-2 {
+        margin-bottom: 3vh;
+        margin-top: 3vh;
+      }
+    }
+
+    &__culture {
+      min-height: 60vh;
+      max-height: 60vh;
+
+      .row { min-height: 60vh; }
     }
   }
 }

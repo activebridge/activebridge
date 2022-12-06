@@ -3,20 +3,6 @@ carouselLists = document.querySelectorAll('.carousel__list')
 touchstartX = touchstartY = touchendX = touchendY = 0;
 
 carouselLists.forEach (carousel) ->
-  carouselNext = carousel.parentElement.querySelector('.carousel__next')
-  carouselPrev = carousel.parentElement.querySelector('.carousel__prev')
-  if carouselPrev
-    carouselPrev.addEventListener 'click', (event) ->
-      event.preventDefault
-      el = carousel.querySelector("[data-index='-1']")
-      update el, carousel
-
-  if carouselNext
-    carouselNext.addEventListener 'click', (event) ->
-      event.preventDefault
-      el = carousel.querySelector("[data-index='1']")
-      update el, carousel
-
   carousel.addEventListener 'touchstart', ((event) ->
     touchstartX = event.touches[0].screenX
     touchstartY = event.touches[0].screenY

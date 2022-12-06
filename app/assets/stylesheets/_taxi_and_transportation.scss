@@ -59,6 +59,23 @@
   display: flex;
   justify-content: space-between;
   margin: 10vh 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: $purple-heart;
+  }
+
+  &::before {
+    top: -5em;
+    left: 5
+  }
+
+  &::after { top: -5vh; }
 
   &__item {
     max-width: 15%;
@@ -77,10 +94,11 @@
       border-radius: 50%;
       box-shadow: 0px 0px 12px 0px rgba($purple-heart, .15);
 
-      &::before {
+      &::before,
+      &::after {
         content: '';
         position: absolute;
-        width: 15vw;
+        width: 5vw;
         height: 2px;
         background: $purple-heart;
       }
@@ -95,9 +113,40 @@
 }
 
 @media screen and (max-width: 600px) {
-  .taxi_and_transportation {
-    &__main {
-      .header-2 { font-size: .9em; }
+  .horizontal_timeline {
+    margin: 7vh 0;
+    flex-wrap: wrap;
+
+    &::before {
+      top: -4vh;
+      left: 2.65em;
+    }
+
+    &::after {
+      bottom: -4vh;
+      left: 2.65em;
+    }
+
+    &__item {
+      max-width: 100%;
+      min-width: 100%;
+      flex-direction: row;
+
+      &:not(:last-child) { margin-bottom: 4vh; }
+
+      &_icon {
+        margin-right: 1.5em;
+
+        &::before,
+        &::after {
+          width: 2px;
+          height: 4vh;
+        }
+
+        &::before { top: -4vh; }
+
+        &::after { bottom: -4vh; }
+      }
     }
   }
 }

@@ -161,7 +161,8 @@
     &__cards {
       background-image: linear-gradient(to top, $buzok, $white);
 
-      .cards-container {
+      .cards-container,
+      .cards-container-2 {
         flex-wrap: wrap;
 
         .card {
@@ -206,7 +207,10 @@
 
       .header-2 { font-size: .9em; }
 
-      &__item .description { font-size: .85em; }
+      &__item .description {
+        font-size: .8em;
+        line-height: 1.5;
+      }
     }
 
     .cards-container-2 { justify-content: center; }

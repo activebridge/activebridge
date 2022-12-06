@@ -29,6 +29,9 @@
 @import 'solutions_cases';
 @import 'healthcare_hipaa';
 @import 'taxi_and_transportation';
+@import 'insurtech';
+@import 'marketplace';
+@import 'ecommerce';
 
 @keyframes display {
   0% {
@@ -203,7 +206,7 @@ body {
 
 .card {
   width: 25%;
-  height: 50vh;
+  // height: 50vh;
   min-width: 364px;
   max-width: 350px;
   padding: 6vh 3vw;
@@ -715,18 +718,25 @@ input#menu {
 }
 
 .desktop-only  {
-  @media (max-width: 601px){
+  @media (min-width: 601px){
     display: none!important;
   }
 }
 
 .mobile-only {
-  @media (min-width: 600px){
+  @media (max-width: 600px){
     display: none!important;
   }
 }
 
 .wrap { padding: 8vh 18vw; }
+
+.row {
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 @media (max-width: 600px) {
   .header-5 { font-size: 1em; }

@@ -11,6 +11,7 @@
     justify-content: center;
     width: 100%;
     height: 60vh;
+    max-height: 550px;
     padding-inline-start: 0;
   }
 
@@ -79,40 +80,6 @@
     -webkit-line-clamp: 7;
   }
 
-  &__prev,
-  &__next {
-    width: 25vh;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-
-    &::before {
-      content: '';
-      display: block;
-      border: solid $white;
-      border-width: 1px 1px 0 0;
-      position: absolute;
-      margin-top: auto;
-      margin-bottom: auto;
-      top: 0;
-      bottom: 0;
-      width: .5em;
-      height: .5em;
-    }
-  }
-
-  &__prev::before {
-    right: 0;
-    transform: rotate(-135deg);
-  }
-
-  &__next::before {
-    left: 0;
-    transform: rotate(45deg);
-  }
-
   .solutions,
   .services {
     &__title {
@@ -138,8 +105,6 @@
 
 @media (max-width: 600px) {
   .carousel {
-    &__prev, &__next{ display: none; }
-
     &__list {
       margin: 0;
       padding: 0;
@@ -171,5 +136,13 @@
         svg { width: 4vh; }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .carousel {
+    &__image { margin: 3vh; }
+
+    &__description { margin-bottom: 3vh; }
   }
 }

@@ -34,23 +34,7 @@
 
     .header-2 { margin-top: 1vh; }
 
-    table.technologies {
-      margin: 5vh 0;
-
-      tr td {
-        position: relative;
-        width: 16.6%;
-
-        svg { height: 8vh; }
-
-        .technology-name {
-          position: absolute;
-          left: 5px;
-          bottom: 0;
-          font-size: 0.7em;
-        }
-      }
-    }
+    svg { margin: 5vh 0; }
 
     .description { margin-bottom: 3vh; }
   }
@@ -247,12 +231,38 @@
   }
 
   .pie-chart {
-    height: 120px;
-    width: 120px;
+    position: relative;
+    height: 140px;
+    width: 140px;
     margin: auto;
     background: conic-gradient($sky-ua 0.00% 20.00%, $palianytsia 20.00% 50.00%, $kviten 50.00% 90.00%, $azovstal 90.00%);
     border-radius: 50%;
     box-shadow: $main-shadow;
+
+    span {
+      position: absolute;
+      font-size: .7em;
+
+      &.arcitect {
+        top: 18%;
+        right: 20%;
+      }
+
+      &.senior {
+        top: 60%;
+        right: 20%;
+      }
+
+      &.middle {
+        top: 55%;
+        left: 20%;
+      }
+
+      &.jumior {
+        top: 12%;
+        left: 31%;
+      }
+    }
   }
 }
 
@@ -329,6 +339,17 @@
         font-size: 0.9em;
         line-height: 1.8em;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .chart-container {
+    .chart-bar__item { padding: 2vh 1vw; }
+
+    .chart__item-color {
+      width: 65px;
+      height: 65px;
     }
   }
 }
