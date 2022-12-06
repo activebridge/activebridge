@@ -527,3 +527,74 @@ body {
     }
   }
 }
+
+@media (min-width: 1550px) {
+  .awards-img {
+    width: 10%;
+
+    a {
+      width: 100%;
+
+      img { margin: 10px; }
+    }
+  }
+
+  .home-page-container .description { max-width: 50vw; }
+
+  .index {
+    .header-2,
+    .header-5 { font-size: 1.8em; }
+
+    &-about-us__description,
+    .description { font-size: 1.2em; }
+
+    &-testimonials__header { padding: 0 17%; }
+
+    &-home {
+      .carousel__description {
+        margin-right: 3vh;
+        margin-left: 3vh;
+        -webkit-line-clamp: 7;
+      }
+
+      .description { padding: 0 15%; }
+    }
+
+    &-technologies {
+      .header-3 {
+        max-width: 45vw;
+        width: 100%;
+        margin: auto;
+
+        &:last-child { margin-top: 5vh; }
+      }
+
+      &__items {
+        .index-technologies__more .button {
+          margin-bottom: 6vh;
+        }
+      }
+    }
+
+    &-technologies__container .header-4 {
+      margin: 5vh 0 2.5vh 0;
+      padding: 0 15%;
+    }
+
+    table.technologies {
+      tr td svg { height: 3vh; }
+    }
+
+    &-services {
+      &__container { justify-content: space-around; }
+
+      .card {
+        max-width: 32%;
+        min-width: 32%;
+        padding: 3vh;
+      }
+    }
+  }
+
+  .info-container.index-home { padding-top: 8vh !important; }
+}
