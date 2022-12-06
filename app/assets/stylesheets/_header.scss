@@ -97,7 +97,7 @@ header.desktop-only { box-shadow: 2px 1px 12px 0px grey; }
   header {
     position: fixed;
     width: 100%;
-    background-color: transparent;
+    background-color: $white;
     box-shadow: none;
     z-index: 3;
 
@@ -108,7 +108,7 @@ header.desktop-only { box-shadow: 2px 1px 12px 0px grey; }
       width: 90vw;
       min-height: calc(100% + 60px);
       margin: 0;
-      padding: 6vw;
+      padding: 6vw 6vw 25vw;
       justify-content: space-between;
       background: $main-gradient;
       box-sizing: border-box;

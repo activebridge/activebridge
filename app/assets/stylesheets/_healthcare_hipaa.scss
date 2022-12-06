@@ -40,3 +40,9 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .healthcare_hipaa {
+    &__main { background: linear-gradient($sky-ua, rgba($sky-ua, 0.5), $white); }
+  }
+}
