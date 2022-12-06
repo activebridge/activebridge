@@ -35,17 +35,3 @@ scrollContainer.addEventListener 'click', ((event) ->
       behavior: "smooth"
     })
 )
-
-document.getElementById('trigger').addEventListener 'click', ((event) ->
-  triggerPosition = document.getElementById('trigger').getBoundingClientRect()
-  if triggerPosition.x < 0
-    container.scrollTo({
-      left: -500,
-      behavior: "smooth"
-    });
-  else
-    container.scrollTo({
-      left: 1000,
-      behavior: "smooth"
-    });
-)
