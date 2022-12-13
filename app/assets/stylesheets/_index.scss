@@ -522,7 +522,6 @@ body {
   }
 }
 
-
 @media (min-width: 1550px) {
   .awards-img {
     width: 10%;
@@ -581,10 +580,12 @@ body {
     }
 
     &-services {
+      &__container { justify-content: space-around; }
+
       .card {
         max-width: 32%;
         min-width: 32%;
-        justify-content: space-around;
+        padding: 3vh;
       }
     }
   }

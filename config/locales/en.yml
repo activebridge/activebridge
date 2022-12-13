@@ -38,6 +38,8 @@ en:
             link: /solutions/healthcare-hipaa-case
           - section: InsurTech/Cloud Software
             link: /solutions/insurtech-cloud-software-case
+          - section: B2C Marketplace/SaaS
+            link: /solutions/b2c-marketplase-saas-case
           - section: E-commerce/CRM
             link: /solutions/ecommerce-crm-platform-case
           - section: Travel/Logistic
@@ -138,6 +140,10 @@ en:
             title: InsurTech cloud software development solutions | Active Bridge
             description: Active Bridge team has 10 years of expertise in health insurance product development. We build
                          reliable, secure, scalable e-Billing management cloud-software
+          b2c-marketplase-saas-case:
+            title: B2B, B2C, C2C Marketplace Development Solutions | Active Bridge
+            description: For 9+ years we deliver scalable, robust, and success-oriented online marketplace software
+                         development solutions. Have a project idea? Let's talk
           ecommerce-crm-platform-case:
             title: Retails & eCommerce Development Solutions | Active Bridge
             description: We help you to reach your customers on the go with a cross-platform eCommerce app design and
@@ -271,6 +277,10 @@ en:
         title: InsurTech cloud software development solutions | Active Bridge
         description: Active Bridge team has 10 years of expertise in health insurance product development. We build
                      reliable, secure, scalable e-Billing management cloud-software
+      b2c-marketplase-saas-case:
+        title: B2B, B2C, C2C Marketplace Development Solutions | Active Bridge
+        description: For 9+ years we deliver scalable, robust, and success-oriented online marketplace software
+                     development solutions. Have a project idea? Let's talk
       ecommerce-crm-platform-case:
         title: Retails & eCommerce Development Solutions | Active Bridge
         description: We help you to reach your customers on the go with a cross-platform eCommerce app design and
@@ -759,6 +769,18 @@ en:
           "description": "Cloud-software project example of a workers compensation e-Billing management cloud-software",
           "datePublished": "2011-10-11"
         }'
+      b2c-marketplase-saas-case:
+        '{
+          "@context": "http://schema.org",
+          "@type": "ItemPage",
+          "name": "Online Marketplace. SaaS Project",
+          "author": "Active Bridge",
+          "contributor": "Upstack",
+          "significantLink": "activebridge.org/solutions/marketplase-saas-development-solutions",
+          "description": "Cloud software development project example of an online marketplace and data-center management
+                          software.",
+          "datePublished": "2017-10-12"
+        }'
       ecommerce-crm-platform-case:
         '{
           "@context": "http://schema.org",
@@ -875,9 +897,9 @@ en:
             - section: Healthcase
               link: /solutions/healthcare-hipaa-case
             - section: SaaS
-              link: /
+              link: /solutions/b2c-marketplase-saas-case
             - section: Marketplace
-              link: /
+              link: /solutions/b2c-marketplase-saas-case
             - section: E-commerce
               link: /solutions/ecommerce-crm-platform-case
             - section: Logistic / Travel
@@ -3290,6 +3312,149 @@ en:
           description: Processing vast amounts of sensitive information requires robust technological solutions, such as
                        the cloud. It has proven vital in InsurTech software development.
       button: See more projects
+  marketplace:
+    title:  Custom marketplace development solutions
+    description: <p>Active Bridge’s dedicated development teams have 5 years of experience in the development of different
+                 types of marketplaces that generate real value for sellers and buyers by providing them with tools for
+                 broad listing customization, efficient communication, order management, and statistical dashboards.</p>
+                 <p>We assist our clients in building successful, scalable, and high-quality  B2C, B2B, and C2C marketplace
+                 applications that users enjoy.</p>
+    some_features: Some Features
+    b2b:
+      title: B2B marketplace development
+      description: Our full-stack developers build B2B marketplaces. B2B wholesale platforms serve as a place connecting
+                   wholesale suppliers with bulk buyers in different industries.
+      all:
+        - icon: b2b_1.png
+          title: CRM development & integrations
+        - icon: b2b_2.png
+          title: Detailed vendor description
+        - icon: b2b_3.png
+          title: Advanced filtering
+        - icon: b2b_4.png
+          title: Payment provider integrations
+        - icon: b2b_5.png
+          title: Multi-currency support
+        - icon: b2b_6.png
+          title: Automated refund tools
+        - icon: b2b_7.png
+          title: Analytical dashboards
+        - icon: b2b_8.png
+          title: Maps with advanced filtering
+    b2c:
+      title: B2C marketplace development
+      description: We design and develop a B2C marketplace with outstanding UIs and wide functionality so that users
+                   can enjoy the easiest purchasing experience.
+      all:
+        - icon: b2c_1.png
+          title: Authentication and authorization
+        - icon: b2c_3.png
+          title: Secure payment gateway
+        - icon: b2c_4.png
+          title: Product listing
+        - icon: b2c_5.png
+          title: Order management
+        - icon: b2c_6.png
+          title: Booking system
+        - icon: b2c_2.png
+          title: Profile management (for sellers and buyers)
+        - icon: b2c_7.png
+          title: Shopping cart
+        - icon: b2c_8.png
+          title: Messaging via chat
+        - icon: b2c_9.png
+          title: Wishlist/favorites list
+        - icon: b2c_10.png
+          title: Feedback and reviews
+    help_title: How we can help with online marketplace app development
+    help:
+      - icon: process_1.png
+        title: Full-cycle assistance
+        description: of B2B, B2C marketplace development, from cloud hosting and UX/UI design, through app development and
+                     QA, to technical delivery, security compliance, maintenance, and support.
+      - icon: process_2.png
+        title: Rapid development
+        description: based on the agile practice that facilitates getting MVP in a short period of time and transforming
+                     it into a solid, scalable, and reliable product
+      - icon: process_3.png
+        title: Cross-platform solutions
+        description: of custom  custom online marketplace development based on wide experience in complying with industry and
+                     market regulations
+    case_study:
+      title: Case Study
+      subtitle: An online marketplace and data-center management software
+      top_info:
+        - item: "Contract type: <b>development team augmentation</b>"
+        - item: "Team size: <b>6</b>"
+        - item: "Period of collaboration: <b>2015 - ongoing</b>"
+        - item: "Client’s location: <b>New York, United States</b>"
+      bottom_info:
+        - title: "About the client:"
+          description: Upstack company acts as an intermediate between potential customers and suppliers of DC services around
+                       the United States, such as colocation, dedicated servers, cloud servers, managed hosting, IP transit,
+                       and other hosting services
+        - title: "Challenge:"
+          description: <p>The challenge was to build a platform that could service the data center marketplace that focuses on
+                       colocation and IP transit. This platform also had to cover other data center services such as wholesale
+                       space, dedicated servers, remote hands, internet exchanges, and more.</p><p>The vision of Upstack for
+                       the data center marketplace is for the web application to become the ultimate meeting place for providers
+                       and in-market buyers of data center services on a state scale, by processing as much data as possible
+                       and making it as easy as possible for the users to work with.</p>
+        - title: "Technologies:"
+          description: Ruby on Rails / React / Sidekiq / Puma / Devise / PostgreSQL / Heroku
+    solutions:
+      title: Solutions
+      description: <p>Our dedicated development team conducted a comprehensive analysis and came up with a solution that brings
+                   maximum personalization to the data-center management software and online marketplace.</p> <p>We’ve been
+                   building an application that combines key features of classic and contest marketplaces. The platform lets data
+                   center service providers and buyers get custom solutions by launching a complex search system.</p>
+      functionality: Extended functionality
+      all:
+        - title: Scalable architecture and maintainability of the application
+          description: We built a fully operational platform providing vendors access to a large network of sellers with
+                       their own audiences. This SaaS platform accommodates growth seamlessly and efficiently. The platform
+                       is scalable and processes huge user traffic without disrupting the end-users.
+          icon: solution_1.png
+          elements:
+            - item: Set up continuous integration and continuous delivery to extend the functionality of the existing
+                    data-center marketplace and make the platform more sustainable in the shortest time.
+            - item: Reduced the time required for testing.
+            - item: Extended existing platform functionality to boost customer growth.
+            - item: Redesigned the platform to promote brand awareness and attract more users.
+        - title: Convenient search and filters
+          description: Our dedicated team integrated a complex data-centers marketplace search that makes it possible to
+                       search using a variety of filters. The system makes the process of searching much more convenient
+                       and faster. Advanced filtering and search logic, based on multiple dynamically changed rules, perform
+                       the search for the objects of various types from the extending base of data-centers service providers.
+          icon: solution_2.png
+          elements:
+            - item: The search engine clarifies and analyzes a user’s requirements to identify the project goal and
+                    provides a result page with selected vendors.
+            - item: Integrated Google Maps so users can easily find nearby data-center service providers.
+            - item: When a user requests a configuration about companies, he can get a response in the form of comparative
+                    charts.
+            - item: The user gets to the price review page and sees all the price quotes sent to him by the selected
+                    companies. A user can sort them, build charts and modalities, and export data to CSV.
+        - title: Internal custom CRM system
+          description: Our team designed an internal custom CRM system to empower marketplace vendors and clients with the
+                       full-cycle order and data-center management tool that allows managing every step starting from the
+                       order submitting to the feedback and rating tweaks.
+          icon: solution_3.png
+          elements:
+            - item: Easy manageable, well-organized, separated mailing subsystem for sending email notifications.
+            - item: A functional vendor portal is where companies get and manage their requests. Companies see only their
+                    quotes and notifications.
+            - item: Users and vendors have access to a full-fledged digital analytics tool to get a detailed overview of
+                    their quotes, requests, data-centers marketplace SERP and data on earnings and expenses.
+        - title: Chatbots
+          description: Chatbots communicate with users via the Upstack marketplace interface. Staying always online,
+                       they provide customers with speedy solutions and answers.
+          icon: solution_4.png
+          elements:
+            - item: Offer customer support.
+            - item: Send users navigation and workflow recommendations.
+            - item: Completed searching process.
+      button: See more projects
   e-commerce:
     title: Custom e-commerce web development solutions
     description: <p>With more than 9 years of eCommerce development experience and extensive expertise in building online
@@ -3425,6 +3590,9 @@ en:
             - item: The financial summary report shows an overview of your sales, payments, liabilities, and gross
                     profit data for the selected timeframe.
       button: See more projects
+
+
+# ’
   blog:
     categories:
       web-development: Web Development
@@ -3445,91 +3613,91 @@ en:
       contact_us: Contact Us
       follow: Stay tuned
       copyright: '© 2018 Active Bridge, LLC'
-  how_we_work:
-    title: How we work
-    description:
-      Active Bridge provides senior-level developers to help companies augment
-      their in-house teams and scale up their development processes. Our talented developers
-      integrate seamlessly with your engineering team, giving you flexible staffing solutions
-      to meet your project’s needs. We offer solutions for multiple types of collaboration,
-      including team extensions, dedicated developer teams, and project-model contracts.
-      Whatever way you choose to engage our team, we always offer unrivaled customer support
-      to ensure your satisfaction.
-    models_title: Cooperation Models
-    get_dedicated: How to get dedicated developers in your in-house team
-    model_questions:
-      definition: 'Definition:'
-      for_who: Who is this model best for?
-      scope_of_work: How is the scope of work defined?
-      cost: How is the cost of work defined?
-      advantages: 'Customer Advantages:'
-    cooperation_models:
-      - title: Dedicated Team
-        logo: how_we_work/dedicated_team.svg
-        definition:
-          We provide a team of dedicated developers on a long-term basis in
-          accordance with your estimates. You may choose to manage the team from your side
-          or assign one of our Active Bridge project managers to the job..
-        for_who:
-          - Experienced managers that have a deep knowledge of the project field
-          - Mid-sized companies with clear future plans for the project
-          - Corporations with strong internal management capabilities
-        scope_of_work:
-          The scope of work will be laid out in the agreement based on your needs.
-          Usually, tasks are defined as user stories that can be determined during the development
-          process. Estimations are used as a guideline
-        cost:
-          Daily rates for hired developers are always agreed upon beforehand. At the end of each month,
-          we will send an invoice based on the agreed-upon rates and billable hours of the dedicated team.
-          Weekly reports are provided to ensure you and Active Bridge are always on the same page
-        advantages:
-          - Flexible budgets
-          - No additional overhead or tax burden required to bring on our developers in place of in-house staff
-          - No recruitment risks, or requirement to bring on extra management for expansion
-          - Clients completely control the development process
-      - title: Team Extension
-        logo: how_we_work/team_extension.svg
-        definition:
-          Our developers become an integrated part of your existing in-house development team for the duration
-          of the project. Our talented staff will immerse themselves in your project, adopt and maintain your
-          company culture, and make your team’s goals their own, ensuring a seamless integration.
-        for_who:
-          - Small and medium-sized businesses developing new modules or applications
-          - Companies with in-house teams in temporary need of a few extra coders
-          - Any business that already has a core development team
-        scope_of_work:
-          The scope of work will be laid out in the agreement based on your needs. Developers can be engaged
-          wither full or part-time and will fully integrate with your existing tracking systems.
-        cost: Developers are billed out at an hourly rate based on the stack and experience level required for the project.
-        advantages:
-          - Engage flexible, qualified, experienced help when needed for a limited time
-          - More cost-efficient than hiring full-time employees or bringing in local contractors
-          - No additional overhead or tax burden required to bring on our developers in place of in-house staff
-          - No requirement for HR managers or recruiters to engage in costly and time-consuming interviewing
-          - No added management requirement to handle new staffing
-      - title: Project Model
-        logo: how_we_work/project_model.svg
-        definition:
-          Under this model, we’ll provide the full-force of our development team to cost out and implement your project.
-        for_who:
-          - Start-ups without development teams
-          - Businesses with a clear idea of the end product they’re looking for, but without the in-house expertise or staff to implement it
-        scope_of_work:
-          The scope of work will be laid out in the agreement based on your needs. We’ll provide expert estimates on the resources and developer
-          experience levels required for the job.
-        cost:
-          Developers are billed out at hourly rates agreed upon beforehand. We’ll provide tracking statistics detailing billable hours and completed tasks.
-        advantages:
-          - No recruitment costs
-          - Fixed deadlines
-          - No additional management costs
-          - Clear understanding of project goals and expert implementation by our seasoned developers
-    awards:
-      title: Our awards
-      logo:
-        - mobile/awards/B2B_Companies_Ukraine_2018.png
-        - mobile/awards/DOU_2016.png
-        - mobile/awards/IT_Services_Arizona_2019.png
-        - mobile/awards/B2B_Companies_Arizona_2019.png
-        - mobile/awards/Developers_Arizona_2019.png
-        - mobile/awards/Ukraine_B2B_Companies_2019.png
+  # how_we_work:
+  #   title: How we work
+  #   description:
+  #     Active Bridge provides senior-level developers to help companies augment
+  #     their in-house teams and scale up their development processes. Our talented developers
+  #     integrate seamlessly with your engineering team, giving you flexible staffing solutions
+  #     to meet your project’s needs. We offer solutions for multiple types of collaboration,
+  #     including team extensions, dedicated developer teams, and project-model contracts.
+  #     Whatever way you choose to engage our team, we always offer unrivaled customer support
+  #     to ensure your satisfaction.
+  #   models_title: Cooperation Models
+  #   get_dedicated: How to get dedicated developers in your in-house team
+  #   model_questions:
+  #     definition: 'Definition:'
+  #     for_who: Who is this model best for?
+  #     scope_of_work: How is the scope of work defined?
+  #     cost: How is the cost of work defined?
+  #     advantages: 'Customer Advantages:'
+  #   cooperation_models:
+  #     - title: Dedicated Team
+  #       logo: how_we_work/dedicated_team.svg
+  #       definition:
+  #         We provide a team of dedicated developers on a long-term basis in
+  #         accordance with your estimates. You may choose to manage the team from your side
+  #         or assign one of our Active Bridge project managers to the job..
+  #       for_who:
+  #         - Experienced managers that have a deep knowledge of the project field
+  #         - Mid-sized companies with clear future plans for the project
+  #         - Corporations with strong internal management capabilities
+  #       scope_of_work:
+  #         The scope of work will be laid out in the agreement based on your needs.
+  #         Usually, tasks are defined as user stories that can be determined during the development
+  #         process. Estimations are used as a guideline
+  #       cost:
+  #         Daily rates for hired developers are always agreed upon beforehand. At the end of each month,
+  #         we will send an invoice based on the agreed-upon rates and billable hours of the dedicated team.
+  #         Weekly reports are provided to ensure you and Active Bridge are always on the same page
+  #       advantages:
+  #         - Flexible budgets
+  #         - No additional overhead or tax burden required to bring on our developers in place of in-house staff
+  #         - No recruitment risks, or requirement to bring on extra management for expansion
+  #         - Clients completely control the development process
+  #     - title: Team Extension
+  #       logo: how_we_work/team_extension.svg
+  #       definition:
+  #         Our developers become an integrated part of your existing in-house development team for the duration
+  #         of the project. Our talented staff will immerse themselves in your project, adopt and maintain your
+  #         company culture, and make your team’s goals their own, ensuring a seamless integration.
+  #       for_who:
+  #         - Small and medium-sized businesses developing new modules or applications
+  #         - Companies with in-house teams in temporary need of a few extra coders
+  #         - Any business that already has a core development team
+  #       scope_of_work:
+  #         The scope of work will be laid out in the agreement based on your needs. Developers can be engaged
+  #         wither full or part-time and will fully integrate with your existing tracking systems.
+  #       cost: Developers are billed out at an hourly rate based on the stack and experience level required for the project.
+  #       advantages:
+  #         - Engage flexible, qualified, experienced help when needed for a limited time
+  #         - More cost-efficient than hiring full-time employees or bringing in local contractors
+  #         - No additional overhead or tax burden required to bring on our developers in place of in-house staff
+  #         - No requirement for HR managers or recruiters to engage in costly and time-consuming interviewing
+  #         - No added management requirement to handle new staffing
+  #     - title: Project Model
+  #       logo: how_we_work/project_model.svg
+  #       definition:
+  #         Under this model, we’ll provide the full-force of our development team to cost out and implement your project.
+  #       for_who:
+  #         - Start-ups without development teams
+  #         - Businesses with a clear idea of the end product they’re looking for, but without the in-house expertise or staff to implement it
+  #       scope_of_work:
+  #         The scope of work will be laid out in the agreement based on your needs. We’ll provide expert estimates on the resources and developer
+  #         experience levels required for the job.
+  #       cost:
+  #         Developers are billed out at hourly rates agreed upon beforehand. We’ll provide tracking statistics detailing billable hours and completed tasks.
+  #       advantages:
+  #         - No recruitment costs
+  #         - Fixed deadlines
+  #         - No additional management costs
+  #         - Clear understanding of project goals and expert implementation by our seasoned developers
+  #   awards:
+  #     title: Our awards
+  #     logo:
+  #       - mobile/awards/B2B_Companies_Ukraine_2018.png
+  #       - mobile/awards/DOU_2016.png
+  #       - mobile/awards/IT_Services_Arizona_2019.png
+  #       - mobile/awards/B2B_Companies_Arizona_2019.png
+  #       - mobile/awards/Developers_Arizona_2019.png
+  #       - mobile/awards/Ukraine_B2B_Companies_2019.png
