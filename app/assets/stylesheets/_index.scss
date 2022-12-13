@@ -30,7 +30,6 @@ body {
 .home-page-container {
   position: relative;
   top: 50px;
-  width: 100%;
   min-height: 100vh;
   padding-bottom: 7em;
   background: center/cover no-repeat url('index/background.png');
@@ -76,9 +75,7 @@ body {
       animation-iteration-count: 1;
     }
 
-    img {
-      width: 90%;
-    }
+    img { width: 90%; }
   }
 }
 
@@ -96,20 +93,25 @@ body {
       background-image: linear-gradient(to bottom, #333, transparent, transparent, transparent);
       transform: rotate(2.1deg);
     }
+
+    .carousel__description {
+      margin-right: 6vh;
+      margin-left: 6vh;
+      -webkit-line-clamp: 9;
+    }
   }
 
   &-testimonials {
     &__header {
       margin-bottom: 5vh;
-      padding: 0 25%;
+      padding: 0 2vw;
       font-size: 1.7em;
     }
   }
 
   &-technologies {
-    padding: 1vh 20% 0 20%;
-
     &__container {
+      padding: 8vh 18vw 0;
       background: linear-gradient(135deg, $white, $main-lilac);
 
       .header-4  {
@@ -123,13 +125,13 @@ body {
       width: 100%;
       height: 100vh;
       margin-top: 4vh;
-      border-top: 1px solid rgba(0, 0, 0, 0.2);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
 
     &__photo {
       width: 50%;
       height: 100%;
+      right: 50%;
+      position: absolute;
 
       img {
         width: 100%;
@@ -156,6 +158,8 @@ body {
       padding: 5vw;
       overflow: hidden;
       background: linear-gradient(135deg, #EBDEF5, $main-lilac);
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
       table {
         width: 100%;
@@ -213,7 +217,7 @@ body {
         margin-left: -5vw;
         background: linear-gradient(to top, $main-lilac 34%, transparent 100%);
 
-        .button { margin: 0 3vw 3vh; }
+        .button { margin: 0 3vw 5vh; }
       }
 
       &::-webkit-scrollbar {
@@ -226,30 +230,33 @@ body {
       height: 40px;
     }
 
-    .header-3 {
-      margin-top: 12vh;
-    }
-
     .header-3:last-child {
       margin-top: 7vh;
     }
   }
 
   &-services {
-    padding: 10vh 0;
     background: $main-lilac;
 
     .header-3 { margin: 5vh; }
 
+    .header-5 {
+      max-width: 65%;
+      margin: 0 auto 4vh;
+
+    }
+
     &__container {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       margin: 5vh 0;
       flex-wrap: wrap;
     }
 
-    &__item {
-      margin: 0 2vw;
+    .card {
+      min-width: 40%;
+      max-width: 40%;
+      box-sizing: border-box;
 
       &-title {
         font-family: 'Inria Bold', serif;
@@ -322,17 +329,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .trigger {
-    position: absolute;
-    top: 6%;
-    left: 99%;
-    font-size: 1.5em;
-    color: white;
-    background: none;
-    border: none;
-    outline: none;
-    width: min-content;
-  }
+  .container.index { width: calc(100% + 10px); }
 
   .home-page-container {
     display: flex;
@@ -340,7 +337,6 @@ body {
     align-items: center;
     padding-bottom: 0;
     padding-top: 10vh;
-    top: 0;
 
     .index-header {
       margin: 0 0 1em .5em;
@@ -365,7 +361,7 @@ body {
     .awards-img {
       position: static;
       width: inherit;
-      max-width: 85%;
+      max-width: 100%;
       min-height: auto;
       margin-top: 4em;
       justify-content: center;
@@ -373,8 +369,12 @@ body {
       flex-direction: row;
       order: 4;
       transform: none;
+      justify-content: space-around;
 
-      a, .clutch-widget { width: 26%; }
+      a, .clutch-widget {
+        width: 26%;
+        margin-top: 1em;
+      }
     }
 
     .button { order: 5; }
@@ -392,13 +392,17 @@ body {
     }
 
     &-technologies {
-      padding: 1vh 5% 0 5%;
+      &__container { padding: 7vh 5vh; }
 
-      &__holder { height: 75vh; }
+      &__holder {
+        height: 75vh;
+        margin-top: 0;
+      }
 
       .header-3 {
-        margin-top: 8vh;
         line-height: 1.8;
+
+        &:last-child { margin-top: 4vh; }
       }
 
       .header-4 {
@@ -410,6 +414,7 @@ body {
       &__photo {
         position: relative;
         width: 100%;
+        right: 0;
       }
 
       &__items {
@@ -469,13 +474,6 @@ body {
     }
 
     &-services {
-      padding: 1vh 0 5vh;
-
-      .description {
-        text-align: justify;
-        text-align-last: center;
-      }
-
       &__container {
         margin-bottom: 0;
 
@@ -514,13 +512,9 @@ body {
     }
 
     &-about-us {
-      padding-right: 0;
-      padding-left: 0;
       background: left 0%/200% 100% no-repeat url('index/about_us_photo.jpg');
 
       &__description {
-        padding-right: 10vw;
-        padding-left: 10vw;
         font-size: 0.9em;
         line-height: 1.8em;
       }
