@@ -58,7 +58,10 @@
     width: 30%;
     margin: 5vh 5vh 3vh;
 
-    img { width: 100%; }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
   }
 
   &__logo {
@@ -101,6 +104,21 @@
       svg { width: 8vh; }
     }
   }
+
+  .testimonials-carousel {
+    .carousel__image { margin: 3vh 3vh 2vh; }
+
+    .carousel__logo {
+      img {
+        max-width: 80%;
+        height: 55px;
+      }
+
+      &.smaller_logo img { max-width: 60%; }
+
+      &.bigger_logo img { max-width: 100%; }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -135,6 +153,10 @@
 
         svg { width: 4vh; }
       }
+    }
+
+    .testimonials-carousel {
+      .carousel__logo img { height: 40px; }
     }
   }
 }

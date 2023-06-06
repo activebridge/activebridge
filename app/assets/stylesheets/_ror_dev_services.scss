@@ -27,7 +27,8 @@
   &__reasons {
     background: radial-gradient(circle, rgba($palianytsia, 1) 0%, rgba($white, 1) 60%);
     box-shadow: inset 0px 12px 15px -7px $moon_raker;
-    transition: all 1s ease-out;
+    // transition: all 1s ease-out;
+    // position: relative;
 
     .description { margin: 6vh 0; }
 
@@ -36,6 +37,8 @@
       flex-wrap: wrap;
       justify-content: space-between;
       transition: all 1s ease-out;
+      // position: relative;
+      // height: 100%;
 
       .extendable_card {
         // max-height: 0;
@@ -46,7 +49,21 @@
         border-radius: 30px;
         box-shadow: $main-shadow;
         box-sizing: border-box;
-        z-index: 0;
+        // z-index: 0;
+        height: fit-content;
+        left: 0;
+        // margin: auto;
+        overflow: hidden;
+        // position: fit-content;;
+        // right: 0;
+        // top: 0;
+        // height: 300px;
+        // left: 0;
+        // overflow: hidden;
+        // position: absolute;
+        // right: 0;
+        // top: 0;
+        transition: .3s cubic-bezier(.3, 0, 0, 1.3);
         // transition: all 1s ease-out;
 
         img {
@@ -73,9 +90,9 @@
         &:hover {
           background: $white;
           // z-index: 1;
-          transition: all 1s ease-out;
+          height: auto;
 
-          & > .description {
+          & .description {
             overflow: visible;
             -webkit-line-clamp: unset;
             height: auto;

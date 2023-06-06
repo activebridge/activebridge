@@ -22,15 +22,11 @@
     .row
       .about__description = t('about_us.crew.description')
       .header-3.white-text = t('about_us.crew.title')
-      .about__crew-container
-        - I18n.t('about_us.crew.all').each do |item|
-          .about__crew-item
-            .about__crew-item-photo = image_tag item[:image]
-            .about__crew-item-name = item[:name]
-            .about__crew-item-post = item[:post]
-      //= link_to t('about_us.crew.button'), page_path(:team), class: "button about__crew-button"
+      = render 'shared/crew'
+      //= link_to t('about_us.crew.button'), page_subitem_path(:team), class: "button about__crew-button"
 
   .about__benefits.wrap
+    .overlay
     .row
       .header-3 = t('about_us.benefits.title')
       h2.header-2 = t('about_us.benefits.subtitle')
@@ -63,16 +59,16 @@
       .header-5.about__testimonials-title = t('testimonials.help_startups')
       .description = t('testimonials.testimonials_description')
       .carousel
-        ul.carousel__list
+        ul.carousel__list.testimonials-carousel
           - I18n.t('testimonials.all').each_with_index do |t, index|
             li.carousel__item data-index="#{index-(I18n.t('testimonials.all').length / 2)}"
               .carousel__image
                 = image_tag t[:image]
-              .carousel__logo
+              .carousel__logo class="#{t[:class]}"
                 = image_tag t[:logo]
               .carousel__description
                 = t[:description]
-      a#read-testimonials.button href='' = t('testimonials.button')
+      = link_to t('testimonials.button'), page_path(:reviews), id: "about-read-testimonials", class: "button"
 
   .about__culture.wrap
     .row

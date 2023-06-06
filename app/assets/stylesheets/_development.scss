@@ -89,7 +89,11 @@
           height: 13vh;
           display: flex;
 
-          img { mix-blend-mode: luminosity; }
+          img {
+            mix-blend-mode: luminosity;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, .2), inset -2px -2px 12px rgba(0, 0, 0, .25);
+            border-radius: 50%;
+          }
         }
 
         &__title-2 { height: 75px; }
@@ -214,5 +218,12 @@
     }
 
     .cards-container-2 { justify-content: center; }
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .development__cards .cards-container-2 .card {
+    padding-right: 2vw;
+    padding-left: 2vw;
   }
 }

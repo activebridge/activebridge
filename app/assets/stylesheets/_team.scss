@@ -1,0 +1,309 @@
+.team {
+  .header-2 {
+    font-size: 1.25em;
+    max-width: 100%;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+  }
+
+  &__main {
+    background: center/cover no-repeat url('team/team-bg.jpg');
+    height: 75vh;
+  }
+
+  &__help {
+    padding: 3vh 18vw;
+    background-color: $sky-ua;
+    box-shadow: inset 0px 2px 20px 0px rgba(0, 0, 0, .1), 0px 0px 12px 0px rgba(0, 0, 0, .5);
+
+    .header-2 { margin: 0; }
+  }
+
+  &__people {
+    background-image: linear-gradient(to right, $sky-ua, $white);
+    box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
+
+    *::before,
+    *::after {
+      position: absolute;
+      content: '';
+      background: 100%/85% 65% no-repeat url('ror_development_services/diamond.png');
+      mix-blend-mode: luminosity;
+    }
+
+    .header-2 {
+      margin-bottom: 3vh;
+      position: relative;
+
+      &::before {
+        width: 47px;
+        height: 50px;
+        left: 6em;
+        top: -1em;
+        filter: blur(1px);
+        transform: rotate(-20deg);
+      }
+
+      &::after {
+        width: 70px;
+        height: 70px;
+        top: 1em;
+        right: -4em;
+        filter: blur(2px);
+        transform: rotate(45deg);
+      }
+    }
+
+    .header-3 {
+      position: relative;
+
+      &::before {
+        width: 100px;
+        height: 100px;
+        left: -4em;
+        top: 0.5em;
+        filter: blur(2px);
+        transform: rotate(-55deg);
+      }
+
+      &::after {
+        width: 47px;
+        height: 50px;
+        top: -1em;
+        right: 0;
+        transform: rotate(20deg);
+        filter: blur(1px);
+      }
+    }
+  }
+
+  &__crew {
+    background: center/cover no-repeat url('about/about-bg.jpeg');
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .25);
+  }
+
+  &__important_things {
+    background-image: linear-gradient(to right top, $palianytsia, transparent, transparent, $palianytsia);
+    box-shadow: 0px 0px 20px 0px rgba($purple-heart, .25);
+
+    .header-2 { margin: 0 0 7vh; }
+
+    .list-with-images.horizontal {
+      .list-with-images__item {
+        margin-top: 2.5vh;
+        align-items: center;
+
+        .header-2 { margin: 2.5vh 0;}
+
+        .description {
+          max-width: 15em;
+          width: 100%;
+        }
+
+        &:nth-child(-n+2) {
+          max-width: 37%;
+          width: 37%;
+        }
+
+        &:first-child { margin-left: 13%; }
+
+        &:nth-child(2) { margin-right: 13%; }
+      }
+    }
+  }
+
+  &__photo {
+    height: 80vh;
+    background: center/cover no-repeat url('team/team.jpg');
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .25);
+  }
+
+  &__expertise {
+    background-image: linear-gradient(to bottom, $kviten, $white, $white);
+
+    .button { margin-top: 3.5em; }
+
+    .header-2 { margin-top: 0; }
+  }
+
+  &__expertise.development__cards .cards-container-2 {
+    justify-content: space-around;
+  }
+}
+
+
+@media screen and (min-width: 1550px) {
+  .team {
+    .header-2 {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    &__main { height: 45vh; }
+
+    &__help .header-2 { margin: 0; }
+
+    &__people {
+      .header-2 {
+        margin-bottom: 3vh;
+
+        &::after {
+          width: 95px;
+          height: 95px;
+          right: 2em;
+        }
+
+        &::before {
+          width: 65px;
+          height: 68px;
+          left: 13em;
+        }
+      }
+
+      .header-3 {
+        &::before {
+          width: 120px;
+          height: 120px;
+          left: 0em;
+        }
+
+        &::after {
+          width: 65px;
+          height: 68px;
+          right: 4em;
+        }
+      }
+    }
+
+    &__important_things {
+
+      .header-2 {
+        margin: 0 0 9vh;
+      }
+      .list-with-images.horizontal .list-with-images__item {
+        margin-top: .5vh;
+
+        .header-2 { margin: 1.5vh 0 2vh;}
+      }
+    }
+
+    &__expertise.development__cards {
+      .header-2 {
+        margin-top: 0;
+        margin-bottom: 2vh;
+      }
+
+      .cards-container-2 {
+        justify-content: space-around;
+        margin-right: 7vh;
+        margin-left: 7vh;
+
+
+         .card {
+           max-width: 35%;
+           min-width: 35%;
+
+           &__icon img { max-width: 110px; }
+         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team {
+    .header-2 {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      font-size: 0.85em;
+      line-height: 1.5;
+    }
+
+    &__main {
+      height: 550px;
+      background-position: 55% top;
+      background-size: 250% 115%;
+
+      .description { line-height: 1.5; }
+    }
+
+    &__help {
+      padding-right: 12vw;
+      padding-left: 12vw;
+
+      .header-2 { margin: 0; }
+    }
+
+    &__people {
+      .header-3 {
+        margin-bottom: 0;
+
+        &::before,
+        &::after { display: none; }
+      }
+
+      .header-2 {
+        &::before {
+          width: 35px;
+          height: 33px;
+          left: -1em;
+          top: -2.5em;
+        }
+
+        &::after {
+          width: 55px;
+          height: 55px;
+          top: -2em;
+          right: -1em;
+          filter: blur(1px);
+          transform: rotate(30deg);
+        }
+      }
+    }
+
+    &__important_things {
+      .header-2 { margin-top: 3vh; }
+
+      .list-with-images.horizontal {
+        .list-with-images__item {
+          &:first-child { margin-left: 0; }
+
+          &:nth-child(2) { margin-right: 0; }
+
+          &:nth-child(-n+2) {
+            max-width: 100%;
+            width: 100%;
+          }
+
+          &:last-child { margin-bottom: 0; }
+
+          .header-2 { margin-bottom: 1vh; }
+
+          .description { max-width: 100%; }
+        }
+      }
+    }
+
+    &__photo { height: 190px; }
+
+    &__expertise {
+      .header-2 { margin-top: 0; }
+
+      .button {
+        padding-right: 10vw;
+        padding-left: 10vw;
+      }
+    }
+
+    &__expertise.development__cards .cards-container-2 {
+      .card__description { font-size: .8em; }
+
+      .card__title-2 { font-size: 1em; }
+
+      .card__icon {
+        height: 100px;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

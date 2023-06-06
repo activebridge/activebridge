@@ -99,6 +99,8 @@ body {
       margin-left: 6vh;
       -webkit-line-clamp: 9;
     }
+
+    .button { margin-top: 5em; }
   }
 
   &-testimonials {
@@ -248,7 +250,7 @@ body {
 
     &__container {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin: 5vh 0;
       flex-wrap: wrap;
     }
@@ -258,20 +260,20 @@ body {
       max-width: 40%;
       box-sizing: border-box;
 
-      &-title {
+      &__title-2 {
         font-family: 'Inria Bold', serif;
-        font-size: 1.6em;
+        font-size: 1.4em;
         color: #5723B5;
-        line-height: 1.6em;
+        line-height: 1.4em;
       }
 
-      &-description {
-        margin: 4vh;
+      &__description {
         display: -webkit-box;
         -webkit-line-clamp: 8;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-size: 1em;
       }
     }
 
@@ -291,6 +293,8 @@ body {
       text-align: justify;
       color: $white;
     }
+
+    .button { margin-top: 3em; }
   }
 
   &-solutions {
@@ -306,14 +310,38 @@ body {
     .button { margin-bottom: 5vh; }
 
     .description { margin-top: 5vh; }
-  }
-}
 
-.index-services {
-  &__item-description {
-    font-size: 1.2em;
-    line-height: 1.8em;
-    margin-top: 3vh;
+    .carousel {
+      padding-bottom: 6vh;
+
+      &__list {
+        height: 50vh;
+        max-height: 450px;
+      }
+
+      &__item {
+        max-width: 350px;
+        height: 50vh;
+        max-height: 420px;
+      }
+
+      &__description {
+        margin-right: 5vh;
+        margin-left: 5vh;
+      }
+
+      .solutions__logo {
+        width: 11vh;
+        height: 13vh;
+        margin-bottom: 0;
+        box-shadow: none;
+
+        img {
+          height: 11vh;
+          max-width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -329,7 +357,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .container.index { width: calc(100% + 10px); }
+  .info-container.index-home { padding-top: 10vh; }
 
   .home-page-container {
     display: flex;
@@ -389,6 +417,18 @@ body {
         text-align: justify;
         text-align-last: center;
       }
+
+      .carousel {
+        &__list { height: 45vh; }
+
+        &__description {
+          margin-right: 5vw;
+          margin-left: 5vw;
+          -webkit-line-clamp: 7;
+        }
+      }
+
+      .button { margin-top: 3em; }
     }
 
     &-technologies {
@@ -412,9 +452,9 @@ body {
       }
 
       &__photo {
-        position: relative;
         width: 100%;
         right: 0;
+        height: 70vh;
       }
 
       &__items {
@@ -475,21 +515,17 @@ body {
 
     &-services {
       &__container {
-        margin-bottom: 0;
+        margin: 0;
 
         .card {
           min-width: 300px;
           height: auto;
           margin: 0 10vw;
-          padding: 4vh 2vw;
+          padding: 5vh 10vw;
 
           &:not(:last-child) { margin-bottom: 5vh; }
 
-          &__title-2 {
-            font-size: 1.2em;
-            padding-right: 7vw;
-            padding-left: 7vw;
-          }
+          &__title-2 {font-size: 1.2em; }
 
           &__description {
             font-size: 0.9em;
@@ -498,25 +534,56 @@ body {
         }
       }
 
-      &__button { width: 100%; }
+      &__button {
+        width: 85%;
+        margin-top: 7vh;
+      }
 
     }
 
     &-solutions {
       padding: 1vh 5% 0 5%;
 
+      .header-2 { margin-top: 0; }
+
       .description {
         text-align: justify;
         text-align-last: center;
       }
+
+      .carousel {
+        &__list { height: 40vh; }
+
+        &__item { height: 40vh; }
+
+        &__description { margin: 1vh 3vh 3vh; }
+
+        .solutions__logo {
+          height: 10vh;
+
+          img { height: 8vh; }
+        }
+      }
+
+      .button { margin-bottom: 0; }
     }
 
     &-about-us {
-      background: left 0%/200% 100% no-repeat url('index/about_us_photo.jpg');
-
       &__description {
         font-size: 0.9em;
         line-height: 1.8em;
+      }
+    }
+
+    &-about-us-info {
+      background: center/cover no-repeat url('index/about_us_photo_mob.png');
+
+      .row { padding: 7vh 5vh; }
+
+      .button  {
+        background: $main-gradient;
+        border-color: transparent;
+        box-shadow: inset 2px 7px 10px -5px #9c64d2, inset -4px -5px 16px #4c2b84;
       }
     }
   }
@@ -586,6 +653,24 @@ body {
         max-width: 32%;
         min-width: 32%;
         padding: 3vh;
+      }
+    }
+
+    &-solutions {
+      .carousel {
+        padding-bottom: 6vh;
+
+        .solutions__logo {
+          width: 8vh;
+          height: 9vh;
+
+          img { height: 7vh; }
+        }
+
+        &__description {
+          margin-right: 3em;
+          margin-left: 3em;
+        }
       }
     }
   }

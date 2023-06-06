@@ -70,11 +70,6 @@ en:
         title: IT Staffing Firm, Remote Development Teams | Active Bridge
         description: We are a contract development agency specializing in providing on-demand
                      full-stack engineers to help our clients and augment their in-house teams.
-      how-we-work:
-        title: Staff Augmentation Services, Developers on Demand | Active Bridge
-        description:
-          Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale
-          your in-house team with our technical talents
       services:
         title: Web and Mobile Application Development Services || Active Bridge,LLC
         description:
@@ -101,21 +96,16 @@ en:
             title: Full-Stack Web Application Development | Active Bridge
             description: Our neatly organized web project development process allows us to deliver scalable reliable
                          applications faster.  Developers’ expertise is our main asset.
-      portfolio:
-        title: Ruby on Rails Project Examples || Active Bridge
-        description:
-          Active Bridge is a successful provider of Ruby on Rails development services on the US market.
-          All our ruby on rails projects examples see here
       team:
-        title: Full-stack Web Developers on demand | Active Bridge
-        description:
-          Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
-          mobile developers for your in-house teams. Learn more
+        title: Our Team of Professional Rails Developers | Active Bridge
+        description: Our remote full-stack developers drive our clients through the whole process of building,
+                     launching, and scaling their solutions. Contact us to see how we can help
       contact:
         title: Contact us to Get Free Project Consultation | Active Bridge
         description: Got an amazing project idea? Contact us and get a tech consultation from an experienced full-stack
                      solution specialist
       expertise:
+        title: RoR App Development & Cloud Software Expertise | Active Bridge
         description: Enhancing Ruby on Rails with cutting edge technologies, for 9+ years we've been providing web
                      development solutions that help businesses succeed.
       reviews:
@@ -229,6 +219,10 @@ en:
         title: IT Staffing Firm, Remote Development Teams | Active Bridge
         description: We are a contract development agency specializing in providing on-demand full-stack engineers to
                      help our clients and augment their in-house teams.
+      team:
+        title: Our Team of Professional Rails Developers | Active Bridge
+        description: Our remote full-stack developers drive our clients through the whole process of building,
+                     launching, and scaling their solutions. Contact us to see how we can help
       reviews:
         title: Check out What Clients Say About Active Bridge's Solutions
         description: Our clients stay with us, they value our professionalism, high-quality code, competitive rates,
@@ -332,24 +326,6 @@ en:
               "https://activebridge.org/contact"]
           }
         ]'
-      how-we-work:
-        '{
-          "@context": "http://schema.org",
-          "@type": "WebPage",
-          "name": "Active Bridge How We Work",
-          "url": "https://activebridge.org/how-we-work",
-          "mainContentOfPage": "Active Bridge provides senior-level developers to help companies augment
-            their in-house teams and scale up their development processes. Our talented developers integrate
-            seamlessly with your engineering team, giving you flexible staffing solutions to meet your project’s needs.
-            We offer solutions for multiple types of collaboration, including team extensions, dedicated developer teams,
-            and project-model contracts. Whatever way you choose to engage our team, we always offer unrivaled customer
-            support to ensure your satisfaction.",
-          "relatedLink": ["https://activebridge.org/",
-            "https://activebridge.org/services",
-            "https://activebridge.org/portfolio",
-            "https://activebridge.org/team",
-            "https://activebridge.org/contact"]
-        }'
       services:
         '[
           {
@@ -380,32 +356,29 @@ en:
             "areaServed": ["US", "CA"]
           }
          ]'
-      portfolio:
-        '{
-          "@context": "http://schema.org",
-          "@type": "WebPage",
-          "name": "Active Bridge Portfolio",
-          "url": "https://activebridge.org/portfolio",
-          "mainContentOfPage": "Active Bridge is a successful provider of Ruby on Rails development services on the US market.
-            All our ruby on rails projects examples see here",
-          "relatedLink": ["https://activebridge.org/",
-             "https://activebridge.org/services",
-             "https://activebridge.org/team",
-             "https://activebridge.org/how-we-work"]
-        }'
       team:
         '{
           "@context": "http://schema.org",
           "@type": "WebPage",
-          "name": "Active Bridge Team",
-          "url": "https://activebridge.org/team",
-          "mainContentOfPage": "Located in Ukraine Active Bridge company successfully provides dedicated full-stack
-            engineers, mobile developers for your in-house teams. Learn more",
-          "relatedLink": ["https://activebridge.org/",
-            "https://activebridge.org/services",
-            "https://activebridge.org/portfolio",
-            "https://activebridge.org/how-we-work",
-            "https://activebridge.org/contact"]
+          "name": "About Active Bridge Team",
+          "description": "The team of Ruby on Rails developers with 8+ years of remote development
+                          experience for enterprise organizations and applications for startups.",
+          "about": {
+              "@type": "LocalBusiness",
+              "name": "Active Bridge",
+              "image": "https://imgur.com/SUEWchJ",
+              "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "3506 North 24th Street",
+              "addressLocality": "Phoenix",
+              "addressRegion": "AZ",
+              "postalCode": " 85016",
+              "addressCountry": "US"
+            },
+            "url": "activebridge.org/about/team",
+            "telephone": "+18888053503",
+            "email": "contact@active-bridge.com"
+          }
         }'
       contact:
         '{
@@ -840,7 +813,7 @@ en:
                           unstoppable drive to provide effective web solutions for our clients. Since then, we’ve successfully assisted
                           our clients in developing and maintaining websites and web-based systems, mobile applications, and software products.
     about_us_items:
-      - logo: index/about-us-8.svg
+      - logo: index/about-us-9+.svg
         text: years of remote development
       - logo: index/about-us-10+.svg
         text: years of Ruby on Rails experience
@@ -856,15 +829,15 @@ en:
                      overcome technological business challenges, and gain higher operational efficiency.
     view_all_solutions: View all solutions
     solutions:
-      - logo: caduceus.svg
+      - logo: healthcare.png
         title: Healthcare & HIPPA HealthTech
         description: Active Bridge provides end-to-end custom <div class="blue-text">web development solutions</div> for non-financial
                      businesses, fintech organizations, and banks.
-      - logo: bank.svg
+      - logo: bank.png
         title: Finance & Banking
         description: 'Active Bridge provides end-to-end <div class="blue-text">custom web development solutions</div> for non-financial
                       businesses, fintech organizations, and banks.'
-      - logo: health-insurance.svg
+      - logo: insurtech.png
         title: InsurTech
         description: Active Bridge’s industry-specific <div class="blue-text">Ruby on Rails development solutions</div> are powered
                      by expertise gained during 10 years of providing programming services for insurance companies.
@@ -1577,7 +1550,7 @@ en:
       devs_work_on: What our developers worked on
       all:
         - title: InsurTech
-          icon: 'index/solutions/health-insurance'
+          icon: 'index/solutions/insurtech'
           items:
             - Cloud-based data storage
             - Customizable dashboards
@@ -1596,7 +1569,7 @@ en:
             - Tools for reporting and analytics
             - Customizable dashboards
         - title: Healthcare
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/healthcare'
           items:
             - Cloud-based data storage
             - HIPAA-compliant secure messaging, forms, and mobile Rx orders
@@ -1604,7 +1577,7 @@ en:
             - Integrations
             - Multi-device synchronization
         - title: Logistic & Transportation
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/logistic'
           items:
             - Live status tracking
             - A CRM system
@@ -1614,7 +1587,7 @@ en:
             - Route optimization systems
             - Reporting & Analytics tools
         - title: E-commerce & Marketplaces
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/e-commerce'
           items:
             - Cloud-based data storage
             - CRM development & integrations
@@ -1625,7 +1598,7 @@ en:
             - Payment processors
             - Rating & review APIs
         - title: EdTech
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/edtech'
           items:
             - Cloud-based data storage
             - Data migration
@@ -1634,7 +1607,7 @@ en:
             - Payment and billing
             - Video streaming
         - title: FoodTech
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/edtech'
           items:
             - Delivery tracking
             - Scheduling tools
@@ -1680,16 +1653,16 @@ en:
       description: We offer our expertise in developing custom applications and cloud-based platforms for startups and SMB
       all:
         - title: HealthTech HIPPA Solution
-          image: caduceus.svg
+          image: healthcare.png
           description: a leading American <div class="blue-text">HIPAA-compliant encryption platform</div> protecting patients, healthcare
                        providers, prescribers, pharmacists, and vendors by securing clinical communications and electronic patient health
                        information (ePHI).
         - title: Insuretech SaaS platform
-          image: health-insurance.svg
+          image: insurtech.png
           description: a mission-focused company serving healthcare service providers to digitally manage and dispatch <div class="blue-text">workers’
                        compensation bills</div> to employers.
         - title: E-commerce platform with CRM features
-          image: bank.svg
+          image: e-commerce.png
           description: an innovative company advocating sustainable consumption connecting influencers designing sustainable activewear, suppliers and
                        factories sewing clothes with the end consumer.
       button: Check out our solutions
@@ -1718,6 +1691,7 @@ en:
           They are very experienced running software projects, but equally proficient in adapting to our internal processes.
           We consider the engineers assigned to our company a core part of the team.
           Thanks guys!
+        class: normal_logo
       - company: Def Method
         specialization: Technology company
         logo: portfolio/projects/def_method.svg
@@ -1729,6 +1703,7 @@ en:
           Collaborating with their engineers has kept us delivering running,
           tested features in an Agile fashion across multiple countries and time zones.
           Their commitment to quality and efficiency is outstanding.
+        class: bigger_logo
       - company: Modean Apps
         specialization: IT / Tech company
         logo: portfolio/projects/modean_apps.svg
@@ -1737,6 +1712,7 @@ en:
         post: Software Developer
         description:
           Awesome team. Full stack development. Happy to work with these guys any day.
+        class: smaller_logo
       - company: Preeline
         specialization: E-commerce company
         logo: portfolio/projects/preeline.svg
@@ -1749,6 +1725,7 @@ en:
           asking probing questions and suggesting added features that we had not thought about.
           Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
           We feel so incredibly lucky to be working with them
+        class: smaller_logo
       - company: Freestak
         specialization: Marketing company
         logo: portfolio/projects/freestak.svg
@@ -1764,6 +1741,7 @@ en:
           which we really appreciate as we don’t have an in-house technical team.
           After the active development phase, we’ve retained Active Bridge for the ongoing development and maintenance
           of our platform and I couldn’t recommend them enough.
+        class: normal_logo
       - company: LifeLinker Inc
         specialization: Healthcare / IT company
         logo: portfolio/projects/life_linker.svg
@@ -1777,6 +1755,7 @@ en:
           and deliver more code per dollar than the three times less expensive people.
           There’s no better source for best quality, best practice and best value development services than
           Active-Bridge. We’re delighted and most appreciative. Thank you.
+        class: bigger_logo
       - company: My School Ed
         specialization: Tech Company
         logo: portfolio/projects/myschool.svg
@@ -1787,6 +1766,7 @@ en:
           If anyone needs a kickass website company, these are your guys! I have used many other companies with nothing
           but issues and have nothing but good results from Eugene and Active Bridge. You will not find a better company
           period.
+        class: normal_logo
     tell-us:
       title: We are grateful for their appreciation and always try to meet and exceed the clients’ expectations.
       description: Customer satisfaction not only impacts Active Bridge’s bottom line but also impacts team morale and
@@ -3590,9 +3570,53 @@ en:
             - item: The financial summary report shows an overview of your sales, payments, liabilities, and gross
                     profit data for the selected timeframe.
       button: See more projects
-
-
-# ’
+  team:
+    title: It is all about people you work with
+    subtitle_1: Our success is not only due to the quality of our work; it's down to the people working at Active Bridge,
+                our approach to collaboration, and the way we treat our clients.
+    description: At Active Bridge, we consider it’s vitally important that our team members feel they have a stake in the
+                 company’s success and that their opinions and viewpoints matter. We view our team as indispensable, and
+                 we take the time to discover what’s most important to them and to include those needs in the shaping of
+                 the company’s future.
+    subtitle_2: We are here to help you to make an impact through technology.
+    ab_people:
+      title: Who are Active Bridge people
+      subtitle: The team of Ruby on Rails developers
+      description: with 9+ years of remote development experience for enterprise organizations and applications for
+                   startups.
+    important_things:
+      title: We’re working as remote dedicated teams, but always try to keep important things first
+      items:
+        - icon: important_thing_1.png
+          title: Passion for ror engineering
+          description: Ruby on Rails and add-ones technologies
+        - icon: important_thing_2.png
+          title: Challenging projects
+          description: Projects where it's worth a brainstorming session
+        - icon: important_thing_3.png
+          title: Friendship and trust
+          description: Ping-pong and outdoor teambuildings
+        - icon: important_thing_4.png
+          title: Education and growth
+          description: Mentorship and training courses
+        - icon: important_thing_5.png
+          title: Community support
+          description: Conferences and open source contribution
+    expertise:
+      title: Build a great product with our Ruby on Rails expertise
+      description: We are ready to take over the implementation of your idea starting with project designing over
+                   development and testing up to product launch and beyond
+      items:
+        - title: Custom Ruby on Rails development services
+          icon: service_2.png
+          description: We come to you with 9+ years of Ruby on Rails experience. Ruby is a dynamic, interpretable,
+                       high-level programming language. Rails is a framework created for rapid web application development
+                       and deployment. We’re able to create websites of any complexity.
+        - title: Mobile application development services
+          icon: service_3.png
+          description: We provide cross-platform mobile application development services so you can reach your customers
+                       on their favorite devices.
+      button: See our services
   blog:
     categories:
       web-development: Web Development
@@ -3613,91 +3637,3 @@ en:
       contact_us: Contact Us
       follow: Stay tuned
       copyright: '© 2018 Active Bridge, LLC'
-  # how_we_work:
-  #   title: How we work
-  #   description:
-  #     Active Bridge provides senior-level developers to help companies augment
-  #     their in-house teams and scale up their development processes. Our talented developers
-  #     integrate seamlessly with your engineering team, giving you flexible staffing solutions
-  #     to meet your project’s needs. We offer solutions for multiple types of collaboration,
-  #     including team extensions, dedicated developer teams, and project-model contracts.
-  #     Whatever way you choose to engage our team, we always offer unrivaled customer support
-  #     to ensure your satisfaction.
-  #   models_title: Cooperation Models
-  #   get_dedicated: How to get dedicated developers in your in-house team
-  #   model_questions:
-  #     definition: 'Definition:'
-  #     for_who: Who is this model best for?
-  #     scope_of_work: How is the scope of work defined?
-  #     cost: How is the cost of work defined?
-  #     advantages: 'Customer Advantages:'
-  #   cooperation_models:
-  #     - title: Dedicated Team
-  #       logo: how_we_work/dedicated_team.svg
-  #       definition:
-  #         We provide a team of dedicated developers on a long-term basis in
-  #         accordance with your estimates. You may choose to manage the team from your side
-  #         or assign one of our Active Bridge project managers to the job..
-  #       for_who:
-  #         - Experienced managers that have a deep knowledge of the project field
-  #         - Mid-sized companies with clear future plans for the project
-  #         - Corporations with strong internal management capabilities
-  #       scope_of_work:
-  #         The scope of work will be laid out in the agreement based on your needs.
-  #         Usually, tasks are defined as user stories that can be determined during the development
-  #         process. Estimations are used as a guideline
-  #       cost:
-  #         Daily rates for hired developers are always agreed upon beforehand. At the end of each month,
-  #         we will send an invoice based on the agreed-upon rates and billable hours of the dedicated team.
-  #         Weekly reports are provided to ensure you and Active Bridge are always on the same page
-  #       advantages:
-  #         - Flexible budgets
-  #         - No additional overhead or tax burden required to bring on our developers in place of in-house staff
-  #         - No recruitment risks, or requirement to bring on extra management for expansion
-  #         - Clients completely control the development process
-  #     - title: Team Extension
-  #       logo: how_we_work/team_extension.svg
-  #       definition:
-  #         Our developers become an integrated part of your existing in-house development team for the duration
-  #         of the project. Our talented staff will immerse themselves in your project, adopt and maintain your
-  #         company culture, and make your team’s goals their own, ensuring a seamless integration.
-  #       for_who:
-  #         - Small and medium-sized businesses developing new modules or applications
-  #         - Companies with in-house teams in temporary need of a few extra coders
-  #         - Any business that already has a core development team
-  #       scope_of_work:
-  #         The scope of work will be laid out in the agreement based on your needs. Developers can be engaged
-  #         wither full or part-time and will fully integrate with your existing tracking systems.
-  #       cost: Developers are billed out at an hourly rate based on the stack and experience level required for the project.
-  #       advantages:
-  #         - Engage flexible, qualified, experienced help when needed for a limited time
-  #         - More cost-efficient than hiring full-time employees or bringing in local contractors
-  #         - No additional overhead or tax burden required to bring on our developers in place of in-house staff
-  #         - No requirement for HR managers or recruiters to engage in costly and time-consuming interviewing
-  #         - No added management requirement to handle new staffing
-  #     - title: Project Model
-  #       logo: how_we_work/project_model.svg
-  #       definition:
-  #         Under this model, we’ll provide the full-force of our development team to cost out and implement your project.
-  #       for_who:
-  #         - Start-ups without development teams
-  #         - Businesses with a clear idea of the end product they’re looking for, but without the in-house expertise or staff to implement it
-  #       scope_of_work:
-  #         The scope of work will be laid out in the agreement based on your needs. We’ll provide expert estimates on the resources and developer
-  #         experience levels required for the job.
-  #       cost:
-  #         Developers are billed out at hourly rates agreed upon beforehand. We’ll provide tracking statistics detailing billable hours and completed tasks.
-  #       advantages:
-  #         - No recruitment costs
-  #         - Fixed deadlines
-  #         - No additional management costs
-  #         - Clear understanding of project goals and expert implementation by our seasoned developers
-  #   awards:
-  #     title: Our awards
-  #     logo:
-  #       - mobile/awards/B2B_Companies_Ukraine_2018.png
-  #       - mobile/awards/DOU_2016.png
-  #       - mobile/awards/IT_Services_Arizona_2019.png
-  #       - mobile/awards/B2B_Companies_Arizona_2019.png
-  #       - mobile/awards/Developers_Arizona_2019.png
-  #       - mobile/awards/Ukraine_B2B_Companies_2019.png

@@ -32,6 +32,8 @@
 @import 'insurtech';
 @import 'marketplace';
 @import 'ecommerce';
+@import 'team';
+@import 'crew';
 
 @keyframes display {
   0% {
@@ -161,14 +163,14 @@ body {
   background: transparent;
   box-shadow: $main-shadow;
   transition: all .3s ease;
-  border: 1px solid rgba(grey, .5);
+  border: 1px solid rgba(black, .1);
   position: relative;
 
   &:hover {
     box-shadow: $violet-hover-shadow;
     background: linear-gradient($white, $white) padding-box,
                 linear-gradient(to right, $main-violet, $main-blue) border-box;
-    border: 1px solid rgba(grey, .5);
+    border: 1px solid rgba(black, .1);
   }
 
   &:active {
@@ -206,7 +208,6 @@ body {
 
 .card {
   width: 25%;
-  // height: 50vh;
   min-width: 364px;
   max-width: 350px;
   padding: 6vh 3vw;
@@ -766,4 +767,11 @@ input#menu {
   .description.with-padding { padding: 0 8%; }
 
   .wrap { padding: 7vh 5vh; }
+}
+
+@media (max-width: 1550px) {
+  .wrap {
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+  }
 }

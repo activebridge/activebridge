@@ -1,109 +1,115 @@
 .container.solutions
-  .solutions__main
-    h1.header-3 = t('solutions.title')
-    h2.header-2 = t('solutions.subtitle')
-    .description = t('solutions.description')
-    .about_us_info
-      .about_us_info__items
-        .about_us_info__container
-          - I18n.t('solutions.main.all').each do |item|
-            .about_us_info__item
-              = inline_svg item[:logo]
-              = item[:text]
-      //check links
-      .solutions__awards.desktop-only
-        = link_to 'https://clutch.co/profile/active-bridge?utm_source=widget&utm_medium=1&utm_campaign=widget&utm_content=num_reviews#reviews', target: :_blank
-          = image_tag 'solutions/award-1.png', class: '', alt:  "Active Bridge LLC, reviewed on Clutch.co"
-        = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
-          = image_tag 'solutions/award-2.png', class: '', alt:  "Top IT Service Company. Arizona, US"
-        = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
-          = image_tag 'solutions/award-3.png', class: '', alt: "Best Web Developers in Phoenix, 2022"
-        = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
-          = image_tag 'solutions/award-3.png', class: '', alt: "Best Web Developers in Phoenix, 2022"
-      .solutions__awards.mobile-only
-        = link_to 'https://clutch.co/profile/active-bridge?utm_source=widget&utm_medium=1&utm_campaign=widget&utm_content=num_reviews#reviews', target: :_blank
-          = image_tag 'solutions/award-1.png', class: '', alt:  "Active Bridge LLC, reviewed on Clutch.co"
-        = link_to 'https://www.expertise.com/az/phoenix/mobile-app-development', target: :_blank
-          = image_tag 'solutions/award-4.png', class: '', alt:  "Top IT Service Company. Arizona, US"
+  .solutions__main.wrap
+    .row
+      h1.header-3 = t('solutions.title')
+      h2.header-2 = t('solutions.subtitle')
+      .description = t('solutions.description')
+      .about_us_info
+        .about_us_info__items
+          .about_us_info__container
+            - I18n.t('solutions.main.all').each do |item|
+              .about_us_info__item
+                = inline_svg item[:logo]
+                = item[:text]
+        //check links
+        .solutions__awards.desktop-only
+          = link_to 'https://clutch.co/profile/active-bridge?utm_source=widget&utm_medium=1&utm_campaign=widget&utm_content=num_reviews#reviews', target: :_blank
+            = image_tag 'solutions/award-1.png', class: '', alt:  "Active Bridge LLC, reviewed on Clutch.co"
+          = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
+            = image_tag 'solutions/award-2.png', class: '', alt:  "Top IT Service Company. Arizona, US"
+          = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
+            = image_tag 'solutions/award-3.png', class: '', alt: "Best Web Developers in Phoenix, 2022"
+          = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
+            = image_tag 'solutions/award-3.png', class: '', alt: "Best Web Developers in Phoenix, 2022"
+        .solutions__awards.mobile-only
+          = link_to 'https://clutch.co/profile/active-bridge?utm_source=widget&utm_medium=1&utm_campaign=widget&utm_content=num_reviews#reviews', target: :_blank
+            = image_tag 'solutions/award-1.png', class: '', alt:  "Active Bridge LLC, reviewed on Clutch.co"
+          = link_to 'https://www.expertise.com/az/phoenix/mobile-app-development', target: :_blank
+            = image_tag 'solutions/award-4.png', class: '', alt:  "Top IT Service Company. Arizona, US"
 
-  .solutions__text
-    .header-2.white-text = t('solutions.text')
+  .solutions__text.wrap
+    .row
+      .header-2.white-text = t('solutions.text')
 
-  .solutions__industries
-    .header-3 = t('solutions.industries.title')
-    .carousel
-      ul.carousel__list.solutions
-        - I18n.t('solutions.industries.all').each_with_index do |i, index|
-          li.carousel__item data-index="#{index-(I18n.t('solutions.industries.all').length / 2)}" data-type="industries"
-            h2.carousel__title.inria
-              = i[:title]
-            .carousel__logo.solutions__logo
-              = inline_svg "solutions/#{i[:icon]}.svg"
-            .carousel__description.solutions__description
-              = i[:description].html_safe
-    .header-2 = t('solutions.industries.subtitle_1')
-    .description = t('solutions.industries.description')
-    .carousel
-      ul.carousel__list.solutions.applications
-        - I18n.t('solutions.industries.applications').each_with_index do |a, index|
-          li.carousel__item data-index="#{index-(I18n.t('solutions.industries.all').length / 2)}" data-type="applications"
-            h2.carousel__title.inria
-              = a[:title]
-            .carousel__description.solutions__description
-              = a[:description].html_safe
-            .carousel__button
-              = link_to "#{t('solutions.industries.more_button')}", "#{a[:link]}", id: "solutions_industries_button_#{index}", class: 'button white-text violet-button', target: :_blank
-    .header-2 = t('solutions.industries.subtitle_2')
+  .solutions__industries.wrap
+    .row
+      .header-3 = t('solutions.industries.title')
+      .carousel
+        ul.carousel__list.solutions
+          - I18n.t('solutions.industries.all').each_with_index do |i, index|
+            li.carousel__item data-index="#{index-(I18n.t('solutions.industries.all').length / 2)}" data-type="industries"
+              h2.carousel__title.inria
+                = i[:title]
+              .carousel__logo.solutions__logo
+                = inline_svg "solutions/#{i[:icon]}.svg"
+              .carousel__description.solutions__description
+                = i[:description].html_safe
+      .header-2 = t('solutions.industries.subtitle_1')
+      .description = t('solutions.industries.description')
+      .carousel
+        ul.carousel__list.solutions.applications
+          - I18n.t('solutions.industries.applications').each_with_index do |a, index|
+            li.carousel__item data-index="#{index-(I18n.t('solutions.industries.applications').length / 2)}" data-type="applications"
+              h2.carousel__title.inria
+                = a[:title]
+              .carousel__description.solutions__description
+                = a[:description].html_safe
+              .carousel__button
+                = link_to "#{t('solutions.industries.more_button')}", "#{a[:link]}", id: "solutions_industries_button_#{index}", class: 'button white-text violet-button', target: :_blank
+      .header-2 = t('solutions.industries.subtitle_2')
 
   .solutions__project-development
-    .header-3 = t('solutions.project_development.title')
-    .header-2 = t('solutions.project_development.description')
-    .timeline
-      - I18n.t('solutions.project_development.approaches').each_with_index do |a, index|
-        .timeline-item
-          .timeline-item__icon
-            = image_tag "solutions/project_development_#{index + 1}.png"
-          .timeline-item__content
-            .timeline-item__content-title.inria = a[:title]
-            .timeline-item__content-description = a[:description]
-          //.timeline__processes-title = t('solutions.approaches_title')
-          .timeline__processes
-            - a[:processes].each do |pr|
-              .timeline__processes-item
-                = pr[:item]
-                .arrow →
-
-  .solutions__staff-augmentation
-    .header-3 = t('solutions.staff_augmentation.title')
-    .description = t('solutions.staff_augmentation.description')
-    .timeline
-      - I18n.t('solutions.staff_augmentation.approaches').each_with_index do |a, index|
-        .timeline-item
-          .timeline-item__icon
-            = image_tag "solutions/staff_augmentation_#{index + 1}.png"
-          .timeline-item__content
-            .timeline-item__content-title.inria = a[:title]
-            .timeline-item__content-description = a[:description]
-          - if a[:processes]
+    .row
+      .header-3 = t('solutions.project_development.title')
+      .header-2 = t('solutions.project_development.description')
+      .timeline
+        - I18n.t('solutions.project_development.approaches').each_with_index do |a, index|
+          .timeline-item
+            .timeline-item__icon
+              = image_tag "solutions/project_development_#{index + 1}.png"
+            .timeline-item__content
+              .timeline-item__content-title.inria = a[:title]
+              .timeline-item__content-description = a[:description]
             //.timeline__processes-title = t('solutions.approaches_title')
             .timeline__processes
               - a[:processes].each do |pr|
                 .timeline__processes-item
                   = pr[:item]
                   .arrow →
-    = link_to "#{t('solutions.staff_augmentation.more_button')}", page_path(:services), id: "solutions_staff-augmentation_button", class: 'button', target: :_blank
 
-  .solutions__services
-    .header-3.white-text = t('solutions.services.title')
-    .header-2 = t('solutions.services.subtitle')
-    .carousel
-      ul.carousel__list.services
-        - I18n.t('solutions.services.all').each_with_index do |s, index|
-          li.carousel__item data-index="#{index-(I18n.t('solutions.services.all').length / 2)}"
-            .carousel__title.inria
-              = s[:title]
-            .carousel__logo.services__logo
-              = inline_svg "solutions/#{s[:icon]}.svg"
-            .carousel__description.solutions__description
-              = s[:description].html_safe
-    = link_to "#{t('solutions.services.more_button')}", page_path(:services), id: "solutions_services_button", class: 'button violet-button white-text', target: :_blank
+  .solutions__staff-augmentation
+    .row
+      .header-3 = t('solutions.staff_augmentation.title')
+      .description = t('solutions.staff_augmentation.description')
+      .timeline
+        - I18n.t('solutions.staff_augmentation.approaches').each_with_index do |a, index|
+          .timeline-item
+            .timeline-item__icon
+              = image_tag "solutions/staff_augmentation_#{index + 1}.png"
+            .timeline-item__content
+              .timeline-item__content-title.inria = a[:title]
+              .timeline-item__content-description = a[:description]
+            - if a[:processes]
+              //.timeline__processes-title = t('solutions.approaches_title')
+              .timeline__processes
+                - a[:processes].each do |pr|
+                  .timeline__processes-item
+                    = pr[:item]
+                    .arrow →
+      = link_to "#{t('solutions.staff_augmentation.more_button')}", page_path(:services), id: "solutions_staff-augmentation_button", class: 'button', target: :_blank
+
+  .solutions__services.wrap
+    .row
+      .header-3.white-text = t('solutions.services.title')
+      .header-2 = t('solutions.services.subtitle')
+      .carousel
+        ul.carousel__list.services
+          - I18n.t('solutions.services.all').each_with_index do |s, index|
+            li.carousel__item data-index="#{index-(I18n.t('solutions.services.all').length / 2)}"
+              .carousel__title.inria
+                = s[:title]
+              .carousel__logo.services__logo
+                = inline_svg "solutions/#{s[:icon]}.svg"
+              .carousel__description.solutions__description
+                = s[:description].html_safe
+      = link_to "#{t('solutions.services.more_button')}", page_path(:services), id: "solutions_services_button", class: 'button violet-button white-text', target: :_blank

@@ -5,7 +5,7 @@
       .header-1.index-header= t('index.active_bridge')
       h1.header-2 = t('index.professional_team')
       p.description.with-margin = t('index.teams_expertise')
-      a#free-consultation.button href='' = t('index.free_consultation')
+      = link_to "#{t('index.free_consultation')}", page_path(:contact), id: 'index-free-consultation', class: 'button', target: :_blank
       //need to check all links
 
       .awards-img
@@ -22,23 +22,23 @@
         = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
           = image_tag 'index/award-1.png', class: "index-icon left #{mobile? ? 'mobile-only' : ''}", alt: "Top 30+ Web Development Companies in USA"
         = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
-          = image_tag 'index/award-10-1.png', class: "index-icon left #{mobile? ? 'mobile-only' : ''}", alt: "Best Mobile App Developers in Phoenix, 2022"
+          = image_tag 'index/award-10.1.png', class: "index-icon left #{mobile? ? 'mobile-only' : ''}", alt: "Best Mobile App Developers in Phoenix, 2022"
 
   .info-container.index-home.wrap
     .row
       .header-5.index-testimonials__header.white-text= t('testimonials.help_startups')
       .description.white-text = t('testimonials.testimonials_description')
       .carousel
-        ul.carousel__list
+        ul.carousel__list.testimonials-carousel
           - I18n.t('testimonials.all').each_with_index do |t, index|
             li.carousel__item data-index="#{index-(I18n.t('testimonials.all').length / 2)}"
               .carousel__image
                 = image_tag t[:image]
-              .carousel__logo
+              .carousel__logo class="#{t[:class]}"
                 = image_tag t[:logo]
               .carousel__description
                 = t[:description]
-      a#read-testimonials.button.white-text.violet-button href='' = t('testimonials.button')
+      = link_to "#{t('testimonials.button')}", page_path(:reviews), id: 'index-read-testimonials', class: 'button white-text violet-button', target: :_blank
 
   .index-technologies__container
     .row
@@ -55,7 +55,7 @@
         .index-technologies__items
           = render 'shared/technologies', step: 3
           .index-technologies__more
-            a#learn-more.button.light-purple-button href="#" = t('index.learn_more')
+            = link_to "#{t('index.learn_more')}", page_path(:expertise), id: 'index-more-technologies', class: 'button light-purple-button', target: :_blank
 
   .index-services.wrap
     .row
@@ -67,15 +67,21 @@
           .card.index-services__item
             .card__title-2.purple-heart = service[:title]
             .card__description.index-services__item-description = service[:description].html_safe
-      a#view-services.button.index-services__button href="#" = t('index.view_services')
+      = link_to "#{t('index.view_services')}", page_path(:services), id: 'index-view-services', class: 'button index-services__button', target: :_blank
 
   .info-container.index-about-us.wrap
     .row
       .header-3.white-text= t('index.our_company')
       .index-about-us__description= t('index.about_us_description')
+      .about_us_info.desktop-only
+        = render 'shared/about_us_info'
+        = link_to "#{t('index.more_about_us')}", page_path(:about), id: 'index-more-about-us-desktop', class: 'button white-text violet-button', target: :_blank
+
+  .index-about-us-info.mobile-only
+    .row
       .about_us_info
         = render 'shared/about_us_info'
-        a#more-about-us.button.white-text.violet-button href='#'= t('index.more_about_us')
+        = link_to "#{t('index.more_about_us')}", page_path(:about), id: 'index-more-about-us-mob', class: 'button white-text violet-button', target: :_blank
 
   .index-solutions.wrap
     .row
@@ -89,9 +95,9 @@
                 .carousel__title.solutions__title
                   = s[:title]
                 .carousel__logo.solutions__logo
-                  = inline_svg "index/solutions/#{s[:logo]}"
+                  = image_tag "index/solutions/#{s[:logo]}"
                 .carousel__description.solutions__description
                   = s[:description].html_safe
-        a#all-solutions.index-solutions__button.button.white-text.violet-button href=''= t('index.view_all_solutions')
+        = link_to "#{t('index.view_all_solutions')}", page_path(:solutions), id: 'index-all-solutions', class: 'index-solutions__button button white-text violet-button', target: :_blank
 
   script src="https://widget.clutch.co/static/js/widget.js" type="text/javascript"

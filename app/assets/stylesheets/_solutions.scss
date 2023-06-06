@@ -1,7 +1,7 @@
 .solutions {
-  &__main,
-  &__industries,
-  &__services { padding: 5vh 18vw; }
+  // &__main,
+  // &__industries,
+  // &__services { padding: 5vh 18vw; }
 
   .header-2 {
     max-width: 100%;
@@ -68,19 +68,11 @@
   .timeline { margin-top: 5vh; }
 
   .timeline-item {
-    // padding-bottom: 10vh;
-
-    // &::before { width: 45%; }
-
     &:nth-child(even) {
-      // &::before { right: 5vw; }
-
       .timeline__processes { padding-right: 11vh; }
     }
 
     &:nth-child(odd) {
-      // &::before { left: 5vw; }
-
       .timeline__processes { padding-left: 11vh; }
     }
   }
@@ -156,7 +148,7 @@
     .blue-text { color: $main-blue; }
 
     .header-2 {
-      margin: 10vh 0 5vh;
+      margin: 5vh 0;
 
       &:last-child {
         margin-bottom: 3vh;
@@ -164,31 +156,55 @@
       }
     }
 
-    .applications .carousel__item {
-      box-sizing: border-box;
-      justify-content: space-between;
-      padding: 3vh 1vh 6vh;
+    .carousel__list.solutions {
+      .carousel {
+        &__list { height: 60vh; }
 
-      .carousel__title { padding: 0 4vh; }
+        &__item {
+          box-sizing: border-box;
+          height: 60vh;
+          width: 28vw;
+          justify-content: space-between;
+          padding: 3vh 1vh 6vh;
+        }
 
-      .carousel__button {
-        .button {
-          background: $main-gradient;
 
-          &:hover { background: $white; }
+
+        &__description {
+          margin-bottom: 0;
+          -webkit-line-clamp: initial;
+        }
+      }
+    }
+
+    .carousel__list.applications {
+      height: 55vh;
+
+      .carousel__item {
+        height: 55vh;
+        width: 27vw;
+
+        .carousel__title { padding: 0 4vh; }
+
+        .carousel__button {
+          .button {
+            background: $main-gradient;
+
+            &:hover { background: $white; }
+          }
         }
       }
     }
   }
 
   &__project-development {
-    padding: 0 18vw 5vh;
+    padding: 0 18vw;
 
-    .header-3 { margin: 3vh 0 6vh; }
+    .header-3 { margin: 0 0 6vh; }
   }
 
   &__staff-augmentation {
-    padding: 0 18vw 5vh;
+    padding: 0 18vw 8vh;
 
     .timeline__processes {
       &-item {
@@ -211,8 +227,6 @@
   }
 
   .carousel {
-    &__list { height: 50vh; }
-
     &__description {
       margin-bottom: 3vh;
       line-height: 1.5em;
@@ -222,6 +236,7 @@
     &__title {
       margin-right: 1vh;
       margin-left: 1vh;
+      font-size: 1.1em;
     }
 
     .solutions__logo {
@@ -247,24 +262,40 @@
       letter-spacing: 0.4em;
     }
 
-    .carousel__title {
-      padding: 0 4vh;
-      font-size: 1.5em;
+    .carousel {
+      &__item {
+        box-sizing: border-box;
+        height: 52vh;
+        width: 26vw;
+        padding: 3vh 1vh 6vh;
+      }
+
+      &__title {
+        padding: 0 4vh;
+      }
+
+      &__description {
+        margin-bottom: 0;
+        text-align: justify;
+      }
+
+      .services__logo { margin-bottom: 0; }
     }
 
-    .carousel__description { text-align: justify;}
-
-    .carousel__list { height: 60vh; }
+    .button {
+      width: 45%;
+      margin-top: 0;
+    }
   }
 }
 
 @media screen and (max-width: 600px) {
   .solutions {
-    &__main,
-    &__text,
-    &__industries,
-    &__project-development,
-    &__staff-augmentation { padding: 7vh 5vh; }
+    // &__main,
+    // &__text,
+    // &__industries,
+    // &__project-development,
+    // &__staff-augmentation { padding: 7vh 5vh; }
 
     .header-2 { font-size: .9em; }
 

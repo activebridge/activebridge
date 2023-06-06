@@ -22,7 +22,6 @@ carouselLists.forEach (carousel) ->
     return
   ), false
 
-
   carousel.addEventListener 'click', (event) ->
     newActive = event.target
     isItem = newActive.parentElement
@@ -33,38 +32,24 @@ carouselLists.forEach (carousel) ->
 
 update = (newActive, carousel) ->
   carouselItems = carousel.querySelectorAll('.carousel__item')
-  elems = Array.from(carouselItems)
+  elems = Array.from(carouselItems).sort((a, b) -> Number(a.dataset.index) - Number(b.dataset.index))
   newActiveIndex = newActive.dataset.index
   current = elems.find((elem) ->
     elem.dataset.index == '0'
   )
-  prev = elems.find((elem) ->
-    elem.dataset.index == '-1'
-  )
-  next = elems.find((elem) ->
-    elem.dataset.index == '1'
-  )
-  second = elems.find((elem) ->
-    elem.dataset.index == '-2'
-  )
-  second_last = elems.find((elem) ->
-    elem.dataset.index == '2'
-  )
-  first = elems.find((elem) ->
-    elem.dataset.index == '-3'
-  )
-  last = elems.find((elem) ->
-    elem.dataset.index == '3'
-  )
+
+  newElems = []
+  if newActiveIndex < 0
+    newElems.push elems[elems.length - 1]
+    newElems.push elems.slice(0, elems.length - 1)
+  else
+    newElems.push elems.slice(1, elems.length)
+    newElems.push elems[0]
+  newElems = newElems.flat()
+  min = Math.min.apply Math, (x for x in elems.map((item) => Number(item.dataset.index)))
+  els = Array.from({ length: elems.length }, (val, index) => min + index)
 
   current.classList.remove 'carousel__item_active'
-  [current, prev, next, second, second_last, first, last].forEach (item) ->
-    if item
-      itemIndex = item.dataset.index
-      item.dataset.index = getIndex(itemIndex, newActiveIndex, elems)
-
-getIndex = (current, active = 0, elems) ->
-  diff = current - active
-  if Math.abs(current - active) > (if elems.length > 3 then 3 else 1)
-    return -current
-  diff
+  els.forEach (index, idx) ->
+    if newElems[idx]
+      newElems[idx].dataset.index = index
