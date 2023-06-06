@@ -1,0 +1,51 @@
+.crew {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 4.5vh 0 3vh;
+
+  &__item {
+    padding: 4vw 1vw;
+    margin: 2vh 10px;
+    max-width: 270px;
+    min-width: 220px;
+    width: 30%;
+    background: rgba($white, .5);
+    border-radius: 30px;
+    box-shadow: inset -2px 2px 12px 0px rgba(#000, .2), 0px 4px 20px 0 rgba(#000, .15);
+    box-sizing: border-box;
+
+    &-photo img {
+      width: 8em;
+      border-radius: 50%;
+    }
+
+    &-name {
+      margin: 2vw 0 1vw;
+      font: 1.5em 'Inria Bold', serif;
+    }
+
+    &-post { font-size: 1.1em; }
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .crew {
+    &__item {
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .crew {
+    &__item {
+      padding: 8vw 5vw;
+
+      &-name { font-size: 1em; }
+
+      &-post { font-size: .9em; }
+    }
+  }
+}

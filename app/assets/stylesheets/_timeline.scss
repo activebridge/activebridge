@@ -143,7 +143,7 @@
 @media screen and (max-width: 600px) {
   .timeline-item {
     flex-direction: column;
-    padding: 5vh 0;
+    padding: 2em 0;
 
     &:nth-child(even),
     &:nth-child(odd) {
@@ -164,8 +164,8 @@
     }
 
     &:first-child::before {
-      height: 2em;
-      top: 25vh;
+      height: 4em;
+      top: 8.5em;
     }
 
     &__icon {
@@ -178,7 +178,7 @@
 
       &-title {
         font-size: 1em;
-        margin: 7vh 0 3vh;
+        margin: 2.5em 0 3em;
         text-align: center;
       }
 

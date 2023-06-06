@@ -813,7 +813,7 @@ en:
                           unstoppable drive to provide effective web solutions for our clients. Since then, we’ve successfully assisted
                           our clients in developing and maintaining websites and web-based systems, mobile applications, and software products.
     about_us_items:
-      - logo: index/about-us-8.svg
+      - logo: index/about-us-9+.svg
         text: years of remote development
       - logo: index/about-us-10+.svg
         text: years of Ruby on Rails experience
@@ -829,15 +829,15 @@ en:
                      overcome technological business challenges, and gain higher operational efficiency.
     view_all_solutions: View all solutions
     solutions:
-      - logo: caduceus.svg
+      - logo: healthcare.png
         title: Healthcare & HIPPA HealthTech
         description: Active Bridge provides end-to-end custom <div class="blue-text">web development solutions</div> for non-financial
                      businesses, fintech organizations, and banks.
-      - logo: bank.svg
+      - logo: bank.png
         title: Finance & Banking
         description: 'Active Bridge provides end-to-end <div class="blue-text">custom web development solutions</div> for non-financial
                       businesses, fintech organizations, and banks.'
-      - logo: health-insurance.svg
+      - logo: insurtech.png
         title: InsurTech
         description: Active Bridge’s industry-specific <div class="blue-text">Ruby on Rails development solutions</div> are powered
                      by expertise gained during 10 years of providing programming services for insurance companies.
@@ -1550,7 +1550,7 @@ en:
       devs_work_on: What our developers worked on
       all:
         - title: InsurTech
-          icon: 'index/solutions/health-insurance'
+          icon: 'index/solutions/insurtech'
           items:
             - Cloud-based data storage
             - Customizable dashboards
@@ -1569,7 +1569,7 @@ en:
             - Tools for reporting and analytics
             - Customizable dashboards
         - title: Healthcare
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/healthcare'
           items:
             - Cloud-based data storage
             - HIPAA-compliant secure messaging, forms, and mobile Rx orders
@@ -1577,7 +1577,7 @@ en:
             - Integrations
             - Multi-device synchronization
         - title: Logistic & Transportation
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/logistic'
           items:
             - Live status tracking
             - A CRM system
@@ -1587,7 +1587,7 @@ en:
             - Route optimization systems
             - Reporting & Analytics tools
         - title: E-commerce & Marketplaces
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/e-commerce'
           items:
             - Cloud-based data storage
             - CRM development & integrations
@@ -1598,7 +1598,7 @@ en:
             - Payment processors
             - Rating & review APIs
         - title: EdTech
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/edtech'
           items:
             - Cloud-based data storage
             - Data migration
@@ -1607,7 +1607,7 @@ en:
             - Payment and billing
             - Video streaming
         - title: FoodTech
-          icon: 'index/solutions/caduceus'
+          icon: 'index/solutions/edtech'
           items:
             - Delivery tracking
             - Scheduling tools
@@ -1653,16 +1653,16 @@ en:
       description: We offer our expertise in developing custom applications and cloud-based platforms for startups and SMB
       all:
         - title: HealthTech HIPPA Solution
-          image: caduceus.svg
+          image: healthcare.png
           description: a leading American <div class="blue-text">HIPAA-compliant encryption platform</div> protecting patients, healthcare
                        providers, prescribers, pharmacists, and vendors by securing clinical communications and electronic patient health
                        information (ePHI).
         - title: Insuretech SaaS platform
-          image: health-insurance.svg
+          image: insurtech.png
           description: a mission-focused company serving healthcare service providers to digitally manage and dispatch <div class="blue-text">workers’
                        compensation bills</div> to employers.
         - title: E-commerce platform with CRM features
-          image: bank.svg
+          image: e-commerce.png
           description: an innovative company advocating sustainable consumption connecting influencers designing sustainable activewear, suppliers and
                        factories sewing clothes with the end consumer.
       button: Check out our solutions
@@ -1691,6 +1691,7 @@ en:
           They are very experienced running software projects, but equally proficient in adapting to our internal processes.
           We consider the engineers assigned to our company a core part of the team.
           Thanks guys!
+        class: normal_logo
       - company: Def Method
         specialization: Technology company
         logo: portfolio/projects/def_method.svg
@@ -1702,6 +1703,7 @@ en:
           Collaborating with their engineers has kept us delivering running,
           tested features in an Agile fashion across multiple countries and time zones.
           Their commitment to quality and efficiency is outstanding.
+        class: bigger_logo
       - company: Modean Apps
         specialization: IT / Tech company
         logo: portfolio/projects/modean_apps.svg
@@ -1710,6 +1712,7 @@ en:
         post: Software Developer
         description:
           Awesome team. Full stack development. Happy to work with these guys any day.
+        class: smaller_logo
       - company: Preeline
         specialization: E-commerce company
         logo: portfolio/projects/preeline.svg
@@ -1722,6 +1725,7 @@ en:
           asking probing questions and suggesting added features that we had not thought about.
           Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds.
           We feel so incredibly lucky to be working with them
+        class: smaller_logo
       - company: Freestak
         specialization: Marketing company
         logo: portfolio/projects/freestak.svg
@@ -1737,6 +1741,7 @@ en:
           which we really appreciate as we don’t have an in-house technical team.
           After the active development phase, we’ve retained Active Bridge for the ongoing development and maintenance
           of our platform and I couldn’t recommend them enough.
+        class: normal_logo
       - company: LifeLinker Inc
         specialization: Healthcare / IT company
         logo: portfolio/projects/life_linker.svg
@@ -1750,6 +1755,7 @@ en:
           and deliver more code per dollar than the three times less expensive people.
           There’s no better source for best quality, best practice and best value development services than
           Active-Bridge. We’re delighted and most appreciative. Thank you.
+        class: bigger_logo
       - company: My School Ed
         specialization: Tech Company
         logo: portfolio/projects/myschool.svg
@@ -1760,6 +1766,7 @@ en:
           If anyone needs a kickass website company, these are your guys! I have used many other companies with nothing
           but issues and have nothing but good results from Eugene and Active Bridge. You will not find a better company
           period.
+        class: normal_logo
     tell-us:
       title: We are grateful for their appreciation and always try to meet and exceed the clients’ expectations.
       description: Customer satisfaction not only impacts Active Bridge’s bottom line but also impacts team morale and

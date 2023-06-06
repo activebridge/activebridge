@@ -6,6 +6,7 @@ header {
   z-index: 5;
   width: 100%;
   background-color: $white;
+  box-shadow: 0px 4px 4px 0px rgba(#000, .25);
 
   #menu-btn { display: none; }
 
@@ -15,8 +16,6 @@ header {
     svg { width: 40px; }
   }
 }
-
-header.desktop-only { box-shadow: 2px 1px 12px 0px grey; }
 
 .header-navbar {
   align-items: center;
