@@ -18,4 +18,9 @@ class ImageUploader < BaseUploader
     process convert: :png
     process resize_to_fit: [125, 100]
   end
+
+  version :thumbnail do
+    process conver: :png
+    process resize_to_fit: [400, 200]
+  end
 end

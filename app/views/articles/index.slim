@@ -1,17 +1,31 @@
 = content_for :head do
   title= meta_blog_tags('title', params[:category], params[:page])
   meta name='description' content=meta_blog_tags('description', params[:category], params[:page])
-#posts
-  .posts-headerposts
-    .link-group
+.content-holder  
+  .header-1= t('blog.blog')
+  .header-2= t('blog.blog_launch')
+  .articles-themes
+    .themes-container
+      .themes-title= t('blog.collection_of_articles')
+      ul.themes
+        - I18n.t('blog.articles_themes').each do |t|
+          li.theme= t
+    .themes-image
+      = inline_svg 'blog/sticker-pad.svg'
+= render 'shared/blog/categories'
+.content-holder
+  #posts
+    .posts
+      = render partial: 'article', collection: articles, as: :article
+    .link-group.bottom-group
       .pagination-holder
-        = link_to_previous_page articles, '‹'
-        = link_to_next_page articles, '›'
-    .title = params[:category] ? t("blog.categories.#{params[:category]}") : 'All Posts'
-    span.items_counter = pluralize(articles.total_count, 'item')
+        = paginate articles, window: 2
+.most-popular
+  .most-popular-title= t('blog.article.most_popular_articles')
   .posts
-    = render partial: 'article', collection: articles, as: :article
-  .link-group.bottom-group
-    .pagination-holder
-      = link_to_previous_page articles, '‹- Back'
-      = link_to_next_page articles, 'Next -›'
+    = render partial: 'article', collection: most_popular_articles, as: :article
+javascript:
+  window.addEventListener('scroll', () => {
+    const stickyElem = document.querySelector('.articles-categories');
+    stickyElem.classList.toggle('sticked', stickyElem.getBoundingClientRect().top == 70);
+  });
