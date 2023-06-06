@@ -1,0 +1,231 @@
+.timeline {
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 2em 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 39%;
+      border: solid $buzok;
+    }
+
+    &:nth-child(even) {
+      &::before {
+        right: 8vw;
+        top: 0;
+        bottom: 0;
+        border-width: 3px 3px 3px 0;
+        border-radius: 0 3em 3em 0;
+      }
+
+      .timeline-item__icon {
+        justify-content: flex-end;
+        margin-left: 2vw;
+      }
+    }
+
+    &:nth-child(odd) {
+      &::before {
+        left: 8vw;
+        top: -3px;
+        bottom: -3px;
+        border-width: 3px 0 3px 3px;
+        border-radius: 3em 0 0 3em;
+      }
+
+      .timeline-item__icon {
+        justify-content: flex-start;
+        margin-right: 2vw;
+      }
+    }
+
+    &:first-child::before {
+      left: 10vw;
+      top: 10vw;
+      border-top: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:last-child:nth-child(odd)::before {
+      border-bottom: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:last-child:nth-child(even)::before {
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+      bottom: 10vw;
+    }
+
+    &__icon {
+      display: flex;
+      width: 40%;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        max-width: 275px;
+      }
+    }
+
+    &__content {
+      width: 60%;
+
+      &-title {
+        font-size: 1.25em;
+        text-align: left;
+        margin-bottom: 4vh;
+      }
+
+      &-description {
+        font-size: 1em;
+        line-height: 1.6em;
+        text-align: left;
+      }
+
+      &-output {
+        &-title {
+          margin: 3vh 0 2vh;
+          color: $purple-heart;
+          font-family: 'Inria Bold', serif;
+          font-size: 1.25em;
+          font-style: italic;
+          text-align: left;
+
+        }
+
+        &-list {
+          margin: 0;
+          padding-inline-start: 2%;
+          text-align: left;
+          color: $purple-heart;
+          font-family: 'Inria Bold', serif;
+          font-style: italic;
+        }
+
+        &-item {
+          font-size: .85em;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+
+      .timeline-item__content {
+        margin-left: 2%;
+
+        &-title { text-align: right; }
+
+        &-description {
+          // width: 98%;
+          text-align: right;
+        }
+
+        &-output {
+          &-title { text-align: right; }
+
+          &-list {
+            text-align: right;
+            direction: rtl;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline-item {
+    flex-direction: column;
+    padding: 2em 0;
+
+    &:nth-child(even),
+    &:nth-child(odd) {
+      &::before {
+        left: 50%;
+        top: 0;
+        width: 5px;
+        height: 200px;
+        background-color: $buzok;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .timeline-item__icon {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    &:first-child::before {
+      height: 4em;
+      top: 8.5em;
+    }
+
+    &__icon {
+      max-width: 45%;
+      min-width: 9em;
+    }
+
+    &__content {
+      width: 100%;
+
+      &-title {
+        font-size: 1em;
+        margin: 2.5em 0 3em;
+        text-align: center;
+      }
+
+      &-description {
+        font-size: 0.8em;
+        text-align: justify;
+      }
+
+      &-output {
+        &-title {
+          font-size: .8em;
+          text-align: left;
+        }
+
+        &-list {
+          direction: initial;
+          padding-inline-start: 4%;
+          text-align: left;
+        }
+
+        &-item { font-size: .7em; }
+      }
+    }
+
+    &:last-child::before { height: 10vh; }
+
+    &:nth-child(2n) {
+      flex-direction: column;
+
+      .timeline-item__content {
+        margin-left: 0;
+
+        &-title { text-align: center; }
+
+        &-description {
+          text-align: justify;
+        }
+
+        &-output {
+          &-title { text-align: left; }
+
+          &-list {
+            direction: initial;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

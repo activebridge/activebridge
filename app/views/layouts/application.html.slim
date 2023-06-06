@@ -10,7 +10,7 @@ html lang='en'
   meta property='og:title'       content=t("meta.open_graph.#{@page}.title")
   meta property='og:description' content=t("meta.open_graph.#{@page}.description")
   meta property='og:image'       content='https://i.imgur.com/yHecdkg.jpg'
-  meta name = 'description'      content=t("meta.pages.#{@page}.description")
+  meta name='description'      content=t("meta.pages.#{@page}.description")
 
   = content_for :title do
     = meta_title
@@ -22,12 +22,9 @@ html lang='en'
       = render 'shared/gtag_iframe'
       = render 'shared/header'
       #scroll-container.scroll-container
-        a.home-logo.mobile-only href='/' aria-label='Home'
-          = inline_svg 'navbar/menu_home.svg'
         = yield
-      = render 'shared/navbar'
-      #back-to-top aria-label="Go to top"
-        span.ui-arrow-up
+        = render 'shared/footer'
+
       = javascript_include_tag 'application', async: true
       javascript:
         var head = document.head,

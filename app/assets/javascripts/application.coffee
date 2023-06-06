@@ -1,6 +1,7 @@
 #= require _analytics
 #= require _smartlook
 #= require _navigation
+#= require _carousel
 
 if navigator.appVersion.toUpperCase().indexOf('MSIE') != -1 or
     navigator.appVersion.toUpperCase().indexOf('TRIDENT') != -1 or
@@ -16,21 +17,11 @@ ajax = (method, href, async = true) ->
 
 currentEl = 0
 prevEl = 0
-header = document.getElementById('header')
-backToTopButton = document.getElementById('back-to-top')
 error = "Couldn't verify reCAPTCHA, please try again"
 success = "Your request was successfully submitted, please check your email"
 alert = document.querySelector('div.alert');
 alertMessage = document.querySelector('span.msg');
-
-toggleHeader = () ->
-  if header
-    prevEl = currentEl
-    currentEl = window.pageYOffset
-    if ( currentEl > prevEl )
-      header.style.cssText = 'opacity: 1; z-index: 4'
-    else
-      header.style.cssText = 'opacity: 0'
+technologies = document.querySelector('.index-technologies__items')
 
 window.submit = (form) ->
   document.getElementById('submit').disabled = true
@@ -39,7 +30,7 @@ window.submit = (form) ->
     return if xhr.readyState != 4
     if xhr.status == 200
       alertShow(success)
-      form = document.getElementById('contact_form')
+      form = document.getElementById('contact__form')
       form.reset()
     else
       alertShow(error)
@@ -50,37 +41,29 @@ window.submit = (form) ->
   dataLayer.push({'event':'formSubmitted', 'formName':'ContactUs'})
   return false
 
-alertShow = (message) -> 
+alertShow = (message) ->
   alertMessage.innerText = message
   alert.classList.add("showAlert");
   setTimeout ->
     alert.classList.remove("showAlert");
   , 10000
 
-window.alertHide = -> 
+window.alertHide = ->
   alert.classList.remove("showAlert");
+
+window.toggleTechnologies = ->
+  if technologies.classList.contains('open') then technologies.classList.remove('open') else technologies.classList.add('open')
 
 scrollToTop = ->
   window.scrollTo({
     top: 0
   })
 
-showBackToTopButton = ->
-  scroll = window.pageYOffset
-  if scroll > 50
-    if !backToTopButton.classList.contains('show')
-      backToTopButton.classList += 'show'
-  else
-    backToTopButton.classList.remove('show')
-
 handleScroll = ->
-  toggleHeader()
-  showBackToTopButton() if backToTopButton
   return
 
 window.onload = () ->
   document.body.onscroll = handleScroll
-  backToTopButton.onclick = scrollToTop if backToTopButton
 
 viewportHeight = window.innerHeight - 1 + 'px'
 

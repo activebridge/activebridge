@@ -1,0 +1,61 @@
+.container.expertise
+  .alabaster.expertise__main.wrap
+    .row
+      .header-3 = t('expertise.main.title')
+      h2.header-2 = t('expertise.main.subtitle')
+      .description.justify = t('expertise.main.description_1')
+      .chart-container
+        = render 'shared/expertise_chart'
+      .description.justify = t('expertise.main.description_2')
+
+  .expertise__technologies.wrap
+    .row
+      h2.header-2= t('expertise.technologies.subtitle')
+      .header-3 = t('expertise.technologies.title')
+      = inline_svg 'web_development_services/technologies_d_table.svg', class: 'desktop-only'
+      = inline_svg 'web_development_services/technologies_m_table.svg', class: 'mobile-only'
+      .description.justify = t('expertise.technologies.description')
+
+  .alabaster.expertise__industries.wrap
+    .row
+      .header-3 = t('expertise.industries.projects').html_safe
+      .header-2 = t('expertise.industries.subtitle')
+      .header-3.small-text = t('expertise.industries.title')
+      .carousel.industries
+        ul.carousel__list
+          - I18n.t('expertise.industries.all').each_with_index do |i, index|
+            li.carousel__item data-index="#{index-(I18n.t('expertise.industries.all').length / 2)}"
+              .carousel__title.industries__title
+                = i[:title]
+              .carousel__logo.industries__logo
+                = image_tag "#{i[:icon]}.png"
+              .carousel__subtitle = t('expertise.industries.devs_work_on')
+              ul.carousel__description
+                - i[:items].each do |item|
+                  li.carousel__description-item
+                    = item
+
+  .expertise__solutions.info-container.wrap
+    .row
+      .header-2.white-text = t('expertise.solutions.title')
+      = link_to t('expertise.solutions.button'), page_path(:solutions), class: "button white-text violet-button", id:"expertise-all-solutions"
+
+  .expertise__testimonials.wrap
+    .row
+      .header-2 = t('expertise.testimonials.title')
+      .carousel
+        ul.carousel__list.testimonials-carousel
+          - I18n.t('testimonials.all').each_with_index do |t, index|
+            li.carousel__item data-index="#{index-(I18n.t('testimonials.all').length / 2)}"
+              .carousel__image
+                = image_tag t[:image]
+              .carousel__logo class="#{t[:class]}"
+                = image_tag t[:logo]
+              .carousel__description
+                = t[:description]
+      = link_to t('testimonials.button'), page_path(:testimonials), class: "button", id:"expertise-read-testimonials"
+
+  .expertise__tell-us.wrap
+    .row
+      .header-2.white-text = t('expertise.tell-us.title')
+      = link_to t('expertise.tell-us.button'), contact_path, class: "button white-text", id:"expertise-tell-us"

@@ -1,0 +1,34 @@
+.contact
+  .header-3 = t('contact.title')
+  .header-2 = t('contact.subtitle')
+  .description = t('contact.description')
+
+  .contact__form-container
+    = form_tag '/contact', id: 'contact__form', class: 'contact__form' do
+      .contact__form-item
+        label.contact__form-label for='reason' = t('contact.form.reasons.title') + '*'
+        input#reason.contact__form-input name='contact[reason]' type='text' minlength='5' placeholder="#{t('contact.form.reasons.placeholder')}" required='true'
+
+      .contact__form-item
+        label.contact__form-label for='name' = t('contact.form.name.title') + '*'
+        input#name.contact__form-input name='contact[name]' type='text' minlength='2' placeholder="#{t('contact.form.name.placeholder')}" required='true'
+
+      .contact__form-item
+        label.contact__form-label for='email' = t('contact.form.email.title') + '*'
+        input#email.contact__form-input name='contact[email]' type='email' placeholder="#{t('contact.form.email.placeholder')}" required='true'
+
+      .contact__form-item.contact__form-upload
+        .contact__form-upload-wrap
+          label.contact__form-upload-label for='attachments' = inline_svg 'contact/paper_clip.svg'
+          input#attachments.contact__form-upload-input name='contact[attachments]' type='file'
+        label.contact__form-label for='project' = t('contact.form.project.title')
+        textarea#project.contact__form-input name='contact[message]' placeholder="#{t('contact.form.project.placeholder')}" minlength='10' maxlength='500'
+        = recaptcha_v3(action: 'submit', site_key: Rails.application.secrets[:recaptcha_site_key])
+      .contact__form-more
+        = link_to "#{t('contact.form.more_button')}", '', class: 'contact__form-link', target: :_blank
+      .contact__form-description
+        .header-2 = t('contact.form.explanation.title')
+        ul.contact__form-description-list
+          - I18n.t('contact.form.explanation.steps').each do |s|
+            li = s
+      input#submit.button.contact__form-button form='contact__form' type='submit' value="#{t('contact.form.send_button')}"

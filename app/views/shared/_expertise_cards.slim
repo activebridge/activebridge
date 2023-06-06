@@ -1,0 +1,5 @@
+.expertise-cards
+  - I18n.t('index.services').each do |service|
+    .card.expertise-cards__item
+      .card__title-2.purple-heart= service[:title]
+      .card__description.expertise-cards__item-description= service[:description].html_safe

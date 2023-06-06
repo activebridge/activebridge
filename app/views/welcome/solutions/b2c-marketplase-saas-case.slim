@@ -1,0 +1,86 @@
+.container.marketplace.development.solutions_cases
+  .marketplace__main.wrap
+    .row
+      h1.header-3.white-text = t('marketplace.title')
+      .description.with-margin.white-text  = t('marketplace.description').html_safe
+      .marketplace__b2b
+        .marketplace__b2b_img
+          = image_tag 'marketplace/shopping_cart.png'
+        .marketplace__b2b_text
+          h2.header-2.white-text = t('marketplace.b2b.title')
+          .description.white-text = t('marketplace.b2b.description')
+      .header-3.small-text.white-text = t('marketplace.some_features')
+      .list-with-images.horizontal
+        - I18n.t('marketplace.b2b.all').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "marketplace/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2.white-text = item[:title]
+  .marketplace__b2c.wrap
+    .row
+      .marketplace__b2c_top
+        .marketplace__b2c_top_text
+          .header-2 =  t('marketplace.b2c.title')
+          .description = t('marketplace.b2c.description')
+        .marketplace__b2c_top_img
+          = image_tag 'marketplace/payment-done.png'
+      .header-3.small-text = t('marketplace.some_features')
+      .list-with-images
+        - I18n.t('marketplace.b2c.all').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "marketplace/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2.white-text = item[:title]
+
+  .marketplace__development.wrap
+    .row
+      .header-3.small-text = t('marketplace.help_title')
+      .list-with-images
+        - I18n.t('marketplace.help').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "insurtech/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2 = item[:title]
+              .description = item[:description].html_safe
+
+  .wrap.solutions_cases__case_study
+    .row
+      .header-3.white-text = t('marketplace.case_study.title')
+      h2.header-2.with-margin.white-text = t('marketplace.case_study.subtitle')
+      .solutions_cases__case_study_top
+        ul.solutions_cases__case_study_list
+          - I18n.t('marketplace.case_study.top_info').each do |el|
+            li.solutions_cases__case_study_list_item.white-text
+              = el[:item].html_safe
+        .solutions_cases__case_study_image
+          = image_tag 'marketplace/cloud_server.png'
+      .solutions_cases__case_study_bottom
+        ul.solutions_cases__case_study_bottom_list
+          - I18n.t('marketplace.case_study.bottom_info').each do |item|
+            li
+              .header-2.with-margin.white-text = item[:title]
+              .description.white-text = item[:description].html_safe
+
+  .marketplace__solutions.wrap
+    .row
+      .header-3.purple-text = t('marketplace.solutions.title')
+      .description = t('marketplace.solutions.description').html_safe
+      .list-with-images
+        - I18n.t('marketplace.solutions.all').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon.big-img
+              = image_tag "marketplace/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2.without-margin = item[:title]
+              .description.without-margin = item[:description].html_safe
+              .header-2.purple-text = t('marketplace.solutions.functionality')
+              ul.list-with-images__item_elements
+                - item[:elements].each do |element|
+                  li.list-with-images__item_element.purple-text
+                    = element[:item]
+      = link_to "#{t('marketplace.solutions.button')}", page_path(:solutions), id: 'marketplace_solutions_button', class: 'button', target: :_blank
+
+  = render 'shared/solutions_case_idea'

@@ -1,13 +1,29 @@
-header.header.visible.desktop-only
-  .logotype
-    a href='/'
-      = inline_svg 'index/header-logo.svg', class: 'logotype'
-header.header.desktop-only#header
-  .logotype
-    a href='/'
-      = inline_svg 'index/header-logo-visible.svg', class: 'logotype'
-  .path
-    'Home
-    - if !@page.eql? '/'
-      '\
-      = @page.gsub('_', ' ').capitalize
+header class="#{mobile? ? 'mobile-only' : 'desktop-only'}"
+
+  a.logotype href='/'
+    = inline_svg 'index/logo.svg'
+
+  input#menu-btn.menu-btn type='checkbox'
+  .overlay
+  label.menu-icon for="menu-btn"
+    span.navicon
+
+  ul.header-navbar
+    - I18n.t('navbar.links').each do |link|
+
+      li.header-navbar__item
+        - if link[:items]
+          = link_to link[:page], "#{link[:link]}", class: "header-navbar__link #{current_page?(link[:link]) ? 'active' : ''}"
+
+          ul.header-navbar__subitems
+            - link[:items].each do |item|
+              li = link_to item[:section], "#{item[:link]}", class: 'header-navbar__sub-link'
+        - else
+          = link_to link[:page], "#{link[:link]}", class: "header-navbar__link #{current_page?(link[:link]) ? 'active' : ''}"
+
+    = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact desktop-only #{current_page?('/contact') ? 'active' : ''}"
+
+    .mobile-only
+      = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact #{current_page?('/contact') ? 'active' : ''}"
+      .header-navbar__close
+        label.menu-close-icon for="menu-btn" ⟶

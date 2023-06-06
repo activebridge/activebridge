@@ -1,0 +1,67 @@
+.container.reviews#container
+  .reviews__main-container
+    h1.header-3.white-text = t('testimonials.title')
+    h2.header-2.white-text = t('testimonials.subtitle')
+    //check all links
+    .reviews__awards
+      = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
+        = image_tag 'index/award-4.png', class: '', alt: "Best Web Developers in Phoenix, 2022"
+      = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
+        = image_tag 'index/award-9.png', class: '', alt:  "Top IT Service Company. Arizona, US"
+      = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
+        = image_tag 'index/award-2.png', class: '', alt:  "Top IT Service Company. Arizona, US"
+      = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
+        = image_tag 'index/award-8.png', class: '', alt:  "Top IT Service Company. Arizona, US"
+      = link_to 'https://clutch.co/profile/active-bridge?utm_source=widget&utm_medium=1&utm_campaign=widget&utm_content=num_reviews#reviews', target: :_blank
+        = image_tag 'index/award-7.png', class: '', alt: "Active Bridge LLC, reviewed on Clutch.co"
+      = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
+        = image_tag 'index/award-5.png', class: '', alt: "Top Web Development Companies of USA"
+      = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+        = image_tag 'index/award-1.png', class: "", alt: "Top 30+ Web Development Companies in USA"
+      = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+        = image_tag 'index/award-6.png', class: '', alt: "Top 30+ Web Development Companies in USA"
+      = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+        = image_tag 'index/award-10.1.png', class: '', alt: "Best Mobile App Developers in Phoenix, 2022"
+
+  .reviews__testimonials-container
+    .accordion
+      - I18n.t('testimonials.all').each_with_index do |t, index|
+        .accordion__item
+          input.accordion__input id="item-#{index + 1}" type="checkbox"
+          h2.accordion__item-top
+            label for="item-#{index + 1}"
+              = t[:company]
+              span = t[:specialization]
+          .accordion__item-bottom
+            .accordion__item-customer
+              .accordion__item-photo
+                = image_tag t[:image]
+              .accordion__item-customer-name
+                p = t[:author]
+                p = t[:post]
+            .accordion__item-text = t[:description]
+
+  .reviews__solutions.info-container
+    .header-5.white-text = t('testimonials.solutions.description')
+    .carousel
+      ul.carousel__list.solutions
+        - I18n.t('testimonials.solutions.all').each_with_index do |s, index|
+          li.carousel__item data-index="#{index-(I18n.t('testimonials.solutions.all').length / 2)}"
+            .carousel__title.solutions__title
+              = s[:title]
+            .carousel__logo.solutions__logo
+              = inline_svg "index/solutions/#{s[:image]}"
+            .carousel__description.solutions__description
+              = s[:description].html_safe
+    a#all-solutions.index-solutions__button.button.white-text.violet-button href=''= t('testimonials.solutions.button')
+
+  .reviews__expertise
+    .header-3 = t('testimonials.expertise.title')
+    .header-5 = t('testimonials.expertise.description')
+    = render 'shared/expertise_cards'
+    a#expertise-link-btn.button href="#"= t('testimonials.expertise.button')
+
+  .reviews__tell-us
+    .header-5 = t('testimonials.tell-us.title')
+    .description = t('testimonials.tell-us.description')
+    a#tell-us-link-btn.button.white-text.violet-button href="#"= t('testimonials.tell-us.button')

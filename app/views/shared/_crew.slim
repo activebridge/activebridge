@@ -1,0 +1,6 @@
+.crew
+  - I18n.t('about_us.crew.all').each do |item|
+    .crew__item
+      .crew__item-photo = image_tag item[:image]
+      .crew__item-name = item[:name]
+      .crew__item-post = item[:post]

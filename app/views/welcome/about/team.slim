@@ -1,0 +1,52 @@
+.container.team
+  .team__main.wrap
+    .row
+      .header-3.white-text = t('team.title')
+      .header-2.white-text = t('team.subtitle_1')
+      .description.justify.white-text = t('team.description')
+
+  .team__help
+    .row
+      .header-2 = t('team.subtitle_2')
+
+  .team__people.wrap
+    .row
+      h1.header-3 = t('team.ab_people.title')
+      h2.header-2 = t('team.ab_people.subtitle')
+      .description = t('team.ab_people.description')
+
+  .team__crew.wrap
+    .row
+      .header-3 = t('about_us.crew.title')
+      = render 'shared/crew'
+
+  .team__important_things.wrap
+    .row
+      h2.header-2 = t('team.important_things.title')
+      .list-with-images.horizontal
+        - I18n.t('team.important_things.items').each do |item|
+          .list-with-images__item
+            .list-with-images__item-icon
+              = image_tag "team/#{item[:icon]}"
+            .list-with-images__item-text
+              .header-2 = item[:title]
+              .description = item[:description]
+  .team__photo
+
+  .team__expertise.wrap.development__cards
+    .row
+      .header-2 = t('team.expertise.title')
+      .description = t('team.expertise.description')
+      .cards-container.cards-container-2
+        - I18n.t('team.expertise.items').each do |item|
+          .card
+            .card__title-2
+              = item[:title]
+            .card__icon
+              = image_tag "team_extension/#{item[:icon]}"
+            .card__description= item[:description].html_safe
+      = link_to "#{t('team.expertise.button')}", page_path(:services), id: 'team_expertise_button', class: 'button', target: :_blank
+
+  .faq__bottom
+    = image_tag 'faq/gift.png'
+    = link_to "#{t('faq.button')}", page_path(:contact), id: 'faq_button', class: 'button white-text violet-button', target: :_blank

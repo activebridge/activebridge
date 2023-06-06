@@ -1,0 +1,18 @@
+.chart-bar.desktop-only
+  - I18n.t('expertise.dev_levels').each do |e|
+    .chart-bar__item style="background-color: #{e[:color]}; width: #{e[:percentage]};"
+      = e[:percentage]
+
+.pie-chart.mobile-only
+  span.arcitect 20%
+  span.senior 30%
+  span.middle 40%
+  span.jumior 10%
+
+.chart__items
+  - I18n.t('expertise.dev_levels').each do |ex|
+    .chart__item
+      .chart__item-color style="background-color: #{ex[:color]}"
+      .chart__item-asterisk
+        .chart__item-title= ex[:title]
+        .chart__item-description= ex[:description]

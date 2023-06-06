@@ -1,0 +1,161 @@
+.reviews {
+  &__solutions,
+  &__expertise,
+  &__testimonials-container,
+  &__tell-us { padding: 7vh 18vw; }
+
+  &__main-container {
+    min-height: 85vh;
+    height: 100%;
+    margin-top: -1em;
+    padding: 5vh 25vw;
+    background: center/cover no-repeat url('reviews/reviews-main-bg.png');
+
+    .header-3 {
+      margin-top: 10vh;
+      margin-bottom: 6vh;
+    }
+
+    .header-2 {
+      max-width: 75%;
+      font-size: 1.4em;
+    }
+  }
+
+  &__awards {
+    margin-top: 5vh;
+
+    img { max-width: 20%; }
+  }
+
+  &__solutions {
+    .header-5 { font-size: 1.6em; }
+
+    .carousel {
+      margin-bottom: 3vh;
+
+      &__item {
+        width: 30vw;
+        max-width: 380px;
+        height: 62vh;
+        max-height: 500px;
+
+        &[data-index="-1"] { transform: translateX(-75%) scale(0.9); }
+
+        &[data-index="1"] { transform: translateX(75%) scale(0.9); }
+      }
+
+      .solutions__title {
+        font-family: 'Inria Bold', serif;
+        text-transform: capitalize;
+        letter-spacing: normal;
+        font-size: 1.6em;
+      }
+
+      &__description {
+        font-size: 1.1em;
+
+        .blue-text {
+          display: inline;
+          color: $purple-heart;
+        }
+      }
+    }
+  }
+
+  &__expertise {
+    .expertise-cards {
+      justify-content: space-around;
+
+      .card {
+        padding: 3vh 3vh 5vh;
+
+        &__title-2 {
+          font-size: 1.6em;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &__tell-us {
+    background: left 100% / 100% 165% no-repeat url('reviews/reviews-bg.jpeg');
+
+    .header-5 {
+      margin-top: 5vh;
+      margin-bottom: 8vh;
+    }
+
+    .description {
+      text-align: justify;
+      padding-bottom: 10vh;
+    }
+
+    .button {
+      width: 50%;
+      background: $main-gradient;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    &__main-container,
+    &__solutions,
+    &__expertise,
+    &__testimonials-container,
+    &__tell-us { padding: 8vh 8vw; }
+
+    &__main-container {
+      .header-3 { margin-top: 0; }
+      
+      .header-2 {
+        max-width: 90%;
+        font-size: 0.8em;
+      }
+    }
+
+    &__awards img { max-width: 35%; }
+
+    &__solutions {
+      .header-5 { font-size: 1em; }
+
+      .carousel {
+        &__item {
+          width: 60vw;
+          height: 50vh;
+
+          &[data-index="-1"] { transform: translateX(-30%) scale(0.9); }
+
+          &[data-index="1"] { transform: translateX(30%) scale(0.9); }
+        }
+
+        .solutions__title { font-size: 1em; }
+
+        &__description { font-size: .7em; }
+      }
+    }
+
+    &__expertise {
+      .expertise-cards  {
+        .card {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        &__item-description {
+          margin-right: 4vh;
+          margin-left: 4vh;
+        }
+
+        .card:not(:last-child) { margin-bottom: 5vh; }
+
+        .card__title-2 { font-size: 1.2em }
+      }
+    }
+
+    &__tell-us {
+      .button { width: auto; }
+    }
+  }
+}

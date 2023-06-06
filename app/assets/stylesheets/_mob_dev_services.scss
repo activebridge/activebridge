@@ -1,0 +1,73 @@
+.mob_dev_services {
+  .header-2 { font-size: 1.25em; }
+
+  &.development .list-with-images {
+    margin: 4vh 0 0;
+
+    &__item-icon img {
+      border-radius: 20px;
+      box-shadow: none;
+    }
+  }
+
+  .header-2.with-margin {
+    margin: 5vh auto;
+    max-width: 70%;
+  }
+
+  .description.with_margin {
+    margin-top: 6vh;
+
+    &-2 {
+      margin-top: 2vh;
+      margin-bottom: 6vh;
+    }
+  }
+
+  &__main {
+    background-image: linear-gradient(-135deg, $medium_purple 28.4%, rgba($buzok, .7) 52.42%, $medium_purple 73.77%);
+
+    .header-3:not(:first-child) {
+      margin-top: 5vh;
+      font-size: 1.4em;
+    }
+  }
+
+  &__cross_platform {
+    background-image: linear-gradient($white, $palianytsia);
+  }
+
+  .dev_services__cards {
+    .header-2 { margin: 2vh 0 8vh; }
+
+    .header-2.with-margin {
+      margin: 8vh auto 0;
+    }
+  }
+
+  &__react_native {
+    background-image: linear-gradient($sky-ua, $white);
+
+    .description.with_margin { margin: 6vh 0; }
+  }
+
+  &__flutter { background-image: linear-gradient(-135deg, $moon_raker 28.4%, rgba($moon_raker, .25) 52.42%, $moon_raker 73.77%); }
+
+  &__ionic {
+    background-image: linear-gradient(135deg, $black_sea, $black_sea, $main-violet);
+
+    .description.with_margin { margin-bottom: 6vh; }
+  }
+
+  &__approaches {
+    .timeline-item:last-child:nth-child(odd)::before { bottom: 3em; }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mob_dev_services {
+    .header-2 { font-size: 1em; }
+
+    .header-3:not(:first-child) { font-size: 1.1em; }
+  }
+}

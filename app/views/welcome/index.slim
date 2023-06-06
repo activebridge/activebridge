@@ -1,96 +1,103 @@
 .container.index#container
-  .gradient_container
-  .container_index
-    .logo#logo_holder
-      .index_header= t('about_us.active_bridge')
-      .index_header_2= t('about_us.slogan')
-      .logo_container#logo_container
-        .inner#inner
-        = inline_svg 'index/welcome-logo.svg', class: 'img__logo', id: 'logo'
-      .description-text.mobile-only
-        .text= t('about_us.information.first')
-        .spacer
-        = inline_svg 'index/mobile_home_page_line_1.svg', class: 'home_page_line'
-      a.mobile-only.btn-work href='contact'
-        b= t('blog.footer.contact_us')
-      br
-      a.desktop-only.btn-work href='#about_us'
-        b= t('about_us.about')
-  .desktop-only
-    .about_us_container#about_us
-      .description-container
-        .description-img
-          = inline_svg 'index/coding.svg', class: 'index-icon left'
-        .description-text
-          .text=t('about_us.information.first')
-          .spacer
-          = inline_svg 'index/home_page_line_1.svg', class: 'home_page_line'
-      .description-container
-        .description-text
-          .text= t('about_us.information.second')
-          .spacer
-          = inline_svg 'index/home_page_line_2.svg', class: 'home_page_line'
-        .description-img
-          = inline_svg 'index/globe.svg', class: 'index-icon right'
-      .description-container.d-block
-        .description-text.d-block=t('about_us.information.third').html_safe
-        .description-img-awards
-          .awards-img
-            = link_to 'https://www.topdevelopers.co/directory/web-development-companies', target: :_blank
-              = image_tag 'index/award-1.png', class: 'index-icon left', alt: "Top Web Developers on TopDevelopers.co"
-            = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
-              = image_tag 'index/award-2.png', class: 'index-icon left', alt:  "Top IT Service Company. Arizona, US"
-            = link_to 'https://jobs.dou.ua/companies/active-bridge/', target: :_blank
-              = image_tag 'index/award-3.png', class: 'index-icon left', alt: "Top IT Employer, Ukraine"
-            = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
-              = image_tag 'index/award-4.png', class: 'index-icon left', alt: "Best Web Developers in Phoenix, 2020"
-            = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
-              = image_tag 'index/award-5.png', class: 'index-icon left', alt: "Top Web Development Companies of USA"
-            = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
-              = image_tag 'index/award-6.png', class: 'index-icon left', alt: "Top 30+ Web Development Companies in USA"
-          .clutch-widget.desktop-only data-clutchcompany-id="146632" data-height="50" data-url="https://widget.clutch.co" data-widget-type="1"
-    .solutions_and_benefits#solutions_and_benefits
-      .solutions
-        .header_2= t('about_us.solutions_and_benefits.solutions_title')
-        .item-container
-          - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, index|
-            .item-holder
-              .logo_container
-                - (1..100).each do |cell|
-                  = link_to '', "##{id_name(el[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
-                .inner
-                  = inline_svg(('index/solutions'+ (index+1).to_s + '.svg'), class: 'tetris')
-              span
-                a href="##{id_name(el[:title])}"= el[:title]
-      .benefits
-        .header_2= t('about_us.solutions_and_benefits.benefits_title')
-        .item-container
-          - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, index|
-            .item-holder
-              .logo_container
-                - (1..100).each do |cell|
-                  = link_to '', "##{id_name(el[:title])}", class: "reflection-grid-cell reflection-grid-cell-#{cell}"
-                .inner
-                  = inline_svg(('index/benefits'+ (index+1).to_s + '.svg'), class: 'tetris')
-              span
-                a href="##{id_name(el[:title])}"= el[:title]
-      .solutions_and_benefits_desc
-        - I18n.t('about_us.solutions_and_benefits.solutions').each_with_index do |el, i|
-          .informational_container id='#{id_name(el[:title])}'
-            = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.solutions')[i-1][:title])}", class: 'prev'
-            = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.solutions'), i)[:title])}", class: 'next'
-            .about-item
-              .title= el[:title]
-              hr
-              .description= el[:desc].html_safe
-        = link_to '', '#index', class: 'close_description', id: 'solutions'
-        - I18n.t('about_us.solutions_and_benefits.benefits').each_with_index do |el, i|
-          .informational_container id='#{id_name(el[:title])}'
-            = link_to '', "##{item_name(I18n.t('about_us.solutions_and_benefits.benefits')[i-1][:title])}", class: 'prev'
-            = link_to '', "##{item_name(next_item(I18n.t('about_us.solutions_and_benefits.benefits'), i)[:title])}", class: 'next'
-            .about-item
-              .title= el[:title]
-              hr
-              .description= el[:desc]
-        = link_to '', '#index', class: 'close_description', id: 'benefits'
+  .home-page-container.wrap
+    .row
+      = inline_svg 'index/simple-logo.svg', class: 'index-logo'
+      .header-1.index-header= t('index.active_bridge')
+      h1.header-2 = t('index.professional_team')
+      p.description.with-margin = t('index.teams_expertise')
+      = link_to "#{t('index.free_consultation')}", page_path(:contact), id: 'index-free-consultation', class: 'button', target: :_blank
+      //need to check all links
+
+      .awards-img
+        = link_to 'https://clutch.co/profile/active-bridge#reviews', target: :_blank
+          = image_tag 'index/award-2.png', class: 'index-icon left', alt:  "Top IT Service Company. Arizona, US"
+        = link_to 'https://www.expertise.com/az/phoenix/web-developers', target: :_blank
+          = image_tag 'index/award-4.png', class: 'index-icon left', alt: "Best Web Developers in Phoenix, 2022"
+        = link_to 'https://selectedfirms.co/companies/web-development/usa', target: :_blank
+          = image_tag 'index/award-5.png', class: 'index-icon left', alt: "Top Web Development Companies of USA"
+        = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+          = image_tag 'index/award-6.png', class: 'index-icon left', alt: "Top 30+ Web Development Companies in USA"
+        = link_to 'https://clutch.co/profile/active-bridge?utm_source=widget&utm_medium=1&utm_campaign=widget&utm_content=num_reviews#reviews', target: :_blank
+          = image_tag 'index/award-7.png', class: 'index-icon left', alt: "Active Bridge LLC, reviewed on Clutch.co"
+        = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+          = image_tag 'index/award-1.png', class: "index-icon left #{mobile? ? 'mobile-only' : ''}", alt: "Top 30+ Web Development Companies in USA"
+        = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
+          = image_tag 'index/award-10.1.png', class: "index-icon left #{mobile? ? 'mobile-only' : ''}", alt: "Best Mobile App Developers in Phoenix, 2022"
+
+  .info-container.index-home.wrap
+    .row
+      .header-5.index-testimonials__header.white-text= t('testimonials.help_startups')
+      .description.white-text = t('testimonials.testimonials_description')
+      .carousel
+        ul.carousel__list.testimonials-carousel
+          - I18n.t('testimonials.all').each_with_index do |t, index|
+            li.carousel__item data-index="#{index-(I18n.t('testimonials.all').length / 2)}"
+              .carousel__image
+                = image_tag t[:image]
+              .carousel__logo class="#{t[:class]}"
+                = image_tag t[:logo]
+              .carousel__description
+                = t[:description]
+      = link_to "#{t('testimonials.button')}", page_path(:reviews), id: 'index-read-testimonials', class: 'button white-text violet-button', target: :_blank
+
+  .index-technologies__container
+    .row
+      .index-technologies
+        h2.header-3 = t('index.our_vision')
+        h3.header-4 = t('index.care_about_your_projects')
+        .description.justify.index-technologies__description = t('index.dedicated_developers')
+        h2.header-4 = t('index.core_technology')
+        .description.justify.index-technologies__description = t('index.technologies_knowledge')
+        .header-3= t('index.featured_technologies')
+      .index-technologies__holder
+        .index-technologies__photo
+          = image_tag 'index/technologies_photo.jpeg'
+        .index-technologies__items
+          = render 'shared/technologies', step: 3
+          .index-technologies__more
+            = link_to "#{t('index.learn_more')}", page_path(:expertise), id: 'index-more-technologies', class: 'button light-purple-button', target: :_blank
+
+  .index-services.wrap
+    .row
+      h2.header-5 = t('index.expert_web_services')
+      .description.justify-center = t('index.embedded_teams')
+      .header-3 = t('index.our_services')
+      .index-services__container
+        - I18n.t('index.services').each do |service|
+          .card.index-services__item
+            .card__title-2.purple-heart = service[:title]
+            .card__description.index-services__item-description = service[:description].html_safe
+      = link_to "#{t('index.view_services')}", page_path(:services), id: 'index-view-services', class: 'button index-services__button', target: :_blank
+
+  .info-container.index-about-us.wrap
+    .row
+      .header-3.white-text= t('index.our_company')
+      .index-about-us__description= t('index.about_us_description')
+      .about_us_info.desktop-only
+        = render 'shared/about_us_info'
+        = link_to "#{t('index.more_about_us')}", page_path(:about), id: 'index-more-about-us-desktop', class: 'button white-text violet-button', target: :_blank
+
+  .index-about-us-info.mobile-only
+    .row
+      .about_us_info
+        = render 'shared/about_us_info'
+        = link_to "#{t('index.more_about_us')}", page_path(:about), id: 'index-more-about-us-mob', class: 'button white-text violet-button', target: :_blank
+
+  .index-solutions.wrap
+    .row
+      .index-solutions__holder
+        h2.header-2= t('index.build_great_product')
+        .description= t('index.help_businesses')
+        .carousel
+          ul.carousel__list.solutions
+            - I18n.t('index.solutions').each_with_index do |s, index|
+              li.carousel__item data-index="#{index-(I18n.t('index.solutions').length / 2)}"
+                .carousel__title.solutions__title
+                  = s[:title]
+                .carousel__logo.solutions__logo
+                  = image_tag "index/solutions/#{s[:logo]}"
+                .carousel__description.solutions__description
+                  = s[:description].html_safe
+        = link_to "#{t('index.view_all_solutions')}", page_path(:solutions), id: 'index-all-solutions', class: 'index-solutions__button button white-text violet-button', target: :_blank
+
   script src="https://widget.clutch.co/static/js/widget.js" type="text/javascript"

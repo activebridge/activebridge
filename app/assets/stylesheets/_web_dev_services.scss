@@ -1,0 +1,210 @@
+.web_dev_services {
+  &__list {
+    .header-3 { margin-bottom: 5vh; }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+
+      img {
+        max-width: 250px;
+        width: 33vw;
+      }
+    }
+
+    &-text {
+      margin-top: 5vh;
+      padding-left: 8vw;
+      font-size: 1.1em;
+      text-align: justify;
+    }
+
+    &-item:not(:last-child) { margin-bottom: 1.5em; }
+  }
+
+  &__main {
+    background-image: linear-gradient(to right top, $moon_raker, #F7EFFC, $moon_raker);
+
+    .description { margin: 8vh 0; }
+  }
+
+  &__web_solutions {
+    background-image: linear-gradient(to bottom, $white, $palianytsia);
+    box-shadow: 0px 0px 15px 0px $moon_raker;
+
+
+    .header-2 {
+      font-size: 1.3em;
+      line-height: 1.6;
+
+      &:first-child {
+        max-width: 75%;
+        margin-bottom: 7vh;
+      }
+
+      &:last-child { margin-top: 7vh; }
+    }
+
+    img {
+      max-width: 25em;
+      width: 100%;
+      mix-blend-mode: luminosity;
+    }
+  }
+
+  &__full_stack {
+    background: center/cover no-repeat url('web_development_services/web_dev_bg.png');
+    margin-top: -2vh;
+    margin-bottom: -2vh;
+
+    .header-3 {
+      margin-bottom: 5vh;
+      font-size: 1.8em;
+    }
+
+    .description {
+      margin-bottom: 1.5em;
+      color: $buzok;
+    }
+
+    &-list {
+      list-style: none;
+      margin: 7vh 0;
+      padding-left: 7vw;
+
+      &-item {
+        position: relative;
+        margin-bottom: 2.5vh;
+        color: $white;
+        font-size: 1.1em;
+        line-height: 1.8;
+        text-align: justify;
+
+        span {
+          position: absolute;
+          left: -7.5vw;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 3em;
+          height: 3em;
+          background: center/cover no-repeat url('web_development_services/tick.png');
+          mix-blend-mode: luminosity;
+        }
+      }
+    }
+  }
+
+  &__customized_approach {
+    background-image: linear-gradient(to bottom, $buzok, $white, $white);
+    box-shadow: inset -6px 20px 15px -12px #6b6897;
+  }
+
+  &__technologies {
+    background: center/cover no-repeat url('web_development_services/web_dev_bg.jpeg');
+
+    .header-2 { margin-bottom: 8vh; }
+
+    .button {
+      margin-top: 8vh;
+      background: $main-gradient;
+    }
+  }
+
+  &__our_approach {
+    background: $main-gradient;
+    box-shadow: 0px 0px 20px -3px #6b6897;
+
+    .header-2 { margin-bottom: 8vh; }
+
+    .description:not(:last-child) { margin-bottom: 1.5em; }
+  }
+
+  &__solutions {
+    background-image: linear-gradient(to bottom, rgba($moon_raker, .5), $white);
+    box-shadow: inset -6px 12px 15px -12px #6b6897;
+
+    .header-2 {
+      font-size: 1.3em;
+      line-height: 1.6;
+    }
+
+    .about_us_info__container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 7vh;
+    }
+
+    .about_us_info__items { flex-direction: column; }
+
+    .about_us_info__item {
+      width: 24%;
+      flex-direction: column;
+      color: $purple-heart;
+
+      svg { margin-bottom: .5em; }
+    }
+  }
+
+  &__industries { padding: 0 18vw 10vh; }
+}
+
+@media screen and (max-width: 600px) {
+  .web_dev_services {
+    &__list {
+      &-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      &-text {
+        padding-inline-start: 1em;
+        font-size: 0.9em;
+
+        &.list_with_columns {
+          columns: 2;
+
+          li:nth-last-child(-n+4) { margin-left: 2vh; }
+        }
+      }
+    }
+
+    &__main {
+      .description {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+      }
+    }
+
+    &__web_solutions img { width: 55vw; }
+
+    &__full_stack {
+      margin-top: -3vh;
+      margin-bottom: -5vh;
+      background-position: 77% 75%;
+
+      &-list {
+        padding-inline-start: 0;
+
+        &-item {
+          font-size: .9em;
+          margin-top: 10vh;
+          margin-bottom: 10vh;
+
+          span {
+            left: 50%;
+            transform: translate(-50%);
+            top: -8vh;
+          }
+        }
+      }
+    }
+
+    &__technologies svg.mobile-only  { max-width: 78vw; }
+
+    &__solutions {
+      .about_us_info__item { width: 45%; }
+    }
+  }
+}

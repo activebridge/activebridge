@@ -1,0 +1,78 @@
+.container.about#container
+  .info-container.wrap
+    .row
+      h1.header-3.white-text = t('about_us.about')
+      h1.about__header = t('about_us.header')
+      .about__description = t('about_us.description')
+      .about_us_info
+        = render 'shared/about_us_info'
+
+  .about__vision.wrap
+    .row
+      .about__vision-description.about__description = t('about_us.information.first')
+      .about__vision-description.about__description = t('about_us.information.second')
+      h2.header-3 = t('about_us.company_vision.title')
+      h2.header-2 = t('about_us.company_vision.subtitle')
+      .about__vision-description.about__description.about__description-cera = t('about_us.company_vision.description')
+      .chart-container
+        = render 'shared/expertise_chart'
+        = link_to t('about_us.company_vision.button'), page_path(:expertise), class: "button"
+
+  .about__crew.wrap
+    .row
+      .about__description = t('about_us.crew.description')
+      .header-3.white-text = t('about_us.crew.title')
+      = render 'shared/crew'
+      //= link_to t('about_us.crew.button'), page_subitem_path(:team), class: "button about__crew-button"
+
+  .about__benefits.wrap
+    .overlay
+    .row
+      .header-3 = t('about_us.benefits.title')
+      h2.header-2 = t('about_us.benefits.subtitle')
+      .about__vision-description.about__description.about__description-cera = t('about_us.benefits.description')
+      .accordion
+        - I18n.t('about_us.benefits.all').each_with_index do |b, index|
+          .accordion__item
+            input.accordion__input id="item-#{index + 1}" type="checkbox"
+            h2.accordion__item-top
+              label for="item-#{index + 1}"
+                = b[:title]
+            .accordion__item-bottom
+              .accordion__item-text = b[:description]
+
+  .about__key-facts.wrap
+    .row
+      .header-3.white-text = t('about_us.key_facts.title')
+      h2.header-2.white-text = t('about_us.key_facts.subtitle')
+      ul.about__key-facts-list
+        - I18n.t('about_us.key_facts.all').each do |fact|
+          li.about__key-facts-item
+            .about__key-facts-item-img
+              = inline_svg fact[:image]
+            .about__key-facts-item-text.white-text
+              .about__key-facts-item-title = fact[:title].html_safe
+              .about__key-facts-item-description = fact[:description]
+
+  .about__testimonials.wrap
+    .row
+      .header-5.about__testimonials-title = t('testimonials.help_startups')
+      .description = t('testimonials.testimonials_description')
+      .carousel
+        ul.carousel__list.testimonials-carousel
+          - I18n.t('testimonials.all').each_with_index do |t, index|
+            li.carousel__item data-index="#{index-(I18n.t('testimonials.all').length / 2)}"
+              .carousel__image
+                = image_tag t[:image]
+              .carousel__logo class="#{t[:class]}"
+                = image_tag t[:logo]
+              .carousel__description
+                = t[:description]
+      = link_to t('testimonials.button'), page_path(:reviews), id: "about-read-testimonials", class: "button"
+
+  .about__culture.wrap
+    .row
+      .about__culture-text
+        .about__culture-title = t('about_us.culture.title')
+        .about__culture-description = t('about_us.culture.description')
+      = link_to t('about_us.culture.button'), page_path(:contact), class: "button about__culture-button"
