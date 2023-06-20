@@ -101,7 +101,7 @@ en:
             title: Full-Stack Web Application Development | Active Bridge
             description: Our neatly organized web project development process allows us to deliver scalable reliable
                          applications faster.  Developers’ expertise is our main asset.
-      contact:
+      contacts:
         title: Contact us to Get Free Project Consultation | Active Bridge
         description: Got an amazing project idea? Contact us and get a tech consultation from an experienced full-stack
                      solution specialist
@@ -180,7 +180,7 @@ en:
         title: Full-stack Web Developers on demand | Active Bridge, LLC
         description: Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
                      mobile developers for your in-house teams. Learn more
-      contact:
+      contacts:
         title: Hire Full-Stack Developers in 48 hours | Active Bridge, LLC
         description: Active Bridge is your full-stack development partner, providing IT staff augmentation services and
                      helping to scale your team
@@ -404,7 +404,7 @@ en:
             "url": "activebridge.org/about"
           }
         ]'
-      services:
+      contacts:
         '[
           {
             "@context": "http://schema.org",
