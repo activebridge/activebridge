@@ -10,6 +10,13 @@ en:
     Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
   navbar:
+    items:
+      - about
+      - expertise
+      - services
+      - solutions
+      - faq
+      - blog
     links:
       - page: About
         link: /about
@@ -170,19 +177,16 @@ en:
         description: Browse our blog for advanced staff augmentation insights, web and software development tips,
                      mobile design and development features, learn more
         categories:
-          web-development:
+          engineering:
             title: Learn About APIs, OOP, Browsers, Encryption & More | Active Bridge Blog
-            description: Web system and web application development blog that has articles and tutorials about the
-                         latest web technics and possibilities
-          staff-augmentation:
+            description: Web system and web application development blog that has articles and tutorials about the latest web technics and possibilities
+          pm-and-team-management:
             title: Learn About IT Staff Augmentation Solutions to Achieve Your Business Goals | Active Bridge Blog
-            description: Staff Augmentation services enables you to find qualified and experienced people who can
-                         seamlessly work as your team. Learn more
-          business-analytics:
+            description: Staff Augmentation services enables you to find qualified and experienced people who can seamlessly work as your team. Learn more
+          business-and-growth:
             title: Learn about business analytics methods to make better decisions | Active Bridge Blog
-            description: This business analytics blog introduces quantitative methods to analyze data and make better
-                         decisions. Learn more
-          insights:
+            description: This business analytics blog introduces quantitative methods to analyze data and make better decisions. Learn more
+          inside-ab:
             title: Learn about Company Events, Programs and Achievements | Active Bridge
             description: Latest information about company events, programs, achievements and much more. Keep in touch
         image_alt_tag: IT staffing services, dedicated development teams | Active Bridge LLC
@@ -3619,19 +3623,82 @@ en:
       button: See our services
   blog:
     categories:
-      web-development: Web Development
-      staff-augmentation: Staff Augmentation
-      business-analytics: Business Analytics
-      insights: Insights
+      engineering: Engineering
+      pm-and-team-management: Pm & Team management
+      business-and-growth: Business & Growth
+      inside-ab: Inside AB
     recommended: RECOMMENDED POSTS
-    footer:
-      pages:
-        services: Services
-        team: Team
-        portfolio: Portfolio
-      title: Active Bridge is a premium web development company, providing Ruby on Rails technology and integrating design and search optimization practice to deliver rapid, cost-effective results in an iterative manner.
-      company: Company
-      contacts: Contacts
+    blog: Blog
+    blog_launch: We launched this blog as a repository of helpful content shared by our experts and partners.
+    collection_of_articles: A collection of articles on
+    articles_themes:
+      - Ruby on Rails and add-on technologies,
+      - Agile management methodology,
+      - UX/UI,
+      - Web development best practises.
+    categories_title: 'Categories:'
+    article:
+      author: 'Author:'
+      published: 'Published:'
+      time_to_read: 'Time to read:'
+      mins_to_read: '%{minutes} min.'
+      most_popular_articles: Most popular on the blog
+      home: Home
+      contents: 'Contents:'
+      share: 'Share:'
+  footer:
+    navigation:
+      links:
+        - page: About
+          link: /
+          items:
+            - section: Team
+              link: /team
+        - page: Expertise 
+          link: /expertise
+          items:
+        - page: Services
+          link: /services
+          items:
+            - section: Web Development
+              link: /services#web_development
+            - section: RoR development
+              link: /services#ror_development
+            - section: Mobile App Development
+              link: /services#mobile_app_development
+            - section: Staff Augmentation
+              link: /services#staff_augmentation
+            - section: Project Development
+              link: /services#project_development
+        - page: Solutions
+          link: /
+          items: 
+            - section: Healthcase
+              link: /
+            - section: SaaS
+              link: /
+            - section: Marketplace
+              link: /
+            - section: E-commerce
+              link: /
+            - section: Logistic / Travel
+              link: /
+            - section: Education / Fintech
+              link: /
+      reviews: Reviews
+      blog: Blog
+      social_icons:
+        - link: https://www.linkedin.com/company/active-bridge
+          icon: linkedin
+        - link: https://github.com/activebridge
+          icon: github
+        - link: https://www.facebook.com/ActiveBridgeTeam
+          icon: facebook
+        - link: https://www.instagram.com/active.bridge
+          icon: instagram
+        - link: https://twitter.com/activebridge
+          icon: twitter
+    contact_info:
       email: contact@active-bridge.com
       mobile: '+18888053503'
       contact_us: Contact Us
