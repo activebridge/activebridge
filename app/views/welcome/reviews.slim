@@ -23,7 +23,7 @@
       = link_to 'https://topfirms.co/companies/web-development/usa', target: :_blank
         = image_tag 'index/award-10.1.png', class: '', alt: "Best Mobile App Developers in Phoenix, 2022"
 
-  .reviews__testimonials-container
+  .reviews__testimonials-container.wrap
     .accordion
       - I18n.t('testimonials.all').each_with_index do |t, index|
         .accordion__item
@@ -41,7 +41,7 @@
                 p = t[:post]
             .accordion__item-text = t[:description]
 
-  .reviews__solutions.info-container
+  .reviews__solutions.info-container.wrap
     .header-5.white-text = t('testimonials.solutions.description')
     .carousel
       ul.carousel__list.solutions
@@ -50,18 +50,18 @@
             .carousel__title.solutions__title
               = s[:title]
             .carousel__logo.solutions__logo
-              = inline_svg "index/solutions/#{s[:image]}"
+              = image_tag "index/solutions/#{s[:image]}"
             .carousel__description.solutions__description
               = s[:description].html_safe
     a#all-solutions.index-solutions__button.button.white-text.violet-button href=''= t('testimonials.solutions.button')
 
-  .reviews__expertise
+  .reviews__expertise.wrap
     .header-3 = t('testimonials.expertise.title')
     .header-5 = t('testimonials.expertise.description')
     = render 'shared/expertise_cards'
     a#expertise-link-btn.button href="#"= t('testimonials.expertise.button')
 
-  .reviews__tell-us
+  .reviews__tell-us.wrap
     .header-5 = t('testimonials.tell-us.title')
     .description = t('testimonials.tell-us.description')
     a#tell-us-link-btn.button.white-text.violet-button href="#"= t('testimonials.tell-us.button')

@@ -19,7 +19,7 @@
               .carousel__title.services__title
                 = s[:title]
               .carousel__logo.services__logo
-                = inline_svg "services/web_dev/#{s[:icon]}"
+                = image_tag "services/web_dev/#{s[:icon]}"
               .carousel__description.solutions__description
                 = s[:description].html_safe
       a#more-web-services.button.white-text.violet-button href='/services/web-development' = t('services.learn_more')
@@ -35,7 +35,7 @@
               .carousel__title.services__title
                 = r[:title]
               .carousel__logo.services__logo
-                = inline_svg "services/custom_ror_dev/#{r[:icon]}"
+                = image_tag "services/custom_ror_dev/#{r[:icon]}"
               .carousel__description.solutions__description
                 = r[:description].html_safe
       a#more-ror-services.button.white-text.violet-button href='/services/ruby-on-rails-development' = t('services.learn_more')
@@ -50,7 +50,7 @@
             .card__title-2.purple-heart
               = m[:title]
             .card__icon
-              = inline_svg "services/mobile_dev_services/#{m[:icon]}"
+              = image_tag "services/mobile_dev_services/#{m[:icon]}"
             .card__description= m[:description]
       a#more-dev-services.button.white-text.violet-button href='/services/mobile-app-development' = t('services.learn_more')
 

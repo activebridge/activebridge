@@ -9,9 +9,8 @@
           .about_us_info__container
             - I18n.t('solutions.main.all').each do |item|
               .about_us_info__item
-                = inline_svg item[:logo]
+                = image_tag item[:logo]
                 = item[:text]
-        //check links
         .solutions__awards.desktop-only
           = link_to 'https://clutch.co/profile/active-bridge?utm_source=widget&utm_medium=1&utm_campaign=widget&utm_content=num_reviews#reviews', target: :_blank
             = image_tag 'solutions/award-1.png', class: '', alt:  "Active Bridge LLC, reviewed on Clutch.co"
@@ -41,7 +40,7 @@
               h2.carousel__title.inria
                 = i[:title]
               .carousel__logo.solutions__logo
-                = inline_svg "solutions/#{i[:icon]}.svg"
+                = image_tag "solutions/#{i[:icon]}"
               .carousel__description.solutions__description
                 = i[:description].html_safe
       .header-2 = t('solutions.industries.subtitle_1')
@@ -109,7 +108,7 @@
               .carousel__title.inria
                 = s[:title]
               .carousel__logo.services__logo
-                = inline_svg "solutions/#{s[:icon]}.svg"
+                = image_tag "solutions/#{s[:icon]}"
               .carousel__description.solutions__description
                 = s[:description].html_safe
       = link_to "#{t('solutions.services.more_button')}", page_path(:services), id: "solutions_services_button", class: 'button violet-button white-text', target: :_blank

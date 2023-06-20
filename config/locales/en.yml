@@ -49,7 +49,7 @@ en:
       - page: FAQ
         link: /faq
       - page: Blog
-        link: /
+        link: /blog
     reviews: Reviews
     faq: FAQ
     blog: Blog
@@ -850,7 +850,7 @@ en:
                           unstoppable drive to provide effective web solutions for our clients. Since then, we’ve successfully assisted
                           our clients in developing and maintaining websites and web-based systems, mobile applications, and software products.
     about_us_items:
-      - logo: index/about-us-9+.svg
+      - logo: index/about-us-8.svg
         text: years of remote development
       - logo: index/about-us-10+.svg
         text: years of Ruby on Rails experience
@@ -914,8 +914,6 @@ en:
               link: /solutions/ecommerce-crm-platform-case
             - section: Logistic / Travel
               link: /solutions/taxi-booking-platform-case
-            - section: Education / Fintech
-              link: /
       reviews: Reviews
       faq: FAQ
       blog: Blog
@@ -1481,15 +1479,15 @@ en:
                           experience in the development of technically complex, ergonomic, and user-friendly applications.
       all:
         - title: Full-stack expertise
-          icon: full-stack.svg
+          icon: full_stack_expertise.png
           description: We are all set to assist you with needed expertise in front-end and back-end technologies,
                        put together as a solo solution.
         - title: Application development and integration
-          icon: web-dev.svg
+          icon: app_dev_integration.png
           description: We have the experience, knowledge, and ability to perform enterprise application development
                        and APIs integration
         - title: Scalability and flexibility
-          icon: scalability.svg
+          icon: scalability_flexibility.png
           description: Using a microservice architecture, we provide easily expandable and scalable development solutions
     learn_more: Learn more
     custom_ror_dev_services:
@@ -1499,15 +1497,15 @@ en:
                    development and deployment. We're able to create websites of any complexity.
       all:
         - title: Ruby on Rails Migrations
-          icon: ror-migration.svg
+          icon: ror_migrations.png
           description: We help you migrate legacy projects to the cloud and mobile-ready solutions, transform your organization with
                        custom solutions that run quickly and smoothly on Ruby on Rails.
         - title: Custom Ruby on Rails development
-          icon: ror.svg
+          icon: custom_ror_dev.png
           description: We have a team of Senior/Middle RoR developers providing complete and effective web solutions built on reliable, robust,
                        portable, and maintainable code for startups as well as enterprises.
         - title: Ruby on Rails application delivery and support
-          icon: delivery-and-support.svg
+          icon: ror_delivery_support.png
           description: We maintain the integrity of our code and provide regular technology updates, website speed optimization, backups,
                        user experience improvements, security improvements, and more.
     mobile_dev_services:
@@ -1518,11 +1516,11 @@ en:
                    and to reach more users without loss of quali
       all:
         - title: Launching an application on various platforms
-          icon: cross-platform.svg
+          icon: launching_on_various_platforms.png
           description: Our developers write one source code for all platforms. You don’t need to hire separate tech teams for each platform,
                        as it’s possible to launch and update an application by using a variety of cross-platform development tools.
         - title: Flutter, Ionic & React Native for mobile app development
-          icon: flutter-ionic-react.svg
+          icon: flutter_ionic_react.png
           description: We use technologies that significantly speed up development time and cut time to market, which benefits everyone,
                        from the dev team all the way to sales and marketing.
     engagement_models:
@@ -1975,11 +1973,11 @@ en:
     main:
       all:
         - text: projects
-          logo: solutions/about_us_purple_1.svg
+          logo: solutions/about_us_purple_1.png
         - text: years of average project duration
-          logo: solutions/about_us_purple_2.svg
+          logo: solutions/about_us_purple_2.png
         - text: years of remote development experience
-          logo: solutions/about_us_purple_3.svg
+          logo: solutions/about_us_purple_3.png
     industries:
       title: Industries
       all:
@@ -2114,15 +2112,15 @@ en:
           description: We come to you with 9+ years of Ruby on Rails experience. Ruby is a dynamic, interpretable, high-level
                        programming language. Rails is a framework created for rapid web application development and deployment.
                        We're able to create websites of any complexity.
-          icon: ror
+          icon: custom_ror_dev_services.png
         - title: Mobile application development services
           description: We provide <span class="blue-text">cross-platform mobile application development services</span> so you
                        can reach your customers on their favorite devices.
-          icon: cross-platform
+          icon: mobile_app_dev_services.png
         - title: Web application development services
           description: We’re motivated to scale your business, as we are more than just a <span class="blue-text">web development
                        service provider.</span>
-          icon: cross-platform
+          icon: web_app_dev_services.png
       more_button: Learn more about our services
   faq:
     title: Faq
@@ -2352,13 +2350,13 @@ en:
     solutions:
       title: With a proven process and commitment to quality code, we help you to become a digital stand-out with the right web development solutions
       all:
-        - logo: web_development_services/solution_1.svg
+        - logo: web_development_services/solution_1.png
           text: full-stack engineers
-        - logo: web_development_services/solution_3.svg
+        - logo: web_development_services/solution_3.png
           text: years of remote development
-        - logo: web_development_services/solution_2.svg
+        - logo: web_development_services/solution_2.png
           text: years average project duration
-        - logo: web_development_services/solution_4.svg
+        - logo: web_development_services/solution_4.png
           text: senior/middle experience level
       awards:
         - logo: web_development_services/award-1.png
@@ -3661,16 +3659,21 @@ en:
       business-analytics: Business Analytics
       insights: Insights
     recommended: RECOMMENDED POSTS
-    footer:
-      pages:
-        services: Services
-        team: Team
-        portfolio: Portfolio
-      title: Active Bridge is a premium web development company, providing Ruby on Rails technology and integrating design and search optimization practice to deliver rapid, cost-effective results in an iterative manner.
-      company: Company
-      contacts: Contacts
-      email: contact@active-bridge.com
-      mobile: '+18888053503'
-      contact_us: Contact Us
-      follow: Stay tuned
-      copyright: '© 2018 Active Bridge, LLC'
+    blog: Blog
+    blog_launch: We launched this blog as a repository of helpful content shared by our experts and partners.
+    collection_of_articles: A collection of articles on
+    articles_themes:
+      - Ruby on Rails and add-on technologies,
+      - Agile management methodology,
+      - UX/UI,
+      - Web development best practises.
+    categories_title: 'Categories:'
+    article:
+      author: 'Author:'
+      published: 'Published:'
+      time_to_read: 'Time to read:'
+      mins_to_read: '%{minutes} min.'
+      most_popular_articles: Most popular on the blog
+      home: Home
+      contents: 'Contents:'
+      share: 'Share:'

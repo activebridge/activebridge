@@ -12,8 +12,8 @@ footer.footer
           = link_to link[:page], "#{link[:link]}", class: "footer__navigation-link bold"
 
     li.footer__navigation-last-item.desktop-only
-      a.footer__navigation-link.bold href='#' = t('footer.navigation.faq')
-      a.footer__navigation-link.bold= t('footer.navigation.reviews')
+      a.footer__navigation-link.bold href="#{t('footer.navigation.faq').downcase}"  = t('footer.navigation.faq')
+      a.footer__navigation-link.bold href="#{t('footer.navigation.reviews').downcase}" = t('footer.navigation.reviews')
       a.footer__navigation-link.bold href="#{t('footer.navigation.blog').downcase}" = t('footer.navigation.blog')
       .footer__navigation-social-icons.desktop-only
         - I18n.t('footer.navigation.social_icons').each do |item|
