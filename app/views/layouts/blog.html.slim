@@ -4,9 +4,8 @@ html
   body.blog
     = render 'shared/gtag_iframe'
     = render 'shared/blog/header'
-    main.main
-      .yield
-        = yield
+    main.main class=controller.action_name
+      = yield
     .spacer
     = render 'shared/blog/footer'
     = javascript_include_tag :blog

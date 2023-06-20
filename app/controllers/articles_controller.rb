@@ -20,4 +20,9 @@ class ArticlesController < ApplicationController
     @recommended_articles ||= Article.by_category(article.category).recommended(article)
   end
   helper_method :recommended_articles
+  
+  def most_popular_articles
+    @most_popular_articles ||= Article.order('viewed DESC').first(3)
+  end
+  helper_method :most_popular_articles
 end
