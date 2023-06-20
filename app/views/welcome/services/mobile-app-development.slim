@@ -90,7 +90,6 @@
           .card__title-2
             = a[:title]
           .card__description= a[:description].html_safe
-          //change links
           = link_to t('web_dev_services.button'), page_path(:expertise), class: "button"
 
   .development__offer
@@ -105,6 +104,5 @@
               = i[:title]
             .carousel__description
               = i[:description].html_safe
-            //each item's button linked to different page
             = link_to t('web_dev_services.button'), page_path(:expertise), class: "button white-text"
-    = link_to t('services.approaches.button'), page_path(:contact), class: "button dev_services__carousel-btn"
+    = link_to t('services.approaches.button'), page_path(:contacts), class: "button dev_services__carousel-btn"

@@ -1,12 +1,12 @@
 {
   "short_name": "ActiveBridge",
   "name": "ActiveBridge, LLC",
-  "background_color": "#433B43",
-  "theme_color": "#433B43",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "icon-2x.png",
-      "sizes": "96x96",
+      "sizes": "70x70",
       "type": "image/png"
     },
     {

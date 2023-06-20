@@ -1,28 +1,41 @@
 footer.footer
-  .navigation
-    - I18n.t('footer.navigation.links').each do |n|
-      .navigation__container
-        a.footer__item.bold href=n[:link] = n[:page]
-        - if n[:items]
-          - n[:items].each do |item|
-            a.footer__item href=item[:link] = item[:section]
-    .navigation__container
-      a.footer__item.bold= t('footer.navigation.reviews')
-      a.footer__item.bold href="#{t('footer.navigation.blog').downcase}" = t('footer.navigation.blog')
-      .navigation__social-icons
+  ul.footer__navigation
+    - I18n.t('navbar.links').each do |link|
+      li.footer__navigation-item.desktop-only
+        - if link[:items]
+          = link_to link[:page], "#{link[:link]}", class: "footer__navigation-link bold"
+
+          ul.footer__navigation-subitems
+            - link[:items].each do |item|
+              li = link_to item[:section], "#{item[:link]}", class: 'footer__navigation-sub-link'
+        - else
+          = link_to link[:page], "#{link[:link]}", class: "footer__navigation-link bold"
+
+    li.footer__navigation-last-item.desktop-only
+      a.footer__navigation-link.bold href='#' = t('footer.navigation.faq')
+      a.footer__navigation-link.bold= t('footer.navigation.reviews')
+      a.footer__navigation-link.bold href="#{t('footer.navigation.blog').downcase}" = t('footer.navigation.blog')
+      .footer__navigation-social-icons.desktop-only
         - I18n.t('footer.navigation.social_icons').each do |item|
           a href=item[:link]
             = inline_svg "social_icons/#{item[:icon]}.svg"
+
+    li.footer__navigation-social-icons.mobile-only
+      - I18n.t('footer.navigation.social_icons').each do |item|
+        a href=item[:link]
+          = inline_svg "social_icons/#{item[:icon]}.svg"
   .contact-info
     .contact-info__container
+      a.contact-info__item.bold.mobile-only href='#' = t('footer.navigation.faq')
       .contact-info__contacts
-        a.footer__item.bold href='email: #{t("footer.contact_info.email")}'= t('footer.contact_info.email')
-        a.footer__item.bold href='tel: #{t("footer.contact_info.phone_number")}'= t('footer.contact_info.phone_number')
-      .footer__copyright= t('footer.contact_info.copyright')
+        a.contact-info__item. href='email: #{t("footer.contact_info.email")}'= t('footer.contact_info.email')
+        a.contact-info__item. href='tel: #{t("footer.contact_info.phone_number")}'= t('footer.contact_info.phone_number')
+      .footer__navigation-copyright.desktop-only =t('footer.contact_info.copyright', year: Date.today.year)
     - I18n.t('footer.contact_info.entities').each do |e|
-      .contact-info__container
-        .footer__item.bold= e[:entity]
-        .footer__item= e[:name]
-        .footer__item= e[:address]
-        .footer__item= e[:post]
-        .footer__item= e[:country] if e[:country]
+      .contact-info__container.desktop-only
+        .contact-info__item.bold= e[:entity]
+        .contact-info__item= e[:name]
+        .contact-info__item= e[:address]
+        .contact-info__item= e[:post]
+        .contact-info__item= e[:country] if e[:country]
+    .footer__navigation-copyright.mobile-only =t('footer.contact_info.copyright', year: Date.today.year)

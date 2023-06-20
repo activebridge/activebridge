@@ -21,9 +21,9 @@ header class="#{mobile? ? 'mobile-only' : 'desktop-only'}"
         - else
           = link_to link[:page], "#{link[:link]}", class: "header-navbar__link #{current_page?(link[:link]) ? 'active' : ''}"
 
-    = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact desktop-only #{current_page?('/contact') ? 'active' : ''}"
+    = link_to 'contact us', contacts_path, class: "header-navbar__link header-navbar__link-contact desktop-only #{current_page?('/contacts') ? 'active' : ''}"
 
     .mobile-only
-      = link_to 'contact us', contact_path, class: "header-navbar__link header-navbar__link-contact #{current_page?('/contact') ? 'active' : ''}"
+      = link_to 'contact us', contacts_path, class: "header-navbar__link header-navbar__link-contact #{current_page?('/contacts') ? 'active' : ''}"
       .header-navbar__close
         label.menu-close-icon for="menu-btn" ⟶

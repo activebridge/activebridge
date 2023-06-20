@@ -27,8 +27,9 @@
   &__reasons {
     background: radial-gradient(circle, rgba($palianytsia, 1) 0%, rgba($white, 1) 60%);
     box-shadow: inset 0px 12px 15px -7px $moon_raker;
-    // transition: all 1s ease-out;
-    // position: relative;
+    transition: all 1s ease-out;
+
+    & * { transition: all 1s ease-out; }
 
     .description { margin: 6vh 0; }
 
@@ -36,35 +37,38 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      transition: all 1s ease-out;
-      // position: relative;
-      // height: 100%;
+      position: relative;
+      z-index: 1;
+
+      &:hover > .extendable_card:hover {
+        transform: scale(1.15);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        z-index: 4;
+        background: red;
+        height: auto;
+
+        .description { -webkit-line-clamp: unset; }
+      }
+
+      .extendable_card-wrapper {
+        position: relative;
+        width: 30%;
+        min-height: 340px;
+        margin-bottom: 4vh;
+      }
 
       .extendable_card {
-        // max-height: 0;
-        width: 30%;
-        margin-bottom: 4vh;
+        position: absolute;
+        min-height: 340px;
+        width: 100%;
         padding: 2.5vh 2vw;
         background: rgba($white, .7);
         border-radius: 30px;
         box-shadow: $main-shadow;
         box-sizing: border-box;
-        // z-index: 0;
-        height: fit-content;
-        left: 0;
-        // margin: auto;
+        z-index: 0;
+        height: 100%;
         overflow: hidden;
-        // position: fit-content;;
-        // right: 0;
-        // top: 0;
-        // height: 300px;
-        // left: 0;
-        // overflow: hidden;
-        // position: absolute;
-        // right: 0;
-        // top: 0;
-        transition: .3s cubic-bezier(.3, 0, 0, 1.3);
-        // transition: all 1s ease-out;
 
         img {
           max-width: 5em;
@@ -89,7 +93,7 @@
 
         &:hover {
           background: $white;
-          // z-index: 1;
+          z-index: 1;
           height: auto;
 
           & .description {

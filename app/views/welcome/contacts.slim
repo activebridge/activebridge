@@ -4,7 +4,7 @@
   .description = t('contact.description')
 
   .contact__form-container
-    = form_tag '/contact', id: 'contact__form', class: 'contact__form' do
+    = form_tag '/contacts', id: 'contact__form', class: 'contact__form' do
       .contact__form-item
         label.contact__form-label for='reason' = t('contact.form.reasons.title') + '*'
         input#reason.contact__form-input name='contact[reason]' type='text' minlength='5' placeholder="#{t('contact.form.reasons.placeholder')}" required='true'

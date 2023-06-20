@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get ':page', to: 'welcome#index',
-               constraints: { page: /(services|reviews|contact|expertise|about|solutions|testimonials|faq|privacy-policy)/ },
+               constraints: { page: /(services|reviews|contacts|expertise|about|solutions|testimonials|faq|privacy-policy)/ },
                as: :page
   get '/:page/:subitem', to: 'welcome#index', as: :page_subitem
   get 'expire_cache', to: 'welcome#expire_cache'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  post '/contact', to: 'requests#create', as: :contact
+  post '/contacts', to: 'requests#create', as: :contacts
 
   root to: 'welcome#index'
 end

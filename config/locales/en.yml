@@ -10,13 +10,6 @@ en:
     Our team provides modern web methods for building high-quality
     custom web applications in a short amount of time
   navbar:
-    items:
-      - about
-      - expertise
-      - services
-      - solutions
-      - faq
-      - blog
     links:
       - page: About
         link: /about
@@ -56,7 +49,7 @@ en:
       - page: FAQ
         link: /faq
       - page: Blog
-        link: /
+        link: /blog
     reviews: Reviews
     faq: FAQ
     blog: Blog
@@ -77,6 +70,11 @@ en:
         title: IT Staffing Firm, Remote Development Teams | Active Bridge
         description: We are a contract development agency specializing in providing on-demand
                      full-stack engineers to help our clients and augment their in-house teams.
+        subitems:
+          team:
+            title: Our Team of Professional Rails Developers | Active Bridge
+            description: Our remote full-stack developers drive our clients through the whole process of
+                         building, launching, and scaling their solutions. Contact us to see how we can help
       services:
         title: Web and Mobile Application Development Services || Active Bridge,LLC
         description:
@@ -103,11 +101,7 @@ en:
             title: Full-Stack Web Application Development | Active Bridge
             description: Our neatly organized web project development process allows us to deliver scalable reliable
                          applications faster.  Developers’ expertise is our main asset.
-      team:
-        title: Our Team of Professional Rails Developers | Active Bridge
-        description: Our remote full-stack developers drive our clients through the whole process of building,
-                     launching, and scaling their solutions. Contact us to see how we can help
-      contact:
+      contacts:
         title: Contact us to Get Free Project Consultation | Active Bridge
         description: Got an amazing project idea? Contact us and get a tech consultation from an experienced full-stack
                      solution specialist
@@ -152,41 +146,24 @@ en:
         title: Privacy Policy Agreement | Active Bridge
         description: At Active Bridge, we protect your personal info and treat it as we would our own. Read our online
                      privacy policy and learn what we do to protect your information.
-      # web-development-services:
-      #   title: From MVP to Сomplete Product. Web Development Services | Active Bridge
-      #   description: Enhance your business processes leveraging our web application development services. We excel at crafting
-      #                digital experiences that both look and work impressive.
-      # ruby-on-rails-development-services:
-      #   title: Ruby on Rails Application Development Expertise | Active Bridge
-      #   description: We drive our partners through creating robust, quick, and thorough Rails apps for more than 10 years. We
-      #                offer great input when it comes to strategy, tech stack, and design.
-      # mobile-app-development-services:
-      #   title: React Native Development Services | Active Bridge
-      #   description: We build responsive mobile applications with rich features and solid security helping businesses to stay
-      #                lean and build agile.
-      # dedicated-teams-cooperation:
-      #   title: Extend in-house IT Teams with Outside Tech Experts | Active Bridge
-      #   description: Feel the flexibility of management by augmenting your in-house team with our experts at the cost of offshore
-      #                specialists. Hire on-demand developers
-      # full-stack-project-development:
-      #   title: Full-Stack Web Application Development | Active Bridge
-      #   description: Our neatly organized web project development process allows us to deliver scalable reliable applications
-      #                faster.  Developers’ expertise is our main asset.
       blog:
         title: IT Staffing Insights, Web, Software, Mobile Development Cases|Active Bridge Blog
         description: Browse our blog for advanced staff augmentation insights, web and software development tips,
                      mobile design and development features, learn more
         categories:
-          engineering:
+          web-development:
             title: Learn About APIs, OOP, Browsers, Encryption & More | Active Bridge Blog
-            description: Web system and web application development blog that has articles and tutorials about the latest web technics and possibilities
-          pm-and-team-management:
+            description: Web system and web application development blog that has articles and tutorials about the
+                         latest web technics and possibilities
+          staff-augmentation:
             title: Learn About IT Staff Augmentation Solutions to Achieve Your Business Goals | Active Bridge Blog
-            description: Staff Augmentation services enables you to find qualified and experienced people who can seamlessly work as your team. Learn more
-          business-and-growth:
+            description: Staff Augmentation services enables you to find qualified and experienced people who can
+                         seamlessly work as your team. Learn more
+          business-analytics:
             title: Learn about business analytics methods to make better decisions | Active Bridge Blog
-            description: This business analytics blog introduces quantitative methods to analyze data and make better decisions. Learn more
-          inside-ab:
+            description: This business analytics blog introduces quantitative methods to analyze data and make better
+                         decisions. Learn more
+          insights:
             title: Learn about Company Events, Programs and Achievements | Active Bridge
             description: Latest information about company events, programs, achievements and much more. Keep in touch
         image_alt_tag: IT staffing services, dedicated development teams | Active Bridge LLC
@@ -195,23 +172,15 @@ en:
         title: IT Contractor Company, Developers on Demand | Active Bridge, LLC
         description: Located in Ukraine we provide dedicated development teams and full-stack developers on demand.
                      Scale your in-house team with our technical talents
-      how-we-work:
-        title: Staff Augmentation Services, Developers on Demand | Active Bridge, LLC
-        description: Active Bridge is your IT contractor partner providing full-stack developers and responsible for
-                     development & maintaining web/mobile applications
       services:
         title: Web and Mobile Application Development Services | Active Bridge,LLC
         description: More than 5 years Active Bridge has been a successful provider web & mobile application development
                      solutions. Learn more
-      portfolio:
-        title: Ruby on Rails Project Examples | Active Bridge, LLC
-        description: Active Bridge is a successful provider of Ruby on Rails development services on the US market.
-                     All our ruby on rails projects examples see here
       team:
         title: Full-stack Web Developers on demand | Active Bridge, LLC
         description: Located in Ukraine Active Bridge company successfully provides dedicated full-stack engineers,
                      mobile developers for your in-house teams. Learn more
-      contact:
+      contacts:
         title: Hire Full-Stack Developers in 48 hours | Active Bridge, LLC
         description: Active Bridge is your full-stack development partner, providing IT staff augmentation services and
                      helping to scale your team
@@ -288,121 +257,185 @@ en:
         '[
           {
             "@context": "http://schema.org",
-            "@type": "Organization",
+            "@type": "LocalBusiness",
             "name": "Active Bridge",
-            "legalName": "Active Bridge, LLC",
-            "description": "Located in Ukraine we provide dedicated development teams and full-stack developers on demand. Scale your in-house team with our technical talents",
-            "foundingDate": "2013",
-            "logo": "http://www.w3.org/2000/svg",
-            "award": ["Leading Clutch Agency 2017",
-              "Top B2B Service Providers, 2017",
-              "TOP B2B Company Ukraine, 2018",
-              "Leading Eastern Europe B2B Company, 2018"],
-            "telephone": "+38-063-608-6045",
-            "email": "contact@avtive-bridge.com",
-            "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Phoenix",
-            "addressRegion": "AZ",
-            "streetAddress": "4644 North 22nd Street"
+            "description": "Active Bridge helps clients to build a qualitative web products thanks to our niche RoR expertise and 90% senior/middle developers on our board.",
+            "url": "https://activebridge.org/",
+            "image": "https://imgur.com/SUEWchJ",
+            "email": "contact@active-bridge.com",
+            "telephone": "+18888053503",
+            "address": [
+                        {
+                          "@type":"PostalAddress",
+                          "addressCountry":"US",
+                          "postalCode":"85016",
+                          "addressRegion": "AZ",
+                          "addressLocality": "Phoenix",
+                          "streetAddress":"3506 North 24th Street"
+                        },
+                        {
+                          "@type": "PostalAddress",
+                          "addressCountry": "UA",
+                          "postalCode": "18000",
+                          "addressRegion": "Cherkaska",
+                          "addressLocality": "Cherkasy",
+                          "streetAddress": "Evgena Kukhartsa 8"
+                        }
+            ],
+            "founder": {
+                          "@type":"Person",
+                          "name":"Alex Galushka",
+                          "gender": "Male",
+                          "jobTitle":"Founder/CEO",
+                          "image":"https://imgur.com/ef2d29e",
+                          "sameAs": [
+                                      "https://twitter.com/galulex",
+                                      "https://www.linkedin.com/in/galulex/"
+                          ]
             },
-            "areaServed": ["US","CA"],
-            "url": "https://activebridge.org/",
-              "sameAs" : [ "https://www.facebook.com/ActiveBridgeTeam",
-              "https://www.linkedin.com/company/activebridge",
-              "https://github.com/activebridge"
-              ]
-          },
-          {
-            "@context": "http://schema.org",
-            "@type": "WebPage",
-            "name": "Active Bridge",
-            "url": "https://activebridge.org/",
-            "mainContentOfPage": "Active Bridge is an IT company that specializes in providing dedicated
-              full-stack developers on demand to help our clients and augment their in-house teams.
-              Since 2013, our agency based on IT staff augmentation services has been assisting clients
-              in the development and maintenance of websites and web-based systems, mobile applications,
-              and software products.",
-            "relatedLink": ["https://activebridge.org/how-we-work",
-              "https://activebridge.org/portfolio",
-              "https://activebridge.org/team",
-              "https://activebridge.org/services",
-              "https://activebridge.org/contact"]
+            "foundingDate": "2013-10-11",
+            "sameAs": [
+                       "https://www.linkedin.com/company/active-bridge/",
+                       "https://github.com/activebridge",
+                       "https://www.facebook.com/ActiveBridgeTeam",
+                       "https://twitter.com/activebridge"
+            ],
+            "contactPoint": [
+              {
+                "@type" : "ContactPoint",
+                "contactType": "customer service",
+                "telephone": "+18888053503",
+                "email": "contact@active-bridge.com",
+                "url": "https://activebridge.org/"
+              }
+            ],
+            "priceRange": "$30.00 - $60.00/hour"
           }
         ]'
       services:
         '[
           {
             "@context": "http://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Web, Cloud Software, Mobile Application Development Services",
+            "description": "Picking the right tech stack, Active Bridge help startups and SMEs looking to solve their technical business challenges, complex or routine.",
+            "priceRange": "$30.00 - $60.00",
+            "address": [
+                        {
+                          "@type": "PostalAddress",
+                          "addressCountry": "US",
+                          "postalCode": "85016",
+                          "streetAddress": "3506 North 24th Street"
+                        }
+            ],
+            "telephone": "+18888053503",
+            "areaServed": [
+                           "US",
+                           "UK",
+                           "CA",
+                           "AU"
+            ],
+            "award": [
+                      "Top App Development Companies, 2020",
+                      "Top B2B Companies Ukraine, 2018",
+                      "Best Web Developers in Phoenix, 2020",
+                      "Top Web & Software Development company, 2019",
+                      "Top Firms Arizona, 2020"
+            ],
+            "contactPoint": [
+                             {
+                               "@type": "contactPoint",
+                               "contactType": "Customer services",
+                               "email": "contact@active-bridge.com",
+                               "telephone": "+18888053503",
+                               "url": "activebridge.org/services"
+                              }
+            ],
+            "image": "https://imgur.com/SUEWchJ"
+           }
+         ]'
+      team:
+        '[
+          {
+            "@context": "http://schema.org",
             "@type": "WebPage",
-            "name": "Active Bridge Services",
-            "url": "https://activebridge.org/services",
-            "mainContentOfPage": "At Active Bridge, our number one goal is to find effective
-              web solutions to meet the needs and goals of our clients’ businesses. To cover all aspects
-              of our clients’ web programming needs, we employ a full-stack web development process,
-              meaning our developers are experienced in both back-end development (server-side) and
-              front-end development (user-side). As a result, we can offer our clients elegant and
-              professional web solutions, whatever their needs may be. At Active Bridge we bring our
-              mobile development expertise together with your ideas to create incredible apps. We’re
-              experienced in building mobile applications for both specific mobile operating systems
-              as well as hybrid applications, so whether you want your app to run on iOS, Android, or
-              an embedded web browser, we can help.",
-            "relatedLink": ["https://activebridge.org/",
-              "https://activebridge.org/how-we-work",
-              "https://activebridge.org/portfolio",
-              "https://activebridge.org/team",
-              "https://activebridge.org/contact"]
-          },
+            "name": "About Active Bridge Team",
+            "description": "The team of Ruby on Rails developers with 8+ years of remote development
+                            experience for enterprise organizations and applications for startups.",
+            "about": {
+                "@type": "LocalBusiness",
+                "name": "Active Bridge",
+                "image": "https://imgur.com/SUEWchJ",
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "3506 North 24th Street",
+                "addressLocality": "Phoenix",
+                "addressRegion": "AZ",
+                "postalCode": " 85016",
+                "addressCountry": "US"
+              },
+              "url": "activebridge.org/about/team",
+              "telephone": "+18888053503",
+              "email": "contact@active-bridge.com"
+            }
+          }
+        ]'
+      about:
+        '[
+          {
+            "@context": "http://schema.org",
+            "@type": "AboutPage",
+            "name": "Active Bridge",
+            "description": "Active Bridge is a contract development company that specializes in providing on-demand full-stack engineers to help our clients and augment their in-house teams.",
+            "image": "https://imgur.com/SUEWchJ",
+            "provider": "Active Bridge",
+            "about": {
+                "@type": "Organization",
+                "name": "Active Bridge",
+                "logo": "https://imgur.com/SUEWchJ",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Phoenix",
+                    "addressRegion": "AZ",
+                    "postalCode": "85016",
+                    "addressCountry": "US"
+                }
+            },
+            "url": "activebridge.org/about"
+          }
+        ]'
+      contacts:
+        '[
+          {
+            "@context": "http://schema.org",
+            "@type": "ContactPage",
+            "name": "Active Bridge",
+            "description": "Web and Cloud Software Development Company",
+            "url": "activebridge.org/contacts",
+            "sameAs" : [
+                        "https://github.com/activebridge",
+                        "https://www.linkedin.com/company/active-bridge/",
+                        "https://www.facebook.com/ActiveBridgeTeam"
+            ]
+          }
+        ]'
+      expertise:
+        '[
           {
             "@context": "http://schema.org",
             "@type": "Service",
-            "serviceType": "Web & Mobile Application Development",
-            "areaServed": ["US", "CA"]
-          }
-         ]'
-      team:
-        '{
-          "@context": "http://schema.org",
-          "@type": "WebPage",
-          "name": "About Active Bridge Team",
-          "description": "The team of Ruby on Rails developers with 8+ years of remote development
-                          experience for enterprise organizations and applications for startups.",
-          "about": {
-              "@type": "LocalBusiness",
-              "name": "Active Bridge",
-              "image": "https://imgur.com/SUEWchJ",
-              "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "3506 North 24th Street",
-              "addressLocality": "Phoenix",
-              "addressRegion": "AZ",
-              "postalCode": " 85016",
-              "addressCountry": "US"
-            },
-            "url": "activebridge.org/about/team",
-            "telephone": "+18888053503",
-            "email": "contact@active-bridge.com"
-          }
-        }'
-      contact:
-        '{
-          "@context": "http://schema.org",
-          "@type": "ContactPage",
-          "name": "Active Bridge Contacts",
-          "url": "https://activebridge.org/contact",
-            "sameAs" : [ "https://www.facebook.com/ActiveBridgeTeam",
-            "https://www.linkedin.com/company/activebridge",
-            "https://github.com/activebridge"
+            "category": "Tech Services",
+            "provider": "Active Bridge",
+            "areaServed": [
+                           "US",
+                           "UK",
+                           "CA",
+                           "AU"
             ],
-          "description": "Active Bridge is your full-stack development partner, providing IT staff augmentation services
-            and helping to scale your team",
-          "primaryImageOfPage": "http://www.w3.org/2000/svg",
-          "relatedLink": ["https://activebridge.org/how-we-work",
-            "https://activebridge.org/portfolio",
-            "https://activebridge.org/team",
-            "https://activebridge.org/services",
-            "https://activebridge.org"]
-        }'
+            "serviceType": "Ruby on Rails Expertise",
+            "description": "Thanks to ten years of expertise in Ruby on Rails development, we can offer input when it comes to delivering a quality app from early stages to a successful product."
+          }
+        ]'
       article:
         '{
           "@context": "https://schema.org",
@@ -503,31 +536,31 @@ en:
           }
         }'
       solutions:
-        '{
-          "@context": "http://schema.org",
-          "@type": "ProductCollection",
-          "name": "Project Examples",
-          "description": "Custom technology solutions that help businesses grow",
-          "creator": "Active Bridge LLC",
-          "brand": "Active Bridge",
-          "url": "activebridge.org/solutions",
-          "image": "https://imgur.com/SUEWchJ",
-          "review": [
-            {
-              "@type": "Review",
-              "author": "Julia Macalaster",
-              "datePublished": "2016",
-              "reviewBody": "Overall this is an absolutely amazing team to work with,
-                            composed of driven developers and bright minds. We feel so
-                            incredibly lucky to be working with them.",
-              "reviewRating": {
-                "@type": "Rating",
-                "bestRating": "5",
-                "ratingValue": "5"
-              }
-            }
-          ]
-        }'
+        '[
+          {
+            "@context": "http://schema.org",
+            "@type": "ProductCollection",
+            "name": "Project Examples",
+            "description": "Custom technology solutions that help businesses grow",
+            "creator": "Active Bridge LLC",
+            "brand": "Active Bridge",
+            "url": "activebridge.org/solutions",
+            "image": "https://imgur.com/SUEWchJ",
+            "review": [
+                       {
+                          "@type": "Review",
+                          "author": "Julia Macalaster",
+                          "datePublished": "2016",
+                          "reviewBody": "Overall this is an absolutely amazing team to work with, composed of driven developers and bright minds. We feel so incredibly lucky to be working with them.",
+                          "reviewRating": {
+                                            "@type": "Rating",
+                                            "bestRating": "5",
+                                            "ratingValue": "5"
+                          }
+                       }
+            ]
+          }
+        ]'
       faq:
         '{
           "@context": "http://schema.org",
@@ -817,7 +850,7 @@ en:
                           unstoppable drive to provide effective web solutions for our clients. Since then, we’ve successfully assisted
                           our clients in developing and maintaining websites and web-based systems, mobile applications, and software products.
     about_us_items:
-      - logo: index/about-us-9+.svg
+      - logo: index/about-us-8.svg
         text: years of remote development
       - logo: index/about-us-10+.svg
         text: years of Ruby on Rails experience
@@ -881,8 +914,6 @@ en:
               link: /solutions/ecommerce-crm-platform-case
             - section: Logistic / Travel
               link: /solutions/taxi-booking-platform-case
-            - section: Education / Fintech
-              link: /
       reviews: Reviews
       faq: FAQ
       blog: Blog
@@ -1448,15 +1479,15 @@ en:
                           experience in the development of technically complex, ergonomic, and user-friendly applications.
       all:
         - title: Full-stack expertise
-          icon: full-stack.svg
+          icon: full_stack_expertise.png
           description: We are all set to assist you with needed expertise in front-end and back-end technologies,
                        put together as a solo solution.
         - title: Application development and integration
-          icon: web-dev.svg
+          icon: app_dev_integration.png
           description: We have the experience, knowledge, and ability to perform enterprise application development
                        and APIs integration
         - title: Scalability and flexibility
-          icon: scalability.svg
+          icon: scalability_flexibility.png
           description: Using a microservice architecture, we provide easily expandable and scalable development solutions
     learn_more: Learn more
     custom_ror_dev_services:
@@ -1466,15 +1497,15 @@ en:
                    development and deployment. We're able to create websites of any complexity.
       all:
         - title: Ruby on Rails Migrations
-          icon: ror-migration.svg
+          icon: ror_migrations.png
           description: We help you migrate legacy projects to the cloud and mobile-ready solutions, transform your organization with
                        custom solutions that run quickly and smoothly on Ruby on Rails.
         - title: Custom Ruby on Rails development
-          icon: ror.svg
+          icon: custom_ror_dev.png
           description: We have a team of Senior/Middle RoR developers providing complete and effective web solutions built on reliable, robust,
                        portable, and maintainable code for startups as well as enterprises.
         - title: Ruby on Rails application delivery and support
-          icon: delivery-and-support.svg
+          icon: ror_delivery_support.png
           description: We maintain the integrity of our code and provide regular technology updates, website speed optimization, backups,
                        user experience improvements, security improvements, and more.
     mobile_dev_services:
@@ -1485,11 +1516,11 @@ en:
                    and to reach more users without loss of quali
       all:
         - title: Launching an application on various platforms
-          icon: cross-platform.svg
+          icon: launching_on_various_platforms.png
           description: Our developers write one source code for all platforms. You don’t need to hire separate tech teams for each platform,
                        as it’s possible to launch and update an application by using a variety of cross-platform development tools.
         - title: Flutter, Ionic & React Native for mobile app development
-          icon: flutter-ionic-react.svg
+          icon: flutter_ionic_react.png
           description: We use technologies that significantly speed up development time and cut time to market, which benefits everyone,
                        from the dev team all the way to sales and marketing.
     engagement_models:
@@ -1942,11 +1973,11 @@ en:
     main:
       all:
         - text: projects
-          logo: solutions/about_us_purple_1.svg
+          logo: solutions/about_us_purple_1.png
         - text: years of average project duration
-          logo: solutions/about_us_purple_2.svg
+          logo: solutions/about_us_purple_2.png
         - text: years of remote development experience
-          logo: solutions/about_us_purple_3.svg
+          logo: solutions/about_us_purple_3.png
     industries:
       title: Industries
       all:
@@ -2081,15 +2112,15 @@ en:
           description: We come to you with 9+ years of Ruby on Rails experience. Ruby is a dynamic, interpretable, high-level
                        programming language. Rails is a framework created for rapid web application development and deployment.
                        We're able to create websites of any complexity.
-          icon: ror
+          icon: custom_ror_dev_services.png
         - title: Mobile application development services
           description: We provide <span class="blue-text">cross-platform mobile application development services</span> so you
                        can reach your customers on their favorite devices.
-          icon: cross-platform
+          icon: mobile_app_dev_services.png
         - title: Web application development services
           description: We’re motivated to scale your business, as we are more than just a <span class="blue-text">web development
                        service provider.</span>
-          icon: cross-platform
+          icon: web_app_dev_services.png
       more_button: Learn more about our services
   faq:
     title: Faq
@@ -2319,13 +2350,13 @@ en:
     solutions:
       title: With a proven process and commitment to quality code, we help you to become a digital stand-out with the right web development solutions
       all:
-        - logo: web_development_services/solution_1.svg
+        - logo: web_development_services/solution_1.png
           text: full-stack engineers
-        - logo: web_development_services/solution_3.svg
+        - logo: web_development_services/solution_3.png
           text: years of remote development
-        - logo: web_development_services/solution_2.svg
+        - logo: web_development_services/solution_2.png
           text: years average project duration
-        - logo: web_development_services/solution_4.svg
+        - logo: web_development_services/solution_4.png
           text: senior/middle experience level
       awards:
         - logo: web_development_services/award-1.png
@@ -3623,10 +3654,10 @@ en:
       button: See our services
   blog:
     categories:
-      engineering: Engineering
-      pm-and-team-management: Pm & Team management
-      business-and-growth: Business & Growth
-      inside-ab: Inside AB
+      web-development: Web Development
+      staff-augmentation: Staff Augmentation
+      business-analytics: Business Analytics
+      insights: Insights
     recommended: RECOMMENDED POSTS
     blog: Blog
     blog_launch: We launched this blog as a repository of helpful content shared by our experts and partners.
@@ -3646,61 +3677,3 @@ en:
       home: Home
       contents: 'Contents:'
       share: 'Share:'
-  footer:
-    navigation:
-      links:
-        - page: About
-          link: /
-          items:
-            - section: Team
-              link: /team
-        - page: Expertise 
-          link: /expertise
-          items:
-        - page: Services
-          link: /services
-          items:
-            - section: Web Development
-              link: /services#web_development
-            - section: RoR development
-              link: /services#ror_development
-            - section: Mobile App Development
-              link: /services#mobile_app_development
-            - section: Staff Augmentation
-              link: /services#staff_augmentation
-            - section: Project Development
-              link: /services#project_development
-        - page: Solutions
-          link: /
-          items: 
-            - section: Healthcase
-              link: /
-            - section: SaaS
-              link: /
-            - section: Marketplace
-              link: /
-            - section: E-commerce
-              link: /
-            - section: Logistic / Travel
-              link: /
-            - section: Education / Fintech
-              link: /
-      reviews: Reviews
-      blog: Blog
-      social_icons:
-        - link: https://www.linkedin.com/company/active-bridge
-          icon: linkedin
-        - link: https://github.com/activebridge
-          icon: github
-        - link: https://www.facebook.com/ActiveBridgeTeam
-          icon: facebook
-        - link: https://www.instagram.com/active.bridge
-          icon: instagram
-        - link: https://twitter.com/activebridge
-          icon: twitter
-    contact_info:
-      email: contact@active-bridge.com
-      mobile: '+18888053503'
-      contact_us: Contact Us
-      follow: Stay tuned
-      copyright: '© 2018 Active Bridge, LLC'

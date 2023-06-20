@@ -1,9 +1,4 @@
 .reviews {
-  &__solutions,
-  &__expertise,
-  &__testimonials-container,
-  &__tell-us { padding: 7vh 18vw; }
-
   &__main-container {
     min-height: 85vh;
     height: 100%;
@@ -29,31 +24,31 @@
   }
 
   &__solutions {
-    .header-5 { font-size: 1.6em; }
+    .header-5 { font-size: 1.4em; }
 
     .carousel {
       margin-bottom: 3vh;
 
       &__item {
-        width: 30vw;
-        max-width: 380px;
-        height: 62vh;
+        width: 27vw;
+        max-width: 350px;
+        height: 53vh;
         max-height: 500px;
 
-        &[data-index="-1"] { transform: translateX(-75%) scale(0.9); }
+        &[data-index="-1"] { transform: translateX(-50%) scale(0.9); }
 
-        &[data-index="1"] { transform: translateX(75%) scale(0.9); }
+        &[data-index="1"] { transform: translateX(50%) scale(0.9); }
       }
 
       .solutions__title {
         font-family: 'Inria Bold', serif;
         text-transform: capitalize;
         letter-spacing: normal;
-        font-size: 1.6em;
+        font-size: 1.25em;
       }
 
       &__description {
-        font-size: 1.1em;
+        font-size: 1em;
 
         .blue-text {
           display: inline;
@@ -64,17 +59,28 @@
   }
 
   &__expertise {
+    .header-5 { margin-top: 4vh; }
+
     .expertise-cards {
       justify-content: space-around;
 
       .card {
-        padding: 3vh 3vh 5vh;
+        min-width: 40%;
+        max-width: 40%;
+        box-sizing: border-box;
 
         &__title-2 {
-          font-size: 1.6em;
+          font-size: 1.4em;
           color: $black;
         }
+
+        &__description {
+          font-size: 1em;
+          line-height: 2em;
+        }
       }
+
+      &__item-description { margin: 3vh 0 0; }
     }
   }
 
@@ -100,15 +106,9 @@
 
 @media (max-width: 768px) {
   .reviews {
-    &__main-container,
-    &__solutions,
-    &__expertise,
-    &__testimonials-container,
-    &__tell-us { padding: 8vh 8vw; }
-
     &__main-container {
       .header-3 { margin-top: 0; }
-      
+
       .header-2 {
         max-width: 90%;
         font-size: 0.8em;

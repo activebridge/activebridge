@@ -95,8 +95,8 @@
           .card__icon
             = image_tag "team_extension/#{item[:icon]}"
           .card__description= item[:description].html_safe
-    = link_to "#{t('team_extension.services.button')}", page_path(:services), id: 'team_extension_services_button', class: 'button white-text violet-button', target: :_blank
+    = link_to "#{t('team_extension.services.button')}", page_path(:services), id: 'team_extension_services_button', class: 'button', target: :_blank
 
   .faq__bottom
     = image_tag 'faq/gift.png'
-    = link_to "#{t('faq.button')}", page_path(:contact), id: 'faq_button', class: 'button white-text violet-button', target: :_blank
+    = link_to "#{t('faq.button')}", page_path(:contacts), id: 'faq_button', class: 'button white-text violet-button', target: :_blank

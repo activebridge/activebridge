@@ -20,6 +20,6 @@ class RequestsController < ApplicationController
   private
 
   def attrs
-    @attrs ||= params[:contact].as_json
+    @attrs ||= params[:contacts].as_json
   end
 end

@@ -19,6 +19,7 @@ class WelcomeController < ApplicationController
 
   def index
     @page = params[:page] || '/'
+    @subitem = params[:subitem] || ''
     if params[:subitem]
       render ['welcome', params[:page], params[:subitem]].join('/')
     else
