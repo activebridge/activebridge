@@ -48,6 +48,8 @@
         margin-bottom: 5vh;
         color: $main-blue;
         text-align: left;
+
+        &:last-child img { height: calc(10vh - 15px); }
       }
 
       .solutions__awards {
@@ -163,12 +165,12 @@
         &__item {
           box-sizing: border-box;
           height: 60vh;
-          width: 28vw;
+          width: 26vw;
+          max-width: 335px;
           justify-content: space-between;
           padding: 3vh 1vh 6vh;
+
         }
-
-
 
         &__description {
           margin-bottom: 0;
@@ -182,7 +184,8 @@
 
       .carousel__item {
         height: 55vh;
-        width: 27vw;
+        width: 26vw;
+        max-width: 335px;
 
         .carousel__title { padding: 0 4vh; }
 
@@ -244,7 +247,7 @@
       height: 10vh;
       margin-bottom: 1vh;
 
-      svg { width: 10vh; }
+      img { width: 10vh; }
     }
   }
 
@@ -280,6 +283,15 @@
       }
 
       .services__logo { margin-bottom: 0; }
+
+      &__logo {
+        border-radius: 7.5vh;
+
+        img {
+          height: 100%;
+          max-width: 100%;
+        }
+      }
     }
 
     .button {

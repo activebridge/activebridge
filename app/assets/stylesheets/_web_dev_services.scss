@@ -143,7 +143,10 @@
       flex-direction: column;
       color: $purple-heart;
 
-      svg { margin-bottom: .5em; }
+      img {
+        margin-bottom: .5em;
+        width: 10vh;
+      }
     }
   }
 

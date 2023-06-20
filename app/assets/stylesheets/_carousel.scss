@@ -64,13 +64,6 @@
     }
   }
 
-  &__logo {
-    img {
-      height: 5vh;
-      max-width: 60%;
-    }
-  }
-
   &__description {
     margin: 1vh 3vh 5vh;
     text-align: justify;
@@ -101,7 +94,10 @@
       border-radius: 6.5vh;
       box-shadow: inset -3px -3px 7px -4px grey, 1px 1px 14px -2px grey;
 
-      svg { width: 8vh; }
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -150,8 +146,6 @@
       &__logo {
         width: 8vh;
         height: 8vh;
-
-        svg { width: 4vh; }
       }
     }
 
