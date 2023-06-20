@@ -52,7 +52,23 @@ module ApplicationHelper
 
 
   def meta_title
-    t("meta.pages.#{params[:page].blank? ? "/" : params[:page]}.title", default: 'Ruby on Rails Development Company')
+    if params[:page].blank?
+      t("meta.pages./.title", default: 'Ruby on Rails Development Company')
+    elsif params[:subitem]
+      t("meta.pages.#{params[:page]}.subitems.#{params[:subitem]}.title", default: 'Ruby on Rails Development Company')
+    else
+      t("meta.pages.#{params[:page]}.title", default: 'Ruby on Rails Development Company')
+    end
+  end
+
+  def meta_description
+    if params[:subitem]
+      t("meta.pages.#{params[:page]}.subitems.#{params[:subitem]}.description")
+    elsif params[:page]
+      t("meta.pages.#{params[:page]}.description")
+    else
+      t("meta.pages./.description")
+    end
   end
 
   def article_schema

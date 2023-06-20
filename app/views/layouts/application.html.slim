@@ -3,14 +3,14 @@
 doctype 5
 
 html lang='en'
-  title=t("meta.pages.#{params[:page].blank? ? "/" : params[:page]}.title", default: 'Ruby on Rails Development Company')
+  title = meta_title
   meta property="og:type"        content="company"
   meta property="og:url"         content="https://activebridge.org/"
   meta property="og:site_name"   content="activebridge.org"
-  meta property='og:title'       content=t("meta.open_graph.#{@page}.title")
-  meta property='og:description' content=t("meta.open_graph.#{@page}.description")
+  meta property='og:title'       content=t("meta.open_graph.#{params[:subitem] ? @subitem : @page}.title")
+  meta property='og:description' content=t("meta.open_graph.#{params[:subitem] ? @subitem : @page}.description")
   meta property='og:image'       content='https://i.imgur.com/yHecdkg.jpg'
-  meta name='description'      content=t("meta.pages.#{@page}.description")
+  meta name='description'        content=meta_description
 
   = content_for :title do
     = meta_title
